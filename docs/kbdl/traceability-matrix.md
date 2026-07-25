@@ -401,7 +401,7 @@ status, and evidence, per this file's field definitions.
 - **Validation evidence:** Manual completeness review recorded in the KBDL-003 commit — confirmed all five elevation levels list a non-shadow-dependent fallback, and both icon and media sections state their respective anticipation requirements.
 - **Known limitation:** None identified.
 - **Related decision:** Not applicable
-- **Notes:** "Anticipation" language is intentional — full reduced-motion and accessibility markup rules belong to KBDL-005/007.
+- **Notes:** "Anticipation" language is intentional — full reduced-motion and accessibility markup rules belong to KBDL-005/006.
 
 ### Shared foundation architecture across profiles (KBDL-FND-008)
 
@@ -426,10 +426,10 @@ status, and evidence, per this file's field definitions.
 - **Approval status:** Recommended (not `Approved` — requires project-owner approval before authorizing implementation, per [conventions.md §1.1](conventions.md#11-lifecycle--approval-status))
 - **Validation status:** Verified for the color-contrast calculations in [foundations/color.md §4](foundations/color.md#4-contrast-evidence-illustrative-not-a-theme-mapping) only; Not verified for all other aspects (typeface licensing, brand suitability, final spacing/corner/elevation values)
 - **Validation method:** WCAG relative-luminance contrast calculation (completed for the color pairs listed); typeface-licensing verification and project-owner review (not yet performed).
-- **Validation evidence:** Contrast-ratio table in [foundations/color.md §4](foundations/color.md#4-contrast-evidence-illustrative-not-a-theme-mapping), computed via a local dependency-free script (see the KBDL-003 validation evidence for the script and full output).
-- **Known limitation:** These are recommendations awaiting project-owner approval; they must not be treated as `Approved` or implemented until that approval is recorded.
+- **Validation evidence:** Contrast-ratio table in [foundations/color.md §4](foundations/color.md#4-contrast-evidence-illustrative-not-a-theme-mapping), computed via a local dependency-free script (see the KBDL-003 validation evidence for the script and full output). Updated under KBDL-003-R1: `neutral-50` (3.25:1) was found to fail the 4.5:1 normal-text threshold and is now restricted to large-text/non-text-UI/decorative use only; a new `neutral-60` (5.59:1) was added and verified as the safe value for normal-sized secondary/tertiary text.
+- **Known limitation:** These are recommendations awaiting project-owner approval; they must not be treated as `Approved` or implemented until that approval is recorded. The geometric character ("softened-structured") was corrected under KBDL-003-R1 from an incorrectly stated `Approved` label to `Recommended`.
 - **Related decision:** Not applicable — pending a future decision-register entry once the project owner approves or amends the packet.
-- **Notes:** This is the only KBDL-003 row whose approval status is `Recommended` rather than `Approved`; all other KBDL-003 rows restate `Approved` architecture from KBDL-001/002.
+- **Notes:** This is the only KBDL-003 row whose approval status is `Recommended` rather than `Approved`; all other KBDL-003 rows restate `Approved` architecture from KBDL-001/002. See KBDL-003-R1 for the accessibility and lifecycle corrections applied to this row's underlying content.
 
 ## Notes on Scope
 

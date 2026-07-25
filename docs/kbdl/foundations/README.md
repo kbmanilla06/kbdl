@@ -200,34 +200,56 @@ component specification.
 
 ## 6. Foundation Decision Packet
 
-The choices below are `Recommended`, not `Approved`. Each is summarized
-here for project-owner review; full detail is in the linked foundation
-document. **Approving this packet approves the specific values recommended
-below; it does not by itself approve any later module's content.**
+This packet is split into already-approved architecture (§6.1, provided
+only as context) and the specific recommendations that actually require
+project-owner approval (§6.2).
+
+### 6.1 Already-Approved Architecture (context only)
+
+The items below are **already `Approved`** (derived directly from
+KBDL-001/002) and are listed here **only as context** for the
+recommendations in §6.2. They are not awaiting project-owner approval and
+must not be re-submitted as pending decisions:
+
+- **Role-based color architecture** — [color.md §1–§2](color.md#1-architectural-principles-approved) (`KBDL-FND-001`, `KBDL-FND-002`).
+- **Function-based typography-role architecture** — [typography.md §2](typography.md#2-typeface-role-architecture-approved).
+- **Content-driven layout and grid architecture** (including the breakpoint-justification principle) — [spacing-layout.md §2–§3.1](spacing-layout.md#2-layout-and-grid-principles-approved-architecture) (`KBDL-FND-004`).
+- **Shared foundation architecture across profiles** — [§4.4](#44-shared-constraint-approved) (`KBDL-FND-008`).
+- **Spacing-rhythm requirement** (that spacing follows a deliberate, repeated rhythm) — [spacing-layout.md §1.1](spacing-layout.md#11-required-principles-approved) (`KBDL-FND-003`).
+- **Elevation and icon/media accessibility-anticipation principles** — [shape-depth.md §3.1](shape-depth.md#31-required-principles-approved), [iconography-media.md §1.1, §2.1](iconography-media.md#1-iconography) (`KBDL-FND-005`, `KBDL-FND-006`, `KBDL-FND-007`).
+
+### 6.2 Recommended Defaults — Approval Requested
+
+The items below are `Recommended`, not `Approved`. Each is summarized here
+for project-owner review; full detail is in the linked foundation
+document. **A project-owner `APPROVE` response to this packet approves
+exactly the specific values listed in this table (items 1–11 below); it
+does not approve, re-approve, or otherwise affect the already-approved
+architecture in §6.1, and it does not by itself approve any later
+module's content (KBDL-004 onward).**
 
 | # | Decision | Recommended choice | Rationale | Alternatives considered | Trade-offs | Profiles affected | Accessibility impact | Performance impact | Later prompts depend on approval? |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | Color architecture | Role-based architecture in [color.md §2](color.md#2-color-role-architecture-approved) (`Approved` as architecture) | Keeps hue changes from breaking meaning; see [color.md §1](color.md#1-architectural-principles-approved) | A hue-named token system (rejected — breaks theme portability) | None beyond initial setup cost | Showcase, Precision, Flow | Enables consistent contrast/status rules | None | Yes — KBDL-004 theme mappings depend on these roles |
-| 2 | Default neutral direction | Cool-neutral 8-step scale, [color.md §3.1](color.md#31-core-neutral-architecture) | Supports "technological" quality without sterility | Warm-neutral scale; fully neutral (no undertone) scale | A cool undertone may read as slightly cold if overused | Showcase, Precision, Flow | Verified contrast pairs, §4 evidence | None | Yes — KBDL-004 |
-| 3 | Accent-family direction | Muted indigo/violet two-step accent, [color.md §3.2](color.md#32-primary-technological-accent-family) | Reads as "technological luxury" without neon association (identity exclusion in [principles.md §1](../principles.md#1-identity-statement)) | Blue accent (more generic "tech" default); teal accent | Indigo can trend toward "startup default" if not paired with restraint elsewhere | Showcase, Precision, Flow | 6.07:1 / 8.87:1 contrast verified | None | Yes — KBDL-004 |
-| 4 | Typography-role model | Function-based roles, [typography.md §2](typography.md#2-typeface-role-architecture-approved) (`Approved` as architecture) | Decouples hierarchy from a specific font choice, supporting open brand typefaces | A fixed single-typeface identity (rejected — conflicts with open brand expression) | None significant | Showcase, Precision, Flow | Preserves readability priority | None | Yes — later components depend on roles |
-| 5 | Typeface strategy | Humanist sans-serif with tabular figures and verified open license, plus a monospace family for the narrow Code role, [typography.md §6](typography.md#6-recommended-default-type-strategy) | Balances legibility, licensing certainty, and KBDL's approachable-but-precise identity | A geometric sans (more "cold-tech"); a licensed commercial family (licensing unverified) | Open-license options may have a smaller weight range than premium commercial families | Showcase, Precision, Flow | Must still verify per-typeface legibility | Web-font loading cost must be managed | Yes — depends on final licensing verification |
-| 6 | Type-scale logic | Ratio-based scale relative to body (1×), [typography.md §3](typography.md#3-type-scale-and-text-roles) | Keeps hierarchy proportional and predictable across roles | A purely arbitrary per-role size list (rejected — no rhythm) | None significant | Showcase, Precision, Flow | Must remain resizable by user | None | Yes — implementation needs final unit values |
-| 7 | Spacing-system logic | 8-step modular scale, [spacing-layout.md §1.3](spacing-layout.md#13-recommended-modular-spacing-system) | Provides a deliberate, limited rhythm per the locked spacing rule | A continuous/arbitrary spacing approach (rejected — violates locked rule) | A limited step set requires exception-based extension | Showcase, Precision, Flow | Preserves touch-target minimums | None | Yes — KBDL-006 responsive behavior depends on this |
-| 8 | Layout and grid model | Content-priority-driven reflow, [spacing-layout.md §2](spacing-layout.md#2-layout-and-grid-principles-approved-architecture) (`Approved` as architecture) | Enforces the locked responsive-content-priority rule | A fixed-column-count grid regardless of content (rejected — risks "shrunk desktop" pattern) | Requires more design judgment than a rigid grid | Showcase, Precision, Flow | Preserves source-order and safe areas | None | Yes — KBDL-006 |
-| 9 | Breakpoint philosophy | Named, content-justified breakpoints (compact/standard/expanded/wide), [spacing-layout.md §3.6](spacing-layout.md#36-recommended-breakpoint-set) | Avoids device-name coupling; ties breakpoints to actual content needs | Device-named breakpoints (rejected per required principle in [spacing-layout.md §3.1](spacing-layout.md#31-required-principle-approved)) | Naming requires clear documentation to stay meaningful | Showcase, Precision, Flow | Preserves content priority at every size | None | Yes — exact pixel values deferred to KBDL-006 |
-| 10 | Shape and corner model | Softened-structured character, 5-step named corner system, [shape-depth.md §1](shape-depth.md#1-shape-and-corner-language) | Balances "premium" softness with "technical" precision, per identity statement | A fully sharp system (too cold); a fully rounded/pill-heavy system (risks generic "friendly SaaS" look) | Requires discipline to avoid pill overuse | Showcase, Precision, Flow | None directly; supports focus-outline legibility (§ borders) | None | Yes — KBDL-004 theme values depend on named steps |
-| 11 | Elevation model | 5-level semantic elevation scale, [shape-depth.md §3.2](shape-depth.md#32-recommended-semantic-elevation-scale) | Ties depth to functional meaning, not decoration | A purely decorative depth system (rejected — violates required principles) | Requires a simplified fallback for reduced-effects contexts | Showcase, Precision, Flow | Must remain legible without shadow/blur (§3.6) | Simplified fallback required on constrained devices | Yes — KBDL-004 shadow/blur values depend on these levels |
-| 12 | Iconography strategy | Stroke-based, consistent-optical-size icon system, [iconography-media.md §1.6](iconography-media.md#16-recommended-icon-strategy) | Pairs well with the softened-structured shape character; legible at small sizes | A filled-icon-only system (heavier visual weight at small sizes); mixed stroke/fill (rejected — breaks consistency) | Stroke icons can read as less "bold" at very small sizes if stroke weight is not tuned | Showcase, Precision, Flow | Icons must not be sole state/status indicator (§ required principles) | None | No — can be finalized independently of other modules |
-| 13 | Media strategy | Named aspect-treatment set with focal-point preservation, [iconography-media.md §2.3](iconography-media.md#23-aspect-relationships-cropping-and-focal-point-preservation) | Prevents ad hoc cropping that loses meaning; supports responsive reflow | Arbitrary per-instance cropping (rejected — inconsistent, risks losing focal content) | Requires more upfront asset preparation discipline | Showcase, Precision, Flow | Must anticipate alt-text and reduced-motion needs | Low-cost placeholders required for large media | No — can be finalized independently of other modules |
+| 1 | Default neutral direction | Cool-neutral 9-step scale, [color.md §3.1](color.md#31-core-neutral-architecture) | Supports "technological" quality without sterility | Warm-neutral scale; fully neutral (no undertone) scale | A cool undertone may read as slightly cold if overused | Showcase, Precision, Flow | Verified contrast pairs, §4 evidence; `neutral-50` restricted to large-text/non-text use, `neutral-60` added and verified for normal secondary/tertiary text (5.59:1) | None | Yes — KBDL-004 |
+| 2 | Accent-family direction | Muted indigo/violet two-step accent, [color.md §3.2](color.md#32-primary-technological-accent-family) | Reads as "technological luxury" without neon association (identity exclusion in [principles.md §1](../principles.md#1-identity-statement)) | Blue accent (more generic "tech" default); teal accent | Indigo can trend toward "startup default" if not paired with restraint elsewhere | Showcase, Precision, Flow | 6.07:1 / 8.87:1 contrast verified | None | Yes — KBDL-004 |
+| 3 | Typeface strategy | Humanist sans-serif with tabular figures and verified open license, plus a monospace family for the narrow Code role, [typography.md §6](typography.md#6-recommended-default-type-strategy) | Balances legibility, licensing certainty, and KBDL's approachable-but-precise identity | A geometric sans (more "cold-tech"); a licensed commercial family (licensing unverified) | Open-license options may have a smaller weight range than premium commercial families | Showcase, Precision, Flow | Must still verify per-typeface legibility | Web-font loading cost must be managed | Yes — depends on final licensing verification |
+| 4 | Type-scale relationships | Ratio-based scale relative to body (1×), [typography.md §3](typography.md#3-type-scale-and-text-roles) | Keeps hierarchy proportional and predictable across roles | A purely arbitrary per-role size list (rejected — no rhythm) | None significant | Showcase, Precision, Flow | Must remain resizable by user | None | Yes — implementation needs final unit values |
+| 5 | Spacing scale | 8-step modular scale, [spacing-layout.md §1.3](spacing-layout.md#13-recommended-modular-spacing-system) | Provides a deliberate, limited rhythm per the locked spacing rule | A continuous/arbitrary spacing approach (rejected — violates locked rule) | A limited step set requires exception-based extension | Showcase, Precision, Flow | Preserves touch-target minimums | None | Yes — KBDL-006 responsive behavior depends on this |
+| 6 | Named breakpoint set | Content-justified breakpoints (compact/standard/expanded/wide), [spacing-layout.md §3.6](spacing-layout.md#36-recommended-breakpoint-set) | Avoids device-name coupling; ties breakpoints to actual content needs | Device-named breakpoints (rejected per required principle in [spacing-layout.md §3.1](spacing-layout.md#31-required-principle-approved)) | Naming requires clear documentation to stay meaningful | Showcase, Precision, Flow | Preserves content priority at every size | None | Yes — exact pixel values deferred to KBDL-006 |
+| 7 | Geometric character | Softened-structured corner character, [shape-depth.md §1.2](shape-depth.md#12-geometric-character-recommended) | Balances "premium" softness with "technical" precision, per identity statement | A fully sharp system (too cold); a fully rounded/organic system (too soft) | Requires discipline to keep sharp exceptions rare | Showcase, Precision, Flow | None directly | None | Yes — KBDL-004 theme values depend on this direction |
+| 8 | Corner classification | 5-step named corner system (sharp/subtle/standard/pronounced/pill), [shape-depth.md §1.3](shape-depth.md#13-recommended-corner-system) | Provides a limited, systematic set rather than arbitrary per-instance radii | An unlimited/continuous radius scale (rejected — violates systematic-variation principle) | Requires discipline to avoid pill overuse | Showcase, Precision, Flow | Supports focus-outline legibility (§ borders) | None | Yes — KBDL-004 theme values depend on named steps |
+| 9 | Elevation scale | 5-level semantic elevation scale, [shape-depth.md §3.2](shape-depth.md#32-recommended-semantic-elevation-scale) | Ties depth to functional meaning, not decoration | A purely decorative depth system (rejected — violates required principles) | Requires a simplified fallback for reduced-effects contexts | Showcase, Precision, Flow | Must remain legible without shadow/blur (§3.6) | Simplified fallback required on constrained devices | Yes — KBDL-004 shadow/blur values depend on these levels |
+| 10 | Icon strategy | Stroke-based, consistent-optical-size icon system, [iconography-media.md §1.6](iconography-media.md#16-recommended-icon-strategy) | Pairs well with the recommended (not yet approved) geometric character; legible at small sizes | A filled-icon-only system (heavier visual weight at small sizes); mixed stroke/fill (rejected — breaks consistency) | Stroke icons can read as less "bold" at very small sizes if stroke weight is not tuned | Showcase, Precision, Flow | Icons must not be sole state/status indicator (§ required principles) | None | No — can be finalized independently of other modules |
+| 11 | Media strategy | Named aspect-treatment set with focal-point preservation, [iconography-media.md §2.3](iconography-media.md#23-aspect-relationships-cropping-and-focal-point-preservation) | Prevents ad hoc cropping that loses meaning; supports responsive reflow | Arbitrary per-instance cropping (rejected — inconsistent, risks losing focal content) | Requires more upfront asset preparation discipline | Showcase, Precision, Flow | Must anticipate alt-text and reduced-motion needs | Low-cost placeholders required for large media | No — can be finalized independently of other modules |
 
 ## 7. Normative Requirements
 
-Lifecycle status `Approved` for requirements 1–6 (directly restating
-approved architecture from KBDL-001/002); `Recommended` where a
-requirement's obligation is to use a *specific proposed default*, which
-itself requires approval (noted per requirement). Provenance
-`User-provided`/`Confirmed` as noted. Validation status `Not verified`
+Lifecycle status `Approved` for `KBDL-FND-001` through `KBDL-FND-008`
+(directly restating approved architecture from KBDL-001/002); `Recommended`
+for `KBDL-FND-009` through `KBDL-FND-012`, whose obligation is to adopt a
+*specific proposed default* that itself requires project-owner approval
+(noted per requirement). Provenance `User-provided`/`Confirmed` as noted.
+Validation status `Not verified`
 unless stated otherwise — writing a requirement does not verify it.
 
 - **KBDL-FND-001** — Every KBDL color role **must** be named
@@ -251,7 +273,7 @@ unless stated otherwise — writing a requirement does not verify it.
   - Related principle: [principles.md §6.8](../principles.md#68-accessibility-by-default).
   - Applicable profiles: Showcase, Precision, Flow.
   - Related foundation section: [color.md §2.4](color.md#24-status-roles), [iconography-media.md §1.1](iconography-media.md#11-required-principles-approved).
-  - Related future modules: Components (KBDL-008/009).
+  - Related future modules: Components (KBDL-007/008).
   - Validation method: Manual review at component-design time (later module) plus this module's conceptual examples.
 
 - **KBDL-FND-003** — Spacing **must** follow the deliberate, repeated
@@ -297,7 +319,7 @@ unless stated otherwise — writing a requirement does not verify it.
   - Related principle: [principles.md §5.1](../principles.md#51-locked-identity-rules), [principles.md §6.8](../principles.md#68-accessibility-by-default).
   - Applicable profiles: Showcase, Precision, Flow.
   - Related foundation section: [iconography-media.md §1](iconography-media.md#1-iconography).
-  - Related future modules: Components (KBDL-008/009).
+  - Related future modules: Components (KBDL-007/008).
   - Validation method: Manual review of icon usage against the label-pairing rule.
 
 - **KBDL-FND-007** — Media **must** anticipate reduced-motion and
@@ -308,7 +330,7 @@ unless stated otherwise — writing a requirement does not verify it.
   - Related principle: [principles.md §6.8](../principles.md#68-accessibility-by-default), [principles.md §6.9](../principles.md#69-performance-aware-enhancement).
   - Applicable profiles: Showcase, Precision, Flow.
   - Related foundation section: [iconography-media.md §2](iconography-media.md#2-imagery-and-media).
-  - Related future modules: Motion (KBDL-005), Accessibility (KBDL-007).
+  - Related future modules: Motion (KBDL-005), Accessibility (KBDL-006).
   - Validation method: Manual review confirming a static/paused equivalent and an anticipated accessible-text plan exist per media asset type.
 
 - **KBDL-FND-008** — Project profiles **must** share one foundation
@@ -321,7 +343,7 @@ unless stated otherwise — writing a requirement does not verify it.
   - Related principle: [principles.md §6.7](../principles.md#67-adaptability-without-fragmentation).
   - Applicable profiles: Showcase, Precision, Flow.
   - Related foundation section: [§4](#4-project-profile-adjustments--foundation-summary) (all foundation documents).
-  - Related future modules: Project Profiles (KBDL-010).
+  - Related future modules: Project Profiles (KBDL-009).
   - Validation method: Manual cross-profile review once the project-profiles module is approved.
 
 - **KBDL-FND-009** — The recommended color values in
@@ -348,7 +370,7 @@ unless stated otherwise — writing a requirement does not verify it.
   - Related principle: [principles.md §6.3](../principles.md#63-consumer-comprehension).
   - Applicable profiles: Showcase, Precision, Flow.
   - Related foundation section: [typography.md §3, §5, §6](typography.md#3-type-scale-and-text-roles).
-  - Related future modules: Components (KBDL-008/009).
+  - Related future modules: Components (KBDL-007/008).
   - Validation method: Licensing verification (not yet performed) plus project-owner review.
 
 - **KBDL-FND-011** — The recommended 8-step spacing scale and named

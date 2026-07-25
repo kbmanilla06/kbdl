@@ -37,15 +37,24 @@ rules.
   Showcase card and a Precision card may use different corner intensity
   (see §1.6) but must draw from the same named set (§1.3).
 
-### 1.2 Geometric character (Approved)
+### 1.2 Geometric character (Recommended)
 
-KBDL's default geometric character is **softened-structured**: corners
-are rounded enough to feel approachable and premium, but restrained enough
-to preserve a technical, precise character — neither sharp/clinical nor
-fully organic/soft. This sits deliberately between the two extremes
+Status: `Recommended` — this specific direction requires project-owner
+approval; see
+[foundations/README.md § Foundation Status Model](README.md#3-foundation-status-model)
+and the [foundation decision packet](README.md#6-foundation-decision-packet).
+Provenance: `Assumed`. Validation status: `Not verified`.
+
+A candidate default geometric character for KBDL is **softened-structured**:
+corners rounded enough to feel approachable and premium, but restrained
+enough to preserve a technical, precise character — neither sharp/clinical
+nor fully organic/soft. This sits deliberately between the two extremes
 sometimes seen in "luxury" (soft, rounded, organic) and "technical" (sharp,
 angular) design languages, consistent with
-[principles.md §1](../principles.md#1-identity-statement).
+[principles.md §1](../principles.md#1-identity-statement). This is a
+newly proposed direction, not yet approved; the `Approved` architectural
+rule is only that KBDL has *a* deliberate, systematic geometric character
+(§1.1), not that it is specifically "softened-structured."
 
 ### 1.3 Recommended corner system
 

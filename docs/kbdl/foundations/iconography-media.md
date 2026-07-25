@@ -69,8 +69,8 @@ strategy.
   the same icon may be used specifically to indicate a "selected" or
   "active" state of an otherwise stroke-based icon.
 - Icon corner treatment (e.g., rounded stroke caps) should echo the
-  shape system's general character (see
-  [shape-depth.md §1.2](shape-depth.md#12-geometric-character-approved)),
+  shape system's recommended geometric character once approved (see
+  [shape-depth.md §1.2](shape-depth.md#12-geometric-character-recommended)),
   not introduce an unrelated geometric language.
 - Icons align to the same optical center as their paired text, and share
   a consistent bounding-box convention so mixed icon sets from a single
@@ -109,10 +109,10 @@ Status: `Recommended`, `Assumed` provenance, `Not verified` validation.
 
 A stroke-based, geometrically consistent icon style, at a small set of
 defined optical sizes, is recommended as KBDL's default functional-icon
-treatment, since stroke icons pair well with KBDL's "softened-structured"
-shape character (see
-[shape-depth.md §1.2](shape-depth.md#12-geometric-character-approved)) and
-remain legible at small interface sizes. No specific icon library is
+treatment, since stroke icons pair well with the recommended (not yet
+approved) "softened-structured" geometric character candidate (see
+[shape-depth.md §1.2](shape-depth.md#12-geometric-character-recommended))
+and remain legible at small interface sizes. No specific icon library is
 selected here; library selection (open-source vs. custom-drawn vs.
 licensed) is deferred to the
 [foundation decision packet](README.md#6-foundation-decision-packet).

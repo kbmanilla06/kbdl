@@ -183,7 +183,8 @@ A cool-neutral scale (slight blue undertone, supporting KBDL's
 | neutral-10 | `#F5F6F8` | Raised surface on light backgrounds |
 | neutral-20 | `#E8EAEE` | Subtle separators, disabled fills |
 | neutral-30 | `#D3D6DC` | Structural borders on light surfaces |
-| neutral-50 | `#8A8F99` | Secondary/tertiary text, large-text or UI-only use (see §4) |
+| neutral-50 | `#8A8F99` | **Not for ordinary interface or body text at any size.** Reserved for large text meeting the WCAG 1.4.3 large-text size/weight threshold, non-text UI boundaries and graphics meeting WCAG 1.4.11 (3:1), or purely decorative use carrying no required meaning (see §4). |
+| neutral-60 | `#636872` | Secondary/tertiary text at normal reading size — verified 4.5:1+ on neutral-0 (see §4). This is the correct value for ordinary secondary or tertiary body/interface text. |
 | neutral-70 | `#52565F` | Structural borders on dark surfaces |
 | neutral-90 | `#23252B` | Primary text on light surfaces |
 | neutral-100 | `#121317` | Darkest surface reference |
@@ -242,7 +243,8 @@ evidence for the exact script and per-pair output.
 | positive-text on neutral-0 | 6.57:1 | 4.5:1 | Passes |
 | caution-text on neutral-0 | 5.93:1 | 4.5:1 | Passes |
 | critical-text on neutral-0 | 6.54:1 | 4.5:1 | Passes |
-| neutral-50 on neutral-0 (secondary text) | 3.25:1 | 4.5:1 (normal text) / 3:1 (large text or UI components) | **Fails** for normal body text; acceptable only for large text (per WCAG 1.4.3) or non-text UI components (per WCAG 1.4.11) |
+| neutral-50 on neutral-0 (large text / non-text UI boundary only) | 3.25:1 | 4.5:1 (normal text) / 3:1 (large text or UI components) | **Fails** the 4.5:1 normal-text threshold. `neutral-50` is therefore prohibited for ordinary body, interface, label, or any other normal-sized text — it is defined only for WCAG 1.4.3 large text, WCAG 1.4.11 non-text UI boundaries/graphics, or purely decorative use. |
+| neutral-60 on neutral-0 (secondary/tertiary normal-sized text) | 5.59:1 | 4.5:1 | Passes with a margin of +1.09, comfortably above threshold. This is the value to use for secondary or tertiary text at normal reading size. |
 
 **This is not a claim of complete WCAG conformance.** Only the specific
 pairs above were tested, in isolation, against a plain background. Real
