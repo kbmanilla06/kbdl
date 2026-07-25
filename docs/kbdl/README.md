@@ -27,7 +27,7 @@ independently in the [traceability matrix](traceability-matrix.md) and are
 not all `Verified`. KBDL-004's exact light/dark theme mappings, status-
 family colors, gradient strategy, and color-value expression convention
 remain `Recommended`, pending project-owner approval — see
-[themes/README.md § Theme Decision Packet](themes/README.md#10-theme-decision-packet).
+[themes/README.md § Theme Decision Packet](themes/README.md#10-theme-decision-packet-restructured-under-kbdl-004-r1).
 Progression to later roadmap steps depends on the planning agent's
 validation review, not on this index. KBDL-001 established the
 documentation architecture, terminology, requirement and status
@@ -105,7 +105,7 @@ semantic-role inventory, and recommended light/dark mappings; the exact
 mappings, status-family colors, gradient strategy, and color-value
 expression convention remain `Recommended`, pending project-owner
 approval via the
-[theme decision packet](themes/README.md#10-theme-decision-packet).
+[theme decision packet](themes/README.md#10-theme-decision-packet-restructured-under-kbdl-004-r1).
 
 Supporting documents (not numbered modules, but required by KBDL-001 and
 referenced by KBDL-002 and KBDL-003):

@@ -1,14 +1,17 @@
 # KBDL Themes — Adaptation, Contexts, and Cross-Cutting Rules
 
-Lifecycle status: `Approved` for the architecture and rules — the
-Surface and Elevation Requirements below, §1 (project-override
-boundaries), §2 (local-context architecture), and §7's transition
-*requirements* (all directly derived from approved principles and
-foundations). `Recommended` for the specific values — §3 (transparency
-opacity), §4 (gradient strategy), §5 (status-family colors), and §6
-(color-value expression convention) — pending project-owner approval;
-see
-[themes/README.md § Theme Decision Packet](README.md#10-theme-decision-packet).
+**Corrected under KBDL-004-R1.** Lifecycle status: `Approved` only for
+the Surface and Elevation cross-cutting requirements below (directly
+derived from `foundations/shape-depth.md`), §1.2's accessibility-
+non-weakening core (see `KBDL-THM-005`), and §7.1's pre-existing
+reduced-motion requirement (see `KBDL-THM-012a`). Everything else in
+this document is `Recommended`, pending project-owner approval: §1.1/
+§1.3's detailed project-override list (`KBDL-THM-014`), §2's local-
+contrast-context architecture (`KBDL-THM-015`), §3 (transparency
+opacity values), §4 (gradient strategy), §5 (status-family colors), §6
+(color-value expression convention), and §7's KBDL-004-specific
+transition guidance beyond reduced-motion (`KBDL-THM-012`). See
+[themes/README.md § Theme Decision Packet](README.md#10-theme-decision-packet-restructured-under-kbdl-004-r1).
 
 Return to the [themes index](README.md) · [specification index](../README.md).
 
@@ -244,8 +247,10 @@ worked example below.
 
 ### 4.1 Permitted purposes
 
-- **Accent gradients** — the approved `accent-50`/`accent-30` pairing,
-  reinforcing an existing hierarchy relationship (see
+- **Accent gradients** — built from the already-`Approved` `accent-50`
+  and `accent-30` foundation values (their use *as a gradient pairing*
+  remains `Recommended`, not `Approved`), reinforcing an existing
+  hierarchy relationship (see
   [light-theme.md §6](light-theme.md#6-media-and-decorative-context)/
   [dark-theme.md §7](dark-theme.md#7-media-and-decorative-context)).
 - **Surface gradients** — a subtle tonal gradient within the neutral
@@ -262,28 +267,54 @@ worked example below.
 - **Animated gradients** — explicitly out of scope for KBDL-004; any
   future animated gradient is a KBDL-005 (Motion) decision.
 - **Status meaning conveyed only by a gradient.**
-- **Text over a gradient without worst-case contrast review** (see §4.3).
+- **Direct text placed on the raw gradient** — see §4.3; every gradient
+  in this specification requires a bounded, solid content surface for
+  any text, per the calculation below.
 - Gradient use that makes light and dark themes **unrelated** — both
   modes use the same two-anchor accent gradient, only reordered (light:
-  `accent-50 → accent-30`; dark: `accent-30 → accent-50`) to keep the
-  higher-contrast-for-that-mode accent step nearer any overlaid text.
+  `accent-50 → accent-30`; dark: `accent-30 → accent-50`).
 
-### 4.3 Worked Example — Worst-Case Contrast
+### 4.3 Worked Example — Worst-Case Contrast (Corrected, KBDL-004-R1)
 
-For the Showcase hero gradient (`accent-50 → accent-30` in light mode),
-text placed over it uses `neutral-10` content. The worst case is the
-*lightest* stop (`accent-30`, `#A9ACFF`):
+For the Showcase hero gradient (`accent-50 #4A4EE0 → accent-30 #A9ACFF`
+in light mode), both endpoints were calculated against both candidate
+text colors:
 
-- `neutral-10` `#F5F6F8` on `accent-30` `#A9ACFF`: this pair has **not**
-  been calculated and is recorded as `Not verified` — see
-  [validation.md § Items Not Verified](validation.md#5-items-not-verified).
-  Any project adopting this gradient with overlaid text must run this
-  calculation before marking the combination `Verified`.
+| Text color | On `accent-50` (`#4A4EE0`) | On `accent-30` (`#A9ACFF`) |
+| --- | --- | --- |
+| `neutral-10` `#F5F6F8` (light text) | 5.62:1 — Passes | **1.94:1 — Fails** |
+| `neutral-90` `#23252B` (dark text) | 2.52:1 — **Fails** | 7.32:1 — Passes |
+
+**No single direct text color passes across the full gradient range** —
+light text fails badly at the lighter end, dark text fails badly at the
+darker end. Because of this, KBDL-004-R1 adopts the **preferred
+resolution**: text is never placed directly on the raw gradient.
+
+**Rule:** any text appearing over a gradient surface **must** sit on a
+bounded, solid content surface (e.g., a caption band or card) placed
+over the gradient, verified independently as an ordinary surface/text
+pair — never on the gradient pixels themselves. This is the same
+mechanism already defined for [Media overlay](semantic-roles.md#16-media-and-decorative-context)
+text. A verified example: `neutral-10` text on a `neutral-100` caption
+band at ~90% opacity, placed over the gradient — this pair is
+independent of the gradient's own colors and inherits the already-
+verified `neutral-10`-on-`neutral-100` evidence (17.17:1, see
+[validation.md §3](validation.md#3-consolidated-contrast-evidence)),
+not a new calculation against the gradient.
+
+This satisfies R1-AC-005/R1-AC-006: every exact pair the recommended
+gradient strategy actually uses (the caption-band pair, 17.17:1) is
+calculated and verified; direct gradient-to-text pairs are prohibited
+rather than left unverified.
 
 ### 4.4 Reduced-complexity fallback and profile intensity
 
 - A **reduced-complexity fallback** (a flat fill using the gradient's
-  darker anchor color) must be available for lower-performance contexts.
+  darker anchor color, `accent-50`) must be available for lower-
+  performance contexts. Text is never placed directly on this flat
+  fallback either — the same bounded content-surface rule in §4.3
+  applies uniformly, regardless of whether the background is a gradient
+  or its flat fallback.
 - **Showcase** is the primary user of gradients; **Precision** and
   **Flow** use them rarely, and never as a primary-action or data
   background.
@@ -309,6 +340,13 @@ pairs shown (see [validation.md](validation.md)).
   Critical (`#B3261E`, a red) versus accent (`#4A4EE0`, an indigo-
   violet) are unrelated hues; dark-mode Critical (`#FF8A80`) versus
   accent (`#A9ACFF`) likewise.
+- **Informational must remain distinct from the accent** — light-mode
+  Informational (`#164499`, a pure/cyan-leaning blue, revised under
+  KBDL-004-R1, see §5.2) versus accent (`#4A4EE0`, an indigo-violet) are
+  adjacent but distinguishable hue families; dark-mode Informational
+  (`#7CC4FF`, sky blue) versus accent-30 (`#A9ACFF`, lavender) likewise.
+  A project substituting a different accent hue (per
+  [§1.1](#11-projects-may-control)) must re-check this pair.
 - **Status surfaces must remain legible in both modes** — see the
   Subtle- and Strong-surface rows in
   [light-theme.md §5](light-theme.md#5-status-families) and
@@ -317,24 +355,42 @@ pairs shown (see [validation.md](validation.md)).
   approval — writing or contrast-testing these values (as done here)
   does not approve them.
 
-### 5.2 Two documented restrictions
+### 5.2 Informational Correction (KBDL-004-R1)
 
-Informational (`#2F6FED`) is the status hue with the least contrast
-margin, and fails 4.5:1 in two light-mode contexts:
+The original light-mode Informational value (`#2F6FED`, inherited from
+the still-pending
+[foundations/color.md §3.3](../foundations/color.md#33-supporting-status-families)
+proposal) failed 4.5:1 in two normal-text contexts:
 
-- **On-strong-surface content** (`neutral-10` on `#2F6FED` fill):
-  **4.21:1** — below the 4.5:1 normal-text threshold, though above the
-  3:1 large-text/icon threshold.
 - **Text directly on the Informational Subtle surface**
-  (`#2F6FED` on `neutral-20`): **3.78:1** — also below 4.5:1, and below
-  even the 3:1 large-text threshold.
+  (`#2F6FED` on `neutral-20`): **3.78:1** — below the 4.5:1 normal-text
+  threshold (this figure was previously, incorrectly, also described as
+  below the 3:1 large-text threshold; 3.78:1 is in fact above 3:1 — that
+  earlier statement was a documentation error, now corrected).
+- **On-strong-surface content** (`neutral-10` on `#2F6FED` fill):
+  **4.21:1** — also below 4.5:1.
 
-Both roles are therefore restricted: Informational badges, fills, and
-subtle-surface text in light mode **must** use large text or an
-icon-only treatment, never small normal-weight text, until a darker
-Informational hue is proposed and re-verified. This restriction does not
-apply to Informational text used directly on the Base or Canvas surface
-(4.55:1, passes), only to the two surface combinations above.
+Rather than restrict Informational to large-text/icon-only use (which
+would leave the role without a valid mapping for the normal-sized text
+it is required to support, per [semantic-roles.md §1.5](semantic-roles.md#15-status)),
+KBDL-004-R1 replaces the light-mode Informational hue with **`#164499`**,
+a darker, more saturated blue verified to pass 4.5:1 in every context
+this family is used:
+
+| Context | Ratio | Threshold | Result |
+| --- | --- | --- | --- |
+| Text/icon/border on Base | 9.05:1 | 4.5:1 / 3:1 | Passes both |
+| Text/icon/border on Subtle surface (`neutral-20`) | 7.51:1 | 4.5:1 / 3:1 | Passes both |
+| On-strong-surface content (`neutral-10` on `#164499` fill) | 8.37:1 | 4.5:1 | Passes |
+
+A single hue now serves the Text, Icon, Border, Strong-surface, and
+On-strong-surface-content roles for Informational — no per-role
+substitution or large-text restriction is required. This is a revision
+to the still-`Recommended` light-mode Informational proposal; it does
+not itself approve the value, and it supersedes but does not modify
+`foundations/color.md §3.3` (that document is unchanged; this
+revision lives in the theme layer until a future KBDL-003/KBDL-004
+reconciliation, if the project owner requests one).
 
 ## 6. Color-Value Expression
 
@@ -372,9 +428,12 @@ Status: `Recommended`, `Assumed` provenance, `Not applicable` validation
 
 ## 7. Theme-Transition Guidance
 
-Status: `Recommended`, `Assumed` provenance, `Not verified`. No duration,
-easing, or animation-distance value is introduced — all belong to
-KBDL-005 (Motion).
+Status: `Recommended`, `Assumed` provenance, `Not verified` — this
+applies to every requirement in this section **except** the reduced-
+motion rule in §7.1, which is a separate, already-`Approved`
+accessibility rule (`KBDL-THM-012a`) unaffected by this section's
+overall `Recommended` status. No duration, easing, or animation-distance
+value is introduced — all belong to KBDL-005 (Motion).
 
 ### 7.1 Requirements
 
@@ -387,8 +446,10 @@ KBDL-005 (Motion).
   intermediate state may drop below the applicable contrast threshold.
 - Transition behavior **must** work correctly when motion is disabled —
   an instant, non-animated theme swap is always a valid fallback.
-- **Reduced-motion preference must be respected** — this is a locked
-  accessibility requirement, not a controlled variable.
+- **Reduced-motion preference must be respected** (`KBDL-THM-012a`,
+  `Approved`) — this is a locked accessibility requirement, not a
+  controlled variable, and is not part of this section's `Recommended`
+  status.
 - **Initial page rendering should avoid** an unnecessary incorrect-theme
   flash (e.g., briefly rendering light mode before applying a persisted
   dark preference).

@@ -1,13 +1,19 @@
 # KBDL Themes — Index
 
-Lifecycle status: `Approved` for the terminology, architecture, selection
-precedence, persistence guidance, project-override rules, profile
-interpretation, and `KBDL-THM-###` requirements below (derived from
-approved KBDL-001/002/003 decisions). The **exact semantic-role mappings**
-(light and dark theme values), **status-family theme colors**, **gradient
-strategy**, and **color-value expression convention** are `Recommended`,
+**Corrected under KBDL-004-R1.** Lifecycle status: `Approved` only for
+the terminology, semantic-role architecture, semantic parity, profile-
+sharing rule, and the narrow precedence/override cores directly and
+explicitly supported by a prior approved KBDL decision (see
+[§9](#9-normative-requirements) for exactly which statements qualify).
+Everything else — the full six-level selection-precedence ordering,
+persistence guidance, the detailed project-override list, the local-
+contrast-context set, theme-transition guidance (beyond the pre-existing
+reduced-motion rule), the **exact semantic-role mappings** (light and
+dark theme values), **status-family theme colors**, **gradient
+strategy**, and **color-value expression convention** — is `Recommended`,
 pending project-owner approval — see
-[§10 Theme Decision Packet](#10-theme-decision-packet).
+[§10 Theme Decision Packet](#10-theme-decision-packet-restructured-under-kbdl-004-r1). Aligning with a
+general KBDL principle does not by itself make a new policy `Approved`.
 
 Return to the [specification index](../README.md). Status labels are
 defined in [conventions.md §1](../conventions.md#1-status-labels);
@@ -70,7 +76,7 @@ and the color-value expression convention
 ([color.md §3.5](../foundations/color.md#35-consistent-value-expression-method)).
 No decision after `KBDL-DEC-012` changes this. This module reviews and
 extends these three pending items but does not itself approve them —
-see [§10](#10-theme-decision-packet).
+see [§10](#10-theme-decision-packet-restructured-under-kbdl-004-r1).
 
 ## 3. Theme Terminology
 
@@ -308,13 +314,20 @@ visibility, mobile clarity.
 
 ## 9. Normative Requirements
 
-Lifecycle status `Approved` for `KBDL-THM-001` through `KBDL-THM-006`
-(architecture, terminology, precedence, persistence, and profile rules,
-directly restating or extending approved KBDL-001/002/003 decisions).
-`Recommended` for `KBDL-THM-007` through `KBDL-THM-012` (specific light/
-dark mappings, status-family values, gradient strategy, and value-
-expression convention), pending project-owner approval — writing or
-contrast-testing these does not make them `Approved`.
+**Corrected under KBDL-004-R1:** lifecycle status is `Approved` only for
+requirements whose exact wording is directly and explicitly supported by
+a prior approved KBDL decision (`KBDL-THM-001`, `KBDL-THM-002`,
+`KBDL-THM-003`, `KBDL-THM-005`, `KBDL-THM-006`, each narrowed below to
+its approved core). Every other requirement — including new policy that
+merely *aligns with* a general principle without being explicitly
+pre-approved — is `Recommended`, pending project-owner approval:
+`KBDL-THM-004` (persistence baseline), `KBDL-THM-007` through
+`KBDL-THM-012` (light/dark mappings, status-family values, gradient
+strategy, value-expression convention, transition guidance), and the
+newly added `KBDL-THM-013` through `KBDL-THM-015` (detailed selection-
+precedence ordering, detailed project-override list, and local-contrast-
+context set). Writing or contrast-testing a requirement never makes it
+`Approved`.
 
 - **KBDL-THM-001** — KBDL themes **must** use the semantic-role
   architecture in [semantic-roles.md](semantic-roles.md); a theme
@@ -340,11 +353,16 @@ contrast-testing these does not make them `Approved`.
   - Related future modules: Components.
   - Validation method: Parity-matrix completeness check (performed, see validation.md).
 
-- **KBDL-THM-003** — Theme selection **must** follow the precedence in
-  [§5](#5-theme-selection-precedence); a project **must not** override an
-  explicit user choice, and system preference **must** be used only when
-  no explicit choice exists.
-  - Lifecycle: Approved. Provenance: Confirmed. Validation: Not verified.
+- **KBDL-THM-003** — *(Narrowed under KBDL-004-R1 to its approved core;
+  the full precedence ordering moved to `KBDL-THM-013`.)* Explicit
+  current-session or persisted user theme choice **must** take
+  precedence over system preference where a theme control exists; system
+  preference **must** be used only when no explicit user choice exists.
+  - Lifecycle: Approved — directly and explicitly stated in the KBDL-004
+    preconditions ("explicit user theme choice taking precedence where a
+    control exists" and "system preference as the default source when no
+    user choice exists"). Provenance: Confirmed. Validation: Not
+    verified.
   - Related principle: [principles.md §6.8](../principles.md#68-accessibility-by-default).
   - Related foundation requirement: Not applicable.
   - Applicable profiles: Showcase, Precision, Flow.
@@ -352,28 +370,38 @@ contrast-testing these does not make them `Approved`.
   - Related future modules: Components.
   - Validation method: Manual review of precedence logic once implemented.
 
-- **KBDL-THM-004** — Theme preference persistence **must not** require
-  authentication, **must not** contain sensitive personal information,
-  and **must not** block product use on failure.
-  - Lifecycle: Approved. Provenance: Confirmed. Validation: Not verified.
+- **KBDL-THM-004** — *(Reclassified under KBDL-004-R1: no prior approved
+  KBDL decision specifically addresses theme-preference persistence; the
+  general accessibility/privacy principles it aligns with do not by
+  themselves make this new baseline `Approved`.)* Theme preference
+  persistence **must not** require authentication, **must not** contain
+  sensitive personal information, and **must not** block product use on
+  failure.
+  - Lifecycle: Recommended. Provenance: Assumed. Validation: Not
+    verified.
   - Related principle: [principles.md §6.8](../principles.md#68-accessibility-by-default).
   - Related foundation requirement: Not applicable.
   - Applicable profiles: Showcase, Precision, Flow.
   - Specification location: [§7](#7-persistence-guidance).
   - Related future modules: Not applicable.
-  - Validation method: Manual review of persistence design once implemented.
+  - Validation method: Manual review of persistence design once implemented; project-owner review (not yet performed).
 
-- **KBDL-THM-005** — A project **may** control theme presentation only
-  within the documented boundaries in
-  [adaptation.md §1](adaptation.md#1-project-controlled-adaptation); a
-  project **must not** change semantic meaning, remove required roles,
-  weaken contrast, replace focus treatment, or create unrelated light/
-  dark identities.
-  - Lifecycle: Approved. Provenance: Confirmed. Validation: Not verified.
+- **KBDL-THM-005** — *(Narrowed under KBDL-004-R1 to its approved core;
+  the detailed permitted-override list moved to `KBDL-THM-014`.)* A
+  project theme **must not** weaken contrast, remove the Focus indicator
+  treatment, or otherwise reduce accessibility below the threshold
+  documented for any semantic role, regardless of any other
+  customization it applies.
+  - Lifecycle: Approved — directly derived from the locked, already-
+    approved accessibility rule in
+    [governance.md § KBDL-GOV-002](../governance.md#kbdl-gov-002--accessibility-requirements-are-protected)
+    and [principles.md §6.8](../principles.md#68-accessibility-by-default);
+    accessibility cannot be weakened by a project override. Provenance:
+    Confirmed. Validation: Not verified.
   - Related principle: [principles.md §5](../principles.md#5-stable-and-variable-identity-elements).
   - Related foundation requirement: `KBDL-FND-008`.
   - Applicable profiles: Showcase, Precision, Flow.
-  - Specification location: [adaptation.md §1](adaptation.md#1-project-controlled-adaptation).
+  - Specification location: [adaptation.md §1.2](adaptation.md#12-projects-must-not).
   - Related future modules: Components, Customization.
   - Validation method: Manual review of any project theme against the documented boundaries.
 
@@ -464,7 +492,12 @@ contrast-testing these does not make them `Approved`.
 - **KBDL-THM-012** — The theme-transition guidance in
   [adaptation.md §7](adaptation.md#7-theme-transition-guidance)
   **should** be adopted pending project-owner approval; exact durations
-  and easing **must not** be introduced here (deferred to KBDL-005).
+  and easing **must not** be introduced here (deferred to KBDL-005). This
+  requirement covers only the *new*, KBDL-004-specific transition
+  guidance (which elements may/must-not animate, initial-render-mismatch
+  avoidance, etc.) — the pre-existing requirement that reduced-motion
+  preference **must** be respected is a separate, already-`Approved`
+  accessibility rule (see below), not part of this `Recommended` item.
   - Lifecycle: Recommended. Provenance: Assumed. Validation: Not
     verified.
   - Related principle: [principles.md §6.9](../principles.md#69-performance-aware-enhancement).
@@ -474,16 +507,82 @@ contrast-testing these does not make them `Approved`.
   - Related future modules: Motion (KBDL-005).
   - Validation method: Manual review confirming no timing/easing values were introduced (performed).
 
-## 10. Theme Decision Packet
+- **KBDL-THM-012a** — Reduced-motion preference **must** be respected
+  during any theme transition; this is a locked accessibility rule, not
+  a controlled or recommended variable, and is unaffected by whether
+  `KBDL-THM-012`'s detailed transition guidance is approved.
+  - Lifecycle: Approved — directly derived from the already-approved
+    enhanced motion-safety requirement
+    ([decision-register.md § KBDL-DEC-010](../decision-register.md#kbdl-dec-010--wcag-22-aa-baseline-with-enhanced-motion-safety)).
+    Provenance: Confirmed. Validation: Not verified.
+  - Related principle: [principles.md §6.8](../principles.md#68-accessibility-by-default).
+  - Related foundation requirement: Not applicable.
+  - Applicable profiles: Showcase, Precision, Flow.
+  - Specification location: [adaptation.md §7.1](adaptation.md#71-requirements).
+  - Related future modules: Motion (KBDL-005).
+  - Validation method: Manual review confirming reduced-motion behavior is honored once implemented.
+
+- **KBDL-THM-013** — *(New under KBDL-004-R1, split out of the original
+  `KBDL-THM-003`.)* KBDL themes **should** adopt the full six-level
+  theme-selection precedence in
+  [§5](#5-theme-selection-precedence) — including where required
+  accessibility constraints, persisted-versus-current-session ordering,
+  approved project-specific policy, and the documented light fallback
+  sit relative to one another — pending project-owner approval.
+  - Lifecycle: Recommended. Provenance: Assumed. Validation: Not
+    verified.
+  - Related principle: [principles.md §6.8](../principles.md#68-accessibility-by-default).
+  - Related foundation requirement: Not applicable.
+  - Applicable profiles: Showcase, Precision, Flow.
+  - Specification location: [§5](#5-theme-selection-precedence).
+  - Related future modules: Components.
+  - Validation method: Manual review of the full precedence flow once implemented; project-owner review (not yet performed).
+
+- **KBDL-THM-014** — *(New under KBDL-004-R1, split out of the original
+  `KBDL-THM-005`.)* The detailed permitted project-override list and
+  documentation requirement in
+  [adaptation.md §1.1, §1.3](adaptation.md#1-project-controlled-adaptation)
+  **should** be adopted pending project-owner approval; this is new
+  KBDL-004 policy, not a restatement of a prior approved decision.
+  - Lifecycle: Recommended. Provenance: Assumed. Validation: Not
+    verified.
+  - Related principle: [principles.md §5](../principles.md#5-stable-and-variable-identity-elements).
+  - Related foundation requirement: `KBDL-FND-008`.
+  - Applicable profiles: Showcase, Precision, Flow.
+  - Specification location: [adaptation.md §1.1, §1.3](adaptation.md#1-project-controlled-adaptation).
+  - Related future modules: Components, Customization.
+  - Validation method: Manual review of the override list once a project theme exists; project-owner review (not yet performed).
+
+- **KBDL-THM-015** — The named local-contrast-context set and nesting
+  rules in [adaptation.md §2](adaptation.md#2-local-contrast-contexts)
+  **should** be adopted pending project-owner approval; this is new
+  KBDL-004 policy — no prior KBDL decision defines local contrast
+  contexts.
+  - Lifecycle: Recommended. Provenance: Assumed. Validation: Not
+    verified.
+  - Related principle: [principles.md §7](../principles.md#7-visual-consistency).
+  - Related foundation requirement: Not applicable.
+  - Applicable profiles: Showcase, Precision, Flow.
+  - Specification location: [adaptation.md §2](adaptation.md#2-local-contrast-contexts).
+  - Related future modules: Components.
+  - Validation method: Manual review of context usage against the defined set and rules once implemented; project-owner review (not yet performed).
+
+## 10. Theme Decision Packet (Restructured under KBDL-004-R1)
 
 This packet separates already-approved architecture (§10.1, provided
-only as context) from the specific theme decisions that require
-project-owner approval (§10.2) and items not yet ready for approval
-(§10.3).
+only as context) from specific decisions that are actually ready for
+project-owner approval (§10.2) and items that are not yet approval-ready
+(§10.3). Compared to the original packet, §10.2 now includes three
+previously-missing items (selection-precedence detail, project-override
+boundaries, local contrast contexts) and no longer overstates any
+mapping's contrast or approval status.
 
 ### 10.1 Already-Approved Architecture (context only)
 
-Not awaiting approval — provided as context for §10.2:
+Not awaiting approval — provided as context for §10.2. **Narrowed under
+KBDL-004-R1** to only what a prior KBDL decision directly and explicitly
+supports (see [§9](#9-normative-requirements) for the exact wording of
+each corresponding requirement):
 
 - **Color-role architecture, neutral scale, and accent family** —
   [foundations/color.md §1–§3.2](../foundations/color.md#1-architectural-principles-approved),
@@ -491,38 +590,67 @@ Not awaiting approval — provided as context for §10.2:
 - **Elevation scale and corner/geometric character** —
   [foundations/shape-depth.md](../foundations/shape-depth.md), approved
   via the same decision.
-- **Theme architecture, terminology, selection precedence, persistence
-  baseline, project-override boundaries, and profile interpretation**
-  (this document, §3–§8) — directly derived from approved KBDL-001/002
-  governance and principles; not new brand or visual decisions.
+- **Semantic-role architecture and light/dark parity requirement**
+  (`KBDL-THM-001`, `KBDL-THM-002`) — directly restates the approved
+  color-role architecture and the adaptability-without-fragmentation
+  principle.
+- **The two core precedence facts** (`KBDL-THM-003`): explicit user
+  choice outranks system preference where a control exists; system
+  preference applies only absent an explicit choice. **The full six-
+  level precedence ordering is not included here** — see §10.2, item 6.
+- **Accessibility cannot be weakened by a project override**
+  (`KBDL-THM-005`, narrowed). **The detailed permitted-override list is
+  not included here** — see §10.2, item 8.
+- **Profiles share one theme architecture** (`KBDL-THM-006`).
+- **Reduced-motion preference must be respected during any theme
+  transition** (`KBDL-THM-012a`). **The rest of the transition guidance
+  is not included here** — see §10.2, item 10.
 
-### 10.2 Recommended Theme Decisions — Approval Requested
+### 10.2 Recommended Decisions — Ready for Approval
 
-| # | Decision | Recommendation | Rationale | Alternatives | Trade-offs | Accessibility impact | Performance impact | Privacy impact | Profiles affected | Dependencies |
+Each item below has a clear, complete scope with all required mappings
+present and all required contrast tests passing (or an accurately
+disclosed, accepted decorative exemption — never a hidden or
+mislabeled failure):
+
+| # | Decision | Recommendation | Rationale | Alternatives | Trade-offs / limitations (accurately disclosed) | Accessibility impact | Performance impact | Privacy impact | Profiles affected | Dependencies |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | Light-theme semantic mapping | Adopt [light-theme.md](light-theme.md) in full | Uses only approved foundation values; every text/border pair has documented contrast evidence | A higher-contrast, less nuanced 3-value palette (rejected — less expressive, no material benefit) | None beyond the documented restrictions (e.g., `neutral-50` large-text-only) | All pairs verified per role; see validation.md | None | Not applicable | Showcase, Precision, Flow | `KBDL-FND-001`, `KBDL-FND-009` |
-| 2 | Dark-theme semantic mapping | Adopt [dark-theme.md](dark-theme.md) in full | Independently designed (not inverted); reuses approved values with mode-appropriate step selection | A mechanically inverted light theme (rejected — explicitly prohibited by this prompt and produces poor dark-mode contrast, as shown by the rejected `neutral-70`/`neutral-60` pairs in validation.md) | Slightly less "value symmetry" between modes, which is intentional | All pairs verified per role; see validation.md | None | Not applicable | Showcase, Precision, Flow | `KBDL-FND-001`, `KBDL-FND-009` |
-| 3 | Status-family theme values | Adopt light values from [color.md §3.3](../foundations/color.md#33-supporting-status-families) plus new dark-mode variants in [adaptation.md §5](adaptation.md#5-status-family-theme-behavior) | Distinguishable from accent hue-wise; verified contrast in both modes | Reusing light-mode hues unchanged in dark mode (rejected — fails contrast against a dark canvas, see validation.md) | Informational strong-surface content is restricted to large text/icons (4.21:1, below normal-text threshold) | Verified per pair, one documented restriction | None | Not applicable | Showcase, Precision, Flow | `KBDL-FND-002` |
-| 4 | Gradient strategy | Adopt [adaptation.md §4](adaptation.md#4-gradient-strategy) | Extends the KBDL-003 gradient recommendation with mode-specific and worst-case contrast rules | No gradient support at all (rejected — removes an approved-in-principle controlled variable); unrestricted gradient use (rejected — risk of hierarchy/contrast failure) | Requires discipline to avoid overuse | Worst-case text-over-gradient contrast documented for the one defined example | Simplified/removed fallback required on constrained devices | Not applicable | Showcase (primary), Precision/Flow (rare) | Extends [color.md §3.4](../foundations/color.md#34-restrained-gradient-strategy) |
+| 1 | Light-theme semantic mapping | Adopt [light-theme.md](light-theme.md) in full | Uses only approved foundation values plus the KBDL-004-R1-revised Informational hue; every required normal-text/essential-border pair passes its threshold | A higher-contrast, less nuanced 3-value palette (rejected — less expressive, no material benefit) | Four accepted decorative exemptions (Default border 1.46:1, data-display grid 1.20:1, and the equivalent dark-mode pair) never carry required information alone; `neutral-50` remains restricted to large text/non-text/decorative use (unchanged, not a new limitation) | All required pairs verified; see [validation.md §3](validation.md#3-consolidated-contrast-evidence) | None | Not applicable | Showcase, Precision, Flow | `KBDL-FND-001`, `KBDL-FND-009` |
+| 2 | Dark-theme semantic mapping | Adopt [dark-theme.md](dark-theme.md) in full | Independently designed (not inverted); reuses approved values with mode-appropriate step selection | A mechanically inverted light theme (rejected — fails contrast, e.g. `neutral-60` "secondary text" would compute to 3.32:1 on `neutral-100`, below threshold) | One accepted decorative exemption (Default/Subtle border, 2.08:1) | All required pairs verified; see [validation.md §3](validation.md#3-consolidated-contrast-evidence) | None | Not applicable | Showcase, Precision, Flow | `KBDL-FND-001`, `KBDL-FND-009` |
+| 3 | Status-family theme values | Adopt light values (Informational revised to `#164499` under KBDL-004-R1; Positive/Caution/Critical unchanged) plus new dark-mode variants in [adaptation.md §5](adaptation.md#5-status-family-theme-behavior) | Every sub-role (text/icon/border/subtle-surface/strong-surface/on-strong-surface-content) now passes 4.5:1 (text) or 3:1 (non-text) in both modes with no restriction | Reusing light-mode hues unchanged in dark mode (rejected — fails contrast against a dark canvas); keeping the original `#2F6FED` Informational value with a large-text-only restriction (rejected under KBDL-004-R1 — a status role must support normal-sized text, not only large text) | None remaining — the two prior Informational failures (3.78:1, 4.21:1) are fully resolved, not merely restricted | All pairs verified, zero restrictions remaining; see [validation.md §3](validation.md#3-consolidated-contrast-evidence) | None | Not applicable | Showcase, Precision, Flow | `KBDL-FND-002` |
+| 4 | Gradient strategy | Adopt [adaptation.md §4](adaptation.md#4-gradient-strategy): the two-anchor accent gradient, with a mandatory rule that text never sits directly on the raw gradient | Both gradient endpoints were calculated against both candidate text colors; no single text color passes across the full range (1.94:1–7.32:1), so text is required to sit on a verified, bounded solid content surface instead | Unrestricted gradient-with-direct-text use (rejected — fails contrast, see [validation.md §3](validation.md#3-consolidated-contrast-evidence)); no gradient support at all (rejected — removes a controlled variable without necessity) | The mandatory content-surface requirement adds a small amount of composition overhead in exchange for guaranteed legibility | The verified caption-band substitute pair (17.17:1) is documented; direct gradient-to-text use is prohibited, not left unverified | Simplified/removed fallback required on constrained devices | Not applicable | Showcase (primary), Precision/Flow (rare) | Extends [color.md §3.4](../foundations/color.md#34-restrained-gradient-strategy) |
 | 5 | Color-value expression convention | Hex primary + optional perceptual reference, per [adaptation.md §6](adaptation.md#6-color-value-expression) | Portable, framework-neutral, human-reviewable | A single required CSS function (rejected — couples the spec to one implementation technology) | None significant | Not applicable | Not applicable | Not applicable | Showcase, Precision, Flow | Extends [color.md §3.5](../foundations/color.md#35-consistent-value-expression-method) |
-| 6 | Persistence baseline | As documented in [§7](#7-persistence-guidance) | Matches the already-approved precedence and accessibility priorities; introduces no new technical choice | Mandating a specific storage mechanism (rejected — implementation-specific, out of scope) | None | Preference must never gate access | Negligible | No sensitive data stored; not authentication | Showcase, Precision, Flow | None |
-| 7 | Theme-transition guidance | As documented in [adaptation.md §7](adaptation.md#7-theme-transition-guidance) | Prevents flashing/blocking without pre-selecting timing (deferred to KBDL-005) | Defining exact durations now (rejected — explicitly out of KBDL-004 scope) | None | Must respect reduced-motion preference | Must not block interaction | Not applicable | Showcase, Precision, Flow | Motion (KBDL-005) |
+| 6 | Full six-level selection-precedence ordering | Adopt the complete flow in [§5](#5-theme-selection-precedence) (`KBDL-THM-013`) | Only two of the six levels are directly pre-approved (see §10.1); the remaining ordering — where accessibility constraints, project policy, and the light fallback sit — is new KBDL-004 policy requiring its own review | A shorter, three-level precedence (rejected — cannot express project-specific policy or a documented fallback) | None identified | Places accessibility constraints at the top of the order, never below | Not applicable | Not applicable | Showcase, Precision, Flow | None |
+| 7 | Persistence baseline | Adopt [§7](#7-persistence-guidance) (`KBDL-THM-004`) | No prior KBDL decision addresses theme persistence specifically; this baseline is new policy, not a restatement | Mandating a specific storage mechanism (rejected — implementation-specific, out of scope) | None identified | Preference must never gate access; failure must not block use | Negligible | No sensitive data stored; not authentication | Showcase, Precision, Flow | None |
+| 8 | Detailed project-override boundaries | Adopt the permitted/prohibited lists in [adaptation.md §1.1–§1.3](adaptation.md#1-project-controlled-adaptation) (`KBDL-THM-014`) | New KBDL-004 policy; the narrower "must not weaken accessibility" core is already approved separately (`KBDL-THM-005`) | An unrestricted override model (rejected — risks semantic drift and profile fragmentation) | None identified | The accessibility floor is fixed regardless of this item's approval | Not applicable | Not applicable | Showcase, Precision, Flow | `KBDL-FND-008` |
+| 9 | Local contrast contexts | Adopt the named context set and nesting rules in [adaptation.md §2](adaptation.md#2-local-contrast-contexts) (`KBDL-THM-015`) | No prior KBDL decision defines local contexts; new architecture requiring its own review | No bounded-context mechanism at all (rejected — would force projects toward uncontrolled global theme switching instead) | Nested contexts require per-combination contrast re-verification, an ongoing review cost | Focus and status meaning are preserved by rule in every context | Not applicable | Not applicable | Showcase, Precision, Flow | None |
+| 10 | Theme-transition guidance (beyond reduced-motion) | Adopt [adaptation.md §7](adaptation.md#7-theme-transition-guidance) (`KBDL-THM-012`) | Prevents flashing/blocking without pre-selecting timing (deferred to KBDL-005); the reduced-motion requirement itself is already approved separately (`KBDL-THM-012a`) | Defining exact durations now (rejected — explicitly out of KBDL-004 scope) | None identified | Reduced-motion is unaffected by this item either way | Must not block interaction | Not applicable | Showcase, Precision, Flow | Motion (KBDL-005) |
 
-### 10.3 Unresolved or Project-Specific Choices (not ready for approval)
+### 10.3 Unresolved or Not Approval-Ready
 
-- Account-level theme synchronization mechanism.
-- High-contrast/forced-colors mode (a separate, explicitly out-of-scope
-  theme unless later approved).
-- Browser-support policy, implementation framework, token-file format,
-  and theme API — all implementation-layer decisions outside a design-
-  language specification.
+These are explicitly **not** included in §10.2 and are not ready for a
+project-owner approval decision:
+
+- **Unverified opacity values** — Accent-surface, Scrim, and Selection-
+  background opacity (both modes; see
+  [validation.md §5](validation.md#5-items-not-verified)). No exact
+  opacity has been calculated against a worst-case background.
+- **Project-specific media testing** — Media-overlay contrast against
+  actual (non-placeholder) images is inherently project-specific.
+- **Account-level theme synchronization mechanism.**
+- **High-contrast/forced-colors mode** (a separate, explicitly out-of-
+  scope theme unless later approved).
+- **Full data-visualization categorical palette** — deferred, not yet
+  designed.
+- **Browser-support policy, implementation framework, token-file
+  format, and theme API** — implementation-layer decisions outside a
+  design-language specification.
 
 **Exact scope of a future approval:** an `APPROVE` response to §10.2
-would authorize exactly items 1–7 above (the light and dark theme
-mappings, status-family values, gradient strategy, value-expression
-convention, persistence baseline, and transition guidance) as `Approved`.
-It would **not** approve §10.3's unresolved items, and it would **not**
-approve any KBDL-005 or later module's content.
+would authorize exactly items 1–10 above as `Approved`. It would **not**
+approve any §10.3 item, and it would **not** approve any KBDL-005 or
+later module's content. This remediation itself does not request or
+record such an approval.
 
 ## 11. Traceability
 

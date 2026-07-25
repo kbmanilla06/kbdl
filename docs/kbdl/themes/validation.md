@@ -42,7 +42,7 @@ item below before any pair may be marked `Verified`:
 - **Translucency fallback** — per
   [adaptation.md §3.3](adaptation.md#33-validation-checklist-for-translucent-surfaces).
 - **Gradient worst-case contrast** — per
-  [adaptation.md §4.3](adaptation.md#43-worked-example--worst-case-contrast).
+  [adaptation.md §4.3](adaptation.md#43-worked-example--worst-case-contrast-corrected-kbdl-004-r1).
 - **Media-overlay readability** — per
   [semantic-roles.md §1.6](semantic-roles.md#16-media-and-decorative-context).
 - **Theme-control behavior** — per
@@ -66,26 +66,45 @@ item below before any pair may be marked `Verified`:
   reflow is not; a full review is deferred to KBDL-006 but the
   requirement is established here.
 
-## 2. Parity Check
+## 2. Parity Check (Revalidated under KBDL-004-R1)
 
 **Method:** every role listed in
-[semantic-roles.md §1](semantic-roles.md#1-semantic-role-inventory) (72
-distinct roles across 6 categories) was checked against the
-corresponding row in [light-theme.md](light-theme.md) and
-[dark-theme.md](dark-theme.md). A role "passes" the parity check if it
-appears with an assigned value (or an explicit, named alias to another
-mapped role) in both files.
+[semantic-roles.md §1](semantic-roles.md#1-semantic-role-inventory) was
+checked directly against the actual rows in
+[light-theme.md](light-theme.md) and [dark-theme.md](dark-theme.md) — a
+re-run against the real tables, not a re-assertion of the prior report.
+This re-run found and fixed one real defect: a paragraph inserted
+between rows of the Status Families table in
+[light-theme.md §5](light-theme.md#5-status-families) had silently
+broken the table, orphaning its "Neutral status" row outside the table
+structure. That row has been restored to the table; the parity result
+below reflects the corrected table.
 
-**Result:** all 72 roles are mapped in both modes. No role is marked
-"not applicable" in either mode. See
-[semantic-roles.md § Parity Matrix](semantic-roles.md#parity-matrix) for
-the category-level count.
+**Counting model:** 4 colored status families × 6 sub-roles = 24
+distinct roles; Neutral status contributes 0 additional distinct roles
+(implemented via role-level alias only). See
+[semantic-roles.md § Parity Matrix](semantic-roles.md#parity-matrix-corrected-under-kbdl-004-r1)
+for the full corrected table.
 
-**Aliases used** (permitted per
-[themes/README.md §4](README.md#4-theme-architecture)): Keyboard focus →
-Focus indicator; Neutral status → existing Primary/Secondary text,
-Default/Strong border, and Subtle surface roles (both modes); Selection
-text → Primary text value (both modes).
+**Result:**
+
+- Total unique semantic roles: **72**
+- Total light-mode mappings (direct values or named aliases): **72**
+- Total dark-mode mappings (direct values or named aliases): **72**
+- Role-level aliases (not counted as separate roles): **2** — Keyboard
+  focus → Focus indicator; Neutral status → existing Primary/Secondary
+  text, Default/Strong border, and Subtle surface roles (both modes).
+- Unresolved or missing mappings: **none**.
+
+No role is marked "not applicable" in either mode.
+
+**Note on "Selection text/background":** this is one inventory role
+(not two) whose light-mode *value* happens to reuse the Primary-text
+color for its text component; it is presented as two table rows in
+[light-theme.md §2](light-theme.md#2-text-and-content) for readability,
+the same way Primary text and Secondary text each get a Base-surface row
+and a Canvas-surface row. This is a presentation choice, not a
+double-counted or aliased role.
 
 ## 3. Consolidated Contrast Evidence
 
@@ -111,15 +130,15 @@ surfaces, independently.
 | Default border on Base (light) | 1.46:1 | 3:1 | **Fails** — restricted to decorative use paired with another boundary cue, per [semantic-roles.md §1.3](semantic-roles.md#13-borders-and-focus) |
 | Selected border / Focus indicator on Base (light) | 6.07:1 | 3:1 | Passes |
 | Primary action content on Primary action background | 5.62:1 | 4.5:1 | Passes (mode-independent pairing) |
-| Informational text on Base (light) | 4.55:1 | 4.5:1 | Passes, narrow margin |
+| Informational text on Base (light) — **revised value `#164499`, KBDL-004-R1** | 9.05:1 | 4.5:1 | Passes, large margin |
 | Positive text on Base (light) | 6.57:1 | 4.5:1 | Passes |
 | Caution text on Base (light) | 5.93:1 | 4.5:1 | Passes |
 | Critical text on Base (light) | 6.54:1 | 4.5:1 | Passes |
-| Informational text on Subtle surface (light) | 3.78:1 | 4.5:1 | **Fails** — restricted to large text/icon, per [adaptation.md §5.2](adaptation.md#52-two-documented-restrictions) |
+| Informational text on Subtle surface (light) — **revised value** | 7.51:1 | 4.5:1 | Passes, large margin — corrected from the original `#2F6FED` value's 3.78:1 failure |
 | Positive text on Subtle surface (light) | 5.46:1 | 4.5:1 | Passes |
 | Caution text on Subtle surface (light) | 4.92:1 | 4.5:1 | Passes |
 | Critical text on Subtle surface (light) | 5.43:1 | 4.5:1 | Passes |
-| Informational on-strong-surface content (light) | 4.21:1 | 4.5:1 | **Fails** normal-text; passes 3:1 large-text/icon — restricted, per [adaptation.md §5.2](adaptation.md#52-two-documented-restrictions) |
+| Informational on-strong-surface content (light) — **revised value** | 8.37:1 | 4.5:1 | Passes, large margin — corrected from the original `#2F6FED` value's 4.21:1 failure |
 | Positive on-strong-surface content (light) | 6.08:1 | 4.5:1 | Passes |
 | Caution on-strong-surface content (light) | 5.48:1 | 4.5:1 | Passes |
 | Critical on-strong-surface content (light) | 6.04:1 | 4.5:1 | Passes |
@@ -150,20 +169,30 @@ surfaces, independently.
 | Caution-dark on-strong-surface content | 7.18:1 | 4.5:1 | Passes |
 | Critical-dark on-strong-surface content | 6.71:1 | 4.5:1 | Passes |
 | Data-display grid on Canvas (dark) | 1.21:1 | 3:1 | **Fails** — decorative/structural only, same restriction as light mode |
+| Gradient caption-band text (`neutral-10` on `neutral-100` at ~90% opacity, over the gradient) | 17.17:1 (inherited from the already-verified base pair) | 4.5:1 | Passes — see [adaptation.md §4.3](adaptation.md#43-worked-example--worst-case-contrast-corrected-kbdl-004-r1); direct text on the raw gradient (`neutral-10`/`neutral-90` against either endpoint) is prohibited, not verified, since neither passes across both endpoints (1.94:1–7.32:1 range, see [adaptation.md §4.3](adaptation.md#43-worked-example--worst-case-contrast-corrected-kbdl-004-r1)) |
 
-**In plain terms:** every text and essential-border pair in both themes
-meets its required threshold, with four documented, intentional
-exceptions — the decorative-only Default/Subtle borders and data-display
-gridlines in both modes (which never carry information alone), and
-Informational's two normal-text restrictions in light mode (restricted
-to large text/icon use). No pair was silently allowed to fail; every
-failure above is either an accepted decorative exemption or an explicit
-usage restriction stated in the relevant document.
+**In plain terms (corrected under KBDL-004-R1):** every text and
+essential-border pair in both themes now meets its required threshold,
+with four documented, intentional decorative exemptions — the
+decorative-only Default/Subtle borders and data-display gridlines in
+both modes, which never carry information alone. The two prior
+Informational failures (3.78:1 and 4.21:1) are resolved by the revised
+`#164499` value (see the Informational rows above), not carried forward
+as restrictions. The gradient's raw endpoints remain unsuitable for
+direct text (see [adaptation.md §4.3](adaptation.md#43-worked-example--worst-case-contrast-corrected-kbdl-004-r1))
+and are addressed by prohibiting direct text on the gradient rather than
+accepting a failing pair. No pair is silently allowed to fail; every
+remaining exemption is an accepted decorative case, and every
+previously-restricted status case has been resolved with a passing
+value instead.
 
 **This is not a claim of complete WCAG conformance.** Only the pairs
 listed were tested, in isolation. Real usage must be re-verified once
-component-level implementation, exact translucency opacity, and gradient
-overlay text are finalized (see §5).
+component-level implementation and exact translucency opacity values
+are finalized (see §5); the gradient's direct-text failure is not
+"pending re-verification" — it is a permanent constraint addressed by
+the no-direct-text-on-gradient rule, not something a future calculation
+could pass.
 
 ## 4. Status vs. Accent Distinguishability Check
 
@@ -171,11 +200,13 @@ overlay text are finalized (see §5).
   indigo-violet) — different hue families, not confusable.
 - Dark mode: Critical (`#FF8A80`, coral) vs. accent (`#A9ACFF`,
   lavender) — different hue families, not confusable.
-- Light mode: Informational (`#2F6FED`, blue) vs. accent (`#4A4EE0`,
-  indigo-violet) — related but distinguishable hue families; both are
-  in the blue-violet range, so projects substituting a different accent
-  hue (per [adaptation.md §1.1](adaptation.md#1-project-controlled-adaptation))
-  should re-check this pair specifically.
+- Light mode: Informational (`#164499`, revised under KBDL-004-R1, a
+  pure/cyan-leaning blue) vs. accent (`#4A4EE0`, indigo-violet) —
+  distinguishable hue families, more clearly separated than the
+  original `#2F6FED` value since `#164499` sits further from violet on
+  the hue wheel; projects substituting a different accent hue (per
+  [adaptation.md §1.1](adaptation.md#1-project-controlled-adaptation))
+  should still re-check this pair.
 - Dark mode: Informational-dark (`#7CC4FF`, sky blue) vs. accent-30
   (`#A9ACFF`, lavender) — deliberately shifted toward cyan specifically
   to increase separation from the accent hue (see
@@ -190,10 +221,11 @@ passing until calculated:
   opacity has been approved, so no worst-case contrast calculation has
   been run.
 - Selection-background opacity (both modes) — same reason.
-- The gradient worked example in
-  [adaptation.md §4.3](adaptation.md#43-worked-example--worst-case-contrast)
-  (`neutral-10` text over the `accent-30` gradient stop) — flagged
-  explicitly rather than assumed to pass.
+- The gradient's *direct-text* pairs are **not** listed here as
+  "pending" — they were calculated (§3, §4 below) and found to fail
+  across the full endpoint range; this is resolved by prohibiting direct
+  text on the gradient (§4.3), not by further calculation. The gradient
+  caption-band substitute is `Verified` (§3).
 - Media-overlay contrast against actual (as opposed to placeholder)
   images — inherently project-specific and cannot be verified in the
   abstract.

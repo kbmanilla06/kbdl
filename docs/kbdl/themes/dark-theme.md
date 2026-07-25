@@ -2,7 +2,7 @@
 
 Lifecycle status: `Recommended` — this exact mapping requires project-
 owner approval; see
-[themes/README.md § Theme Decision Packet](README.md#10-theme-decision-packet).
+[themes/README.md § Theme Decision Packet](README.md#10-theme-decision-packet-restructured-under-kbdl-004-r1).
 Provenance: `Assumed`. Validation status: `Verified` for every contrast
 pair shown below (see [validation.md](validation.md)); `Not verified`
 for suitability beyond the tested pairs. All values used are already-
@@ -147,7 +147,7 @@ keeps informational and brand accent from converging in hue.
 | Media overlay | `neutral-100` at graduated opacity | Same principle as light mode; worst-case verified per actual image. |
 | Media caption | `neutral-10` text on a `neutral-100` at ~70% opacity caption band | Reuses the 17.17:1 base pair; opacity re-verified per [validation.md](validation.md). |
 | Decorative accent | `accent-30` at reduced opacity | Exempt (decorative). |
-| Gradient start / end | `accent-30` → `accent-50` | Reversed order from light mode's `accent-50 → accent-30`, since `accent-30` is the correctly-contrasting accent step for dark surfaces; see [adaptation.md §4](adaptation.md#4-gradient-strategy). |
+| Gradient start / end | `accent-30` → `accent-50` | Reversed order from light mode's `accent-50 → accent-30`; see [adaptation.md §4.3](adaptation.md#43-worked-example--worst-case-contrast-corrected-kbdl-004-r1) — the same no-direct-text-on-gradient rule applies in both modes. |
 | Data-display foreground | Reuses Accent + Status dark hues | Full chart-palette system deferred. |
 | Data-display grid / guide | `neutral-90` `#23252B` | 1.21:1 on Canvas — decorative/structural only. |
 | Data-display emphasis | `accent-30` `#A9ACFF` + direct label | 8.87:1 if labeled with text. |

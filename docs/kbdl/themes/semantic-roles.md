@@ -203,25 +203,52 @@ style. Where a role is genuinely not applicable in one mode, the reason
 is documented in the parity matrix below rather than the role being
 silently omitted.
 
-### Parity Matrix
+### Parity Matrix (Corrected under KBDL-004-R1)
 
 Every role in §1 is confirmed present in both modes. "Mapped" means a
 specific foundation-color value is assigned in
 [light-theme.md](light-theme.md)/[dark-theme.md](dark-theme.md); no role
 in this inventory is marked "not applicable" in either mode.
 
-| Category | Roles in category | Light-mapped | Dark-mapped |
-| --- | --- | --- | --- |
-| Canvas and Surfaces | 11 | 11 | 11 |
-| Text and Content | 11 | 11 | 11 |
-| Borders and Focus | 9 | 9 | 9 |
-| Actions and Interaction | 10 | 10 | 10 |
-| Status (×5 sub-roles ×5 families, Neutral status reuses §1.1–§1.3) | 4 status families × 6 sub-roles = 24, + Neutral status (reuses existing roles) | 24 | 24 |
-| Media and Decorative | 7 | 7 | 7 |
-| **Total distinct roles** | **72** | **72** | **72** |
+**Counting model** (this is the only model used — no double-counting):
+4 colored status families (Informational, Positive, Caution, Critical),
+each with 6 sub-roles (Text, Icon, Border, Subtle surface, Strong
+surface, On-strong-surface content) = **4 × 6 = 24** distinct status
+roles. Neutral status contributes **0** additional distinct roles — it
+is implemented entirely through documented aliases to existing Primary/
+Secondary text, Default/Strong border, and Subtle surface roles (see the
+"Neutral status" row in
+[light-theme.md §5](light-theme.md#5-status-families) and
+[dark-theme.md §6](dark-theme.md#6-status-families)). The previous
+version of this table incorrectly labeled this row "×5 sub-roles ×5
+families" while its own total column already used the correct 4×6
+figure — that label, not the total, was the error; it is corrected here.
+
+| Category | Distinct roles | Light-mapped | Dark-mapped | Aliases (not counted as new roles) |
+| --- | --- | --- | --- | --- |
+| Canvas and Surfaces | 11 | 11 | 11 | 0 |
+| Text and Content | 11 | 11 | 11 | 0 |
+| Borders and Focus | 9 | 9 | 9 | 0 |
+| Actions and Interaction | 10 | 10 | 10 | 2 (Keyboard focus → Focus indicator; each Text-link state → the base Interactive/Link text value) |
+| Status — 4 families × 6 sub-roles | 24 | 24 | 24 | 0 |
+| Status — Neutral status | 0 | 0 (via alias) | 0 (via alias) | 1 (→ Primary/Secondary text, Default/Strong border, Subtle surface) |
+| Media and Decorative | 7 | 7 | 7 | 0 |
+| **Total unique semantic roles** | **72** | — | — | — |
+| **Total light mappings (including aliases)** | — | **72** | — | — |
+| **Total dark mappings (including aliases)** | — | — | **72** | — |
+
+**Unresolved or missing mappings:** none — every one of the 72 unique
+roles has either a direct value or a named alias in both
+[light-theme.md](light-theme.md) and [dark-theme.md](dark-theme.md).
 
 This matrix was produced by a direct count of every row in §1.1–§1.6
-against the corresponding mapping tables in
-[light-theme.md](light-theme.md) and [dark-theme.md](dark-theme.md); see
-[validation.md § Parity Check](validation.md#2-parity-check) for the
+against the actual mapping tables in
+[light-theme.md](light-theme.md) and [dark-theme.md](dark-theme.md) —
+not merely re-asserted from the prior report — including a corrected
+count that found and fixed a table-formatting defect in
+[light-theme.md §5](light-theme.md#5-status-families) (the "Neutral
+status" row had been separated from its table by an inserted paragraph,
+silently breaking Markdown table rendering; it is now restored as the
+fifth row of that table). See
+[validation.md § Parity Check](validation.md#2-parity-check-revalidated-under-kbdl-004-r1) for the
 verification procedure and result.
