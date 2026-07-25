@@ -354,7 +354,7 @@ rule or an approved KBDL requirement.
 
 ## 6. Core Principles
 
-Eight core principles govern KBDL design decisions. Each is written as a
+Nine core principles govern KBDL design decisions. Each is written as a
 usable decision rule, not an aspiration.
 
 ### 6.1 Clarity Before Spectacle

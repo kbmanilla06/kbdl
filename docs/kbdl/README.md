@@ -14,9 +14,13 @@ and Flow (consumer-facing web applications). See the
 ## Specification Status
 
 **KBDL-001: Specification Architecture and Governance Foundation** and
-**KBDL-002: Identity, Principles, and Visual Consistency Rules** are
-complete — the first two steps of a ten-step approved roadmap. KBDL-001
-established the
+**KBDL-002: Identity, Principles, and Visual Consistency Rules**
+deliverables are present in the repository, the first two steps of a
+ten-step approved roadmap. Their lifecycle status is `Approved`;
+requirement-level validation statuses are recorded independently in the
+[traceability matrix](traceability-matrix.md) and are not all `Verified`.
+Progression to later roadmap steps depends on the planning agent's
+validation review, not on this index. KBDL-001 established the
 documentation architecture, terminology, requirement and status
 conventions, and governance for the entire KBDL specification. KBDL-002
 established KBDL's identity statement, Digital Luxury and Technical Utility
