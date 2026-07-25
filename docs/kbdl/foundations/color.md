@@ -1,9 +1,14 @@
 # KBDL Foundations — Color Architecture
 
 Lifecycle status of this document's **architecture** (roles and rules):
-`Approved`, derived from [principles.md](../principles.md). Lifecycle
-status of the **recommended default values** in this document: `Recommended`
-— they require project-owner approval before use; see
+`Approved`, derived from [principles.md](../principles.md). The **neutral
+scale** (§3.1) and **accent family** (§3.2) were reviewed and approved by
+the project owner — see
+[KBDL-DEC-012](../decision-register.md#kbdl-dec-012--foundation-decision-packet-approved).
+The **status-family colors** (§3.3), **gradient strategy** (§3.4), and
+**value-expression method** (§3.5) were not part of that approval and
+remain `Recommended`, requiring separate project-owner approval before
+use; see
 [foundations/README.md § Foundation Status Model](README.md#3-foundation-status-model).
 
 Return to the [foundations index](README.md) · [specification index](../README.md).
@@ -163,16 +168,24 @@ and intensity* of use varies (see
   exception (see
   [governance.md § Exception process](../governance.md#exception-process)).
 
-## 3. Recommended Default Foundation
+## 3. Default Foundation
 
-Status: `Recommended` — requires project-owner approval per
-[foundations/README.md § Foundation Decision Packet](README.md#6-foundation-decision-packet).
-Provenance: `Assumed` (a working starting point, not yet reviewed against
-a specific project). Validation status: `Verified` for the contrast
-calculations shown in §4 only; `Not verified` for suitability as a final
-brand palette.
+This section mixes two approval states: §3.1 and §3.2 are `Approved`
+(the project owner approved exactly the neutral scale and accent family
+named in the foundation decision packet); §3.3, §3.4, and §3.5 remain
+`Recommended` — they were documented as context but were never presented
+as distinct items in the approval gate, so they are not covered by
+[KBDL-DEC-012](../decision-register.md#kbdl-dec-012--foundation-decision-packet-approved)
+and still require their own project-owner approval before use.
 
 ### 3.1 Core neutral architecture
+
+Status: `Approved` — approved by the project owner via the
+[foundation decision packet](README.md#6-foundation-decision-packet); see
+[KBDL-DEC-012](../decision-register.md#kbdl-dec-012--foundation-decision-packet-approved).
+Provenance: `User-provided`. Validation status: `Verified` for the
+contrast calculations shown in §4 only; `Not verified` for suitability as
+a final brand palette beyond the tested pairs.
 
 A cool-neutral scale (slight blue undertone, supporting KBDL's
 "technological" quality without tipping into a colder, sterile register):
@@ -191,12 +204,24 @@ A cool-neutral scale (slight blue undertone, supporting KBDL's
 
 ### 3.2 Primary technological accent family
 
+Status: `Approved` — approved by the project owner via the
+[foundation decision packet](README.md#6-foundation-decision-packet); see
+[KBDL-DEC-012](../decision-register.md#kbdl-dec-012--foundation-decision-packet-approved).
+Provenance: `User-provided`. Validation status: `Verified` for the
+contrast calculations shown in §4 only.
+
 | Step | Hex | Intended use (illustrative) |
 | --- | --- | --- |
 | accent-30 | `#A9ACFF` | Accent text/icon on dark surfaces |
 | accent-50 | `#4A4EE0` | Accent text/icon/fill on light surfaces, primary action |
 
 ### 3.3 Supporting status families
+
+Status: `Recommended` — not part of the approved foundation decision
+packet ([KBDL-DEC-012](../decision-register.md#kbdl-dec-012--foundation-decision-packet-approved)
+covers only the neutral scale and accent family); requires its own
+project-owner approval before use. Provenance: `Assumed`. Validation
+status: `Verified` for the contrast calculations shown in §4 only.
 
 | Role | Hex | Intended use (illustrative) |
 | --- | --- | --- |
@@ -207,14 +232,22 @@ A cool-neutral scale (slight blue undertone, supporting KBDL's
 
 ### 3.4 Restrained gradient strategy
 
-Recommended default: a single **accent-to-neutral** gradient (accent-50 to
-accent-30) reserved for large, bounded Showcase-profile hero surfaces only
-— never for body text backgrounds, form controls, or repeated Precision-
-profile UI. This is a starting proposal, not an approved pattern.
+Status: `Recommended` — not part of the approved foundation decision
+packet; requires its own project-owner approval before use. Provenance:
+`Assumed`. Validation status: `Not verified`.
+
+A single **accent-to-neutral** gradient (accent-50 to accent-30) reserved
+for large, bounded Showcase-profile hero surfaces only — never for body
+text backgrounds, form controls, or repeated Precision-profile UI. This is
+a starting proposal, not an approved pattern.
 
 ### 3.5 Consistent value-expression method
 
-Recommended: express all primitive values as 6-digit hex (`#RRGGBB`) in
+Status: `Recommended` — not part of the approved foundation decision
+packet; a documentation convention only. Provenance: `Assumed`. Validation
+status: `Not applicable`.
+
+Express all primitive values as 6-digit hex (`#RRGGBB`) in
 specification documents, since hex is the most broadly portable
 web-readable format. A perceptual reference (e.g., an OKLCH or CIELAB
 equivalent) **should** be added once a color-tooling decision is made in a
@@ -272,5 +305,6 @@ misreading a warning as a promoted action.
 - Exact data-visualization categorical palette — `Unresolved`, deferred;
   only the requirement for color-blind-safe, non-status-colliding
   treatment is established here.
-- Final accent hue — `Recommended` only; requires project-owner approval
-  per the [foundation decision packet](README.md#6-foundation-decision-packet).
+- Status-family colors, gradient strategy, and value-expression method —
+  `Recommended`; not covered by the approved foundation decision packet
+  (see §3.3–§3.5), and each requires its own project-owner approval.

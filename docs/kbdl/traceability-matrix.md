@@ -417,19 +417,19 @@ status, and evidence, per this file's field definitions.
 - **Related decision:** KBDL-DEC-006
 - **Notes:** Restates [principles.md §9.4](principles.md#94-shared-constraints-across-profiles) at foundation-level specificity.
 
-### Recommended color, typography, spacing, and shape/elevation defaults (KBDL-FND-009 through KBDL-FND-012)
+### Approved color, typography, spacing, and shape/elevation defaults (KBDL-FND-009 through KBDL-FND-012)
 
-- **Blueprint section:** Foundation decision packet — recommended default values
-- **Roadmap prompt:** KBDL-003
+- **Blueprint section:** Foundation decision packet — default values
+- **Roadmap prompt:** KBDL-003 (approved via project-owner review following KBDL-003-R1)
 - **Requirement ID:** KBDL-FND-009, KBDL-FND-010, KBDL-FND-011, KBDL-FND-012
 - **Specification location:** [foundations/README.md §6](foundations/README.md#6-foundation-decision-packet)
-- **Approval status:** Recommended (not `Approved` — requires project-owner approval before authorizing implementation, per [conventions.md §1.1](conventions.md#11-lifecycle--approval-status))
-- **Validation status:** Verified for the color-contrast calculations in [foundations/color.md §4](foundations/color.md#4-contrast-evidence-illustrative-not-a-theme-mapping) only; Not verified for all other aspects (typeface licensing, brand suitability, final spacing/corner/elevation values)
-- **Validation method:** WCAG relative-luminance contrast calculation (completed for the color pairs listed); typeface-licensing verification and project-owner review (not yet performed).
+- **Approval status:** Approved — the project owner approved all eleven recommended defaults in full, with no changes, per [KBDL-DEC-012](decision-register.md#kbdl-dec-012--foundation-decision-packet-approved)
+- **Validation status:** Verified for the color-contrast calculations in [foundations/color.md §4](foundations/color.md#4-contrast-evidence-illustrative-not-a-theme-mapping) only; Not verified for all other aspects (typeface licensing of the eventual specific family, brand suitability beyond the tested pairs, final spacing/corner/elevation numeric values)
+- **Validation method:** WCAG relative-luminance contrast calculation (completed for the color pairs listed); project-owner review (completed — see KBDL-DEC-012); typeface-licensing verification (not yet performed, applies to a future specific font-family decision).
 - **Validation evidence:** Contrast-ratio table in [foundations/color.md §4](foundations/color.md#4-contrast-evidence-illustrative-not-a-theme-mapping), computed via a local dependency-free script (see the KBDL-003 validation evidence for the script and full output). Updated under KBDL-003-R1: `neutral-50` (3.25:1) was found to fail the 4.5:1 normal-text threshold and is now restricted to large-text/non-text-UI/decorative use only; a new `neutral-60` (5.59:1) was added and verified as the safe value for normal-sized secondary/tertiary text.
-- **Known limitation:** These are recommendations awaiting project-owner approval; they must not be treated as `Approved` or implemented until that approval is recorded. The geometric character ("softened-structured") was corrected under KBDL-003-R1 from an incorrectly stated `Approved` label to `Recommended`.
-- **Related decision:** Not applicable — pending a future decision-register entry once the project owner approves or amends the packet.
-- **Notes:** This is the only KBDL-003 row whose approval status is `Recommended` rather than `Approved`; all other KBDL-003 rows restate `Approved` architecture from KBDL-001/002. See KBDL-003-R1 for the accessibility and lifecycle corrections applied to this row's underlying content.
+- **Known limitation:** Approval authorizes these defaults for implementation; it does not itself constitute rendering, brand-suitability, or licensing validation — those remain `Not verified` as noted above.
+- **Related decision:** KBDL-DEC-012
+- **Notes:** This row's approval status changed from `Recommended` to `Approved` following the project owner's decision recorded in KBDL-DEC-012. See KBDL-003-R1 for the accessibility and lifecycle corrections applied to this row's underlying content before approval.
 
 ## Notes on Scope
 
@@ -442,8 +442,11 @@ row being `Verified` never implies or grants `Approved` status. `PRN`
 requirements are approved as principles-level guidance; they do not
 themselves introduce or approve any final visual, motion, or component
 value — those remain `Deferred` until their own modules are reached. `FND`
-requirements are approved as foundation *architecture* only; the specific
-recommended default values in the
+requirements cover both foundation *architecture* (`KBDL-FND-001`–`008`)
+and the specific default values in the
 [foundation decision packet](foundations/README.md#6-foundation-decision-packet)
-carry `Recommended` approval status, not `Approved`, until the project
-owner reviews them.
+(`KBDL-FND-009`–`012`); all twelve are `Approved` following the project
+owner's review recorded in
+[KBDL-DEC-012](decision-register.md#kbdl-dec-012--foundation-decision-packet-approved).
+Approval does not itself constitute validation — see each row's
+Validation status for what has actually been checked.

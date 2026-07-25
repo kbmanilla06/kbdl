@@ -2,8 +2,10 @@
 
 Lifecycle status of this document's **architecture and rules**: `Approved`,
 derived from [principles.md](../principles.md). Lifecycle status of the
-**recommended icon and media strategy**: `Recommended` — requires
-project-owner approval; see
+**icon strategy** (§1.6): `Approved`, per the project owner's approval of
+the [foundation decision packet](README.md#6-foundation-decision-packet)
+([KBDL-DEC-012](../decision-register.md#kbdl-dec-012--foundation-decision-packet-approved)).
+The **media strategy** (§2.3) is likewise `Approved`. See
 [foundations/README.md § Foundation Status Model](README.md#3-foundation-status-model).
 
 Return to the [foundations index](README.md) · [specification index](../README.md).
@@ -69,8 +71,8 @@ strategy.
   the same icon may be used specifically to indicate a "selected" or
   "active" state of an otherwise stroke-based icon.
 - Icon corner treatment (e.g., rounded stroke caps) should echo the
-  shape system's recommended geometric character once approved (see
-  [shape-depth.md §1.2](shape-depth.md#12-geometric-character-recommended)),
+  shape system's approved geometric character (see
+  [shape-depth.md §1.2](shape-depth.md#12-geometric-character-approved)),
   not introduce an unrelated geometric language.
 - Icons align to the same optical center as their paired text, and share
   a consistent bounding-box convention so mixed icon sets from a single
@@ -103,19 +105,23 @@ strategy.
   (§1.2), optical sizing conformance (§1.3), and that the icon is not
   required as the sole carrier of critical meaning.
 
-### 1.6 Recommended icon strategy
+### 1.6 Default icon strategy
 
-Status: `Recommended`, `Assumed` provenance, `Not verified` validation.
+Status: `Approved` — approved by the project owner via the
+[foundation decision packet](README.md#6-foundation-decision-packet); see
+[KBDL-DEC-012](../decision-register.md#kbdl-dec-012--foundation-decision-packet-approved).
+Provenance: `User-provided`. Validation status: `Not verified` — approval
+authorizes this strategy as KBDL's default; no specific icon library or
+rendered legibility test has been performed.
 
 A stroke-based, geometrically consistent icon style, at a small set of
-defined optical sizes, is recommended as KBDL's default functional-icon
-treatment, since stroke icons pair well with the recommended (not yet
-approved) "softened-structured" geometric character candidate (see
-[shape-depth.md §1.2](shape-depth.md#12-geometric-character-recommended))
+defined optical sizes, is KBDL's default functional-icon treatment, since
+stroke icons pair well with the approved "softened-structured" geometric
+character (see
+[shape-depth.md §1.2](shape-depth.md#12-geometric-character-approved))
 and remain legible at small interface sizes. No specific icon library is
 selected here; library selection (open-source vs. custom-drawn vs.
-licensed) is deferred to the
-[foundation decision packet](README.md#6-foundation-decision-packet).
+licensed) remains `Unresolved` (see §4).
 
 ## 2. Imagery and Media
 
@@ -168,6 +174,14 @@ accessibility expectations.
   reduced-motion anticipation requirement.
 
 ### 2.3 Aspect Relationships, Cropping, and Focal-Point Preservation
+
+Status: `Approved` — the named-aspect-treatment strategy below was
+approved by the project owner via the
+[foundation decision packet](README.md#6-foundation-decision-packet); see
+[KBDL-DEC-012](../decision-register.md#kbdl-dec-012--foundation-decision-packet-approved).
+Provenance: `User-provided`. Validation status: `Not verified` — approval
+authorizes the strategy; exact named aspect-ratio values remain
+`Unresolved` (see §4).
 
 - Media should be defined with a small set of named aspect treatments
   (e.g., a wide editorial aspect, a standard content aspect, and a square

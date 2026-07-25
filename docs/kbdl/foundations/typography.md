@@ -62,9 +62,13 @@ choice:
 
 ## 3. Type Scale and Text Roles
 
-Status: architecture `Approved`; specific scale relationships and default
-values `Recommended`. Provenance: `Assumed`. Validation status:
-`Not verified`.
+Status: `Approved` — architecture and the specific scale relationships
+below were both approved by the project owner via the
+[foundation decision packet](README.md#6-foundation-decision-packet); see
+[KBDL-DEC-012](../decision-register.md#kbdl-dec-012--foundation-decision-packet-approved).
+Provenance: `User-provided` (project-owner approval). Validation status:
+`Not verified` — approval authorizes the ratios as KBDL's default; it does
+not itself constitute rendering or usability validation.
 
 For each role: purpose, hierarchical relationship, weight intent,
 line-height intent, tracking intent, responsive behavior, profile
@@ -290,9 +294,16 @@ content never becomes unreadable or invisible while waiting on a web font.
   this is a `Recommended` preference, not a mandate against commercial
   typefaces once licensing is confirmed.
 
-## 6. Recommended Default Type Strategy
+## 6. Default Type Strategy
 
-Status: `Recommended`, `Assumed` provenance, `Not verified` validation.
+Status: `Approved` — this strategy (a humanist sans-serif with tabular
+figures and verified open license, plus a monospace family for the Code
+role) was approved by the project owner via the
+[foundation decision packet](README.md#6-foundation-decision-packet); see
+[KBDL-DEC-012](../decision-register.md#kbdl-dec-012--foundation-decision-packet-approved).
+Provenance: `User-provided`. Validation status: `Not verified` — approving
+the *strategy* does not select or verify a specific typeface family; the
+final family remains `Unresolved` pending licensing verification (see §8).
 
 A starting strategy consistent with §5: pair a humanist-leaning sans-serif
 with genuine tabular-figure support and a verified open web-license for

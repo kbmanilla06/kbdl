@@ -17,12 +17,13 @@ and Flow (consumer-facing web applications). See the
 **KBDL-002: Identity, Principles, and Visual Consistency Rules**, and
 **KBDL-003: Core Visual Foundations** deliverables are present in the
 repository, the first three steps of a ten-step approved roadmap. Their
-lifecycle status is `Approved` for architecture and rules; requirement-
-level validation statuses are recorded independently in the
-[traceability matrix](traceability-matrix.md) and are not all `Verified`.
-KBDL-003 additionally proposes `Recommended` default values (color,
-typography, spacing, shape, elevation, iconography) that require separate
-project-owner approval before they authorize implementation — see
+lifecycle status is `Approved` for architecture, rules, and (as of the
+project owner's foundation-defaults approval, see
+[KBDL-DEC-012](decision-register.md#kbdl-dec-012--foundation-decision-packet-approved))
+the KBDL-003 default values (color, typography, spacing, shape, elevation,
+iconography) as well; requirement-level validation statuses are recorded
+independently in the [traceability matrix](traceability-matrix.md) and are
+not all `Verified` — see
 [foundations/README.md § Foundation Status Model](foundations/README.md#3-foundation-status-model).
 Progression to later roadmap steps depends on the planning agent's
 validation review, not on this index. KBDL-001 established the
@@ -72,7 +73,7 @@ until their roadmap step is reached.
 | --- | --- | --- | --- |
 | 1 | Introduction | Deferred | `docs/kbdl/introduction.md` (planned) |
 | 2 | Principles | Approved | [principles.md](principles.md) |
-| 3 | Visual foundations | Approved (architecture); Recommended (default values)* | [foundations/README.md](foundations/README.md) |
+| 3 | Visual foundations | Approved (architecture and default values)* | [foundations/README.md](foundations/README.md) |
 | 4 | Adaptive themes | Deferred | `docs/kbdl/themes.md` (planned) |
 | 5 | Motion | Deferred | `docs/kbdl/motion.md` (planned) |
 | 6 | Responsive behavior | Deferred | `docs/kbdl/responsive.md` (planned) |
@@ -87,8 +88,9 @@ until their roadmap step is reached.
 
 \* See
 [foundations/README.md § Foundation Status Model](foundations/README.md#3-foundation-status-model)
-for the distinction between the module's `Approved` architecture and its
-`Recommended` default values.
+for how the module's architecture and default values are distinguished,
+and [KBDL-DEC-012](decision-register.md#kbdl-dec-012--foundation-decision-packet-approved)
+for the project owner's approval of the default values.
 
 Supporting documents (not numbered modules, but required by KBDL-001 and
 referenced by KBDL-002 and KBDL-003):

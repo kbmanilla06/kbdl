@@ -37,28 +37,31 @@ rules.
   Showcase card and a Precision card may use different corner intensity
   (see §1.6) but must draw from the same named set (§1.3).
 
-### 1.2 Geometric character (Recommended)
+### 1.2 Geometric character (Approved)
 
-Status: `Recommended` — this specific direction requires project-owner
-approval; see
-[foundations/README.md § Foundation Status Model](README.md#3-foundation-status-model)
-and the [foundation decision packet](README.md#6-foundation-decision-packet).
-Provenance: `Assumed`. Validation status: `Not verified`.
+Status: `Approved` — this direction was approved by the project owner via
+the [foundation decision packet](README.md#6-foundation-decision-packet);
+see [KBDL-DEC-012](../decision-register.md#kbdl-dec-012--foundation-decision-packet-approved).
+Provenance: `User-provided`. Validation status: `Not verified` — approval
+authorizes this direction as KBDL's default; it does not itself constitute
+rendered-usability validation.
 
-A candidate default geometric character for KBDL is **softened-structured**:
-corners rounded enough to feel approachable and premium, but restrained
-enough to preserve a technical, precise character — neither sharp/clinical
-nor fully organic/soft. This sits deliberately between the two extremes
-sometimes seen in "luxury" (soft, rounded, organic) and "technical" (sharp,
-angular) design languages, consistent with
-[principles.md §1](../principles.md#1-identity-statement). This is a
-newly proposed direction, not yet approved; the `Approved` architectural
-rule is only that KBDL has *a* deliberate, systematic geometric character
-(§1.1), not that it is specifically "softened-structured."
+KBDL's default geometric character is **softened-structured**: corners
+rounded enough to feel approachable and premium, but restrained enough to
+preserve a technical, precise character — neither sharp/clinical nor fully
+organic/soft. This sits deliberately between the two extremes sometimes
+seen in "luxury" (soft, rounded, organic) and "technical" (sharp, angular)
+design languages, consistent with
+[principles.md §1](../principles.md#1-identity-statement).
 
-### 1.3 Recommended corner system
+### 1.3 Default corner system
 
-Status: `Recommended`, `Assumed` provenance, `Not verified` validation.
+Status: `Approved` — approved by the project owner via the
+[foundation decision packet](README.md#6-foundation-decision-packet); see
+[KBDL-DEC-012](../decision-register.md#kbdl-dec-012--foundation-decision-packet-approved).
+Provenance: `User-provided`. Validation status: `Not verified` for exact
+radius values (deferred to implementation); the named classification and
+its role assignments are approved.
 
 A limited, named classification (exact radius values deferred):
 
@@ -200,9 +203,14 @@ behavior.
 - **Theme mappings belong to KBDL-004** — this document defines the
   semantic elevation scale, not final shadow/blur values per theme.
 
-### 3.2 Recommended semantic elevation scale
+### 3.2 Default semantic elevation scale
 
-Status: `Recommended`, `Assumed` provenance, `Not verified` validation.
+Status: `Approved` — approved by the project owner via the
+[foundation decision packet](README.md#6-foundation-decision-packet); see
+[KBDL-DEC-012](../decision-register.md#kbdl-dec-012--foundation-decision-packet-approved).
+Provenance: `User-provided`. Validation status: `Not verified` for final
+shadow/blur values (deferred to KBDL-004); the five-level semantic
+structure and its purposes are approved.
 
 | Level | Name | Purpose |
 | --- | --- | --- |

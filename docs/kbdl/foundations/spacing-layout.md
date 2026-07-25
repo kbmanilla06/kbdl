@@ -54,9 +54,14 @@ rules.
 - **Stack spacing** — vertical rhythm between stacked elements.
 - **Inline spacing** — horizontal rhythm between elements in a row.
 
-### 1.3 Recommended modular spacing system
+### 1.3 Default modular spacing system
 
-Status: `Recommended`, `Assumed` provenance, `Not verified` validation.
+Status: `Approved` — approved by the project owner via the
+[foundation decision packet](README.md#6-foundation-decision-packet); see
+[KBDL-DEC-012](../decision-register.md#kbdl-dec-012--foundation-decision-packet-approved).
+Provenance: `User-provided`. Validation status: `Not verified` for the
+base unit's final px/rem value (see §7 Unresolved) — the step *ratios*
+below are approved; the base unit is not yet chosen.
 
 A single-base modular scale, expressed as multiples of one atomic unit
 (the exact unit value in px/rem is deferred — see §7 Unresolved):
@@ -207,9 +212,15 @@ size and applying uniform scaling below it is explicitly prohibited
 (non-conforming pattern 8 in
 [principles.md §11](../principles.md#11-non-conforming-design-directions)).
 
-### 3.6 Recommended breakpoint set
+### 3.6 Default breakpoint set
 
-Status: `Recommended`, `Assumed` provenance, `Not verified` validation.
+Status: `Approved` — the named breakpoints and their roles were approved
+by the project owner via the
+[foundation decision packet](README.md#6-foundation-decision-packet); see
+[KBDL-DEC-012](../decision-register.md#kbdl-dec-012--foundation-decision-packet-approved).
+Provenance: `User-provided`. Validation status: `Not verified` for exact
+pixel values — those remain deferred to KBDL-006; only the named roles
+and content-driven philosophy are approved here.
 
 A minimal, content-justified set (named by role, not device):
 

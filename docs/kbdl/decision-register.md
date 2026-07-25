@@ -246,10 +246,29 @@ rather than invented, per the source-of-truth rules in this prompt.
 - **Superseded decision:** None (this decision corrects wording in KBDL-GOV-001/003; it does not replace KBDL-DEC-001 through KBDL-DEC-010, which remain approved as recorded).
 - **Review date:** Not applicable.
 
+### KBDL-DEC-012 — Foundation decision packet approved
+
+- **Date:** 2026-07-25
+- **Status:** Approved
+- **Decision owner:** Project owner (approved directly, in response to the KBDL-003-R1 validation review and foundation-defaults approval gate)
+- **Context:** KBDL-003 (as corrected by KBDL-003-R1) proposed eleven `Recommended` foundation defaults — neutral and accent color direction, typeface strategy, type-scale relationships, spacing scale, named breakpoint set, geometric character, corner classification, elevation scale, icon strategy, and media strategy — none of which carried implementation authority until approved, per [conventions.md §1.1](conventions.md#11-lifecycle--approval-status).
+- **Decision:** The project owner approved all eleven recommended defaults in full, with no changes, exactly as documented in [foundations/README.md §6.2](foundations/README.md#62-recommended-defaults--approved).
+- **Rationale:** The project owner accepted the planning agent's assessment that the eleven defaults provide a coherent technological-luxury direction while preserving project-level flexibility, and that the outstanding typeface-licensing risk applies to the eventual specific font family, not to the approved humanist-sans strategy itself.
+- **Alternatives considered:** "Approve with changes" (rejected — no specific item was flagged for change) and "Revise" (rejected — no item required rework before approval).
+- **Trade-offs:** None beyond those already documented per item in [foundations/README.md §6.2](foundations/README.md#62-recommended-defaults--approved).
+- **Affected requirements:** `KBDL-FND-009`, `KBDL-FND-010`, `KBDL-FND-011`, `KBDL-FND-012` (lifecycle status changed from `Recommended` to `Approved`).
+- **Affected modules:** FND.
+- **Accessibility impact:** None beyond what was already evaluated in KBDL-003/KBDL-003-R1 (the `neutral-50`/`neutral-60` contrast correction); no accessibility rule was changed by this approval.
+- **Motion impact:** Not applicable.
+- **Responsive impact:** Named breakpoint roles are now approved; exact pixel values remain deferred to KBDL-006.
+- **Implementation impact:** `foundations/README.md`, `foundations/color.md`, `foundations/typography.md`, `foundations/spacing-layout.md`, `foundations/shape-depth.md`, `foundations/iconography-media.md`, `README.md`, and `traceability-matrix.md` were updated to reflect the `Approved` lifecycle status of these defaults. KBDL-004 (Adaptive Themes) may now build on these approved values.
+- **Superseded decision:** None.
+- **Review date:** Not applicable.
+
 ## Unresolved Metadata
 
 The following metadata could not be verified from available sources and is
 intentionally left as `Not verified` rather than fabricated: exact decision
 dates, named decision owners, meeting or approval records, and participant
-lists. If these become available, update the affected fields and change
-their status accordingly.
+lists, **except** where a decision (such as KBDL-DEC-012) records a date
+and owner directly confirmed within the conversation that produced it.
