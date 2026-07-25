@@ -28,10 +28,16 @@ The rules below govern how the KBDL specification changes over time.
 ### Ownership
 
 - The project owner holds final approval authority over KBDL decisions,
-  scope, and requirement status changes to `Approved` or `Verified`.
+  scope, and every change to a requirement's lifecycle status to
+  `Approved`. Only the project owner may grant `Approved` status; no other
+  lifecycle or dimension label substitutes for it (see
+  [conventions.md](conventions.md#1-status-labels)).
 - Any contributor may propose changes, record `Recommended` or `Assumed`
-  content, and perform validation, but may not unilaterally mark a
-  requirement `Approved` or `Verified`.
+  content, and perform validation — including recording a `Verified`
+  validation status with evidence attached — but may not unilaterally grant
+  `Approved` lifecycle status. Recording `Verified` documents that
+  validation happened; it never approves scope and never substitutes for
+  the project owner's approval.
 
 ### Proposal process
 
@@ -51,11 +57,20 @@ The rules below govern how the KBDL specification changes over time.
 
 ### Approval requirements
 
-- A requirement becomes `Approved` only with explicit project-owner
-  authorization, recorded in the [decision register](decision-register.md)
-  when the decision is significant enough to warrant a decision record.
-- A requirement becomes `Verified` only when its validation method has been
-  run and evidence is recorded in the [traceability matrix](traceability-matrix.md).
+- A requirement's lifecycle status becomes `Approved` only with explicit
+  project-owner authorization, recorded in the
+  [decision register](decision-register.md) when the decision is
+  significant enough to warrant a decision record. This is the only
+  condition under which implementation is authorized.
+- A requirement's validation status becomes `Verified` only when its
+  validation method has been run and evidence is recorded in the
+  [traceability matrix](traceability-matrix.md). Recording `Verified` is a
+  separate act from approval: it may be done by any contributor who
+  performed the validation, and it neither requires nor grants `Approved`
+  lifecycle status.
+- A requirement intended for implementation must reach `Approved` lifecycle
+  status before implementation begins, and `Verified` validation status
+  after implementation is checked. Neither label substitutes for the other.
 
 ### Scope-change process
 
@@ -152,13 +167,17 @@ this prompt), the following steps apply:
 
 ## Additional Preserved Rules
 
-- Recommendations (`Recommended`) and assumptions (`Assumed`) are not
-  implementation authority; only `Approved`, `Confirmed`, `User-provided`,
-  and `Verified` items may be implemented.
+- Only the lifecycle status `Approved` authorizes implementation (see
+  [conventions.md](conventions.md#1-status-labels)). `Recommended`,
+  `Unresolved`, `Deferred`, and `Blocked` items are never implementation
+  authority. Provenance labels (`Confirmed`, `User-provided`, `Assumed`) and
+  the validation label `Verified` describe origin, confidence, or checking
+  outcome — none of them independently authorize implementation.
 - A project profile (`PRO`) may adjust emphasis but must not replace or
   contradict KBDL foundations (`FND`) or locked rules.
 - Unverified work cannot be labeled complete; use `Not verified` until
-  evidence exists.
+  evidence exists. A requirement being `Approved` does not by itself make it
+  complete — completion requires the separate `Verified` validation status.
 - A failed requirement must either be remediated or explicitly marked
   `Deferred` with a recorded approval; it cannot be left silently failing.
 - Roadmap steps after the currently active one (see the

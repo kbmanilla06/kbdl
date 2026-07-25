@@ -37,9 +37,10 @@ specification itself.
    [Requirement Identification](#requirement-identification)) and check the
    [traceability matrix](traceability-matrix.md) for its current location and
    status.
-4. Before implementing anything, confirm its [status label](#status-labels)
-   is one that carries implementation authority (`Approved`, `Confirmed`,
-   `User-provided`, or `Verified`).
+4. Before implementing anything, confirm its lifecycle status (see
+   [status labels](#status-labels)) is `Approved`. No other label —
+   including `Confirmed`, `User-provided`, or `Verified` — authorizes
+   implementation on its own.
 5. Before proposing a change, read [contributing.md](contributing.md).
 6. Before approving a change, use the [conformance checklist](conformance-checklist.md).
 
@@ -83,13 +84,22 @@ requirement IDs.
 
 ## Status Labels
 
-Every requirement, decision, or claim carries one status label:
-`Confirmed`, `User-provided`, `Approved`, `Recommended`, `Assumed`,
-`Unresolved`, `Deferred`, `Blocked`, `Verified`, `Not verified`,
-`Deprecated`, `Superseded`. Only `Confirmed`, `User-provided`, `Approved`,
-and `Verified` carry implementation authority. Full definitions, who may
-assign each label, and how they change are documented in
-[conventions.md](conventions.md#1-status-labels).
+Every requirement, decision, or claim is described along three independent
+dimensions:
+
+- **Lifecycle / approval status** — `Recommended`, `Unresolved`, `Approved`,
+  `Deferred`, `Blocked`, `Deprecated`, `Superseded`. Only `Approved`
+  authorizes implementation.
+- **Provenance** — `User-provided`, `Confirmed`, `Assumed`. Describes where a
+  statement came from or how much confidence it carries; never by itself an
+  authorization to implement.
+- **Validation status** — `Not verified`, `Verified`. Records whether a
+  defined validation method has actually been run; never by itself an
+  authorization to implement.
+
+A requirement carries one label from each dimension at once. Full
+definitions, who may assign each label, and how they change are documented
+in [conventions.md](conventions.md#1-status-labels).
 
 ## Requirement Identification
 

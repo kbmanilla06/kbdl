@@ -35,8 +35,9 @@ decisions (visual values, motion timings, component designs) already exist.
   semantic tokens alone.
 
 - **Conformance** — The condition of a project or component meeting all
-  applicable `Approved` and `Verified` KBDL requirements for the scope being
-  assessed.
+  applicable KBDL requirements for the scope being assessed, where each
+  requirement's lifecycle status is `Approved` and its validation status is
+  `Verified`. Meeting only one of these two conditions is not conformance.
 
 - **Controlled variable** — An aspect of KBDL's design that a project profile
   or implementer may adjust only within explicitly documented bounds, as
@@ -86,8 +87,11 @@ decisions (visual values, motion timings, component designs) already exist.
   example functional versus expressive motion) that KBDL motion patterns are
   organized into.
 
-- **Non-conformance** — The condition of failing one or more applicable
-  `Approved` or `Verified` KBDL requirements for the scope being assessed.
+- **Non-conformance** — The condition of failing one or more applicable KBDL
+  requirements for the scope being assessed — that is, a requirement whose
+  lifecycle status is `Approved` is either not implemented as specified, or
+  its validation status is not `Verified` where verification has been
+  attempted and failed.
 
 - **Open brand expression** — An aspect of KBDL explicitly left open for a
   project or profile to express its own brand identity, within the bounds set

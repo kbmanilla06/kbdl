@@ -227,6 +227,25 @@ rather than invented, per the source-of-truth rules in this prompt.
 - **Superseded decision:** None.
 - **Review date:** Not applicable.
 
+### KBDL-DEC-011 — Status model correction: approval vs. provenance vs. validation
+
+- **Date:** Not verified
+- **Status:** Approved
+- **Decision owner:** Not verified (project owner, via remediation prompt KBDL-001-R1)
+- **Context:** KBDL-001 validation identified contradictory rules: some sections implied `Confirmed`, `User-provided`, and `Verified` each independently authorized implementation, while others reserved `Verified` status changes for the project owner only. The traceability matrix also used "This document" as its own validation evidence in several rows.
+- **Decision:** The status model is corrected to three independent dimensions — lifecycle/approval status (`Recommended`, `Unresolved`, `Approved`, `Deferred`, `Blocked`, `Deprecated`, `Superseded`), provenance (`User-provided`, `Confirmed`, `Assumed`), and validation status (`Not verified`, `Verified`). Only the lifecycle label `Approved` authorizes implementation. Any contributor may record `Verified` validation status with evidence, but this never grants `Approved` lifecycle status.
+- **Rationale:** Separating these dimensions removes the contradiction between "who may assign `Verified`" and "what authorizes implementation," and stops circular evidence (a document citing itself as proof of its own validity).
+- **Alternatives considered:** Keeping a single combined status list was considered and rejected because it could not express "approved but not yet checked" or "checked but not yet approved" without contradiction.
+- **Trade-offs:** Slightly more terminology for contributors to track (three dimensions instead of one list), in exchange for removing ambiguity about implementation authority.
+- **Affected requirements:** KBDL-GOV-001, KBDL-GOV-003.
+- **Affected modules:** GOV.
+- **Accessibility impact:** None directly; KBDL-GOV-002's locked-rule protection for accessibility is unchanged by this correction.
+- **Motion impact:** Not applicable.
+- **Responsive impact:** Not applicable.
+- **Implementation impact:** `conventions.md`, `governance.md`, `README.md`, `glossary.md`, and `traceability-matrix.md` were updated to remove every statement that treated `Confirmed`, `User-provided`, or `Verified` as independent implementation authority.
+- **Superseded decision:** None (this decision corrects wording in KBDL-GOV-001/003; it does not replace KBDL-DEC-001 through KBDL-DEC-010, which remain approved as recorded).
+- **Review date:** Not applicable.
+
 ## Unresolved Metadata
 
 The following metadata could not be verified from available sources and is

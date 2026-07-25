@@ -11,37 +11,96 @@ Return to the [specification index](README.md).
 
 ## 1. Status Labels
 
-Every requirement, decision, or claim in KBDL must carry exactly one status label.
-A label communicates how much authority a statement carries — it is not decorative.
+Every requirement, decision, or claim in KBDL is described along three
+**independent dimensions**: lifecycle/approval status, provenance, and
+validation status. A statement can carry one label from each dimension at
+once (for example: `Approved`, `User-provided`, `Not verified`, all at the
+same time, for the same requirement). No dimension substitutes for another,
+and a label from one dimension never implies a label from a different
+dimension.
+
+### 1.1 Lifecycle / approval status
+
+This dimension is the **only** source of implementation authority in KBDL.
+A requirement may be implemented if, and only if, its lifecycle status is
+`Approved`.
 
 | Label | Meaning | Who may assign it |
 | --- | --- | --- |
-| `Confirmed` | A fact verified directly against the repository, tooling, or user statement. | Any contributor, with evidence. |
-| `User-provided` | Information stated directly by the project owner and not independently derived. | Recorded verbatim by whoever received it. |
-| `Approved` | A decision or requirement the project owner has explicitly authorized for implementation. | Project owner (decision owner) only. |
-| `Recommended` | An editorial or technical suggestion awaiting approval. Not an approved requirement. | Any contributor. |
-| `Assumed` | A working assumption used to make progress in the absence of a decision. Must be flagged for review. | Any contributor, must be logged in the [decision register](decision-register.md) or [traceability matrix](traceability-matrix.md). |
-| `Unresolved` | An open question with no current answer. | Any contributor. |
-| `Deferred` | Known, intentionally postponed to a later roadmap step, with an approval reference. | Project owner. |
-| `Blocked` | Work that cannot proceed until a dependency, decision, or conflict is resolved. | Any contributor; must name the blocker. |
-| `Verified` | A requirement that has passed its defined validation method with recorded evidence. | Whoever performed the validation, with evidence attached. |
-| `Not verified` | A requirement whose validation has not been performed or could not be confirmed. | Default state until evidence exists. |
-| `Deprecated` | Guidance that is no longer recommended but has not yet been formally replaced. | Project owner, via governance. |
-| `Superseded` | Guidance formally replaced by a newer decision or requirement, with a reference to the replacement. | Project owner, via governance. |
+| `Recommended` | An editorial or technical suggestion awaiting approval. Does not authorize implementation. | Any contributor. |
+| `Unresolved` | An open question with no current answer. Does not authorize implementation. | Any contributor. |
+| `Approved` | The project owner has explicitly authorized this requirement or decision for implementation, through the project's approval process. This is the only label that authorizes implementation. | Project owner only. |
+| `Deferred` | Known, intentionally postponed to a later roadmap step, with an approval reference. Does not authorize implementation now. | Project owner. |
+| `Blocked` | Work that cannot proceed until a dependency, decision, or conflict is resolved. Does not authorize implementation. | Any contributor; must name the blocker. |
+| `Deprecated` | Guidance that is no longer recommended but has not yet been formally replaced. No longer authorizes new implementation. | Project owner, via governance. |
+| `Superseded` | Guidance formally replaced by a newer decision or requirement, with a reference to the replacement. No longer authorizes implementation; the replacement's own lifecycle status governs. | Project owner, via governance. |
 
-**Status changes:** A status changes only when new evidence, an approval, or a
-governance decision justifies the change. Contributors record the reason for a
-status change in the affected document and, where applicable, the
+### 1.2 Provenance
+
+This dimension records **where a statement came from** or how much
+confidence it carries. It describes the statement's origin, not whether it
+may be implemented. A fact can be `Confirmed` or `User-provided` and still
+have a lifecycle status of `Recommended` or `Unresolved` — provenance never
+by itself grants approval.
+
+| Label | Meaning | Who may assign it |
+| --- | --- | --- |
+| `User-provided` | Information stated directly by the project owner and not independently derived. Describes origin, not approval; content only gains implementation authority once it is separately given `Approved` lifecycle status. | Recorded verbatim by whoever received it. |
+| `Confirmed` | A fact verified directly against the repository, tooling, or a user statement. Describes factual confidence, not approval; a confirmed fact may inform implementation of an already-approved requirement but cannot expand or alter approved scope on its own. | Any contributor, with evidence. |
+| `Assumed` | A working assumption used to make progress in the absence of a decision. Must be flagged for review and never treated as approved. | Any contributor, must be logged in the [decision register](decision-register.md) or [traceability matrix](traceability-matrix.md). |
+
+### 1.3 Validation status
+
+This dimension records **whether a defined validation method has been run**
+and its outcome. It is independent of approval: a requirement can be
+`Approved` and `Not verified` (approved, but not yet checked), or, in the
+unusual case of exploratory validation work, `Verified` while its lifecycle
+status is still short of `Approved`. Validation never grants or substitutes
+for approval.
+
+| Label | Meaning | Who may assign it |
+| --- | --- | --- |
+| `Not verified` | The requirement's validation method has not been performed, or evidence could not be confirmed. Default state until evidence exists. | Default; no action needed to hold this state. |
+| `Verified` | The requirement's defined validation method has been completed and recorded evidence exists. Recording `Verified` documents that validation happened; it does not authorize implementation and does not grant `Approved` lifecycle status. | Any contributor who performed the validation, with evidence attached. The project owner's approval authority (see [governance.md](governance.md)) is unaffected by who verifies. |
+
+### Combining the dimensions
+
+A requirement intended for implementation must reach `Approved` lifecycle
+status. After implementation, it is separately checked and marked
+`Verified` once its validation method has actually been run. Examples:
+
+- **`User-provided`, lifecycle `Recommended`, `Not verified`** — the project
+  owner stated something directly, but it has not yet been approved as a
+  requirement or checked against anything. It is context, not an
+  implementable requirement.
+- **`Approved`, `Not verified`** — the project owner has authorized
+  implementation, but no validation method has been run yet. Implementation
+  may proceed; completion cannot yet be claimed.
+- **`Approved`, `Verified`** — the project owner has authorized
+  implementation and its validation method has been completed with recorded
+  evidence. This is the only combination that represents a fully
+  implemented and checked requirement.
+- **`Confirmed` repository fact, lifecycle `Unresolved`** — a fact observed
+  directly in the repository (for example, "no `package.json` exists") is
+  `Confirmed`, but that fact alone does not authorize any new scope; it only
+  informs decisions that still require their own `Approved` status.
+
+**Status changes:** A lifecycle status changes only when the project
+owner's approval process (see [governance.md](governance.md)) justifies the
+change; provenance and validation labels change when new evidence is
+recorded. Contributors record the reason for any status change in the
+affected document and, where applicable, the
 [decision register](decision-register.md).
 
-**Approved requirements:** Only `Approved`, `Confirmed`, `User-provided`, and
-`Verified` represent authority to implement. `Recommended`, `Assumed`,
-`Unresolved`, `Deferred`, and `Blocked` items must not be implemented as if they
-were approved requirements.
+**Implementation authority:** Only the lifecycle label `Approved` authorizes
+implementation. `Confirmed`, `User-provided`, `Verified`, and every other
+label — regardless of dimension — never independently authorize
+implementation. `Recommended`, `Unresolved`, `Deferred`, and `Blocked` items
+must never be implemented as if they were approved requirements.
 
-**Unresolved and deferred tracking:** Every `Unresolved` or `Deferred` item must
-have a corresponding row in the [traceability matrix](traceability-matrix.md) so
-it is not lost between roadmap steps.
+**Unresolved and deferred tracking:** Every `Unresolved` or `Deferred` item
+must have a corresponding row in the [traceability matrix](traceability-matrix.md)
+so it is not lost between roadmap steps.
 
 **Superseded guidance:** When guidance is superseded, the original text is kept
 in place with a `Superseded` label and a link to the replacing decision or
