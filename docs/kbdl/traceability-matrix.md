@@ -1,7 +1,7 @@
 # KBDL Traceability Matrix
 
 Lifecycle status of this framework: `Approved`. Rows below reflect only
-KBDL-001 and KBDL-002 scope.
+KBDL-001, KBDL-002, and KBDL-003 scope.
 
 Return to the [specification index](README.md). Status labels are defined in
 [conventions.md](conventions.md#1-status-labels).
@@ -220,17 +220,17 @@ scope.
 - **Related decision:** KBDL-DEC-011
 - **Notes:** Corrects prior wording that treated `Confirmed`, `User-provided`, and `Verified` as implementation authority.
 
-### Later modules (visual foundations, themes, motion, responsive, accessibility, components, profiles, customization, validation)
+### Later modules (themes, motion, responsive, accessibility, components, profiles, customization, validation)
 
 - **Blueprint section:** Later roadmap modules
-- **Roadmap prompt:** KBDL-003 through KBDL-010
+- **Roadmap prompt:** KBDL-004 through KBDL-010
 - **Requirement ID:** Not assigned
 - **Specification location:** Planned locations only, see [README.md § Document Hierarchy](README.md#document-hierarchy)
 - **Approval status:** Deferred
 - **Validation status:** Not verified
 - **Validation method:** Not applicable
 - **Validation evidence:** Not applicable
-- **Known limitation:** Not designed; intentionally out of scope for KBDL-002 and earlier steps. Principles (formerly in this group) is now delivered — see the KBDL-002 rows below.
+- **Known limitation:** Not designed; intentionally out of scope for KBDL-003 and earlier steps. Principles and Visual foundations (formerly in this group) are now delivered — see the KBDL-002 and KBDL-003 rows.
 - **Related decision:** Not applicable
 - **Notes:** Do not treat as implemented, approved for design content, or verified.
 
@@ -351,9 +351,89 @@ consistency scope, defined in [principles.md](principles.md).
 - **Related decision:** Not applicable
 - **Notes:** Sixteen non-conforming patterns exceed the required minimum of eight.
 
+## KBDL-003 Rows
+
+The rows below trace KBDL-003's visual-foundation scope, defined in
+[foundations/README.md](foundations/README.md) and its linked documents.
+Each `KBDL-FND-###` requirement's full lifecycle/provenance/validation
+detail lives in [foundations/README.md § Normative Requirements](foundations/README.md#7-normative-requirements);
+this matrix records only its blueprint origin, approval status, validation
+status, and evidence, per this file's field definitions.
+
+### Color role architecture (KBDL-FND-001, KBDL-FND-002)
+
+- **Blueprint section:** Color architecture — semantic roles and color-
+  only-meaning prohibition
+- **Roadmap prompt:** KBDL-003
+- **Requirement ID:** KBDL-FND-001, KBDL-FND-002
+- **Specification location:** [foundations/color.md §1–§2](foundations/color.md#1-architectural-principles-approved)
+- **Approval status:** Approved
+- **Validation status:** Not verified
+- **Validation method:** Manual review of role names and color-only-meaning usage at each later module's approval gate.
+- **Validation evidence:** Not verified — no theme or component content exists yet to check role usage against.
+- **Known limitation:** Cannot be fully validated until `THM` and `CMP` requirements exist.
+- **Related decision:** Not applicable
+- **Notes:** Architecture only; recommended hue values are tracked separately below (KBDL-FND-009).
+
+### Spacing rhythm and responsive content priority (KBDL-FND-003, KBDL-FND-004)
+
+- **Blueprint section:** Spacing rhythm and content-driven breakpoints
+- **Roadmap prompt:** KBDL-003
+- **Requirement ID:** KBDL-FND-003, KBDL-FND-004
+- **Specification location:** [foundations/spacing-layout.md §1, §3](foundations/spacing-layout.md#1-spacing-and-sizing-logic)
+- **Approval status:** Approved
+- **Validation status:** Not verified
+- **Validation method:** Manual review of spacing usage and breakpoint justification once `RSP` requirements exist.
+- **Validation evidence:** Not verified — no responsive-behavior module exists yet.
+- **Known limitation:** Cannot be fully validated until `RSP` requirements exist.
+- **Related decision:** KBDL-DEC-003, KBDL-DEC-007
+- **Notes:** Restates locked rules from [principles.md §5.1](principles.md#51-locked-identity-rules) at foundation-level specificity.
+
+### Elevation and icon/media accessibility anticipation (KBDL-FND-005, KBDL-FND-006, KBDL-FND-007)
+
+- **Blueprint section:** Depth semantics; icon and media accessibility anticipation
+- **Roadmap prompt:** KBDL-003
+- **Requirement ID:** KBDL-FND-005, KBDL-FND-006, KBDL-FND-007
+- **Specification location:** [foundations/shape-depth.md §3](foundations/shape-depth.md#3-elevation-and-depth), [foundations/iconography-media.md §1.1, §2.1](foundations/iconography-media.md#1-iconography)
+- **Approval status:** Approved
+- **Validation status:** Verified
+- **Validation method:** Manual review confirming each elevation level states a simplified fallback, and that icon/media required principles explicitly state the state-clarity and reduced-motion anticipation rules.
+- **Validation evidence:** Manual completeness review recorded in the KBDL-003 commit — confirmed all five elevation levels list a non-shadow-dependent fallback, and both icon and media sections state their respective anticipation requirements.
+- **Known limitation:** None identified.
+- **Related decision:** Not applicable
+- **Notes:** "Anticipation" language is intentional — full reduced-motion and accessibility markup rules belong to KBDL-005/007.
+
+### Shared foundation architecture across profiles (KBDL-FND-008)
+
+- **Blueprint section:** Profile-level foundation adjustments
+- **Roadmap prompt:** KBDL-003
+- **Requirement ID:** KBDL-FND-008
+- **Specification location:** [foundations/README.md §4](foundations/README.md#4-project-profile-adjustments--foundation-summary)
+- **Approval status:** Approved
+- **Validation status:** Not verified
+- **Validation method:** Manual cross-profile consistency review once the project-profiles module (`PRO`) is approved.
+- **Validation evidence:** Not verified — `PRO` requirements do not exist yet.
+- **Known limitation:** Cannot be fully validated until `PRO` requirements exist.
+- **Related decision:** KBDL-DEC-006
+- **Notes:** Restates [principles.md §9.4](principles.md#94-shared-constraints-across-profiles) at foundation-level specificity.
+
+### Recommended color, typography, spacing, and shape/elevation defaults (KBDL-FND-009 through KBDL-FND-012)
+
+- **Blueprint section:** Foundation decision packet — recommended default values
+- **Roadmap prompt:** KBDL-003
+- **Requirement ID:** KBDL-FND-009, KBDL-FND-010, KBDL-FND-011, KBDL-FND-012
+- **Specification location:** [foundations/README.md §6](foundations/README.md#6-foundation-decision-packet)
+- **Approval status:** Recommended (not `Approved` — requires project-owner approval before authorizing implementation, per [conventions.md §1.1](conventions.md#11-lifecycle--approval-status))
+- **Validation status:** Verified for the color-contrast calculations in [foundations/color.md §4](foundations/color.md#4-contrast-evidence-illustrative-not-a-theme-mapping) only; Not verified for all other aspects (typeface licensing, brand suitability, final spacing/corner/elevation values)
+- **Validation method:** WCAG relative-luminance contrast calculation (completed for the color pairs listed); typeface-licensing verification and project-owner review (not yet performed).
+- **Validation evidence:** Contrast-ratio table in [foundations/color.md §4](foundations/color.md#4-contrast-evidence-illustrative-not-a-theme-mapping), computed via a local dependency-free script (see the KBDL-003 validation evidence for the script and full output).
+- **Known limitation:** These are recommendations awaiting project-owner approval; they must not be treated as `Approved` or implemented until that approval is recorded.
+- **Related decision:** Not applicable — pending a future decision-register entry once the project owner approves or amends the packet.
+- **Notes:** This is the only KBDL-003 row whose approval status is `Recommended` rather than `Approved`; all other KBDL-003 rows restate `Approved` architecture from KBDL-001/002.
+
 ## Notes on Scope
 
-No requirement in this matrix outside `GOV` and `PRN` has been implemented,
+No requirement in this matrix outside `GOV`, `PRN`, and `FND` has been implemented,
 designed, or validated. Rows for later roadmap modules exist only to show
 where their future requirements will be traced once their roadmap step is
 reached. Approval status and validation status are recorded independently
@@ -361,4 +441,9 @@ for every row; a row being `Approved` never implies it is `Verified`, and a
 row being `Verified` never implies or grants `Approved` status. `PRN`
 requirements are approved as principles-level guidance; they do not
 themselves introduce or approve any final visual, motion, or component
-value — those remain `Deferred` until their own modules are reached.
+value — those remain `Deferred` until their own modules are reached. `FND`
+requirements are approved as foundation *architecture* only; the specific
+recommended default values in the
+[foundation decision packet](foundations/README.md#6-foundation-decision-packet)
+carry `Recommended` approval status, not `Approved`, until the project
+owner reviews them.

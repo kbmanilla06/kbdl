@@ -13,12 +13,17 @@ and Flow (consumer-facing web applications). See the
 
 ## Specification Status
 
-**KBDL-001: Specification Architecture and Governance Foundation** and
-**KBDL-002: Identity, Principles, and Visual Consistency Rules**
-deliverables are present in the repository, the first two steps of a
-ten-step approved roadmap. Their lifecycle status is `Approved`;
-requirement-level validation statuses are recorded independently in the
+**KBDL-001: Specification Architecture and Governance Foundation**,
+**KBDL-002: Identity, Principles, and Visual Consistency Rules**, and
+**KBDL-003: Core Visual Foundations** deliverables are present in the
+repository, the first three steps of a ten-step approved roadmap. Their
+lifecycle status is `Approved` for architecture and rules; requirement-
+level validation statuses are recorded independently in the
 [traceability matrix](traceability-matrix.md) and are not all `Verified`.
+KBDL-003 additionally proposes `Recommended` default values (color,
+typography, spacing, shape, elevation, iconography) that require separate
+project-owner approval before they authorize implementation — see
+[foundations/README.md § Foundation Status Model](foundations/README.md#3-foundation-status-model).
 Progression to later roadmap steps depends on the planning agent's
 validation review, not on this index. KBDL-001 established the
 documentation architecture, terminology, requirement and status
@@ -26,10 +31,12 @@ conventions, and governance for the entire KBDL specification. KBDL-002
 established KBDL's identity statement, Digital Luxury and Technical Utility
 definitions, core principles, visual-consistency relationships, the
 locked/controlled/open identity model, and the design-decision hierarchy
-(see [principles.md](principles.md)). Neither step defines visual
-foundations, themes, motion values, components, or final measurements —
-those are later roadmap steps and must not be started early (see
-[governance.md](governance.md)).
+(see [principles.md](principles.md)). KBDL-003 established KBDL's color,
+typography, spacing/layout, shape/depth, and iconography/media
+architecture (see [foundations/README.md](foundations/README.md)). None of
+these steps define adaptive-theme mappings, motion values, components, or
+implementation code — those are later roadmap steps and must not be
+started early (see [governance.md](governance.md)).
 
 ## Intended Audience
 
@@ -56,16 +63,16 @@ specification itself.
 
 ## Document Hierarchy
 
-KBDL-001 and KBDL-002 deliver the documents below with real content. Rows
-still marked `Deferred` show the **planned location only** for future
-modules; those files do not exist yet and must not be created until their
-roadmap step is reached.
+KBDL-001, KBDL-002, and KBDL-003 deliver the documents below with real
+content. Rows still marked `Deferred` show the **planned location only**
+for future modules; those files do not exist yet and must not be created
+until their roadmap step is reached.
 
 | # | Module | Status | Location |
 | --- | --- | --- | --- |
 | 1 | Introduction | Deferred | `docs/kbdl/introduction.md` (planned) |
 | 2 | Principles | Approved | [principles.md](principles.md) |
-| 3 | Visual foundations | Deferred | `docs/kbdl/foundations.md` (planned) |
+| 3 | Visual foundations | Approved (architecture); Recommended (default values)* | [foundations/README.md](foundations/README.md) |
 | 4 | Adaptive themes | Deferred | `docs/kbdl/themes.md` (planned) |
 | 5 | Motion | Deferred | `docs/kbdl/motion.md` (planned) |
 | 6 | Responsive behavior | Deferred | `docs/kbdl/responsive.md` (planned) |
@@ -78,8 +85,13 @@ roadmap step is reached.
 | 13 | Governance | Approved | [governance.md](governance.md) |
 | 14 | Future expansion | Deferred | Location to be determined when needed |
 
+\* See
+[foundations/README.md § Foundation Status Model](foundations/README.md#3-foundation-status-model)
+for the distinction between the module's `Approved` architecture and its
+`Recommended` default values.
+
 Supporting documents (not numbered modules, but required by KBDL-001 and
-referenced by KBDL-002):
+referenced by KBDL-002 and KBDL-003):
 
 - [glossary.md](glossary.md) — terminology
 - [conventions.md](conventions.md) — status labels, requirement IDs, cross-references
@@ -89,10 +101,11 @@ referenced by KBDL-002):
 - [traceability-matrix.md](traceability-matrix.md) — requirement traceability
 - [conformance-checklist.md](conformance-checklist.md) — conformance review
 
-This hierarchy is designed so each remaining future module (rows 1, 3–12,
+This hierarchy is designed so each remaining future module (rows 1, 4–12,
 14) can be added as its own file without reorganizing this index or
-renumbering existing requirement IDs, exactly as row 2 (Principles) was
-added in KBDL-002 without disturbing any other row.
+renumbering existing requirement IDs, exactly as row 2 (Principles) and
+row 3 (Visual foundations) were added in KBDL-002 and KBDL-003 without
+disturbing any other row.
 
 ## Status Labels
 
@@ -127,6 +140,10 @@ create/retire/supersede lifecycle, is documented in
 - **Principles:** [principles.md](principles.md) — KBDL identity, Digital
   Luxury, Technical Utility, core principles, visual consistency, and the
   design-decision hierarchy.
+- **Visual foundations:** [foundations/README.md](foundations/README.md) —
+  color, typography, spacing/layout, shape/depth, and iconography/media
+  architecture, plus the foundation decision packet awaiting project-owner
+  approval.
 - **Governance:** [governance.md](governance.md) — ownership, change
   control, approval, exceptions, and review expectations.
 - **Glossary:** [glossary.md](glossary.md) — definitions for all KBDL terms

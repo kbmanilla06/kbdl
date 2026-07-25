@@ -67,7 +67,8 @@ decisions (visual values, motion timings, component designs) already exist.
 
 - **Foundation** — The base layer of KBDL (visual foundations such as color,
   type, and spacing primitives) that all themes, components, and profiles are
-  built on. Tracked under module code `FND`.
+  built on. Tracked under module code `FND`. See
+  [foundations/README.md](foundations/README.md).
 
 - **KBDL** — The name of this reusable web design language, combining digital
   luxury, technical utility, controlled expressive motion, cross-project
