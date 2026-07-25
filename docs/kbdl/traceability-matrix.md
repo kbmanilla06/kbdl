@@ -1,7 +1,7 @@
 # KBDL Traceability Matrix
 
 Lifecycle status of this framework: `Approved`. Rows below reflect only
-KBDL-001, KBDL-002, and KBDL-003 scope.
+KBDL-001, KBDL-002, KBDL-003, and KBDL-004 scope.
 
 Return to the [specification index](README.md). Status labels are defined in
 [conventions.md](conventions.md#1-status-labels).
@@ -220,17 +220,17 @@ scope.
 - **Related decision:** KBDL-DEC-011
 - **Notes:** Corrects prior wording that treated `Confirmed`, `User-provided`, and `Verified` as implementation authority.
 
-### Later modules (themes, motion, responsive, accessibility, components, profiles, customization, validation)
+### Later modules (motion, responsive, accessibility, components, profiles, customization, validation)
 
 - **Blueprint section:** Later roadmap modules
-- **Roadmap prompt:** KBDL-004 through KBDL-010
+- **Roadmap prompt:** KBDL-005 through KBDL-010
 - **Requirement ID:** Not assigned
 - **Specification location:** Planned locations only, see [README.md § Document Hierarchy](README.md#document-hierarchy)
 - **Approval status:** Deferred
 - **Validation status:** Not verified
 - **Validation method:** Not applicable
 - **Validation evidence:** Not applicable
-- **Known limitation:** Not designed; intentionally out of scope for KBDL-003 and earlier steps. Principles and Visual foundations (formerly in this group) are now delivered — see the KBDL-002 and KBDL-003 rows.
+- **Known limitation:** Not designed; intentionally out of scope for KBDL-004 and earlier steps. Principles, Visual foundations, and Adaptive themes (formerly in this group) are now delivered — see the KBDL-002, KBDL-003, and KBDL-004 rows.
 - **Related decision:** Not applicable
 - **Notes:** Do not treat as implemented, approved for design content, or verified.
 
@@ -431,6 +431,109 @@ status, and evidence, per this file's field definitions.
 - **Related decision:** KBDL-DEC-012
 - **Notes:** This row's approval status changed from `Recommended` to `Approved` following the project owner's decision recorded in KBDL-DEC-012. See KBDL-003-R1 for the accessibility and lifecycle corrections applied to this row's underlying content before approval.
 
+## KBDL-004 Rows
+
+The rows below trace KBDL-004's adaptive-theme scope, defined in
+[themes/README.md](themes/README.md) and its linked documents.
+
+### Theme architecture, terminology, and semantic-role inventory (KBDL-THM-001)
+
+- **Blueprint section:** Theme architecture and semantic-role inventory
+- **Roadmap prompt:** KBDL-004
+- **Requirement ID:** KBDL-THM-001
+- **Specification location:** [themes/semantic-roles.md](themes/semantic-roles.md)
+- **Approval status:** Approved
+- **Validation status:** Not verified
+- **Validation method:** Manual review of role usage against the inventory at each later module's approval gate.
+- **Validation evidence:** Not verified — no component module exists yet to check role usage against.
+- **Known limitation:** Cannot be fully validated until component modules (`CMP`) exist.
+- **Related decision:** Not applicable
+- **Notes:** Restates the color-role architecture from `KBDL-FND-001`/`002` at theme-level specificity; 72 distinct semantic roles across 6 categories.
+
+### Semantic parity (KBDL-THM-002)
+
+- **Blueprint section:** Light/dark theme parity
+- **Roadmap prompt:** KBDL-004
+- **Requirement ID:** KBDL-THM-002
+- **Specification location:** [themes/semantic-roles.md §2](themes/semantic-roles.md#2-semantic-parity)
+- **Approval status:** Approved
+- **Validation status:** Verified
+- **Validation method:** Direct count of every role in the inventory against the light and dark mapping tables.
+- **Validation evidence:** Parity matrix in [themes/semantic-roles.md § Parity Matrix](themes/semantic-roles.md#parity-matrix) — all 72 roles confirmed mapped in both modes; recorded in the KBDL-004 commit.
+- **Known limitation:** None identified.
+- **Related decision:** Not applicable
+- **Notes:** No role was found "not applicable" in either mode.
+
+### Theme selection precedence and persistence (KBDL-THM-003, KBDL-THM-004)
+
+- **Blueprint section:** Theme-selection precedence and persistence baseline
+- **Roadmap prompt:** KBDL-004
+- **Requirement ID:** KBDL-THM-003, KBDL-THM-004
+- **Specification location:** [themes/README.md §5, §7](themes/README.md#5-theme-selection-precedence)
+- **Approval status:** Approved
+- **Validation status:** Not verified
+- **Validation method:** Manual review of precedence logic and persistence design once implemented.
+- **Validation evidence:** Not verified — no implementation exists yet.
+- **Known limitation:** Cannot be validated until an implementation exists.
+- **Related decision:** Not applicable
+- **Notes:** Directly extends the approved system-preference/user-preference decisions from the KBDL blueprint.
+
+### Project-controlled adaptation and profile sharing (KBDL-THM-005, KBDL-THM-006)
+
+- **Blueprint section:** Project-controlled theme adaptation; shared theme architecture across profiles
+- **Roadmap prompt:** KBDL-004
+- **Requirement ID:** KBDL-THM-005, KBDL-THM-006
+- **Specification location:** [themes/adaptation.md §1](themes/adaptation.md#1-project-controlled-adaptation), [themes/README.md §8](themes/README.md#8-project-profile-theme-interpretation)
+- **Approval status:** Approved
+- **Validation status:** Not verified
+- **Validation method:** Manual review of any project theme against the documented boundaries; manual cross-profile review once the project-profiles module is approved.
+- **Validation evidence:** Not verified — no project theme or `PRO` module exists yet.
+- **Known limitation:** Cannot be fully validated until `PRO` requirements exist.
+- **Related decision:** KBDL-DEC-006
+- **Notes:** Restates `KBDL-FND-008` at theme-level specificity.
+
+### Recommended light and dark theme mappings (KBDL-THM-007, KBDL-THM-008)
+
+- **Blueprint section:** Light and dark theme semantic mappings
+- **Roadmap prompt:** KBDL-004
+- **Requirement ID:** KBDL-THM-007, KBDL-THM-008
+- **Specification location:** [themes/light-theme.md](themes/light-theme.md), [themes/dark-theme.md](themes/dark-theme.md)
+- **Approval status:** Recommended (not `Approved` — requires project-owner approval, per [conventions.md §1.1](conventions.md#11-lifecycle--approval-status))
+- **Validation status:** Verified for every contrast pair listed in [themes/validation.md § Consolidated Contrast Evidence](themes/validation.md#3-consolidated-contrast-evidence); Not verified for suitability beyond the tested pairs, and for the four translucent-role opacity values (Not verified pending an approved exact opacity)
+- **Validation method:** WCAG relative-luminance contrast calculation via a local dependency-free script (completed); project-owner review (not yet performed).
+- **Validation evidence:** [themes/validation.md §3](themes/validation.md#3-consolidated-contrast-evidence) — 51 pairs tested, all passing their applicable threshold except 4 explicitly decorative-exempt borders/gridlines and 2 explicitly restricted (large-text-only) Informational cases.
+- **Known limitation:** These are recommendations awaiting project-owner approval; must not be treated as `Approved` or implemented until that approval is recorded. The dark theme was independently designed, not inverted from light — see [dark-theme.md § Design Strategy](themes/dark-theme.md#design-strategy--why-some-roles-use-a-different-step-than-light-mode) for the `neutral-60`/`neutral-50` asymmetry this produced.
+- **Related decision:** Not applicable — pending a future decision-register entry once the project owner reviews the theme decision packet.
+- **Notes:** Uses only already-`Approved` KBDL-003 foundation colors (`neutral-*`, `accent-30`/`accent-50`); no new primitive hues were introduced for the light/dark base mapping.
+
+### Status-family theme values, gradient strategy, and color-value expression (KBDL-THM-009, KBDL-THM-010, KBDL-THM-011)
+
+- **Blueprint section:** Status-family theme colors; gradient strategy; color-value expression convention
+- **Roadmap prompt:** KBDL-004
+- **Requirement ID:** KBDL-THM-009, KBDL-THM-010, KBDL-THM-011
+- **Specification location:** [themes/adaptation.md §5, §4, §6](themes/adaptation.md#5-status-family-theme-behavior)
+- **Approval status:** Recommended (extends the still-pending [color.md §3.3–§3.5](foundations/color.md#33-supporting-status-families) recommendations)
+- **Validation status:** Verified for the status-family contrast pairs (see [themes/validation.md §3](themes/validation.md#3-consolidated-contrast-evidence)); Not verified for the gradient worked example and the color-value-expression convention (a documentation convention, not a testable claim)
+- **Validation method:** WCAG contrast calculation (completed for status pairs); manual review (gradient, color-expression — not yet performed by the project owner).
+- **Validation evidence:** [themes/validation.md §3](themes/validation.md#3-consolidated-contrast-evidence) and [themes/adaptation.md §5.2](themes/adaptation.md#52-two-documented-restrictions) for the two documented Informational restrictions.
+- **Known limitation:** New dark-mode status hues (`#7CC4FF`, `#6FD19A`, `#E0A840`, `#FF8A80`) were introduced here since the light-mode-only values from KBDL-003 fail contrast against a dark canvas; these dark hues are additionally new and unapproved, on top of the already-pending light-mode values.
+- **Related decision:** Not applicable
+- **Notes:** Informational is restricted to large-text/icon use in two documented light-mode contexts; all other status pairs pass without restriction.
+
+### Theme-transition guidance (KBDL-THM-012)
+
+- **Blueprint section:** Theme-transition guidance (conceptual, no timing/easing)
+- **Roadmap prompt:** KBDL-004
+- **Requirement ID:** KBDL-THM-012
+- **Specification location:** [themes/adaptation.md §7](themes/adaptation.md#7-theme-transition-guidance)
+- **Approval status:** Recommended
+- **Validation status:** Not verified
+- **Validation method:** Manual review confirming no timing/easing values were introduced (performed).
+- **Validation evidence:** Manual scope-compliance review recorded in the KBDL-004 commit — confirmed zero millisecond/easing values anywhere in `docs/kbdl/themes/`.
+- **Known limitation:** Exact timing/easing depends entirely on KBDL-005, not yet reached.
+- **Related decision:** Not applicable
+- **Notes:** Explicitly defers all durations and easing curves to Motion (KBDL-005).
+
 ## Notes on Scope
 
 No requirement in this matrix outside `GOV`, `PRN`, and `FND` has been implemented,
@@ -449,4 +552,9 @@ and the specific default values in the
 owner's review recorded in
 [KBDL-DEC-012](decision-register.md#kbdl-dec-012--foundation-decision-packet-approved).
 Approval does not itself constitute validation — see each row's
-Validation status for what has actually been checked.
+Validation status for what has actually been checked. `THM` requirements
+split the same way: `KBDL-THM-001`–`006` are `Approved` architecture;
+`KBDL-THM-007`–`012` (the exact light/dark mappings, status-family
+colors, gradient strategy, and color-value expression convention) remain
+`Recommended` pending a future project-owner decision, per
+[themes/README.md § Theme Decision Packet](themes/README.md#10-theme-decision-packet).

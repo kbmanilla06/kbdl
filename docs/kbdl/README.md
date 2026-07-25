@@ -14,17 +14,20 @@ and Flow (consumer-facing web applications). See the
 ## Specification Status
 
 **KBDL-001: Specification Architecture and Governance Foundation**,
-**KBDL-002: Identity, Principles, and Visual Consistency Rules**, and
-**KBDL-003: Core Visual Foundations** deliverables are present in the
-repository, the first three steps of a ten-step approved roadmap. Their
+**KBDL-002: Identity, Principles, and Visual Consistency Rules**,
+**KBDL-003: Core Visual Foundations**, and
+**KBDL-004: Adaptive Theme System** deliverables are present in the
+repository, the first four steps of a ten-step approved roadmap. Their
 lifecycle status is `Approved` for architecture, rules, and (as of the
 project owner's foundation-defaults approval, see
 [KBDL-DEC-012](decision-register.md#kbdl-dec-012--foundation-decision-packet-approved))
 the KBDL-003 default values (color, typography, spacing, shape, elevation,
-iconography) as well; requirement-level validation statuses are recorded
+iconography); requirement-level validation statuses are recorded
 independently in the [traceability matrix](traceability-matrix.md) and are
-not all `Verified` — see
-[foundations/README.md § Foundation Status Model](foundations/README.md#3-foundation-status-model).
+not all `Verified`. KBDL-004's exact light/dark theme mappings, status-
+family colors, gradient strategy, and color-value expression convention
+remain `Recommended`, pending project-owner approval — see
+[themes/README.md § Theme Decision Packet](themes/README.md#10-theme-decision-packet).
 Progression to later roadmap steps depends on the planning agent's
 validation review, not on this index. KBDL-001 established the
 documentation architecture, terminology, requirement and status
@@ -34,9 +37,13 @@ definitions, core principles, visual-consistency relationships, the
 locked/controlled/open identity model, and the design-decision hierarchy
 (see [principles.md](principles.md)). KBDL-003 established KBDL's color,
 typography, spacing/layout, shape/depth, and iconography/media
-architecture (see [foundations/README.md](foundations/README.md)). None of
-these steps define adaptive-theme mappings, motion values, components, or
-implementation code — those are later roadmap steps and must not be
+architecture (see [foundations/README.md](foundations/README.md)). KBDL-004
+established KBDL's adaptive theme architecture, semantic-role inventory,
+recommended light and dark theme mappings, selection precedence,
+persistence guidance, project-controlled adaptation, and local contrast
+contexts (see [themes/README.md](themes/README.md)). None of these steps
+define motion values, detailed responsive/accessibility rules, components,
+or implementation code — those are later roadmap steps and must not be
 started early (see [governance.md](governance.md)).
 
 ## Intended Audience
@@ -64,17 +71,17 @@ specification itself.
 
 ## Document Hierarchy
 
-KBDL-001, KBDL-002, and KBDL-003 deliver the documents below with real
-content. Rows still marked `Deferred` show the **planned location only**
-for future modules; those files do not exist yet and must not be created
-until their roadmap step is reached.
+KBDL-001, KBDL-002, KBDL-003, and KBDL-004 deliver the documents below
+with real content. Rows still marked `Deferred` show the **planned
+location only** for future modules; those files do not exist yet and
+must not be created until their roadmap step is reached.
 
 | # | Module | Status | Location |
 | --- | --- | --- | --- |
 | 1 | Introduction | Deferred | `docs/kbdl/introduction.md` (planned) |
 | 2 | Principles | Approved | [principles.md](principles.md) |
 | 3 | Visual foundations | Approved (architecture and default values)* | [foundations/README.md](foundations/README.md) |
-| 4 | Adaptive themes | Deferred | `docs/kbdl/themes.md` (planned) |
+| 4 | Adaptive themes | Approved (architecture); Recommended (exact mappings)** | [themes/README.md](themes/README.md) |
 | 5 | Motion | Deferred | `docs/kbdl/motion.md` (planned) |
 | 6 | Responsive behavior | Deferred | `docs/kbdl/responsive.md` (planned) |
 | 7 | Accessibility | Deferred | `docs/kbdl/accessibility.md` (planned) |
@@ -92,6 +99,14 @@ for how the module's architecture and default values are distinguished,
 and [KBDL-DEC-012](decision-register.md#kbdl-dec-012--foundation-decision-packet-approved)
 for the project owner's approval of the default values.
 
+\*\* See
+[themes/README.md](themes/README.md) for the full theme architecture,
+semantic-role inventory, and recommended light/dark mappings; the exact
+mappings, status-family colors, gradient strategy, and color-value
+expression convention remain `Recommended`, pending project-owner
+approval via the
+[theme decision packet](themes/README.md#10-theme-decision-packet).
+
 Supporting documents (not numbered modules, but required by KBDL-001 and
 referenced by KBDL-002 and KBDL-003):
 
@@ -103,11 +118,11 @@ referenced by KBDL-002 and KBDL-003):
 - [traceability-matrix.md](traceability-matrix.md) — requirement traceability
 - [conformance-checklist.md](conformance-checklist.md) — conformance review
 
-This hierarchy is designed so each remaining future module (rows 1, 4–12,
+This hierarchy is designed so each remaining future module (rows 1, 5–12,
 14) can be added as its own file without reorganizing this index or
-renumbering existing requirement IDs, exactly as row 2 (Principles) and
-row 3 (Visual foundations) were added in KBDL-002 and KBDL-003 without
-disturbing any other row.
+renumbering existing requirement IDs, exactly as row 2 (Principles),
+row 3 (Visual foundations), and row 4 (Adaptive themes) were added in
+KBDL-002, KBDL-003, and KBDL-004 without disturbing any other row.
 
 ## Status Labels
 
@@ -144,8 +159,12 @@ create/retire/supersede lifecycle, is documented in
   design-decision hierarchy.
 - **Visual foundations:** [foundations/README.md](foundations/README.md) —
   color, typography, spacing/layout, shape/depth, and iconography/media
-  architecture, plus the foundation decision packet awaiting project-owner
-  approval.
+  architecture, plus the foundation decision packet approved via
+  [KBDL-DEC-012](decision-register.md#kbdl-dec-012--foundation-decision-packet-approved).
+- **Adaptive themes:** [themes/README.md](themes/README.md) — theme
+  architecture, semantic-role inventory, recommended light/dark theme
+  mappings, selection precedence, persistence, and project-controlled
+  adaptation.
 - **Governance:** [governance.md](governance.md) — ownership, change
   control, approval, exceptions, and review expectations.
 - **Glossary:** [glossary.md](glossary.md) — definitions for all KBDL terms

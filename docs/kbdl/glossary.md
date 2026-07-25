@@ -17,7 +17,8 @@ decisions (visual values, motion timings, component designs) already exist.
 
 - **Adaptive theme** — A KBDL theme that changes its presentation in response
   to the user's light or dark preference while preserving the same underlying
-  design language. Tracked under module code `THM`.
+  design language. Tracked under module code `THM`. See
+  [themes/README.md](themes/README.md).
 
 - **Component** — A reusable interface element defined by KBDL (for example an
   action, form, navigation, surface, overlay, feedback, or system-state
@@ -125,8 +126,12 @@ decisions (visual values, motion timings, component designs) already exist.
 - **Showcase Profile** — The KBDL project profile intended for portfolios and
   creative showcases.
 
-- **Theme** — A defined visual mode of KBDL (see also Adaptive theme).
-  Tracked under module code `THM`.
+- **Theme** — A complete mapping of every KBDL semantic color role to a
+  specific foundation color, for one mode (light or dark). See also
+  Adaptive theme. Tracked under module code `THM`. Full theme
+  terminology (mode, semantic role, local contrast context, theme
+  parity, and related terms) is defined in
+  [themes/README.md §3](themes/README.md#3-theme-terminology).
 
 - **Validation criterion** — A documented, checkable condition used to
   determine whether a requirement is `Verified`. Tracked under module code
