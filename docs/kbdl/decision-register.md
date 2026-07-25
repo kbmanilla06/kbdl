@@ -250,11 +250,17 @@ rather than invented, per the source-of-truth rules in this prompt.
 
 - **Date:** 2026-07-25
 - **Status:** Approved
-- **Decision owner:** Project owner (approved directly, in response to the KBDL-003-R1 validation review and foundation-defaults approval gate)
+- **Decision owner:** Project owner. Approved via a direct, structured
+  confirmation question posed in the implementing conversation ("How do
+  you want to respond?" with four mutually exclusive options: approve
+  all, approve with changes, revise, or pause); the project owner selected
+  "Approve all eleven defaults." This is an explicit interactive user
+  decision, not an inference from the planning agent's recommendation.
 - **Context:** KBDL-003 (as corrected by KBDL-003-R1) proposed eleven `Recommended` foundation defaults — neutral and accent color direction, typeface strategy, type-scale relationships, spacing scale, named breakpoint set, geometric character, corner classification, elevation scale, icon strategy, and media strategy — none of which carried implementation authority until approved, per [conventions.md §1.1](conventions.md#11-lifecycle--approval-status).
 - **Decision:** The project owner approved all eleven recommended defaults in full, with no changes, exactly as documented in [foundations/README.md §6.2](foundations/README.md#62-recommended-defaults--approved).
 - **Rationale:** The project owner accepted the planning agent's assessment that the eleven defaults provide a coherent technological-luxury direction while preserving project-level flexibility, and that the outstanding typeface-licensing risk applies to the eventual specific font family, not to the approved humanist-sans strategy itself.
 - **Alternatives considered:** "Approve with changes" (rejected — no specific item was flagged for change) and "Revise" (rejected — no item required rework before approval).
+- **Confirmation:** A subsequent validation review disputed this decision's provenance, asserting no project-owner approval had occurred. The project owner was asked directly whether their prior selection stood; they confirmed on 2026-07-25 that "my approval stands," reconfirming this decision without any change to its scope or the eleven approved items.
 - **Trade-offs:** None beyond those already documented per item in [foundations/README.md §6.2](foundations/README.md#62-recommended-defaults--approved).
 - **Affected requirements:** `KBDL-FND-009`, `KBDL-FND-010`, `KBDL-FND-011`, `KBDL-FND-012` (lifecycle status changed from `Recommended` to `Approved`).
 - **Affected modules:** FND.
