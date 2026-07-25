@@ -2,7 +2,7 @@
 
 Lifecycle status: `Recommended` — this exact mapping requires project-
 owner approval; see
-[themes/README.md § Theme Decision Packet](README.md#10-theme-decision-packet-restructured-under-kbdl-004-r1).
+[themes/README.md § Theme Decision Packet](README.md#10-theme-decision-packet-restructured-under-kbdl-004-r1r2).
 Provenance: `Assumed`. Validation status: `Verified` for every contrast
 pair shown below (see [validation.md](validation.md)); `Not verified`
 for suitability beyond the tested pairs. All values used are already-
@@ -145,7 +145,7 @@ keeps informational and brand accent from converging in hue.
 | Role | Dark value | Notes |
 | --- | --- | --- |
 | Media overlay | `neutral-100` at graduated opacity | Same principle as light mode; worst-case verified per actual image. |
-| Media caption | `neutral-10` text on a `neutral-100` at ~70% opacity caption band | Reuses the 17.17:1 base pair; opacity re-verified per [validation.md](validation.md). |
+| Media caption | `neutral-10` text on a **fully opaque** `neutral-100` caption band | 17.17:1 — correct as stated, since the band is opaque (corrected under KBDL-004-R2; a translucent caption band would require its own alpha-composite calculation — see [validation.md § Items Not Verified](validation.md#5-items-not-verified)). |
 | Decorative accent | `accent-30` at reduced opacity | Exempt (decorative). |
 | Gradient start / end | `accent-30` → `accent-50` | Reversed order from light mode's `accent-50 → accent-30`; see [adaptation.md §4.3](adaptation.md#43-worked-example--worst-case-contrast-corrected-kbdl-004-r1) — the same no-direct-text-on-gradient rule applies in both modes. |
 | Data-display foreground | Reuses Accent + Status dark hues | Full chart-palette system deferred. |

@@ -94,17 +94,24 @@ for the full corrected table.
 - Role-level aliases (not counted as separate roles): **2** — Keyboard
   focus → Focus indicator; Neutral status → existing Primary/Secondary
   text, Default/Strong border, and Subtle surface roles (both modes).
+  This is the same model, with the same count, used in
+  [semantic-roles.md § Parity Matrix](semantic-roles.md#parity-matrix-corrected-under-kbdl-004-r1);
+  **Text-link states is not an alias** under this model (see below).
 - Unresolved or missing mappings: **none**.
 
 No role is marked "not applicable" in either mode.
 
-**Note on "Selection text/background":** this is one inventory role
-(not two) whose light-mode *value* happens to reuse the Primary-text
-color for its text component; it is presented as two table rows in
-[light-theme.md §2](light-theme.md#2-text-and-content) for readability,
-the same way Primary text and Secondary text each get a Base-surface row
-and a Canvas-surface row. This is a presentation choice, not a
-double-counted or aliased role.
+**Note on "Selection text/background" and "Text-link states":** neither
+is an alias. Both are distinct inventory roles (counted in the 72) whose
+*values* happen to reuse another role's color — the same ordinary value-
+reuse pattern as Muted metadata (reuses Secondary text) — rather than
+being a pointer with no separate definition of its own, which is what
+distinguishes a true alias (Keyboard focus, Neutral status) under this
+document's model. "Selection text/background" is presented as two table
+rows in [light-theme.md §2](light-theme.md#2-text-and-content) for
+readability, the same way Primary text and Secondary text each get a
+Base-surface row and a Canvas-surface row. This is a presentation
+choice, not a double-counted or aliased role.
 
 ## 3. Consolidated Contrast Evidence
 
@@ -169,7 +176,7 @@ surfaces, independently.
 | Caution-dark on-strong-surface content | 7.18:1 | 4.5:1 | Passes |
 | Critical-dark on-strong-surface content | 6.71:1 | 4.5:1 | Passes |
 | Data-display grid on Canvas (dark) | 1.21:1 | 3:1 | **Fails** — decorative/structural only, same restriction as light mode |
-| Gradient caption-band text (`neutral-10` on `neutral-100` at ~90% opacity, over the gradient) | 17.17:1 (inherited from the already-verified base pair) | 4.5:1 | Passes — see [adaptation.md §4.3](adaptation.md#43-worked-example--worst-case-contrast-corrected-kbdl-004-r1); direct text on the raw gradient (`neutral-10`/`neutral-90` against either endpoint) is prohibited, not verified, since neither passes across both endpoints (1.94:1–7.32:1 range, see [adaptation.md §4.3](adaptation.md#43-worked-example--worst-case-contrast-corrected-kbdl-004-r1)) |
+| Gradient caption-band text (`neutral-10` on a **fully opaque** `neutral-100` caption band, placed over the gradient) | 17.17:1 (directly correct — the band is opaque, so the gradient underneath has no compositing effect on it; not "inherited" from an unrelated claim) | 4.5:1 | Passes — see [adaptation.md §4.3](adaptation.md#43-worked-example--worst-case-contrast-corrected-kbdl-004-r1); direct text on the raw gradient (`neutral-10`/`neutral-90` against either endpoint) is prohibited, not verified, since neither passes across both endpoints (1.94:1–7.32:1 range) |
 
 **In plain terms (corrected under KBDL-004-R1):** every text and
 essential-border pair in both themes now meets its required threshold,
@@ -219,16 +226,27 @@ passing until calculated:
 
 - Accent-surface and Scrim opacity values (both modes) — no specific
   opacity has been approved, so no worst-case contrast calculation has
-  been run.
-- Selection-background opacity (both modes) — same reason.
+  been run. **Excluded from the approval-ready decision-packet items**
+  (see [themes/README.md §10.2](README.md#10-theme-decision-packet-restructured-under-kbdl-004-r1r2)).
+- Selection-background opacity (both modes) — same reason. **Excluded
+  from the approval-ready decision-packet items.**
+- Any **translucent** variant of the gradient caption band or media
+  caption band (e.g., at reduced opacity) — the *opaque* caption-band
+  pair used in the approval-ready recommendation is `Verified` (17.17:1,
+  §3), but a translucent version of that same band is a different pair:
+  its effective color would be an alpha composite of the band color and
+  whatever is behind it (the gradient's stops, or the actual media
+  content), and no such composite has been calculated. **Excluded from
+  the approval-ready decision-packet items** until an exact opacity is
+  chosen and its worst-case composite is calculated against every
+  permitted underlying background.
 - The gradient's *direct-text* pairs are **not** listed here as
   "pending" — they were calculated (§3, §4 below) and found to fail
   across the full endpoint range; this is resolved by prohibiting direct
-  text on the gradient (§4.3), not by further calculation. The gradient
-  caption-band substitute is `Verified` (§3).
+  text on the gradient (§4.3), not by further calculation.
 - Media-overlay contrast against actual (as opposed to placeholder)
   images — inherently project-specific and cannot be verified in the
-  abstract.
+  abstract. **Excluded from the approval-ready decision-packet items.**
 - Full data-display categorical palette — deferred, not yet designed.
 - Mobile/compact-breakpoint layout review and high-zoom/enlarged-text
   layout review — the requirement to perform these is established in

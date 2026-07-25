@@ -12,7 +12,7 @@ reduced-motion rule), the **exact semantic-role mappings** (light and
 dark theme values), **status-family theme colors**, **gradient
 strategy**, and **color-value expression convention** — is `Recommended`,
 pending project-owner approval — see
-[§10 Theme Decision Packet](#10-theme-decision-packet-restructured-under-kbdl-004-r1). Aligning with a
+[§10 Theme Decision Packet](#10-theme-decision-packet-restructured-under-kbdl-004-r1r2). Aligning with a
 general KBDL principle does not by itself make a new policy `Approved`.
 
 Return to the [specification index](../README.md). Status labels are
@@ -76,7 +76,7 @@ and the color-value expression convention
 ([color.md §3.5](../foundations/color.md#35-consistent-value-expression-method)).
 No decision after `KBDL-DEC-012` changes this. This module reviews and
 extends these three pending items but does not itself approve them —
-see [§10](#10-theme-decision-packet-restructured-under-kbdl-004-r1).
+see [§10](#10-theme-decision-packet-restructured-under-kbdl-004-r1r2).
 
 ## 3. Theme Terminology
 
@@ -567,7 +567,7 @@ context set). Writing or contrast-testing a requirement never makes it
   - Related future modules: Components.
   - Validation method: Manual review of context usage against the defined set and rules once implemented; project-owner review (not yet performed).
 
-## 10. Theme Decision Packet (Restructured under KBDL-004-R1)
+## 10. Theme Decision Packet (Restructured under KBDL-004-R1/R2)
 
 This packet separates already-approved architecture (§10.1, provided
 only as context) from specific decisions that are actually ready for
@@ -615,10 +615,10 @@ mislabeled failure):
 
 | # | Decision | Recommendation | Rationale | Alternatives | Trade-offs / limitations (accurately disclosed) | Accessibility impact | Performance impact | Privacy impact | Profiles affected | Dependencies |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | Light-theme semantic mapping | Adopt [light-theme.md](light-theme.md) in full | Uses only approved foundation values plus the KBDL-004-R1-revised Informational hue; every required normal-text/essential-border pair passes its threshold | A higher-contrast, less nuanced 3-value palette (rejected — less expressive, no material benefit) | Four accepted decorative exemptions (Default border 1.46:1, data-display grid 1.20:1, and the equivalent dark-mode pair) never carry required information alone; `neutral-50` remains restricted to large text/non-text/decorative use (unchanged, not a new limitation) | All required pairs verified; see [validation.md §3](validation.md#3-consolidated-contrast-evidence) | None | Not applicable | Showcase, Precision, Flow | `KBDL-FND-001`, `KBDL-FND-009` |
-| 2 | Dark-theme semantic mapping | Adopt [dark-theme.md](dark-theme.md) in full | Independently designed (not inverted); reuses approved values with mode-appropriate step selection | A mechanically inverted light theme (rejected — fails contrast, e.g. `neutral-60` "secondary text" would compute to 3.32:1 on `neutral-100`, below threshold) | One accepted decorative exemption (Default/Subtle border, 2.08:1) | All required pairs verified; see [validation.md §3](validation.md#3-consolidated-contrast-evidence) | None | Not applicable | Showcase, Precision, Flow | `KBDL-FND-001`, `KBDL-FND-009` |
+| 1 | Light-theme semantic mapping — **opaque mappings only** | Adopt the **exact opaque semantic mappings** in [light-theme.md](light-theme.md) — every role except Accent-surface, Scrim, and Selection-background opacity, which are explicitly **excluded** from this item (see §10.3) | Uses only approved foundation values plus the KBDL-004-R2-corrected Informational role assignment; every required normal-text/essential-border pair passes its threshold with a fully-calculated, non-composited value | A higher-contrast, less nuanced 3-value palette (rejected — less expressive, no material benefit) | Four accepted decorative exemptions (Default border 1.46:1, data-display grid 1.20:1, and the equivalent dark-mode pair) never carry required information alone; `neutral-50` remains restricted to large text/non-text/decorative use (unchanged, not a new limitation); the Accent-surface/Scrim/Selection-background *opacity values* are not part of this item at all | All opaque required pairs verified with exact foreground/background values and no alpha compositing; see [validation.md §3](validation.md#3-consolidated-contrast-evidence) | None | Not applicable | Showcase, Precision, Flow | `KBDL-FND-001`, `KBDL-FND-009` |
+| 2 | Dark-theme semantic mapping — **opaque mappings only** | Adopt the **exact opaque semantic mappings** in [dark-theme.md](dark-theme.md) — every role except Accent-surface, Scrim, and Selection-background opacity, which are explicitly **excluded** from this item (see §10.3) | Independently designed (not inverted); reuses approved values with mode-appropriate step selection | A mechanically inverted light theme (rejected — fails contrast, e.g. `neutral-60` "secondary text" would compute to 3.32:1 on `neutral-100`, below threshold) | One accepted decorative exemption (Default/Subtle border, 2.08:1); the Accent-surface/Scrim/Selection-background *opacity values* are not part of this item at all | All opaque required pairs verified with exact foreground/background values and no alpha compositing; see [validation.md §3](validation.md#3-consolidated-contrast-evidence) | None | Not applicable | Showcase, Precision, Flow | `KBDL-FND-001`, `KBDL-FND-009` |
 | 3 | Status-family theme values | Adopt light values (Informational revised to `#164499` under KBDL-004-R1; Positive/Caution/Critical unchanged) plus new dark-mode variants in [adaptation.md §5](adaptation.md#5-status-family-theme-behavior) | Every sub-role (text/icon/border/subtle-surface/strong-surface/on-strong-surface-content) now passes 4.5:1 (text) or 3:1 (non-text) in both modes with no restriction | Reusing light-mode hues unchanged in dark mode (rejected — fails contrast against a dark canvas); keeping the original `#2F6FED` Informational value with a large-text-only restriction (rejected under KBDL-004-R1 — a status role must support normal-sized text, not only large text) | None remaining — the two prior Informational failures (3.78:1, 4.21:1) are fully resolved, not merely restricted | All pairs verified, zero restrictions remaining; see [validation.md §3](validation.md#3-consolidated-contrast-evidence) | None | Not applicable | Showcase, Precision, Flow | `KBDL-FND-002` |
-| 4 | Gradient strategy | Adopt [adaptation.md §4](adaptation.md#4-gradient-strategy): the two-anchor accent gradient, with a mandatory rule that text never sits directly on the raw gradient | Both gradient endpoints were calculated against both candidate text colors; no single text color passes across the full range (1.94:1–7.32:1), so text is required to sit on a verified, bounded solid content surface instead | Unrestricted gradient-with-direct-text use (rejected — fails contrast, see [validation.md §3](validation.md#3-consolidated-contrast-evidence)); no gradient support at all (rejected — removes a controlled variable without necessity) | The mandatory content-surface requirement adds a small amount of composition overhead in exchange for guaranteed legibility | The verified caption-band substitute pair (17.17:1) is documented; direct gradient-to-text use is prohibited, not left unverified | Simplified/removed fallback required on constrained devices | Not applicable | Showcase (primary), Precision/Flow (rare) | Extends [color.md §3.4](../foundations/color.md#34-restrained-gradient-strategy) |
+| 4 | Gradient strategy — **opaque caption band only** | Adopt [adaptation.md §4](adaptation.md#4-gradient-strategy): the two-anchor accent gradient, with a mandatory rule that text never sits directly on the raw gradient, and must instead sit on a **fully opaque** `neutral-100` caption band. A **translucent** caption band is explicitly **excluded** from this item (see §10.3) | Both gradient endpoints were calculated against both candidate text colors; no single text color passes across the full range (1.94:1–7.32:1), so text is required to sit on a verified, opaque, bounded solid content surface instead | Unrestricted gradient-with-direct-text use (rejected — fails contrast, see [validation.md §3](validation.md#3-consolidated-contrast-evidence)); a translucent caption band (rejected for this item — its effective color would require an alpha-composite calculation against the gradient that has not been performed) | The mandatory opaque-content-surface requirement adds a small amount of composition overhead in exchange for guaranteed legibility | The opaque caption-band pair (`neutral-10` on `neutral-100`, 17.17:1) is directly correct, not composited or inherited; direct gradient-to-text use is prohibited, not left unverified; translucent variants are excluded from this item entirely | Simplified/removed fallback required on constrained devices | Not applicable | Showcase (primary), Precision/Flow (rare) | Extends [color.md §3.4](../foundations/color.md#34-restrained-gradient-strategy) |
 | 5 | Color-value expression convention | Hex primary + optional perceptual reference, per [adaptation.md §6](adaptation.md#6-color-value-expression) | Portable, framework-neutral, human-reviewable | A single required CSS function (rejected — couples the spec to one implementation technology) | None significant | Not applicable | Not applicable | Not applicable | Showcase, Precision, Flow | Extends [color.md §3.5](../foundations/color.md#35-consistent-value-expression-method) |
 | 6 | Full six-level selection-precedence ordering | Adopt the complete flow in [§5](#5-theme-selection-precedence) (`KBDL-THM-013`) | Only two of the six levels are directly pre-approved (see §10.1); the remaining ordering — where accessibility constraints, project policy, and the light fallback sit — is new KBDL-004 policy requiring its own review | A shorter, three-level precedence (rejected — cannot express project-specific policy or a documented fallback) | None identified | Places accessibility constraints at the top of the order, never below | Not applicable | Not applicable | Showcase, Precision, Flow | None |
 | 7 | Persistence baseline | Adopt [§7](#7-persistence-guidance) (`KBDL-THM-004`) | No prior KBDL decision addresses theme persistence specifically; this baseline is new policy, not a restatement | Mandating a specific storage mechanism (rejected — implementation-specific, out of scope) | None identified | Preference must never gate access; failure must not block use | Negligible | No sensitive data stored; not authentication | Showcase, Precision, Flow | None |
@@ -635,6 +635,10 @@ project-owner approval decision:
   background opacity (both modes; see
   [validation.md §5](validation.md#5-items-not-verified)). No exact
   opacity has been calculated against a worst-case background.
+- **Any translucent caption-band variant** (gradient or media) — the
+  opaque caption band used in §10.2 items 1, 2, and 4 is `Verified`; a
+  translucent version of that same band is a different, uncalculated
+  pair (see [validation.md §5](validation.md#5-items-not-verified)).
 - **Project-specific media testing** — Media-overlay contrast against
   actual (non-placeholder) images is inherently project-specific.
 - **Account-level theme synchronization mechanism.**
@@ -647,10 +651,15 @@ project-owner approval decision:
   design-language specification.
 
 **Exact scope of a future approval:** an `APPROVE` response to §10.2
-would authorize exactly items 1–10 above as `Approved`. It would **not**
-approve any §10.3 item, and it would **not** approve any KBDL-005 or
-later module's content. This remediation itself does not request or
-record such an approval.
+would authorize exactly items 1–10 above as `Approved` — specifically,
+for items 1, 2, and 4, only the **exact opaque semantic mappings and
+role assignments** they describe. It would **not** approve any §10.3
+item — in particular, it would **not** approve Accent-surface, Scrim, or
+Selection-background opacity, or any translucent caption-band variant,
+regardless of whether those values are mentioned elsewhere in
+`light-theme.md`/`dark-theme.md`/`adaptation.md` for context. It would
+also **not** approve any KBDL-005 or later module's content. This
+remediation itself does not request or record such an approval.
 
 ## 11. Traceability
 

@@ -11,7 +11,7 @@ contrast-context architecture (`KBDL-THM-015`), §3 (transparency
 opacity values), §4 (gradient strategy), §5 (status-family colors), §6
 (color-value expression convention), and §7's KBDL-004-specific
 transition guidance beyond reduced-motion (`KBDL-THM-012`). See
-[themes/README.md § Theme Decision Packet](README.md#10-theme-decision-packet-restructured-under-kbdl-004-r1).
+[themes/README.md § Theme Decision Packet](README.md#10-theme-decision-packet-restructured-under-kbdl-004-r1r2).
 
 Return to the [themes index](README.md) · [specification index](../README.md).
 
@@ -291,21 +291,37 @@ darker end. Because of this, KBDL-004-R1 adopts the **preferred
 resolution**: text is never placed directly on the raw gradient.
 
 **Rule:** any text appearing over a gradient surface **must** sit on a
-bounded, solid content surface (e.g., a caption band or card) placed
-over the gradient, verified independently as an ordinary surface/text
-pair — never on the gradient pixels themselves. This is the same
-mechanism already defined for [Media overlay](semantic-roles.md#16-media-and-decorative-context)
-text. A verified example: `neutral-10` text on a `neutral-100` caption
-band at ~90% opacity, placed over the gradient — this pair is
-independent of the gradient's own colors and inherits the already-
-verified `neutral-10`-on-`neutral-100` evidence (17.17:1, see
-[validation.md §3](validation.md#3-consolidated-contrast-evidence)),
-not a new calculation against the gradient.
+bounded, **fully opaque** solid content surface (e.g., a caption band or
+card) placed over the gradient, verified independently as an ordinary
+surface/text pair — never on the gradient pixels themselves, and never
+on a translucent surface placed over the gradient (a translucent surface
+would composite with the gradient's own colors underneath it, which is
+not the same calculation as an opaque pair — see
+[validation.md § Items Not Verified](validation.md#5-items-not-verified)
+for why translucent variants of this surface are excluded from the
+approval-ready recommendation). This is the same mechanism already
+defined for [Media overlay](semantic-roles.md#16-media-and-decorative-context)
+text (see the corrected, fully opaque
+[Media caption](light-theme.md#6-media-and-decorative-context) mapping).
 
-This satisfies R1-AC-005/R1-AC-006: every exact pair the recommended
-gradient strategy actually uses (the caption-band pair, 17.17:1) is
-calculated and verified; direct gradient-to-text pairs are prohibited
-rather than left unverified.
+**The approval-ready example (KBDL-004-R2, corrected):** `neutral-10`
+text on a **fully opaque** `neutral-100` caption band, placed over the
+gradient. Because the caption band is opaque, the gradient underneath it
+has no effect on the composited color — the pair is genuinely
+`neutral-10` on `neutral-100`, and the already-verified 17.17:1 ratio
+(see [validation.md §3](validation.md#3-consolidated-contrast-evidence))
+applies exactly, not by inheritance or assumption. A translucent caption
+band (e.g., at reduced opacity) is a *different* pair requiring its own
+alpha-composite calculation against the specific gradient stop(s) behind
+it; no such calculation has been performed, so translucent caption
+variants remain `Not verified` and are excluded from this approval-ready
+recommendation (see
+[validation.md § Items Not Verified](validation.md#5-items-not-verified)).
+
+This satisfies R2-AC-001/R2-AC-002/R2-AC-003: the retained approval-
+ready example is genuinely opaque, so its 17.17:1 ratio is directly
+correct, not inherited from an unrelated translucent claim; direct
+gradient-to-text pairs remain prohibited (R2-AC-004).
 
 ### 4.4 Reduced-complexity fallback and profile intensity
 
@@ -383,12 +399,18 @@ this family is used:
 | Text/icon/border on Subtle surface (`neutral-20`) | 7.51:1 | 4.5:1 / 3:1 | Passes both |
 | On-strong-surface content (`neutral-10` on `#164499` fill) | 8.37:1 | 4.5:1 | Passes |
 
-A single hue now serves the Text, Icon, Border, Strong-surface, and
-On-strong-surface-content roles for Informational — no per-role
-substitution or large-text restriction is required. This is a revision
-to the still-`Recommended` light-mode Informational proposal; it does
-not itself approve the value, and it supersedes but does not modify
-`foundations/color.md §3.3` (that document is unchanged; this
+**Corrected role assignment (KBDL-004-R2):** `#164499` supplies the
+Text, Icon, Border, and Strong-surface (fill) roles for Informational.
+`neutral-10` supplies the On-strong-surface content role, as it does for
+every other status family — this is the same value already used for
+Positive, Caution, and Critical's on-strong-surface content, not a new
+or Informational-specific value. The Subtle surface remains `neutral-20`
+with `#164499` text on it (7.51:1, see table above). No per-role
+substitution beyond this ordinary text/fill split is required, and no
+large-text restriction is needed anywhere in this family. This is a
+revision to the still-`Recommended` light-mode Informational proposal;
+it does not itself approve the value, and it supersedes but does not
+modify `foundations/color.md §3.3` (that document is unchanged; this
 revision lives in the theme layer until a future KBDL-003/KBDL-004
 reconciliation, if the project owner requests one).
 

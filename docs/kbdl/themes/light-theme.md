@@ -2,7 +2,7 @@
 
 Lifecycle status: `Recommended` — this exact mapping requires project-
 owner approval; see
-[themes/README.md § Theme Decision Packet](README.md#10-theme-decision-packet-restructured-under-kbdl-004-r1).
+[themes/README.md § Theme Decision Packet](README.md#10-theme-decision-packet-restructured-under-kbdl-004-r1r2).
 Provenance: `Assumed`. Validation status: `Verified` for every contrast
 pair shown below (see [validation.md](validation.md) for the calculation
 method and full output); `Not verified` for suitability beyond the
@@ -122,15 +122,20 @@ pending approval:
 | Critical | `#B3261E` (6.54:1 on Base) | `neutral-20` (5.43:1) | `#B3261E` | `neutral-10` (6.04:1) |
 | Neutral status | Aliases Primary/Secondary text, Default/Strong border, Subtle surface (§1–§3) | — | — | — |
 
-**Informational was revised under KBDL-004-R1.** The original value
-(`#2F6FED`, inherited from the still-pending
+**Informational was revised under KBDL-004-R1; role assignment corrected
+under KBDL-004-R2.** The original value (`#2F6FED`, inherited from the
+still-pending
 [foundations/color.md §3.3](../foundations/color.md#33-supporting-status-families)
 proposal) failed 4.5:1 in two normal-text contexts (3.78:1 on the Subtle
 surface, 4.21:1 as on-strong-surface content). `#164499` is a darker,
 more saturated blue that passes 4.5:1 in every context this family is
-used, using a single hue for Text/Icon/Border/Strong-surface/On-strong-
-surface-content roles alike — no separate large-text-only restriction is
-needed. This revision supersedes, but does not yet approve, the light-
+used — but it supplies only the **Text, Icon, Border, and Strong-surface
+fill** roles. The **On-strong-surface content** role is, and always was,
+`neutral-10` (8.37:1 on the `#164499` fill) — not `#164499` itself; an
+earlier statement describing "a single hue" for all five roles including
+on-strong-surface content was imprecise and is corrected here. No
+separate large-text-only restriction is needed for any of these five
+roles. This revision supersedes, but does not yet approve, the light-
 mode Informational value in `foundations/color.md §3.3`; both remain
 `Recommended` pending project-owner review.
 
@@ -139,7 +144,7 @@ mode Informational value in `foundations/color.md §3.3`; both remain
 | Role | Light value | Notes |
 | --- | --- | --- |
 | Media overlay | `neutral-100` at graduated opacity (darkest near text) | Worst-case contrast must be verified per actual image, see [adaptation.md §3](adaptation.md#3-transparency-and-glass-like-effects). |
-| Media caption | `neutral-10` text on a `neutral-100` at ~70% opacity caption band | 17.17:1 base-pair reused; opacity re-verified per [validation.md](validation.md). |
+| Media caption | `neutral-10` text on a **fully opaque** `neutral-100` caption band | 17.17:1 — correct as stated, since the band is opaque (corrected under KBDL-004-R2; a translucent caption band would require its own alpha-composite calculation, not a reuse of this ratio — see [validation.md § Items Not Verified](validation.md#5-items-not-verified)). |
 | Decorative accent | `accent-30` or `accent-50` at reduced opacity | Exempt (decorative); never resembles a control. |
 | Gradient start / end | `accent-50` → `accent-30` | See [adaptation.md §4.3](adaptation.md#43-worked-example--worst-case-contrast-corrected-kbdl-004-r1) — no direct text color passes across both endpoints (1.94:1–5.62:1 range); text must sit on a bounded solid content surface over the gradient, never directly on it. |
 | Data-display foreground | Reuses Accent + Status hues as a categorical set (deferred full palette) | Full chart-palette system deferred to a later module. |

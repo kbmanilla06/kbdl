@@ -224,18 +224,38 @@ version of this table incorrectly labeled this row "×5 sub-roles ×5
 families" while its own total column already used the correct 4×6
 figure — that label, not the total, was the error; it is corrected here.
 
+**Alias model (KBDL-004-R2, the only model used):** a role counts as a
+"distinct role" if it is separately listed in §1's inventory, regardless
+of whether its assigned *value* happens to be reused from another role.
+A role counts as an "alias" only when it is **not** separately
+implemented at all — its inventory entry is purely a pointer to another
+role's definition, contributing 0 to the distinct-role count. By this
+test: **Keyboard focus** is an alias (its inventory entry, §1.4, is
+literally "Synonym reference to Focus indicator"; it adds no new
+definition). **Neutral status** is an alias (§1.5 states it "uses the
+Neutral-family text/border/surface roles... not a new hue," and it has
+no dedicated sub-role table of its own). **Text-link states** is *not*
+an alias — it has its own purpose (distinct visited/hover/active
+sub-states across a link's lifecycle) and its own inventory entry with
+its own contrast requirement; that its light-mode *value* reuses
+Interactive/Link text's color is ordinary value reuse, the same pattern
+used by Muted metadata (reusing Secondary text's value) and Selection
+text (reusing Primary text's value) — neither of which is called an
+alias either. Total aliases under this model: **2**.
+
 | Category | Distinct roles | Light-mapped | Dark-mapped | Aliases (not counted as new roles) |
 | --- | --- | --- | --- | --- |
 | Canvas and Surfaces | 11 | 11 | 11 | 0 |
 | Text and Content | 11 | 11 | 11 | 0 |
 | Borders and Focus | 9 | 9 | 9 | 0 |
-| Actions and Interaction | 10 | 10 | 10 | 2 (Keyboard focus → Focus indicator; each Text-link state → the base Interactive/Link text value) |
+| Actions and Interaction | 10 | 10 | 10 | 1 (Keyboard focus → Focus indicator; Text-link states remains a distinct role using value reuse, not an alias) |
 | Status — 4 families × 6 sub-roles | 24 | 24 | 24 | 0 |
 | Status — Neutral status | 0 | 0 (via alias) | 0 (via alias) | 1 (→ Primary/Secondary text, Default/Strong border, Subtle surface) |
 | Media and Decorative | 7 | 7 | 7 | 0 |
 | **Total unique semantic roles** | **72** | — | — | — |
 | **Total light mappings (including aliases)** | — | **72** | — | — |
 | **Total dark mappings (including aliases)** | — | — | **72** | — |
+| **Total role-level aliases** | — | — | — | **2** |
 
 **Unresolved or missing mappings:** none — every one of the 72 unique
 roles has either a direct value or a named alias in both
