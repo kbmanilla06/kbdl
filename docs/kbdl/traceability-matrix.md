@@ -1,15 +1,15 @@
 # KBDL Traceability Matrix
 
 Lifecycle status of this framework: `Approved`. Rows below reflect only
-KBDL-001 scope.
+KBDL-001 and KBDL-002 scope.
 
 Return to the [specification index](README.md). Status labels are defined in
 [conventions.md](conventions.md#1-status-labels).
 
 ## Purpose
 
-This matrix connects each approved blueprint concept or KBDL-001 requirement
-to its roadmap origin, its requirement ID (where assigned), its location in
+This matrix connects each approved blueprint concept or KBDL requirement to
+its roadmap origin, its requirement ID (where assigned), its location in
 the specification, its approval and validation status, and how it was or
 will be validated. It is updated whenever a requirement is created, changes
 status, or is validated.
@@ -34,6 +34,9 @@ Every row records:
 - **Notes** — Free text.
 
 ## KBDL-001 Rows
+
+The rows below trace KBDL-001's documentation-architecture and governance
+scope.
 
 ### Project naming
 
@@ -220,22 +223,142 @@ Every row records:
 ### Later modules (visual foundations, themes, motion, responsive, accessibility, components, profiles, customization, validation)
 
 - **Blueprint section:** Later roadmap modules
-- **Roadmap prompt:** KBDL-002 through KBDL-010
+- **Roadmap prompt:** KBDL-003 through KBDL-010
 - **Requirement ID:** Not assigned
 - **Specification location:** Planned locations only, see [README.md § Document Hierarchy](README.md#document-hierarchy)
 - **Approval status:** Deferred
 - **Validation status:** Not verified
 - **Validation method:** Not applicable
 - **Validation evidence:** Not applicable
-- **Known limitation:** Not designed; intentionally out of scope for KBDL-001 and this remediation.
+- **Known limitation:** Not designed; intentionally out of scope for KBDL-002 and earlier steps. Principles (formerly in this group) is now delivered — see the KBDL-002 rows below.
 - **Related decision:** Not applicable
 - **Notes:** Do not treat as implemented, approved for design content, or verified.
 
+## KBDL-002 Rows
+
+The rows below trace KBDL-002's identity, principles, and visual-
+consistency scope, defined in [principles.md](principles.md).
+
+### KBDL identity statement and exclusions
+
+- **Blueprint section:** KBDL identity, personality, and explicit exclusions
+- **Roadmap prompt:** KBDL-002
+- **Requirement ID:** KBDL-PRN-001
+- **Specification location:** [principles.md § 1](principles.md#1-identity-statement)
+- **Approval status:** Approved
+- **Validation status:** Not verified
+- **Validation method:** Manual design review against Section 1 at each later module's approval gate.
+- **Validation evidence:** Not verified — validation method has not yet been run against a later module, since none exist yet.
+- **Known limitation:** Cannot be checked against real foundation, theme, or component content until those modules exist.
+- **Related decision:** Not applicable
+- **Notes:** Establishes what KBDL is and explicitly is not.
+
+### Luxury/utility conflict resolution
+
+- **Blueprint section:** Relationship between Digital Luxury and Technical Utility
+- **Roadmap prompt:** KBDL-002
+- **Requirement ID:** KBDL-PRN-002
+- **Specification location:** [principles.md § 4](principles.md#4-relationship-between-luxury-and-utility)
+- **Approval status:** Approved
+- **Validation status:** Not verified
+- **Validation method:** Manual review of design decisions against the priority order.
+- **Validation evidence:** Not verified.
+- **Known limitation:** No real design decisions exist yet to test the priority order against.
+- **Related decision:** Not applicable
+- **Notes:** Includes five worked conflict examples.
+
+### Core principles
+
+- **Blueprint section:** Core enforceable design principles
+- **Roadmap prompt:** KBDL-002
+- **Requirement ID:** KBDL-PRN-003
+- **Specification location:** [principles.md § 6](principles.md#6-core-principles)
+- **Approval status:** Approved
+- **Validation status:** Verified
+- **Validation method:** Manual review confirming all nine principles include every required field (normative statement, purpose, required/prohibited behavior, profile interpretation, accessibility/responsive/motion implications, review questions) and that the nine required concepts (clarity before spectacle, precision, comprehension, hierarchy, controlled expression, consistency, adaptability, accessibility by default, performance) are all present.
+- **Validation evidence:** Manual field-completeness review recorded in the KBDL-002 commit.
+- **Known limitation:** None identified.
+- **Related decision:** Not applicable
+- **Notes:** Nine principles defined (blueprint required six to nine).
+
+### Visual-consistency relationships
+
+- **Blueprint section:** Cross-project visual consistency
+- **Roadmap prompt:** KBDL-002
+- **Requirement ID:** KBDL-PRN-004
+- **Specification location:** [principles.md § 7](principles.md#7-visual-consistency)
+- **Approval status:** Approved
+- **Validation status:** Not verified
+- **Validation method:** Manual cross-reference review once foundation, theme, and responsive modules are approved.
+- **Validation evidence:** Not verified — dependent modules do not exist yet.
+- **Known limitation:** Cannot be fully validated until `FND`, `THM`, and `RSP` requirements exist.
+- **Related decision:** KBDL-DEC-003
+- **Notes:** Defines relationships only; no final values.
+
+### Locked, controlled, and open identity model
+
+- **Blueprint section:** Stable and variable identity elements
+- **Roadmap prompt:** KBDL-002
+- **Requirement ID:** KBDL-PRN-005
+- **Specification location:** [principles.md § 5](principles.md#5-stable-and-variable-identity-elements)
+- **Approval status:** Approved
+- **Validation status:** Verified
+- **Validation method:** Manual review confirming all three categories (locked, controlled, open) address every element listed in this prompt's scope, and that no final ranges or values were introduced.
+- **Validation evidence:** Manual scope-compliance review recorded in the KBDL-002 commit (see the scope-search evidence in the KBDL-002 final report).
+- **Known limitation:** Controlled-variable ranges are intentionally undefined pending later modules.
+- **Related decision:** Not applicable
+- **Notes:** Ties directly to [governance.md § Exception process](governance.md#exception-process).
+
+### Design-decision hierarchy
+
+- **Blueprint section:** Design-decision hierarchy and conflict handling
+- **Roadmap prompt:** KBDL-002
+- **Requirement ID:** KBDL-PRN-006
+- **Specification location:** [principles.md § 8](principles.md#8-design-decision-hierarchy)
+- **Approval status:** Approved
+- **Validation status:** Not verified
+- **Validation method:** Manual review of decision records against the hierarchy; conflicts escalated per governance's conflict-resolution process.
+- **Validation evidence:** Not verified — no real design decision has been escalated through this hierarchy yet.
+- **Known limitation:** None identified.
+- **Related decision:** Not applicable
+- **Notes:** Aligns with [governance.md § Conflict-resolution process](governance.md#conflict-resolution-process).
+
+### Profile-level interpretation (Showcase, Precision, Flow)
+
+- **Blueprint section:** Profile-level interpretation of shared principles
+- **Roadmap prompt:** KBDL-002
+- **Requirement ID:** KBDL-PRN-007
+- **Specification location:** [principles.md § 9](principles.md#9-profile-level-interpretation)
+- **Approval status:** Approved
+- **Validation status:** Not verified
+- **Validation method:** Manual cross-profile consistency review once the project-profiles module is approved.
+- **Validation evidence:** Not verified — the project-profiles module (`PRO`) does not exist yet.
+- **Known limitation:** Cannot be fully validated until `PRO` requirements exist.
+- **Related decision:** KBDL-DEC-006
+- **Notes:** Confirms Showcase, Precision, and Flow share all locked rules and principles.
+
+### Conforming and non-conforming design directions
+
+- **Blueprint section:** Conceptual examples distinguishing conformance from non-conformance
+- **Roadmap prompt:** KBDL-002
+- **Requirement ID:** KBDL-PRN-008
+- **Specification location:** [principles.md § 10](principles.md#10-conforming-design-directions), [principles.md § 11](principles.md#11-non-conforming-design-directions)
+- **Approval status:** Approved
+- **Validation status:** Verified
+- **Validation method:** Manual count and coverage review confirming at least six conforming examples spanning all three profiles, both themes, an expressive moment, a repeated workflow, and a mobile context; and at least eight non-conforming patterns each with reason, broken principle, risk, and correction.
+- **Validation evidence:** Manual coverage review recorded in the KBDL-002 commit — six conforming examples and sixteen non-conforming patterns were produced, exceeding the required minimums.
+- **Known limitation:** Examples are conceptual; no mockups or token values exist to check them against yet.
+- **Related decision:** Not applicable
+- **Notes:** Sixteen non-conforming patterns exceed the required minimum of eight.
+
 ## Notes on Scope
 
-No requirement in this matrix outside `GOV` has been implemented, designed,
-or validated. Rows for later roadmap modules exist only to show where their
-future requirements will be traced once their roadmap step is reached.
-Approval status and validation status are recorded independently for every
-row; a row being `Approved` never implies it is `Verified`, and a row being
-`Verified` never implies or grants `Approved` status.
+No requirement in this matrix outside `GOV` and `PRN` has been implemented,
+designed, or validated. Rows for later roadmap modules exist only to show
+where their future requirements will be traced once their roadmap step is
+reached. Approval status and validation status are recorded independently
+for every row; a row being `Approved` never implies it is `Verified`, and a
+row being `Verified` never implies or grants `Approved` status. `PRN`
+requirements are approved as principles-level guidance; they do not
+themselves introduce or approve any final visual, motion, or component
+value — those remain `Deferred` until their own modules are reached.

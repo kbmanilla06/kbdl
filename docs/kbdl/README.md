@@ -13,12 +13,18 @@ and Flow (consumer-facing web applications). See the
 
 ## Specification Status
 
-This is **KBDL-001: Specification Architecture and Governance Foundation**,
-the first of a ten-step approved roadmap. This step establishes the
-documentation architecture, terminology, requirement and status conventions,
-and governance for the entire KBDL specification. It does not define visual
-foundations, themes, motion values, components, or profile-specific design
-guidance — those are later roadmap steps and must not be started early (see
+**KBDL-001: Specification Architecture and Governance Foundation** and
+**KBDL-002: Identity, Principles, and Visual Consistency Rules** are
+complete — the first two steps of a ten-step approved roadmap. KBDL-001
+established the
+documentation architecture, terminology, requirement and status
+conventions, and governance for the entire KBDL specification. KBDL-002
+established KBDL's identity statement, Digital Luxury and Technical Utility
+definitions, core principles, visual-consistency relationships, the
+locked/controlled/open identity model, and the design-decision hierarchy
+(see [principles.md](principles.md)). Neither step defines visual
+foundations, themes, motion values, components, or final measurements —
+those are later roadmap steps and must not be started early (see
 [governance.md](governance.md)).
 
 ## Intended Audience
@@ -46,14 +52,15 @@ specification itself.
 
 ## Document Hierarchy
 
-KBDL-001 delivers the documents below. Later rows show the **planned
-location only** for future modules; those files do not exist yet and must
-not be created until their roadmap step is reached.
+KBDL-001 and KBDL-002 deliver the documents below with real content. Rows
+still marked `Deferred` show the **planned location only** for future
+modules; those files do not exist yet and must not be created until their
+roadmap step is reached.
 
 | # | Module | Status | Location |
 | --- | --- | --- | --- |
 | 1 | Introduction | Deferred | `docs/kbdl/introduction.md` (planned) |
-| 2 | Principles | Deferred | `docs/kbdl/principles.md` (planned) |
+| 2 | Principles | Approved | [principles.md](principles.md) |
 | 3 | Visual foundations | Deferred | `docs/kbdl/foundations.md` (planned) |
 | 4 | Adaptive themes | Deferred | `docs/kbdl/themes.md` (planned) |
 | 5 | Motion | Deferred | `docs/kbdl/motion.md` (planned) |
@@ -67,8 +74,8 @@ not be created until their roadmap step is reached.
 | 13 | Governance | Approved | [governance.md](governance.md) |
 | 14 | Future expansion | Deferred | Location to be determined when needed |
 
-Supporting KBDL-001 documents (not numbered modules, but required by this
-step):
+Supporting documents (not numbered modules, but required by KBDL-001 and
+referenced by KBDL-002):
 
 - [glossary.md](glossary.md) — terminology
 - [conventions.md](conventions.md) — status labels, requirement IDs, cross-references
@@ -78,9 +85,10 @@ step):
 - [traceability-matrix.md](traceability-matrix.md) — requirement traceability
 - [conformance-checklist.md](conformance-checklist.md) — conformance review
 
-This hierarchy is designed so each future module (rows 1–12, 14) can be added
-as its own file without reorganizing this index or renumbering existing
-requirement IDs.
+This hierarchy is designed so each remaining future module (rows 1, 3–12,
+14) can be added as its own file without reorganizing this index or
+renumbering existing requirement IDs, exactly as row 2 (Principles) was
+added in KBDL-002 without disturbing any other row.
 
 ## Status Labels
 
@@ -112,6 +120,9 @@ create/retire/supersede lifecycle, is documented in
 
 ## Governance, Glossary, Decisions, Traceability, and Conformance
 
+- **Principles:** [principles.md](principles.md) — KBDL identity, Digital
+  Luxury, Technical Utility, core principles, visual consistency, and the
+  design-decision hierarchy.
 - **Governance:** [governance.md](governance.md) — ownership, change
   control, approval, exceptions, and review expectations.
 - **Glossary:** [glossary.md](glossary.md) — definitions for all KBDL terms
