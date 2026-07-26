@@ -83,11 +83,18 @@ decisions (visual values, motion timings, component designs) already exist.
 
 - **Motion pattern** — A named, reusable way that an interface element moves
   or transitions, described independent of exact timing values. Tracked under
-  module code `MOT`.
+  module code `MOT`. See [motion/patterns.md § Motion Pattern Matrix](motion/patterns.md#12-motion-pattern-matrix).
+
+- **Motion parity** — The property that full-motion, reduced-motion, and
+  no-motion presentations of the same interaction communicate the same
+  meaning and preserve the same functionality. See
+  [motion/accessibility-performance.md §1](motion/accessibility-performance.md#1-reduced-motion-and-no-motion-parity).
 
 - **Motion tier** — A defined level of motion intensity or purpose (for
   example functional versus expressive motion) that KBDL motion patterns are
-  organized into.
+  organized into. Realized as the five-level motion hierarchy (None,
+  Functional, Supportive, Expressive, Exceptional) in
+  [motion/foundations.md §3](motion/foundations.md#3-motion-hierarchy).
 
 - **Non-conformance** — The condition of failing one or more applicable KBDL
   requirements for the scope being assessed — that is, a requirement whose

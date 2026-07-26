@@ -15,9 +15,10 @@ and Flow (consumer-facing web applications). See the
 
 **KBDL-001: Specification Architecture and Governance Foundation**,
 **KBDL-002: Identity, Principles, and Visual Consistency Rules**,
-**KBDL-003: Core Visual Foundations**, and
-**KBDL-004: Adaptive Theme System** deliverables are present in the
-repository, the first four steps of a ten-step approved roadmap. Their
+**KBDL-003: Core Visual Foundations**,
+**KBDL-004: Adaptive Theme System**, and
+**KBDL-005: Expressive Motion Language** deliverables are present in the
+repository, the first five steps of a ten-step approved roadmap. Their
 lifecycle status is `Approved` for architecture, rules, and (as of the
 project owner's foundation-defaults approval, see
 [KBDL-DEC-012](decision-register.md#kbdl-dec-012--foundation-decision-packet-approved))
@@ -39,24 +40,36 @@ data-visualization palettes; and any implementation-layer format (CSS
 custom properties, JSON tokens, component-level theme tokens, framework
 APIs) — see
 [themes/README.md § Theme Decision Packet](themes/README.md#10-theme-decision-packet-approved-under-kbdl-004-a1).
-KBDL-005 (Motion) is the next eligible roadmap step and has not been
-started. Progression to later roadmap steps depends on the planning
-agent's validation review, not on this index. KBDL-001 established the
-documentation architecture, terminology, requirement and status
-conventions, and governance for the entire KBDL specification. KBDL-002
-established KBDL's identity statement, Digital Luxury and Technical Utility
-definitions, core principles, visual-consistency relationships, the
-locked/controlled/open identity model, and the design-decision hierarchy
-(see [principles.md](principles.md)). KBDL-003 established KBDL's color,
+KBDL-005 established KBDL's motion terminology, identity translation,
+purpose model, category system, hierarchy, and intensity model, all
+`Approved` where directly supported by prior approved principles or
+theme rules (see [motion/README.md](motion/README.md)). Every **exact**
+motion value KBDL-005 proposes — durations, easing curves, distances,
+scales, stagger, repetition limits, and pattern defaults — remains
+`Recommended`, pending project-owner approval via the
+[motion decision packet](motion/README.md#10-motion-decision-packet).
+KBDL-006 (Responsive and Accessibility) is locked until KBDL-005 passes
+validation and its proposed motion decisions are approved; it has not
+been started. Progression to later roadmap steps depends on the
+planning agent's validation review, not on this index. KBDL-001
+established the documentation architecture, terminology, requirement
+and status conventions, and governance for the entire KBDL
+specification. KBDL-002 established KBDL's identity statement, Digital
+Luxury and Technical Utility definitions, core principles,
+visual-consistency relationships, the locked/controlled/open identity
+model, and the design-decision hierarchy (see
+[principles.md](principles.md)). KBDL-003 established KBDL's color,
 typography, spacing/layout, shape/depth, and iconography/media
 architecture (see [foundations/README.md](foundations/README.md)). KBDL-004
 established KBDL's adaptive theme architecture, semantic-role inventory,
 recommended light and dark theme mappings, selection precedence,
 persistence guidance, project-controlled adaptation, and local contrast
-contexts (see [themes/README.md](themes/README.md)). None of these steps
-define motion values, detailed responsive/accessibility rules, components,
-or implementation code — those are later roadmap steps and must not be
-started early (see [governance.md](governance.md)).
+contexts (see [themes/README.md](themes/README.md)). KBDL-005
+established KBDL's framework-independent motion language (see
+[motion/README.md](motion/README.md)). None of these steps define
+detailed responsive/accessibility rules, components, or implementation
+code — those are later roadmap steps and must not be started early (see
+[governance.md](governance.md)).
 
 ## Intended Audience
 
@@ -83,10 +96,10 @@ specification itself.
 
 ## Document Hierarchy
 
-KBDL-001, KBDL-002, KBDL-003, and KBDL-004 deliver the documents below
-with real content. Rows still marked `Deferred` show the **planned
-location only** for future modules; those files do not exist yet and
-must not be created until their roadmap step is reached.
+KBDL-001, KBDL-002, KBDL-003, KBDL-004, and KBDL-005 deliver the
+documents below with real content. Rows still marked `Deferred` show the
+**planned location only** for future modules; those files do not exist
+yet and must not be created until their roadmap step is reached.
 
 | # | Module | Status | Location |
 | --- | --- | --- | --- |
@@ -94,8 +107,8 @@ must not be created until their roadmap step is reached.
 | 2 | Principles | Approved | [principles.md](principles.md) |
 | 3 | Visual foundations | Approved (architecture and default values)* | [foundations/README.md](foundations/README.md) |
 | 4 | Adaptive themes | Approved (architecture and the ten-item theme decision packet)** | [themes/README.md](themes/README.md) |
-| 5 | Motion | Deferred | `docs/kbdl/motion.md` (planned) |
-| 6 | Responsive behavior | Deferred | `docs/kbdl/responsive.md` (planned) |
+| 5 | Motion | Approved (architecture)†; Recommended (exact durations, curves, and pattern defaults) | [motion/README.md](motion/README.md) |
+| 6 | Responsive behavior | Deferred (locked until KBDL-005 passes and its motion decisions are approved) | `docs/kbdl/responsive.md` (planned) |
 | 7 | Accessibility | Deferred | `docs/kbdl/accessibility.md` (planned) |
 | 8 | Core action, form, and navigation components | Deferred | `docs/kbdl/components-core.md` (planned) |
 | 9 | Surface, overlay, feedback, and system-state components | Deferred | `docs/kbdl/components-system.md` (planned) |
@@ -123,6 +136,14 @@ transition guidance, selection precedence, project-override boundaries,
 and local contrast contexts). Opacity values, translucent variants, and
 all implementation-layer formats remain `Recommended`/`Not verified` and
 outside this approval.
+
+† See [motion/README.md](motion/README.md) for the full motion
+architecture, terminology, purpose model, category system, hierarchy,
+and intensity model, all `Approved` where directly supported by prior
+approved principles or theme rules. Every exact duration, easing curve,
+distance, scale, stagger, repetition limit, and pattern default remains
+`Recommended`, pending project-owner approval via the
+[motion decision packet](motion/README.md#10-motion-decision-packet).
 
 Supporting documents (not numbered modules, but required by KBDL-001 and
 referenced by KBDL-002 and KBDL-003):

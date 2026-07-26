@@ -173,7 +173,7 @@ individually.
 
 1. **Sections** — link to another specification section using a relative path
    and, where the target module exists, a heading anchor:
-   `[Motion](motion.md#kbdl-mot-001)`.
+   `[Motion](motion/README.md#9-normative-requirements)`.
 2. **Requirement IDs** — always state the ID as literal text (`KBDL-A11Y-003`)
    even inside a link, so the reference is understandable without following the
    link.
