@@ -1,12 +1,15 @@
 # KBDL Motion — Timing, Duration, Easing, and Conceptual Tokens
 
-Lifecycle status: `Recommended` for every timing class, exact duration,
-easing category, exact curve, and token category in this document —
-pending project-owner approval via
-[motion/README.md §10](README.md#10-motion-decision-packet). `User-provided`
-provenance. `Not applicable`/`Not verified` validation — these are
-numerical and naming recommendations, not yet testable implementation
-claims. See [motion/README.md §9](README.md#9-normative-requirements)
+**Updated under KBDL-005-A1.** Lifecycle status: `Approved` for every
+timing class, exact duration, easing category, exact curve, and token
+category in this document, per the project owner's approval of
+[KBDL-DEC-014](../decision-register.md#kbdl-dec-014--kbdl-005-motion-decisions-approved)
+via [motion/README.md §10](README.md#10-motion-decision-packet).
+`User-provided` provenance. `Not applicable`/`Not verified` validation —
+approval is a lifecycle decision, not implementation evidence; these
+remain numerical and naming recommendations, not yet testable
+implementation claims. See
+[motion/README.md §9](README.md#9-normative-requirements)
 (`KBDL-MOT-007`, `KBDL-MOT-008`, `KBDL-MOT-009`, and `KBDL-MOT-033` for
 the conceptual motion-token architecture in [§4](#4-conceptual-motion-tokens))
 for exact requirement wording.
@@ -20,13 +23,13 @@ A semantic timing model, used instead of ad hoc per-component durations
 
 | Class | Purpose | Typical interaction | User-perceived effect | Interruption expectation | Profile adjustment | Reduced-motion behavior | Lifecycle | Validation |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Instant | No perceptible transition | State that must never appear to lag (disabled state, focus ring) | Immediate | N/A (no duration to interrupt) | None | Same (already instant) | Recommended | Not applicable |
-| Immediate | Acknowledge input | Press, toggle, selection | Feels directly connected to input | Always interruptible by next input | None | Becomes Instant | Recommended | Not applicable |
-| Fast | Small, local state change | Hover/pointer feedback, small expand/collapse | Quick but perceptible | Interruptible by opposing state | Precision favors this; Showcase uses it for routine elements | Becomes Instant | Recommended | Not applicable |
-| Standard | Ordinary surface or content transition | Navigation, overlay entrance/exit, content insertion | Smooth, unhurried, still brisk | Interruptible by a new navigation or state request | Balanced across profiles | Becomes Instant or a short crossfade | Recommended | Not applicable |
-| Deliberate | A transition where pacing itself communicates intent | Expressive reveals, larger overlay/modal moments | Feels considered, not rushed | Interruptible; must resolve gracefully | Showcase uses more; Precision rarely | Becomes Standard or Instant | Recommended | Not applicable |
-| Extended | A rare, significant compositional moment | Exceptional-hierarchy entrance sequences | Cinematic without becoming slow | Must remain interruptible; never traps the user | Showcase only | Becomes Instant | Recommended | Not applicable |
-| Continuous or indefinite | Motion that persists without a fixed end | Ambient loops, indeterminate loading | Ongoing, low-attention | Must be pausable and bounded in intensity | Showcase (ambient) most; system feedback (loading) in all profiles | Removed or reduced to static | Recommended | Not applicable |
+| Instant | No perceptible transition | State that must never appear to lag (disabled state, focus ring) | Immediate | N/A (no duration to interrupt) | None | Same (already instant) | Approved | Not applicable |
+| Immediate | Acknowledge input | Press, toggle, selection | Feels directly connected to input | Always interruptible by next input | None | Becomes Instant | Approved | Not applicable |
+| Fast | Small, local state change | Hover/pointer feedback, small expand/collapse | Quick but perceptible | Interruptible by opposing state | Precision favors this; Showcase uses it for routine elements | Becomes Instant | Approved | Not applicable |
+| Standard | Ordinary surface or content transition | Navigation, overlay entrance/exit, content insertion | Smooth, unhurried, still brisk | Interruptible by a new navigation or state request | Balanced across profiles | Becomes Instant or a short crossfade | Approved | Not applicable |
+| Deliberate | A transition where pacing itself communicates intent | Expressive reveals, larger overlay/modal moments | Feels considered, not rushed | Interruptible; must resolve gracefully | Showcase uses more; Precision rarely | Becomes Standard or Instant | Approved | Not applicable |
+| Extended | A rare, significant compositional moment | Exceptional-hierarchy entrance sequences | Cinematic without becoming slow | Must remain interruptible; never traps the user | Showcase only | Becomes Instant | Approved | Not applicable |
+| Continuous or indefinite | Motion that persists without a fixed end | Ambient loops, indeterminate loading | Ongoing, low-attention | Must be pausable and bounded in intensity | Showcase (ambient) most; system feedback (loading) in all profiles | Removed or reduced to static | Approved | Not applicable |
 
 **Requirements:**
 
@@ -50,8 +53,10 @@ A semantic timing model, used instead of ad hoc per-component durations
   within the Deliberate range even if composed of several Standard
   steps.
 
-New duration values below remain `Recommended` pending project-owner
-approval (`KBDL-MOT-008`).
+The duration values below are `Approved` per the project owner's
+approval of
+[KBDL-DEC-014](../decision-register.md#kbdl-dec-014--kbdl-005-motion-decisions-approved)
+(`KBDL-MOT-008`).
 
 ## 2. Duration Recommendations
 
@@ -60,21 +65,21 @@ per-component variants remain deferred to the Components module.
 
 | Recommendation | Duration/range | Purpose | Allowed profiles | Interruption behavior | Reduced-motion replacement | Performance impact | Lifecycle | Validation |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Press feedback | 80–120ms | Acknowledge a press | All | Always interruptible | Instant | Negligible | Recommended | Not applicable |
-| Hover/pointer feedback | 100–150ms | Acknowledge pointer proximity | All | Always interruptible | Instant | Negligible | Recommended | Not applicable |
-| Selection feedback | 100–150ms | Communicate selection state | All | Re-triggerable | Instant | Negligible | Recommended | Not applicable |
-| Toggle change | 120–180ms | Communicate a binary state change | All | Interruptible by opposing toggle | Instant | Negligible | Recommended | Not applicable |
-| Small state transition | 150–200ms | Local expand/collapse, small reveal | All | Interruptible | Instant | Low | Recommended | Not applicable |
-| Standard surface transition | 200–280ms | Card, panel, or sheet state change | All | Interruptible | Instant or short crossfade | Low to moderate | Recommended | Not applicable |
-| Overlay entrance and exit | 220–320ms | Modal, dialog, sheet appearance/dismissal | All | Interruptible; exit should not exceed entrance duration | Instant | Moderate | Recommended | Not applicable |
-| Navigation transition | 220–320ms | Route or view change | All (Precision favors the lower bound) | New navigation cancels in-progress transition | Instant or short crossfade | Moderate | Recommended | Not applicable |
-| Content insertion and removal | 150–250ms | List/content add or remove | All | Superseding update resolves in-progress change first | Instant | Low to moderate (bounded at scale, see `KBDL-MOT-011`) | Recommended | Not applicable |
-| Progress change | Matches real operation duration (no artificial fixed duration) | Determinate progress fill | All | Reflects actual operation state | Static/textual progress | Negligible | Recommended | Not applicable |
-| Attention cue | 400–600ms per repetition, bounded total repetitions (see [patterns.md §4](patterns.md#4-attention-motion)) | Direct attention | All | Stops on interaction with the attended element | Static emphasis | Low | Recommended | Not applicable |
-| Expressive reveal | 320–480ms | Showcase entrance/editorial reveal | Mostly Showcase | Interruptible | Instant or short crossfade | Moderate | Recommended | Not applicable |
-| Theme transition | 150–250ms | Light/dark theme switch (see [patterns.md §8](patterns.md#8-theme-transition-motion)) | All (shared architecture, `KBDL-THM-006`) | Rapid repeated toggles resolve to latest requested theme | Instant (already `Approved`, `KBDL-THM-012a`) | Low | Recommended | Not applicable |
-| Ambient-loop cycle | 4–8 seconds per cycle, low-contrast | Background/ambient motion | Mostly Showcase | Pausable at any point | Removed or static | Low (by design — slow, infrequent repaint) | Recommended | Not applicable |
-| Reduced-motion replacement | 0–100ms (effectively instant) | Any pattern under reduced-motion preference | All | Always interruptible (trivially, given near-zero duration) | Is itself the reduced-motion replacement | Minimal | Recommended | Not applicable |
+| Press feedback | 80–120ms | Acknowledge a press | All | Always interruptible | Instant | Negligible | Approved | Not applicable |
+| Hover/pointer feedback | 100–150ms | Acknowledge pointer proximity | All | Always interruptible | Instant | Negligible | Approved | Not applicable |
+| Selection feedback | 100–150ms | Communicate selection state | All | Re-triggerable | Instant | Negligible | Approved | Not applicable |
+| Toggle change | 120–180ms | Communicate a binary state change | All | Interruptible by opposing toggle | Instant | Negligible | Approved | Not applicable |
+| Small state transition | 150–200ms | Local expand/collapse, small reveal | All | Interruptible | Instant | Low | Approved | Not applicable |
+| Standard surface transition | 200–280ms | Card, panel, or sheet state change | All | Interruptible | Instant or short crossfade | Low to moderate | Approved | Not applicable |
+| Overlay entrance and exit | 220–320ms | Modal, dialog, sheet appearance/dismissal | All | Interruptible; exit should not exceed entrance duration | Instant | Moderate | Approved | Not applicable |
+| Navigation transition | 220–320ms | Route or view change | All (Precision favors the lower bound) | New navigation cancels in-progress transition | Instant or short crossfade | Moderate | Approved | Not applicable |
+| Content insertion and removal | 150–250ms | List/content add or remove | All | Superseding update resolves in-progress change first | Instant | Low to moderate (bounded at scale, see `KBDL-MOT-011`) | Approved | Not applicable |
+| Progress change | Matches real operation duration (no artificial fixed duration) | Determinate progress fill | All | Reflects actual operation state | Static/textual progress | Negligible | Approved | Not applicable |
+| Attention cue | 400–600ms per repetition, bounded total repetitions (see [patterns.md §4](patterns.md#4-attention-motion)) | Direct attention | All | Stops on interaction with the attended element | Static emphasis | Low | Approved | Not applicable |
+| Expressive reveal | 320–480ms | Showcase entrance/editorial reveal | Mostly Showcase | Interruptible | Instant or short crossfade | Moderate | Approved | Not applicable |
+| Theme transition | 150–250ms | Light/dark theme switch (see [patterns.md §8](patterns.md#8-theme-transition-motion)) | All (shared architecture, `KBDL-THM-006`) | Rapid repeated toggles resolve to latest requested theme | Instant (already `Approved`, `KBDL-THM-012a`) | Low | Approved | Not applicable |
+| Ambient-loop cycle | 4–8 seconds per cycle, low-contrast | Background/ambient motion | Mostly Showcase | Pausable at any point | Removed or static | Low (by design — slow, infrequent repaint) | Approved | Not applicable |
+| Reduced-motion replacement | 0–100ms (effectively instant) | Any pattern under reduced-motion preference | All | Always interruptible (trivially, given near-zero duration) | Is itself the reduced-motion replacement | Minimal | Approved | Not applicable |
 
 ## 3. Easing Architecture
 
@@ -92,8 +97,10 @@ Semantic, framework-independent easing categories (`KBDL-MOT-009`).
 | Spring-like | Naturalistic settle with slight overshoot damping | Release/settle after direct manipulation | Direct manipulation (settle phase only) | Any motion requiring exact, predictable end timing (e.g., choreographed sequences) | Interruptible by new input at any point | Settles from current velocity/position, not a restart | Duration is inherently variable (settles based on physics-like behavior, not a fixed time) | Overshoot must stay small enough not to make targets feel unstable | Slightly higher cost if computed per-frame; a closed-form approximation is acceptable |
 | Step or discrete | Instant, discrete jumps with no interpolation | Instant class transitions, reduced-motion replacements | Any category, as the reduced-motion substitute | Anything meant to feel smooth or continuous | Trivially interruptible (no in-between state to interrupt) | Trivial | Independent of duration (effectively zero) | This *is* the accessible fallback for every other category | Cheapest |
 
-**Exact curves (`Recommended`, semantic names, framework-neutral
-cubic-bezier-equivalent descriptions):**
+**Exact curves (`Approved` per
+[KBDL-DEC-014](../decision-register.md#kbdl-dec-014--kbdl-005-motion-decisions-approved),
+semantic names, framework-neutral cubic-bezier-equivalent
+descriptions):**
 
 - **Standard-Enter** — decelerating curve, roughly equivalent to
   `cubic-bezier(0.05, 0.7, 0.1, 1.0)`. Used for entrances at Standard
@@ -117,11 +124,11 @@ cubic-bezier-equivalent descriptions):**
   with no strong directional arrival/departure. Reversal: symmetrical,
   reverses through the same shape.
 
-Every exact curve above is: marked `Recommended`; named semantically
+Every exact curve above is: marked `Approved`; named semantically
 (not by its numeric value alone); explained above; conceptually tested
 for interruption and reversal in the table; kept independent of any
 animation framework; and included in
-[motion/README.md §10.2](README.md#102-recommended-decisions--ready-for-approval)
+[motion/README.md §10.2](README.md#102-approved-decisions-kbdl-005-a1)
 item 3. No spring-physics library or specific animation engine is
 required — the Spring-like category is described qualitatively and may
 be approximated with a closed-form curve.

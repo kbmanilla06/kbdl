@@ -612,12 +612,12 @@ The rows below trace KBDL-004's adaptive-theme scope, defined in
 - **Roadmap prompt:** KBDL-005
 - **Requirement ID:** KBDL-MOT-004, KBDL-MOT-005, KBDL-MOT-006
 - **Specification location:** [motion/foundations.md §2, §3, §4](motion/foundations.md#2-motion-categories)
-- **Approval status:** `KBDL-MOT-004` Approved (structural completeness requirement); `KBDL-MOT-005` and `KBDL-MOT-006` Recommended (new KBDL-005 hierarchy and intensity-model architecture)
+- **Approval status:** All three Approved — `KBDL-MOT-004` as a structural completeness requirement (unaffected by this decision); `KBDL-MOT-005` and `KBDL-MOT-006` per [KBDL-DEC-014](decision-register.md#kbdl-dec-014--kbdl-005-motion-decisions-approved) (decision packet items 1 and 14)
 - **Validation status:** Not verified
-- **Validation method:** Manual completeness review per category (performed); project-owner review of the hierarchy/intensity model (not yet performed).
+- **Validation method:** Manual completeness review per category (performed); project-owner review of the hierarchy/intensity model (performed, see KBDL-DEC-014).
 - **Validation evidence:** Manual review recorded in [motion/validation.md §1](motion/validation.md#1-motion-validation-specification).
 - **Known limitation:** Exceptional-level (Level 4) usage requires project-owner review each time; not yet exercised, since no implementation exists.
-- **Related decision:** Not applicable — pending a future decision-register entry once the project owner reviews the motion decision packet. `KBDL-MOT-005` maps to [motion decision packet](motion/README.md#10-motion-decision-packet) item 1; `KBDL-MOT-006` maps to item 14 (added under KBDL-005-R2, which corrected the packet's initial omission of this requirement).
+- **Related decision:** [KBDL-DEC-014](decision-register.md#kbdl-dec-014--kbdl-005-motion-decisions-approved). `KBDL-MOT-005` maps to [motion decision packet](motion/README.md#10-motion-decision-packet) item 1; `KBDL-MOT-006` maps to item 14 (added under KBDL-005-R2, which corrected the packet's initial omission of this requirement; approved under KBDL-005-A1).
 - **Notes:** The requirement that categories be documented completely is itself already supported by KBDL-002's visual-consistency principle; the specific five-level names and intensity factors are new.
 
 ### Timing, duration, and easing architecture (KBDL-MOT-007, KBDL-MOT-008, KBDL-MOT-009)
@@ -626,12 +626,12 @@ The rows below trace KBDL-004's adaptive-theme scope, defined in
 - **Roadmap prompt:** KBDL-005
 - **Requirement ID:** KBDL-MOT-007, KBDL-MOT-008, KBDL-MOT-009
 - **Specification location:** [motion/timing-easing.md §1, §2, §3](motion/timing-easing.md#1-timing-architecture)
-- **Approval status:** Recommended (not `Approved` — requires project-owner approval, per [conventions.md §1.1](conventions.md#11-lifecycle--approval-status))
+- **Approval status:** Approved — per [KBDL-DEC-014](decision-register.md#kbdl-dec-014--kbdl-005-motion-decisions-approved), per [conventions.md §1.1](conventions.md#11-lifecycle--approval-status)
 - **Validation status:** Not applicable — numerical and curve recommendations, not yet a testable implementation claim
-- **Validation method:** Manual internal-consistency review (performed, see [motion/validation.md §2](motion/validation.md#2-numerical-consistency-review-performed)); project-owner review (not yet performed); implementation-level review once an implementation exists.
-- **Validation evidence:** [motion/validation.md §2](motion/validation.md#2-numerical-consistency-review-performed) — every value has a stated purpose, exit durations are equal to or shorter than paired entrances, and no value is marked `Approved` or `Verified`.
-- **Known limitation:** These are recommendations awaiting project-owner approval; must not be treated as `Approved` or implemented until that approval is recorded.
-- **Related decision:** Not applicable — pending a future decision-register entry once the project owner reviews the motion decision packet. `KBDL-MOT-007` and `KBDL-MOT-008` together map to [motion decision packet](motion/README.md#10-motion-decision-packet) item 2 (one timing system); `KBDL-MOT-009` maps to item 3.
+- **Validation method:** Manual internal-consistency review (performed, see [motion/validation.md §2](motion/validation.md#2-numerical-consistency-review-performed)); project-owner review (performed, see KBDL-DEC-014); implementation-level review once an implementation exists.
+- **Validation evidence:** [motion/validation.md §2](motion/validation.md#2-numerical-consistency-review-performed) — every value has a stated purpose, exit durations are equal to or shorter than paired entrances, and no value is marked `Verified` without implementation evidence.
+- **Known limitation:** Approval is a lifecycle decision, not implementation validation; these values must not be treated as `Verified` until an implementation exists and is measured.
+- **Related decision:** [KBDL-DEC-014](decision-register.md#kbdl-dec-014--kbdl-005-motion-decisions-approved). `KBDL-MOT-007` and `KBDL-MOT-008` together map to [motion decision packet](motion/README.md#10-motion-decision-packet) item 2 (one timing system); `KBDL-MOT-009` maps to item 3.
 - **Notes:** Resolves the exact timing/easing KBDL-004 explicitly deferred (`KBDL-THM-012`); no CSS, JSON, or animation-library format is introduced.
 
 ### Spatial movement and choreography (KBDL-MOT-010, KBDL-MOT-011, KBDL-MOT-012)
@@ -640,12 +640,12 @@ The rows below trace KBDL-004's adaptive-theme scope, defined in
 - **Roadmap prompt:** KBDL-005
 - **Requirement ID:** KBDL-MOT-010, KBDL-MOT-011, KBDL-MOT-012
 - **Specification location:** [motion/foundations.md §6, §5, §7](motion/foundations.md#6-spatial-movement)
-- **Approval status:** `KBDL-MOT-010` and `KBDL-MOT-011` Recommended (new consolidated architecture); `KBDL-MOT-012` Approved (directly restates safety/correctness priority already in `KBDL-PRN-002`)
+- **Approval status:** All three Approved — `KBDL-MOT-010` and `KBDL-MOT-011` per [KBDL-DEC-014](decision-register.md#kbdl-dec-014--kbdl-005-motion-decisions-approved) (decision packet items 4 and 5); `KBDL-MOT-012` directly restates the safety/correctness priority already in `KBDL-PRN-002`, unaffected by this decision
 - **Validation status:** Not verified
-- **Validation method:** Manual review once implemented; project-owner review of the Recommended items (not yet performed).
+- **Validation method:** Manual review once implemented; project-owner review of `KBDL-MOT-010`/`011` (performed, see KBDL-DEC-014).
 - **Validation evidence:** Not verified — no implementation exists yet.
 - **Known limitation:** Exact pixel/percentage movement and scale values are deferred to the Components module.
-- **Related decision:** Not applicable
+- **Related decision:** [KBDL-DEC-014](decision-register.md#kbdl-dec-014--kbdl-005-motion-decisions-approved) (for `KBDL-MOT-010`/`011`)
 - **Notes:** The individual safety-relevant constraints (e.g., destructive actions must not rely on exit animation as confirmation) restate existing approved priorities; the consolidated spatial/choreography architecture is new.
 
 ### Interaction-category motion rules (KBDL-MOT-013 through KBDL-MOT-019)
@@ -654,13 +654,13 @@ The rows below trace KBDL-004's adaptive-theme scope, defined in
 - **Roadmap prompt:** KBDL-005
 - **Requirement ID:** KBDL-MOT-013, KBDL-MOT-014, KBDL-MOT-015, KBDL-MOT-016, KBDL-MOT-017, KBDL-MOT-018, KBDL-MOT-019
 - **Specification location:** [motion/patterns.md §1–§7](motion/patterns.md#1-navigation-and-spatial-continuity)
-- **Approval status:** `KBDL-MOT-013` Recommended (new navigation-motion architecture); `KBDL-MOT-014`, `KBDL-MOT-015`, `KBDL-MOT-016`, `KBDL-MOT-017`, `KBDL-MOT-018`, `KBDL-MOT-019` Approved — each directly restates an already-approved Technical Utility quality, accessibility requirement, locked component-state-clarity rule, or `KBDL-DEC-010` (WCAG 2.2 AA baseline)
+- **Approval status:** All seven Approved — `KBDL-MOT-013` per [KBDL-DEC-014](decision-register.md#kbdl-dec-014--kbdl-005-motion-decisions-approved) (decision packet item 15); `KBDL-MOT-014`, `KBDL-MOT-015`, `KBDL-MOT-016`, `KBDL-MOT-017`, `KBDL-MOT-018`, `KBDL-MOT-019` each directly restate an already-approved Technical Utility quality, accessibility requirement, locked component-state-clarity rule, or `KBDL-DEC-010` (WCAG 2.2 AA baseline), unaffected by this decision
 - **Validation status:** Not verified
-- **Validation method:** Manual review once implemented; project-owner review of `KBDL-MOT-013` (not yet performed).
+- **Validation method:** Manual review once implemented; project-owner review of `KBDL-MOT-013` (performed, see KBDL-DEC-014).
 - **Validation evidence:** Not verified — no implementation exists yet.
 - **Known limitation:** Exact repetition limits (attention motion) and scroll thresholds remain qualitative pending implementation-level review.
-- **Related decision:** `KBDL-DEC-010` (for the media-motion autoplay prohibition and WCAG 2.2 AA baseline)
-- **Notes:** The bounded-repetition limit for attention motion (2–3 repetitions) is a new `Recommended` numeric default within `KBDL-MOT-016`'s otherwise-Approved requirement; see [motion/README.md §10.2](motion/README.md#102-recommended-decisions--ready-for-approval) item 7. `KBDL-MOT-013` maps to [motion decision packet](motion/README.md#10-motion-decision-packet) item 15 (added under KBDL-005-R2, which corrected the packet's initial omission of this requirement).
+- **Related decision:** `KBDL-DEC-010` (for the media-motion autoplay prohibition and WCAG 2.2 AA baseline); [KBDL-DEC-014](decision-register.md#kbdl-dec-014--kbdl-005-motion-decisions-approved) (for `KBDL-MOT-013`)
+- **Notes:** The bounded-repetition limit for attention motion (2–3 repetitions, `KBDL-MOT-029`) is Approved per KBDL-DEC-014, decision packet item 7. `KBDL-MOT-013` maps to [motion decision packet](motion/README.md#10-motion-decision-packet) item 15 (added under KBDL-005-R2, which corrected the packet's initial omission of this requirement; approved under KBDL-005-A1).
 
 ### Theme-transition motion (KBDL-MOT-020)
 
@@ -668,12 +668,12 @@ The rows below trace KBDL-004's adaptive-theme scope, defined in
 - **Roadmap prompt:** KBDL-005
 - **Requirement ID:** KBDL-MOT-020
 - **Specification location:** [motion/patterns.md §8](motion/patterns.md#8-theme-transition-motion)
-- **Approval status:** Recommended (the exact 150–250ms/Standard-easing values are new; the underlying non-blocking, readable, focus-preserving requirements are already `Approved` under `KBDL-THM-012`/`KBDL-THM-012a` and unaffected)
+- **Approval status:** Approved — per [KBDL-DEC-014](decision-register.md#kbdl-dec-014--kbdl-005-motion-decisions-approved) (decision packet item 10); the underlying non-blocking, readable, focus-preserving requirements were already `Approved` under `KBDL-THM-012`/`KBDL-THM-012a` and are unaffected either way
 - **Validation status:** Not applicable — conceptual recommendation, not yet a testable implementation claim
-- **Validation method:** Manual review of the worked example (performed); project-owner review (not yet performed).
+- **Validation method:** Manual review of the worked example (performed); project-owner review (performed, see KBDL-DEC-014).
 - **Validation evidence:** [motion/patterns.md §8](motion/patterns.md#8-theme-transition-motion) — conceptually verified against the already-`Verified` opaque contrast pair (17.17:1, unrelated example) and the KBDL-004 non-blocking/readability requirements; no live implementation has been rendered or measured.
 - **Known limitation:** No intermediate-frame contrast measurement has actually been performed against a live implementation.
-- **Related decision:** Not applicable — pending a future decision-register entry once the project owner reviews the motion decision packet.
+- **Related decision:** [KBDL-DEC-014](decision-register.md#kbdl-dec-014--kbdl-005-motion-decisions-approved).
 - **Notes:** This is the exact item KBDL-004's `KBDL-THM-012a` note deferred to KBDL-005; it does not reopen any approved KBDL-004 theme mapping.
 
 ### Interruption, recovery, and accessibility/performance requirements (KBDL-MOT-021 through KBDL-MOT-027)
@@ -696,12 +696,12 @@ The rows below trace KBDL-004's adaptive-theme scope, defined in
 - **Roadmap prompt:** KBDL-005-R1 (added during remediation to separate new KBDL-005 policy that was previously bundled inside an Approved core requirement's section without its own lifecycle record)
 - **Requirement ID:** KBDL-MOT-028, KBDL-MOT-029, KBDL-MOT-030, KBDL-MOT-031, KBDL-MOT-032, KBDL-MOT-033, KBDL-MOT-034
 - **Specification location:** [motion/foundations.md §7](motion/foundations.md#7-entrance-and-exit-behavior), [motion/patterns.md §4, §5, §6, §10](motion/patterns.md#4-attention-motion), [motion/accessibility-performance.md §1.4](motion/accessibility-performance.md#14-per-category-parity-matrix), [motion/timing-easing.md §4](motion/timing-easing.md#4-conceptual-motion-tokens)
-- **Approval status:** Recommended for all seven — each is new KBDL-005 detail distinct from its already-`Approved` parent core (`KBDL-MOT-012`, `KBDL-MOT-016`, `KBDL-MOT-017`, `KBDL-MOT-018`, `KBDL-MOT-022`, and `KBDL-MOT-026` respectively; `KBDL-MOT-033` has no prior parent, since no earlier decision defines motion tokens)
+- **Approval status:** All seven Approved — per [KBDL-DEC-014](decision-register.md#kbdl-dec-014--kbdl-005-motion-decisions-approved) (decision packet items 6, 7, 8, 9, 11, 12, and 13 respectively); each remains distinct from its already-`Approved` parent core (`KBDL-MOT-012`, `KBDL-MOT-016`, `KBDL-MOT-017`, `KBDL-MOT-018`, `KBDL-MOT-022`, and `KBDL-MOT-026` respectively; `KBDL-MOT-033` has no prior parent, since no earlier decision defines motion tokens)
 - **Validation status:** Not verified (`KBDL-MOT-030`, `KBDL-MOT-031`, `KBDL-MOT-034`); Not applicable (`KBDL-MOT-028`, `KBDL-MOT-029`, `KBDL-MOT-032`, `KBDL-MOT-033` — numerical/documentation/naming recommendations, not yet testable implementation claims)
-- **Validation method:** Manual review once implemented; project-owner review via the [motion decision packet](motion/README.md#10-motion-decision-packet) (not yet performed, items 6–9 and 11–13).
+- **Validation method:** Manual review once implemented; project-owner review via the [motion decision packet](motion/README.md#10-motion-decision-packet) (performed, see KBDL-DEC-014, items 6–9 and 11–13).
 - **Validation evidence:** Not verified — no implementation exists yet; conceptual manual review recorded in [motion/validation.md](motion/validation.md) where applicable.
-- **Known limitation:** These requirements exist specifically because KBDL-005's initial commit (`ea32ce3`) stated each parent core's exact detail (e.g., the 2–3 repetition default, the entrance/exit duration rule) inside an `Approved` section without its own `Recommended` lifecycle record — a mixed-scope defect corrected by KBDL-005-R1.
-- **Related decision:** Not applicable — pending a future decision-register entry once the project owner reviews the motion decision packet.
+- **Known limitation:** Approval is a lifecycle decision, not implementation validation; these values must not be treated as `Verified` until an implementation exists and is measured.
+- **Related decision:** [KBDL-DEC-014](decision-register.md#kbdl-dec-014--kbdl-005-motion-decisions-approved).
 - **Notes:** Splitting these out does not change any duration value, curve, movement range, hierarchy level, safety behavior, reduced-motion behavior, or profile recommendation — only the lifecycle bookkeeping.
 
 ## Notes on Scope
@@ -753,11 +753,11 @@ tokens, component-level theme tokens, framework APIs), or any motion
 timing/easing value — all of which remain `Recommended`/`Not verified`
 or out of scope, per
 [themes/README.md § Theme Decision Packet](themes/README.md#10-theme-decision-packet-approved-under-kbdl-004-a1).
-`MOT` requirements follow the same pattern as `THM`: `Approved` only
-where a requirement directly restates an already-approved KBDL-002
-principle, KBDL-004 theme rule, or `KBDL-DEC-010` motion-safety baseline
-(`KBDL-MOT-001`–`003`, `004`, `012`, `014`–`019`, `021`–`027`);
-`Recommended` where new KBDL-005 policy is introduced — the motion
+`MOT` requirements followed the same pattern as `THM` prior to KBDL-005-A1:
+`Approved` only where a requirement directly restated an already-approved
+KBDL-002 principle, KBDL-004 theme rule, or `KBDL-DEC-010` motion-safety
+baseline (`KBDL-MOT-001`–`003`, `004`, `012`, `014`–`019`, `021`–`027`);
+`Recommended` where new KBDL-005 policy was introduced — the motion
 hierarchy and intensity model (`KBDL-MOT-005`, `006`), the timing/
 duration/easing architecture (`KBDL-MOT-007`–`009`), spatial-movement and
 choreography ranges (`KBDL-MOT-010`, `011`), navigation-motion
@@ -770,17 +770,25 @@ detailed ambient-motion boundaries (`KBDL-MOT-030`), detailed
 scroll-linked-motion boundaries (`KBDL-MOT-031`), the reduced-motion
 substitution matrix (`KBDL-MOT-032`), the conceptual motion-token
 naming architecture (`KBDL-MOT-033`), and profile-level motion-intensity
-adjustments (`KBDL-MOT-034`). These sixteen `Recommended` requirements
-each map to exactly one of the fifteen decisions in the
-[motion decision packet](motion/README.md#10-motion-decision-packet)
-(see [motion/README.md §10.2.1](motion/README.md#1021-recommended-requirement-coverage)
-for the full mapping — `KBDL-MOT-007` and `KBDL-MOT-008` share one
-decision, as one timing system). `KBDL-MOT-006` and `KBDL-MOT-013` were
+adjustments (`KBDL-MOT-034`). `KBDL-MOT-006` and `KBDL-MOT-013` were
 initially documented without a decision-packet row; KBDL-005-R2 added
-packet items 14 and 15 to correct this coverage gap. None of these
-`Recommended` items are implemented or treated as `Approved` until the
-project owner reviews the packet; no decision-register entry has been
-created for KBDL-005, since no such review has yet occurred. KBDL-006
-(Responsive and Accessibility) is locked until KBDL-005 passes
-validation and its proposed motion decisions are approved, and has not
-been started.
+packet items 14 and 15 to correct this coverage gap, completing a
+fifteen-item packet mapping all sixteen `Recommended` requirements (see
+[motion/README.md §10.2.1](motion/README.md#1021-approved-requirement-coverage) —
+`KBDL-MOT-007` and `KBDL-MOT-008` share one decision, as one timing
+system). Under **KBDL-005-A1**, the project owner approved exactly the
+fifteen-item packet, recorded as
+[KBDL-DEC-014](decision-register.md#kbdl-dec-014--kbdl-005-motion-decisions-approved),
+promoting all sixteen requirements above from `Recommended` to
+`Approved`. This approval does not extend to any item in
+[motion/README.md §10.3](motion/README.md#103-unresolved-or-not-approval-ready)
+(exact component-specific values, device-performance detection,
+animation-library/rendering-technology selection, CSS/JSON/JavaScript
+token formats, browser-support policy, exact scroll thresholds, exact
+quantitative motion-hazard thresholds), any unresolved KBDL-004 theme
+value, or any KBDL-006-or-later content — all of which remain
+`Recommended`/`Not verified`/`Deferred` or out of scope. Approval does
+not itself constitute validation — every promoted requirement's
+Validation status above is unchanged. KBDL-006 (Responsive and
+Accessibility) remains locked until KBDL-005 passes validation, and has
+not been started.

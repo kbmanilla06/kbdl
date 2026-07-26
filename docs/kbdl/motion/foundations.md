@@ -1,17 +1,20 @@
 # KBDL Motion — Foundations
 
-Lifecycle status: `Approved` for the structural requirement that every
-category below document purpose, intensity, transformations,
-interruption, reduced-motion, performance, and profile guidance
-(`KBDL-MOT-004`), and for entrance/exit's safety core (`KBDL-MOT-012`:
-destructive actions must not rely on exit animation as confirmation;
-removed content must not remain focusable); `Recommended` for the
-specific hierarchy levels (`KBDL-MOT-005`), intensity model
-(`KBDL-MOT-006`), spatial-movement ranges (`KBDL-MOT-010`), choreography
-guidance (`KBDL-MOT-011`), and the entrance-versus-exit duration
-relationship (`KBDL-MOT-028`) introduced as new KBDL-005 policy — see
-[motion/README.md §9](README.md#9-normative-requirements) for exact
-per-requirement status.
+**Updated under KBDL-005-A1.** Lifecycle status: `Approved` throughout.
+The structural requirement that every category below document purpose,
+intensity, transformations, interruption, reduced-motion, performance,
+and profile guidance (`KBDL-MOT-004`), and entrance/exit's safety core
+(`KBDL-MOT-012`: destructive actions must not rely on exit animation as
+confirmation; removed content must not remain focusable), were `Approved`
+from the start. The specific hierarchy levels (`KBDL-MOT-005`), intensity
+model (`KBDL-MOT-006`), spatial-movement ranges (`KBDL-MOT-010`),
+choreography guidance (`KBDL-MOT-011`), and the entrance-versus-exit
+duration relationship (`KBDL-MOT-028`) are now `Approved` per the project
+owner's approval of
+[KBDL-DEC-014](../decision-register.md#kbdl-dec-014--kbdl-005-motion-decisions-approved) —
+see [motion/README.md §9](README.md#9-normative-requirements) for exact
+per-requirement status. Approval does not constitute implementation
+validation — see [validation.md](validation.md).
 
 Return to the [motion index](README.md) · [specification index](../README.md).
 

@@ -1,18 +1,24 @@
 # KBDL Motion — Patterns, Profiles, and Conformance
 
-Lifecycle status: mixed — see each section's own status line and
+**Updated under KBDL-005-A1.** Lifecycle status: `Approved` throughout —
+see each section's own status line and
 [motion/README.md §9](README.md#9-normative-requirements) for exact
 `KBDL-MOT-###` wording. Sections restating an already-`Approved`
-principle or KBDL-004 rule are `Approved`; sections introducing new
-KBDL-005 policy (exact durations, distances, repetition counts) are
-`Recommended` pending [motion/README.md §10](README.md#10-motion-decision-packet).
+principle or KBDL-004 rule were `Approved` from the start; sections
+introducing new KBDL-005 policy (exact durations, distances, repetition
+counts) are now `Approved` per the project owner's approval of
+[KBDL-DEC-014](../decision-register.md#kbdl-dec-014--kbdl-005-motion-decisions-approved)
+via [motion/README.md §10](README.md#10-motion-decision-packet). No
+implementation behavior is thereby `Verified` — see
+[validation.md](validation.md).
 
 Return to the [motion index](README.md) · [specification index](../README.md).
 
 ## 1. Navigation and Spatial Continuity
 
-Status: `Recommended` (`KBDL-MOT-013`), `User-provided` provenance, `Not
-verified`.
+Status: `Approved` (`KBDL-MOT-013`, per
+[KBDL-DEC-014](../decision-register.md#kbdl-dec-014--kbdl-005-motion-decisions-approved),
+decision packet item 15), `User-provided` provenance, `Not verified`.
 
 Conceptual guidance for route changes, step-based flows, drill-down and
 back, side panels, tabs/views, master-detail layouts, modal transitions,
@@ -117,7 +123,8 @@ module.
 Status: `Approved` (`KBDL-MOT-016`, directly restating the locked
 component-state-clarity rule and Accessibility by Default), `Confirmed`
 provenance, `Not verified`. The exact repetition limit below is a
-separate requirement, `KBDL-MOT-029`, `Recommended` pending approval.
+separate requirement, `KBDL-MOT-029`, `Approved` per
+[KBDL-DEC-014](../decision-register.md#kbdl-dec-014--kbdl-005-motion-decisions-approved).
 
 Covers new notification, changed value, validation error, success
 acknowledgment, warning, critical alert, background update, incoming
@@ -128,9 +135,9 @@ content, and unread state.
 - Motion must not be the only indicator of an attention-worthy state —
   pair with color, icon, label, or badge.
 - Attention motion must stop, never repeat indefinitely.
-- Repetition must be bounded — **recommended limit: 2–3 repetitions**,
-  then hold a static emphasized state (`Recommended`, pending approval
-  per [motion/README.md §10.2](README.md#102-recommended-decisions--ready-for-approval)
+- Repetition must be bounded — **limit: 2–3 repetitions**, then hold a
+  static emphasized state (`Approved` per
+  [motion/README.md §10.2](README.md#102-approved-decisions-kbdl-005-a1)
   item 7).
 - Critical alerts must use stable, visible static information as the
   primary cue, with motion as a secondary reinforcement only.
@@ -150,8 +157,8 @@ content, and unread state.
 Status: `Approved` (`KBDL-MOT-017`, directly restating the locked Motion
 Purpose rule and the already-`Approved` reduced-motion requirement
 `KBDL-THM-012a`), `Confirmed` provenance, `Not verified`. The detailed
-boundaries below are a separate requirement, `KBDL-MOT-030`,
-`Recommended` pending approval.
+boundaries below are a separate requirement, `KBDL-MOT-030`, `Approved`
+per [KBDL-DEC-014](../decision-register.md#kbdl-dec-014--kbdl-005-motion-decisions-approved).
 
 Covers decorative background movement, floating elements, slowly
 changing gradients, animated illustrations, live data indicators, loops,
@@ -187,8 +194,8 @@ Status: `Approved` (`KBDL-MOT-018`, directly restating the accessibility
 requirement that content remain accessible without script/animation, and
 the reduced-motion requirement), `Confirmed` provenance, `Not verified`.
 The detailed boundaries below (bounded parallax, no replay on small
-scroll changes) are a separate requirement, `KBDL-MOT-031`,
-`Recommended` pending approval.
+scroll changes) are a separate requirement, `KBDL-MOT-031`, `Approved`
+per [KBDL-DEC-014](../decision-register.md#kbdl-dec-014--kbdl-005-motion-decisions-approved).
 
 Covers reveal-on-entry, progress indicators, sticky transformations,
 parallax, scrollytelling, section transitions, and media progression.
@@ -258,11 +265,12 @@ Detailed media-component implementation remains out of scope.
 
 ## 8. Theme-Transition Motion
 
-Status: `Recommended` (`KBDL-MOT-020`) for the exact duration/easing
-recommendation below; the underlying non-blocking, readable,
-focus-preserving requirements are already `Approved`
-(`KBDL-THM-012`, `KBDL-THM-012a`) and unaffected regardless of this
-section's approval.
+Status: `Approved` (`KBDL-MOT-020`, per
+[KBDL-DEC-014](../decision-register.md#kbdl-dec-014--kbdl-005-motion-decisions-approved))
+for the exact duration/easing recommendation below; the underlying
+non-blocking, readable, focus-preserving requirements were already
+`Approved` (`KBDL-THM-012`, `KBDL-THM-012a`) and are unaffected by this
+section's status either way.
 
 Builds on the approved conceptual rules in
 [themes/adaptation.md §7](../themes/adaptation.md#7-theme-transition-guidance).
@@ -360,8 +368,8 @@ error during motion, and reduced-performance fallback.
 Status: `Approved` (`KBDL-MOT-026`, directly restating `KBDL-PRN-007` —
 profiles must share one motion architecture, adjusting only emphasis).
 The specific per-profile "may emphasize"/"must preserve" adjustments
-below are a separate requirement, `KBDL-MOT-034`, `Recommended` pending
-approval.
+below are a separate requirement, `KBDL-MOT-034`, `Approved` per
+[KBDL-DEC-014](../decision-register.md#kbdl-dec-014--kbdl-005-motion-decisions-approved).
 
 ### 10.1 Showcase
 

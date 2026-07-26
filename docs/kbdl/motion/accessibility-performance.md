@@ -1,16 +1,19 @@
 # KBDL Motion — Reduced Motion, Safety, Performance, and Input Methods
 
-Lifecycle status: `Approved` for the reduced-motion/no-motion parity
-core requirement, motion-safety prohibitions, and the performance and
-input-method requirements below (each directly restates an already-
-`Approved` KBDL-002 principle, `KBDL-DEC-010`, or `KBDL-THM-012a`); see
+**Updated under KBDL-005-A1.** Lifecycle status: `Approved` throughout.
+The reduced-motion/no-motion parity core requirement, motion-safety
+prohibitions, and the performance and input-method requirements below
+(each directly restates an already-`Approved` KBDL-002 principle,
+`KBDL-DEC-010`, or `KBDL-THM-012a`) were `Approved` from the start; see
 [motion/README.md §9](README.md#9-normative-requirements)
 (`KBDL-MOT-022` through `KBDL-MOT-025`) for exact wording. The detailed
 per-category substitution matrix in [§1.4](#14-per-category-parity-matrix)
-is separate new KBDL-005 documentation, `Recommended` (`KBDL-MOT-032`),
-pending project-owner approval via
-[motion/README.md §10](README.md#10-motion-decision-packet). Per-pattern
-matrix entries are `Not verified` until implementation exists.
+is separate KBDL-005 documentation, now `Approved` (`KBDL-MOT-032`) per
+the project owner's approval of
+[KBDL-DEC-014](../decision-register.md#kbdl-dec-014--kbdl-005-motion-decisions-approved)
+via [motion/README.md §10](README.md#10-motion-decision-packet).
+Per-pattern matrix entries remain `Not verified` until implementation
+exists — approval is a lifecycle decision, not validation evidence.
 
 Return to the [motion index](README.md) · [specification index](../README.md).
 

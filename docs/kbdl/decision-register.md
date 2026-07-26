@@ -354,6 +354,98 @@ rather than invented, per the source-of-truth rules in this prompt.
 - **Superseded decision:** None.
 - **Review date:** Not applicable.
 
+### KBDL-DEC-014 — KBDL-005 motion decisions approved
+
+- **Date:** 2026-07-26
+- **Status:** Approved
+- **Decision owner:** Project owner. A prompt introducing this decision
+  (KBDL-005-A1) asserted that the project owner had already responded
+  "approve motion decisions," but no such message existed anywhere in
+  the actual implementing conversation. This discrepancy was flagged
+  directly to the project owner, who was then asked a direct, structured
+  confirmation question ("Yes, approve motion decisions" vs.
+  alternatives); the project owner selected "Yes, approve motion
+  decisions." This in-conversation selection — not the prompt's original
+  unverified claim — is the sole evidentiary basis for this decision,
+  consistent with the standard established in
+  [KBDL-DEC-012](#kbdl-dec-012--foundation-decision-packet-approved) and
+  [KBDL-DEC-013](#kbdl-dec-013--kbdl-004-theme-decisions-approved).
+- **Context:** KBDL-005 (as corrected by KBDL-005-R1/R2) proposed fifteen
+  `Recommended` motion decisions in
+  [motion/README.md §10.2](motion/README.md#102-approved-decisions-kbdl-005-a1) —
+  the five-level motion hierarchy, the timing architecture and duration
+  classes/values, easing categories and exact curves, movement-distance
+  and scale ranges, stagger and overlap guidance, the entrance-versus-exit
+  duration relationship, attention repetition limits, ambient-motion
+  boundaries, scroll-linked-motion boundaries, theme-transition duration
+  and easing, the reduced-motion substitution matrix, the motion-token
+  naming architecture, profile-level motion-intensity adjustments, the
+  multi-factor motion-intensity model, and the navigation-motion
+  architecture — none of which carried implementation authority until
+  approved, per [conventions.md §1.1](conventions.md#11-lifecycle--approval-status).
+- **Decision:** The project owner approved exactly the fifteen items
+  listed above, and only those fifteen items, as documented in
+  [motion/README.md §10.2](motion/README.md#102-approved-decisions-kbdl-005-a1)
+  and its coverage table in
+  [motion/README.md §10.2.1](motion/README.md#1021-approved-requirement-coverage).
+  This approval promotes exactly the sixteen requirements mapped to
+  those fifteen decisions —
+  `KBDL-MOT-005`, `KBDL-MOT-006`, `KBDL-MOT-007`, `KBDL-MOT-008`,
+  `KBDL-MOT-009`, `KBDL-MOT-010`, `KBDL-MOT-011`, `KBDL-MOT-013`,
+  `KBDL-MOT-020`, `KBDL-MOT-028`, `KBDL-MOT-029`, `KBDL-MOT-030`,
+  `KBDL-MOT-031`, `KBDL-MOT-032`, `KBDL-MOT-033`, `KBDL-MOT-034` — and
+  does **not** extend to: exact component-specific movement, scale, or
+  stagger values; exact concurrency limits; device-performance detection
+  strategy; animation-library or rendering-technology selection; CSS,
+  JSON, or JavaScript motion-token formats; component-specific animation
+  specifications; browser-support policy; exact scroll thresholds; exact
+  quantitative motion-hazard or flashing thresholds (all deferred to
+  KBDL-006 or later, implementation-layer, or otherwise out of scope for
+  this design-language specification); any unresolved KBDL-004 theme
+  value; and any KBDL-006-or-later content. This approval does **not**
+  change any validation status — items marked `Not verified` before this
+  decision remain `Not verified` after it; approval (lifecycle authority)
+  and validation (evidence a claim was checked) are independent
+  dimensions per [conventions.md §1](conventions.md#1-status-labels).
+- **Rationale:** The project owner accepted that the fifteen decisions
+  were fully specified, internally consistent (per the numerical- and
+  reduced-motion-parity reviews in
+  [motion/validation.md](motion/validation.md)), and completely mapped to
+  their sixteen underlying requirements, with no requirement left
+  unaccounted for after KBDL-005-R2 corrected the packet's initial
+  coverage gap.
+- **Alternatives considered:** "Approve with changes" (rejected — no
+  specific item was flagged for change) and "Revise" (rejected — no item
+  required rework before approval).
+- **Trade-offs:** None beyond those already documented per item in
+  [motion/README.md §10.2](motion/README.md#102-approved-decisions-kbdl-005-a1).
+- **Affected requirements:** `KBDL-MOT-005`, `KBDL-MOT-006`,
+  `KBDL-MOT-007`, `KBDL-MOT-008`, `KBDL-MOT-009`, `KBDL-MOT-010`,
+  `KBDL-MOT-011`, `KBDL-MOT-013`, `KBDL-MOT-020`, `KBDL-MOT-028`,
+  `KBDL-MOT-029`, `KBDL-MOT-030`, `KBDL-MOT-031`, `KBDL-MOT-032`,
+  `KBDL-MOT-033`, `KBDL-MOT-034` (lifecycle status changed from
+  `Recommended` to `Approved`).
+- **Affected modules:** MOT.
+- **Accessibility impact:** None beyond what was already evaluated in
+  KBDL-005/R1/R2; no new accessibility rule, safety threshold, or
+  reduced-motion behavior was introduced by this approval, and the
+  deferred quantitative safety thresholds remain unresolved rather than
+  being implicitly endorsed.
+- **Motion impact:** This decision is itself the motion-approval record;
+  it authorizes the fifteen design-language decisions listed above and
+  no others.
+- **Responsive impact:** Not applicable. KBDL-006 remains locked until
+  KBDL-005 passes validation, and is not started by this approval.
+- **Implementation impact:** `motion/README.md`, `motion/foundations.md`,
+  `motion/timing-easing.md`, `motion/patterns.md`,
+  `motion/accessibility-performance.md`, `motion/validation.md`,
+  `traceability-matrix.md`, and `README.md` were updated to reflect the
+  `Approved` lifecycle status of these sixteen requirements, while
+  preserving every `Recommended`/`Not verified`/`Deferred` marking for
+  the explicitly excluded items.
+- **Superseded decision:** None.
+- **Review date:** Not applicable.
+
 ## Unresolved Metadata
 
 The following metadata could not be verified from available sources and is

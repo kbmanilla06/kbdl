@@ -96,15 +96,18 @@ Manual review of every exact value proposed in this module confirms:
 - Reduced-motion replacements are explicitly defined for every pattern
   in the [parity matrix](accessibility-performance.md#14-per-category-parity-matrix)
   and the [motion pattern matrix](patterns.md#12-motion-pattern-matrix).
-- No exact value in this module is marked `Approved` — every exact
-  duration, curve, distance, scale, stagger, or repetition value is
-  `Recommended`, pending
-  [motion/README.md §10](README.md#10-motion-decision-packet).
+- As of the project owner's approval of
+  [KBDL-DEC-014](../decision-register.md#kbdl-dec-014--kbdl-005-motion-decisions-approved)
+  (KBDL-005-A1), every exact duration, curve, distance, scale, stagger,
+  and repetition value mapped to the fifteen-item
+  [motion decision packet](README.md#10-motion-decision-packet) is
+  `Approved`; approval is a lifecycle decision, not implementation
+  evidence, so no value is thereby marked `Verified`.
 - No implementation-level performance claim is marked `Verified` — this
   module contains no implementation to measure.
 
 **Result:** Passed — no numerical inconsistency found; no value
-incorrectly marked `Approved` or `Verified`.
+incorrectly marked `Verified` without implementation evidence.
 
 ## 3. Reduced-Motion Matrix Review (performed)
 
@@ -203,14 +206,28 @@ passing until an implementation exists and is measured:
   and `KBDL-MOT-013` (navigation-motion architecture) — neither of which
   had a decision row. KBDL-005-R2 added packet items 14 and 15 for these
   two requirements and added the
-  [coverage table](README.md#1021-recommended-requirement-coverage) in
-  [motion/README.md §10.2.1](README.md#1021-recommended-requirement-coverage).
+  [coverage table](README.md#1021-approved-requirement-coverage) in
+  [motion/README.md §10.2.1](README.md#1021-approved-requirement-coverage).
   Re-review now confirms: all sixteen `Recommended`
   `KBDL-MOT-###` requirements (`005`–`011`, `013`, `020`, `028`–`034`)
   map to exactly one of the fifteen approval decisions; no lifecycle or
   validation status was changed; no motion policy (duration, curve,
   movement range, hierarchy level, safety behavior, reduced-motion
   behavior, or profile recommendation) was changed.
+- Approval-recording review (KBDL-005-A1) — the project owner's approval
+  of the fifteen-item motion decision packet was recorded as
+  [KBDL-DEC-014](../decision-register.md#kbdl-dec-014--kbdl-005-motion-decisions-approved).
+  Exactly the sixteen requirements mapped in
+  [motion/README.md §10.2.1](README.md#1021-approved-requirement-coverage)
+  (`KBDL-MOT-005`–`011`, `013`, `020`, `028`–`034`) were promoted from
+  `Recommended` to `Approved`, each citing `KBDL-DEC-014` as its approval
+  reference. Confirmed: no validation status changed (every promoted
+  requirement remains `Not verified`/`Not applicable` at the
+  implementation level); no motion policy content (duration, curve,
+  movement range, hierarchy level, safety behavior, reduced-motion
+  behavior, or profile recommendation) changed; every exclusion in
+  [motion/README.md §10.3](README.md#103-unresolved-or-not-approval-ready)
+  remains outside approval; and KBDL-006 was not started.
 
 ## 7. Traceability
 

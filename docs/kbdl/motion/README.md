@@ -1,19 +1,30 @@
 # KBDL Motion — Expressive Motion Language
 
-Lifecycle status: mixed. `Approved` only for the terminology, identity
-translation, purpose model, and category-completeness structure defined
-below, where each directly restates an already-`Approved` KBDL-002
-principle, KBDL-004 theme rule, or the motion-safety baseline
-(`KBDL-DEC-010`) — see [§9](#9-normative-requirements) for exact
-requirement-level status. `Recommended` for the five-level motion
-hierarchy, the intensity model, and every **exact** duration, easing
-curve, distance, scale, stagger, repetition default, substitution-matrix
-detail, token-naming architecture, profile-level intensity adjustment,
-and pattern default proposed in this module — `User-provided`
-provenance, `Not verified`/`Not applicable` validation, pending
-project-owner approval via [§10](#10-motion-decision-packet). No
-`Recommended` value in this module authorizes implementation on its
-own — see [conventions.md §1.1](../conventions.md#11-lifecycle--approval-status).
+**Updated under KBDL-005-A1.** Lifecycle status: mixed. `Approved` for
+the terminology, identity translation, purpose model, and
+category-completeness structure defined below, where each directly
+restates an already-`Approved` KBDL-002 principle, KBDL-004 theme rule,
+or the motion-safety baseline (`KBDL-DEC-010`) — see
+[§9](#9-normative-requirements) for exact requirement-level status.
+`Approved` also, per the project owner's approval of
+[KBDL-DEC-014](../decision-register.md#kbdl-dec-014--kbdl-005-motion-decisions-approved),
+for the fifteen motion decisions in
+[§10.2](#102-approved-decisions-kbdl-005-a1) and their
+sixteen mapped requirements: the five-level motion hierarchy, the
+intensity model, the timing architecture and duration classes/values,
+easing categories/curves, movement-distance and scale ranges,
+stagger/overlap guidance, the entrance-versus-exit relationship,
+attention-repetition limits, ambient- and scroll-linked-motion
+boundaries, theme-transition duration/easing, the reduced-motion
+substitution matrix, the motion-token naming architecture, profile-level
+intensity adjustments, and the navigation-motion architecture. `Not
+verified`/`Not applicable` validation status for every one of these —
+approval is a lifecycle decision, not validation evidence; see
+[validation.md](validation.md). Every quantitative or implementation-layer
+item listed in [§10.3](#103-unresolved-or-not-approval-ready) remains
+`Recommended`/`Not verified`/`Deferred` and outside this approval. No
+value in this module authorizes an *implementation* claim — see
+[conventions.md §1.1](../conventions.md#11-lifecycle--approval-status).
 
 Return to the [specification index](../README.md).
 
@@ -351,17 +362,18 @@ requirement does not make its implementation behavior `Verified` — see
   how much visual emphasis any motion pattern may receive; Level 4
   (Exceptional) motion **must** require explicit project-owner approval
   before use.
-  - Lifecycle status: Recommended (new KBDL-005 architecture; the
-    concept that emphasis must be governed by a hierarchy is consistent
-    with `KBDL-PRN-002`, but the specific five-level structure and names
-    are new policy). Provenance: User-provided. Validation status: Not
-    verified.
+  - Lifecycle status: Approved (per
+    [KBDL-DEC-014](../decision-register.md#kbdl-dec-014--kbdl-005-motion-decisions-approved);
+    the specific five-level structure and names were new KBDL-005 policy
+    until this approval). Provenance: User-provided. Validation status:
+    Not verified.
   - Related principle: `KBDL-PRN-002`, `KBDL-PRN-004`.
   - Applicable profiles: Showcase, Precision, Flow.
   - Specification location: [foundations.md §3](foundations.md#3-motion-hierarchy).
   - Related future modules: Components, Project profiles (`PRO`).
   - Validation method: Manual review of Exceptional-level usage once
-    implemented; project-owner review (not yet performed).
+    implemented; project-owner review (performed, see
+    [KBDL-DEC-014](../decision-register.md#kbdl-dec-014--kbdl-005-motion-decisions-approved)).
 
 - **KBDL-MOT-006** — Motion intensity **must** be assessed using the
   multi-factor model in [foundations.md §4](foundations.md#4-motion-intensity)
@@ -369,51 +381,59 @@ requirement does not make its implementation behavior `Verified` — see
   count, stagger, repetition, screen coverage, input independence,
   contrast change, directional complexity); duration alone **must not**
   be treated as a complete intensity measure.
-  - Lifecycle status: Recommended (new KBDL-005 model). Provenance:
-    User-provided. Validation status: Not verified.
+  - Lifecycle status: Approved (per
+    [KBDL-DEC-014](../decision-register.md#kbdl-dec-014--kbdl-005-motion-decisions-approved),
+    decision packet item 14). Provenance: User-provided. Validation
+    status: Not verified.
   - Related principle: `KBDL-PRN-002`.
   - Applicable profiles: Showcase, Precision, Flow.
   - Specification location: [foundations.md §4](foundations.md#4-motion-intensity).
   - Related future modules: Components.
   - Validation method: Manual review of intensity assessments once
-    implemented; project-owner review (not yet performed).
+    implemented; project-owner review (performed, see
+    [KBDL-DEC-014](../decision-register.md#kbdl-dec-014--kbdl-005-motion-decisions-approved)).
 
 - **KBDL-MOT-007** — The semantic timing classes in
   [timing-easing.md §1](timing-easing.md#1-timing-architecture) **must**
   be used for any KBDL motion; required interaction **must not** wait for
   decorative motion to complete.
-  - Lifecycle status: Recommended (new KBDL-005 timing model; the
-    underlying rule that "required interaction must not wait for
-    decorative motion" restates `KBDL-PRN-002`/§4's task-completion
-    priority and is itself Approved, but the specific timing-class names
-    and ranges are new). Provenance: User-provided. Validation status:
-    Not verified.
+  - Lifecycle status: Approved (per
+    [KBDL-DEC-014](../decision-register.md#kbdl-dec-014--kbdl-005-motion-decisions-approved),
+    decision packet item 2, together with `KBDL-MOT-008`, as one timing
+    system). Provenance: User-provided. Validation status: Not verified.
   - Related principle: `KBDL-PRN-002`.
   - Applicable profiles: Showcase, Precision, Flow.
   - Specification location: [timing-easing.md §1](timing-easing.md#1-timing-architecture).
   - Related future modules: Components.
   - Validation method: Manual review of timing-class usage once
-    implemented; project-owner review (not yet performed).
+    implemented; project-owner review (performed, see
+    [KBDL-DEC-014](../decision-register.md#kbdl-dec-014--kbdl-005-motion-decisions-approved)).
 
-- **KBDL-MOT-008** — The exact duration recommendations in
-  [timing-easing.md §2](timing-easing.md#2-duration-recommendations)
-  **must not** be treated as `Approved` until the project owner approves
-  them via [§10](#10-motion-decision-packet).
-  - Lifecycle status: Recommended. Provenance: User-provided. Validation
+- **KBDL-MOT-008** — KBDL projects **must** use the exact duration
+  recommendations in
+  [timing-easing.md §2](timing-easing.md#2-duration-recommendations),
+  approved via [§10](#10-motion-decision-packet).
+  - Lifecycle status: Approved (per
+    [KBDL-DEC-014](../decision-register.md#kbdl-dec-014--kbdl-005-motion-decisions-approved),
+    decision packet item 2, together with `KBDL-MOT-007`, as one timing
+    system). Provenance: User-provided. Validation
     status: Not applicable (a numerical recommendation, not yet a
     testable implementation claim).
   - Related principle: `KBDL-PRN-002`.
   - Applicable profiles: Showcase, Precision, Flow.
   - Specification location: [timing-easing.md §2](timing-easing.md#2-duration-recommendations).
   - Related future modules: Components.
-  - Validation method: Project-owner review (not yet performed); manual
-    implementation review once an implementation exists.
+  - Validation method: Project-owner review (performed, see
+    [KBDL-DEC-014](../decision-register.md#kbdl-dec-014--kbdl-005-motion-decisions-approved));
+    manual implementation review once an implementation exists.
 
 - **KBDL-MOT-009** — The semantic easing categories and exact curves in
   [timing-easing.md §3](timing-easing.md#3-easing-architecture) **must**
   remain framework-independent and **must** each be evaluated for
   interruption and reversal behavior before use.
-  - Lifecycle status: Recommended. Provenance: User-provided. Validation
+  - Lifecycle status: Approved (per
+    [KBDL-DEC-014](../decision-register.md#kbdl-dec-014--kbdl-005-motion-decisions-approved),
+    decision packet item 3). Provenance: User-provided. Validation
     status: Not applicable (conceptual review only; no implementation
     exists).
   - Related principle: `KBDL-PRN-002`.
@@ -422,36 +442,41 @@ requirement does not make its implementation behavior `Verified` — see
   - Related future modules: Components.
   - Validation method: Manual conceptual review (performed, see
     [timing-easing.md §3](timing-easing.md#3-easing-architecture));
-    project-owner approval (not yet performed).
+    project-owner approval (performed, see
+    [KBDL-DEC-014](../decision-register.md#kbdl-dec-014--kbdl-005-motion-decisions-approved)).
 
 - **KBDL-MOT-010** — Spatial movement **must** follow the constraints in
   [foundations.md §6](foundations.md#6-spatial-movement) — movement
   direction must correspond to spatial or structural meaning, large
   movement must remain rare, and parallax must reduce or disable under
   reduced motion.
-  - Lifecycle status: Recommended (the individual constraints extend
-    already-Approved principles and theme rules, but the consolidated
-    spatial-movement architecture is new KBDL-005 policy). Provenance:
+  - Lifecycle status: Approved (per
+    [KBDL-DEC-014](../decision-register.md#kbdl-dec-014--kbdl-005-motion-decisions-approved),
+    decision packet item 4). Provenance:
     User-provided. Validation status: Not verified.
   - Related principle: `KBDL-PRN-004`; `KBDL-THM-012a` (reduced motion).
   - Applicable profiles: Showcase, Precision, Flow.
   - Specification location: [foundations.md §6](foundations.md#6-spatial-movement).
   - Related future modules: Components.
   - Validation method: Manual review once implemented; project-owner
-    review (not yet performed).
+    review (performed, see
+    [KBDL-DEC-014](../decision-register.md#kbdl-dec-014--kbdl-005-motion-decisions-approved)).
 
 - **KBDL-MOT-011** — Choreography **must** reflect hierarchy — primary
   state change **must** lead secondary decoration, and stagger **must
   not** create excessive cumulative delay, per
   [foundations.md §5](foundations.md#5-choreography-and-sequencing).
-  - Lifecycle status: Recommended. Provenance: User-provided. Validation
+  - Lifecycle status: Approved (per
+    [KBDL-DEC-014](../decision-register.md#kbdl-dec-014--kbdl-005-motion-decisions-approved),
+    decision packet item 5). Provenance: User-provided. Validation
     status: Not verified.
   - Related principle: `KBDL-PRN-004`, `KBDL-PRN-002`.
   - Applicable profiles: Showcase, Precision, Flow.
   - Specification location: [foundations.md §5](foundations.md#5-choreography-and-sequencing).
   - Related future modules: Components.
   - Validation method: Manual review once implemented; project-owner
-    review (not yet performed).
+    review (performed, see
+    [KBDL-DEC-014](../decision-register.md#kbdl-dec-014--kbdl-005-motion-decisions-approved)).
 
 - **KBDL-MOT-012** — Destructive or safety-critical actions **must not**
   rely on exit animation as confirmation; removed content **must not**
@@ -472,14 +497,17 @@ requirement does not make its implementation behavior `Verified` — see
   structure and **must not** delay access to required content or disrupt
   focus location, per
   [patterns.md §1](patterns.md#1-navigation-and-spatial-continuity).
-  - Lifecycle status: Recommended. Provenance: User-provided. Validation
+  - Lifecycle status: Approved (per
+    [KBDL-DEC-014](../decision-register.md#kbdl-dec-014--kbdl-005-motion-decisions-approved),
+    decision packet item 15). Provenance: User-provided. Validation
     status: Not verified.
   - Related principle: `KBDL-PRN-002`, `KBDL-PRN-004`.
   - Applicable profiles: Showcase, Precision, Flow.
   - Specification location: [patterns.md §1](patterns.md#1-navigation-and-spatial-continuity).
   - Related future modules: Components (`CMP`, navigation components).
   - Validation method: Manual review once implemented; project-owner
-    review (not yet performed).
+    review (performed, see
+    [KBDL-DEC-014](../decision-register.md#kbdl-dec-014--kbdl-005-motion-decisions-approved)).
 
 - **KBDL-MOT-014** — Loading and progress motion **must not** imply
   progress that is not occurring, **must** stop when loading ends, and
@@ -579,11 +607,12 @@ requirement does not make its implementation behavior `Verified` — see
   approved, **must not** reopen any approved KBDL-004 theme mapping, and
   **must** continue to satisfy every KBDL-004 theme-transition
   requirement (`KBDL-THM-012`, `KBDL-THM-012a`).
-  - Lifecycle status: Recommended (the exact duration/easing values are
-    new; the underlying non-blocking, readable, focus-preserving
-    requirements are already `Approved` under `KBDL-THM-012`/`012a` and
-    unaffected). Provenance: User-provided. Validation status: Not
-    verified.
+  - Lifecycle status: Approved (per
+    [KBDL-DEC-014](../decision-register.md#kbdl-dec-014--kbdl-005-motion-decisions-approved),
+    decision packet item 10; the underlying non-blocking, readable,
+    focus-preserving requirements were already `Approved` under
+    `KBDL-THM-012`/`012a` and are unaffected). Provenance: User-provided.
+    Validation status: Not verified.
   - Related principle: `KBDL-THM-012`, `KBDL-THM-012a`.
   - Applicable profiles: Showcase, Precision, Flow.
   - Specification location: [patterns.md §8](patterns.md#8-theme-transition-motion).
@@ -591,7 +620,8 @@ requirement does not make its implementation behavior `Verified` — see
     now addressed).
   - Validation method: Manual review of the worked example (performed,
     see [patterns.md §8](patterns.md#8-theme-transition-motion));
-    project-owner review (not yet performed).
+    project-owner review (performed, see
+    [KBDL-DEC-014](../decision-register.md#kbdl-dec-014--kbdl-005-motion-decisions-approved)).
 
 - **KBDL-MOT-021** — Motion **must** resolve to a valid state after
   interruption, cancellation, replacement, or navigation away; interrupted
@@ -699,12 +729,14 @@ requirement does not make its implementation behavior `Verified` — see
 
 - **KBDL-MOT-028** — Exits **should** use a duration equal to or shorter
   than their paired entrance's duration, per
-  [§10.2](#102-recommended-decisions--ready-for-approval) item 6; this is
+  [§10.2](#102-approved-decisions-kbdl-005-a1) item 6; this is
   new KBDL-005 timing policy, distinct from `KBDL-MOT-012`'s
   already-`Approved` safety core (destructive actions must not rely on
   exit animation as confirmation; removed content must not remain
   focusable), which is unaffected by this requirement's status.
-  - Lifecycle status: Recommended. Provenance: User-provided. Validation
+  - Lifecycle status: Approved (per
+    [KBDL-DEC-014](../decision-register.md#kbdl-dec-014--kbdl-005-motion-decisions-approved),
+    decision packet item 6). Provenance: User-provided. Validation
     status: Not applicable (a timing-relationship recommendation, not
     yet a testable implementation claim).
   - Related principle: `KBDL-MOT-012`, `KBDL-MOT-008`.
@@ -712,24 +744,28 @@ requirement does not make its implementation behavior `Verified` — see
   - Specification location: [foundations.md §7](foundations.md#7-entrance-and-exit-behavior).
   - Related future modules: Components.
   - Validation method: Manual review once implemented; project-owner
-    review (not yet performed).
+    review (performed, see
+    [KBDL-DEC-014](../decision-register.md#kbdl-dec-014--kbdl-005-motion-decisions-approved)).
 
 - **KBDL-MOT-029** — Attention motion **should** repeat no more than 2–3
   times before holding a static emphasized state, per
-  [§10.2](#102-recommended-decisions--ready-for-approval) item 7; this
+  [§10.2](#102-approved-decisions-kbdl-005-a1) item 7; this
   exact repetition default is new KBDL-005 policy, distinct from
   `KBDL-MOT-016`'s already-`Approved` core (attention motion must not be
   the sole indicator, must stop rather than repeat indefinitely, and
   must not steal focus), which is unaffected by this requirement's
   status.
-  - Lifecycle status: Recommended. Provenance: User-provided. Validation
+  - Lifecycle status: Approved (per
+    [KBDL-DEC-014](../decision-register.md#kbdl-dec-014--kbdl-005-motion-decisions-approved),
+    decision packet item 7). Provenance: User-provided. Validation
     status: Not applicable.
   - Related principle: `KBDL-MOT-016`.
   - Applicable profiles: Showcase, Precision, Flow.
   - Specification location: [patterns.md §4](patterns.md#4-attention-motion).
   - Related future modules: Components (feedback).
   - Validation method: Manual review once implemented; project-owner
-    review (not yet performed).
+    review (performed, see
+    [KBDL-DEC-014](../decision-register.md#kbdl-dec-014--kbdl-005-motion-decisions-approved)).
 
 - **KBDL-MOT-030** — The detailed ambient-motion boundaries in
   [patterns.md §5](patterns.md#5-ambient-and-continuous-motion)
@@ -737,14 +773,17 @@ requirement does not make its implementation behavior `Verified` — see
   distinct from `KBDL-MOT-017`'s already-`Approved` core (ambient motion
   must be non-essential and must honor reduced motion), which is
   unaffected by this requirement's status.
-  - Lifecycle status: Recommended. Provenance: User-provided. Validation
+  - Lifecycle status: Approved (per
+    [KBDL-DEC-014](../decision-register.md#kbdl-dec-014--kbdl-005-motion-decisions-approved),
+    decision packet item 8). Provenance: User-provided. Validation
     status: Not verified.
   - Related principle: `KBDL-MOT-017`.
   - Applicable profiles: Showcase, Precision, Flow.
   - Specification location: [patterns.md §5](patterns.md#5-ambient-and-continuous-motion).
   - Related future modules: Components.
   - Validation method: Manual review once implemented; project-owner
-    review (not yet performed).
+    review (performed, see
+    [KBDL-DEC-014](../decision-register.md#kbdl-dec-014--kbdl-005-motion-decisions-approved)).
 
 - **KBDL-MOT-031** — The detailed scroll-linked-motion boundaries in
   [patterns.md §6](patterns.md#6-scroll-linked-motion) (bounded
@@ -752,14 +791,17 @@ requirement does not make its implementation behavior `Verified` — see
   distinct from `KBDL-MOT-018`'s already-`Approved` core (essential
   content must not depend on scroll-triggered animation), which is
   unaffected by this requirement's status.
-  - Lifecycle status: Recommended. Provenance: User-provided. Validation
+  - Lifecycle status: Approved (per
+    [KBDL-DEC-014](../decision-register.md#kbdl-dec-014--kbdl-005-motion-decisions-approved),
+    decision packet item 9). Provenance: User-provided. Validation
     status: Not verified.
   - Related principle: `KBDL-MOT-018`.
   - Applicable profiles: Showcase, Precision, Flow.
   - Specification location: [patterns.md §6](patterns.md#6-scroll-linked-motion).
   - Related future modules: Components, Responsive (`RSP`).
   - Validation method: Manual review once implemented; project-owner
-    review (not yet performed).
+    review (performed, see
+    [KBDL-DEC-014](../decision-register.md#kbdl-dec-014--kbdl-005-motion-decisions-approved)).
 
 - **KBDL-MOT-032** — The detailed per-category reduced-motion
   substitution matrix in
@@ -768,7 +810,9 @@ requirement does not make its implementation behavior `Verified` — see
   already-`Approved` core requirement (every major pattern must define a
   full-motion, reduced-motion, and no-motion behavior preserving
   equivalent meaning), which is unaffected by this requirement's status.
-  - Lifecycle status: Recommended. Provenance: User-provided. Validation
+  - Lifecycle status: Approved (per
+    [KBDL-DEC-014](../decision-register.md#kbdl-dec-014--kbdl-005-motion-decisions-approved),
+    decision packet item 11). Provenance: User-provided. Validation
     status: Not applicable (a documentation-completeness recommendation,
     reviewed conceptually per [motion/validation.md §3](validation.md#3-reduced-motion-matrix-review-performed)).
   - Related principle: `KBDL-MOT-022`; `KBDL-THM-012a`.
@@ -777,14 +821,17 @@ requirement does not make its implementation behavior `Verified` — see
   - Related future modules: Accessibility (`A11Y`).
   - Validation method: Manual review (performed, see
     [motion/validation.md §3](validation.md#3-reduced-motion-matrix-review-performed));
-    project-owner review (not yet performed).
+    project-owner review (performed, see
+    [KBDL-DEC-014](../decision-register.md#kbdl-dec-014--kbdl-005-motion-decisions-approved)).
 
 - **KBDL-MOT-033** — The conceptual motion-token naming architecture in
   [timing-easing.md §4](timing-easing.md#4-conceptual-motion-tokens)
   (duration, easing, delay, stagger, distance, scale, opacity, rotation,
   motion level, repetition, sequence, reduced-motion substitution) is
   new KBDL-005 policy; no prior KBDL decision defines motion tokens.
-  - Lifecycle status: Recommended. Provenance: User-provided. Validation
+  - Lifecycle status: Approved (per
+    [KBDL-DEC-014](../decision-register.md#kbdl-dec-014--kbdl-005-motion-decisions-approved),
+    decision packet item 12). Provenance: User-provided. Validation
     status: Not applicable (a naming architecture, not a testable
     claim).
   - Related principle: `KBDL-MOT-007`, `KBDL-MOT-009`.
@@ -792,7 +839,8 @@ requirement does not make its implementation behavior `Verified` — see
   - Specification location: [timing-easing.md §4](timing-easing.md#4-conceptual-motion-tokens).
   - Related future modules: Components.
   - Validation method: Manual review once implemented; project-owner
-    review (not yet performed).
+    review (performed, see
+    [KBDL-DEC-014](../decision-register.md#kbdl-dec-014--kbdl-005-motion-decisions-approved)).
 
 - **KBDL-MOT-034** — The specific per-profile motion-intensity
   adjustments in
@@ -801,15 +849,17 @@ requirement does not make its implementation behavior `Verified` — see
   KBDL-005 policy, distinct from `KBDL-MOT-026`'s already-`Approved` core
   (profiles must share one motion architecture, adjusting only
   emphasis), which is unaffected by this requirement's status.
-  - Lifecycle status: Recommended. Provenance: User-provided. Validation
+  - Lifecycle status: Approved (per
+    [KBDL-DEC-014](../decision-register.md#kbdl-dec-014--kbdl-005-motion-decisions-approved),
+    decision packet item 13). Provenance: User-provided. Validation
     status: Not verified.
   - Related principle: `KBDL-MOT-026`; `KBDL-PRN-007`.
   - Applicable profiles: Showcase, Precision, Flow.
   - Specification location: [patterns.md §10](patterns.md#10-profile-level-motion-interpretation).
   - Related future modules: Project profiles (`PRO`).
   - Validation method: Manual cross-profile review once the
-    project-profiles module is approved; project-owner review (not yet
-    performed).
+    project-profiles module is approved; project-owner review (performed,
+    see [KBDL-DEC-014](../decision-register.md#kbdl-dec-014--kbdl-005-motion-decisions-approved)).
 
 ## 10. Motion Decision Packet
 
@@ -836,7 +886,13 @@ parity (`KBDL-MOT-022`); hazardous motion is prohibited
 must preserve meaning across input methods (`KBDL-MOT-025`); and
 profiles must share one motion architecture (`KBDL-MOT-026`).
 
-### 10.2 Recommended Decisions — Ready for Approval
+### 10.2 Approved Decisions (KBDL-005-A1)
+
+All fifteen items below are `Approved`, per the project owner's
+approval of
+[KBDL-DEC-014](../decision-register.md#kbdl-dec-014--kbdl-005-motion-decisions-approved).
+Each item's own recommendation text is retained for context; "Adopt"
+below means "adopted," not "proposed."
 
 | # | Decision | Recommendation | Rationale | Alternatives | Trade-offs / limitations | Accessibility impact | Performance impact | UX impact | Profile impact | Dependencies |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -856,10 +912,11 @@ profiles must share one motion architecture (`KBDL-MOT-026`).
 | 14 | Multi-factor motion-intensity model | Adopt the intensity model in [foundations.md §4](foundations.md#4-motion-intensity) (`KBDL-MOT-006`), which assesses intensity through duration, distance, scale, rotation, opacity change, blur/depth, number of moving elements, stagger, repetition, screen coverage, input independence, contrast change, and directional complexity — duration alone is insufficient | Prevents an intensity judgment from being made on duration alone, which can misclassify a short-duration but large-distance/high-repetition motion as low intensity | A duration-only intensity heuristic (rejected — demonstrably misclassifies motion, e.g. a brief but large-distance, high-repetition change) | The model is qualitative (low/moderate/high per factor), not a scored formula; assessing cumulative intensity across concurrent elements still requires judgment, per [foundations.md §4](foundations.md#4-motion-intensity) | Ties directly to the motion-hierarchy review triggers (item 1), preventing high-intensity motion from shipping unreviewed | No additional runtime cost — this is a design-time assessment method, not a runtime calculation | Gives designers and reviewers a consistent, repeatable way to judge "how much" a motion pattern communicates | Showcase tolerates higher aggregate intensity more often; Precision keeps it low by default; Flow uses a middle range | `KBDL-MOT-005` |
 | 15 | Navigation-motion architecture | Adopt the navigation and spatial-continuity guidance in [patterns.md §1](patterns.md#1-navigation-and-spatial-continuity) (`KBDL-MOT-013`) — motion reinforces information structure, forward/back directional consistency, spatial continuity, immediate access to required content, focus continuity, predictable browser navigation, reduced-motion substitution, and exceptional-only treatment of full-page cinematic transitions | Gives route/step/panel/modal transitions one consistent, accessible architecture instead of ad hoc per-view treatment | No navigation-motion guidance at all (rejected — leaves directional consistency and focus continuity unspecified, risking disorientation) | Full-page cinematic transitions remain restricted to Level 4 (Exceptional) per the motion hierarchy (item 1), an ongoing review cost for Showcase | Browser back/forward must remain predictable and unhijacked; focus location must remain understandable after every navigation | New navigation cancels an in-progress transition rather than queuing it, bounding worst-case transition time | Preserves the user's spatial mental model across route/step/panel changes | Showcase may use directional/shared-element transitions more; Precision favors instant or very short crossfade | `KBDL-MOT-005`, `KBDL-MOT-007` |
 
-### 10.2.1 Recommended-Requirement Coverage
+### 10.2.1 Approved-Requirement Coverage
 
-Every `Recommended` `KBDL-MOT-###` requirement maps to exactly one
-decision above:
+Every requirement below was promoted from `Recommended` to `Approved`
+under [KBDL-DEC-014](../decision-register.md#kbdl-dec-014--kbdl-005-motion-decisions-approved)
+and maps to exactly one decision above:
 
 | Requirement | Approval decision |
 | --- | --- |
@@ -887,7 +944,7 @@ lifecycle or validation status.
 
 ### 10.3 Unresolved or Not Approval-Ready
 
-- **Exact pixel/percentage movement and scale values** — [§10.2](#102-recommended-decisions--ready-for-approval)
+- **Exact pixel/percentage movement and scale values** — [§10.2](#102-approved-decisions-kbdl-005-a1)
   item 4 sets qualitative ranges only; exact per-component values depend
   on component size and are deferred to the Components module (`CMP`).
 - **Exact stagger interval (milliseconds) and maximum concurrent
@@ -912,22 +969,22 @@ lifecycle or validation status.
   exact thresholds depend on content and viewport and are left to
   per-implementation review.
 
-**Exact scope of a future approval:** an `APPROVE` response to
-[§10.2](#102-recommended-decisions--ready-for-approval) would authorize
-exactly items 1–15 above as `Approved` — the motion hierarchy, the
-timing architecture and duration classes/values, easing categories/
-curves, movement-distance and scale ranges, stagger/overlap guidance,
-the entrance-versus-exit rule, attention-repetition limits,
+**Exact scope of this approval:** the project owner's approval of
+[KBDL-DEC-014](../decision-register.md#kbdl-dec-014--kbdl-005-motion-decisions-approved)
+authorized exactly items 1–15 above as `Approved` — the motion
+hierarchy, the timing architecture and duration classes/values, easing
+categories/curves, movement-distance and scale ranges, stagger/overlap
+guidance, the entrance-versus-exit rule, attention-repetition limits,
 ambient-motion boundaries, scroll-linked-motion boundaries,
 theme-transition duration/easing, the reduced-motion substitution
 matrix, the motion-token naming architecture, profile-level intensity
 adjustments, the multi-factor motion-intensity model, and the
-navigation-motion architecture. It would **not** approve any
+navigation-motion architecture. It did **not** approve any
 [§10.3](#103-unresolved-or-not-approval-ready) item, any excluded
 KBDL-004 theme item (Accent-surface/Scrim/Selection-background opacity,
 translucent variants, and the other exclusions listed in
 [§1](#1-repository-and-roadmap-context)), or any KBDL-006-or-later
-content. It would not itself constitute validation of any item — see
+content. It does not itself constitute validation of any item — see
 [validation.md](validation.md).
 
 ## 11. Traceability

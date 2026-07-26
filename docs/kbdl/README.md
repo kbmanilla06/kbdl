@@ -43,16 +43,27 @@ APIs) — see
 KBDL-005 established KBDL's motion terminology, identity translation,
 purpose model, and category-completeness structure, `Approved` where
 directly supported by prior approved principles, theme rules, or the
-motion-safety baseline (see [motion/README.md](motion/README.md)). The
-five-level motion hierarchy, the intensity model, and every **exact**
-motion value KBDL-005 proposes — durations, easing curves, distances,
-scales, stagger, repetition limits, substitution-matrix detail,
-token-naming architecture, profile-level intensity adjustments, and
-pattern defaults — remain `Recommended`, pending project-owner approval
-via the [motion decision packet](motion/README.md#10-motion-decision-packet).
+motion-safety baseline (see [motion/README.md](motion/README.md)). As of
+the project owner's motion-decisions approval (see
+[KBDL-DEC-014](decision-register.md#kbdl-dec-014--kbdl-005-motion-decisions-approved)),
+the fifteen items in the KBDL-005 motion decision packet — the
+five-level motion hierarchy, the timing architecture and duration
+classes/values, easing categories/curves, movement-distance and scale
+ranges, stagger/overlap guidance, the entrance-versus-exit relationship,
+attention-repetition limits, ambient- and scroll-linked-motion
+boundaries, theme-transition duration/easing, the reduced-motion
+substitution matrix, the motion-token naming architecture,
+profile-level intensity adjustments, the multi-factor intensity model,
+and the navigation-motion architecture — are `Approved`. Excluded from
+this approval and still `Recommended`/`Not verified`/`Deferred`: exact
+component-specific movement/scale/stagger values, device-performance
+detection, animation-library/rendering-technology selection, CSS/JSON/
+JavaScript token formats, browser-support policy, exact scroll
+thresholds, and exact quantitative motion-hazard thresholds — see
+[motion/README.md § Motion Decision Packet](motion/README.md#10-motion-decision-packet).
 KBDL-006 (Responsive and Accessibility) is locked until KBDL-005 passes
-validation and its proposed motion decisions are approved; it has not
-been started. Progression to later roadmap steps depends on the
+validation; it has not been started. Progression to later roadmap steps
+depends on the
 planning agent's validation review, not on this index. KBDL-001
 established the documentation architecture, terminology, requirement
 and status conventions, and governance for the entire KBDL
@@ -109,7 +120,7 @@ yet and must not be created until their roadmap step is reached.
 | 2 | Principles | Approved | [principles.md](principles.md) |
 | 3 | Visual foundations | Approved (architecture and default values)* | [foundations/README.md](foundations/README.md) |
 | 4 | Adaptive themes | Approved (architecture and the ten-item theme decision packet)** | [themes/README.md](themes/README.md) |
-| 5 | Motion | Approved (terminology and category-completeness core)†; Recommended (hierarchy, intensity model, exact durations, curves, and pattern defaults) | [motion/README.md](motion/README.md) |
+| 5 | Motion | Approved (architecture and the fifteen-item motion decision packet)† | [motion/README.md](motion/README.md) |
 | 6 | Responsive behavior | Deferred (locked until KBDL-005 passes and its motion decisions are approved) | `docs/kbdl/responsive.md` (planned) |
 | 7 | Accessibility | Deferred | `docs/kbdl/accessibility.md` (planned) |
 | 8 | Core action, form, and navigation components | Deferred | `docs/kbdl/components-core.md` (planned) |
@@ -140,15 +151,21 @@ all implementation-layer formats remain `Recommended`/`Not verified` and
 outside this approval.
 
 † See [motion/README.md](motion/README.md) for the full motion
-architecture. Terminology, identity translation, purpose model, and
-category-completeness structure are `Approved` where directly supported
-by prior approved principles, theme rules, or the motion-safety
-baseline. The five-level motion hierarchy, the intensity model, and
-every exact duration, easing curve, distance, scale, stagger, repetition
-limit, substitution-matrix detail, token-naming architecture,
-profile-level intensity adjustment, and pattern default remain
-`Recommended`, pending project-owner approval via the
-[motion decision packet](motion/README.md#10-motion-decision-packet).
+architecture and
+[KBDL-DEC-014](decision-register.md#kbdl-dec-014--kbdl-005-motion-decisions-approved)
+for the project owner's approval of the fifteen-item
+[motion decision packet](motion/README.md#10-motion-decision-packet)
+(the five-level motion hierarchy, timing architecture and duration
+classes/values, easing categories/curves, movement-distance and scale
+ranges, stagger/overlap guidance, the entrance-versus-exit relationship,
+attention-repetition limits, ambient- and scroll-linked-motion
+boundaries, theme-transition duration/easing, the reduced-motion
+substitution matrix, the motion-token naming architecture,
+profile-level intensity adjustments, the multi-factor intensity model,
+and the navigation-motion architecture). Exact component-specific
+values, implementation technology, and all KBDL-006-or-later content
+remain `Recommended`/`Not verified`/`Deferred` and outside this
+approval.
 
 Supporting documents (not numbered modules, but required by KBDL-001 and
 referenced by KBDL-002 and KBDL-003):
