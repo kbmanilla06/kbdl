@@ -617,7 +617,7 @@ The rows below trace KBDL-004's adaptive-theme scope, defined in
 - **Validation method:** Manual completeness review per category (performed); project-owner review of the hierarchy/intensity model (not yet performed).
 - **Validation evidence:** Manual review recorded in [motion/validation.md §1](motion/validation.md#1-motion-validation-specification).
 - **Known limitation:** Exceptional-level (Level 4) usage requires project-owner review each time; not yet exercised, since no implementation exists.
-- **Related decision:** Not applicable — pending a future decision-register entry once the project owner reviews the motion decision packet.
+- **Related decision:** Not applicable — pending a future decision-register entry once the project owner reviews the motion decision packet. `KBDL-MOT-005` maps to [motion decision packet](motion/README.md#10-motion-decision-packet) item 1; `KBDL-MOT-006` maps to item 14 (added under KBDL-005-R2, which corrected the packet's initial omission of this requirement).
 - **Notes:** The requirement that categories be documented completely is itself already supported by KBDL-002's visual-consistency principle; the specific five-level names and intensity factors are new.
 
 ### Timing, duration, and easing architecture (KBDL-MOT-007, KBDL-MOT-008, KBDL-MOT-009)
@@ -631,7 +631,7 @@ The rows below trace KBDL-004's adaptive-theme scope, defined in
 - **Validation method:** Manual internal-consistency review (performed, see [motion/validation.md §2](motion/validation.md#2-numerical-consistency-review-performed)); project-owner review (not yet performed); implementation-level review once an implementation exists.
 - **Validation evidence:** [motion/validation.md §2](motion/validation.md#2-numerical-consistency-review-performed) — every value has a stated purpose, exit durations are equal to or shorter than paired entrances, and no value is marked `Approved` or `Verified`.
 - **Known limitation:** These are recommendations awaiting project-owner approval; must not be treated as `Approved` or implemented until that approval is recorded.
-- **Related decision:** Not applicable — pending a future decision-register entry once the project owner reviews the motion decision packet.
+- **Related decision:** Not applicable — pending a future decision-register entry once the project owner reviews the motion decision packet. `KBDL-MOT-007` and `KBDL-MOT-008` together map to [motion decision packet](motion/README.md#10-motion-decision-packet) item 2 (one timing system); `KBDL-MOT-009` maps to item 3.
 - **Notes:** Resolves the exact timing/easing KBDL-004 explicitly deferred (`KBDL-THM-012`); no CSS, JSON, or animation-library format is introduced.
 
 ### Spatial movement and choreography (KBDL-MOT-010, KBDL-MOT-011, KBDL-MOT-012)
@@ -660,7 +660,7 @@ The rows below trace KBDL-004's adaptive-theme scope, defined in
 - **Validation evidence:** Not verified — no implementation exists yet.
 - **Known limitation:** Exact repetition limits (attention motion) and scroll thresholds remain qualitative pending implementation-level review.
 - **Related decision:** `KBDL-DEC-010` (for the media-motion autoplay prohibition and WCAG 2.2 AA baseline)
-- **Notes:** The bounded-repetition limit for attention motion (2–3 repetitions) is a new `Recommended` numeric default within `KBDL-MOT-016`'s otherwise-Approved requirement; see [motion/README.md §10.2](motion/README.md#102-recommended-decisions--ready-for-approval) item 7.
+- **Notes:** The bounded-repetition limit for attention motion (2–3 repetitions) is a new `Recommended` numeric default within `KBDL-MOT-016`'s otherwise-Approved requirement; see [motion/README.md §10.2](motion/README.md#102-recommended-decisions--ready-for-approval) item 7. `KBDL-MOT-013` maps to [motion decision packet](motion/README.md#10-motion-decision-packet) item 15 (added under KBDL-005-R2, which corrected the packet's initial omission of this requirement).
 
 ### Theme-transition motion (KBDL-MOT-020)
 
@@ -770,10 +770,17 @@ detailed ambient-motion boundaries (`KBDL-MOT-030`), detailed
 scroll-linked-motion boundaries (`KBDL-MOT-031`), the reduced-motion
 substitution matrix (`KBDL-MOT-032`), the conceptual motion-token
 naming architecture (`KBDL-MOT-033`), and profile-level motion-intensity
-adjustments (`KBDL-MOT-034`). None of these `Recommended` items are
-implemented or treated as `Approved` until the project owner reviews the
-[motion decision packet](motion/README.md#10-motion-decision-packet);
-no decision-register entry has been created for KBDL-005, since no such
-review has yet occurred. KBDL-006 (Responsive and Accessibility) is
-locked until KBDL-005 passes validation and its proposed motion
-decisions are approved, and has not been started.
+adjustments (`KBDL-MOT-034`). These sixteen `Recommended` requirements
+each map to exactly one of the fifteen decisions in the
+[motion decision packet](motion/README.md#10-motion-decision-packet)
+(see [motion/README.md §10.2.1](motion/README.md#1021-recommended-requirement-coverage)
+for the full mapping — `KBDL-MOT-007` and `KBDL-MOT-008` share one
+decision, as one timing system). `KBDL-MOT-006` and `KBDL-MOT-013` were
+initially documented without a decision-packet row; KBDL-005-R2 added
+packet items 14 and 15 to correct this coverage gap. None of these
+`Recommended` items are implemented or treated as `Approved` until the
+project owner reviews the packet; no decision-register entry has been
+created for KBDL-005, since no such review has yet occurred. KBDL-006
+(Responsive and Accessibility) is locked until KBDL-005 passes
+validation and its proposed motion decisions are approved, and has not
+been started.

@@ -196,6 +196,21 @@ passing until an implementation exists and is measured:
 - Scope-compliance review — passed; no component anatomy, Figma assets,
   CSS/JSON tokens, animation libraries, or KBDL-006-plus content found
   (see the implementation report's scope-search results).
+- Decision-packet coverage review — **initially failed, then corrected
+  under KBDL-005-R2.** The thirteen-item packet committed under
+  KBDL-005-R1 omitted two `Recommended` architecture requirements ready
+  for approval — `KBDL-MOT-006` (multi-factor motion-intensity model)
+  and `KBDL-MOT-013` (navigation-motion architecture) — neither of which
+  had a decision row. KBDL-005-R2 added packet items 14 and 15 for these
+  two requirements and added the
+  [coverage table](README.md#1021-recommended-requirement-coverage) in
+  [motion/README.md §10.2.1](README.md#1021-recommended-requirement-coverage).
+  Re-review now confirms: all sixteen `Recommended`
+  `KBDL-MOT-###` requirements (`005`–`011`, `013`, `020`, `028`–`034`)
+  map to exactly one of the fifteen approval decisions; no lifecycle or
+  validation status was changed; no motion policy (duration, curve,
+  movement range, hierarchy level, safety behavior, reduced-motion
+  behavior, or profile recommendation) was changed.
 
 ## 7. Traceability
 
