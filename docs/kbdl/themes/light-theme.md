@@ -103,7 +103,7 @@ Contrast pairs computed with the WCAG 2.x relative-luminance formula; see
 | Selected emphasis | Accent surface tint + Selected border | — | Not applicable | — | Never color alone (border + tint together) |
 | Disabled emphasis | Disabled surface + Disabled text/border | Exempt | Exempt | — | |
 | Drag or drop target | `accent-50` dashed border at 3:1 | Base (`neutral-0`) | 6.07:1 | 3:1 | Passes |
-| Keyboard focus | Alias of Focus indicator (§3) | — | 6.07:1 | 3:1 | Same role, restated per §1.4 of semantic-roles.md |
+| Keyboard focus | `accent-50` `#4A4EE0` — distinct role; value and visibility **must** remain identical to Focus indicator (§3), not a separate value | Base (`neutral-0`) | 6.07:1 | 3:1 | Passes — same value as Focus indicator by requirement, not by aliasing; see [semantic-roles.md §1.4](semantic-roles.md#14-actions-and-interaction) |
 | Text-link states (visited/hover/active) | Visited: `accent-50` unchanged hue, reduced emphasis via reduced underline weight; Hover: `accent-50` + stronger underline; Active: `accent-50` + Active emphasis background | Base (`neutral-0`) | 6.07:1 for all states | 4.5:1 | Passes; state changes are non-color (underline weight / background) |
 
 ## 5. Status Families

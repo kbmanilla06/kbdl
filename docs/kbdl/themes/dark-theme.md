@@ -116,7 +116,7 @@ assumed from the light-mode result.
 | Selected emphasis | Accent surface tint + Selected border | — | Not applicable | — | Never color alone |
 | Disabled emphasis | Disabled surface + Disabled text/border | Exempt | Exempt | — | |
 | Drag or drop target | `accent-30` dashed border at 3:1 | Canvas/Base (`neutral-100`) | 8.87:1 | 3:1 | Passes |
-| Keyboard focus | Alias of Focus indicator (§4) | — | 8.87:1 | 3:1 | Same role |
+| Keyboard focus | `accent-30` `#A9ACFF` — distinct role; value and visibility **must** remain identical to Focus indicator (§4), not a separate value | Canvas/Base (`neutral-100`) | 8.87:1 | 3:1 | Passes — same value as Focus indicator by requirement, not by aliasing; see [semantic-roles.md §1.4](semantic-roles.md#14-actions-and-interaction) |
 | Text-link states (visited/hover/active) | Visited: `accent-30` unchanged hue, reduced underline weight; Hover: `accent-30` + stronger underline; Active: `accent-30` + Active emphasis background | Canvas/Base (`neutral-100`) | 8.87:1 for all states | 4.5:1 | Passes; state changes are non-color |
 
 ## 6. Status Families

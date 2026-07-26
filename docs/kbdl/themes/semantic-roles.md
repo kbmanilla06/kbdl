@@ -122,7 +122,7 @@ selected/disabled) must always be perceivable through more than color.
 | Selected emphasis | Perceivable change indicating a selected item. | Not applicable | Must not rely on color alone (see Selected border). |
 | Disabled emphasis | Perceivable reduction indicating an inactive control. | Exempt | Must not be confusable with a low-emphasis but still-active control. |
 | Drag or drop target | Perceivable change indicating a valid drop target. | 3:1 non-text | Must not appear identical to a hover state a user could confuse with drop validity. |
-| Keyboard focus | Synonym reference to Focus indicator (§1.3) for interactive elements specifically. | See Focus indicator | Must not diverge from the Focus indicator role. |
+| Keyboard focus | A distinct interaction-context role marking that an Actions/Interaction element currently holds keyboard focus (as opposed to Focus indicator, §1.3, which is the visible border/outline treatment itself). Keyboard focus's mapped value and visibility requirements **must** remain identical to Focus indicator — this is value/behavior equivalence between two distinct roles, not an alias. | Same requirement as Focus indicator: 3:1 against every adjacent approved surface | Must not diverge from the Focus indicator role's value or visibility. |
 | Text-link states (visited/hover/active) | Perceivable changes across a link's lifecycle. | 4.5:1 for each state's text | Must not rely on color alone to distinguish states. |
 
 ### 1.5 Status
@@ -224,38 +224,53 @@ version of this table incorrectly labeled this row "×5 sub-roles ×5
 families" while its own total column already used the correct 4×6
 figure — that label, not the total, was the error; it is corrected here.
 
-**Alias model (KBDL-004-R2, the only model used):** a role counts as a
-"distinct role" if it is separately listed in §1's inventory, regardless
-of whether its assigned *value* happens to be reused from another role.
-A role counts as an "alias" only when it is **not** separately
-implemented at all — its inventory entry is purely a pointer to another
-role's definition, contributing 0 to the distinct-role count. By this
-test: **Keyboard focus** is an alias (its inventory entry, §1.4, is
-literally "Synonym reference to Focus indicator"; it adds no new
-definition). **Neutral status** is an alias (§1.5 states it "uses the
+**Alias model (KBDL-004-R3, the only model used — corrects an
+inconsistency in the KBDL-004-R2 model):** a role counts as a "distinct
+role" if it is separately listed in §1's inventory, regardless of
+whether its assigned *value* happens to be reused from another role. A
+role counts as an "alias" only when it is **not** separately implemented
+at all — its inventory entry is purely a pointer to another role's
+definition, contributing 0 to the distinct-role count.
+
+By this test, **Keyboard focus is not an alias.** The KBDL-004-R2
+version of this document called it an alias while simultaneously
+counting it among the Actions category's 10 distinct roles — those two
+claims cannot both be true, and this was the exact inconsistency
+KBDL-004-R3 corrects. Keyboard focus has its own inventory entry (§1.4)
+describing its own purpose (marking that an interactive element
+currently holds keyboard focus) and is mapped in both modes; it is a
+**distinct role** whose mapped value and visibility requirements are
+constrained to remain identical to Focus indicator — value/behavior
+equivalence between two distinct roles, the same kind of relationship
+Text-link states has to Interactive/Link text (ordinary value reuse,
+not aliasing).
+
+**Neutral status is the only true alias.** §1.5 states it "uses the
 Neutral-family text/border/surface roles... not a new hue," and it has
-no dedicated sub-role table of its own). **Text-link states** is *not*
-an alias — it has its own purpose (distinct visited/hover/active
-sub-states across a link's lifecycle) and its own inventory entry with
-its own contrast requirement; that its light-mode *value* reuses
-Interactive/Link text's color is ordinary value reuse, the same pattern
-used by Muted metadata (reusing Secondary text's value) and Selection
-text (reusing Primary text's value) — neither of which is called an
-alias either. Total aliases under this model: **2**.
+no dedicated sub-role table of its own — its inventory mention is purely
+a pointer, contributing 0 to the distinct-role count.
+
+**Text-link states is not an alias** — it has its own purpose (distinct
+visited/hover/active sub-states across a link's lifecycle) and its own
+inventory entry with its own contrast requirement; that its light-mode
+*value* reuses Interactive/Link text's color is ordinary value reuse,
+the same pattern used by Muted metadata (reusing Secondary text's value)
+and Selection text (reusing Primary text's value) — none of these three
+is an alias. Total aliases under this corrected model: **1**.
 
 | Category | Distinct roles | Light-mapped | Dark-mapped | Aliases (not counted as new roles) |
 | --- | --- | --- | --- | --- |
 | Canvas and Surfaces | 11 | 11 | 11 | 0 |
 | Text and Content | 11 | 11 | 11 | 0 |
 | Borders and Focus | 9 | 9 | 9 | 0 |
-| Actions and Interaction | 10 | 10 | 10 | 1 (Keyboard focus → Focus indicator; Text-link states remains a distinct role using value reuse, not an alias) |
+| Actions and Interaction | 10 | 10 | 10 | 0 (Keyboard focus, Text-link states, and Selection-adjacent roles are all distinct roles using value/behavior equivalence or value reuse, not aliasing) |
 | Status — 4 families × 6 sub-roles | 24 | 24 | 24 | 0 |
 | Status — Neutral status | 0 | 0 (via alias) | 0 (via alias) | 1 (→ Primary/Secondary text, Default/Strong border, Subtle surface) |
 | Media and Decorative | 7 | 7 | 7 | 0 |
 | **Total unique semantic roles** | **72** | — | — | — |
-| **Total light mappings (including aliases)** | — | **72** | — | — |
-| **Total dark mappings (including aliases)** | — | — | **72** | — |
-| **Total role-level aliases** | — | — | — | **2** |
+| **Total light mappings (including the 1 alias)** | — | **72** | — | — |
+| **Total dark mappings (including the 1 alias)** | — | — | **72** | — |
+| **Total role-level aliases** | — | — | — | **1** |
 
 **Unresolved or missing mappings:** none — every one of the 72 unique
 roles has either a direct value or a named alias in both

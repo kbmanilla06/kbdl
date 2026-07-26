@@ -86,29 +86,36 @@ distinct roles; Neutral status contributes 0 additional distinct roles
 [semantic-roles.md § Parity Matrix](semantic-roles.md#parity-matrix-corrected-under-kbdl-004-r1)
 for the full corrected table.
 
-**Result:**
+**Result (corrected under KBDL-004-R3):**
 
 - Total unique semantic roles: **72**
-- Total light-mode mappings (direct values or named aliases): **72**
-- Total dark-mode mappings (direct values or named aliases): **72**
-- Role-level aliases (not counted as separate roles): **2** — Keyboard
-  focus → Focus indicator; Neutral status → existing Primary/Secondary
-  text, Default/Strong border, and Subtle surface roles (both modes).
-  This is the same model, with the same count, used in
+- Total light-mode mappings (direct values or the 1 named alias): **72**
+- Total dark-mode mappings (direct values or the 1 named alias): **72**
+- Role-level aliases (not counted as separate roles): **1** — Neutral
+  status → existing Primary/Secondary text, Default/Strong border, and
+  Subtle surface roles (both modes). This is the same model, with the
+  same count, used in
   [semantic-roles.md § Parity Matrix](semantic-roles.md#parity-matrix-corrected-under-kbdl-004-r1);
-  **Text-link states is not an alias** under this model (see below).
+  **Keyboard focus and Text-link states are not aliases** under this
+  model (see below) — a KBDL-004-R2 version of this document had
+  incorrectly counted Keyboard focus as an alias while
+  `semantic-roles.md` simultaneously counted it among the Actions
+  category's 10 distinct roles; KBDL-004-R3 resolves that contradiction
+  by classifying Keyboard focus as a distinct role, consistent with its
+  own inventory entry and its mapping in both theme files.
 - Unresolved or missing mappings: **none**.
 
 No role is marked "not applicable" in either mode.
 
-**Note on "Selection text/background" and "Text-link states":** neither
-is an alias. Both are distinct inventory roles (counted in the 72) whose
-*values* happen to reuse another role's color — the same ordinary value-
-reuse pattern as Muted metadata (reuses Secondary text) — rather than
-being a pointer with no separate definition of its own, which is what
-distinguishes a true alias (Keyboard focus, Neutral status) under this
-document's model. "Selection text/background" is presented as two table
-rows in [light-theme.md §2](light-theme.md#2-text-and-content) for
+**Note on "Selection text/background," "Text-link states," and
+"Keyboard focus":** none of the three is an alias. All are distinct
+inventory roles (counted in the 72) whose *values* happen to reuse (or,
+for Keyboard focus, are required to equal) another role's color — the
+same ordinary value-reuse pattern as Muted metadata (reuses Secondary
+text) — rather than being a pointer with no separate definition of its
+own, which is what distinguishes the one true alias (Neutral status)
+under this document's model. "Selection text/background" is presented
+as two table rows in [light-theme.md §2](light-theme.md#2-text-and-content) for
 readability, the same way Primary text and Secondary text each get a
 Base-surface row and a Canvas-surface row. This is a presentation
 choice, not a double-counted or aliased role.
