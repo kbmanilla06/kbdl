@@ -1,13 +1,20 @@
 # KBDL Themes — Light Theme
 
-Lifecycle status: `Recommended` — this exact mapping requires project-
-owner approval; see
-[themes/README.md § Theme Decision Packet](README.md#10-theme-decision-packet-restructured-under-kbdl-004-r1r2).
-Provenance: `Assumed`. Validation status: `Verified` for every contrast
-pair shown below (see [validation.md](validation.md) for the calculation
-method and full output); `Not verified` for suitability beyond the
-tested pairs. All values used are already-`Approved` KBDL-003 foundation
-colors except the status-family values, which remain `Recommended` (see
+Lifecycle status: `Approved` for every **opaque** mapping in this
+document — per the project owner's approval of
+[KBDL-DEC-013](../decision-register.md#kbdl-dec-013--kbdl-004-theme-decisions-approved)
+(see
+[themes/README.md § Theme Decision Packet](README.md#10-theme-decision-packet-approved-under-kbdl-004-a1)).
+**Excluded from this approval** (remain `Recommended`, `Not verified`):
+Accent-surface, Scrim, and Selection-background opacity — see §1–§2
+below and [validation.md §5](validation.md#5-items-not-verified).
+Provenance: `User-provided` (project-owner approval) for the opaque
+mappings. Validation status: `Verified` for every opaque contrast pair
+shown below (see [validation.md](validation.md) for the calculation
+method and full output); `Not verified` for the excluded opacity values
+and for suitability beyond the tested pairs. All values used are
+already-`Approved` KBDL-003 foundation colors except the status-family
+values, which are `Approved` as of this same decision (see
 [adaptation.md §5](adaptation.md#5-status-family-theme-behavior)).
 
 Return to the [themes index](README.md) · [specification index](../README.md).
@@ -43,17 +50,17 @@ border rather than heavy shadow.
 
 | Role | Light value | Contrast context | Lifecycle | Notes |
 | --- | --- | --- | --- | --- |
-| Canvas | `neutral-10` `#F5F6F8` | — | Approved value, Recommended mapping | Page background. |
-| Base surface | `neutral-0` `#FFFFFF` | — | Approved value, Recommended mapping | Default content surface. |
-| Subtle surface | `neutral-20` `#E8EAEE` | — | Approved value, Recommended mapping | Recessed/muted areas. |
-| Raised surface | `neutral-0` `#FFFFFF` + Elevation L1 shadow/border | — | Approved value, Recommended mapping | Same background as Base; elevation via shape-depth L1. |
-| Floating surface | `neutral-0` `#FFFFFF` + Elevation L2 shadow/border | — | Approved value, Recommended mapping | |
-| Modal surface | `neutral-0` `#FFFFFF` + Elevation L3 shadow/border | — | Approved value, Recommended mapping | Always paired with Scrim. |
-| Temporary overlay | `neutral-0` `#FFFFFF` + Elevation L4 shadow/border | — | Approved value, Recommended mapping | |
-| Inverse surface | `neutral-100` `#121317` | Reuses the verified "neutral-10 on neutral-100" pair (17.17:1) for any Inverse text placed on it | Approved value, Recommended mapping | Bounded local context only, see [adaptation.md §2](adaptation.md#2-local-contrast-contexts). |
+| Canvas | `neutral-10` `#F5F6F8` | — | Approved value, Approved mapping | Page background. |
+| Base surface | `neutral-0` `#FFFFFF` | — | Approved value, Approved mapping | Default content surface. |
+| Subtle surface | `neutral-20` `#E8EAEE` | — | Approved value, Approved mapping | Recessed/muted areas. |
+| Raised surface | `neutral-0` `#FFFFFF` + Elevation L1 shadow/border | — | Approved value, Approved mapping | Same background as Base; elevation via shape-depth L1. |
+| Floating surface | `neutral-0` `#FFFFFF` + Elevation L2 shadow/border | — | Approved value, Approved mapping | |
+| Modal surface | `neutral-0` `#FFFFFF` + Elevation L3 shadow/border | — | Approved value, Approved mapping | Always paired with Scrim. |
+| Temporary overlay | `neutral-0` `#FFFFFF` + Elevation L4 shadow/border | — | Approved value, Approved mapping | |
+| Inverse surface | `neutral-100` `#121317` | Reuses the verified "neutral-10 on neutral-100" pair (17.17:1) for any Inverse text placed on it | Approved value, Approved mapping | Bounded local context only, see [adaptation.md §2](adaptation.md#2-local-contrast-contexts). |
 | Accent surface | `accent-50` `#4A4EE0` at reduced opacity (e.g., a subtle tint) over Base surface | Underlying content must remain verified per §2 below; full-opacity use follows Primary action rules | Recommended (new — opacity value not previously approved) | Restrained-accent rule applies most strongly in Precision. |
 | Scrim / backdrop | `neutral-100` `#121317` at reduced opacity (translucent) | Non-translucent fallback: solid `neutral-90` `#23252B` | Recommended (new — opacity value) | See [adaptation.md §3](adaptation.md#3-transparency-and-glass-like-effects). |
-| Disabled surface | `neutral-20` `#E8EAEE` | Exempt (disabled) | Approved value, Recommended mapping | Paired with Disabled text/border, never alone. |
+| Disabled surface | `neutral-20` `#E8EAEE` | Exempt (disabled) | Approved value, Approved mapping | Paired with Disabled text/border, never alone. |
 
 ## 2. Text and Content
 

@@ -271,6 +271,89 @@ rather than invented, per the source-of-truth rules in this prompt.
 - **Superseded decision:** None.
 - **Review date:** Not applicable.
 
+### KBDL-DEC-013 — KBDL-004 theme decisions approved
+
+- **Date:** 2026-07-26
+- **Status:** Approved
+- **Decision owner:** Project owner. A prompt introducing this decision
+  (KBDL-004-A1) asserted that the project owner had already responded "
+  APPROVE THEME DECISIONS," but no such message existed anywhere in the
+  actual implementing conversation. This discrepancy was flagged directly
+  to the project owner, who was then asked a direct, structured
+  confirmation question ("Yes, APPROVE THEME DECISIONS" vs. alternatives);
+  the project owner selected "Yes, APPROVE THEME DECISIONS." This
+  in-conversation selection — not the prompt's original unverified claim
+  — is the sole evidentiary basis for this decision, consistent with the
+  standard already established and reconfirmed in
+  [KBDL-DEC-012](#kbdl-dec-012--foundation-decision-packet-approved).
+- **Context:** KBDL-004 (as corrected by KBDL-004-R1/R2/R3/R4) proposed
+  ten `Recommended` theme decisions in
+  [themes/README.md §10.2](themes/README.md#10-theme-decision-packet-approved-under-kbdl-004-a1) —
+  persistence baseline, the opaque light-theme semantic mapping, the
+  opaque dark-theme semantic mapping, status-family values, the opaque
+  caption-band gradient strategy, the color-value expression convention,
+  conceptual transition guidance beyond reduced-motion, the full
+  six-level theme-selection precedence ordering, detailed
+  project-override boundaries, and local contrast contexts — none of
+  which carried implementation authority until approved, per
+  [conventions.md §1.1](conventions.md#11-lifecycle--approval-status).
+- **Decision:** The project owner approved exactly the ten items listed
+  above, and only those ten items, as documented in
+  [themes/README.md §10.2](themes/README.md#10-theme-decision-packet-approved-under-kbdl-004-a1).
+  This approval is explicitly **scoped to the opaque/conceptual content
+  of those ten items only** and does **not** extend to: Accent-surface
+  opacity, Scrim opacity, or Selection-background opacity (all remain
+  `Recommended`, `Not verified`); any translucent caption-band or
+  media-overlay variant (remains `Recommended`, `Not verified`); any
+  project-specific media composite; account-level theme-preference sync;
+  high-contrast/forced-colors mode; data-visualization palettes;
+  framework-specific theme APIs, CSS custom properties, JSON token
+  formats, or component-level theme tokens (all implementation-layer,
+  out of scope for this specification); any motion timing, easing, or
+  duration value (belongs to KBDL-005, not started by this approval); and
+  any KBDL-006 or later decision. This approval does **not** change any
+  validation status — items marked `Not verified` before this decision
+  remain `Not verified` after it; approval (lifecycle authority) and
+  validation (evidence a claim was checked) are independent dimensions
+  per [conventions.md §1](conventions.md#1-status-labels).
+- **Rationale:** The project owner accepted that the ten items were
+  fully specified, internally consistent, and — where a contrast claim
+  was made — backed by verified opaque contrast evidence in
+  [validation.md](themes/validation.md#3-consolidated-contrast-evidence),
+  while the excluded opacity/translucency items still lack the
+  alpha-composite evidence needed to responsibly approve them.
+- **Alternatives considered:** "Approve with changes" (rejected — no
+  specific item was flagged for change) and "Revise" (rejected — no item
+  required rework before approval).
+- **Trade-offs:** Two normative requirements (`KBDL-THM-007`,
+  `KBDL-THM-008`) reference documents (`light-theme.md`, `dark-theme.md`)
+  that mix approved opaque content with excluded opacity values; rather
+  than approving those documents wholesale, the requirements' own
+  normative text was narrowed to state the opaque-only scope explicitly,
+  avoiding over-approval of unreviewed opacity claims.
+- **Affected requirements:** `KBDL-THM-004`, `KBDL-THM-007` (narrowed to
+  opaque mappings only), `KBDL-THM-008` (narrowed to opaque mappings
+  only), `KBDL-THM-009`, `KBDL-THM-010` (narrowed to the opaque
+  caption-band strategy only), `KBDL-THM-011`, `KBDL-THM-012`,
+  `KBDL-THM-013`, `KBDL-THM-014`, `KBDL-THM-015` (lifecycle status
+  changed from `Recommended` to `Approved`).
+- **Affected modules:** THM.
+- **Accessibility impact:** None beyond what was already evaluated in
+  KBDL-004/R1-R4; no new accessibility rule or contrast claim was
+  introduced by this approval, and the excluded opacity items remain
+  unverified rather than being implicitly endorsed.
+- **Motion impact:** None. `KBDL-THM-012`'s approval covers only
+  conceptual, non-timing transition guidance; KBDL-005 (Motion) remains
+  eligible for a future prompt and has not been started.
+- **Responsive impact:** Not applicable.
+- **Implementation impact:** `themes/README.md`, `themes/light-theme.md`,
+  `themes/dark-theme.md`, `themes/adaptation.md`, `themes/validation.md`,
+  `traceability-matrix.md`, and `README.md` were updated to reflect the
+  `Approved` lifecycle status of these ten items, while preserving every
+  `Recommended`/`Not verified` marking for the explicitly excluded items.
+- **Superseded decision:** None.
+- **Review date:** Not applicable.
+
 ## Unresolved Metadata
 
 The following metadata could not be verified from available sources and is

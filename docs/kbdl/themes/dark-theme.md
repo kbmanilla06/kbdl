@@ -1,13 +1,20 @@
 # KBDL Themes — Dark Theme
 
-Lifecycle status: `Recommended` — this exact mapping requires project-
-owner approval; see
-[themes/README.md § Theme Decision Packet](README.md#10-theme-decision-packet-restructured-under-kbdl-004-r1r2).
-Provenance: `Assumed`. Validation status: `Verified` for every contrast
-pair shown below (see [validation.md](validation.md)); `Not verified`
-for suitability beyond the tested pairs. All values used are already-
-`Approved` KBDL-003 foundation colors except the status-family dark
-variants, which are newly proposed and remain `Recommended` (see
+Lifecycle status: `Approved` for every **opaque** mapping in this
+document — per the project owner's approval of
+[KBDL-DEC-013](../decision-register.md#kbdl-dec-013--kbdl-004-theme-decisions-approved)
+(see
+[themes/README.md § Theme Decision Packet](README.md#10-theme-decision-packet-approved-under-kbdl-004-a1)).
+**Excluded from this approval** (remain `Recommended`, `Not verified`):
+Accent-surface, Scrim, and Selection-background opacity — see §2–§3
+below and [validation.md §5](validation.md#5-items-not-verified).
+Provenance: `User-provided` (project-owner approval) for the opaque
+mappings. Validation status: `Verified` for every opaque contrast pair
+shown below (see [validation.md](validation.md)); `Not verified` for the
+excluded opacity values and for suitability beyond the tested pairs. All
+values used are already-`Approved` KBDL-003 foundation colors except the
+status-family dark variants, which are newly proposed and are `Approved`
+as of this same decision (see
 [adaptation.md §5](adaptation.md#5-status-family-theme-behavior)).
 
 Return to the [themes index](README.md) · [specification index](../README.md).
@@ -60,17 +67,17 @@ assumed from the light-mode result.
 
 | Role | Dark value | Contrast context | Lifecycle | Notes |
 | --- | --- | --- | --- | --- |
-| Canvas | `neutral-100` `#121317` | — | Approved value, Recommended mapping | Darkest reference. |
-| Base surface | `neutral-100` `#121317` | — | Approved value, Recommended mapping | Same as Canvas; content surfaces are distinguished by border, not tint, at this level. |
-| Subtle surface | `neutral-90` `#23252B` | — | Approved value, Recommended mapping | Recessed/muted areas — one step lighter than Canvas. |
-| Raised surface | `neutral-90` `#23252B` + border (§3) | 1.21:1 background step (insufficient alone) | Approved value, Recommended mapping | Border is mandatory, not optional (see §1). |
-| Floating surface | `neutral-90` `#23252B` + border + Elevation L2 shadow (subtle) | — | Approved value, Recommended mapping | |
-| Modal surface | `neutral-90` `#23252B` + border + scrim | — | Approved value, Recommended mapping | Always paired with Scrim. |
-| Temporary overlay | `neutral-90` `#23252B` + border | — | Approved value, Recommended mapping | |
-| Inverse surface | `neutral-0` `#FFFFFF` | Reuses the verified "neutral-90 on neutral-0" family for Inverse text on it (15.32:1, via the already-verified neutral-90/neutral-0 text pair) | Approved value, Recommended mapping | Bounded local context only. |
+| Canvas | `neutral-100` `#121317` | — | Approved value, Approved mapping | Darkest reference. |
+| Base surface | `neutral-100` `#121317` | — | Approved value, Approved mapping | Same as Canvas; content surfaces are distinguished by border, not tint, at this level. |
+| Subtle surface | `neutral-90` `#23252B` | — | Approved value, Approved mapping | Recessed/muted areas — one step lighter than Canvas. |
+| Raised surface | `neutral-90` `#23252B` + border (§3) | 1.21:1 background step (insufficient alone) | Approved value, Approved mapping | Border is mandatory, not optional (see §1). |
+| Floating surface | `neutral-90` `#23252B` + border + Elevation L2 shadow (subtle) | — | Approved value, Approved mapping | |
+| Modal surface | `neutral-90` `#23252B` + border + scrim | — | Approved value, Approved mapping | Always paired with Scrim. |
+| Temporary overlay | `neutral-90` `#23252B` + border | — | Approved value, Approved mapping | |
+| Inverse surface | `neutral-0` `#FFFFFF` | Reuses the verified "neutral-90 on neutral-0" family for Inverse text on it (15.32:1, via the already-verified neutral-90/neutral-0 text pair) | Approved value, Approved mapping | Bounded local context only. |
 | Accent surface | `accent-30` `#A9ACFF` at reduced opacity over Base | Underlying content re-verified per §3 below | Recommended (new — opacity value) | Restrained in Precision. |
 | Scrim / backdrop | `neutral-0` `#FFFFFF` at reduced opacity is **not** used in dark mode (would create a jarring bright scrim); dark mode uses `neutral-100` at increased opacity instead, since the modal surface (`neutral-90`) is already lighter than the scrim | Non-translucent fallback: solid `neutral-100` | Recommended (new — opacity value) | See [adaptation.md §3](adaptation.md#3-transparency-and-glass-like-effects). |
-| Disabled surface | `neutral-90` `#23252B` | Exempt (disabled) | Approved value, Recommended mapping | |
+| Disabled surface | `neutral-90` `#23252B` | Exempt (disabled) | Approved value, Approved mapping | |
 
 ## 3. Text and Content
 

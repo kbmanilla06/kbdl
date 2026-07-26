@@ -1,17 +1,23 @@
 # KBDL Themes — Adaptation, Contexts, and Cross-Cutting Rules
 
-**Corrected under KBDL-004-R1.** Lifecycle status: `Approved` only for
-the Surface and Elevation cross-cutting requirements below (directly
-derived from `foundations/shape-depth.md`), §1.2's accessibility-
-non-weakening core (see `KBDL-THM-005`), and §7.1's pre-existing
-reduced-motion requirement (see `KBDL-THM-012a`). Everything else in
-this document is `Recommended`, pending project-owner approval: §1.1/
-§1.3's detailed project-override list (`KBDL-THM-014`), §2's local-
-contrast-context architecture (`KBDL-THM-015`), §3 (transparency
-opacity values), §4 (gradient strategy), §5 (status-family colors), §6
-(color-value expression convention), and §7's KBDL-004-specific
-transition guidance beyond reduced-motion (`KBDL-THM-012`). See
-[themes/README.md § Theme Decision Packet](README.md#10-theme-decision-packet-restructured-under-kbdl-004-r1r2).
+**Updated under KBDL-004-A1.** Lifecycle status is now `Approved` for
+nearly all of this document, per the project owner's approval of
+[KBDL-DEC-013](../decision-register.md#kbdl-dec-013--kbdl-004-theme-decisions-approved):
+the Surface and Elevation cross-cutting requirements (already approved,
+directly derived from `foundations/shape-depth.md`); §1's project-
+override rules in full — both the pre-existing accessibility-non-
+weakening core (`KBDL-THM-005`) and the detailed override list
+(`KBDL-THM-014`, newly approved); §2's local-contrast-context
+architecture (`KBDL-THM-015`, newly approved); §4's gradient strategy
+(`KBDL-THM-010`, newly approved — **opaque caption-band scope only**,
+see §4.3); §5's status-family colors (`KBDL-THM-009`, newly approved);
+§6's color-value expression convention (`KBDL-THM-011`, newly approved);
+and §7's conceptual transition guidance (`KBDL-THM-012`, newly approved)
+alongside the pre-existing reduced-motion requirement (`KBDL-THM-012a`).
+**§3 (transparency opacity values) remains `Recommended`/`Not verified`**
+— no specific opacity was part of the approved packet; see
+[validation.md §5](validation.md#5-items-not-verified). See
+[themes/README.md § Theme Decision Packet](README.md#10-theme-decision-packet-approved-under-kbdl-004-a1).
 
 Return to the [themes index](README.md) · [specification index](../README.md).
 
@@ -240,10 +246,13 @@ because no specific opacity value has been approved yet.
 
 ## 4. Gradient Strategy
 
-Extends the pending recommendation in
+Extends the recommendation in
 [foundations/color.md §3.4](../foundations/color.md#34-restrained-gradient-strategy).
-Status: `Recommended`, `Assumed` provenance, `Not verified` beyond the one
-worked example below.
+Status: `Approved` (per [KBDL-DEC-013](../decision-register.md#kbdl-dec-013--kbdl-004-theme-decisions-approved),
+`KBDL-THM-010`) for the **opaque caption-band strategy** documented in
+the worked example below; `User-provided` provenance; `Verified` for
+that worked example's contrast pairs. Any **translucent** caption-band
+variant remains `Recommended`, `Not verified`, and outside this approval.
 
 ### 4.1 Permitted purposes
 
@@ -337,9 +346,10 @@ gradient-to-text pairs remain prohibited (R2-AC-004).
 
 ## 5. Status-Family Theme Behavior
 
-Extends the pending recommendation in
+Extends the recommendation in
 [foundations/color.md §3.3](../foundations/color.md#33-supporting-status-families).
-Status: `Recommended`, `Assumed` provenance, `Verified` for the contrast
+Status: `Approved` (per [KBDL-DEC-013](../decision-register.md#kbdl-dec-013--kbdl-004-theme-decisions-approved),
+`KBDL-THM-009`), `User-provided` provenance, `Verified` for the contrast
 pairs shown (see [validation.md](validation.md)).
 
 ### 5.1 Requirements
@@ -416,9 +426,10 @@ reconciliation, if the project owner requests one).
 
 ## 6. Color-Value Expression
 
-Extends the pending recommendation in
+Extends the recommendation in
 [foundations/color.md §3.5](../foundations/color.md#35-consistent-value-expression-method).
-Status: `Recommended`, `Assumed` provenance, `Not applicable` validation
+Status: `Approved` (per [KBDL-DEC-013](../decision-register.md#kbdl-dec-013--kbdl-004-theme-decisions-approved),
+`KBDL-THM-011`), `User-provided` provenance, `Not applicable` validation
 (a documentation convention, not a testable claim).
 
 ### 6.1 Recommendation
@@ -450,12 +461,15 @@ Status: `Recommended`, `Assumed` provenance, `Not applicable` validation
 
 ## 7. Theme-Transition Guidance
 
-Status: `Recommended`, `Assumed` provenance, `Not verified` — this
-applies to every requirement in this section **except** the reduced-
-motion rule in §7.1, which is a separate, already-`Approved`
-accessibility rule (`KBDL-THM-012a`) unaffected by this section's
-overall `Recommended` status. No duration, easing, or animation-distance
-value is introduced — all belong to KBDL-005 (Motion).
+Status: `Approved` (per [KBDL-DEC-013](../decision-register.md#kbdl-dec-013--kbdl-004-theme-decisions-approved),
+`KBDL-THM-012`) for the **conceptual** transition guidance in this
+section, `User-provided` provenance, `Not applicable` validation (no
+testable timing claim is made); the reduced-motion rule in §7.1 is a
+separate, already-`Approved` accessibility rule (`KBDL-THM-012a`)
+unaffected by this section's status. No duration, easing, or animation-
+distance value is introduced — all belong to KBDL-005 (Motion), which is
+eligible for its own future prompt and has not been started by this
+approval.
 
 ### 7.1 Requirements
 

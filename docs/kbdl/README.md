@@ -24,12 +24,24 @@ project owner's foundation-defaults approval, see
 the KBDL-003 default values (color, typography, spacing, shape, elevation,
 iconography); requirement-level validation statuses are recorded
 independently in the [traceability matrix](traceability-matrix.md) and are
-not all `Verified`. KBDL-004's exact light/dark theme mappings, status-
-family colors, gradient strategy, and color-value expression convention
-remain `Recommended`, pending project-owner approval — see
-[themes/README.md § Theme Decision Packet](themes/README.md#10-theme-decision-packet-restructured-under-kbdl-004-r1r2).
-Progression to later roadmap steps depends on the planning agent's
-validation review, not on this index. KBDL-001 established the
+not all `Verified`. As of the project owner's theme-decisions approval
+(see [KBDL-DEC-013](decision-register.md#kbdl-dec-013--kbdl-004-theme-decisions-approved)),
+the ten items in the KBDL-004 theme decision packet — persistence
+baseline, the opaque light/dark theme mappings, status-family colors,
+the opaque gradient caption-band strategy, the color-value expression
+convention, conceptual transition guidance, theme-selection precedence,
+project-override boundaries, and local contrast contexts — are
+`Approved`. Excluded from this approval and still `Recommended`/`Not
+verified`: Accent-surface, Scrim, and Selection-background opacity;
+translucent variants of the caption band; project-specific media
+composites; account-level theme sync; high-contrast/forced-colors mode;
+data-visualization palettes; and any implementation-layer format (CSS
+custom properties, JSON tokens, component-level theme tokens, framework
+APIs) — see
+[themes/README.md § Theme Decision Packet](themes/README.md#10-theme-decision-packet-approved-under-kbdl-004-a1).
+KBDL-005 (Motion) is the next eligible roadmap step and has not been
+started. Progression to later roadmap steps depends on the planning
+agent's validation review, not on this index. KBDL-001 established the
 documentation architecture, terminology, requirement and status
 conventions, and governance for the entire KBDL specification. KBDL-002
 established KBDL's identity statement, Digital Luxury and Technical Utility
@@ -81,7 +93,7 @@ must not be created until their roadmap step is reached.
 | 1 | Introduction | Deferred | `docs/kbdl/introduction.md` (planned) |
 | 2 | Principles | Approved | [principles.md](principles.md) |
 | 3 | Visual foundations | Approved (architecture and default values)* | [foundations/README.md](foundations/README.md) |
-| 4 | Adaptive themes | Approved (architecture); Recommended (exact mappings)** | [themes/README.md](themes/README.md) |
+| 4 | Adaptive themes | Approved (architecture and the ten-item theme decision packet)** | [themes/README.md](themes/README.md) |
 | 5 | Motion | Deferred | `docs/kbdl/motion.md` (planned) |
 | 6 | Responsive behavior | Deferred | `docs/kbdl/responsive.md` (planned) |
 | 7 | Accessibility | Deferred | `docs/kbdl/accessibility.md` (planned) |
@@ -100,12 +112,17 @@ and [KBDL-DEC-012](decision-register.md#kbdl-dec-012--foundation-decision-packet
 for the project owner's approval of the default values.
 
 \*\* See
-[themes/README.md](themes/README.md) for the full theme architecture,
-semantic-role inventory, and recommended light/dark mappings; the exact
-mappings, status-family colors, gradient strategy, and color-value
-expression convention remain `Recommended`, pending project-owner
-approval via the
-[theme decision packet](themes/README.md#10-theme-decision-packet-restructured-under-kbdl-004-r1r2).
+[themes/README.md](themes/README.md) for the full theme architecture and
+semantic-role inventory, and
+[KBDL-DEC-013](decision-register.md#kbdl-dec-013--kbdl-004-theme-decisions-approved)
+for the project owner's approval of the ten-item
+[theme decision packet](themes/README.md#10-theme-decision-packet-approved-under-kbdl-004-a1)
+(opaque light/dark mappings, status-family colors, opaque gradient
+caption-band strategy, color-value expression convention, conceptual
+transition guidance, selection precedence, project-override boundaries,
+and local contrast contexts). Opacity values, translucent variants, and
+all implementation-layer formats remain `Recommended`/`Not verified` and
+outside this approval.
 
 Supporting documents (not numbered modules, but required by KBDL-001 and
 referenced by KBDL-002 and KBDL-003):

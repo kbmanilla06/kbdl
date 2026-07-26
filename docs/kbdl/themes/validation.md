@@ -229,12 +229,16 @@ could pass.
 ## 5. Items Not Verified
 
 The following are explicitly `Not verified` and must not be treated as
-passing until calculated:
+passing until calculated. [KBDL-DEC-013](../decision-register.md#kbdl-dec-013--kbdl-004-theme-decisions-approved)
+(the project owner's approval of the ten-item theme decision packet)
+does not change this — approval is a lifecycle/authority decision,
+separate from validation, and explicitly excludes every item below from
+its scope:
 
 - Accent-surface and Scrim opacity values (both modes) — no specific
   opacity has been approved, so no worst-case contrast calculation has
   been run. **Excluded from the approval-ready decision-packet items**
-  (see [themes/README.md §10.2](README.md#10-theme-decision-packet-restructured-under-kbdl-004-r1r2)).
+  (see [themes/README.md §10.2](README.md#10-theme-decision-packet-approved-under-kbdl-004-a1)).
 - Selection-background opacity (both modes) — same reason. **Excluded
   from the approval-ready decision-packet items.**
 - Any **translucent** variant of the gradient caption band or media
