@@ -122,7 +122,7 @@ selected/disabled) must always be perceivable through more than color.
 | Selected emphasis | Perceivable change indicating a selected item. | Not applicable | Must not rely on color alone (see Selected border). |
 | Disabled emphasis | Perceivable reduction indicating an inactive control. | Exempt | Must not be confusable with a low-emphasis but still-active control. |
 | Drag or drop target | Perceivable change indicating a valid drop target. | 3:1 non-text | Must not appear identical to a hover state a user could confuse with drop validity. |
-| Keyboard focus | A distinct interaction-context role marking that an Actions/Interaction element currently holds keyboard focus (as opposed to Focus indicator, §1.3, which is the visible border/outline treatment itself). Keyboard focus's mapped value and visibility requirements **must** remain identical to Focus indicator — this is value/behavior equivalence between two distinct roles, not an alias. | Same requirement as Focus indicator: 3:1 against every adjacent approved surface | Must not diverge from the Focus indicator role's value or visibility. |
+| Keyboard focus | A distinct interaction-context role whose mapped value and visibility requirements must remain identical to Focus indicator (§1.3) — value/behavior equivalence, not aliasing. | Same as Focus indicator: 3:1 against every adjacent approved surface | Must not diverge from Focus indicator's value or visibility. |
 | Text-link states (visited/hover/active) | Perceivable changes across a link's lifecycle. | 4.5:1 for each state's text | Must not rely on color alone to distinguish states. |
 
 ### 1.5 Status
