@@ -690,12 +690,31 @@ The rows below trace KBDL-004's adaptive-theme scope, defined in
 - **Related decision:** `KBDL-THM-012a`, `KBDL-DEC-010`
 - **Notes:** These seven requirements collectively ensure no motion default introduced by this module bypasses KBDL's existing accessibility, safety, performance, or approval-governance baseline.
 
+### Detailed motion defaults separated from their approved cores (KBDL-MOT-028 through KBDL-MOT-034)
+
+- **Blueprint section:** Entrance-versus-exit duration relationship; attention repetition default; detailed ambient-motion boundaries; detailed scroll-linked-motion boundaries; reduced-motion substitution matrix; conceptual motion-token naming architecture; profile-level motion-intensity adjustments
+- **Roadmap prompt:** KBDL-005-R1 (added during remediation to separate new KBDL-005 policy that was previously bundled inside an Approved core requirement's section without its own lifecycle record)
+- **Requirement ID:** KBDL-MOT-028, KBDL-MOT-029, KBDL-MOT-030, KBDL-MOT-031, KBDL-MOT-032, KBDL-MOT-033, KBDL-MOT-034
+- **Specification location:** [motion/foundations.md §7](motion/foundations.md#7-entrance-and-exit-behavior), [motion/patterns.md §4, §5, §6, §10](motion/patterns.md#4-attention-motion), [motion/accessibility-performance.md §1.4](motion/accessibility-performance.md#14-per-category-parity-matrix), [motion/timing-easing.md §4](motion/timing-easing.md#4-conceptual-motion-tokens)
+- **Approval status:** Recommended for all seven — each is new KBDL-005 detail distinct from its already-`Approved` parent core (`KBDL-MOT-012`, `KBDL-MOT-016`, `KBDL-MOT-017`, `KBDL-MOT-018`, `KBDL-MOT-022`, and `KBDL-MOT-026` respectively; `KBDL-MOT-033` has no prior parent, since no earlier decision defines motion tokens)
+- **Validation status:** Not verified (`KBDL-MOT-030`, `KBDL-MOT-031`, `KBDL-MOT-034`); Not applicable (`KBDL-MOT-028`, `KBDL-MOT-029`, `KBDL-MOT-032`, `KBDL-MOT-033` — numerical/documentation/naming recommendations, not yet testable implementation claims)
+- **Validation method:** Manual review once implemented; project-owner review via the [motion decision packet](motion/README.md#10-motion-decision-packet) (not yet performed, items 6–9 and 11–13).
+- **Validation evidence:** Not verified — no implementation exists yet; conceptual manual review recorded in [motion/validation.md](motion/validation.md) where applicable.
+- **Known limitation:** These requirements exist specifically because KBDL-005's initial commit (`ea32ce3`) stated each parent core's exact detail (e.g., the 2–3 repetition default, the entrance/exit duration rule) inside an `Approved` section without its own `Recommended` lifecycle record — a mixed-scope defect corrected by KBDL-005-R1.
+- **Related decision:** Not applicable — pending a future decision-register entry once the project owner reviews the motion decision packet.
+- **Notes:** Splitting these out does not change any duration value, curve, movement range, hierarchy level, safety behavior, reduced-motion behavior, or profile recommendation — only the lifecycle bookkeeping.
+
 ## Notes on Scope
 
-No requirement in this matrix outside `GOV`, `PRN`, and `FND` has been implemented,
-designed, or validated. Rows for later roadmap modules exist only to show
-where their future requirements will be traced once their roadmap step is
-reached. Approval status and validation status are recorded independently
+`GOV`, `PRN`, `FND`, `THM`, and `MOT` are documented (architecture and,
+where noted per row, approved default values); none of their requirements
+have been *implemented* in code, regardless of lifecycle status — this
+matrix tracks specification-level approval and validation, not
+implementation. Rows for `RSP`, `A11Y`, `CMP`, `PRO`, `CUS`, and `VAL`
+exist only to show where their future requirements will be traced once
+their roadmap step is reached; `RSP` (KBDL-006) specifically remains
+locked until KBDL-005 passes validation and its proposed motion
+decisions are approved. Approval status and validation status are recorded independently
 for every row; a row being `Approved` never implies it is `Verified`, and a
 row being `Verified` never implies or grants `Approved` status. `PRN`
 requirements are approved as principles-level guidance; they do not
@@ -742,10 +761,17 @@ principle, KBDL-004 theme rule, or `KBDL-DEC-010` motion-safety baseline
 hierarchy and intensity model (`KBDL-MOT-005`, `006`), the timing/
 duration/easing architecture (`KBDL-MOT-007`–`009`), spatial-movement and
 choreography ranges (`KBDL-MOT-010`, `011`), navigation-motion
-architecture (`KBDL-MOT-013`), and the theme-transition duration/easing
-values that resolve what KBDL-004 deferred (`KBDL-MOT-020`). None of
-these `Recommended` items are implemented or treated as `Approved`
-until the project owner reviews the
+architecture (`KBDL-MOT-013`), the theme-transition duration/easing
+values that resolve what KBDL-004 deferred (`KBDL-MOT-020`), and the
+detailed defaults separated from their Approved parent cores under
+KBDL-005-R1 — the entrance-versus-exit duration relationship
+(`KBDL-MOT-028`), the attention repetition default (`KBDL-MOT-029`),
+detailed ambient-motion boundaries (`KBDL-MOT-030`), detailed
+scroll-linked-motion boundaries (`KBDL-MOT-031`), the reduced-motion
+substitution matrix (`KBDL-MOT-032`), the conceptual motion-token
+naming architecture (`KBDL-MOT-033`), and profile-level motion-intensity
+adjustments (`KBDL-MOT-034`). None of these `Recommended` items are
+implemented or treated as `Approved` until the project owner reviews the
 [motion decision packet](motion/README.md#10-motion-decision-packet);
 no decision-register entry has been created for KBDL-005, since no such
 review has yet occurred. KBDL-006 (Responsive and Accessibility) is

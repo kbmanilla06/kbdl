@@ -3,9 +3,13 @@
 Lifecycle status: `Approved` for the structural requirement that every
 category below document purpose, intensity, transformations,
 interruption, reduced-motion, performance, and profile guidance
-(`KBDL-MOT-004`); `Recommended` for the specific hierarchy levels,
-intensity model, spatial-movement ranges, and choreography guidance
-introduced as new KBDL-005 policy — see
+(`KBDL-MOT-004`), and for entrance/exit's safety core (`KBDL-MOT-012`:
+destructive actions must not rely on exit animation as confirmation;
+removed content must not remain focusable); `Recommended` for the
+specific hierarchy levels (`KBDL-MOT-005`), intensity model
+(`KBDL-MOT-006`), spatial-movement ranges (`KBDL-MOT-010`), choreography
+guidance (`KBDL-MOT-011`), and the entrance-versus-exit duration
+relationship (`KBDL-MOT-028`) introduced as new KBDL-005 policy — see
 [motion/README.md §9](README.md#9-normative-requirements) for exact
 per-requirement status.
 

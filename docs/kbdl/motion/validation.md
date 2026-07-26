@@ -176,9 +176,20 @@ passing until an implementation exists and is measured:
 - Duplicate requirement-ID and decision-ID scan — passed, none found.
 - Requirement-ID format review — passed, all `KBDL-MOT-###` IDs follow
   [conventions.md §2](../conventions.md#2-requirement-identification).
-- Lifecycle- and validation-status review — passed; every `Recommended`
-  value is clearly distinguished from `Approved` architecture throughout
-  this module.
+- Lifecycle- and validation-status review — **initially failed, then
+  corrected under KBDL-005-R1.** The original commit (`ea32ce3`) bundled
+  several new `Recommended` policy defaults (the entrance-versus-exit
+  duration relationship, the attention repetition default, detailed
+  ambient- and scroll-linked-motion boundaries, the reduced-motion
+  substitution matrix, the motion-token naming architecture, and
+  profile-level intensity adjustments) inside `Approved` sections
+  without an independent lifecycle record, and referenced the wrong
+  requirement ID (`KBDL-MOT-009`, easing) for intensity defaults instead
+  of `KBDL-MOT-006`. KBDL-005-R1 separated these into `KBDL-MOT-028`
+  through `KBDL-MOT-034`, fixed the incorrect reference, and rechecked
+  every section header and status line in this module; re-review now
+  passes — every `Recommended` value is clearly distinguished from
+  `Approved` architecture throughout this module.
 - Motion-term consistency review — passed; terms from
   [motion/README.md §2](README.md#2-motion-terminology) are used
   consistently across all motion documents.

@@ -116,8 +116,8 @@ module.
 
 Status: `Approved` (`KBDL-MOT-016`, directly restating the locked
 component-state-clarity rule and Accessibility by Default), `Confirmed`
-provenance, `Not verified`. The exact repetition limit below is
-`Recommended` pending approval.
+provenance, `Not verified`. The exact repetition limit below is a
+separate requirement, `KBDL-MOT-029`, `Recommended` pending approval.
 
 Covers new notification, changed value, validation error, success
 acknowledgment, warning, critical alert, background update, incoming
@@ -149,8 +149,9 @@ content, and unread state.
 
 Status: `Approved` (`KBDL-MOT-017`, directly restating the locked Motion
 Purpose rule and the already-`Approved` reduced-motion requirement
-`KBDL-THM-012a`), `Confirmed` provenance, `Not verified`. The exact
-boundaries below are `Recommended` pending approval.
+`KBDL-THM-012a`), `Confirmed` provenance, `Not verified`. The detailed
+boundaries below are a separate requirement, `KBDL-MOT-030`,
+`Recommended` pending approval.
 
 Covers decorative background movement, floating elements, slowly
 changing gradients, animated illustrations, live data indicators, loops,
@@ -185,6 +186,9 @@ implementation-facing step.
 Status: `Approved` (`KBDL-MOT-018`, directly restating the accessibility
 requirement that content remain accessible without script/animation, and
 the reduced-motion requirement), `Confirmed` provenance, `Not verified`.
+The detailed boundaries below (bounded parallax, no replay on small
+scroll changes) are a separate requirement, `KBDL-MOT-031`,
+`Recommended` pending approval.
 
 Covers reveal-on-entry, progress indicators, sticky transformations,
 parallax, scrollytelling, section transitions, and media progression.
@@ -353,7 +357,11 @@ error during motion, and reduced-performance fallback.
 
 ## 10. Profile-Level Motion Interpretation
 
-Status: `Approved` (`KBDL-MOT-026`, directly restating `KBDL-PRN-007`).
+Status: `Approved` (`KBDL-MOT-026`, directly restating `KBDL-PRN-007` —
+profiles must share one motion architecture, adjusting only emphasis).
+The specific per-profile "may emphasize"/"must preserve" adjustments
+below are a separate requirement, `KBDL-MOT-034`, `Recommended` pending
+approval.
 
 ### 10.1 Showcase
 

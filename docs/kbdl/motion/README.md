@@ -1,15 +1,19 @@
 # KBDL Motion — Expressive Motion Language
 
-Lifecycle status: `Approved` for the architecture, terminology, identity
-translation, purpose model, category system, and hierarchy defined below
-(directly derived from already-`Approved` KBDL-002 principles and
-KBDL-004 theme rules — see [§9](#9-normative-requirements) for exact
-requirement-level status). Every **exact** duration, easing curve,
-distance, scale, stagger, intensity default, and pattern default proposed
-in this module is `Recommended`, `User-provided` provenance, `Not
-verified`, pending project-owner approval via [§10](#10-motion-decision-packet).
-No value in this module authorizes implementation on its own — see
-[conventions.md §1.1](../conventions.md#11-lifecycle--approval-status).
+Lifecycle status: mixed. `Approved` only for the terminology, identity
+translation, purpose model, and category-completeness structure defined
+below, where each directly restates an already-`Approved` KBDL-002
+principle, KBDL-004 theme rule, or the motion-safety baseline
+(`KBDL-DEC-010`) — see [§9](#9-normative-requirements) for exact
+requirement-level status. `Recommended` for the five-level motion
+hierarchy, the intensity model, and every **exact** duration, easing
+curve, distance, scale, stagger, repetition default, substitution-matrix
+detail, token-naming architecture, profile-level intensity adjustment,
+and pattern default proposed in this module — `User-provided`
+provenance, `Not verified`/`Not applicable` validation, pending
+project-owner approval via [§10](#10-motion-decision-packet). No
+`Recommended` value in this module authorizes implementation on its
+own — see [conventions.md §1.1](../conventions.md#11-lifecycle--approval-status).
 
 Return to the [specification index](../README.md).
 
@@ -333,7 +337,7 @@ requirement does not make its implementation behavior `Verified` — see
   transformations, interruption behavior, reduced-motion response,
   performance considerations, and profile-level variation.
   - Lifecycle status: Approved (structural requirement; the categories'
-    exact intensity defaults remain `Recommended`, see `KBDL-MOT-009`).
+    exact intensity defaults remain `Recommended`, see `KBDL-MOT-006`).
     Provenance: User-provided. Validation status: Not verified.
   - Related principle: `KBDL-PRN-004` (visual-consistency relationships,
     motion character).
@@ -693,6 +697,120 @@ requirement does not make its implementation behavior `Verified` — see
     value is implemented or marked `Approved` without a decision-register
     entry.
 
+- **KBDL-MOT-028** — Exits **should** use a duration equal to or shorter
+  than their paired entrance's duration, per
+  [§10.2](#102-recommended-decisions--ready-for-approval) item 6; this is
+  new KBDL-005 timing policy, distinct from `KBDL-MOT-012`'s
+  already-`Approved` safety core (destructive actions must not rely on
+  exit animation as confirmation; removed content must not remain
+  focusable), which is unaffected by this requirement's status.
+  - Lifecycle status: Recommended. Provenance: User-provided. Validation
+    status: Not applicable (a timing-relationship recommendation, not
+    yet a testable implementation claim).
+  - Related principle: `KBDL-MOT-012`, `KBDL-MOT-008`.
+  - Applicable profiles: Showcase, Precision, Flow.
+  - Specification location: [foundations.md §7](foundations.md#7-entrance-and-exit-behavior).
+  - Related future modules: Components.
+  - Validation method: Manual review once implemented; project-owner
+    review (not yet performed).
+
+- **KBDL-MOT-029** — Attention motion **should** repeat no more than 2–3
+  times before holding a static emphasized state, per
+  [§10.2](#102-recommended-decisions--ready-for-approval) item 7; this
+  exact repetition default is new KBDL-005 policy, distinct from
+  `KBDL-MOT-016`'s already-`Approved` core (attention motion must not be
+  the sole indicator, must stop rather than repeat indefinitely, and
+  must not steal focus), which is unaffected by this requirement's
+  status.
+  - Lifecycle status: Recommended. Provenance: User-provided. Validation
+    status: Not applicable.
+  - Related principle: `KBDL-MOT-016`.
+  - Applicable profiles: Showcase, Precision, Flow.
+  - Specification location: [patterns.md §4](patterns.md#4-attention-motion).
+  - Related future modules: Components (feedback).
+  - Validation method: Manual review once implemented; project-owner
+    review (not yet performed).
+
+- **KBDL-MOT-030** — The detailed ambient-motion boundaries in
+  [patterns.md §5](patterns.md#5-ambient-and-continuous-motion)
+  (rare, bounded, pausable, reading-safe) are new KBDL-005 policy,
+  distinct from `KBDL-MOT-017`'s already-`Approved` core (ambient motion
+  must be non-essential and must honor reduced motion), which is
+  unaffected by this requirement's status.
+  - Lifecycle status: Recommended. Provenance: User-provided. Validation
+    status: Not verified.
+  - Related principle: `KBDL-MOT-017`.
+  - Applicable profiles: Showcase, Precision, Flow.
+  - Specification location: [patterns.md §5](patterns.md#5-ambient-and-continuous-motion).
+  - Related future modules: Components.
+  - Validation method: Manual review once implemented; project-owner
+    review (not yet performed).
+
+- **KBDL-MOT-031** — The detailed scroll-linked-motion boundaries in
+  [patterns.md §6](patterns.md#6-scroll-linked-motion) (bounded
+  parallax, no replay on small scroll changes) are new KBDL-005 policy,
+  distinct from `KBDL-MOT-018`'s already-`Approved` core (essential
+  content must not depend on scroll-triggered animation), which is
+  unaffected by this requirement's status.
+  - Lifecycle status: Recommended. Provenance: User-provided. Validation
+    status: Not verified.
+  - Related principle: `KBDL-MOT-018`.
+  - Applicable profiles: Showcase, Precision, Flow.
+  - Specification location: [patterns.md §6](patterns.md#6-scroll-linked-motion).
+  - Related future modules: Components, Responsive (`RSP`).
+  - Validation method: Manual review once implemented; project-owner
+    review (not yet performed).
+
+- **KBDL-MOT-032** — The detailed per-category reduced-motion
+  substitution matrix in
+  [accessibility-performance.md §1.4](accessibility-performance.md#14-per-category-parity-matrix)
+  is new KBDL-005 documentation, distinct from `KBDL-MOT-022`'s
+  already-`Approved` core requirement (every major pattern must define a
+  full-motion, reduced-motion, and no-motion behavior preserving
+  equivalent meaning), which is unaffected by this requirement's status.
+  - Lifecycle status: Recommended. Provenance: User-provided. Validation
+    status: Not applicable (a documentation-completeness recommendation,
+    reviewed conceptually per [motion/validation.md §3](validation.md#3-reduced-motion-matrix-review-performed)).
+  - Related principle: `KBDL-MOT-022`; `KBDL-THM-012a`.
+  - Applicable profiles: Showcase, Precision, Flow.
+  - Specification location: [accessibility-performance.md §1.4](accessibility-performance.md#14-per-category-parity-matrix).
+  - Related future modules: Accessibility (`A11Y`).
+  - Validation method: Manual review (performed, see
+    [motion/validation.md §3](validation.md#3-reduced-motion-matrix-review-performed));
+    project-owner review (not yet performed).
+
+- **KBDL-MOT-033** — The conceptual motion-token naming architecture in
+  [timing-easing.md §4](timing-easing.md#4-conceptual-motion-tokens)
+  (duration, easing, delay, stagger, distance, scale, opacity, rotation,
+  motion level, repetition, sequence, reduced-motion substitution) is
+  new KBDL-005 policy; no prior KBDL decision defines motion tokens.
+  - Lifecycle status: Recommended. Provenance: User-provided. Validation
+    status: Not applicable (a naming architecture, not a testable
+    claim).
+  - Related principle: `KBDL-MOT-007`, `KBDL-MOT-009`.
+  - Applicable profiles: Showcase, Precision, Flow.
+  - Specification location: [timing-easing.md §4](timing-easing.md#4-conceptual-motion-tokens).
+  - Related future modules: Components.
+  - Validation method: Manual review once implemented; project-owner
+    review (not yet performed).
+
+- **KBDL-MOT-034** — The specific per-profile motion-intensity
+  adjustments in
+  [patterns.md §10](patterns.md#10-profile-level-motion-interpretation)
+  (what each profile "may emphasize" and "must preserve") are new
+  KBDL-005 policy, distinct from `KBDL-MOT-026`'s already-`Approved` core
+  (profiles must share one motion architecture, adjusting only
+  emphasis), which is unaffected by this requirement's status.
+  - Lifecycle status: Recommended. Provenance: User-provided. Validation
+    status: Not verified.
+  - Related principle: `KBDL-MOT-026`; `KBDL-PRN-007`.
+  - Applicable profiles: Showcase, Precision, Flow.
+  - Specification location: [patterns.md §10](patterns.md#10-profile-level-motion-interpretation).
+  - Related future modules: Project profiles (`PRO`).
+  - Validation method: Manual cross-profile review once the
+    project-profiles module is approved; project-owner review (not yet
+    performed).
+
 ## 10. Motion Decision Packet
 
 ### 10.1 Already-Approved Motion Architecture (context only)
@@ -727,14 +845,14 @@ profiles must share one motion architecture (`KBDL-MOT-026`).
 | 3 | Easing categories and exact curves | Adopt the semantic categories and cubic-bezier-equivalent curves in [timing-easing.md §3](timing-easing.md#3-easing-architecture) (`KBDL-MOT-009`) | Named, framework-neutral curves give motion a consistent "material" feel without committing to an animation library | Linear-only easing (rejected — reads as mechanical, contradicts Digital Luxury) | Every curve must be re-evaluated for interruption/reversal per use; this review has been done conceptually, not against a live implementation | Reduced-motion bypasses easing entirely (instant change), unaffected | No curve requires physics simulation; all are closed-form | Establishes a recognizable, consistent motion "voice" | All profiles share the same easing set; only which curve is used varies by category | `KBDL-MOT-009` |
 | 4 | Movement-distance and scale ranges | Adopt the bounded ranges in [foundations.md §6](foundations.md#6-spatial-movement) (`KBDL-MOT-010`) | Prevents unbounded or inconsistent movement/scale choices across implementations | Unbounded, per-instance movement (rejected — risks disorienting, inconsistent motion) | Ranges are qualitative bounds (small/moderate/large), not exact pixel values, since exact values depend on component size (deferred to Components) | Large movement is restricted to rare, reviewed moments | Larger movement/scale costs more to composite; ranges bias toward cheaper defaults | Predictable movement preserves the user's spatial mental model | Showcase may use the upper bound rarely; Precision/Flow stay low | None |
 | 5 | Stagger and overlap guidance | Adopt the guidance in [foundations.md §5](foundations.md#5-choreography-and-sequencing) (`KBDL-MOT-011`) | Prevents long lists or groups from accumulating excessive total animation time | No stagger (rejected — flattens hierarchy in multi-element changes); unbounded stagger (rejected — creates excessive cumulative delay) | Guidance is qualitative (cap total sequence time), not an exact per-item millisecond value, since item count varies by context | Cumulative-delay cap protects users who rely on completion before acting | Bounded stagger keeps total animated-element count and time low | Reinforces hierarchy without feeling sluggish for larger groups | Showcase may stagger more items in rare moments; Precision limits stagger to small counts | `KBDL-MOT-011` |
-| 6 | Entrance-versus-exit relationship | Adopt the rule that exits are equal to or faster than entrances, in [foundations.md §7](foundations.md#7-entrance-and-exit-behavior) (`KBDL-MOT-012`) | Faster removal keeps the interface feeling responsive and avoids blocking subsequent actions | Symmetrical entrance/exit timing (rejected — exits feel sluggish relative to the new content already needing attention) | None identified | Faster exits reduce the risk of an exiting element remaining focusable longer than necessary | Faster exits reduce total animated time per interaction | Matches common platform conventions users already expect | Applies identically across profiles | `KBDL-MOT-008` |
-| 7 | Attention repetition limits | Adopt a bounded repetition count (attention motion plays a small, fixed number of times, then stops and holds a static state) in [patterns.md §4](patterns.md#4-attention-motion) (`KBDL-MOT-016`) | Prevents indefinite, distracting repetition while still drawing initial attention | Unlimited repetition until dismissed (rejected — violates motion-safety and distraction concerns) | A bounded count may under-emphasize an attention cue in a very busy interface; static fallback (color/icon/label) compensates | Bounded repetition directly supports the motion-safety prohibition on continuous pulsing near text | Bounded repetition caps ongoing compositing cost | Attention is drawn without becoming an ongoing distraction | Applies identically across profiles | `KBDL-MOT-016` |
-| 8 | Ambient-motion boundaries | Adopt the boundaries in [patterns.md §5](patterns.md#5-ambient-and-continuous-motion) (rare, bounded, pausable, reading-safe) (`KBDL-MOT-017`) | Keeps ambient motion decorative and non-essential without prohibiting it outright | No ambient motion permitted (rejected — overly restrictive for Showcase's editorial character) | Requires a documented pause/avoidance mechanism, an implementation cost | Reduced motion removes ambient motion entirely; full-motion mode still avoids reading-content proximity | Ambient motion must support a static fallback for constrained devices | Preserves Showcase's ability to feel alive without becoming distracting | Showcase uses ambient motion more; Precision/Flow use it rarely or not at all | `KBDL-MOT-017` |
-| 9 | Scroll-linked-motion boundaries | Adopt the boundaries in [patterns.md §6](patterns.md#6-scroll-linked-motion) (bounded parallax, no essential-content gating, reduced-motion disables parallax) (`KBDL-MOT-018`) | Allows expressive scroll storytelling in Showcase while protecting accessibility and normal scroll behavior everywhere | Prohibiting scroll-linked motion entirely (rejected — overly restrictive) | Large parallax remains excluded by default; a specific exception would need its own review | Essential-content-must-not-depend-on-scroll-animation rule is unaffected regardless of approval | Scroll-linked motion must not repeatedly replay on small scroll changes, bounding cost | Supports Showcase storytelling without breaking Precision/Flow scanning | Showcase primary use; Precision/Flow rare or none | `KBDL-MOT-018` |
+| 6 | Entrance-versus-exit relationship | Adopt the rule that exits are equal to or faster than entrances, in [foundations.md §7](foundations.md#7-entrance-and-exit-behavior) (`KBDL-MOT-028`) | Faster removal keeps the interface feeling responsive and avoids blocking subsequent actions | Symmetrical entrance/exit timing (rejected — exits feel sluggish relative to the new content already needing attention) | None identified | Faster exits reduce the risk of an exiting element remaining focusable longer than necessary | Faster exits reduce total animated time per interaction | Matches common platform conventions users already expect | Applies identically across profiles | `KBDL-MOT-008`, `KBDL-MOT-012` |
+| 7 | Attention repetition limits | Adopt a bounded repetition count (attention motion plays a small, fixed number of times, then stops and holds a static state) in [patterns.md §4](patterns.md#4-attention-motion) (`KBDL-MOT-029`) | Prevents indefinite, distracting repetition while still drawing initial attention | Unlimited repetition until dismissed (rejected — violates motion-safety and distraction concerns) | A bounded count may under-emphasize an attention cue in a very busy interface; static fallback (color/icon/label) compensates | Bounded repetition directly supports the motion-safety prohibition on continuous pulsing near text | Bounded repetition caps ongoing compositing cost | Attention is drawn without becoming an ongoing distraction | Applies identically across profiles | `KBDL-MOT-016` |
+| 8 | Ambient-motion boundaries | Adopt the boundaries in [patterns.md §5](patterns.md#5-ambient-and-continuous-motion) (rare, bounded, pausable, reading-safe) (`KBDL-MOT-030`) | Keeps ambient motion decorative and non-essential without prohibiting it outright | No ambient motion permitted (rejected — overly restrictive for Showcase's editorial character) | Requires a documented pause/avoidance mechanism, an implementation cost | Reduced motion removes ambient motion entirely; full-motion mode still avoids reading-content proximity | Ambient motion must support a static fallback for constrained devices | Preserves Showcase's ability to feel alive without becoming distracting | Showcase uses ambient motion more; Precision/Flow use it rarely or not at all | `KBDL-MOT-017` |
+| 9 | Scroll-linked-motion boundaries | Adopt the boundaries in [patterns.md §6](patterns.md#6-scroll-linked-motion) (bounded parallax, no essential-content gating, reduced-motion disables parallax) (`KBDL-MOT-031`) | Allows expressive scroll storytelling in Showcase while protecting accessibility and normal scroll behavior everywhere | Prohibiting scroll-linked motion entirely (rejected — overly restrictive) | Large parallax remains excluded by default; a specific exception would need its own review | Essential-content-must-not-depend-on-scroll-animation rule is unaffected regardless of approval | Scroll-linked motion must not repeatedly replay on small scroll changes, bounding cost | Supports Showcase storytelling without breaking Precision/Flow scanning | Showcase primary use; Precision/Flow rare or none | `KBDL-MOT-018` |
 | 10 | Theme-transition duration and easing | Adopt a short, non-blocking duration/easing pairing from the Standard timing and easing classes for the KBDL-004 theme-transition rules, per [patterns.md §8](patterns.md#8-theme-transition-motion) (`KBDL-MOT-020`) | Resolves the exact timing KBDL-004 deferred, using values already proposed here rather than inventing a separate scheme | A distinct, theme-specific timing scale (rejected — fragments the timing architecture for no added benefit) | Must remain short enough that no intermediate frame drops below the applicable contrast threshold; verified conceptually against the worked example, not a live implementation | Reduced motion replaces the transition with an instant switch, per already-Approved `KBDL-THM-012a` | A short, simple crossfade is inexpensive to composite | Theme switching feels deliberate without feeling slow | Applies identically across profiles (theme architecture is shared, per `KBDL-THM-006`) | `KBDL-MOT-007`, `KBDL-MOT-009`, `KBDL-THM-012` |
-| 11 | Reduced-motion substitution matrix | Adopt the full-motion/reduced-motion/no-motion matrix in [accessibility-performance.md §1](accessibility-performance.md#1-reduced-motion-and-no-motion-parity) (`KBDL-MOT-022`) | Makes reduced-motion behavior auditable per pattern rather than left to individual interpretation | A single global "disable everything" reduced-motion rule (rejected — removes necessary feedback along with decoration, harming comprehension) | Requires each new pattern to document its own row in the matrix going forward, an ongoing documentation cost | This is itself the accessibility deliverable — it operationalizes `KBDL-THM-012a` per pattern | Reduced/no-motion variants are cheaper to render, a secondary performance benefit | Preserves functionality for users who need reduced motion, without a degraded experience | Applies identically across profiles | `KBDL-THM-012a` |
-| 12 | Motion-token naming architecture | Adopt the conceptual token categories in [timing-easing.md §4](timing-easing.md#4-conceptual-motion-tokens) (duration, easing, delay, stagger, distance, scale, opacity, rotation, motion level, repetition, sequence, reduced-motion substitution) | Gives future implementation work a semantic naming target without committing to CSS, JSON, or any specific format | Component-scoped ad hoc naming per implementation (rejected — fragments consistency, harder to review across projects) | Exact token-file format and technology remain deferred; this is naming architecture only | Not applicable at this conceptual level | Not applicable at this conceptual level | Establishes a shared vocabulary implementers can reference consistently | Applies identically across profiles | None |
-| 13 | Profile-level motion-intensity adjustments | Adopt the per-profile emphasis guidance in [patterns.md §10](patterns.md#10-profile-level-motion-interpretation) (`KBDL-MOT-026`) | Lets Showcase, Precision, and Flow express their documented character (per [principles.md §9](../principles.md#9-profile-level-interpretation)) through motion without fragmenting the architecture | Identical motion intensity across all profiles (rejected — contradicts the already-approved profile-emphasis model) | Requires per-profile review when a new pattern is added, to confirm the shared-architecture constraint holds | Reduced-motion and motion-safety rules apply identically regardless of profile, unaffected | Precision/Flow's lower-intensity defaults reduce average rendering cost | Reinforces each profile's documented character (editorial, efficient, guided) | Directly defines the adjustment itself | `KBDL-PRN-007` |
+| 11 | Reduced-motion substitution matrix | Adopt the full-motion/reduced-motion/no-motion matrix in [accessibility-performance.md §1](accessibility-performance.md#1-reduced-motion-and-no-motion-parity) (`KBDL-MOT-032`) | Makes reduced-motion behavior auditable per pattern rather than left to individual interpretation | A single global "disable everything" reduced-motion rule (rejected — removes necessary feedback along with decoration, harming comprehension) | Requires each new pattern to document its own row in the matrix going forward, an ongoing documentation cost | This is itself the accessibility deliverable — it operationalizes `KBDL-THM-012a` per pattern | Reduced/no-motion variants are cheaper to render, a secondary performance benefit | Preserves functionality for users who need reduced motion, without a degraded experience | Applies identically across profiles | `KBDL-MOT-022`, `KBDL-THM-012a` |
+| 12 | Motion-token naming architecture | Adopt the conceptual token categories in [timing-easing.md §4](timing-easing.md#4-conceptual-motion-tokens) (duration, easing, delay, stagger, distance, scale, opacity, rotation, motion level, repetition, sequence, reduced-motion substitution) (`KBDL-MOT-033`) | Gives future implementation work a semantic naming target without committing to CSS, JSON, or any specific format | Component-scoped ad hoc naming per implementation (rejected — fragments consistency, harder to review across projects) | Exact token-file format and technology remain deferred; this is naming architecture only | Not applicable at this conceptual level | Not applicable at this conceptual level | Establishes a shared vocabulary implementers can reference consistently | Applies identically across profiles | None |
+| 13 | Profile-level motion-intensity adjustments | Adopt the per-profile emphasis guidance in [patterns.md §10](patterns.md#10-profile-level-motion-interpretation) (`KBDL-MOT-034`) | Lets Showcase, Precision, and Flow express their documented character (per [principles.md §9](../principles.md#9-profile-level-interpretation)) through motion without fragmenting the architecture | Identical motion intensity across all profiles (rejected — contradicts the already-approved profile-emphasis model) | Requires per-profile review when a new pattern is added, to confirm the shared-architecture constraint holds | Reduced-motion and motion-safety rules apply identically regardless of profile, unaffected | Precision/Flow's lower-intensity defaults reduce average rendering cost | Reinforces each profile's documented character (editorial, efficient, guided) | Directly defines the adjustment itself | `KBDL-MOT-026`, `KBDL-PRN-007` |
 
 ### 10.3 Unresolved or Not Approval-Ready
 

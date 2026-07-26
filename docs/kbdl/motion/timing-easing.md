@@ -7,8 +7,9 @@ pending project-owner approval via
 provenance. `Not applicable`/`Not verified` validation — these are
 numerical and naming recommendations, not yet testable implementation
 claims. See [motion/README.md §9](README.md#9-normative-requirements)
-(`KBDL-MOT-007`, `KBDL-MOT-008`, `KBDL-MOT-009`) for exact requirement
-wording.
+(`KBDL-MOT-007`, `KBDL-MOT-008`, `KBDL-MOT-009`, and `KBDL-MOT-033` for
+the conceptual motion-token architecture in [§4](#4-conceptual-motion-tokens))
+for exact requirement wording.
 
 Return to the [motion index](README.md) · [specification index](../README.md).
 

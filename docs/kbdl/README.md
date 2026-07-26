@@ -41,13 +41,15 @@ custom properties, JSON tokens, component-level theme tokens, framework
 APIs) — see
 [themes/README.md § Theme Decision Packet](themes/README.md#10-theme-decision-packet-approved-under-kbdl-004-a1).
 KBDL-005 established KBDL's motion terminology, identity translation,
-purpose model, category system, hierarchy, and intensity model, all
-`Approved` where directly supported by prior approved principles or
-theme rules (see [motion/README.md](motion/README.md)). Every **exact**
+purpose model, and category-completeness structure, `Approved` where
+directly supported by prior approved principles, theme rules, or the
+motion-safety baseline (see [motion/README.md](motion/README.md)). The
+five-level motion hierarchy, the intensity model, and every **exact**
 motion value KBDL-005 proposes — durations, easing curves, distances,
-scales, stagger, repetition limits, and pattern defaults — remains
-`Recommended`, pending project-owner approval via the
-[motion decision packet](motion/README.md#10-motion-decision-packet).
+scales, stagger, repetition limits, substitution-matrix detail,
+token-naming architecture, profile-level intensity adjustments, and
+pattern defaults — remain `Recommended`, pending project-owner approval
+via the [motion decision packet](motion/README.md#10-motion-decision-packet).
 KBDL-006 (Responsive and Accessibility) is locked until KBDL-005 passes
 validation and its proposed motion decisions are approved; it has not
 been started. Progression to later roadmap steps depends on the
@@ -107,7 +109,7 @@ yet and must not be created until their roadmap step is reached.
 | 2 | Principles | Approved | [principles.md](principles.md) |
 | 3 | Visual foundations | Approved (architecture and default values)* | [foundations/README.md](foundations/README.md) |
 | 4 | Adaptive themes | Approved (architecture and the ten-item theme decision packet)** | [themes/README.md](themes/README.md) |
-| 5 | Motion | Approved (architecture)†; Recommended (exact durations, curves, and pattern defaults) | [motion/README.md](motion/README.md) |
+| 5 | Motion | Approved (terminology and category-completeness core)†; Recommended (hierarchy, intensity model, exact durations, curves, and pattern defaults) | [motion/README.md](motion/README.md) |
 | 6 | Responsive behavior | Deferred (locked until KBDL-005 passes and its motion decisions are approved) | `docs/kbdl/responsive.md` (planned) |
 | 7 | Accessibility | Deferred | `docs/kbdl/accessibility.md` (planned) |
 | 8 | Core action, form, and navigation components | Deferred | `docs/kbdl/components-core.md` (planned) |
@@ -138,10 +140,13 @@ all implementation-layer formats remain `Recommended`/`Not verified` and
 outside this approval.
 
 † See [motion/README.md](motion/README.md) for the full motion
-architecture, terminology, purpose model, category system, hierarchy,
-and intensity model, all `Approved` where directly supported by prior
-approved principles or theme rules. Every exact duration, easing curve,
-distance, scale, stagger, repetition limit, and pattern default remains
+architecture. Terminology, identity translation, purpose model, and
+category-completeness structure are `Approved` where directly supported
+by prior approved principles, theme rules, or the motion-safety
+baseline. The five-level motion hierarchy, the intensity model, and
+every exact duration, easing curve, distance, scale, stagger, repetition
+limit, substitution-matrix detail, token-naming architecture,
+profile-level intensity adjustment, and pattern default remain
 `Recommended`, pending project-owner approval via the
 [motion decision packet](motion/README.md#10-motion-decision-packet).
 
