@@ -148,20 +148,45 @@ KBDL-<MODULE>-<###>
 **Lifecycle:**
 
 - **Creation** — a new requirement is assigned the next unused number in its
-  module code at the time it is `Approved`. Draft or `Recommended` text may
-  exist without an ID until it is approved.
+  module code as soon as it is documented as a stable, individually
+  traceable requirement — whether its lifecycle status is `Recommended`,
+  `Unresolved`, `Deferred`, `Blocked`, or `Approved`. **Assigning an ID is
+  a traceability action only: it does not grant, imply, or shortcut
+  approval, and it does not authorize implementation.** Only the
+  lifecycle dimension ([§1.1](#11-lifecycle--approval-status)) determines
+  whether a requirement may be implemented, regardless of how long it has
+  carried an ID. A requirement's ID, provenance, and validation status are
+  each independent of its lifecycle status, exactly as
+  [§1](#1-status-labels) describes for statements generally.
+- **Approval transitions update status, not identity** — when a
+  `Recommended`, `Unresolved`, `Deferred`, or `Blocked` requirement is
+  later approved, its existing ID is retained; approval is recorded as a
+  lifecycle-status change (and, where applicable, a
+  [decision-register](decision-register.md) entry), never as the
+  assignment of a new or different ID.
 - **Retirement** — a requirement that is no longer applicable is marked
   `Deprecated` or `Superseded`; its ID is never reassigned to a different
-  requirement.
+  requirement, whether or not it ever reached `Approved`.
 - **Supersession** — a replacing requirement gets a new ID and references the
   superseded ID; the superseded requirement's entry records the new ID.
 - **Referencing** — any document may reference a requirement by its ID alone
   (e.g. "see `KBDL-GOV-001`"); the [traceability matrix](traceability-matrix.md)
-  resolves each ID to its current specification location.
+  resolves each ID to its current specification location, lifecycle status,
+  provenance, and validation status.
 
 This prompt (KBDL-001) introduces governance-scoped requirements under `GOV`
 only, to demonstrate the convention. See the [decision register](decision-register.md)
 and [traceability matrix](traceability-matrix.md).
+
+**Amended under KBDL-006-R1** (see
+[KBDL-DEC-015](decision-register.md#kbdl-dec-015--kbdl-006-remediation-and-id-governance-amendment)):
+the Creation and Approval-transitions rules above were corrected to
+match the convention already in practical use since KBDL-004-R1 — every
+later module (`THM`, `MOT`, `RSP`, `A11Y`) has assigned stable IDs to
+`Recommended` requirements from their first draft, not only once
+approved. This amendment makes the written convention match that
+practice; it does not change the ID, lifecycle status, provenance, or
+validation status of any existing requirement.
 
 ## 3. Cross-Reference Conventions
 

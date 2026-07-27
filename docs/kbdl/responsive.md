@@ -131,7 +131,7 @@ this module and are proposed in [§7](#7-proposed-exact-breakpoint-thresholds).
 
 ## 7. Proposed Exact Breakpoint Thresholds
 
-Status: `Recommended` (`KBDL-RSP-002`), `User-provided` provenance,
+Status: `Recommended` (`KBDL-RSP-002`), `Assumed` provenance,
 `Not verified` — pending project-owner approval via
 [§35](#35-responsive-decision-packet).
 
@@ -579,7 +579,7 @@ starting at `001` (no prior `RSP` requirement exists in the repository).
 - **KBDL-RSP-002** — The four named breakpoint roles **must** use the
   exact minimum-width thresholds in [§7](#7-proposed-exact-breakpoint-thresholds)
   once approved.
-  - Lifecycle status: Recommended. Provenance: User-provided. Validation
+  - Lifecycle status: Recommended. Provenance: Assumed. Validation
     status: Not applicable (a numerical recommendation, not yet a
     testable implementation claim).
   - Related requirement: `KBDL-FND-011` (named breakpoint set, Approved).
@@ -590,7 +590,7 @@ starting at `001` (no prior `RSP` requirement exists in the repository).
 
 - **KBDL-RSP-003** — Grid column counts **must** use the values in
   [§8](#8-grid-and-column-behavior) once approved.
-  - Lifecycle status: Recommended. Provenance: User-provided. Validation
+  - Lifecycle status: Recommended. Provenance: Assumed. Validation
     status: Not applicable.
   - Related requirement: `KBDL-RSP-002`.
   - Applicable profiles: Showcase, Precision, Flow.
@@ -600,7 +600,7 @@ starting at `001` (no prior `RSP` requirement exists in the repository).
 - **KBDL-RSP-004** — Container widths and reading measures **must** use
   the values in [§9](#9-container-widths-and-reading-measures) once
   approved.
-  - Lifecycle status: Recommended. Provenance: User-provided. Validation
+  - Lifecycle status: Recommended. Provenance: Assumed. Validation
     status: Not applicable.
   - Related requirement: `KBDL-RSP-002`; foundation typography reading
     measure (Approved).
@@ -610,10 +610,10 @@ starting at `001` (no prior `RSP` requirement exists in the repository).
 
 - **KBDL-RSP-005** — Gutter and page-edge margin values **must** use
   the values in [§10](#10-gutters-and-responsive-spacing) once approved.
-  - Lifecycle status: Recommended. Provenance: User-provided. Validation
+  - Lifecycle status: Recommended. Provenance: Assumed. Validation
     status: Not applicable.
-  - Related requirement: `KBDL-RSP-002`; `KBDL-FND-###` spacing scale
-    (Approved).
+  - Related requirement: `KBDL-RSP-002`; `KBDL-FND-011` (8-step spacing
+    scale, Approved).
   - Applicable profiles: Showcase, Precision, Flow.
   - Specification location: [§10](#10-gutters-and-responsive-spacing).
   - Validation method: Project-owner review (not yet performed).
@@ -647,7 +647,7 @@ starting at `001` (no prior `RSP` requirement exists in the repository).
   collapse thresholds use the values approved under `KBDL-RSP-002`.
   - Lifecycle status: Recommended (the constant-meaning rule is Approved
     per `KBDL-PRN-006`; exact collapse thresholds are new). Provenance:
-    User-provided. Validation status: Not verified.
+    Assumed. Validation status: Not verified.
   - Related requirement: `KBDL-RSP-002`, `KBDL-PRN-006`.
   - Applicable profiles: Showcase, Precision, Flow.
   - Specification location: [§13](#13-navigation-adaptation).
@@ -680,7 +680,7 @@ starting at `001` (no prior `RSP` requirement exists in the repository).
   horizontal scroll, card transformation, or column-priority collapse
   at smaller breakpoints — never silent data loss.
   - Lifecycle status: Recommended (new KBDL-006 policy). Provenance:
-    User-provided. Validation status: Not verified.
+    Assumed. Validation status: Not verified.
   - Related requirement: `KBDL-RSP-001`.
   - Applicable profiles: Precision primarily; Showcase, Flow as
     applicable.

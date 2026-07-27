@@ -446,6 +446,88 @@ rather than invented, per the source-of-truth rules in this prompt.
 - **Superseded decision:** None.
 - **Review date:** Not applicable.
 
+### KBDL-DEC-015 — KBDL-006 remediation and ID-governance amendment
+
+- **Date:** 2026-07-27
+- **Status:** Approved
+- **Decision owner:** Project owner. A remediation prompt (KBDL-006-R1)
+  asserted that the project owner had already approved this governance
+  decision, but no such approval existed anywhere in the actual
+  implementing conversation prior to this step. This discrepancy was
+  flagged directly to the project owner, who was then asked a direct,
+  structured confirmation question ("Yes, approve this governance
+  change" vs. alternatives); the project owner selected "Yes, approve
+  this governance change." This in-conversation selection — not the
+  prompt's original unverified claim — is the sole evidentiary basis
+  for this decision, consistent with the standard established in
+  [KBDL-DEC-012](#kbdl-dec-012--foundation-decision-packet-approved),
+  [KBDL-DEC-013](#kbdl-dec-013--kbdl-004-theme-decisions-approved), and
+  [KBDL-DEC-014](#kbdl-dec-014--kbdl-005-motion-decisions-approved).
+- **Context:** KBDL-006 (commit `14ef110`) assigned stable
+  `KBDL-RSP-###`/`KBDL-A11Y-###` IDs to nine `Recommended` requirements
+  before their approval, following the same practice already used for
+  `KBDL-THM-013`–`015` and `KBDL-MOT-005`, `006`, etc. since KBDL-004-R1.
+  This practice conflicted with the literal text of
+  [conventions.md §2](conventions.md#2-requirement-identification),
+  which stated an ID is assigned "at the time it is `Approved`." A
+  remediation step (KBDL-006-R1) proposed correcting the written
+  convention to match the practice actually in use, and separately
+  proposed accepting commit `14ef110` as the KBDL-006 remediation
+  baseline.
+- **Decision:** The project owner approved exactly two things: (1)
+  accepting commit `14ef110` as the KBDL-006 remediation baseline only
+  — not as a statement that KBDL-006 has passed; and (2) amending
+  [conventions.md §2](conventions.md#2-requirement-identification) so
+  that a stable requirement ID may be assigned as soon as a requirement
+  is documented, regardless of lifecycle status, provided that: an
+  assigned ID never grants, implies, or shortcuts approval; an assigned
+  ID never authorizes implementation; only the lifecycle-status
+  dimension determines implementation authority; `Recommended`,
+  `Unresolved`, `Deferred`, and `Blocked` requirements may retain stable
+  IDs; retired or rejected IDs are never reused; and an approval
+  transition updates lifecycle status only, never the ID itself. This
+  decision does **not** approve any of the nine KBDL-006 decision-packet
+  recommendations (`KBDL-RSP-002`, `003`, `004`, `005`, `008`, `011`,
+  `KBDL-A11Y-011`, `021`, `035`), all of which remain `Recommended`. It
+  does **not** declare KBDL-006 itself passed — KBDL-006 remains under
+  remediation and validation. It does **not** unlock KBDL-007, which
+  remains locked until KBDL-006 passes the planning agent's validation
+  review.
+- **Rationale:** The written convention had fallen out of sync with
+  established practice across three prior modules; correcting the
+  written rule (rather than retroactively stripping IDs from dozens of
+  already-documented `Recommended` requirements) preserves stability and
+  avoids ID churn, consistent with the convention's own "Stable" and
+  "Independent of page numbering" properties.
+- **Alternatives considered:** Retroactively removing IDs from every
+  `Recommended` requirement until each is approved (rejected — would
+  require renumbering or re-identifying dozens of existing, already
+  cross-referenced requirements across `THM`, `MOT`, `RSP`, and `A11Y`,
+  creating exactly the ID churn the convention's "Stable" property
+  exists to prevent). Leaving the written convention uncorrected while
+  continuing the conflicting practice (rejected — an unresolved,
+  self-contradicting governance document is itself a defect).
+- **Trade-offs:** None identified beyond the acknowledgment that the
+  written convention was inaccurate for roughly two prior modules'
+  worth of history; no existing ID, lifecycle status, provenance, or
+  validation status changes as a result.
+- **Affected requirements:** None — this decision changes governance
+  text only ([conventions.md §2](conventions.md#2-requirement-identification));
+  no requirement's ID, lifecycle status, provenance, or validation
+  status is altered by this decision itself.
+- **Affected modules:** GOV (governance/conventions only).
+- **Accessibility impact:** Not applicable — a documentation-governance
+  correction, not a substantive accessibility change.
+- **Motion impact:** Not applicable.
+- **Responsive impact:** Not applicable.
+- **Implementation impact:** `conventions.md` was updated to state the
+  amended ID-assignment rule. No file's substantive responsive or
+  accessibility content changed as a result of this decision.
+- **Superseded decision:** None — this decision corrects the written
+  text of a convention established under KBDL-001; it does not replace
+  any prior decision record.
+- **Review date:** Not applicable.
+
 ## Unresolved Metadata
 
 The following metadata could not be verified from available sources and is

@@ -776,14 +776,14 @@ The rows below trace KBDL-004's adaptive-theme scope, defined in
 - **Related decision:** `KBDL-MOT-006` (motion intensity model, already `Approved` under `KBDL-DEC-014`).
 - **Notes:** Does not reopen or restate any KBDL-005 timing/easing/reduced-motion value.
 
-### WCAG 2.2 Level A/AA baseline requirements (KBDL-A11Y-001 through KBDL-A11Y-010, KBDL-A11Y-012 through KBDL-A11Y-034, KBDL-A11Y-036 through KBDL-A11Y-040)
+### WCAG 2.2 Level A/AA baseline requirements (KBDL-A11Y-001 through KBDL-A11Y-010, KBDL-A11Y-012 through KBDL-A11Y-020, KBDL-A11Y-022 through KBDL-A11Y-034, KBDL-A11Y-036 through KBDL-A11Y-040)
 
 - **Blueprint section:** Text alternatives; captions; semantic structure; landmarks; reading/focus order; color independence; text/non-text contrast; focus visibility/obscuration; text spacing; keyboard operability/traps/bypass; pointer cancellation; dragging/gesture alternatives; motion actuation; reduced-motion cross-reference; flashing; timing/automatic movement; forms/labels/autocomplete; error identification/prevention; status messages; authentication; plain language; consistent navigation/help; media controls cross-reference; data presentation; mobile/virtual-keyboard cross-reference; profile consistency
 - **Roadmap prompt:** KBDL-006
-- **Requirement ID:** KBDL-A11Y-001–010, 012–034, 036–040 (35 requirements; excludes `KBDL-A11Y-011`, `021`, `035`, which are new KBDL enhancements listed separately below)
+- **Requirement ID:** KBDL-A11Y-001–010, 012–020, 022–034, 036–040 (37 requirements; excludes `KBDL-A11Y-011`, `021`, `035`, which are new KBDL enhancements listed separately below)
 - **Specification location:** [accessibility.md §6–§45](accessibility.md#3-wcag-22-level-aa-mapping)
-- **Approval status:** Approved for all 35 — each directly restates a WCAG 2.2 Level A or AA success criterion already adopted under `KBDL-DEC-010`, or an already-approved KBDL principle/foundation/theme/motion requirement, per the full mapping in [accessibility.md §3](accessibility.md#3-wcag-22-level-aa-mapping)
-- **Validation status:** Verified for `KBDL-A11Y-007`, `008`, `009` (text contrast, non-text contrast, focus visibility — verified against the already-`Verified` theme contrast evidence, [themes/validation.md §3](themes/validation.md#3-consolidated-contrast-evidence)); Not verified for the remaining 32 (implementation-dependent: keyboard, screen-reader, zoom, flash, and form-behavior testing require an implementation that does not yet exist)
+- **Approval status:** Approved for all 37 — each directly restates a WCAG 2.2 Level A or AA success criterion already adopted under `KBDL-DEC-010`, or an already-approved KBDL principle/foundation/theme/motion requirement, per the full mapping in [accessibility.md §3](accessibility.md#3-wcag-22-level-aa-mapping)
+- **Validation status:** Verified for `KBDL-A11Y-007`, `008`, `009` (text contrast, non-text contrast, focus visibility — verified against the already-`Verified` theme contrast evidence, [themes/validation.md §3](themes/validation.md#3-consolidated-contrast-evidence)); Not verified for the remaining 34 (implementation-dependent: keyboard, screen-reader, zoom, flash, and form-behavior testing require an implementation that does not yet exist)
 - **Validation method:** WCAG relative-luminance contrast calculation (completed for contrast/focus rows); manual + automated static accessibility review, keyboard testing, screen-reader testing, and flash analysis (all pending an implementation).
 - **Validation evidence:** [themes/validation.md §3](themes/validation.md#3-consolidated-contrast-evidence) for the three Verified rows; not verified for the rest.
 - **Known limitation:** This document does not claim full WCAG conformance, screen-reader compatibility, or real-device support — those require an implementation and recorded test evidence.
@@ -806,15 +806,22 @@ The rows below trace KBDL-004's adaptive-theme scope, defined in
 
 ## Notes on Scope
 
-`GOV`, `PRN`, `FND`, `THM`, and `MOT` are documented (architecture and,
-where noted per row, approved default values); none of their requirements
-have been *implemented* in code, regardless of lifecycle status — this
+`GOV`, `PRN`, `FND`, `THM`, `MOT`, `RSP`, and `A11Y` are documented
+(architecture and, where noted per row, approved default values or
+approved WCAG-derived requirements); none of their requirements have
+been *implemented* in code, regardless of lifecycle status — this
 matrix tracks specification-level approval and validation, not
-implementation. Rows for `RSP`, `A11Y`, `CMP`, `PRO`, `CUS`, and `VAL`
-exist only to show where their future requirements will be traced once
-their roadmap step is reached; `RSP` (KBDL-006) specifically remains
-locked until KBDL-005 passes validation and its proposed motion
-decisions are approved. Approval status and validation status are recorded independently
+implementation. `RSP` and `A11Y` (KBDL-006) are no longer future or
+locked modules: `docs/kbdl/responsive.md` and `docs/kbdl/accessibility.md`
+exist with 62 documented requirements (see the
+[KBDL-006 — Responsive and Accessibility](#kbdl-006--responsive-and-accessibility)
+section above), and KBDL-006 is currently in remediation and validation
+— not yet passed, per
+[KBDL-DEC-015](decision-register.md#kbdl-dec-015--kbdl-006-remediation-and-id-governance-amendment).
+Rows for `CMP`, `PRO`, `CUS`, and `VAL` exist only to show where their
+future requirements will be traced once their roadmap step is reached;
+those modules remain locked until KBDL-006 passes the planning agent's
+validation review. Approval status and validation status are recorded independently
 for every row; a row being `Approved` never implies it is `Verified`, and a
 row being `Verified` never implies or grants `Approved` status. `PRN`
 requirements are approved as principles-level guidance; they do not

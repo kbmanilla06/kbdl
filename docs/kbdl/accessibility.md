@@ -332,12 +332,33 @@ restates WCAG 2.2 SC 2.5.8 Target Size (Minimum), Level AA).
 `Recommended` for the KBDL-preferred enhanced size (`KBDL-A11Y-021`).
 
 **WCAG minimum (Approved):** pointer targets **must** be at least 24 by
-24 CSS pixels, except where: the target is inline within a sentence;
-the target's size is determined by the user agent and not modified by
-the author; an equivalent target of at least 24 by 24 CSS pixels is
-available elsewhere on the same page for the same function; or a
-sufficient target size would fundamentally alter the content's
-information or layout.
+24 CSS pixels, except where at least one of the following five
+WCAG 2.2 SC 2.5.8 exceptions applies:
+
+- **Spacing** — the target is smaller than 24 by 24 CSS pixels, but
+  targets are positioned so that a 24-CSS-pixel-diameter circle centered
+  on each undersized target's bounding box does not intersect either
+  another target's bounding box or another undersized target's own
+  24-pixel circle. This is a **geometric separation test**, not simply
+  "leave some space" — it must be verified per pair of adjacent
+  undersized targets, not assumed.
+- **Equivalent** — the same function is available through a different,
+  on-page control that itself meets the 24-by-24 minimum (or a valid
+  exception).
+- **Inline** — the target is in a sentence or block of text (e.g., a
+  link within a paragraph), where the text flow determines size.
+- **User Agent Control** — the target's size is determined by the user
+  agent and not modified by the author (e.g., a native browser control
+  the author does not restyle).
+- **Essential** — a particular presentation of the target is essential,
+  or is legally required, for the information being conveyed, and no
+  larger equivalent would preserve that essential presentation.
+
+This document does not simplify the Spacing exception into a generic
+"add space around small targets" rule — the exact 24-pixel-diameter,
+non-intersecting-circle test above is the actual WCAG mechanism, and
+any implementation claiming this exception must be checked against it
+specifically.
 
 **KBDL-preferred enhancement (Recommended):** a 44-by-44 CSS-pixel
 preferred target size for primary actions, exceeding the WCAG minimum
@@ -660,7 +681,8 @@ repository).
   - Lifecycle status: Approved (directly restates WCAG 2.2 SC 1.1.1,
     Level A, and SC 1.4.5, Level AA). Provenance: Confirmed. Validation
     status: Not verified.
-  - Related requirement: `KBDL-FND-###` media strategy.
+  - Related requirement: `KBDL-FND-007` (media anticipates accessible-text
+    requirements, Approved).
   - Applicable profiles: Showcase, Precision, Flow.
   - Specification location: [§6](#6-text-alternatives).
   - Validation method: Manual + automated static accessibility check
@@ -775,10 +797,13 @@ repository).
   tested as three separate cases.
   - Lifecycle status: Recommended (new KBDL policy — no prior theme
     decision addresses forced-colors mode; explicitly excluded from
-    `KBDL-DEC-013`). Provenance: User-provided. Validation status: Not
+    `KBDL-DEC-013`). Provenance: Assumed. Validation status: Not
     verified.
-  - Related requirement: `KBDL-THM-###` (theme architecture, excludes
-    this topic).
+  - Related requirement: No direct prior requirement ID — forced-colors/
+    high-contrast mode is explicitly listed as excluded from the KBDL-004
+    theme decision packet approval; see
+    [themes/README.md §10.3](themes/README.md#103-unresolved-or-not-approval-ready)
+    and [KBDL-DEC-013](decision-register.md#kbdl-dec-013--kbdl-004-theme-decisions-approved).
   - Applicable profiles: Showcase, Precision, Flow.
   - Specification location: [§16](#16-light-dark-forced-colors-and-high-contrast-behavior).
   - Validation method: Manual forced-colors testing once implemented;
@@ -873,7 +898,7 @@ repository).
 - **KBDL-A11Y-021** — A preferred 44-by-44 CSS-pixel target size for
   primary actions is proposed, exceeding the WCAG minimum.
   - Lifecycle status: Recommended (new KBDL enhancement, not yet
-    approved). Provenance: User-provided. Validation status: Not
+    approved). Provenance: Assumed. Validation status: Not
     applicable.
   - Related requirement: `KBDL-A11Y-020`.
   - Applicable profiles: Showcase, Precision, Flow.
@@ -1026,7 +1051,7 @@ repository).
 - **KBDL-A11Y-035** — A preferred screen-reader/browser testing matrix
   is proposed for future validation once an implementation exists.
   - Lifecycle status: Recommended (new KBDL testing-process
-    enhancement, not yet approved). Provenance: User-provided.
+    enhancement, not yet approved). Provenance: Assumed.
     Validation status: Not applicable.
   - Related requirement: `KBDL-A11Y-003`.
   - Applicable profiles: Showcase, Precision, Flow.
