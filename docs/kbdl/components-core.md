@@ -275,13 +275,15 @@ field hint text) but **must not** substitute for a missing name.
 Status: `Approved` (`KBDL-CMP-005`, a scope-control requirement).
 
 This module defines **only** the trigger, field, action, or
-navigation-side contract needed for future composition with KBDL-008
-surfaces. It does **not** fully specify: Card, Panel, Container surface,
-Accordion surface, Tooltip, Popover, Menu surface, Dropdown surface,
-Listbox surface, Dialog, Modal, Drawer, Sheet, Alert, Banner, Toast,
-Snackbar, Badge, Progress indicator, Skeleton, Empty state, Error page,
-Offline state, System status, Data visualization, Table component,
-Tree, Grid, or Carousel. Examples: this module defines a menu button's
+navigation-side contract needed for future composition with
+[KBDL-008](components-system.md) surfaces. It does **not** fully
+specify: Card, Panel, Container surface, Accordion surface, Tooltip,
+Popover, Menu surface, Dropdown surface, Listbox surface, Dialog,
+Modal, Drawer, Sheet, Alert, Banner, Toast, Snackbar, Badge, Progress
+indicator, Skeleton, Empty state, Error page, Offline state, System
+status, Data visualization, Table component, Tree, Grid, or Carousel —
+see [components-system.md](components-system.md) for the full
+specification of each. Examples: this module defines a menu button's
 trigger semantics, not the menu surface; a form field's error
 relationship, not the alert component's visual design; a submit
 button's loading contract, not a progress-indicator component; a
@@ -2105,8 +2107,10 @@ not itself constitute validation of any item — see
 
 - KBDL-008 surfaces and overlays (Card, Panel, Tooltip, Popover, Menu
   surface, Dialog, Drawer, Alert, Toast, Progress indicator, Table,
-  Tree, Grid, Carousel, and similar) — `Deferred`.
-- Feedback and system-state components — `Deferred` to KBDL-008.
+  Tree, Grid, Carousel, and similar) — now specified in
+  [components-system.md](components-system.md); no longer `Deferred`.
+- Feedback and system-state components — now specified in
+  [components-system.md](components-system.md); no longer `Deferred`.
 - Exact component-specific motion values — `Recommended`/`Unresolved`,
   depend on the underlying motion-pattern-matrix rows themselves being
   `Recommended`.

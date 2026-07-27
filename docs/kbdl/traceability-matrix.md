@@ -867,6 +867,73 @@ The rows below trace KBDL-004's adaptive-theme scope, defined in
 - **Related decision:** Not applicable — pending a future decision-register entry once the project owner reviews the KBDL-007 decision packet.
 - **Notes:** `KBDL-CMP-044`, `046`, `048` map to approval-ready [KBDL-007 decision packet](components-core.md#35-kbdl-007-decision-packet) items 7, 2, and 8 respectively. `KBDL-CMP-041` maps to a contingent, not-approval-ready item in [§35.3](components-core.md#353-unresolved-or-not-approval-ready) — it remains `Recommended`, but cannot be approved through the KBDL-007 packet until its `KBDL-RSP-002`/`008` dependencies are approved or replaced.
 
+## KBDL-008 — Surface, Overlay, Feedback, and System-State Components
+
+The rows below trace KBDL-008's scope, defined in
+[components-system.md](components-system.md). Full per-requirement
+detail (rationale, validation method, decision-packet mapping) lives in
+that document; these rows summarize status for cross-module lookup.
+
+### Surface components and module-wide baselines (KBDL-CMP-052, 053, 054, 055, 062, 065, 067, 068, 069, 070)
+
+- **Blueprint section:** KBDL-007 ownership boundary; extended system-component contract; surface architecture; Container Surface, Panel, Card, Accordion, Static Data Table
+- **Roadmap prompt:** KBDL-008
+- **Requirement ID:** KBDL-CMP-052, 053, 054, 055, 062, 065, 067, 068, 069, 070
+- **Specification location:** [components-system.md §5, §7, §8, §9](components-system.md#5-kbdl-007-ownership-boundary)
+- **Approval status:** `KBDL-CMP-052`, `053`, `054`, `055`, `062`, `065`, `068`, `070` Approved (restate KBDL-007's scope-control and accessible-naming rules, native-semantics-first rule, WCAG 1.3.1/1.4.1, and the adopted ARIA disclosure/region definitions); `KBDL-CMP-067` (card-variant taxonomy), `069` (accordion open model) Recommended (new component-level taxonomy)
+- **Provenance:** Confirmed for `KBDL-CMP-052`, `053`, `054`, `055`, `062`, `065`, `068`, `070`; Assumed for `KBDL-CMP-067`, `069`.
+- **Validation status:** Not verified
+- **Validation method:** Manual semantic-structure and DOM-relationship review once implemented; project-owner review of `KBDL-CMP-067`/`069` (not yet performed).
+- **Validation evidence:** Not verified — no implementation exists yet.
+- **Known limitation:** Implementation-dependent.
+- **Related decision:** Not applicable — pending a future decision-register entry once the project owner reviews the KBDL-008 decision packet.
+- **Notes:** `KBDL-CMP-067`, `069` map to [KBDL-008 decision packet](components-system.md#33-kbdl-008-decision-packet) items 1 and 2 respectively.
+
+### Overlay components (KBDL-CMP-056 through KBDL-CMP-060, 071 through 085)
+
+- **Blueprint section:** Overlay architecture; Tooltip, Popover, Menu surface, Listbox popup, Dialog, Modal Dialog, Alert Dialog, Drawer/Sheet; overlay layering and nesting
+- **Roadmap prompt:** KBDL-008
+- **Requirement ID:** KBDL-CMP-056, 057, 058, 059, 060, 071, 072, 073, 074, 075, 076, 077, 078, 079, 080, 081, 082, 083, 084, 085
+- **Specification location:** [components-system.md §10–§12](components-system.md#10-overlay-architecture)
+- **Approval status:** `KBDL-CMP-056`, `057`, `058`, `059`, `060`, `071`, `072`, `075`, `077`, `078`, `079`, `081`, `082`, `084` Approved (restate WCAG 2.1.1/2.1.2/2.2.1/2.4.3/2.4.11/1.4.13/4.1.2, the already-Approved motion-parity rule, adopted ARIA menu/listbox/dialog/alertdialog role definitions, and the KBDL-007 scope-control rule); `KBDL-CMP-073` (tooltip timing), `074` (popover taxonomy), `076` (menu interaction model), `080` (modal sizing/nesting), `083` (drawer/sheet taxonomy), `085` (overlay nesting policy) Recommended (new component-level timing, taxonomy, or nesting policy)
+- **Provenance:** Confirmed for `KBDL-CMP-056`, `057`, `058`, `059`, `060`, `071`, `072`, `075`, `077`, `078`, `079`, `081`, `082`, `084`; Assumed for `KBDL-CMP-073`, `074`, `076`, `080`, `083`, `085`.
+- **Validation status:** Not verified
+- **Validation method:** Manual focus-containment, keyboard, and ARIA-relationship review once implemented; project-owner review of the Recommended subset (not yet performed).
+- **Validation evidence:** Not verified — no implementation exists yet.
+- **Known limitation:** `KBDL-CMP-083` additionally notes that navigation-drawer use remains bound by the unapproved `KBDL-CMP-041` (KBDL-007) regardless of this item's own approval.
+- **Related decision:** Not applicable — pending a future decision-register entry once the project owner reviews the KBDL-008 decision packet.
+- **Notes:** `KBDL-CMP-073`, `074`, `076`, `080`, `083`, `085` map to [KBDL-008 decision packet](components-system.md#33-kbdl-008-decision-packet) items 3, 4, 5, 6, 7, and 8 respectively.
+
+### Feedback components (KBDL-CMP-061, 086 through KBDL-CMP-098)
+
+- **Blueprint section:** Feedback architecture; Inline Feedback, Alert, Banner, Toast/Snackbar, Status Region/Log, Badge, Progress Indicator, Meter, Skeleton
+- **Roadmap prompt:** KBDL-008
+- **Requirement ID:** KBDL-CMP-061, 086, 087, 088, 089, 090, 091, 092, 093, 094, 095, 096, 098
+- **Specification location:** [components-system.md §13–§14](components-system.md#13-feedback-architecture)
+- **Approval status:** `KBDL-CMP-061`, `086`, `087`, `088`, `090`, `092`, `093`, `094`, `095`, `096`, `098` Approved (restate the locked component-state-clarity rule, `KBDL-A11Y-031`, adopted WAI-ARIA live-region/alert/progressbar/meter role definitions, WCAG 1.1.1/1.4.1/2.2.1, and the existing KBDL-007 submit-loading contract); `KBDL-CMP-089` (banner taxonomy), `091` (toast lifecycle model) Recommended (new component-level taxonomy/timing)
+- **Provenance:** Confirmed for `KBDL-CMP-061`, `086`, `087`, `088`, `090`, `092`, `093`, `094`, `095`, `096`, `098`; Assumed for `KBDL-CMP-089`, `091`.
+- **Validation status:** Not verified
+- **Validation method:** Manual live-region, role, and content-classification review once implemented; project-owner review of `KBDL-CMP-089`/`091` (not yet performed).
+- **Validation evidence:** Not verified — no implementation exists yet.
+- **Known limitation:** Implementation-dependent.
+- **Related decision:** Not applicable — pending a future decision-register entry once the project owner reviews the KBDL-008 decision packet.
+- **Notes:** `KBDL-CMP-089`, `091` map to [KBDL-008 decision packet](components-system.md#33-kbdl-008-decision-packet) items 9 and 10 respectively.
+
+### System-state, complex-presentation, and profile/security baselines (KBDL-CMP-063, 064, 066, 097, 099–111)
+
+- **Blueprint section:** System-state architecture; Loading, Empty, No-Results, Error, Offline/Reconnecting, Permission Denied, Not Found, Maintenance/Degraded, System Status; complex-presentation architecture; Interactive Grid, Tree/Treegrid, Carousel, Data Visualization; responsive transformation policy; security/privacy and profile-compatibility baselines
+- **Roadmap prompt:** KBDL-008
+- **Requirement ID:** KBDL-CMP-063, 064, 066, 097, 099, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111
+- **Specification location:** [components-system.md §15–§19, §23, §24](components-system.md#15-system-state-architecture)
+- **Approval status:** `KBDL-CMP-063`, `064`, `066`, `097`, `100`, `101`, `103`, `104`, `107`, `109` Approved (restate `KBDL-A11Y-031`, the locked component-state-clarity rule, WCAG 3.3.1/3.3.7/2.2.2/1.4.1/1.3.1/2.1.1, the existing KBDL correctness/safety and security principles, the existing Data-display theme roles, and the already-Approved `KBDL-CMP-051` profile-consistency rule); `KBDL-CMP-099` (empty-state taxonomy), `102` (error/system-state severity taxonomy), `105` (grid-versus-table threshold), `106` (treegrid justification threshold), `108` (carousel auto-rotation policy), `110` (data-visualization interaction model), `111` (responsive transformation policy) Recommended (new component-level taxonomy, threshold, or policy)
+- **Provenance:** Confirmed for `KBDL-CMP-063`, `064`, `066`, `097`, `100`, `101`, `103`, `104`, `107`, `109`; Assumed for `KBDL-CMP-099`, `102`, `105`, `106`, `108`, `110`, `111`.
+- **Validation status:** Not verified
+- **Validation method:** Manual review once implemented; project-owner review of the Recommended subset (not yet performed).
+- **Validation evidence:** Not verified — no implementation exists yet.
+- **Known limitation:** `KBDL-CMP-105` additionally cites the unapproved `KBDL-RSP-011` as related context; `KBDL-CMP-111` additionally depends on the eventual `KBDL-RSP-002` value for its exact trigger point.
+- **Related decision:** Not applicable — pending a future decision-register entry once the project owner reviews the KBDL-008 decision packet.
+- **Notes:** `KBDL-CMP-099`, `102`, `105`, `106`, `108`, `110`, `111` map to [KBDL-008 decision packet](components-system.md#33-kbdl-008-decision-packet) items 11, 12, 13, 14, 15, 16, and 17 respectively.
+
 ## Notes on Scope
 
 `GOV`, `PRN`, `FND`, `THM`, `MOT`, `RSP`, `A11Y`, and `CMP` are
@@ -890,16 +957,23 @@ governance amendment permitting stable IDs before approval. **It does
 not approve any of the nine KBDL-006 recommendation values** — no
 decision-register entry currently approves the responsive or
 accessibility decision packets, and none of the nine recommendations is
-`Approved`. `CMP` (KBDL-007) is no longer a future or locked module:
-`docs/kbdl/components-core.md` exists with 51 documented requirements
-(see the
+`Approved`. `CMP` (KBDL-007) **passed** planning-agent validation before
+KBDL-008 began: `docs/kbdl/components-core.md` exists with 51
+documented requirements (see the
 [KBDL-007 — Core Action, Form, and Navigation Components](#kbdl-007--core-action-form-and-navigation-components)
-section above); KBDL-007 remains in remediation and pending
-planning-agent validation, following the same pattern KBDL-006 followed
-before it passed. Rows for
+section above); its standards-derived and inherited Approved
+requirements remain `Approved`; its ten KBDL-specific recommendations
+(`KBDL-CMP-015`, `017`, `020`, `025`, `029`, `036`, `041`, `044`, `046`,
+`048`) remain `Recommended` and unapproved — KBDL-007 passing
+validation does not promote them. `CMP` (KBDL-008) is no longer a
+future or locked module: `docs/kbdl/components-system.md` exists with
+60 additional documented requirements (`KBDL-CMP-052`–`111`, see the
+[KBDL-008 — Surface, Overlay, Feedback, and System-State Components](#kbdl-008--surface-overlay-feedback-and-system-state-components)
+section above); KBDL-008 remains in initial validation, not yet passed,
+following the same pattern KBDL-007 followed before it passed. Rows for
 `PRO`, `CUS`, and `VAL` exist only to show where their future
 requirements will be traced once their roadmap step is reached; those
-modules remain locked until KBDL-007 passes the planning agent's
+modules remain locked until KBDL-008 passes the planning agent's
 validation review. Approval status and validation status are recorded independently
 for every row; a row being `Approved` never implies it is `Verified`, and a
 row being `Verified` never implies or grants `Approved` status. `PRN`
@@ -1017,7 +1091,29 @@ review has yet occurred. This document does not claim full WCAG
 conformance, ARIA-pattern compliance, screen-reader compatibility, or
 real-device support for any component — see
 [components-core.md §32–§34](components-core.md#32-accessibility-validation-matrix)
-for exactly what has and has not been verified. KBDL-008 (Surface,
-Overlay, Feedback, and System-State Components) is locked until
-KBDL-007 passes the planning agent's validation review, and has not
-been started.
+for exactly what has and has not been verified. `CMP` requirements
+introduced by KBDL-008 follow the same pattern: `Approved` only where a
+requirement directly restates an already-adopted WCAG 2.2 criterion,
+WAI-ARIA role/state/property definition, or a prior approved KBDL or
+KBDL-007 rule; `Recommended` where new KBDL-008 component-level policy
+is introduced — a card-variant taxonomy, an accordion open model, a
+tooltip timing policy, a popover taxonomy, a menu interaction model, a
+modal sizing/nesting policy, a drawer/sheet taxonomy, an overlay
+nesting policy, a banner severity taxonomy, a toast lifecycle model, an
+empty-state taxonomy, an error/system-state severity taxonomy, a
+grid-versus-table threshold, a treegrid justification threshold, a
+carousel auto-rotation policy, a data-visualization interaction model,
+and a responsive transformation policy (`KBDL-CMP-067`, `069`, `073`,
+`074`, `076`, `080`, `083`, `085`, `089`, `091`, `099`, `102`, `105`,
+`106`, `108`, `110`, `111`). None of these `Recommended` items are
+implemented or treated as `Approved` until the project owner reviews
+the
+[KBDL-008 decision packet](components-system.md#33-kbdl-008-decision-packet);
+no decision-register entry has been created for KBDL-008, since no such
+review has yet occurred. This document does not claim full WCAG
+conformance, ARIA-pattern compliance, screen-reader compatibility, or
+real-device support for any component — see
+[components-system.md §29–§32](components-system.md#29-accessibility-validation-matrix)
+for exactly what has and has not been verified. KBDL-009 (Project
+Profiles) is locked until KBDL-008 passes the planning agent's
+validation review, and has not been started.

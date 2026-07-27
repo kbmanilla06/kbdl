@@ -93,12 +93,28 @@ and pagination, and similar) remain `Recommended`, pending project-owner
 approval via the
 [KBDL-007 decision packet](components-core.md#35-kbdl-007-decision-packet).
 None of the nine unapproved KBDL-006 recommendations is treated as
-implementation authority anywhere in KBDL-007. KBDL-008 (Surface,
-Overlay, Feedback, and System-State Components) remains locked until
-KBDL-007 passes the planning agent's validation review; it has not been
-started. This is not a claim that the overall KBDL project is complete —
-three roadmap steps remain. Progression to later roadmap steps depends on
-the
+implementation authority anywhere in KBDL-007. KBDL-007 **passed**
+planning-agent validation, which unlocked KBDL-008. KBDL-008 (Surface,
+Overlay, Feedback, and System-State Components) is now present: 60
+`KBDL-CMP-###` requirements (`KBDL-CMP-052` through `KBDL-CMP-111`)
+translating approved principles, foundations, themes, motion,
+responsive, accessibility, and KBDL-007 component rules into surface-,
+overlay-, feedback-, and system-state-level contracts (see
+[components-system.md](components-system.md)). Requirements directly
+restating an already-approved source are `Approved`; genuinely new
+component-level taxonomies, timing, placement, or policy choices (a
+card-variant taxonomy, an accordion open model, a tooltip timing
+policy, and similar) remain `Recommended`, pending project-owner
+approval via the
+[KBDL-008 decision packet](components-system.md#33-kbdl-008-decision-packet).
+None of the nine unapproved KBDL-006 recommendations or the ten
+unapproved KBDL-007 recommendations is treated as implementation
+authority anywhere in KBDL-008. KBDL-008 is currently under initial
+validation, not yet passed; KBDL-009 (Project Profiles) and every later
+roadmap step remain locked until KBDL-008 passes the planning agent's
+validation review — none has been started. This is not a claim that
+the overall KBDL project is complete — three roadmap steps remain.
+Progression to later roadmap steps depends on the
 planning agent's validation review, not on this index. KBDL-001
 established the documentation architecture, terminology, requirement
 and status conventions, and governance for the entire KBDL
@@ -122,9 +138,13 @@ Level AA to KBDL topics and resolving items previously deferred to it
 core action, form, and navigation component specification, translating
 approved principles, foundations, themes, motion, responsive, and
 accessibility rules into component-level contracts (see
-[components-core.md](components-core.md)). None of these steps define
-implementation code, KBDL-008 surfaces, or later-roadmap work — those
-remain later roadmap steps and must not be started early (see
+[components-core.md](components-core.md)). KBDL-008 established KBDL's
+surface, overlay, feedback, and system-state component specification,
+extending the KBDL-007 shared contract without redefining any KBDL-007
+trigger, field, action, or navigation contract (see
+[components-system.md](components-system.md)). None of these steps
+define implementation code, KBDL-009 profiles, or later-roadmap work —
+those remain later roadmap steps and must not be started early (see
 [governance.md](governance.md)).
 
 ## Intended Audience
@@ -152,8 +172,8 @@ specification itself.
 
 ## Document Hierarchy
 
-KBDL-001, KBDL-002, KBDL-003, KBDL-004, KBDL-005, KBDL-006, and
-KBDL-007 deliver the documents below with real content. Rows still
+KBDL-001, KBDL-002, KBDL-003, KBDL-004, KBDL-005, KBDL-006, KBDL-007,
+and KBDL-008 deliver the documents below with real content. Rows still
 marked `Deferred` show the **planned location only** for future
 modules; those files do not exist yet and must not be created until
 their roadmap step is reached.
@@ -168,8 +188,8 @@ their roadmap step is reached.
 | 6 | Responsive behavior | Approved (architecture)‡; Recommended (exact breakpoint/grid/gutter/container values) | [responsive.md](responsive.md) |
 | 7 | Accessibility | Approved (WCAG 2.2 AA mapping)‡; Recommended (KBDL-specific enhancements) | [accessibility.md](accessibility.md) |
 | 8 | Core action, form, and navigation components | Approved (architecture)§; Recommended (component-level taxonomies) | [components-core.md](components-core.md) |
-| 9 | Surface, overlay, feedback, and system-state components | Deferred (locked until KBDL-007 passes validation) | `docs/kbdl/components-system.md` (planned) |
-| 10 | Project profiles (Showcase, Precision, Flow) | Deferred | `docs/kbdl/profiles.md` (planned) |
+| 9 | Surface, overlay, feedback, and system-state components | Approved (architecture)¶; Recommended (component-level taxonomies) | [components-system.md](components-system.md) |
+| 10 | Project profiles (Showcase, Precision, Flow) | Deferred (locked until KBDL-008 passes validation) | `docs/kbdl/profiles.md` (planned) |
 | 11 | Manual customization | Deferred | `docs/kbdl/customization.md` (planned) |
 | 12 | Validation | Deferred | `docs/kbdl/validation.md` (planned) |
 | 13 | Governance | Approved | [governance.md](governance.md) |
@@ -238,6 +258,20 @@ approval via the
 [KBDL-007 decision packet](components-core.md#35-kbdl-007-decision-packet).
 None of the nine unapproved KBDL-006 recommendations is treated as
 implementation authority anywhere in this module. No implementation-dependent
+validation is claimed `Verified` — no coded component exists yet.
+
+¶ See [components-system.md](components-system.md) for the full
+specification. Requirements directly restating an already-approved
+WCAG 2.2 criterion, WAI-ARIA role/state/property, or prior approved
+KBDL or KBDL-007 rule are `Approved`. Genuinely new KBDL-008
+component-level decisions — a card-variant taxonomy, an accordion open
+model, a tooltip timing policy, a modal sizing/nesting policy, a
+grid-versus-table threshold, and similar — remain `Recommended`,
+pending project-owner approval via the
+[KBDL-008 decision packet](components-system.md#33-kbdl-008-decision-packet).
+None of the nine unapproved KBDL-006 recommendations or the ten
+unapproved KBDL-007 recommendations is treated as implementation
+authority anywhere in this module. No implementation-dependent
 validation is claimed `Verified` — no coded component exists yet.
 
 Supporting documents (not numbered modules, but required by KBDL-001 and

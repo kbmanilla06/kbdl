@@ -25,6 +25,8 @@ decisions (visual values, motion timings, component designs) already exist.
   label text used to identify it (per `KBDL-A11Y-028`). See
   [accessibility.md §32](accessibility.md#32-forms-labels-instructions-and-autocomplete).
 
+- **Accordion** — A surface component that pairs a KBDL-007 disclosure trigger with an expandable/collapsible panel, exposing its expanded state on the trigger. Tracked under module code `CMP`. See [components-system.md §9.4](components-system.md#94-accordion-surface).
+
 - **Action** — A component whose activation performs an operation within the
   current context, as distinct from navigation (see Link). Realized as the
   Button, Icon Button, and Toggle Button components. Tracked under module
@@ -34,6 +36,14 @@ decisions (visual values, motion timings, component designs) already exist.
   to the user's light or dark preference while preserving the same underlying
   design language. Tracked under module code `THM`. See
   [themes/README.md](themes/README.md).
+
+- **Alert** — A feedback component reserved for important, time-sensitive messages using the `alert` role, distinct from Alert Dialog (which requires a response) and Status (routine updates). See [components-system.md §14.2](components-system.md#142-alert).
+
+- **Alert Dialog** — A modal overlay reserved for urgent messages requiring an explicit user response, using the `alertdialog` role, distinct from an ordinary Dialog or Alert. See [components-system.md §11.7](components-system.md#117-alert-dialog).
+
+- **Badge** — A feedback component conveying a count or status marker; meaningful badges require an accessible text equivalent, while purely decorative badges carry no required semantics. See [components-system.md §14.6](components-system.md#146-badge-or-count-indicator).
+
+- **Banner** — A page- or section-level feedback component communicating a severity-scoped message, distinct from the site header/banner landmark. See [components-system.md §14.3](components-system.md#143-banner).
 
 - **Breadcrumb** — A navigation component communicating hierarchical location
   via an ordered list of ancestor destinations, ending in the current,
@@ -48,6 +58,10 @@ decisions (visual values, motion timings, component designs) already exist.
 - **Button** — An action component performing an immediate operation within
   the current context, using native button semantics. See
   [components-core.md §20.1](components-core.md#201-button).
+
+- **Card** — A summary or preview surface with heading/content hierarchy, an optional media relationship, and optional actions, distinct from Panel and Container Surface. See [components-system.md §9.3](components-system.md#93-card).
+
+- **Carousel** — A complex-presentation component cycling through a collection of slides via previous/next and picker controls; automatic rotation, where used, must satisfy the WCAG 2.2 pause/stop/hide requirement. See [components-system.md §18.3](components-system.md#183-carousel).
 
 - **Cognitive-function test** — An authentication step requiring a user to
   remember, transcribe, or solve something (a password, a puzzle, a
@@ -82,6 +96,8 @@ decisions (visual values, motion timings, component designs) already exist.
   requirement's lifecycle status is `Approved` and its validation status is
   `Verified`. Meeting only one of these two conditions is not conformance.
 
+- **Container Surface** — A neutral grouping surface with no semantics by default, distinct from Panel (which may carry section-level identity) and Card (which carries summary/preview purpose). See [components-system.md §9.1](components-system.md#91-container-surface).
+
 - **Controlled variable** — An aspect of KBDL's design that a project profile
   or implementer may adjust only within explicitly documented bounds, as
   opposed to an open brand expression or a locked rule.
@@ -94,8 +110,14 @@ decisions (visual values, motion timings, component designs) already exist.
 - **Customization rule** — Documented guidance describing how and where manual
   customization of KBDL is permitted. Tracked under module code `CUS`.
 
+- **Data Table** — A surface presenting tabular data using native `<table>`, caption, and header semantics; distinguished from Grid, which applies only where genuine interactive, cell-level operation is required. See [components-system.md §9.5](components-system.md#95-static-data-table).
+
+- **Data Visualization** — A complex-presentation component conveying data graphically, requiring non-color-dependent encoding and a text or data-table alternative; its exact chart taxonomy and palette remain unapproved. See [components-system.md §18.4](components-system.md#184-data-visualization).
+
 - **Decision record** — A single entry in the [decision register](decision-register.md)
   capturing a governance-relevant decision, its rationale, and its status.
+
+- **Dialog** — An overlay with a programmatically associated accessible name and a keyboard-operable close mechanism; a Modal Dialog additionally requires focus containment and background inertness. See [components-system.md §11.5](components-system.md#115-dialog).
 
 - **Disabled** — A component state that removes an element from interaction
   and from the tab order, distinct from Read-only (which preserves
@@ -113,6 +135,12 @@ decisions (visual values, motion timings, component designs) already exist.
   language: the concrete tokens, components, and tooling that realize a
   design language in a specific codebase or platform. KBDL is a design
   language; a project's design system is built by applying KBDL.
+
+- **Drawer** — An edge-attached overlay surface, modal or non-modal depending on its adopted default, distinct from Dialog and Sheet; a drawer used for collapsed navigation preserves the KBDL-007 navigation-trigger contract and approves no exact collapse threshold. See [components-system.md §11.8](components-system.md#118-drawer-and-sheet).
+
+- **Empty State** — A system state communicating a genuine absence of content, distinguished from No-Results State (which relates to a current query or filter). See [components-system.md §16.2](components-system.md#162-empty-state).
+
+- **Error State** — A system state communicating a recoverable or blocking failure, requiring a stated recovery path where recoverable and never exposing internal diagnostic detail. See [components-system.md §16.4](components-system.md#164-error-state).
 
 - **Exception** — An approved, documented, time-bound or scope-bound deviation
   from a locked rule or accessibility requirement, recorded in the
@@ -139,6 +167,10 @@ decisions (visual values, motion timings, component designs) already exist.
   built on. Tracked under module code `FND`. See
   [foundations/README.md](foundations/README.md).
 
+- **Grid** — An interactive complex-presentation component applying a composite-widget keyboard model (roving tabindex, arrow-key cell navigation), used only where genuinely justified over a static Data Table. See [components-system.md §18.1](components-system.md#181-interactive-grid).
+
+- **Inert** — The state of content that cannot receive focus or be reached by sequential or assistive-technology navigation, required for background content while a modal overlay is open. See [components-system.md §6](components-system.md#6-system-component-terminology).
+
 - **Input modality** — A distinct means of providing input to an interface
   (touch, pointer, keyboard, gesture, voice), each of which must retain
   equivalent interaction meaning per KBDL's input-parity requirements. See
@@ -154,6 +186,8 @@ decisions (visual values, motion timings, component designs) already exist.
   light/dark presentation, and WCAG 2.2 Level AA accessibility with enhanced
   reduced-motion safeguards.
 
+- **Listbox** — A popup surface exposing `listbox`/`option` roles that maintains a KBDL-007 combobox's active-descendant relationship; using a listbox popup does not itself approve the KBDL-007 custom-combobox-justification recommendation. See [components-system.md §11.4](components-system.md#114-listbox-popup).
+
 - **Live region** — A programmatically identified region of content whose
   updates are announced to assistive technology without requiring the user's
   focus, used for status messages. See
@@ -162,6 +196,14 @@ decisions (visual values, motion timings, component designs) already exist.
 - **Locked rule** — A KBDL rule (most often an accessibility or motion-safety
   rule) that cannot be modified by a project profile or customization without
   an approved exception.
+
+- **Log** — A live-region role for an ordered stream of updates, distinct from Status (a single advisory update) and Alert (an urgent, assertive message). See [components-system.md §14.5](components-system.md#145-status-region-and-log).
+
+- **Menu** — An overlay surface exposing `menu`/`menuitem` roles that maintains a KBDL-007 menu-button trigger's `aria-expanded`/`aria-controls` relationship, used only for genuine command or choice behavior. See [components-system.md §11.3](components-system.md#113-menu-surface).
+
+- **Meter** — A feedback component exposing a current value within a known range (with minimum/maximum), distinct from Progress Indicator, which communicates operation completion. See [components-system.md §14.8](components-system.md#148-meter).
+
+- **Modal** — An overlay that requires user response before other content can be operated; background content is rendered inert. See [components-system.md §6](components-system.md#6-system-component-terminology).
 
 - **Motion pattern** — A named, reusable way that an interface element moves
   or transitions, described independent of exact timing values. Tracked under
@@ -183,19 +225,31 @@ decisions (visual values, motion timings, component designs) already exist.
   simplifies rather than fully removes motion. See
   [motion/README.md §2](motion/README.md#2-motion-terminology).
 
+- **No-Results State** — A system state communicating that a current query or filter produced no matches, distinguished from Empty State by preserving the user's entered criteria. See [components-system.md §16.3](components-system.md#163-no-results-state).
+
 - **Non-conformance** — The condition of failing one or more applicable KBDL
   requirements for the scope being assessed — that is, a requirement whose
   lifecycle status is `Approved` is either not implemented as specified, or
   its validation status is not `Verified` where verification has been
   attempted and failed.
 
+- **Non-modal** — An overlay that coexists with an operable background, never trapping focus. See [components-system.md §6](components-system.md#6-system-component-terminology).
+
+- **Offline State** — A system state communicating a confirmed or suspected loss of connectivity; it must not claim a saved, synchronized, or queued status before the relevant system confirms it. See [components-system.md §16.5](components-system.md#165-offline-and-reconnecting-state).
+
 - **Open brand expression** — An aspect of KBDL explicitly left open for a
   project or profile to express its own brand identity, within the bounds set
   by foundations and locked rules.
 
+- **Overlay** — A surface rendered above the normal document flow, anchored to a trigger or the viewport, that opens and closes; modal or non-modal. See [components-system.md §6](components-system.md#6-system-component-terminology).
+
 - **Pagination** — A navigation component for moving between pages of a
   larger content set, marking the current page and providing
   previous/next actions. See [components-core.md §24.7](components-core.md#247-pagination).
+
+- **Panel** — A section-level grouping surface with an optional heading and description, using `region` semantics only when its content is a significant, independently navigable section. See [components-system.md §9.2](components-system.md#92-panel).
+
+- **Popover** — A non-modal overlay surface for supplemental interactive content, anchored to a trigger, distinct from Tooltip (non-interactive) and Menu (fixed command/choice content). See [components-system.md §11.2](components-system.md#112-popover-or-non-modal-dialog).
 
 - **Precision Profile** — The KBDL project profile intended for SaaS
   dashboards.
@@ -207,6 +261,8 @@ decisions (visual values, motion timings, component designs) already exist.
 - **Primitive token** — The most basic form of a design value in KBDL (for
   example a raw color or spacing value) that semantic and component tokens are
   built from.
+
+- **Progress Indicator** — A feedback component exposing determinate or indeterminate operation progress, distinct from Meter, which communicates a measurement within a known range. See [components-system.md §14.7](components-system.md#147-progress-indicator).
 
 - **Project Profile** — A documented KBDL configuration that adjusts emphasis
   (not foundations) for a category of project. KBDL's initial profiles are
@@ -238,6 +294,8 @@ decisions (visual values, motion timings, component designs) already exist.
   device's physical cutouts, rounded corners, or system UI overlays. See
   [responsive.md §19](responsive.md#19-safe-areas-and-viewport-edges).
 
+- **Scrim** — A dimming layer behind a modal or floating surface, mapped to the approved Scrim/backdrop theme role; this specification does not assign an exact opacity value. See [components-system.md §6](components-system.md#6-system-component-terminology).
+
 - **Selected** — A component state indicating a user's chosen membership in
   a set (for example a checked checkbox or a highlighted list item),
   distinct from Current (location) and Pressed (a toggled action). See
@@ -247,17 +305,27 @@ decisions (visual values, motion timings, component designs) already exist.
   "surface-background" or "danger-text") by referencing primitive tokens,
   forming the layer components consume.
 
+- **Sheet** — An edge-attached overlay surface variant of Drawer; see Drawer for the shared taxonomy and boundary rules. See [components-system.md §11.8](components-system.md#118-drawer-and-sheet).
+
 - **Showcase Profile** — The KBDL project profile intended for portfolios and
   creative showcases.
+
+- **Skeleton** — A decorative loading-placeholder surface hidden from assistive technology, requiring an equivalent loading announcement through a separate status mechanism. See [components-system.md §14.9](components-system.md#149-skeleton).
 
 - **Skip link** — A navigation component providing first-focus bypass of
   repeated content blocks, directing focus to the main content landmark.
   See [components-core.md §24.1](components-core.md#241-skip-link).
 
+- **Snackbar** — A transient feedback surface variant of Toast; see Toast for the shared lifecycle model. See [components-system.md §14.4](components-system.md#144-toast-or-snackbar).
+
+- **Status** — A live-region role for an advisory update not requiring the user's focus, distinct from Alert (urgent, assertive) and Log (an ordered stream). See [components-system.md §14.5](components-system.md#145-status-region-and-log).
+
 - **Status message** — Programmatically determinable content communicating
   a state change (loading, progress, success, error) without requiring the
   user's focus or depending only on visual animation or color. See
   [accessibility.md §35](accessibility.md#35-status-messages-and-live-communication).
+
+- **System Status** — A system state presenting an accessible, ongoing update stream about current system condition, distinct from a transient Alert or Toast. See [components-system.md §16.9](components-system.md#169-system-status).
 
 - **Tab** — A control within a tablist that selects which associated tab
   panel is visible. See [components-core.md §24.6](components-core.md#246-tabs).
@@ -277,14 +345,22 @@ decisions (visual values, motion timings, component designs) already exist.
   parity, and related terms) is defined in
   [themes/README.md §3](themes/README.md#3-theme-terminology).
 
+- **Toast** — A transient feedback surface for non-critical updates; critical information must never be presented only in a toast without an accessible, persistent path also being available. See [components-system.md §14.4](components-system.md#144-toast-or-snackbar).
+
 - **Toggle button** — An action component exposing a persistent pressed/
   unpressed state tied to a stable action identity, distinct from a switch
   (an immediate setting) and a checkbox (a form-field selection). See
   [components-core.md §20.3](components-core.md#203-toggle-button).
 
+- **Tooltip** — An informational, non-interactive overlay describing its trigger; it must never be the sole source of its trigger's accessible name. See [components-system.md §11.1](components-system.md#111-tooltip).
+
 - **Touch target** — A pointer target specifically sized and spaced for
   finger-based activation on a touchscreen; see Target size for the
   applicable minimum. See [responsive.md §23](responsive.md#23-touch-pointer-keyboard-and-hybrid-input).
+
+- **Tree** — A complex-presentation component exposing hierarchical parent/child relationships with expand/collapse and selection behavior, used only where genuinely justified. See [components-system.md §18.2](components-system.md#182-tree-and-treegrid).
+
+- **Treegrid** — A complex-presentation component combining Tree's hierarchical relationships with Grid's tabular interaction, used only where both are genuinely required. See [components-system.md §18.2](components-system.md#182-tree-and-treegrid).
 
 - **Validation criterion** — A documented, checkable condition used to
   determine whether a requirement is `Verified`. Tracked under module code
