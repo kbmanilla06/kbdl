@@ -1372,6 +1372,23 @@ starting at `001` (no prior `CMP` requirement exists). Assigning an ID
 does not grant approval or implementation authority
 ([KBDL-DEC-015](decision-register.md#kbdl-dec-015--kbdl-006-remediation-and-id-governance-amendment)).
 
+**Authoritative status summary** (derived directly from the per-requirement
+lifecycle field below, not a separately maintained count):
+
+```text
+Total:       51
+Approved:    41
+Recommended: 10
+Unresolved:   0
+Deferred:     0
+```
+
+The ten `Recommended` requirements are exactly: `KBDL-CMP-015`, `017`,
+`020`, `025`, `029`, `036`, `041`, `044`, `046`, `048` — each mapped to
+exactly one item in the
+[KBDL-007 decision packet](#35-kbdl-007-decision-packet),
+[§35.5](#355-decision-packet-coverage-audit).
+
 - **KBDL-CMP-001** — Every in-scope component **must** document the
   full shared contract in [§6](#6-shared-component-contract) (purpose,
   anatomy, states, interaction, accessibility, responsive, theme,
@@ -1507,10 +1524,18 @@ does not grant approval or implementation authority
 - **KBDL-CMP-013** — Every applicable component **must** document
   motion necessity, purpose, hierarchy level, and full/reduced/no-motion
   behavior, using only the approved motion architecture.
-  - Lifecycle status: Approved (structural requirement; component-specific
-    mappings themselves remain Recommended, see `KBDL-CMP-039`
-    equivalents per component). Provenance: Confirmed. Validation
-    status: Not verified.
+  - Lifecycle status: Approved (structural requirement — the obligation
+    to document motion necessity/purpose/hierarchy/parity per component
+    is itself Approved; the *exact* component-specific duration,
+    distance, scale, stagger, easing, choreography, or rendering-technology
+    mapping for any individual component is **not** newly approved by
+    this requirement where no prior approved KBDL rule already supplies
+    it — such exact mappings remain governed by the existing motion
+    unresolved/not-approval-ready items in
+    [motion/README.md §10.3](motion/README.md#103-unresolved-or-not-approval-ready)
+    and this module's own
+    [§36](#36-deferred-and-unresolved-items)). Provenance: Confirmed.
+    Validation status: Not verified.
   - Related requirement: `KBDL-MOT-001`, `KBDL-MOT-005`.
   - Applicable profiles: Showcase, Precision, Flow.
   - Specification location: [§19](#19-motion-behavior).
@@ -1580,7 +1605,8 @@ does not grant approval or implementation authority
     Provenance: Assumed. Validation status: Not applicable.
   - Related requirement: `KBDL-CMP-014`.
   - Applicable profiles: Showcase, Precision, Flow.
-  - Specification location: [§20.5](#205-button-group).
+  - Specification location: [§20.5](#205-button-group),
+    [§35](#35-kbdl-007-decision-packet) item 10.
   - Validation method: Project-owner review (not yet performed).
 
 - **KBDL-CMP-021** — Disclosure and menu triggers **must** expose
@@ -1915,9 +1941,9 @@ validation methods only.
 
 | Requirement | Validation method | Status |
 | --- | --- | --- |
-| `KBDL-CMP-011` (theme-role mapping) | Manual mapping review against approved semantic roles | Not verified |
-| `KBDL-CMP-013` (motion documentation) | Manual review confirming purpose/level/parity documented | Not verified |
-| Component-specific motion mappings (`KBDL-CMP-014` etc.) | Project-owner review (motion mappings Recommended) | Not verified; pending approval |
+| `KBDL-CMP-011` — Approved theme-role documentation requirement | Manual mapping review against approved semantic roles | Not verified |
+| `KBDL-CMP-013` — Approved motion-documentation and parity requirement | Manual review confirming purpose/level/parity documented | Not verified |
+| Exact component-specific motion values or mappings not inherited from an already-approved KBDL requirement (durations, distances, scales, stagger, easing, choreography) | Manual review; remain unapproved and outside implementation authority per [motion/README.md §10.3](motion/README.md#103-unresolved-or-not-approval-ready) and [§36](#36-deferred-and-unresolved-items) | Not applicable — no such mapping is approved or proposed as approved by this document |
 
 ## 35. KBDL-007 Decision Packet
 
@@ -1951,9 +1977,22 @@ consistency.
 | 7 | Navigation collapse-trigger threshold | Reuse `KBDL-RSP-008`'s proposed navigation-collapse guidance for the primary-navigation trigger (`KBDL-CMP-041`) | Avoids inventing a second, competing responsive threshold model | A component-specific threshold independent of `KBDL-RSP-008` (rejected — fragments responsive governance) | Remains unapproved until `KBDL-RSP-008` itself is approved | None beyond what `KBDL-RSP-008` already documents | Directly depends on `KBDL-RSP-002`/`008` | None | None | None | Applies identically across profiles | `KBDL-RSP-002`, `KBDL-RSP-008` | `KBDL-CMP-041` | Item 7 only |
 | 8 | Breadcrumb truncation model | Adopt collapsing middle levels behind a single overflow control (e.g., an ellipsis trigger) that reveals all hidden levels, never removing them (`KBDL-CMP-044`) | Preserves full hierarchy access while managing space at `compact` | Silently dropping middle levels (rejected — loses navigable history); horizontal scroll (rejected — awkward for a short list) | Overflow trigger itself must follow the Disclosure Trigger contract | Overflow trigger inherits the already-Approved disclosure accessibility contract | Depends on approved breakpoint values for exact trigger point | None | None | None | Applies identically across profiles | `KBDL-CMP-021` | `KBDL-CMP-044` | Item 8 only |
 | 9 | Pagination truncation model | Adopt an ellipsis-based truncation showing first, last, current, and immediate neighbors, with the ellipsis itself non-interactive text (`KBDL-CMP-048`) | Common, well-understood pattern that preserves orientation without excessive control count | Showing every page number always (rejected — unusable for very large sets); a "load more" model only (rejected — loses direct page access) | None significant | Ellipsis must not be the only way to reach hidden pages — a documented current-page/total-count text should remain available | None | None | None | None | Applies identically across profiles | `KBDL-CMP-047` | `KBDL-CMP-048` | Item 9 only |
-| 10 | Preferred enhanced target size for primary actions | Adopt the KBDL-006 `KBDL-A11Y-021` 44-by-44 preference specifically for Button and Icon Button primary variants, once `KBDL-A11Y-021` itself is approved | Aligns component-level sizing with the system-wide preference rather than inventing a separate one | A component-specific size independent of `KBDL-A11Y-021` (rejected — fragments target-size governance) | Fully dependent on `KBDL-A11Y-021`'s own approval; cannot be approved independently | Does not weaken the WCAG 24×24 floor (`KBDL-CMP-010`), which remains unaffected either way | None | None | None | None | Applies identically across profiles | `KBDL-A11Y-021` | `KBDL-CMP-014`, `KBDL-CMP-016` | Not independently approvable — contingent on `KBDL-A11Y-021` |
+| 10 | Button-group composition guidance | Adopt the labeling, tab-order, primary-action-clarity, and destructive-action-separation guidance in [§20.5](#205-button-group) (`KBDL-CMP-020`) | Gives related-action groups a consistent, predictable composition pattern | No composition guidance, left entirely to per-project judgment (rejected — risks inconsistent action-group density and unclear primary-action prominence across projects) | None significant | Primary-action clarity and destructive-action separation directly support comprehension and error prevention | None | None | None | None | Applies identically across profiles | `KBDL-CMP-014` | `KBDL-CMP-020` | Item 10 only |
 
 ### 35.3 Unresolved or Not Approval-Ready
+
+- **Preferred enhanced target size for primary actions (contingent, not
+  independently approval-ready)** — adopting the KBDL-006 `KBDL-A11Y-021`
+  44-by-44 preference specifically for Button and Icon Button primary
+  variants, once `KBDL-A11Y-021` itself is approved. This item is
+  **contingent on an unapproved KBDL-006 recommendation** and therefore
+  **cannot be approved independently through the KBDL-007 packet**. It
+  does **not** map to an additional `Recommended` `KBDL-CMP-###`
+  lifecycle record — `KBDL-CMP-010` (the WCAG 24×24 minimum) remains
+  `Approved` and unaffected by this item either way, regardless of
+  whether `KBDL-A11Y-021` is ever approved. It remains outside the exact
+  scope of any KBDL-007 packet approval and grants no implementation
+  authority. Related: `KBDL-A11Y-021`, `KBDL-CMP-010`, `014`, `016`.
 
 - **Exact component dimensions not inherited from foundations** (e.g.,
   precise textarea minimum height) — depend on foundation values not
@@ -1989,16 +2028,42 @@ consistency.
 | `KBDL-RSP-008` (navigation collapse thresholds) | [§24.3](#243-primary-or-global-navigation), decision packet item 7 | Cited only as unapproved; component's exact collapse point left `Recommended` |
 | `KBDL-RSP-011` (data-dense strategy) | Not referenced (no data-table component in KBDL-007 scope) | Not used |
 | `KBDL-A11Y-011` (forced-colors policy) | Not referenced | Not used |
-| `KBDL-A11Y-021` (44×44 preferred target) | [§16](#16-target-size-handling), decision packet item 10 | Cited explicitly as unapproved; not required; only proposed as a contingent future enhancement |
+| `KBDL-A11Y-021` (44×44 preferred target) | [§16](#16-target-size-handling), [§35.3](#353-unresolved-or-not-approval-ready) contingent item | Cited explicitly as unapproved; not required; only proposed as a contingent, not-independently-approvable future enhancement — not part of the ten approval-ready packet items |
 | `KBDL-A11Y-035` (preferred testing matrix) | [§35.3](#353-unresolved-or-not-approval-ready) | Cited only as a dependency for future validation, not used normatively |
 
 None of the nine is treated as implementation authority anywhere in
 this document.
 
+### 35.5 Decision-Packet Coverage Audit
+
+Every `Recommended` `KBDL-CMP-###` requirement maps to exactly one
+approval-ready packet item, and every packet item maps to exactly one
+`Recommended` requirement:
+
+| Recommended requirement | Packet item | Independently approval-ready | Dependency |
+| --- | --- | --- | --- |
+| `KBDL-CMP-015` | 1 | Yes | None |
+| `KBDL-CMP-046` | 2 | Yes | None |
+| `KBDL-CMP-017` | 3 | Yes | None |
+| `KBDL-CMP-025` | 4 | Yes | None |
+| `KBDL-CMP-029` | 5 | Yes | None |
+| `KBDL-CMP-036` | 6 | Yes | None (eventual `KBDL-RSP-002` value affects exact stacking point only, not the ordering rule itself) |
+| `KBDL-CMP-041` | 7 | Yes (the guidance itself); exact threshold depends on `KBDL-RSP-002`/`008` | `KBDL-RSP-002`, `KBDL-RSP-008` |
+| `KBDL-CMP-044` | 8 | Yes | None |
+| `KBDL-CMP-048` | 9 | Yes | None |
+| `KBDL-CMP-020` | 10 | Yes | None |
+
+Ten `Recommended` requirements, ten approval-ready packet items, one-to-one.
+The contingent enhanced-target item ([§35.3](#353-unresolved-or-not-approval-ready))
+is **not** counted here because it does not map to an eleventh
+`Recommended` `KBDL-CMP-###` requirement — `KBDL-CMP-010` (the WCAG
+minimum it references) is `Approved`, not `Recommended`, and is
+unaffected regardless of whether that contingent item is ever approved.
+
 **Exact scope of a future approval:** an `APPROVE` response to
 [§35.2](#352-recommended-decisions--ready-for-approval) would authorize
-exactly items 1–9 above (item 10 is explicitly not independently
-approvable, contingent on `KBDL-A11Y-021`). It would **not** approve any
+exactly items 1–10 above. It would **not** approve the contingent
+enhanced-target item or any other
 [§35.3](#353-unresolved-or-not-approval-ready) item, any of the nine
 KBDL-006 recommendations, or any KBDL-008-or-later content. It would not
 itself constitute validation of any item — see
@@ -2027,6 +2092,10 @@ itself constitute validation of any item — see
   implementation exists.
 - Any use of the nine unapproved KBDL-006 recommendations as
   implementation authority — explicitly excluded throughout.
+- The preferred enhanced target size for primary actions
+  ([§35.3](#353-unresolved-or-not-approval-ready)) — contingent on the
+  unapproved `KBDL-A11Y-021`; not independently approval-ready and not a
+  separate `Recommended` `KBDL-CMP-###` requirement.
 
 ## 37. Security and Privacy in Components
 

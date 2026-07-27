@@ -814,6 +814,7 @@ The rows below trace KBDL-004's adaptive-theme scope, defined in
 - **Requirement ID:** KBDL-CMP-001, 002, 003, 004, 005, 006, 007, 008, 009, 010, 011, 012, 013, 050, 051
 - **Specification location:** [components-core.md §5–§19, §25, §26](components-core.md#6-shared-component-contract)
 - **Approval status:** Approved for all fifteen — each directly restates an already-approved WCAG 2.2 Level A/AA criterion, WAI-ARIA rule, or prior approved KBDL principle/foundation/theme/motion/responsive/accessibility requirement
+- **Provenance:** Confirmed for all fifteen.
 - **Validation status:** Not verified (implementation-dependent); Not applicable for `KBDL-CMP-005` and `KBDL-CMP-050` (scope-control and composition requirements, not independently testable)
 - **Validation method:** Manual completeness/mapping review per component once implemented; manual scope-compliance review (performed, see implementation report).
 - **Validation evidence:** Not verified — no implementation exists yet.
@@ -828,12 +829,13 @@ The rows below trace KBDL-004's adaptive-theme scope, defined in
 - **Requirement ID:** KBDL-CMP-014, 015, 016, 017, 018, 019, 020, 021
 - **Specification location:** [components-core.md §20](components-core.md#20-action-components)
 - **Approval status:** `KBDL-CMP-014`, `016`, `018`, `019`, `021` Approved (restate native-semantics-first, WCAG, and WAI-ARIA rules); `KBDL-CMP-015` (button hierarchy taxonomy), `017` (icon-only visible-label threshold), `020` (button-group composition guidance) Recommended (new component-level taxonomy/guidance)
+- **Provenance:** Confirmed for `KBDL-CMP-014`, `016`, `018`, `019`, `021`; Assumed for `KBDL-CMP-015`, `017`, `020`.
 - **Validation status:** Not verified
 - **Validation method:** Manual + automated static accessibility review, manual keyboard/ARIA review once implemented; project-owner review of `KBDL-CMP-015`/`017`/`020` (not yet performed).
 - **Validation evidence:** Not verified — no implementation exists yet.
 - **Known limitation:** Implementation-dependent.
 - **Related decision:** Not applicable — pending a future decision-register entry once the project owner reviews the KBDL-007 decision packet.
-- **Notes:** `KBDL-CMP-015`, `017`, `020` map to [KBDL-007 decision packet](components-core.md#35-kbdl-007-decision-packet) items 1, 3, and (no separate item; button-group guidance is not independently packet-listed, remains Recommended pending future review) respectively.
+- **Notes:** `KBDL-CMP-015`, `017`, `020` map to [KBDL-007 decision packet](components-core.md#35-kbdl-007-decision-packet) items 1, 3, and 10 respectively.
 
 ### Form architecture and components (KBDL-CMP-022 through KBDL-CMP-037)
 
@@ -842,6 +844,7 @@ The rows below trace KBDL-004's adaptive-theme scope, defined in
 - **Requirement ID:** KBDL-CMP-022, 023, 024, 025, 026, 027, 028, 029, 030, 031, 032, 033, 034, 035, 036, 037
 - **Specification location:** [components-core.md §21–§23](components-core.md#21-form-architecture)
 - **Approval status:** `KBDL-CMP-022`, `023`, `024`, `026`, `027`, `028`, `030`, `031`, `032`, `033`, `034`, `035`, `037` Approved (restate WCAG 2.2 and WAI-ARIA form/error requirements); `KBDL-CMP-025` (search-field model), `029` (combobox-justification threshold), `036` (form-action-row reflow order) Recommended (new component-level guidance)
+- **Provenance:** Confirmed for `KBDL-CMP-022`, `023`, `024`, `026`, `027`, `028`, `030`, `031`, `032`, `033`, `034`, `035`, `037`; Assumed for `KBDL-CMP-025`, `029`, `036`.
 - **Validation status:** Not verified
 - **Validation method:** Manual + automated static accessibility review once implemented; project-owner review of `KBDL-CMP-025`/`029`/`036` (not yet performed).
 - **Validation evidence:** Not verified — no implementation exists yet.
@@ -856,6 +859,7 @@ The rows below trace KBDL-004's adaptive-theme scope, defined in
 - **Requirement ID:** KBDL-CMP-038, 039, 040, 041, 042, 043, 044, 045, 046, 047, 048, 049
 - **Specification location:** [components-core.md §24](components-core.md#24-navigation-components)
 - **Approval status:** `KBDL-CMP-038`, `039`, `040`, `042`, `043`, `045`, `047`, `049` Approved (restate WCAG 2.2, WAI-ARIA tabs pattern, and already-approved responsive/navigation rules); `KBDL-CMP-041` (navigation collapse threshold), `044` (breadcrumb truncation model), `046` (tabs activation model), `048` (pagination truncation model) Recommended (new component-level guidance, some contingent on unapproved `KBDL-RSP-002`/`008`)
+- **Provenance:** Confirmed for `KBDL-CMP-038`, `039`, `040`, `042`, `043`, `045`, `047`, `049`; Assumed for `KBDL-CMP-041`, `044`, `046`, `048`.
 - **Validation status:** Not verified
 - **Validation method:** Manual keyboard/ARIA review once implemented; project-owner review of `KBDL-CMP-041`/`044`/`046`/`048` (not yet performed).
 - **Validation evidence:** Not verified — no implementation exists yet.
@@ -870,15 +874,29 @@ documented (architecture and, where noted per row, approved default
 values or approved WCAG/ARIA-derived requirements); none of their
 requirements have been *implemented* in code, regardless of lifecycle
 status — this matrix tracks specification-level approval and
-validation, not implementation. `RSP` and `A11Y` (KBDL-006) remain in
-remediation and validation — not yet passed, per
-[KBDL-DEC-015](decision-register.md#kbdl-dec-015--kbdl-006-remediation-and-id-governance-amendment).
-`CMP` (KBDL-007) is no longer a future or locked module:
+validation, not implementation. `RSP` and `A11Y` (KBDL-006) **passed**
+planning-agent validation before KBDL-007 began: `responsive.md` and
+`accessibility.md` are present; every requirement directly restating an
+already-adopted WCAG 2.2 criterion or prior approved KBDL rule remains
+`Approved`; the nine KBDL-specific recommendations
+(`KBDL-RSP-002`–`005`, `008`, `011`; `KBDL-A11Y-011`, `021`, `035`)
+remain `Recommended` and unapproved — KBDL-006 passing validation does
+**not** promote them. Implementation-dependent validation for both
+modules remains `Not verified`, since no implementation exists.
+[KBDL-DEC-015](decision-register.md#kbdl-dec-015--kbdl-006-remediation-and-id-governance-amendment)
+exists and records exactly two things: acceptance of the KBDL-006
+remediation baseline (commit `14ef110`), and the requirement-ID
+governance amendment permitting stable IDs before approval. **It does
+not approve any of the nine KBDL-006 recommendation values** — no
+decision-register entry currently approves the responsive or
+accessibility decision packets, and none of the nine recommendations is
+`Approved`. `CMP` (KBDL-007) is no longer a future or locked module:
 `docs/kbdl/components-core.md` exists with 51 documented requirements
 (see the
 [KBDL-007 — Core Action, Form, and Navigation Components](#kbdl-007--core-action-form-and-navigation-components)
-section above); KBDL-007 is under initial validation, not yet passed.
-Rows for `PRO`, `CUS`, and `VAL` exist only to show where their future
+section above); KBDL-007 is currently in remediation (KBDL-007-R1),
+following the same pattern KBDL-006 followed before it passed. Rows for
+`PRO`, `CUS`, and `VAL` exist only to show where their future
 requirements will be traced once their roadmap step is reached; those
 modules remain locked until KBDL-007 passes the planning agent's
 validation review. Approval status and validation status are recorded independently
@@ -971,8 +989,11 @@ accessibility testing matrix (`KBDL-A11Y-035`). None of these
 project owner reviews the
 [responsive decision packet](responsive.md#35-responsive-decision-packet)
 and [accessibility decision packet](accessibility.md#49-accessibility-decision-packet);
-no decision-register entry has been created for KBDL-006, since no such
-review has yet occurred. This document does not claim full WCAG
+`KBDL-DEC-015` exists, but it records only the acceptance of the
+KBDL-006 remediation baseline and the requirement-ID governance
+amendment — it does not approve either decision packet, and no
+decision-register entry currently approves any of the nine KBDL-006
+recommendation values, since no such review has yet occurred. This document does not claim full WCAG
 conformance, screen-reader compatibility, or real-device support — see
 [accessibility.md §48](accessibility.md#48-accessibility-validation-matrix)
 for exactly what has and has not been verified. `CMP` requirements
