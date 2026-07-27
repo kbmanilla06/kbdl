@@ -12,7 +12,8 @@ This document defines KBDL's spatial system (spacing and sizing) and its
 layout and grid principles, including breakpoint philosophy. It proposes a
 recommended modular scale and content-driven breakpoint approach. It does
 not define exact pixel/rem values as final, and detailed responsive
-interaction behavior is deferred to KBDL-006.
+interaction behavior is now defined in [responsive.md](../responsive.md)
+(KBDL-006).
 
 ---
 
@@ -219,8 +220,10 @@ by the project owner via the
 [foundation decision packet](README.md#6-foundation-decision-packet); see
 [KBDL-DEC-012](../decision-register.md#kbdl-dec-012--foundation-decision-packet-approved).
 Provenance: `User-provided`. Validation status: `Not verified` for exact
-pixel values — those remain deferred to KBDL-006; only the named roles
-and content-driven philosophy are approved here.
+pixel values — those are now proposed (`Recommended`, pending
+project-owner approval) in
+[responsive.md §7](../responsive.md#7-proposed-exact-breakpoint-thresholds);
+only the named roles and content-driven philosophy are approved here.
 
 A minimal, content-justified set (named by role, not device):
 
@@ -231,9 +234,10 @@ A minimal, content-justified set (named by role, not device):
 | expanded | Introduces dashboard-density multi-column layouts |
 | wide | Introduces maximum content width and full editorial composition |
 
-Exact pixel values for these named breakpoints are deferred to KBDL-006
-(Responsive Behavior); this document establishes only the philosophy and
-named roles.
+Exact pixel values for these named breakpoints are now proposed in
+[responsive.md §7](../responsive.md#7-proposed-exact-breakpoint-thresholds)
+(`Recommended`, pending project-owner approval); this document
+establishes only the philosophy and named roles.
 
 ## 4. Reading Width (Approved principle)
 
@@ -263,6 +267,10 @@ reading-width rule and the "no shrunk-desktop layouts" rule (§3.5).
 
 - Exact base spacing unit (px/rem) — `Unresolved`, deferred pending an
   implementation-unit convention.
-- Exact breakpoint pixel values — `Unresolved`, deferred to KBDL-006.
-- Exact grid column counts and gutter values per named breakpoint —
-  `Unresolved`, deferred to KBDL-006.
+- Exact breakpoint pixel values — now proposed as `Recommended` in
+  [responsive.md §7](../responsive.md#7-proposed-exact-breakpoint-thresholds),
+  pending project-owner approval.
+- Exact grid column counts and gutter values per named breakpoint — now
+  proposed as `Recommended` in
+  [responsive.md §8, §10](../responsive.md#8-grid-and-column-behavior),
+  pending project-owner approval.

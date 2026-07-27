@@ -1,7 +1,7 @@
 # KBDL Traceability Matrix
 
 Lifecycle status of this framework: `Approved`. Rows below reflect only
-KBDL-001, KBDL-002, KBDL-003, KBDL-004, and KBDL-005 scope.
+KBDL-001, KBDL-002, KBDL-003, KBDL-004, KBDL-005, and KBDL-006 scope.
 
 Return to the [specification index](README.md). Status labels are defined in
 [conventions.md](conventions.md#1-status-labels).
@@ -704,6 +704,106 @@ The rows below trace KBDL-004's adaptive-theme scope, defined in
 - **Related decision:** [KBDL-DEC-014](decision-register.md#kbdl-dec-014--kbdl-005-motion-decisions-approved).
 - **Notes:** Splitting these out does not change any duration value, curve, movement range, hierarchy level, safety behavior, reduced-motion behavior, or profile recommendation — only the lifecycle bookkeeping.
 
+## KBDL-006 — Responsive and Accessibility
+
+### Responsive-content priority, source/reading order, and reflow core (KBDL-RSP-001, KBDL-RSP-006, KBDL-RSP-007, KBDL-RSP-015, KBDL-RSP-016, KBDL-RSP-020)
+
+- **Blueprint section:** Responsive-content priority; layout reflow; source/reading order; orientation; zoom and enlarged text; responsive focus management
+- **Roadmap prompt:** KBDL-006
+- **Requirement ID:** KBDL-RSP-001, KBDL-RSP-006, KBDL-RSP-007, KBDL-RSP-015, KBDL-RSP-016, KBDL-RSP-020
+- **Specification location:** [responsive.md §4, §11, §12, §20, §21, §25](responsive.md#4-responsive-content-priority)
+- **Approval status:** Approved — each directly restates the locked responsive-content-priority rule (`principles.md §5.1`) or a WCAG 2.2 Level A/AA criterion (SC 1.4.10, SC 1.3.2, SC 2.4.3, SC 1.3.4, SC 1.4.4) already adopted under `KBDL-DEC-010`
+- **Validation status:** Not verified
+- **Validation method:** Manual reflow/zoom/orientation/order testing once an implementation exists.
+- **Validation evidence:** Not verified — no implementation exists yet.
+- **Known limitation:** Implementation-dependent; cannot be tested until a real layout exists.
+- **Related decision:** `KBDL-DEC-010` (WCAG 2.2 AA baseline).
+- **Notes:** These six requirements restate already-approved principles or WCAG criteria at responsive-specific granularity; no new policy is introduced.
+
+### Breakpoint, grid, container, and gutter defaults (KBDL-RSP-002, KBDL-RSP-003, KBDL-RSP-004, KBDL-RSP-005)
+
+- **Blueprint section:** Exact breakpoint thresholds; grid column counts; container widths and reading measures; gutters and responsive spacing
+- **Roadmap prompt:** KBDL-006
+- **Requirement ID:** KBDL-RSP-002, KBDL-RSP-003, KBDL-RSP-004, KBDL-RSP-005
+- **Specification location:** [responsive.md §7, §8, §9, §10](responsive.md#7-proposed-exact-breakpoint-thresholds)
+- **Approval status:** Recommended (not `Approved` — requires project-owner approval, per [conventions.md §1.1](conventions.md#11-lifecycle--approval-status); the four named breakpoint roles themselves remain `Approved` under `KBDL-DEC-012`, unaffected)
+- **Validation status:** Not applicable — numerical recommendations, not yet a testable implementation claim
+- **Validation method:** Project-owner review (not yet performed); implementation-level review once an implementation exists.
+- **Validation evidence:** Not verified — no implementation exists yet.
+- **Known limitation:** These are recommendations awaiting project-owner approval; must not be treated as `Approved` or implemented until that approval is recorded.
+- **Related decision:** Not applicable — pending a future decision-register entry once the project owner reviews the responsive decision packet.
+- **Notes:** Exact pixel values, grid columns, container widths, and gutters were explicitly deferred to KBDL-006 by `foundations/spacing-layout.md`; these four requirements resolve that deferral as `Recommended` proposals, mapped to [responsive decision packet](responsive.md#35-responsive-decision-packet) items 1–4.
+
+### Navigation, density, media, and data-dense adaptation (KBDL-RSP-008, KBDL-RSP-009, KBDL-RSP-010, KBDL-RSP-011, KBDL-RSP-012)
+
+- **Blueprint section:** Navigation adaptation; content-density adaptation; media and image adaptation; data-dense/tabular content; full-bleed and asymmetric layouts
+- **Roadmap prompt:** KBDL-006
+- **Requirement ID:** KBDL-RSP-008, KBDL-RSP-009, KBDL-RSP-010, KBDL-RSP-011, KBDL-RSP-012
+- **Specification location:** [responsive.md §13–§17](responsive.md#13-navigation-adaptation)
+- **Approval status:** `KBDL-RSP-009`, `KBDL-RSP-010`, `KBDL-RSP-012` Approved (each directly restates an already-approved KBDL principle or foundation rule); `KBDL-RSP-008`, `KBDL-RSP-011` Recommended (exact navigation collapse thresholds and the data-dense strategy are new KBDL-006 policy)
+- **Validation status:** Not verified
+- **Validation method:** Manual review once implemented; project-owner review of `KBDL-RSP-008`/`011` (not yet performed).
+- **Validation evidence:** Not verified — no implementation exists yet.
+- **Known limitation:** Exact collapse thresholds and per-project column-priority rules remain qualitative pending implementation-level review.
+- **Related decision:** Not applicable — pending a future decision-register entry.
+- **Notes:** `KBDL-RSP-008` and `KBDL-RSP-011` map to [responsive decision packet](responsive.md#35-responsive-decision-packet) items 5 and 6.
+
+### Sticky regions, safe areas, virtual keyboard, and input parity (KBDL-RSP-013, KBDL-RSP-014, KBDL-RSP-017, KBDL-RSP-018, KBDL-RSP-019)
+
+- **Blueprint section:** Sticky/fixed regions; safe areas; virtual-keyboard behavior; touch/pointer/keyboard/hybrid input; hover-independent discoverability
+- **Roadmap prompt:** KBDL-006
+- **Requirement ID:** KBDL-RSP-013, KBDL-RSP-014, KBDL-RSP-017, KBDL-RSP-018, KBDL-RSP-019
+- **Specification location:** [responsive.md §18, §19, §22, §23, §24](responsive.md#18-sticky-and-fixed-regions)
+- **Approval status:** Approved — each directly restates WCAG 2.2 SC 2.4.11, SC 2.5.1/2.5.2, SC 1.4.13 (Levels A/AA), or an already-approved motion/accessibility-performance requirement
+- **Validation status:** Not verified
+- **Validation method:** Manual keyboard-focus, device, and cross-input testing once implemented.
+- **Validation evidence:** Not verified — no implementation exists yet.
+- **Known limitation:** Implementation- and device-dependent.
+- **Related decision:** `KBDL-DEC-010`.
+- **Notes:** No new policy; these resolve the "detailed responsive breakpoint and layout rules" that `motion/accessibility-performance.md §4` explicitly deferred to KBDL-006.
+
+### Responsive motion and performance (KBDL-RSP-021, KBDL-RSP-022)
+
+- **Blueprint section:** Responsive motion behavior; performance and low-capability contexts
+- **Roadmap prompt:** KBDL-006
+- **Requirement ID:** KBDL-RSP-021, KBDL-RSP-022
+- **Specification location:** [responsive.md §26, §27](responsive.md#26-responsive-motion-behavior)
+- **Approval status:** Approved — restates already-approved `KBDL-MOT-006` and `KBDL-PRN-003` (Performance-Aware Enhancement)
+- **Validation status:** Not verified
+- **Validation method:** Manual review; implementation-level performance measurement once an implementation exists.
+- **Validation evidence:** Not verified — no implementation exists yet.
+- **Known limitation:** Performance claims cannot be `Verified` without a real implementation to measure.
+- **Related decision:** `KBDL-MOT-006` (motion intensity model, already `Approved` under `KBDL-DEC-014`).
+- **Notes:** Does not reopen or restate any KBDL-005 timing/easing/reduced-motion value.
+
+### WCAG 2.2 Level A/AA baseline requirements (KBDL-A11Y-001 through KBDL-A11Y-010, KBDL-A11Y-012 through KBDL-A11Y-034, KBDL-A11Y-036 through KBDL-A11Y-040)
+
+- **Blueprint section:** Text alternatives; captions; semantic structure; landmarks; reading/focus order; color independence; text/non-text contrast; focus visibility/obscuration; text spacing; keyboard operability/traps/bypass; pointer cancellation; dragging/gesture alternatives; motion actuation; reduced-motion cross-reference; flashing; timing/automatic movement; forms/labels/autocomplete; error identification/prevention; status messages; authentication; plain language; consistent navigation/help; media controls cross-reference; data presentation; mobile/virtual-keyboard cross-reference; profile consistency
+- **Roadmap prompt:** KBDL-006
+- **Requirement ID:** KBDL-A11Y-001–010, 012–034, 036–040 (35 requirements; excludes `KBDL-A11Y-011`, `021`, `035`, which are new KBDL enhancements listed separately below)
+- **Specification location:** [accessibility.md §6–§45](accessibility.md#3-wcag-22-level-aa-mapping)
+- **Approval status:** Approved for all 35 — each directly restates a WCAG 2.2 Level A or AA success criterion already adopted under `KBDL-DEC-010`, or an already-approved KBDL principle/foundation/theme/motion requirement, per the full mapping in [accessibility.md §3](accessibility.md#3-wcag-22-level-aa-mapping)
+- **Validation status:** Verified for `KBDL-A11Y-007`, `008`, `009` (text contrast, non-text contrast, focus visibility — verified against the already-`Verified` theme contrast evidence, [themes/validation.md §3](themes/validation.md#3-consolidated-contrast-evidence)); Not verified for the remaining 32 (implementation-dependent: keyboard, screen-reader, zoom, flash, and form-behavior testing require an implementation that does not yet exist)
+- **Validation method:** WCAG relative-luminance contrast calculation (completed for contrast/focus rows); manual + automated static accessibility review, keyboard testing, screen-reader testing, and flash analysis (all pending an implementation).
+- **Validation evidence:** [themes/validation.md §3](themes/validation.md#3-consolidated-contrast-evidence) for the three Verified rows; not verified for the rest.
+- **Known limitation:** This document does not claim full WCAG conformance, screen-reader compatibility, or real-device support — those require an implementation and recorded test evidence.
+- **Related decision:** `KBDL-DEC-010`.
+- **Notes:** No AAA-level criterion is described as AA anywhere in this set; see [accessibility.md §3](accessibility.md#3-wcag-22-level-aa-mapping) for the exact criterion-to-section mapping.
+
+### New KBDL-specific accessibility enhancements (KBDL-A11Y-011, KBDL-A11Y-021, KBDL-A11Y-035)
+
+- **Blueprint section:** Forced-colors/high-contrast policy; preferred enhanced target size; preferred accessibility testing matrix
+- **Roadmap prompt:** KBDL-006
+- **Requirement ID:** KBDL-A11Y-011, KBDL-A11Y-021, KBDL-A11Y-035
+- **Specification location:** [accessibility.md §16, §25, §39](accessibility.md#16-light-dark-forced-colors-and-high-contrast-behavior)
+- **Approval status:** Recommended (not `Approved` — requires project-owner approval, per [conventions.md §1.1](conventions.md#11-lifecycle--approval-status))
+- **Validation status:** Not applicable — policy/numerical recommendations, not yet testable implementation claims
+- **Validation method:** Project-owner review (not yet performed); implementation-level review once an implementation exists.
+- **Validation evidence:** Not verified — no implementation exists yet.
+- **Known limitation:** Forced-colors/high-contrast mode is currently unaddressed elsewhere in the specification and was explicitly excluded from the KBDL-004 theme approval (`KBDL-DEC-013`); these three requirements must not be treated as `Approved` until reviewed.
+- **Related decision:** Not applicable — pending a future decision-register entry once the project owner reviews the accessibility decision packet.
+- **Notes:** Map to [accessibility decision packet](accessibility.md#49-accessibility-decision-packet) items 1–3 respectively.
+
 ## Notes on Scope
 
 `GOV`, `PRN`, `FND`, `THM`, and `MOT` are documented (architecture and,
@@ -789,6 +889,25 @@ quantitative motion-hazard thresholds), any unresolved KBDL-004 theme
 value, or any KBDL-006-or-later content — all of which remain
 `Recommended`/`Not verified`/`Deferred` or out of scope. Approval does
 not itself constitute validation — every promoted requirement's
-Validation status above is unchanged. KBDL-006 (Responsive and
-Accessibility) remains locked until KBDL-005 passes validation, and has
-not been started.
+Validation status above is unchanged. `RSP` and `A11Y` requirements
+follow the same pattern established by `THM`/`MOT`: `Approved` only
+where a requirement directly restates an already-adopted WCAG 2.2 Level
+A/AA criterion (`KBDL-DEC-010`) or a prior approved KBDL principle,
+foundation, theme, or motion rule; `Recommended` where new KBDL-006
+policy is introduced — exact breakpoint thresholds, grid columns,
+container widths, and gutters (`KBDL-RSP-002`–`005`), navigation
+collapse thresholds and the data-dense strategy (`KBDL-RSP-008`,
+`011`), the forced-colors/high-contrast policy (`KBDL-A11Y-011`), the
+preferred enhanced target size (`KBDL-A11Y-021`), and the preferred
+accessibility testing matrix (`KBDL-A11Y-035`). None of these
+`Recommended` items are implemented or treated as `Approved` until the
+project owner reviews the
+[responsive decision packet](responsive.md#35-responsive-decision-packet)
+and [accessibility decision packet](accessibility.md#49-accessibility-decision-packet);
+no decision-register entry has been created for KBDL-006, since no such
+review has yet occurred. This document does not claim full WCAG
+conformance, screen-reader compatibility, or real-device support — see
+[accessibility.md §48](accessibility.md#48-accessibility-validation-matrix)
+for exactly what has and has not been verified. KBDL-007 (Core Action,
+Form, and Navigation Components) is locked until KBDL-006 passes
+validation, and has not been started.

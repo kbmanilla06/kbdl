@@ -56,15 +56,22 @@ item below before any pair may be marked `Verified`:
 - **Profile consistency** — per
   [themes/README.md §8](README.md#8-project-profile-theme-interpretation).
 - **Mobile review** — surfaces and touch targets re-checked at compact
-  breakpoints (deferred to KBDL-006 for exact breakpoint values; the
-  requirement to review is established here).
+  breakpoints; exact breakpoint values are now proposed as `Recommended`
+  in [responsive.md §7](../responsive.md#7-proposed-exact-breakpoint-thresholds)
+  and target-size requirements are defined in
+  [accessibility.md §25](../accessibility.md#25-target-sizing-and-spacing)
+  (both KBDL-006); the review itself remains implementation-dependent
+  and `Not verified`.
 - **Reduced-motion behavior** — per
   [adaptation.md §7](adaptation.md#7-theme-transition-guidance).
 - **High-zoom and enlarged-text review** — text roles must remain within
   contrast thresholds when the user has enlarged text or zoomed the
   page, since relative contrast ratios are zoom-independent but layout
-  reflow is not; a full review is deferred to KBDL-006 but the
-  requirement is established here.
+  reflow is not; the requirement to reflow at 200% zoom and 320px width
+  is now defined in
+  [responsive.md §21](../responsive.md#21-zoom-and-enlarged-text) (KBDL-006);
+  the implementation-level review itself remains `Not verified`, since
+  no implementation exists.
 
 ## 2. Parity Check (Revalidated under KBDL-004-R1)
 
@@ -261,8 +268,10 @@ its scope:
 - Full data-display categorical palette — deferred, not yet designed.
 - Mobile/compact-breakpoint layout review and high-zoom/enlarged-text
   layout review — the requirement to perform these is established in
-  §1, but the review itself depends on KBDL-006 (Responsive/
-  Accessibility), not yet available.
+  §1, and the applicable breakpoint/zoom/reflow requirements are now
+  defined in [responsive.md](../responsive.md) (KBDL-006), but the
+  review itself remains implementation-dependent and `Not verified`,
+  since no implementation exists.
 
 ## 6. Manual Documentation Reviews Performed
 

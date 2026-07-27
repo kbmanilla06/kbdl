@@ -16,9 +16,11 @@ and Flow (consumer-facing web applications). See the
 **KBDL-001: Specification Architecture and Governance Foundation**,
 **KBDL-002: Identity, Principles, and Visual Consistency Rules**,
 **KBDL-003: Core Visual Foundations**,
-**KBDL-004: Adaptive Theme System**, and
-**KBDL-005: Expressive Motion Language** deliverables are present in the
-repository, the first five steps of a ten-step approved roadmap. Their
+**KBDL-004: Adaptive Theme System**,
+**KBDL-005: Expressive Motion Language**, and
+**KBDL-006: Responsive Behavior and Accessibility** deliverables are
+present in the repository, the first six steps of a ten-step approved
+roadmap. Their
 lifecycle status is `Approved` for architecture, rules, and (as of the
 project owner's foundation-defaults approval, see
 [KBDL-DEC-012](decision-register.md#kbdl-dec-012--foundation-decision-packet-approved))
@@ -61,9 +63,29 @@ detection, animation-library/rendering-technology selection, CSS/JSON/
 JavaScript token formats, browser-support policy, exact scroll
 thresholds, and exact quantitative motion-hazard thresholds — see
 [motion/README.md § Motion Decision Packet](motion/README.md#10-motion-decision-packet).
-KBDL-006 (Responsive and Accessibility) is locked until KBDL-005 passes
-validation; it has not been started. Progression to later roadmap steps
-depends on the
+KBDL-006 established KBDL's responsive-behavior and accessibility
+specification: WCAG 2.2 Level AA is the adopted conformance baseline
+(see [KBDL-DEC-010](decision-register.md#kbdl-dec-010--wcag-22-aa-baseline-with-enhanced-motion-safety)),
+and every `KBDL-RSP-###`/`KBDL-A11Y-###` requirement that directly
+restates an already-approved WCAG 2.2 criterion or prior KBDL rule is
+`Approved` (see [responsive.md](responsive.md) and
+[accessibility.md](accessibility.md)). Genuinely new KBDL-006 defaults —
+exact breakpoint thresholds, grid columns, gutters, container widths, a
+preferred enhanced target size, a forced-colors/high-contrast policy,
+and a preferred accessibility testing matrix — remain `Recommended`,
+pending project-owner approval via the
+[responsive decision packet](responsive.md#35-responsive-decision-packet)
+and the
+[accessibility decision packet](accessibility.md#49-accessibility-decision-packet).
+Validation status remains separate throughout: implementation-dependent
+items (keyboard, screen-reader, zoom, forced-colors, flash, and
+real-device testing) remain `Not verified`, since no implementation
+exists; this module does not claim full WCAG conformance. KBDL-007
+(Core Action, Form, and Navigation Components) remains locked until
+KBDL-006 passes the planning agent's validation review; it has not been
+started. This is not a claim that the overall KBDL project is complete —
+four roadmap steps remain. Progression to later roadmap steps depends on
+the
 planning agent's validation review, not on this index. KBDL-001
 established the documentation architecture, terminology, requirement
 and status conventions, and governance for the entire KBDL
@@ -79,9 +101,13 @@ recommended light and dark theme mappings, selection precedence,
 persistence guidance, project-controlled adaptation, and local contrast
 contexts (see [themes/README.md](themes/README.md)). KBDL-005
 established KBDL's framework-independent motion language (see
-[motion/README.md](motion/README.md)). None of these steps define
-detailed responsive/accessibility rules, components, or implementation
-code — those are later roadmap steps and must not be started early (see
+[motion/README.md](motion/README.md)). KBDL-006 established KBDL's
+responsive-behavior and accessibility specification, mapping WCAG 2.2
+Level AA to KBDL topics and resolving items previously deferred to it
+(see [responsive.md](responsive.md) and
+[accessibility.md](accessibility.md)). None of these steps define
+components or implementation code — those are later roadmap steps and
+must not be started early (see
 [governance.md](governance.md)).
 
 ## Intended Audience
@@ -109,10 +135,10 @@ specification itself.
 
 ## Document Hierarchy
 
-KBDL-001, KBDL-002, KBDL-003, KBDL-004, and KBDL-005 deliver the
-documents below with real content. Rows still marked `Deferred` show the
-**planned location only** for future modules; those files do not exist
-yet and must not be created until their roadmap step is reached.
+KBDL-001, KBDL-002, KBDL-003, KBDL-004, KBDL-005, and KBDL-006 deliver
+the documents below with real content. Rows still marked `Deferred` show
+the **planned location only** for future modules; those files do not
+exist yet and must not be created until their roadmap step is reached.
 
 | # | Module | Status | Location |
 | --- | --- | --- | --- |
@@ -121,9 +147,9 @@ yet and must not be created until their roadmap step is reached.
 | 3 | Visual foundations | Approved (architecture and default values)* | [foundations/README.md](foundations/README.md) |
 | 4 | Adaptive themes | Approved (architecture and the ten-item theme decision packet)** | [themes/README.md](themes/README.md) |
 | 5 | Motion | Approved (architecture and the fifteen-item motion decision packet)† | [motion/README.md](motion/README.md) |
-| 6 | Responsive behavior | Deferred (locked until KBDL-005 passes and its motion decisions are approved) | `docs/kbdl/responsive.md` (planned) |
-| 7 | Accessibility | Deferred | `docs/kbdl/accessibility.md` (planned) |
-| 8 | Core action, form, and navigation components | Deferred | `docs/kbdl/components-core.md` (planned) |
+| 6 | Responsive behavior | Approved (architecture)‡; Recommended (exact breakpoint/grid/gutter/container values) | [responsive.md](responsive.md) |
+| 7 | Accessibility | Approved (WCAG 2.2 AA mapping)‡; Recommended (KBDL-specific enhancements) | [accessibility.md](accessibility.md) |
+| 8 | Core action, form, and navigation components | Deferred (locked until KBDL-006 passes validation) | `docs/kbdl/components-core.md` (planned) |
 | 9 | Surface, overlay, feedback, and system-state components | Deferred | `docs/kbdl/components-system.md` (planned) |
 | 10 | Project profiles (Showcase, Precision, Flow) | Deferred | `docs/kbdl/profiles.md` (planned) |
 | 11 | Manual customization | Deferred | `docs/kbdl/customization.md` (planned) |
@@ -166,6 +192,22 @@ and the navigation-motion architecture). Exact component-specific
 values, implementation technology, and all KBDL-006-or-later content
 remain `Recommended`/`Not verified`/`Deferred` and outside this
 approval.
+
+‡ See [responsive.md](responsive.md) and [accessibility.md](accessibility.md)
+for the full specifications. Requirements directly restating an
+already-adopted WCAG 2.2 Level A/AA criterion (adopted under
+[KBDL-DEC-010](decision-register.md#kbdl-dec-010--wcag-22-aa-baseline-with-enhanced-motion-safety))
+or a prior approved KBDL rule are `Approved`. Genuinely new KBDL-006
+defaults — exact breakpoint thresholds, grid columns, gutters,
+container widths, a preferred enhanced target size, a forced-colors/
+high-contrast policy, and a preferred accessibility testing matrix —
+remain `Recommended`, pending project-owner approval via the
+[responsive decision packet](responsive.md#35-responsive-decision-packet)
+and the
+[accessibility decision packet](accessibility.md#49-accessibility-decision-packet).
+No implementation-dependent validation (keyboard, screen-reader, zoom,
+forced-colors, flash, or real-device testing) is claimed `Verified` —
+no implementation exists yet.
 
 Supporting documents (not numbered modules, but required by KBDL-001 and
 referenced by KBDL-002 and KBDL-003):

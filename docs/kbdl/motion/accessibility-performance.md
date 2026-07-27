@@ -112,11 +112,14 @@ motion-safety requirements (`KBDL-DEC-010`):
 - Essential information available only during animation (it must remain
   available before, during, and after).
 
-Exact safety thresholds (e.g., precise flash-frequency limits) belong to
-the later accessibility review (KBDL-006) and are marked `Deferred`
-rather than invented here. KBDL-005 still defines the enforceable
-qualitative constraints above, which apply regardless of KBDL-006's
-eventual quantitative thresholds.
+Exact safety thresholds (e.g., precise flash-frequency limits) are now
+recorded in
+[accessibility.md §30](../accessibility.md#30-flashing-vestibular-and-motion-safety-limits)
+(KBDL-006), which adopts WCAG 2.2's three-flashes-or-below-threshold
+rule (SC 2.3.1) without inventing an additional numeric threshold.
+KBDL-005 still defines the enforceable qualitative constraints above,
+which apply regardless of and in addition to that WCAG numeric
+threshold.
 
 ## 3. Performance Requirements
 
@@ -171,7 +174,9 @@ one-handed use.
 - Motion must not make small-screen navigation harder to track — prefer
   simpler, shorter transitions on small viewports.
 
-Detailed responsive breakpoint and layout rules remain KBDL-006 scope.
+Detailed responsive breakpoint and layout rules are now defined in
+[responsive.md](../responsive.md) (KBDL-006); this section is not
+restated or reopened there.
 
 ## 5. Traceability
 

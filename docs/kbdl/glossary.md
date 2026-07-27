@@ -15,10 +15,31 @@ decisions (visual values, motion timings, component designs) already exist.
   cognitive access needs, in order to meet WCAG 2.2 Level AA and KBDL's
   enhanced motion-safety requirements. Tracked under module code `A11Y`.
 
+- **Accessible description** — Programmatically determinable supplementary
+  text for a component, beyond its accessible name, that provides additional
+  context (for example a form field's hint text). See
+  [accessibility.md §8](accessibility.md#8-semantic-structure-and-relationships).
+
+- **Accessible name** — The programmatically determinable name assistive
+  technology uses to identify a component, which must include any visible
+  label text used to identify it (per `KBDL-A11Y-028`). See
+  [accessibility.md §32](accessibility.md#32-forms-labels-instructions-and-autocomplete).
+
 - **Adaptive theme** — A KBDL theme that changes its presentation in response
   to the user's light or dark preference while preserving the same underlying
   design language. Tracked under module code `THM`. See
   [themes/README.md](themes/README.md).
+
+- **Breakpoint** — A named viewport-width threshold at which layout,
+  navigation, or interaction structure changes to serve content or
+  interaction needs, never to match a specific device. KBDL's four named
+  roles are `compact`, `standard`, `expanded`, and `wide`. Tracked under
+  module code `RSP`. See [responsive.md §3, §6](responsive.md#3-responsive-terminology).
+
+- **Cognitive-function test** — An authentication step requiring a user to
+  remember, transcribe, or solve something (a password, a puzzle, a
+  memorized code) — restricted by WCAG 2.2 unless an alternative method is
+  also available. See [accessibility.md §36](accessibility.md#36-authentication-accessibility).
 
 - **Component** — A reusable interface element defined by KBDL (for example an
   action, form, navigation, surface, overlay, feedback, or system-state
@@ -66,16 +87,30 @@ decisions (visual values, motion timings, component designs) already exist.
 - **Flow Profile** — The KBDL project profile intended for consumer-facing web
   applications.
 
+- **Focus order** — The sequence in which interactive elements receive
+  keyboard focus, which must be logical and must not contradict visual
+  presentation. See [accessibility.md §10](accessibility.md#10-reading-and-focus-order).
+
 - **Foundation** — The base layer of KBDL (visual foundations such as color,
   type, and spacing primitives) that all themes, components, and profiles are
   built on. Tracked under module code `FND`. See
   [foundations/README.md](foundations/README.md).
+
+- **Input modality** — A distinct means of providing input to an interface
+  (touch, pointer, keyboard, gesture, voice), each of which must retain
+  equivalent interaction meaning per KBDL's input-parity requirements. See
+  [responsive.md §23](responsive.md#23-touch-pointer-keyboard-and-hybrid-input).
 
 - **KBDL** — The name of this reusable web design language, combining digital
   luxury, technical utility, controlled expressive motion, cross-project
   visual consistency, responsive and mobile-friendly behavior, adaptive
   light/dark presentation, and WCAG 2.2 Level AA accessibility with enhanced
   reduced-motion safeguards.
+
+- **Live region** — A programmatically identified region of content whose
+  updates are announced to assistive technology without requiring the user's
+  focus, used for status messages. See
+  [accessibility.md §35](accessibility.md#35-status-messages-and-live-communication).
 
 - **Locked rule** — A KBDL rule (most often an accessibility or motion-safety
   rule) that cannot be modified by a project profile or customization without
@@ -95,6 +130,11 @@ decisions (visual values, motion timings, component designs) already exist.
   organized into. Realized as the five-level motion hierarchy (None,
   Functional, Supportive, Expressive, Exceptional) in
   [motion/foundations.md §3](motion/foundations.md#3-motion-hierarchy).
+
+- **No motion** — The presentation state in which all non-essential and
+  decorative motion is removed entirely, distinct from Reduced motion, which
+  simplifies rather than fully removes motion. See
+  [motion/README.md §2](motion/README.md#2-motion-terminology).
 
 - **Non-conformance** — The condition of failing one or more applicable KBDL
   requirements for the scope being assessed — that is, a requirement whose
@@ -117,14 +157,27 @@ decisions (visual values, motion timings, component designs) already exist.
   (not foundations) for a category of project. KBDL's initial profiles are
   Showcase, Precision, and Flow. Tracked under module code `PRO`.
 
+- **Reading order** — The order content is intended to be consumed in, which
+  must match source order unless an explicit, accessible mechanism
+  establishes a different but equally understandable order. See
+  [responsive.md §12](responsive.md#12-source-order-and-reading-order).
+
 - **Reduced motion** — The accessibility-driven behavior KBDL uses to safely
   reduce or remove non-essential motion for users who request it, exceeding
   baseline WCAG motion requirements.
+
+- **Reflow** — The process by which content rearranges to fit the available
+  viewport without requiring two-dimensional scrolling for reading. Tracked
+  under module code `RSP`. See [responsive.md §11](responsive.md#11-layout-reflow).
 
 - **Requirement traceability** — The documented connection between a
   requirement, its origin (blueprint or roadmap), its specification location,
   its status, and its validation evidence, maintained in the
   [traceability matrix](traceability-matrix.md).
+
+- **Safe area** — The region of a viewport guaranteed not to be obscured by a
+  device's physical cutouts, rounded corners, or system UI overlays. See
+  [responsive.md §19](responsive.md#19-safe-areas-and-viewport-edges).
 
 - **Semantic token** — A design token that assigns meaning (for example
   "surface-background" or "danger-text") by referencing primitive tokens,
@@ -133,12 +186,26 @@ decisions (visual values, motion timings, component designs) already exist.
 - **Showcase Profile** — The KBDL project profile intended for portfolios and
   creative showcases.
 
+- **Status message** — Programmatically determinable content communicating
+  a state change (loading, progress, success, error) without requiring the
+  user's focus or depending only on visual animation or color. See
+  [accessibility.md §35](accessibility.md#35-status-messages-and-live-communication).
+
+- **Target size** — The minimum pointer-activatable area for a control; WCAG
+  2.2 sets a 24-by-24 CSS-pixel minimum, with a KBDL-preferred enhanced
+  size proposed separately. See
+  [accessibility.md §25](accessibility.md#25-target-sizing-and-spacing).
+
 - **Theme** — A complete mapping of every KBDL semantic color role to a
   specific foundation color, for one mode (light or dark). See also
   Adaptive theme. Tracked under module code `THM`. Full theme
   terminology (mode, semantic role, local contrast context, theme
   parity, and related terms) is defined in
   [themes/README.md §3](themes/README.md#3-theme-terminology).
+
+- **Touch target** — A pointer target specifically sized and spaced for
+  finger-based activation on a touchscreen; see Target size for the
+  applicable minimum. See [responsive.md §23](responsive.md#23-touch-pointer-keyboard-and-hybrid-input).
 
 - **Validation criterion** — A documented, checkable condition used to
   determine whether a requirement is `Verified`. Tracked under module code
