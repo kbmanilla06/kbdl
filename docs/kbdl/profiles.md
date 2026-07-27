@@ -988,7 +988,7 @@ Documentation examples only; none has been implementation-tested.
 
 ## 28. Normative Requirements
 
-See each section above ([§5](#5-profile-architecture) through
+See each section above ([§4](#4-project-profile-terminology) through
 [§25](#25-profile-adoption-and-change-management)) for the full text of
 every `KBDL-PRO-001` through `KBDL-PRO-029` requirement — including
 `KBDL-PRO-028` (§8) and `KBDL-PRO-029` (§25), each with exactly one
@@ -1020,7 +1020,7 @@ and its one-to-one packet mapping.
 | ID | Title | Scope | Category | Lifecycle | Provenance | Validation status | Authority | Specification location | Decision-packet destination | Pending dependency | Known limitation |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | `KBDL-PRO-001` | Shared profile architecture | Shared | Architecture | Approved | Confirmed | Not verified | Prior-KBDL | §5 | None | None | Implementation-dependent |
-| `KBDL-PRO-002` | Profile terminology distinction | Shared | Terminology | Approved | Confirmed | Not verified | Prior-KBDL + prompt | §5 | None | None | Implementation-dependent |
+| `KBDL-PRO-002` | Profile terminology distinction | Shared | Terminology | Approved | Confirmed | Not verified | Prior-KBDL + prompt | §4 | None | None | Implementation-dependent |
 | `KBDL-PRO-003` | Locked-decision protection | Shared | Governance | Approved | Confirmed | Not verified | Prior-KBDL | §7 | None | None | Implementation-dependent |
 | `KBDL-PRO-004` | Controlled-variable integrity | Shared | Governance | Approved | Confirmed | Not verified | Prior-KBDL | §7 | None | None | Implementation-dependent |
 | `KBDL-PRO-005` | Open-expression subordination | Shared | Governance | Approved | Confirmed | Not verified | Prior-KBDL | §7 | None | None | Not independently testable |
