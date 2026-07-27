@@ -17,10 +17,11 @@ and Flow (consumer-facing web applications). See the
 **KBDL-002: Identity, Principles, and Visual Consistency Rules**,
 **KBDL-003: Core Visual Foundations**,
 **KBDL-004: Adaptive Theme System**,
-**KBDL-005: Expressive Motion Language**, and
-**KBDL-006: Responsive Behavior and Accessibility** deliverables are
-present in the repository, the first six steps of a ten-step approved
-roadmap. Their
+**KBDL-005: Expressive Motion Language**,
+**KBDL-006: Responsive Behavior and Accessibility**, and
+**KBDL-007: Core Action, Form, and Navigation Components** deliverables
+are present in the repository, the first seven steps of a ten-step
+approved roadmap. Their
 lifecycle status is `Approved` for architecture, rules, and (as of the
 project owner's foundation-defaults approval, see
 [KBDL-DEC-012](decision-register.md#kbdl-dec-012--foundation-decision-packet-approved))
@@ -81,10 +82,22 @@ Validation status remains separate throughout: implementation-dependent
 items (keyboard, screen-reader, zoom, forced-colors, flash, and
 real-device testing) remain `Not verified`, since no implementation
 exists; this module does not claim full WCAG conformance. KBDL-007
-(Core Action, Form, and Navigation Components) remains locked until
-KBDL-006 passes the planning agent's validation review; it has not been
+established KBDL's core action, form, and navigation component
+specification: 51 `KBDL-CMP-###` requirements translating approved
+KBDL-002 through KBDL-006 rules, WCAG 2.2, and WAI-ARIA into
+component-level contracts (see [components-core.md](components-core.md)).
+Requirements directly restating an already-approved source are
+`Approved`; genuinely new component-level taxonomies (a button
+hierarchy, a tabs activation model, truncation models for breadcrumbs
+and pagination, and similar) remain `Recommended`, pending project-owner
+approval via the
+[KBDL-007 decision packet](components-core.md#35-kbdl-007-decision-packet).
+None of the nine unapproved KBDL-006 recommendations is treated as
+implementation authority anywhere in KBDL-007. KBDL-008 (Surface,
+Overlay, Feedback, and System-State Components) remains locked until
+KBDL-007 passes the planning agent's validation review; it has not been
 started. This is not a claim that the overall KBDL project is complete —
-four roadmap steps remain. Progression to later roadmap steps depends on
+three roadmap steps remain. Progression to later roadmap steps depends on
 the
 planning agent's validation review, not on this index. KBDL-001
 established the documentation architecture, terminology, requirement
@@ -105,9 +118,13 @@ established KBDL's framework-independent motion language (see
 responsive-behavior and accessibility specification, mapping WCAG 2.2
 Level AA to KBDL topics and resolving items previously deferred to it
 (see [responsive.md](responsive.md) and
-[accessibility.md](accessibility.md)). None of these steps define
-components or implementation code — those are later roadmap steps and
-must not be started early (see
+[accessibility.md](accessibility.md)). KBDL-007 established KBDL's
+core action, form, and navigation component specification, translating
+approved principles, foundations, themes, motion, responsive, and
+accessibility rules into component-level contracts (see
+[components-core.md](components-core.md)). None of these steps define
+implementation code, KBDL-008 surfaces, or later-roadmap work — those
+remain later roadmap steps and must not be started early (see
 [governance.md](governance.md)).
 
 ## Intended Audience
@@ -135,10 +152,11 @@ specification itself.
 
 ## Document Hierarchy
 
-KBDL-001, KBDL-002, KBDL-003, KBDL-004, KBDL-005, and KBDL-006 deliver
-the documents below with real content. Rows still marked `Deferred` show
-the **planned location only** for future modules; those files do not
-exist yet and must not be created until their roadmap step is reached.
+KBDL-001, KBDL-002, KBDL-003, KBDL-004, KBDL-005, KBDL-006, and
+KBDL-007 deliver the documents below with real content. Rows still
+marked `Deferred` show the **planned location only** for future
+modules; those files do not exist yet and must not be created until
+their roadmap step is reached.
 
 | # | Module | Status | Location |
 | --- | --- | --- | --- |
@@ -149,8 +167,8 @@ exist yet and must not be created until their roadmap step is reached.
 | 5 | Motion | Approved (architecture and the fifteen-item motion decision packet)† | [motion/README.md](motion/README.md) |
 | 6 | Responsive behavior | Approved (architecture)‡; Recommended (exact breakpoint/grid/gutter/container values) | [responsive.md](responsive.md) |
 | 7 | Accessibility | Approved (WCAG 2.2 AA mapping)‡; Recommended (KBDL-specific enhancements) | [accessibility.md](accessibility.md) |
-| 8 | Core action, form, and navigation components | Deferred (locked until KBDL-006 passes validation) | `docs/kbdl/components-core.md` (planned) |
-| 9 | Surface, overlay, feedback, and system-state components | Deferred | `docs/kbdl/components-system.md` (planned) |
+| 8 | Core action, form, and navigation components | Approved (architecture)§; Recommended (component-level taxonomies) | [components-core.md](components-core.md) |
+| 9 | Surface, overlay, feedback, and system-state components | Deferred (locked until KBDL-007 passes validation) | `docs/kbdl/components-system.md` (planned) |
 | 10 | Project profiles (Showcase, Precision, Flow) | Deferred | `docs/kbdl/profiles.md` (planned) |
 | 11 | Manual customization | Deferred | `docs/kbdl/customization.md` (planned) |
 | 12 | Validation | Deferred | `docs/kbdl/validation.md` (planned) |
@@ -208,6 +226,19 @@ and the
 No implementation-dependent validation (keyboard, screen-reader, zoom,
 forced-colors, flash, or real-device testing) is claimed `Verified` —
 no implementation exists yet.
+
+§ See [components-core.md](components-core.md) for the full
+specification. Requirements directly restating an already-approved
+WCAG 2.2 criterion, WAI-ARIA role/state/property, or prior approved
+KBDL rule are `Approved`. Genuinely new KBDL-007 component-level
+decisions — a button hierarchy taxonomy, a tabs activation model,
+breadcrumb/pagination truncation models, a navigation collapse
+threshold, and similar — remain `Recommended`, pending project-owner
+approval via the
+[KBDL-007 decision packet](components-core.md#35-kbdl-007-decision-packet).
+None of the nine unapproved KBDL-006 recommendations is treated as
+implementation authority anywhere in this module. No implementation-dependent
+validation is claimed `Verified` — no coded component exists yet.
 
 Supporting documents (not numbered modules, but required by KBDL-001 and
 referenced by KBDL-002 and KBDL-003):

@@ -1,7 +1,8 @@
 # KBDL Traceability Matrix
 
 Lifecycle status of this framework: `Approved`. Rows below reflect only
-KBDL-001, KBDL-002, KBDL-003, KBDL-004, KBDL-005, and KBDL-006 scope.
+KBDL-001, KBDL-002, KBDL-003, KBDL-004, KBDL-005, KBDL-006, and KBDL-007
+scope.
 
 Return to the [specification index](README.md). Status labels are defined in
 [conventions.md](conventions.md#1-status-labels).
@@ -804,23 +805,82 @@ The rows below trace KBDL-004's adaptive-theme scope, defined in
 - **Related decision:** Not applicable — pending a future decision-register entry once the project owner reviews the accessibility decision packet.
 - **Notes:** Map to [accessibility decision packet](accessibility.md#49-accessibility-decision-packet) items 1–3 respectively.
 
+## KBDL-007 — Core Action, Form, and Navigation Components
+
+### Shared component contract and cross-cutting rules (KBDL-CMP-001 through KBDL-CMP-013, KBDL-CMP-050, KBDL-CMP-051)
+
+- **Blueprint section:** Shared component contract; native-semantics-first rule; accessible naming; component state model; KBDL-008 scope boundary; focus/keyboard/pointer behavior; responsive/target-size/theme/foundation/motion mapping; cross-component composition; profile compatibility
+- **Roadmap prompt:** KBDL-007
+- **Requirement ID:** KBDL-CMP-001, 002, 003, 004, 005, 006, 007, 008, 009, 010, 011, 012, 013, 050, 051
+- **Specification location:** [components-core.md §5–§19, §25, §26](components-core.md#6-shared-component-contract)
+- **Approval status:** Approved for all fifteen — each directly restates an already-approved WCAG 2.2 Level A/AA criterion, WAI-ARIA rule, or prior approved KBDL principle/foundation/theme/motion/responsive/accessibility requirement
+- **Validation status:** Not verified (implementation-dependent); Not applicable for `KBDL-CMP-005` and `KBDL-CMP-050` (scope-control and composition requirements, not independently testable)
+- **Validation method:** Manual completeness/mapping review per component once implemented; manual scope-compliance review (performed, see implementation report).
+- **Validation evidence:** Not verified — no implementation exists yet.
+- **Known limitation:** Implementation-dependent; cannot be tested until real components exist.
+- **Related decision:** `KBDL-DEC-010` (WCAG 2.2 AA baseline).
+- **Notes:** These fifteen requirements establish the contract every component below must follow; no new policy is introduced at this level.
+
+### Action components (KBDL-CMP-014 through KBDL-CMP-021)
+
+- **Blueprint section:** Button, Icon Button, Toggle Button, Link, Button Group, Disclosure/Menu Trigger
+- **Roadmap prompt:** KBDL-007
+- **Requirement ID:** KBDL-CMP-014, 015, 016, 017, 018, 019, 020, 021
+- **Specification location:** [components-core.md §20](components-core.md#20-action-components)
+- **Approval status:** `KBDL-CMP-014`, `016`, `018`, `019`, `021` Approved (restate native-semantics-first, WCAG, and WAI-ARIA rules); `KBDL-CMP-015` (button hierarchy taxonomy), `017` (icon-only visible-label threshold), `020` (button-group composition guidance) Recommended (new component-level taxonomy/guidance)
+- **Validation status:** Not verified
+- **Validation method:** Manual + automated static accessibility review, manual keyboard/ARIA review once implemented; project-owner review of `KBDL-CMP-015`/`017`/`020` (not yet performed).
+- **Validation evidence:** Not verified — no implementation exists yet.
+- **Known limitation:** Implementation-dependent.
+- **Related decision:** Not applicable — pending a future decision-register entry once the project owner reviews the KBDL-007 decision packet.
+- **Notes:** `KBDL-CMP-015`, `017`, `020` map to [KBDL-007 decision packet](components-core.md#35-kbdl-007-decision-packet) items 1, 3, and (no separate item; button-group guidance is not independently packet-listed, remains Recommended pending future review) respectively.
+
+### Form architecture and components (KBDL-CMP-022 through KBDL-CMP-037)
+
+- **Blueprint section:** Shared field model; Text Input, Password Input, Search Field, Textarea, Select, Combobox, Checkbox, Radio Group, Switch, File Input, Field Group, Form Action Row; form validation and recovery
+- **Roadmap prompt:** KBDL-007
+- **Requirement ID:** KBDL-CMP-022, 023, 024, 025, 026, 027, 028, 029, 030, 031, 032, 033, 034, 035, 036, 037
+- **Specification location:** [components-core.md §21–§23](components-core.md#21-form-architecture)
+- **Approval status:** `KBDL-CMP-022`, `023`, `024`, `026`, `027`, `028`, `030`, `031`, `032`, `033`, `034`, `035`, `037` Approved (restate WCAG 2.2 and WAI-ARIA form/error requirements); `KBDL-CMP-025` (search-field model), `029` (combobox-justification threshold), `036` (form-action-row reflow order) Recommended (new component-level guidance)
+- **Validation status:** Not verified
+- **Validation method:** Manual + automated static accessibility review once implemented; project-owner review of `KBDL-CMP-025`/`029`/`036` (not yet performed).
+- **Validation evidence:** Not verified — no implementation exists yet.
+- **Known limitation:** Implementation-dependent.
+- **Related decision:** Not applicable — pending a future decision-register entry once the project owner reviews the KBDL-007 decision packet.
+- **Notes:** `KBDL-CMP-025`, `029`, `036` map to [KBDL-007 decision packet](components-core.md#35-kbdl-007-decision-packet) items 4, 5, and 6 respectively.
+
+### Navigation components (KBDL-CMP-038 through KBDL-CMP-049)
+
+- **Blueprint section:** Skip Link, Navigation Link/List, Primary/Global Navigation, Local/Section Navigation, Breadcrumb, Tabs, Pagination, Back Link
+- **Roadmap prompt:** KBDL-007
+- **Requirement ID:** KBDL-CMP-038, 039, 040, 041, 042, 043, 044, 045, 046, 047, 048, 049
+- **Specification location:** [components-core.md §24](components-core.md#24-navigation-components)
+- **Approval status:** `KBDL-CMP-038`, `039`, `040`, `042`, `043`, `045`, `047`, `049` Approved (restate WCAG 2.2, WAI-ARIA tabs pattern, and already-approved responsive/navigation rules); `KBDL-CMP-041` (navigation collapse threshold), `044` (breadcrumb truncation model), `046` (tabs activation model), `048` (pagination truncation model) Recommended (new component-level guidance, some contingent on unapproved `KBDL-RSP-002`/`008`)
+- **Validation status:** Not verified
+- **Validation method:** Manual keyboard/ARIA review once implemented; project-owner review of `KBDL-CMP-041`/`044`/`046`/`048` (not yet performed).
+- **Validation evidence:** Not verified — no implementation exists yet.
+- **Known limitation:** `KBDL-CMP-041` additionally depends on the unapproved `KBDL-RSP-002`/`008` and cannot be approved independently of them.
+- **Related decision:** Not applicable — pending a future decision-register entry once the project owner reviews the KBDL-007 decision packet.
+- **Notes:** `KBDL-CMP-041`, `044`, `046`, `048` map to [KBDL-007 decision packet](components-core.md#35-kbdl-007-decision-packet) items 7, 8, 2, and 9 respectively.
+
 ## Notes on Scope
 
-`GOV`, `PRN`, `FND`, `THM`, `MOT`, `RSP`, and `A11Y` are documented
-(architecture and, where noted per row, approved default values or
-approved WCAG-derived requirements); none of their requirements have
-been *implemented* in code, regardless of lifecycle status — this
-matrix tracks specification-level approval and validation, not
-implementation. `RSP` and `A11Y` (KBDL-006) are no longer future or
-locked modules: `docs/kbdl/responsive.md` and `docs/kbdl/accessibility.md`
-exist with 62 documented requirements (see the
-[KBDL-006 — Responsive and Accessibility](#kbdl-006--responsive-and-accessibility)
-section above), and KBDL-006 is currently in remediation and validation
-— not yet passed, per
+`GOV`, `PRN`, `FND`, `THM`, `MOT`, `RSP`, `A11Y`, and `CMP` are
+documented (architecture and, where noted per row, approved default
+values or approved WCAG/ARIA-derived requirements); none of their
+requirements have been *implemented* in code, regardless of lifecycle
+status — this matrix tracks specification-level approval and
+validation, not implementation. `RSP` and `A11Y` (KBDL-006) remain in
+remediation and validation — not yet passed, per
 [KBDL-DEC-015](decision-register.md#kbdl-dec-015--kbdl-006-remediation-and-id-governance-amendment).
-Rows for `CMP`, `PRO`, `CUS`, and `VAL` exist only to show where their
-future requirements will be traced once their roadmap step is reached;
-those modules remain locked until KBDL-006 passes the planning agent's
+`CMP` (KBDL-007) is no longer a future or locked module:
+`docs/kbdl/components-core.md` exists with 51 documented requirements
+(see the
+[KBDL-007 — Core Action, Form, and Navigation Components](#kbdl-007--core-action-form-and-navigation-components)
+section above); KBDL-007 is under initial validation, not yet passed.
+Rows for `PRO`, `CUS`, and `VAL` exist only to show where their future
+requirements will be traced once their roadmap step is reached; those
+modules remain locked until KBDL-007 passes the planning agent's
 validation review. Approval status and validation status are recorded independently
 for every row; a row being `Approved` never implies it is `Verified`, and a
 row being `Verified` never implies or grants `Approved` status. `PRN`
@@ -915,6 +975,27 @@ no decision-register entry has been created for KBDL-006, since no such
 review has yet occurred. This document does not claim full WCAG
 conformance, screen-reader compatibility, or real-device support — see
 [accessibility.md §48](accessibility.md#48-accessibility-validation-matrix)
-for exactly what has and has not been verified. KBDL-007 (Core Action,
-Form, and Navigation Components) is locked until KBDL-006 passes
-validation, and has not been started.
+for exactly what has and has not been verified. `CMP` requirements
+follow the same pattern established by `RSP`/`A11Y`: `Approved` only
+where a requirement directly restates an already-adopted WCAG 2.2 Level
+A/AA criterion, WAI-ARIA role/state/property, or a prior approved KBDL
+principle, foundation, theme, motion, responsive, or accessibility
+rule; `Recommended` where new KBDL-007 component-level policy is
+introduced — the button hierarchy taxonomy, icon-only visible-label
+threshold, button-group guidance (`KBDL-CMP-015`, `017`, `020`), the
+search-field model, combobox-justification threshold, form-action-row
+reflow order (`KBDL-CMP-025`, `029`, `036`), and the navigation collapse
+threshold, breadcrumb/pagination truncation models, and tabs activation
+model (`KBDL-CMP-041`, `044`, `046`, `048`). None of these `Recommended`
+items are implemented or treated as `Approved` until the project owner
+reviews the
+[KBDL-007 decision packet](components-core.md#35-kbdl-007-decision-packet);
+no decision-register entry has been created for KBDL-007, since no such
+review has yet occurred. This document does not claim full WCAG
+conformance, ARIA-pattern compliance, screen-reader compatibility, or
+real-device support for any component — see
+[components-core.md §32–§34](components-core.md#32-accessibility-validation-matrix)
+for exactly what has and has not been verified. KBDL-008 (Surface,
+Overlay, Feedback, and System-State Components) is locked until
+KBDL-007 passes the planning agent's validation review, and has not
+been started.

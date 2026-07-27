@@ -25,10 +25,19 @@ decisions (visual values, motion timings, component designs) already exist.
   label text used to identify it (per `KBDL-A11Y-028`). See
   [accessibility.md §32](accessibility.md#32-forms-labels-instructions-and-autocomplete).
 
+- **Action** — A component whose activation performs an operation within the
+  current context, as distinct from navigation (see Link). Realized as the
+  Button, Icon Button, and Toggle Button components. Tracked under module
+  code `CMP`. See [components-core.md §20](components-core.md#20-action-components).
+
 - **Adaptive theme** — A KBDL theme that changes its presentation in response
   to the user's light or dark preference while preserving the same underlying
   design language. Tracked under module code `THM`. See
   [themes/README.md](themes/README.md).
+
+- **Breadcrumb** — A navigation component communicating hierarchical location
+  via an ordered list of ancestor destinations, ending in the current,
+  non-linked page. See [components-core.md §24.5](components-core.md#245-breadcrumb).
 
 - **Breakpoint** — A named viewport-width threshold at which layout,
   navigation, or interaction structure changes to serve content or
@@ -36,21 +45,33 @@ decisions (visual values, motion timings, component designs) already exist.
   roles are `compact`, `standard`, `expanded`, and `wide`. Tracked under
   module code `RSP`. See [responsive.md §3, §6](responsive.md#3-responsive-terminology).
 
+- **Button** — An action component performing an immediate operation within
+  the current context, using native button semantics. See
+  [components-core.md §20.1](components-core.md#201-button).
+
 - **Cognitive-function test** — An authentication step requiring a user to
   remember, transcribe, or solve something (a password, a puzzle, a
   memorized code) — restricted by WCAG 2.2 unless an alternative method is
   also available. See [accessibility.md §36](accessibility.md#36-authentication-accessibility).
 
+- **Combobox** — A custom widget combining a text input with a popup list of
+  options, documented only where native select behavior is insufficient. See
+  [components-core.md §22.6](components-core.md#226-combobox-boundary).
+
 - **Component** — A reusable interface element defined by KBDL (for example an
   action, form, navigation, surface, overlay, feedback, or system-state
   element) that has documented anatomy, states, and accessibility behavior.
-  Tracked under module code `CMP`.
+  Tracked under module code `CMP`. See
+  [components-core.md](components-core.md) for the core action, form, and
+  navigation components.
 
 - **Component anatomy** — The documented structural parts that make up a
-  component (for example a button's label, icon slot, and container).
+  component (for example a button's label, icon slot, and container). See
+  [components-core.md §7](components-core.md#7-component-anatomy-model).
 
 - **Component state** — A documented condition a component can be in (for
-  example default, hover, focus, active, disabled, loading, or error).
+  example default, hover, focus, active, disabled, loading, or error). See
+  [components-core.md §8](components-core.md#8-component-state-model).
 
 - **Component token** — A design token scoped to a single component, built
   from semantic tokens, used only where a component's needs cannot be met by
@@ -65,11 +86,24 @@ decisions (visual values, motion timings, component designs) already exist.
   or implementer may adjust only within explicitly documented bounds, as
   opposed to an open brand expression or a locked rule.
 
+- **Current** — A component state indicating location within a set (for
+  example the active page in navigation), distinct from Selected (a user
+  choice) and Pressed (a toggled binary state). See
+  [components-core.md §8](components-core.md#8-component-state-model).
+
 - **Customization rule** — Documented guidance describing how and where manual
   customization of KBDL is permitted. Tracked under module code `CUS`.
 
 - **Decision record** — A single entry in the [decision register](decision-register.md)
   capturing a governance-relevant decision, its rationale, and its status.
+
+- **Disabled** — A component state that removes an element from interaction
+  and from the tab order, distinct from Read-only (which preserves
+  focusability). See [components-core.md §8](components-core.md#8-component-state-model).
+
+- **Disclosure** — A trigger component that reveals or conceals associated
+  content, exposing its expanded/collapsed state programmatically. See
+  [components-core.md §20.6](components-core.md#206-disclosure-and-menu-triggers).
 
 - **Design language** — The overall set of principles, foundations, themes,
   motion behavior, and component guidance that defines how KBDL looks, feels,
@@ -83,6 +117,15 @@ decisions (visual values, motion timings, component designs) already exist.
 - **Exception** — An approved, documented, time-bound or scope-bound deviation
   from a locked rule or accessibility requirement, recorded in the
   [decision register](decision-register.md).
+
+- **Field** — A labeled input or control within a form, together with its
+  supporting label, description, instructions, and validation message.
+  Tracked under module code `CMP`. See
+  [components-core.md §21](components-core.md#21-form-architecture).
+
+- **Field group** — A set of related fields sharing a group label and,
+  where applicable, a group-level error. See
+  [components-core.md §22.11](components-core.md#2211-field-group).
 
 - **Flow Profile** — The KBDL project profile intended for consumer-facing web
   applications.
@@ -100,6 +143,10 @@ decisions (visual values, motion timings, component designs) already exist.
   (touch, pointer, keyboard, gesture, voice), each of which must retain
   equivalent interaction meaning per KBDL's input-parity requirements. See
   [responsive.md §23](responsive.md#23-touch-pointer-keyboard-and-hybrid-input).
+
+- **Invalid** — A component state indicating a field or value fails
+  validation, distinct from a system-level error; must be paired with a
+  non-color cue. See [components-core.md §8](components-core.md#8-component-state-model).
 
 - **KBDL** — The name of this reusable web design language, combining digital
   luxury, technical utility, controlled expressive motion, cross-project
@@ -146,8 +193,16 @@ decisions (visual values, motion timings, component designs) already exist.
   project or profile to express its own brand identity, within the bounds set
   by foundations and locked rules.
 
+- **Pagination** — A navigation component for moving between pages of a
+  larger content set, marking the current page and providing
+  previous/next actions. See [components-core.md §24.7](components-core.md#247-pagination).
+
 - **Precision Profile** — The KBDL project profile intended for SaaS
   dashboards.
+
+- **Pressed** — A component state exposing a toggled binary condition (see
+  Toggle button), distinct from Selected (set membership) and Current
+  (location). See [components-core.md §8](components-core.md#8-component-state-model).
 
 - **Primitive token** — The most basic form of a design value in KBDL (for
   example a raw color or spacing value) that semantic and component tokens are
@@ -156,6 +211,10 @@ decisions (visual values, motion timings, component designs) already exist.
 - **Project Profile** — A documented KBDL configuration that adjusts emphasis
   (not foundations) for a category of project. KBDL's initial profiles are
   Showcase, Precision, and Flow. Tracked under module code `PRO`.
+
+- **Read-only** — A component state that preserves focusability and allows
+  copying but not editing a control's value, distinct from Disabled. See
+  [components-core.md §8](components-core.md#8-component-state-model).
 
 - **Reading order** — The order content is intended to be consumed in, which
   must match source order unless an explicit, accessible mechanism
@@ -179,6 +238,11 @@ decisions (visual values, motion timings, component designs) already exist.
   device's physical cutouts, rounded corners, or system UI overlays. See
   [responsive.md §19](responsive.md#19-safe-areas-and-viewport-edges).
 
+- **Selected** — A component state indicating a user's chosen membership in
+  a set (for example a checked checkbox or a highlighted list item),
+  distinct from Current (location) and Pressed (a toggled action). See
+  [components-core.md §8](components-core.md#8-component-state-model).
+
 - **Semantic token** — A design token that assigns meaning (for example
   "surface-background" or "danger-text") by referencing primitive tokens,
   forming the layer components consume.
@@ -186,10 +250,20 @@ decisions (visual values, motion timings, component designs) already exist.
 - **Showcase Profile** — The KBDL project profile intended for portfolios and
   creative showcases.
 
+- **Skip link** — A navigation component providing first-focus bypass of
+  repeated content blocks, directing focus to the main content landmark.
+  See [components-core.md §24.1](components-core.md#241-skip-link).
+
 - **Status message** — Programmatically determinable content communicating
   a state change (loading, progress, success, error) without requiring the
   user's focus or depending only on visual animation or color. See
   [accessibility.md §35](accessibility.md#35-status-messages-and-live-communication).
+
+- **Tab** — A control within a tablist that selects which associated tab
+  panel is visible. See [components-core.md §24.6](components-core.md#246-tabs).
+
+- **Tab panel** — The content region associated with and disclosed by a
+  selected tab. See [components-core.md §24.6](components-core.md#246-tabs).
 
 - **Target size** — The minimum pointer-activatable area for a control; WCAG
   2.2 sets a 24-by-24 CSS-pixel minimum, with a KBDL-preferred enhanced
@@ -202,6 +276,11 @@ decisions (visual values, motion timings, component designs) already exist.
   terminology (mode, semantic role, local contrast context, theme
   parity, and related terms) is defined in
   [themes/README.md §3](themes/README.md#3-theme-terminology).
+
+- **Toggle button** — An action component exposing a persistent pressed/
+  unpressed state tied to a stable action identity, distinct from a switch
+  (an immediate setting) and a checkbox (a form-field selection). See
+  [components-core.md §20.3](components-core.md#203-toggle-button).
 
 - **Touch target** — A pointer target specifically sized and spaced for
   finger-based activation on a touchscreen; see Target size for the

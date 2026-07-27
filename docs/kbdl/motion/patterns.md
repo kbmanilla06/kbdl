@@ -45,8 +45,9 @@ continuity, and focus continuity.
   [foundations.md §3](foundations.md#3-motion-hierarchy)), never a
   default navigation pattern.
 
-Detailed navigation component behavior belongs to KBDL-007
-(Actions/Forms/Navigation Components).
+Detailed navigation component behavior is now defined in
+[components-core.md §24](../components-core.md#24-navigation-components)
+(KBDL-007); this section is not restated or reopened there.
 
 ## 2. Loading and Progress
 
