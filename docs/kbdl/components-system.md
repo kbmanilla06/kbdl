@@ -1,13 +1,21 @@
 # KBDL Components — Surface, Overlay, Feedback, and System-State
 
-Lifecycle status: mixed. `Approved` for the requirements below that
-directly restate an already-`Approved` WCAG 2.2 Level A/AA criterion,
-WAI-ARIA 1.2 role/state/property definition, or a prior approved KBDL
-principle, foundation, theme, motion, responsive, accessibility, or
-KBDL-007 component-level rule — see [§27](#27-normative-requirements)
-for exact per-requirement status. `Recommended` for genuinely new
-component-level taxonomies, timing, placement, sizing, persistence,
-modality, queueing, stacking, or transformation policy — pending
+Lifecycle status: mixed. `Approved` for the requirements below whose
+normative rule is authorized by at least one of: an adopted WCAG 2.2
+Level A/AA requirement; an adopted WAI-ARIA 1.2 role, state, or
+property definition; a prior approved KBDL principle, foundation,
+theme, motion, responsive, accessibility, or KBDL-007 component-level
+rule; an explicit mandatory requirement stated in the project-owner-
+approved KBDL-008 implementation prompt; or a documented combination of
+these — see [§27](#27-normative-requirements) for the exact authority
+cited per requirement. The project owner's approval of the KBDL-008
+implementation prompt authorizes the prompt's own mandatory scope and
+required fields; it does **not** approve any of the 17 items in the
+[KBDL-008 decision packet](#33-kbdl-008-decision-packet), any KBDL-006
+recommendation, or any KBDL-007 recommendation. `Recommended` for
+genuinely new, discretionary component-level taxonomies, timing,
+placement, sizing, persistence, modality, queueing, stacking, or
+transformation policy not mandated by the approved prompt — pending
 project-owner approval via [§33](#33-kbdl-008-decision-packet). No
 `Recommended` value in this document authorizes implementation on its
 own — see [conventions.md §1.1](conventions.md#11-lifecycle--approval-status).
@@ -15,6 +23,8 @@ Assigning a `KBDL-CMP-###` ID does not grant approval or implementation
 authority, per the amended convention
 ([conventions.md §2](conventions.md#2-requirement-identification),
 [KBDL-DEC-015](decision-register.md#kbdl-dec-015--kbdl-006-remediation-and-id-governance-amendment)).
+Documentation review does not make any requirement's implementation
+behavior `Verified`.
 
 This document does not claim full WCAG conformance, ARIA-pattern
 compatibility, screen-reader compatibility, browser compatibility, or
@@ -48,14 +58,22 @@ customization, or final validation.
 Uses KBDL's standard three-dimension model
 ([conventions.md §1](conventions.md#1-status-labels)), identical to
 [components-core.md §2](components-core.md#2-component-status-model).
-A requirement directly restating an already-adopted WCAG 2.2 criterion,
-WAI-ARIA 1.2 role/state/property definition, or a prior approved KBDL
-rule may be `Approved`. A genuinely new taxonomy, timing, placement,
-sizing, persistence, modality, queueing, stacking, or transformation
-policy remains `Recommended` until the project owner reviews
-[§33](#33-kbdl-008-decision-packet). An APG interaction-pattern
-recommendation is not automatically `Approved` merely by being
-described in the APG — see [§4](#4-standards-interpretation-for-this-module).
+A requirement may be `Approved` when its normative rule is authorized
+by an already-adopted WCAG 2.2 criterion, an adopted WAI-ARIA 1.2
+role/state/property definition, a prior approved KBDL rule, an explicit
+mandatory requirement in the project-owner-approved KBDL-008
+implementation prompt, or a documented combination of these — see
+[§27](#27-normative-requirements) for the exact authority cited per
+requirement, split by clause where a requirement's authority is mixed.
+Prompt approval authorizes only the prompt's own mandatory scope; it
+does not approve the [KBDL-008 decision packet](#33-kbdl-008-decision-packet).
+A genuinely new, discretionary taxonomy, timing, placement, sizing,
+persistence, modality, queueing, stacking, or transformation policy not
+mandated by the approved prompt remains `Recommended` until the project
+owner reviews [§33](#33-kbdl-008-decision-packet). An APG
+interaction-pattern recommendation is not automatically `Approved`
+merely by being described in the APG — see
+[§4](#4-standards-interpretation-for-this-module).
 
 ## 3. Relationship to Prior KBDL Modules
 

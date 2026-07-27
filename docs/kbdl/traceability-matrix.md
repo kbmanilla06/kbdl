@@ -1,8 +1,10 @@
 # KBDL Traceability Matrix
 
-Lifecycle status of this framework: `Approved`. Rows below reflect only
-KBDL-001, KBDL-002, KBDL-003, KBDL-004, KBDL-005, KBDL-006, and KBDL-007
-scope.
+Lifecycle status of this framework: `Approved`. Rows below reflect
+KBDL-001, KBDL-002, KBDL-003, KBDL-004, KBDL-005, KBDL-006, KBDL-007,
+and KBDL-008 scope. KBDL-008 remains under initial validation, not yet
+passed, pending the planning agent's validation review — its presence
+here is not a claim that KBDL-008 has passed.
 
 Return to the [specification index](README.md). Status labels are defined in
 [conventions.md](conventions.md#1-status-labels).
@@ -895,7 +897,7 @@ that document; these rows summarize status for cross-module lookup.
 - **Roadmap prompt:** KBDL-008
 - **Requirement ID:** KBDL-CMP-056, 057, 058, 059, 060, 071, 072, 073, 074, 075, 076, 077, 078, 079, 080, 081, 082, 083, 084, 085
 - **Specification location:** [components-system.md §10–§12](components-system.md#10-overlay-architecture)
-- **Approval status:** `KBDL-CMP-056`, `057`, `058`, `059`, `060`, `071`, `072`, `075`, `077`, `078`, `079`, `081`, `082`, `084` Approved (restate WCAG 2.1.1/2.1.2/2.2.1/2.4.3/2.4.11/1.4.13/4.1.2, the already-Approved motion-parity rule, adopted ARIA menu/listbox/dialog/alertdialog role definitions, and the KBDL-007 scope-control rule); `KBDL-CMP-073` (tooltip timing), `074` (popover taxonomy), `076` (menu interaction model), `080` (modal sizing/nesting), `083` (drawer/sheet taxonomy), `085` (overlay nesting policy) Recommended (new component-level timing, taxonomy, or nesting policy)
+- **Approval status:** `KBDL-CMP-056`, `057`, `058`, `059`, `060`, `075`, `077`, `078`, `079`, `081`, `082`, `084` Approved (restate WCAG 2.1.1/2.1.2/2.2.1/2.4.3/2.4.11/4.1.2, the already-Approved motion-parity rule, adopted ARIA menu/listbox/dialog/alertdialog role definitions, and the KBDL-007 scope-control rule); `KBDL-CMP-071` Approved with mixed authority (background-inertness-for-screen-readers is authorized by the adopted WAI-ARIA `aria-modal` property definition, supported by WCAG 2.4.3/2.4.11; treating this as one complete rule is additionally authorized by the approved KBDL-008 prompt's explicit "Background inertness" requirement); `KBDL-CMP-072` Approved with mixed authority (dismissible/hoverable/persistent restates WCAG 1.4.13; accessible-name independence restates WCAG 4.1.2/`KBDL-CMP-003`; non-interactive-content and focus-remains-on-trigger are authorized only by the approved KBDL-008 prompt's explicit Tooltip requirements, not by WCAG 1.4.13 or the ARIA tooltip role alone); `KBDL-CMP-073` (tooltip timing), `074` (popover taxonomy), `076` (menu interaction model), `080` (modal sizing/nesting), `083` (drawer/sheet taxonomy), `085` (overlay nesting policy) Recommended (new, discretionary component-level timing, taxonomy, or nesting policy not mandated by the approved prompt)
 - **Provenance:** Confirmed for `KBDL-CMP-056`, `057`, `058`, `059`, `060`, `071`, `072`, `075`, `077`, `078`, `079`, `081`, `082`, `084`; Assumed for `KBDL-CMP-073`, `074`, `076`, `080`, `083`, `085`.
 - **Validation status:** Not verified
 - **Validation method:** Manual focus-containment, keyboard, and ARIA-relationship review once implemented; project-owner review of the Recommended subset (not yet performed).
@@ -910,7 +912,7 @@ that document; these rows summarize status for cross-module lookup.
 - **Roadmap prompt:** KBDL-008
 - **Requirement ID:** KBDL-CMP-061, 086, 087, 088, 089, 090, 091, 092, 093, 094, 095, 096, 098
 - **Specification location:** [components-system.md §13–§14](components-system.md#13-feedback-architecture)
-- **Approval status:** `KBDL-CMP-061`, `086`, `087`, `088`, `090`, `092`, `093`, `094`, `095`, `096`, `098` Approved (restate the locked component-state-clarity rule, `KBDL-A11Y-031`, adopted WAI-ARIA live-region/alert/progressbar/meter role definitions, WCAG 1.1.1/1.4.1/2.2.1, and the existing KBDL-007 submit-loading contract); `KBDL-CMP-089` (banner taxonomy), `091` (toast lifecycle model) Recommended (new component-level taxonomy/timing)
+- **Approval status:** `KBDL-CMP-061`, `086`, `087`, `092`, `093`, `094`, `095`, `098` Approved (restate the locked component-state-clarity rule, `KBDL-A11Y-031`, adopted WAI-ARIA live-region/progressbar/meter role definitions, WCAG 1.1.1/1.4.1, and the existing KBDL-007 submit-loading contract); `KBDL-CMP-088` Approved with mixed authority (urgency/no-focus-theft restates the adopted ARIA `alert` role definition; "must not be used for routine or successful updates" is authorized only by the approved KBDL-008 prompt's explicit Alert constraint, not by the ARIA role definition alone); `KBDL-CMP-090` Approved with mixed authority (no sensitive-information exposure restates the existing KBDL security principle, `components-core.md §37`; the persistent-path and no-default-focus-move requirements are authorized by the approved KBDL-008 prompt's explicit Toast/Snackbar constraints, with WCAG 2.2.1 as supporting rationale only); `KBDL-CMP-096` Approved with mixed authority (decorative/hidden treatment restates the adopted ARIA `aria-hidden` semantics and `KBDL-A11Y-031`; "must not expose meaningless placeholder shapes as content" is authorized only by the approved KBDL-008 prompt's explicit Skeleton requirements); `KBDL-CMP-089` (banner taxonomy), `091` (toast lifecycle model) Recommended (new, discretionary component-level taxonomy/timing not mandated by the approved prompt)
 - **Provenance:** Confirmed for `KBDL-CMP-061`, `086`, `087`, `088`, `090`, `092`, `093`, `094`, `095`, `096`, `098`; Assumed for `KBDL-CMP-089`, `091`.
 - **Validation status:** Not verified
 - **Validation method:** Manual live-region, role, and content-classification review once implemented; project-owner review of `KBDL-CMP-089`/`091` (not yet performed).
@@ -925,7 +927,7 @@ that document; these rows summarize status for cross-module lookup.
 - **Roadmap prompt:** KBDL-008
 - **Requirement ID:** KBDL-CMP-063, 064, 066, 097, 099, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111
 - **Specification location:** [components-system.md §15–§19, §23, §24](components-system.md#15-system-state-architecture)
-- **Approval status:** `KBDL-CMP-063`, `064`, `066`, `097`, `100`, `101`, `103`, `104`, `107`, `109` Approved (restate `KBDL-A11Y-031`, the locked component-state-clarity rule, WCAG 3.3.1/3.3.7/2.2.2/1.4.1/1.3.1/2.1.1, the existing KBDL correctness/safety and security principles, the existing Data-display theme roles, and the already-Approved `KBDL-CMP-051` profile-consistency rule); `KBDL-CMP-099` (empty-state taxonomy), `102` (error/system-state severity taxonomy), `105` (grid-versus-table threshold), `106` (treegrid justification threshold), `108` (carousel auto-rotation policy), `110` (data-visualization interaction model), `111` (responsive transformation policy) Recommended (new component-level taxonomy, threshold, or policy)
+- **Approval status:** `KBDL-CMP-063`, `064`, `066`, `097`, `103`, `104`, `107`, `109` Approved (restate `KBDL-A11Y-031`, the locked component-state-clarity rule, WCAG 2.2.2/1.4.1/1.3.1/2.1.1, the existing KBDL correctness/safety and security principles, the existing Data-display theme roles, and the already-Approved `KBDL-CMP-051` profile-consistency rule); `KBDL-CMP-100` Approved with mixed authority (preserving entered query/filter criteria is authorized by the approved KBDL-008 prompt's explicit No-Results State requirement, with WCAG 3.3.7 cited only as supporting analogy, not a direct restatement); `KBDL-CMP-101` Approved with mixed authority (error identification restates WCAG 3.3.1; the recoverable/blocking classification and retry/alternative-action requirement are authorized by the approved KBDL-008 prompt's explicit Error State requirements and the already-Approved Technical Utility recovery-support principle; the no-diagnostic-exposure clause restates `KBDL-CMP-064`); `KBDL-CMP-099` (empty-state taxonomy), `102` (error/system-state severity taxonomy), `105` (grid-versus-table threshold), `106` (treegrid justification threshold), `108` (carousel auto-rotation policy), `110` (data-visualization interaction model), `111` (responsive transformation policy) Recommended (new, discretionary component-level taxonomy, threshold, or policy not mandated by the approved prompt)
 - **Provenance:** Confirmed for `KBDL-CMP-063`, `064`, `066`, `097`, `100`, `101`, `103`, `104`, `107`, `109`; Assumed for `KBDL-CMP-099`, `102`, `105`, `106`, `108`, `110`, `111`.
 - **Validation status:** Not verified
 - **Validation method:** Manual review once implemented; project-owner review of the Recommended subset (not yet performed).
@@ -1092,11 +1094,21 @@ conformance, ARIA-pattern compliance, screen-reader compatibility, or
 real-device support for any component — see
 [components-core.md §32–§34](components-core.md#32-accessibility-validation-matrix)
 for exactly what has and has not been verified. `CMP` requirements
-introduced by KBDL-008 follow the same pattern: `Approved` only where a
-requirement directly restates an already-adopted WCAG 2.2 criterion,
-WAI-ARIA role/state/property definition, or a prior approved KBDL or
-KBDL-007 rule; `Recommended` where new KBDL-008 component-level policy
-is introduced — a card-variant taxonomy, an accordion open model, a
+introduced by KBDL-008 extend this pattern with one additional
+authority: `Approved` where a requirement is authorized by an
+already-adopted WCAG 2.2 criterion, an adopted WAI-ARIA role/state/
+property definition, a prior approved KBDL or KBDL-007 rule, an
+explicit mandatory requirement in the project-owner-approved KBDL-008
+implementation prompt, or a documented combination of these (see each
+requirement's own record in
+[components-system.md §27](components-system.md#27-normative-requirements)
+for which authority applies, split by clause where mixed); prompt
+approval authorizes only the prompt's own mandatory scope — it does
+not approve the KBDL-008 decision packet, promote any KBDL-006 or
+KBDL-007 recommendation, or grant implementation-level validation.
+`Recommended` where new, discretionary KBDL-008 component-level policy
+not mandated by the approved prompt is introduced — a card-variant
+taxonomy, an accordion open model, a
 tooltip timing policy, a popover taxonomy, a menu interaction model, a
 modal sizing/nesting policy, a drawer/sheet taxonomy, an overlay
 nesting policy, a banner severity taxonomy, a toast lifecycle model, an

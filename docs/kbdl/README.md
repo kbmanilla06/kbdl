@@ -100,16 +100,22 @@ Overlay, Feedback, and System-State Components) is now present: 60
 translating approved principles, foundations, themes, motion,
 responsive, accessibility, and KBDL-007 component rules into surface-,
 overlay-, feedback-, and system-state-level contracts (see
-[components-system.md](components-system.md)). Requirements directly
-restating an already-approved source are `Approved`; genuinely new
-component-level taxonomies, timing, placement, or policy choices (a
-card-variant taxonomy, an accordion open model, a tooltip timing
-policy, and similar) remain `Recommended`, pending project-owner
-approval via the
+[components-system.md](components-system.md)). A requirement is
+`Approved` when authorized by an already-adopted WCAG 2.2 criterion, an
+adopted WAI-ARIA role/state/property definition, a prior approved KBDL
+rule, an explicit mandatory requirement in the project-owner-approved
+KBDL-008 implementation prompt, or a documented combination of these;
+the project owner's approval of that prompt authorizes only its own
+mandatory scope, not the KBDL-008 decision packet. Genuinely new,
+discretionary component-level taxonomies, timing, placement, or policy
+choices not mandated by the approved prompt (a card-variant taxonomy,
+an accordion open model, a tooltip timing policy, and similar) remain
+`Recommended`, pending project-owner approval via the
 [KBDL-008 decision packet](components-system.md#33-kbdl-008-decision-packet).
 None of the nine unapproved KBDL-006 recommendations or the ten
 unapproved KBDL-007 recommendations is treated as implementation
-authority anywhere in KBDL-008. KBDL-008 is currently under initial
+authority anywhere in KBDL-008; no implementation-level validation
+exists for any KBDL-008 requirement. KBDL-008 is currently under initial
 validation, not yet passed; KBDL-009 (Project Profiles) and every later
 roadmap step remain locked until KBDL-008 passes the planning agent's
 validation review — none has been started. This is not a claim that
@@ -261,13 +267,17 @@ implementation authority anywhere in this module. No implementation-dependent
 validation is claimed `Verified` — no coded component exists yet.
 
 ¶ See [components-system.md](components-system.md) for the full
-specification. Requirements directly restating an already-approved
-WCAG 2.2 criterion, WAI-ARIA role/state/property, or prior approved
-KBDL or KBDL-007 rule are `Approved`. Genuinely new KBDL-008
-component-level decisions — a card-variant taxonomy, an accordion open
-model, a tooltip timing policy, a modal sizing/nesting policy, a
-grid-versus-table threshold, and similar — remain `Recommended`,
-pending project-owner approval via the
+specification. A requirement is `Approved` when authorized by an
+already-adopted WCAG 2.2 criterion, an adopted WAI-ARIA role/state/
+property definition, a prior approved KBDL or KBDL-007 rule, an
+explicit mandatory requirement in the project-owner-approved KBDL-008
+implementation prompt, or a documented combination of these; prompt
+approval authorizes only its own mandatory scope, not the KBDL-008
+decision packet. Genuinely new, discretionary KBDL-008 component-level
+decisions not mandated by the approved prompt — a card-variant
+taxonomy, an accordion open model, a tooltip timing policy, a modal
+sizing/nesting policy, a grid-versus-table threshold, and similar —
+remain `Recommended`, pending project-owner approval via the
 [KBDL-008 decision packet](components-system.md#33-kbdl-008-decision-packet).
 None of the nine unapproved KBDL-006 recommendations or the ten
 unapproved KBDL-007 recommendations is treated as implementation
