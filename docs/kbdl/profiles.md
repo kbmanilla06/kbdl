@@ -364,7 +364,7 @@ like moments, and media-led presentation.
   - Authority: consolidates the already-Approved Showcase interpretation already established in [principles.md §9.1](principles.md#91-showcase-profile), [foundations/README.md §4.1](foundations/README.md#41-showcase), [themes/README.md §8](themes/README.md#8-project-profile-theme-interpretation) Showcase, [motion/patterns.md §10.1](motion/patterns.md#101-showcase), and [responsive.md §28](responsive.md#28-showcase-profile-interpretation)
   - Related requirement: `KBDL-PRO-001`, `KBDL-MOT-034`.
   - Applicable profiles: Showcase.
-  - Specification location: [§10](#10-showcase-profile).
+  - Specification location: [§10.1](#101-purpose).
   - Decision-packet destination: None — Approved requirement; not awaiting packet approval
   - Pending dependencies: None.
   - Validation method: Manual cross-module consistency review.
@@ -423,7 +423,7 @@ repeated workflows, data review, and information-dense applications.
   - Authority: consolidates the already-Approved Precision interpretation in [principles.md §9.2](principles.md#92-precision-profile), [foundations/README.md §4.2](foundations/README.md#42-precision), [themes/README.md §8](themes/README.md#8-project-profile-theme-interpretation) Precision, [motion/patterns.md §10.2](motion/patterns.md#102-precision), and [responsive.md §29](responsive.md#29-precision-profile-interpretation)
   - Related requirement: `KBDL-PRO-001`, `KBDL-MOT-034`.
   - Applicable profiles: Precision.
-  - Specification location: [§11](#11-precision-profile).
+  - Specification location: [§11.1](#111-purpose).
   - Decision-packet destination: None — Approved requirement; not awaiting packet approval
   - Pending dependencies: None.
   - Validation method: Manual cross-module consistency review.
@@ -482,7 +482,7 @@ workflows.
   - Authority: consolidates the already-Approved Flow interpretation in [principles.md §9.3](principles.md#93-flow-profile), [foundations/README.md §4.3](foundations/README.md#43-flow), [themes/README.md §8](themes/README.md#8-project-profile-theme-interpretation) Flow, [motion/patterns.md §10.3](motion/patterns.md#103-flow), and [responsive.md §30](responsive.md#30-flow-profile-interpretation)
   - Related requirement: `KBDL-PRO-001`, `KBDL-MOT-034`.
   - Applicable profiles: Flow.
-  - Specification location: [§12](#12-flow-profile).
+  - Specification location: [§12.1](#121-purpose).
   - Decision-packet destination: None — Approved requirement; not awaiting packet approval
   - Pending dependencies: None.
   - Validation method: Manual cross-module consistency review.
@@ -1028,9 +1028,9 @@ and its one-to-one packet mapping.
 | `KBDL-PRO-007` | Profile declaration fields | Shared | Process | Approved | Confirmed | Not applicable | Prompt | §8 | None | None | No declaration exists yet |
 | `KBDL-PRO-008` | Prohibited selection rationale | Shared | Process | Approved | Confirmed | Not applicable | Prompt + prior-KBDL | §8 | None | None | No declaration exists yet |
 | `KBDL-PRO-009` | Primary/secondary/hybrid policy | Shared | Governance | Recommended | Assumed | Not applicable | N/A | §8 | Approval-ready item 1 | None | Recommended, unapproved |
-| `KBDL-PRO-010` | Showcase purpose/emphasis | Showcase | Definition | Approved | Confirmed | Not verified | Prior-KBDL | §10 | None | None | Implementation-dependent |
-| `KBDL-PRO-011` | Precision purpose/emphasis | Precision | Definition | Approved | Confirmed | Not verified | Prior-KBDL | §11 | None | None | Implementation-dependent |
-| `KBDL-PRO-012` | Flow purpose/emphasis | Flow | Definition | Approved | Confirmed | Not verified | Prior-KBDL | §12 | None | None | Implementation-dependent |
+| `KBDL-PRO-010` | Showcase purpose/emphasis | Showcase | Definition | Approved | Confirmed | Not verified | Prior-KBDL | §10.1 | None | None | Implementation-dependent |
+| `KBDL-PRO-011` | Precision purpose/emphasis | Precision | Definition | Approved | Confirmed | Not verified | Prior-KBDL | §11.1 | None | None | Implementation-dependent |
+| `KBDL-PRO-012` | Flow purpose/emphasis | Flow | Definition | Approved | Confirmed | Not verified | Prior-KBDL | §12.1 | None | None | Implementation-dependent |
 | `KBDL-PRO-013` | Showcase component interpretation | Showcase | Components | Approved | Confirmed | Not verified | Prior-KBDL | §10.2 | None | None | Implementation-dependent |
 | `KBDL-PRO-014` | Precision component interpretation | Precision | Components | Approved | Confirmed | Not verified | Prior-KBDL | §11.2 | None | `KBDL-CMP-105`, `KBDL-RSP-011` (context only) | Implementation-dependent |
 | `KBDL-PRO-015` | Flow component interpretation | Flow | Components | Approved | Confirmed | Not verified | Prior-KBDL | §12.2 | None | `KBDL-CMP-015`, `036` (context only) | Implementation-dependent |

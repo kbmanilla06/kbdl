@@ -948,7 +948,7 @@ these rows summarize status for cross-module lookup.
 - **Blueprint section:** Profile architecture; terminology; locked/controlled/open classification; profile selection and declaration
 - **Roadmap prompt:** KBDL-009
 - **Requirement ID:** KBDL-PRO-001, 002, 003, 004, 005, 006, 007, 008, 009
-- **Specification location:** [profiles.md §4–§8](profiles.md#4-project-profile-terminology)
+- **Specification location (per-ID map):** `KBDL-PRO-001` → [profiles.md §5](profiles.md#5-profile-architecture); `002` → [§4](profiles.md#4-project-profile-terminology) (terminology distinction, not §5 — verified directly against the requirement's own record); `003` → [§7](profiles.md#7-locked-controlled-and-open-profile-decisions); `004` → [§7](profiles.md#7-locked-controlled-and-open-profile-decisions); `005` → [§7](profiles.md#7-locked-controlled-and-open-profile-decisions); `006` → [§7](profiles.md#7-locked-controlled-and-open-profile-decisions); `007` → [§8](profiles.md#8-profile-selection-and-declaration); `008` → [§8](profiles.md#8-profile-selection-and-declaration); `009` → [§8](profiles.md#8-profile-selection-and-declaration).
 - **Approval status:** `KBDL-PRO-001`–`008` Approved (restate the already-Approved `KBDL-PRN-007`, `KBDL-FND-008`, `KBDL-THM-006`, `KBDL-MOT-026`, `KBDL-A11Y-040`, `KBDL-CMP-051`, `KBDL-CMP-066`, and explicit mandatory clauses of the approved KBDL-009 prompt); `KBDL-PRO-009` (primary/secondary/hybrid policy) Recommended (new governance policy)
 - **Provenance:** Confirmed for `KBDL-PRO-001`–`008`; Assumed for `KBDL-PRO-009`.
 - **Validation status:** Not verified
@@ -958,7 +958,8 @@ these rows summarize status for cross-module lookup.
 - **Known limitation:** `KBDL-PRO-001`–`008`: implementation-dependent, not yet verified. `KBDL-PRO-009`: Recommended, grants no implementation authority pending project-owner review.
 - **Related decision:** Not applicable — pending a future decision-register entry once the project owner reviews the KBDL-009 decision packet.
 - **Related prior requirements:** `KBDL-PRN-007`, `KBDL-FND-008`, `KBDL-THM-006`, `KBDL-MOT-026`, `KBDL-A11Y-040`, `KBDL-CMP-051`, `KBDL-CMP-066`.
-- **Pending dependencies:** None for `KBDL-PRO-001`–`008`.
+- **Pending dependencies (per-ID):** `KBDL-PRO-001`–`008`: none. `KBDL-PRO-009`: no blocking dependency (independently approval-ready).
+- **Packet destination (per-ID):** `KBDL-PRO-001`–`008`: None — Approved requirement; not awaiting packet approval. `KBDL-PRO-009`: Approval-ready item 1.
 - **Future customization dependency:** None.
 - **Future validation dependency:** Implementation-level profile validation (`VAL`, locked).
 - **Notes:** `KBDL-PRO-009` maps to [KBDL-009 decision packet](profiles.md#33-kbdl-009-decision-packet) item 1.
@@ -968,7 +969,7 @@ these rows summarize status for cross-module lookup.
 - **Blueprint section:** Showcase Profile; Precision Profile; Flow Profile; component interpretation per profile
 - **Roadmap prompt:** KBDL-009
 - **Requirement ID:** KBDL-PRO-010, 011, 012, 013, 014, 015, 016, 017, 018
-- **Specification location:** [profiles.md §10–§12](profiles.md#10-showcase-profile)
+- **Specification location (per-ID map):** `KBDL-PRO-010` → [profiles.md §10.1](profiles.md#101-purpose); `011` → [§11.1](profiles.md#111-purpose); `012` → [§12.1](profiles.md#121-purpose); `013` → [§10.2](profiles.md#102-component-interpretation); `014` → [§11.2](profiles.md#112-component-interpretation); `015` → [§12.2](profiles.md#122-component-interpretation); `016` → [§10.2](profiles.md#102-component-interpretation); `017` → [§11.2](profiles.md#112-component-interpretation); `018` → [§12.2](profiles.md#122-component-interpretation).
 - **Approval status:** `KBDL-PRO-010`–`015` Approved (consolidate the already-Approved per-profile interpretation in principles.md, foundations/README.md, themes/README.md, motion/patterns.md, responsive.md, and the already-Approved `KBDL-CMP-051`/`066`/`010`/`055`/`070`/`072`/`090`/`107` component boundaries); `KBDL-PRO-016` (Showcase composition defaults), `017` (Precision density defaults), `018` (Flow action defaults) Recommended (new discretionary profile-specific defaults)
 - **Provenance:** Confirmed for `KBDL-PRO-010`–`015`; Assumed for `KBDL-PRO-016`, `017`, `018`.
 - **Validation status:** Not verified
@@ -978,7 +979,8 @@ these rows summarize status for cross-module lookup.
 - **Known limitation:** `KBDL-PRO-016` additionally depends on the unapproved KBDL-008 `KBDL-CMP-067`; `KBDL-PRO-018` additionally depends on the unapproved KBDL-007 `KBDL-CMP-015`/`036`.
 - **Related decision:** Not applicable — pending a future decision-register entry once the project owner reviews the KBDL-009 decision packet.
 - **Related prior requirements:** `KBDL-CMP-010`, `015`, `036`, `051`, `055`, `066`, `067`, `070`, `072`, `090`, `107`.
-- **Pending dependencies:** `KBDL-CMP-067` (KBDL-008, contingent for `KBDL-PRO-016`); `KBDL-CMP-015`, `036` (KBDL-007, contingent for `KBDL-PRO-018`).
+- **Pending dependencies (per-ID):** `KBDL-PRO-010`–`015`: none. `KBDL-PRO-016`: blocked by `KBDL-CMP-067` (KBDL-008). `KBDL-PRO-017`: no blocking dependency; `KBDL-RSP-002` and `003` are cited as unapproved context only, not required for this item's own approval. `KBDL-PRO-018`: blocked by `KBDL-CMP-015` and `036` (KBDL-007).
+- **Packet destination (per-ID):** `KBDL-PRO-010`–`015`: None — Approved requirement; not awaiting packet approval. `KBDL-PRO-016`: Contingent — [§33.3](profiles.md#333-unresolved-or-not-approval-ready); not independently approval-ready. `KBDL-PRO-017`: Approval-ready item 2. `KBDL-PRO-018`: Contingent — [§33.3](profiles.md#333-unresolved-or-not-approval-ready); not independently approval-ready.
 - **Future customization dependency:** None.
 - **Future validation dependency:** Implementation-level profile validation (`VAL`, locked).
 - **Notes:** `KBDL-PRO-017` maps to [KBDL-009 decision packet](profiles.md#33-kbdl-009-decision-packet) item 2 (independently approval-ready). `KBDL-PRO-016` and `018` map to the contingent items in [profiles.md §33.3](profiles.md#333-unresolved-or-not-approval-ready), not to any approval-ready item.
@@ -998,7 +1000,8 @@ these rows summarize status for cross-module lookup.
 - **Known limitation:** `KBDL-PRO-019`–`026`: implementation-dependent, not yet verified. `KBDL-PRO-027`, `029`: Recommended, grants no implementation authority pending project-owner review. `KBDL-PRO-028`: Recommended, grants no implementation authority pending project-owner review.
 - **Related decision:** Not applicable — pending a future decision-register entry once the project owner reviews the KBDL-009 decision packet.
 - **Related prior requirements:** `KBDL-PRN-003`, `KBDL-PRN-006`, `KBDL-GOV-002`, `KBDL-GOV-003`, `KBDL-CMP-051`, `063`, `064`, `066`, `098`, `101`, `103`, `104`.
-- **Pending dependencies:** None for any ID in this group.
+- **Pending dependencies (per-ID):** `KBDL-PRO-027`: no pending dependency (independently approval-ready). `KBDL-PRO-028`: no pending dependency (independently approval-ready). `KBDL-PRO-029`: no pending dependency (independently approval-ready). `KBDL-PRO-019`–`026`: none.
+- **Packet destination (per-ID):** `KBDL-PRO-019`–`026`: None — Approved requirement; not awaiting packet approval. `KBDL-PRO-027`: Approval-ready item 3. `KBDL-PRO-028`: Approval-ready item 4. `KBDL-PRO-029`: Approval-ready item 5.
 - **Future customization dependency:** Manual customization of a profile (`CUS`, locked).
 - **Future validation dependency:** Implementation-level profile validation (`VAL`, locked).
 - **Notes:** `KBDL-PRO-027`, `028`, `029` map to [KBDL-009 decision packet](profiles.md#33-kbdl-009-decision-packet) approval-ready items 3, 4, and 5 respectively (not contingent; see [profiles.md §38](profiles.md#38-decision-packet-coverage-audit) for the full, corrected coverage audit).
