@@ -865,7 +865,7 @@ The rows below trace KBDL-004's adaptive-theme scope, defined in
 - **Validation evidence:** Not verified — no implementation exists yet.
 - **Known limitation:** `KBDL-CMP-041` additionally depends on the unapproved `KBDL-RSP-002`/`008` and cannot be approved independently of them.
 - **Related decision:** Not applicable — pending a future decision-register entry once the project owner reviews the KBDL-007 decision packet.
-- **Notes:** `KBDL-CMP-041`, `044`, `046`, `048` map to [KBDL-007 decision packet](components-core.md#35-kbdl-007-decision-packet) items 7, 8, 2, and 9 respectively.
+- **Notes:** `KBDL-CMP-044`, `046`, `048` map to approval-ready [KBDL-007 decision packet](components-core.md#35-kbdl-007-decision-packet) items 7, 2, and 8 respectively. `KBDL-CMP-041` maps to a contingent, not-approval-ready item in [§35.3](components-core.md#353-unresolved-or-not-approval-ready) — it remains `Recommended`, but cannot be approved through the KBDL-007 packet until its `KBDL-RSP-002`/`008` dependencies are approved or replaced.
 
 ## Notes on Scope
 

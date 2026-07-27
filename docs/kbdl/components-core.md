@@ -1606,7 +1606,7 @@ exactly one item in the
   - Related requirement: `KBDL-CMP-014`.
   - Applicable profiles: Showcase, Precision, Flow.
   - Specification location: [§20.5](#205-button-group),
-    [§35](#35-kbdl-007-decision-packet) item 10.
+    [§35](#35-kbdl-007-decision-packet) item 9.
   - Validation method: Project-owner review (not yet performed).
 
 - **KBDL-CMP-021** — Disclosure and menu triggers **must** expose
@@ -1974,12 +1974,23 @@ consistency.
 | 4 | Search-field model (filtering vs. navigation) | Adopt both models as valid, selected per use case, with the field contract in §22.3 (`KBDL-CMP-025`) | Reflects real product needs without forcing one universal search behavior | A single mandated model (rejected — too restrictive for different search contexts) | Requires clear per-instance documentation of which model applies | Result/loading-status boundary with KBDL-008 remains unaffected | None | None | None | None | Applies identically across profiles | None | `KBDL-CMP-025` | Item 4 only |
 | 5 | Combobox-justification threshold | Adopt a threshold: a custom combobox is justified only when native select cannot support filtering/searching within a large option set (`KBDL-CMP-029`) | Keeps native select as the default, reserving the added ARIA complexity for genuine need | No threshold, leaving it to implementer judgment (rejected — invites unnecessary custom widgets) | Requires implementers to document why native select was insufficient | Reinforces native-semantics-first; the ARIA contract itself (`KBDL-CMP-028`) is unaffected | None | None | None | None | Applies identically across profiles | `KBDL-CMP-028` | `KBDL-CMP-029` | Item 5 only |
 | 6 | Form action row reflow order | Adopt primary action first (top or leading) at every breakpoint, with secondary/cancel following, reversing to a stacked column at `compact` (`KBDL-CMP-036`) | Keeps the primary action most reachable and visually first regardless of viewport | Reversing order at `compact` (rejected — de-emphasizes the primary action exactly where thumb reach matters most) | None significant | None beyond what §23 already requires | Depends on eventual approved breakpoint values for exact stacking point | None | None | None | Applies identically across profiles | `KBDL-RSP-002` (eventual) | `KBDL-CMP-036` | Item 6 only |
-| 7 | Navigation collapse-trigger threshold | Reuse `KBDL-RSP-008`'s proposed navigation-collapse guidance for the primary-navigation trigger (`KBDL-CMP-041`) | Avoids inventing a second, competing responsive threshold model | A component-specific threshold independent of `KBDL-RSP-008` (rejected — fragments responsive governance) | Remains unapproved until `KBDL-RSP-008` itself is approved | None beyond what `KBDL-RSP-008` already documents | Directly depends on `KBDL-RSP-002`/`008` | None | None | None | Applies identically across profiles | `KBDL-RSP-002`, `KBDL-RSP-008` | `KBDL-CMP-041` | Item 7 only |
-| 8 | Breadcrumb truncation model | Adopt collapsing middle levels behind a single overflow control (e.g., an ellipsis trigger) that reveals all hidden levels, never removing them (`KBDL-CMP-044`) | Preserves full hierarchy access while managing space at `compact` | Silently dropping middle levels (rejected — loses navigable history); horizontal scroll (rejected — awkward for a short list) | Overflow trigger itself must follow the Disclosure Trigger contract | Overflow trigger inherits the already-Approved disclosure accessibility contract | Depends on approved breakpoint values for exact trigger point | None | None | None | Applies identically across profiles | `KBDL-CMP-021` | `KBDL-CMP-044` | Item 8 only |
-| 9 | Pagination truncation model | Adopt an ellipsis-based truncation showing first, last, current, and immediate neighbors, with the ellipsis itself non-interactive text (`KBDL-CMP-048`) | Common, well-understood pattern that preserves orientation without excessive control count | Showing every page number always (rejected — unusable for very large sets); a "load more" model only (rejected — loses direct page access) | None significant | Ellipsis must not be the only way to reach hidden pages — a documented current-page/total-count text should remain available | None | None | None | None | Applies identically across profiles | `KBDL-CMP-047` | `KBDL-CMP-048` | Item 9 only |
-| 10 | Button-group composition guidance | Adopt the labeling, tab-order, primary-action-clarity, and destructive-action-separation guidance in [§20.5](#205-button-group) (`KBDL-CMP-020`) | Gives related-action groups a consistent, predictable composition pattern | No composition guidance, left entirely to per-project judgment (rejected — risks inconsistent action-group density and unclear primary-action prominence across projects) | None significant | Primary-action clarity and destructive-action separation directly support comprehension and error prevention | None | None | None | None | Applies identically across profiles | `KBDL-CMP-014` | `KBDL-CMP-020` | Item 10 only |
+| 7 | Breadcrumb truncation model | Adopt collapsing middle levels behind a single overflow control (e.g., an ellipsis trigger) that reveals all hidden levels, never removing them (`KBDL-CMP-044`) | Preserves full hierarchy access while managing space at `compact` | Silently dropping middle levels (rejected — loses navigable history); horizontal scroll (rejected — awkward for a short list) | Overflow trigger itself must follow the Disclosure Trigger contract | Overflow trigger inherits the already-Approved disclosure accessibility contract | Depends on approved breakpoint values for exact trigger point | None | None | None | Applies identically across profiles | `KBDL-CMP-021` | `KBDL-CMP-044` | Item 7 only |
+| 8 | Pagination truncation model | Adopt an ellipsis-based truncation showing first, last, current, and immediate neighbors, with the ellipsis itself non-interactive text (`KBDL-CMP-048`) | Common, well-understood pattern that preserves orientation without excessive control count | Showing every page number always (rejected — unusable for very large sets); a "load more" model only (rejected — loses direct page access) | None significant | Ellipsis must not be the only way to reach hidden pages — a documented current-page/total-count text should remain available | None | None | None | None | Applies identically across profiles | `KBDL-CMP-047` | `KBDL-CMP-048` | Item 8 only |
+| 9 | Button-group composition guidance | Adopt the labeling, tab-order, primary-action-clarity, and destructive-action-separation guidance in [§20.5](#205-button-group) (`KBDL-CMP-020`) | Gives related-action groups a consistent, predictable composition pattern | No composition guidance, left entirely to per-project judgment (rejected — risks inconsistent action-group density and unclear primary-action prominence across projects) | None significant | Primary-action clarity and destructive-action separation directly support comprehension and error prevention | None | None | None | None | Applies identically across profiles | `KBDL-CMP-014` | `KBDL-CMP-020` | Item 9 only |
 
 ### 35.3 Unresolved or Not Approval-Ready
+
+- **Navigation collapse-trigger threshold (contingent, not
+  independently approval-ready)** — maps to `KBDL-CMP-041`, which
+  remains `Recommended`. It reuses `KBDL-RSP-008`'s proposed
+  navigation-collapse guidance for the primary-navigation trigger and
+  therefore **depends directly on unapproved `KBDL-RSP-002` and
+  `KBDL-RSP-008`**. It **cannot be approved independently through the
+  KBDL-007 packet** and may become approval-ready only after the
+  relevant KBDL-006 responsive decisions (`KBDL-RSP-002`, `KBDL-RSP-008`)
+  are themselves approved or replaced. It grants no implementation
+  authority and does not approve any exact collapse width or breakpoint.
+  Related: `KBDL-RSP-002`, `KBDL-RSP-008`.
 
 - **Preferred enhanced target size for primary actions (contingent, not
   independently approval-ready)** — adopting the KBDL-006 `KBDL-A11Y-021`
@@ -2021,14 +2032,14 @@ consistency.
 
 | KBDL-006 requirement | Where referenced in this document | How handled |
 | --- | --- | --- |
-| `KBDL-RSP-002` (exact breakpoint thresholds) | [§15](#15-responsive-behavior), [§24.3](#243-primary-or-global-navigation), decision packet item 6/7 | Cited only as unapproved; not required; collapse trigger left as `Recommended` (`KBDL-CMP-041`) |
+| `KBDL-RSP-002` (exact breakpoint thresholds) | [§15](#15-responsive-behavior), [§24.3](#243-primary-or-global-navigation), decision packet item 6, [§35.3](#353-unresolved-or-not-approval-ready) contingent item | Cited only as unapproved; not required; collapse trigger left as `Recommended` (`KBDL-CMP-041`), moved to the contingent, not-approval-ready section |
 | `KBDL-RSP-003` (grid columns) | Not referenced | Not used |
 | `KBDL-RSP-004` (container widths) | Not referenced | Not used |
 | `KBDL-RSP-005` (gutters) | Not referenced | Not used |
-| `KBDL-RSP-008` (navigation collapse thresholds) | [§24.3](#243-primary-or-global-navigation), decision packet item 7 | Cited only as unapproved; component's exact collapse point left `Recommended` |
+| `KBDL-RSP-008` (navigation collapse thresholds) | [§24.3](#243-primary-or-global-navigation), [§35.3](#353-unresolved-or-not-approval-ready) contingent item | Cited only as unapproved; component's exact collapse point left `Recommended` (`KBDL-CMP-041`), not part of the nine approval-ready packet items |
 | `KBDL-RSP-011` (data-dense strategy) | Not referenced (no data-table component in KBDL-007 scope) | Not used |
 | `KBDL-A11Y-011` (forced-colors policy) | Not referenced | Not used |
-| `KBDL-A11Y-021` (44×44 preferred target) | [§16](#16-target-size-handling), [§35.3](#353-unresolved-or-not-approval-ready) contingent item | Cited explicitly as unapproved; not required; only proposed as a contingent, not-independently-approvable future enhancement — not part of the ten approval-ready packet items |
+| `KBDL-A11Y-021` (44×44 preferred target) | [§16](#16-target-size-handling), [§35.3](#353-unresolved-or-not-approval-ready) contingent item | Cited explicitly as unapproved; not required; only proposed as a contingent, not-independently-approvable future enhancement — not part of the nine approval-ready packet items |
 | `KBDL-A11Y-035` (preferred testing matrix) | [§35.3](#353-unresolved-or-not-approval-ready) | Cited only as a dependency for future validation, not used normatively |
 
 None of the nine is treated as implementation authority anywhere in
@@ -2036,9 +2047,22 @@ this document.
 
 ### 35.5 Decision-Packet Coverage Audit
 
+```text
+CMP requirements: 51
+Approved: 41
+Recommended: 10
+
+Independently approval-ready Recommended requirements: 9
+Contingent Recommended requirements: 1
+```
+
 Every `Recommended` `KBDL-CMP-###` requirement maps to exactly one
-approval-ready packet item, and every packet item maps to exactly one
-`Recommended` requirement:
+packet item — either an independently approval-ready item in
+[§35.2](#352-recommended-decisions--ready-for-approval) or the single
+contingent item in
+[§35.3](#353-unresolved-or-not-approval-ready) — and every
+approval-ready packet item maps to exactly one `Recommended`
+requirement:
 
 | Recommended requirement | Packet item | Independently approval-ready | Dependency |
 | --- | --- | --- | --- |
@@ -2048,25 +2072,33 @@ approval-ready packet item, and every packet item maps to exactly one
 | `KBDL-CMP-025` | 4 | Yes | None |
 | `KBDL-CMP-029` | 5 | Yes | None |
 | `KBDL-CMP-036` | 6 | Yes | None (eventual `KBDL-RSP-002` value affects exact stacking point only, not the ordering rule itself) |
-| `KBDL-CMP-041` | 7 | Yes (the guidance itself); exact threshold depends on `KBDL-RSP-002`/`008` | `KBDL-RSP-002`, `KBDL-RSP-008` |
-| `KBDL-CMP-044` | 8 | Yes | None |
-| `KBDL-CMP-048` | 9 | Yes | None |
-| `KBDL-CMP-020` | 10 | Yes | None |
+| `KBDL-CMP-044` | 7 | Yes | None |
+| `KBDL-CMP-048` | 8 | Yes | None |
+| `KBDL-CMP-020` | 9 | Yes | None |
+| `KBDL-CMP-041` | Contingent item ([§35.3](#353-unresolved-or-not-approval-ready)) | No — depends on unapproved `KBDL-RSP-002` and `KBDL-RSP-008` for its own approval | `KBDL-RSP-002`, `KBDL-RSP-008` |
 
-Ten `Recommended` requirements, ten approval-ready packet items, one-to-one.
-The contingent enhanced-target item ([§35.3](#353-unresolved-or-not-approval-ready))
-is **not** counted here because it does not map to an eleventh
-`Recommended` `KBDL-CMP-###` requirement — `KBDL-CMP-010` (the WCAG
+Nine `Recommended` requirements map one-to-one to the nine
+approval-ready packet items; one `Recommended` requirement
+(`KBDL-CMP-041`) maps once to the non-approval-ready contingent item.
+No `Recommended` requirement is orphaned, no approval-ready packet item
+is orphaned, no `Approved` `KBDL-CMP-###` requirement is presented as
+awaiting approval, and no KBDL-006 recommendation is presented as
+approved. The separate contingent enhanced-target item
+([§35.3](#353-unresolved-or-not-approval-ready)) is **not** counted as
+an eleventh `Recommended` requirement — `KBDL-CMP-010` (the WCAG
 minimum it references) is `Approved`, not `Recommended`, and is
 unaffected regardless of whether that contingent item is ever approved.
 
 **Exact scope of a future approval:** an `APPROVE` response to
 [§35.2](#352-recommended-decisions--ready-for-approval) would authorize
-exactly items 1–10 above. It would **not** approve the contingent
-enhanced-target item or any other
+exactly items 1–9 above. It would **not** approve `KBDL-CMP-041`, the
+contingent navigation-collapse item, the contingent enhanced-target
+item, any other
 [§35.3](#353-unresolved-or-not-approval-ready) item, any of the nine
-KBDL-006 recommendations, or any KBDL-008-or-later content. It would not
-itself constitute validation of any item — see
+KBDL-006 recommendations, any KBDL-008-or-later content, any
+implementation validation, or any recommendation not explicitly listed
+in [§35.2](#352-recommended-decisions--ready-for-approval). It would
+not itself constitute validation of any item — see
 [§32](#32-accessibility-validation-matrix)–[§34](#34-theme-and-motion-validation-matrix).
 
 ## 36. Deferred and Unresolved Items
@@ -2096,6 +2128,11 @@ itself constitute validation of any item — see
   ([§35.3](#353-unresolved-or-not-approval-ready)) — contingent on the
   unapproved `KBDL-A11Y-021`; not independently approval-ready and not a
   separate `Recommended` `KBDL-CMP-###` requirement.
+- The navigation collapse-trigger threshold (`KBDL-CMP-041`,
+  [§35.3](#353-unresolved-or-not-approval-ready)) — remains
+  `Recommended`, but is contingent on the unapproved `KBDL-RSP-002` and
+  `KBDL-RSP-008`; not independently approval-ready through the KBDL-007
+  packet.
 
 ## 37. Security and Privacy in Components
 
