@@ -4,11 +4,11 @@ Lifecycle status: mixed. `Approved` for the requirements below that
 directly restate an already-`Approved` WCAG 2.2 Level A/AA criterion,
 WAI-ARIA 1.2 role/state/property definition, or a prior approved KBDL
 principle, foundation, theme, motion, responsive, accessibility, or
-KBDL-007 component-level rule — see [§31](#27-normative-requirements)
+KBDL-007 component-level rule — see [§27](#27-normative-requirements)
 for exact per-requirement status. `Recommended` for genuinely new
 component-level taxonomies, timing, placement, sizing, persistence,
 modality, queueing, stacking, or transformation policy — pending
-project-owner approval via [§37](#33-kbdl-008-decision-packet). No
+project-owner approval via [§33](#33-kbdl-008-decision-packet). No
 `Recommended` value in this document authorizes implementation on its
 own — see [conventions.md §1.1](conventions.md#11-lifecycle--approval-status).
 Assigning a `KBDL-CMP-###` ID does not grant approval or implementation
@@ -53,7 +53,7 @@ WAI-ARIA 1.2 role/state/property definition, or a prior approved KBDL
 rule may be `Approved`. A genuinely new taxonomy, timing, placement,
 sizing, persistence, modality, queueing, stacking, or transformation
 policy remains `Recommended` until the project owner reviews
-[§37](#33-kbdl-008-decision-packet). An APG interaction-pattern
+[§33](#33-kbdl-008-decision-packet). An APG interaction-pattern
 recommendation is not automatically `Approved` merely by being
 described in the APG — see [§4](#4-standards-interpretation-for-this-module).
 
@@ -70,8 +70,8 @@ contract, trigger semantics, and accessible-naming requirements. It
 reopens none of these — every foundation, theme, motion, responsive,
 accessibility, and KBDL-007 value already `Approved` remains `Approved`
 here without change, and every value still `Recommended` in an earlier
-module remains `Recommended` here (see [§32](#35-kbdl-006-approval-boundary-audit)
-and [§33](#36-kbdl-007-approval-boundary-audit)).
+module remains `Recommended` here (see [§35](#35-kbdl-006-approval-boundary-audit)
+and [§36](#36-kbdl-007-approval-boundary-audit)).
 
 ## 4. Standards Interpretation for This Module
 
@@ -292,7 +292,7 @@ description. Uses `region` semantics only when it is a significant,
 independently navigable section (per `KBDL-CMP-054`); otherwise remains
 neutral. Internal actions follow the KBDL-007 button/link contract
 unchanged. Composes with loading/empty/error states
-([§12](#15-system-state-architecture)). Differs from Container Surface
+([§15](#15-system-state-architecture)). Differs from Container Surface
 by optionally carrying section-level identity; differs from Dialog by
 never requiring modality or focus containment; differs from Card by
 never functioning as a summary/preview unit.
@@ -311,7 +311,7 @@ optional media relationship, and optional actions or a whole-card link.
     independent-discoverability requirement,
     [responsive.md §24](responsive.md#24-hover-independent-discoverability)).
     Provenance: Confirmed. Validation status: Not verified.
-  - Related requirement: `KBDL-RSP-024` equivalent (hover-independent
+  - Related requirement: `KBDL-RSP-019` (hover-independent
     discoverability), `KBDL-CMP-002`.
   - Applicable profiles: Showcase, Precision, Flow.
   - Specification location: [§9.3](#93-card).
@@ -331,7 +331,7 @@ policy:
   - Related requirement: `KBDL-CMP-055`.
   - Applicable profiles: Showcase, Precision, Flow.
   - Specification location: [§9.3](#93-card),
-    [§37](#33-kbdl-008-decision-packet) item 1.
+    [§33](#33-kbdl-008-decision-packet) item 1.
   - Validation method: Project-owner review (not yet performed).
 
 ### 9.4 Accordion Surface
@@ -367,7 +367,7 @@ restricts to one is new policy:
   - Related requirement: `KBDL-CMP-068`.
   - Applicable profiles: Showcase, Precision, Flow.
   - Specification location: [§9.4](#94-accordion-surface),
-    [§37](#33-kbdl-008-decision-packet) item 2.
+    [§33](#33-kbdl-008-decision-packet) item 2.
   - Validation method: Project-owner review (not yet performed).
 
 ### 9.5 Static Data Table
@@ -390,10 +390,10 @@ restricts to one is new policy:
 
 Responsive behavior for wide tables (horizontal scroll, reflow, or an
 alternate presentation such as a card transformation) is addressed in
-[§37](#33-kbdl-008-decision-packet) item 17. This document does not
+[§33](#33-kbdl-008-decision-packet) item 17. This document does not
 silently adopt the unapproved `KBDL-RSP-011` data-dense transformation
 strategy as authority; `RSP-011` is cited only as related, unapproved
-context (see [§32](#35-kbdl-006-approval-boundary-audit)).
+context (see [§35](#35-kbdl-006-approval-boundary-audit)).
 
 ## 10. Overlay Architecture
 
@@ -495,12 +495,20 @@ or stacking policy remains `Recommended` or `Unresolved`
   content inert (unreachable by sequential navigation, screen-reader
   virtual cursor, or pointer) for as long as it is open, not merely
   visually dimmed.
-  - Lifecycle status: Approved (dictated outcome of the already-adopted
-    WCAG 2.2 SC 2.4.3 Focus Order and SC 2.4.11 Focus Not Obscured
-    applied to layered content — a non-inert background would let
-    focus or the reading order reach content the user cannot currently
-    perceive as available). Provenance: Confirmed. Validation status:
-    Not verified.
+  - Lifecycle status: Approved. Authority: the adopted WAI-ARIA 1.2
+    `aria-modal` property definition, which specifies that assistive
+    technology should restrict its reading and navigation to the modal
+    element while it is active, directly requires background content
+    to be excluded from that navigation — this is the primary source
+    for "unreachable by ... screen-reader virtual cursor." The
+    already-adopted WCAG 2.2 SC 2.4.3 Focus Order and SC 2.4.11 Focus
+    Not Obscured support, but do not by themselves fully dictate, this
+    outcome for pointer/sequential-navigation reachability. The
+    approved KBDL-008 prompt's Overlay Architecture section explicitly
+    requires "Background inertness" as a mandatory field for every
+    modal overlay, which is the source for treating this as a complete,
+    single normative rule rather than an inference from the standards
+    alone. Provenance: Confirmed. Validation status: Not verified.
   - Related requirement: `KBDL-CMP-006`, `KBDL-CMP-007` (KBDL-007
     focus/keyboard contracts).
   - Applicable profiles: Showcase, Precision, Flow.
@@ -525,12 +533,25 @@ KBDL's own timing, trigger, persistence, and placement policy
   Escape without moving focus, **must** remain visible while the
   trigger has either hover or focus, and **must never** be the sole
   source of its trigger's accessible name.
-  - Lifecycle status: Approved (the "non-interactive content,"
-    "accessible-name independence," and "focus remains on trigger"
-    outcomes restate the already-Approved KBDL-007 accessible-naming
-    requirement, `KBDL-CMP-003`, and the adopted WCAG 2.2 SC 1.4.13
-    Content on Hover or Focus). Provenance: Confirmed. Validation
-    status: Not verified.
+  - Lifecycle status: Approved. Authority, split by clause: "dismissible
+    via Escape" and "remains visible while the trigger has hover or
+    focus" restate the already-adopted WCAG 2.2 SC 1.4.13 Content on
+    Hover or Focus, which dictates exactly these three properties
+    (dismissible, hoverable, persistent). "Must never be the sole
+    source of its trigger's accessible name" restates the already-
+    Approved KBDL-007 accessible-naming requirement, `KBDL-CMP-003`,
+    and the adopted WCAG 2.2 SC 4.1.2 Name, Role, Value — not SC
+    1.4.13, which does not address naming. "Contains only non-
+    interactive text" and "leaves focus on its trigger" are not
+    dictated by SC 1.4.13 or the WAI-ARIA `tooltip` role definition
+    alone (the ARIA 1.2 spec describes tooltip as advisory but does not
+    itself prohibit interactive descendants); these two clauses are
+    normative because the approved KBDL-008 prompt explicitly requires
+    "Informational, non-interactive purpose" and "Interactive-content
+    prohibition" as mandatory Tooltip fields. This requirement does not
+    treat the APG tooltip pattern (explicitly non-consensus, see
+    [§4](#4-standards-interpretation-for-this-module)) as a source for
+    any clause. Provenance: Confirmed. Validation status: Not verified.
   - Related requirement: `KBDL-CMP-003`, `KBDL-CMP-016`, `KBDL-CMP-017`
     (KBDL-007 icon-only naming).
   - Applicable profiles: Showcase, Precision, Flow.
@@ -551,7 +572,7 @@ A tooltip containing controls must instead use Popover
   - Related requirement: `KBDL-CMP-072`.
   - Applicable profiles: Showcase, Precision, Flow.
   - Specification location: [§11.1](#111-tooltip),
-    [§37](#33-kbdl-008-decision-packet) item 3.
+    [§33](#33-kbdl-008-decision-packet) item 3.
   - Validation method: Project-owner review (not yet performed).
 
 ### 11.2 Popover or Non-Modal Dialog
@@ -574,7 +595,7 @@ focus containment).
   - Related requirement: `KBDL-CMP-072`, `KBDL-CMP-078`.
   - Applicable profiles: Showcase, Precision, Flow.
   - Specification location: [§11.2](#112-popover-or-non-modal-dialog),
-    [§37](#33-kbdl-008-decision-packet) item 4.
+    [§33](#33-kbdl-008-decision-packet) item 4.
   - Validation method: Project-owner review (not yet performed).
 
 ### 11.3 Menu Surface
@@ -610,7 +631,7 @@ ahead, submenu behavior, closing specifics) is new policy:
   - Related requirement: `KBDL-CMP-075`.
   - Applicable profiles: Showcase, Precision, Flow.
   - Specification location: [§11.3](#113-menu-surface),
-    [§37](#33-kbdl-008-decision-packet) item 5.
+    [§33](#33-kbdl-008-decision-packet) item 5.
   - Validation method: Project-owner review (not yet performed).
 
 ### 11.4 Listbox Popup
@@ -684,7 +705,7 @@ decisions:
   - Related requirement: `KBDL-CMP-079`, `KBDL-CMP-084`.
   - Applicable profiles: Showcase, Precision, Flow.
   - Specification location: [§11.6](#116-modal-dialog),
-    [§37](#33-kbdl-008-decision-packet) item 6.
+    [§33](#33-kbdl-008-decision-packet) item 6.
   - Validation method: Project-owner review (not yet performed).
 
 ### 11.7 Alert Dialog
@@ -737,7 +758,7 @@ of any exact navigation-collapse threshold:
   - Related requirement: `KBDL-CMP-082`.
   - Applicable profiles: Showcase, Precision, Flow.
   - Specification location: [§11.8](#118-drawer-and-sheet),
-    [§37](#33-kbdl-008-decision-packet) item 7.
+    [§33](#33-kbdl-008-decision-packet) item 7.
   - Validation method: Project-owner review (not yet performed). This
     item's approval would not approve any navigation-collapse
     threshold; a drawer used for collapsed navigation remains bound by
@@ -772,7 +793,7 @@ default implied by `KBDL-CMP-080`, is new policy:
   - Related requirement: `KBDL-CMP-080`, `KBDL-CMP-084`.
   - Applicable profiles: Showcase, Precision, Flow.
   - Specification location: [§12](#12-overlay-layering-and-nesting),
-    [§37](#33-kbdl-008-decision-packet) item 8.
+    [§33](#33-kbdl-008-decision-packet) item 8.
   - Validation method: Project-owner review (not yet performed).
 
 This document does not approve exact layer numbers, an exact z-index
@@ -839,10 +860,18 @@ relationship, documented per component below.
   time-sensitive messages using the `alert` role, **must not** move
   focus by default, and **must not** be used for routine or successful
   updates.
-  - Lifecycle status: Approved (restates the adopted WAI-ARIA 1.2
-    `alert` role definition, which specifies assertive, non-focus-
-    stealing announcement). Provenance: Confirmed. Validation status:
-    Not verified.
+  - Lifecycle status: Approved. Authority, split by clause: "important,
+    time-sensitive messages" and "must not move focus by default"
+    restate the adopted WAI-ARIA 1.2 `alert` role definition, which
+    specifies an assertive live region for important, time-sensitive
+    information without describing any inherent focus-moving behavior.
+    "Must not be used for routine or successful updates" is not itself
+    dictated by the ARIA `alert` role definition (which describes what
+    the role announces, not which messages a component must avoid);
+    this restriction is normative because the approved KBDL-008 prompt
+    explicitly requires "Do not use alert for every successful or
+    routine update" as a mandatory Alert constraint. Provenance:
+    Confirmed. Validation status: Not verified.
   - Related requirement: `KBDL-CMP-086`.
   - Applicable profiles: Showcase, Precision, Flow.
   - Specification location: [§14.2](#142-alert).
@@ -862,7 +891,7 @@ policy:
   - Related requirement: `KBDL-CMP-088`.
   - Applicable profiles: Showcase, Precision, Flow.
   - Specification location: [§14.3](#143-banner),
-    [§37](#33-kbdl-008-decision-packet) item 9.
+    [§33](#33-kbdl-008-decision-packet) item 9.
   - Validation method: Project-owner review (not yet performed).
 
 ### 14.4 Toast or Snackbar
@@ -871,10 +900,21 @@ policy:
   only in a transient toast without an accessible, persistent path also
   being available; a toast **must not** move focus to itself by
   default; sensitive information **must not** be exposed in a toast.
-  - Lifecycle status: Approved (restates the already-adopted WCAG 2.2
-    SC 2.2.1 Timing Adjustable and `KBDL-A11Y-031`, and extends the
-    existing KBDL security-safe-disclosure principle,
-    `components-core.md §37`). Provenance: Confirmed. Validation
+  - Lifecycle status: Approved. Authority, split by clause: "sensitive
+    information must not be exposed" extends the existing KBDL
+    security-safe-disclosure principle,
+    `components-core.md §37`. "Critical information must not be
+    presented only in a transient toast without a persistent path" and
+    "must not move focus to itself by default" are not directly
+    dictated by WCAG 2.2 SC 2.2.1 Timing Adjustable (which governs
+    user-adjustable time limits on content generally, not the specific
+    toast/persistent-path pattern) or by `KBDL-A11Y-031` (which
+    requires programmatic determinability, not a persistence
+    guarantee); these two clauses are normative because the approved
+    KBDL-008 prompt explicitly lists both as mandatory Toast/Snackbar
+    "Do not" constraints. SC 2.2.1's adjustable-timing principle is
+    cited as supporting rationale, not as the direct source of the
+    persistent-path requirement. Provenance: Confirmed. Validation
     status: Not verified.
   - Related requirement: `KBDL-CMP-086`.
   - Applicable profiles: Showcase, Precision, Flow.
@@ -895,7 +935,7 @@ policy:
   - Related requirement: `KBDL-CMP-090`.
   - Applicable profiles: Showcase, Precision, Flow.
   - Specification location: [§14.4](#144-toast-or-snackbar),
-    [§37](#33-kbdl-008-decision-packet) item 10.
+    [§33](#33-kbdl-008-decision-packet) item 10.
   - Validation method: Project-owner review (not yet performed).
 
 ### 14.5 Status Region and Log
@@ -963,9 +1003,18 @@ policy:
   announcement **must** be available through a separate status
   mechanism (`KBDL-CMP-086`); a skeleton **must not** expose meaningless
   placeholder shapes as if they were content.
-  - Lifecycle status: Approved (restates `KBDL-A11Y-031` and the
-    adopted WAI-ARIA guidance on decorative content). Provenance:
-    Confirmed. Validation status: Not verified.
+  - Lifecycle status: Approved. Authority, split by clause: "hidden from
+    assistive technology as decorative" restates the adopted WAI-ARIA
+    1.2 `aria-hidden` semantics for purely decorative content. "An
+    equivalent loading announcement must be available through a
+    separate status mechanism" restates `KBDL-A11Y-031`. "Must not
+    expose meaningless placeholder shapes as if they were content" is
+    not itself dictated by either of those sources; it is normative
+    because the approved KBDL-008 prompt explicitly requires "Decorative
+    accessibility treatment" and "Equivalent loading announcement" as
+    mandatory Skeleton fields, which together imply placeholder shapes
+    must not be presented as meaningful content. Provenance: Confirmed.
+    Validation status: Not verified.
   - Related requirement: `KBDL-CMP-086`, `KBDL-CMP-098`.
   - Applicable profiles: Showcase, Precision, Flow.
   - Specification location: [§14.9](#149-skeleton).
@@ -1031,7 +1080,7 @@ and this state is explicitly distinguished from No-Results below:
     from No-Results).
   - Applicable profiles: Showcase, Precision, Flow.
   - Specification location: [§16.2](#162-empty-state),
-    [§37](#33-kbdl-008-decision-packet) item 11.
+    [§33](#33-kbdl-008-decision-packet) item 11.
   - Validation method: Project-owner review (not yet performed).
 
 ### 16.3 No-Results State
@@ -1040,9 +1089,16 @@ and this state is explicitly distinguished from No-Results below:
   entered query or filter criteria, and **must** be distinguished from
   Empty State by relating to a current query/filter rather than a
   genuine absence of content.
-  - Lifecycle status: Approved (restates the already-adopted WCAG 2.2
-    SC 3.3.7 Redundant Entry, applied to preserving search/filter
-    input). Provenance: Confirmed. Validation status: Not verified.
+  - Lifecycle status: Approved. Authority: this requirement is normative
+    because the approved KBDL-008 prompt explicitly requires
+    "Preservation of entered criteria" as a mandatory No-Results State
+    field. WCAG 2.2 SC 3.3.7 Redundant Entry (which prohibits requiring
+    re-entry of information already supplied earlier in the same
+    process) is cited as supporting rationale by analogy, not as a
+    direct restatement — SC 3.3.7 governs multi-step process re-entry
+    generally and does not by itself mandate preserving search/filter
+    state specifically on a no-results result. Provenance: Confirmed.
+    Validation status: Not verified.
   - Related requirement: `KBDL-CMP-099`. This requirement does not
     approve the unapproved KBDL-007 search-field model (`KBDL-CMP-025`
     — cited as unapproved context only).
@@ -1057,11 +1113,23 @@ and this state is explicitly distinguished from No-Results below:
   recoverable or blocking, and a recoverable error **must** provide a
   retry or alternative action; an error **must not** expose stack
   traces, internal exception details, credentials, or private data.
-  - Lifecycle status: Approved (restates the already-adopted WCAG 2.2
-    SC 3.3.1 Error Identification and the already-Approved Technical
-    Utility recovery-support principle, [principles.md §3](principles.md#3-technical-utility)).
-    Provenance: Confirmed. Validation status: Not verified.
-  - Related requirement: `KBDL-CMP-097`.
+  - Lifecycle status: Approved. Authority, split by clause: that an
+    error must be identified and described restates the already-adopted
+    WCAG 2.2 SC 3.3.1 Error Identification, which requires errors be
+    identified and described in text, but does not itself require
+    classifying an error as "recoverable or blocking" or specifying a
+    "retry or alternative action" — SC 3.3.1 governs identification,
+    not remediation-path taxonomy. The recoverable/blocking
+    classification and the retry/alternative-action requirement are
+    normative because the approved KBDL-008 prompt explicitly requires
+    "Recoverable versus blocking error," "Retry," and "Alternative
+    action" as mandatory Error State fields, consistent with the
+    already-Approved Technical Utility recovery-support principle,
+    [principles.md §3](principles.md#3-technical-utility). The
+    prohibition on exposing stack traces, internal exception details,
+    credentials, or private data restates `KBDL-CMP-064`. Provenance:
+    Confirmed. Validation status: Not verified.
+  - Related requirement: `KBDL-CMP-097`, `KBDL-CMP-064`.
   - Applicable profiles: Showcase, Precision, Flow.
   - Specification location: [§16.4](#164-error-state).
   - Validation method: Manual review once implemented.
@@ -1079,7 +1147,7 @@ unavailability, and degraded service) is new policy:
   - Applicable profiles: Showcase, Precision, Flow.
   - Specification location: [§16.4](#164-error-state),
     [§16.8](#168-maintenance-unavailable-and-degraded-state),
-    [§37](#33-kbdl-008-decision-packet) item 12.
+    [§33](#33-kbdl-008-decision-packet) item 12.
   - Validation method: Project-owner review (not yet performed).
 
 ### 16.5 Offline and Reconnecting State
@@ -1161,7 +1229,7 @@ editing model, are new policy:
     only as related unapproved context, not adopted as authority.
   - Applicable profiles: Showcase, Precision, Flow.
   - Specification location: [§18.1](#181-interactive-grid),
-    [§37](#33-kbdl-008-decision-packet) item 13.
+    [§33](#33-kbdl-008-decision-packet) item 13.
   - Validation method: Project-owner review (not yet performed).
 
 Exact virtualization, column-resizing, column-reordering, and pinning
@@ -1180,7 +1248,7 @@ behavior remain later implementation decisions, out of scope here.
     (distinction from Accordion).
   - Applicable profiles: Showcase, Precision, Flow.
   - Specification location: [§18.2](#182-tree-and-treegrid),
-    [§37](#33-kbdl-008-decision-packet) item 14.
+    [§33](#33-kbdl-008-decision-packet) item 14.
   - Validation method: Project-owner review (not yet performed).
 
 ### 18.3 Carousel
@@ -1206,7 +1274,7 @@ exact rotation interval, are new policy:
   - Related requirement: `KBDL-CMP-107`.
   - Applicable profiles: Showcase, Precision, Flow.
   - Specification location: [§18.3](#183-carousel),
-    [§37](#33-kbdl-008-decision-packet) item 15.
+    [§33](#33-kbdl-008-decision-packet) item 15.
   - Validation method: Project-owner review (not yet performed).
 
 ### 18.4 Data Visualization
@@ -1243,7 +1311,7 @@ matter, see [§40](#40-deferred-and-unresolved-items)):
   - Related requirement: `KBDL-CMP-109`.
   - Applicable profiles: Showcase, Precision, Flow.
   - Specification location: [§18.4](#184-data-visualization),
-    [§37](#33-kbdl-008-decision-packet) item 16.
+    [§33](#33-kbdl-008-decision-packet) item 16.
   - Validation method: Project-owner review (not yet performed).
 
 ## 19. Responsive Transformation Policy
@@ -1266,7 +1334,7 @@ component policy:
     `KBDL-RSP-002` (eventual, unapproved).
   - Applicable profiles: Showcase, Precision, Flow.
   - Specification location: [§19](#19-responsive-transformation-policy),
-    [§37](#33-kbdl-008-decision-packet) item 17.
+    [§33](#33-kbdl-008-decision-packet) item 17.
   - Validation method: Project-owner review (not yet performed).
 
 ## 20. Focus and Modality
@@ -1288,7 +1356,7 @@ dismissal, action-completion dismissal, and timeout dismissal are
 documented per component above. New defaults for outside-click
 dismissal, automatic timeout, Escape-dismissal exceptions, persistent-
 versus-transient behavior, undo duration, and queueing are recorded in
-[§37](#33-kbdl-008-decision-packet) (`KBDL-CMP-074`, `KBDL-CMP-080`,
+[§33](#33-kbdl-008-decision-packet) (`KBDL-CMP-074`, `KBDL-CMP-080`,
 `KBDL-CMP-091`) rather than assumed. Critical errors, destructive
 warnings, and required instructions must not disappear without an
 accessible, persistent path remaining available (`KBDL-CMP-090`).
@@ -1299,7 +1367,7 @@ See [§13](#13-feedback-architecture) (`KBDL-CMP-086`) and
 [§14.5](#145-status-region-and-log) (`KBDL-CMP-092`). Focus is never
 moved merely to force an announcement; visual messages are not
 announced repeatedly without meaningful change; an announcement does
-not expose sensitive content unnecessarily (`KBDL-CMP-116`,
+not expose sensitive content unnecessarily (`KBDL-CMP-064`,
 [§23](#23-security-and-privacy)).
 
 ## 23. Security and Privacy
@@ -1731,7 +1799,7 @@ this document.
 | KBDL-007 requirement | Where referenced in this document | How handled |
 | --- | --- | --- |
 | `KBDL-CMP-015` (button hierarchy taxonomy) | [§11.7](#117-alert-dialog) (alert-dialog action area note) | Cited explicitly as unapproved; not adopted as authority for the alert dialog's action area |
-| `KBDL-CMP-017` (icon-only visible-label threshold) | Not referenced (Tooltip naming independence, `KBDL-CMP-072`, does not depend on this threshold) | Not used |
+| `KBDL-CMP-017` (icon-only visible-label threshold) | [§11.1](#111-tooltip) (`KBDL-CMP-072` related-requirement note) | Referenced as unapproved context only; `KBDL-CMP-072`'s tooltip naming-independence rule does not depend on this threshold and does not approve it |
 | `KBDL-CMP-020` (button-group composition) | Not referenced | Not used |
 | `KBDL-CMP-025` (search-field model) | [§16.3](#163-no-results-state) | Cited explicitly as unapproved context; not adopted as authority for No-Results State |
 | `KBDL-CMP-029` (combobox-justification threshold) | [§11.4](#114-listbox-popup) | Cited explicitly as unapproved; `KBDL-CMP-077` states the listbox popup does not approve it |
@@ -1751,7 +1819,7 @@ Confirmed unchanged by this document: every KBDL-007 trigger, field,
 action, and navigation contract (`KBDL-CMP-001`–`051`) — no lifecycle
 status, provenance, validation status, or normative text in
 `components-core.md` is modified by this document (see
-[§39](#38-cross-module-updates) for the only permitted boundary-link
+[§38](#38-cross-module-updates) for the only permitted boundary-link
 additions).
 
 ## 38. Cross-Module Updates
