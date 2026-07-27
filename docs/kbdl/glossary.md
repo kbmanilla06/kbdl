@@ -156,7 +156,7 @@ decisions (visual values, motion timings, component designs) already exist.
   [components-core.md §22.11](components-core.md#2211-field-group).
 
 - **Flow Profile** — The KBDL project profile intended for consumer-facing web
-  applications.
+  applications. See [profiles.md §12](profiles.md#12-flow-profile).
 
 - **Focus order** — The sequence in which interactive elements receive
   keyboard focus, which must be logical and must not contradict visual
@@ -168,6 +168,8 @@ decisions (visual values, motion timings, component designs) already exist.
   [foundations/README.md](foundations/README.md).
 
 - **Grid** — An interactive complex-presentation component applying a composite-widget keyboard model (roving tabindex, arrow-key cell navigation), used only where genuinely justified over a static Data Table. See [components-system.md §18.1](components-system.md#181-interactive-grid).
+
+- **Hybrid profile** — A project configuration blending emphasis from more than one Project Profile without a documented single primary. Whether KBDL permits hybrid profiles, and any required precedence rule, is `Recommended`, not yet approved. See [profiles.md §4](profiles.md#4-project-profile-terminology).
 
 - **Inert** — The state of content that cannot receive focus or be reached by sequential or assistive-technology navigation, required for background content while a modal overlay is open. See [components-system.md §6](components-system.md#6-system-component-terminology).
 
@@ -252,21 +254,40 @@ decisions (visual values, motion timings, component designs) already exist.
 - **Popover** — A non-modal overlay surface for supplemental interactive content, anchored to a trigger, distinct from Tooltip (non-interactive) and Menu (fixed command/choice content). See [components-system.md §11.2](components-system.md#112-popover-or-non-modal-dialog).
 
 - **Precision Profile** — The KBDL project profile intended for SaaS
-  dashboards.
+  dashboards. See [profiles.md §11](profiles.md#11-precision-profile).
 
 - **Pressed** — A component state exposing a toggled binary condition (see
   Toggle button), distinct from Selected (set membership) and Current
   (location). See [components-core.md §8](components-core.md#8-component-state-model).
 
+- **Primary profile** — The Project Profile a project treats as its dominant configuration. Whether every project must select exactly one is `Recommended`, not yet approved. See [profiles.md §4](profiles.md#4-project-profile-terminology).
+
 - **Primitive token** — The most basic form of a design value in KBDL (for
   example a raw color or spacing value) that semantic and component tokens are
   built from.
+
+- **Profile conflict** — A case where Project Profile emphasis would require overriding a higher-priority concern in the design-decision hierarchy. See [profiles.md §24](profiles.md#24-profile-conflicts-and-exception-handling).
+
+- **Profile conformance** — The condition of a project's use of KBDL meeting every locked rule and every requirement applicable to its declared Project Profile. See [profiles.md §4](profiles.md#4-project-profile-terminology).
+
+- **Profile declaration** — A project's documented record of its selected Project Profile, selection rationale, and applicable requirements. See [profiles.md §8](profiles.md#8-profile-selection-and-declaration).
+
+- **Profile emphasis** — The permitted variation in frequency, intensity, or composition of an already-approved controlled variable, used to express a Project Profile's purpose without changing shared architecture or meaning. See [profiles.md §4](profiles.md#4-project-profile-terminology).
+
+- **Profile exception** — An approved, documented deviation from a locked or Approved rule for a specific project's Project Profile, recorded per the governance exception process. See [profiles.md §24](profiles.md#24-profile-conflicts-and-exception-handling).
+
+- **Profile fit** — The qualitative match between a project's documented characteristics and a Project Profile's purpose; not a numeric score unless a future approval defines one. See [profiles.md §4](profiles.md#4-project-profile-terminology).
+
+- **Profile invariant** — A rule, value, or meaning that must hold identically across every Project Profile. See [profiles.md §9](profiles.md#9-cross-profile-invariants).
 
 - **Progress Indicator** — A feedback component exposing determinate or indeterminate operation progress, distinct from Meter, which communicates a measurement within a known range. See [components-system.md §14.7](components-system.md#147-progress-indicator).
 
 - **Project Profile** — A documented KBDL configuration that adjusts emphasis
   (not foundations) for a category of project. KBDL's initial profiles are
-  Showcase, Precision, and Flow. Tracked under module code `PRO`.
+  Showcase, Precision, and Flow. Tracked under module code `PRO`. A profile
+  is distinct from theme mode, brand identity, user role or persona, viewport
+  class, device category, accessibility preference, product tier, and
+  component variant. See [profiles.md §4–§5](profiles.md#4-project-profile-terminology).
 
 - **Read-only** — A component state that preserves focusability and allows
   copying but not editing a control's value, distinct from Disabled. See
@@ -296,6 +317,8 @@ decisions (visual values, motion timings, component designs) already exist.
 
 - **Scrim** — A dimming layer behind a modal or floating surface, mapped to the approved Scrim/backdrop theme role; this specification does not assign an exact opacity value. See [components-system.md §6](components-system.md#6-system-component-terminology).
 
+- **Secondary profile** — A Project Profile applied to a bounded portion of a project alongside its primary profile. Whether KBDL permits secondary profiles at all is `Recommended`, not yet approved. See [profiles.md §4](profiles.md#4-project-profile-terminology).
+
 - **Selected** — A component state indicating a user's chosen membership in
   a set (for example a checked checkbox or a highlighted list item),
   distinct from Current (location) and Pressed (a toggled action). See
@@ -308,7 +331,7 @@ decisions (visual values, motion timings, component designs) already exist.
 - **Sheet** — An edge-attached overlay surface variant of Drawer; see Drawer for the shared taxonomy and boundary rules. See [components-system.md §11.8](components-system.md#118-drawer-and-sheet).
 
 - **Showcase Profile** — The KBDL project profile intended for portfolios and
-  creative showcases.
+  creative showcases. See [profiles.md §10](profiles.md#10-showcase-profile).
 
 - **Skeleton** — A decorative loading-placeholder surface hidden from assistive technology, requiring an equivalent loading announcement through a separate status mechanism. See [components-system.md §14.9](components-system.md#149-skeleton).
 

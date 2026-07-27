@@ -1460,8 +1460,8 @@ Interactive Grid, Data Visualization); Flow may emphasize task
 completion, recovery, and consumer-legible feedback (e.g., simpler
 Toast and Empty State treatments). No profile changes semantics, removes
 accessibility behavior, or defines a final profile-specific variant;
-detailed profile mappings belong to KBDL-009 and are not addressed
-here.
+detailed profile mappings are now specified in
+[profiles.md](profiles.md).
 
 - **`KBDL-CMP-066`** — Showcase, Precision, and Flow **must** share one
   semantic and accessibility architecture for every component this
@@ -1726,8 +1726,9 @@ Approved subset); system-state programmatic determinability
   library, virtualization implementation** — explicitly out of scope
   for a design-language specification.
 - **Browser-support matrix** — not proposed.
-- **Profile-specific component variants** — deferred to the later
-  Project Profiles module (`PRO`).
+- **Profile-specific component variants** — now specified in
+  [profiles.md](profiles.md), where profile-specific defaults remain
+  `Recommended` pending project-owner review.
 
 ## 34. Decision-Packet Coverage Audit
 

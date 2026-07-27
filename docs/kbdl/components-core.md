@@ -1260,7 +1260,7 @@ pagination); Flow may emphasize progression and consumer task clarity
 component systems; change component semantics; introduce
 profile-specific variants as approved requirements; use a profile to
 justify weaker accessibility. Detailed profile component mapping is
-deferred to the later Project Profiles module (`PRO`).
+now specified in [profiles.md](profiles.md).
 
 ## 27. Conforming Examples
 
@@ -2018,8 +2018,9 @@ consistency.
   behavior, package structure, framework APIs** — explicitly out of
   scope for a design-language specification.
 - **Browser-support matrix** — not proposed.
-- **Product-specific or profile-specific component variants** —
-  deferred to the later Project Profiles module (`PRO`).
+- **Product-specific or profile-specific component variants** — now
+  specified in [profiles.md](profiles.md), where profile-specific
+  defaults remain `Recommended` pending project-owner review.
 - **Actual screen-reader/browser test matrix** — depends on
   `KBDL-A11Y-035`, itself unapproved.
 - **Implementation-level accessibility, real-device, and production
@@ -2119,8 +2120,9 @@ not itself constitute validation of any item — see
 - Implementation-layer token formats, framework APIs, CSS architecture,
   JavaScript behavior, package structure — out of scope.
 - Browser-support matrix — not proposed.
-- Product-specific and profile-specific component variants —
-  `Deferred` to the Project Profiles module.
+- Product-specific and profile-specific component variants — now
+  specified in [profiles.md](profiles.md), where profile-specific
+  defaults remain `Recommended` pending project-owner review.
 - Actual screen-reader/browser test matrix — depends on unapproved
   `KBDL-A11Y-035`.
 - Implementation-level accessibility validation, real-device

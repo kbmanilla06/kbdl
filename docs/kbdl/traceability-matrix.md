@@ -2,9 +2,9 @@
 
 Lifecycle status of this framework: `Approved`. Rows below reflect
 KBDL-001, KBDL-002, KBDL-003, KBDL-004, KBDL-005, KBDL-006, KBDL-007,
-and KBDL-008 scope. KBDL-008 remains under initial validation, not yet
-passed, pending the planning agent's validation review — its presence
-here is not a claim that KBDL-008 has passed.
+KBDL-008, and KBDL-009 scope. KBDL-009 remains under initial
+validation, not yet passed, pending the planning agent's validation
+review — its presence here is not a claim that KBDL-009 has passed.
 
 Return to the [specification index](README.md). Status labels are defined in
 [conventions.md](conventions.md#1-status-labels).
@@ -936,6 +936,70 @@ that document; these rows summarize status for cross-module lookup.
 - **Related decision:** Not applicable — pending a future decision-register entry once the project owner reviews the KBDL-008 decision packet.
 - **Notes:** `KBDL-CMP-099`, `102`, `105`, `106`, `108`, `110`, `111` map to [KBDL-008 decision packet](components-system.md#33-kbdl-008-decision-packet) items 11, 12, 13, 14, 15, 16, and 17 respectively.
 
+## KBDL-009 — Project Profiles
+
+The rows below trace KBDL-009's scope, defined in
+[profiles.md](profiles.md). Full per-requirement detail (rationale,
+validation method, decision-packet mapping) lives in that document;
+these rows summarize status for cross-module lookup.
+
+### Shared architecture, terminology, and governance (KBDL-PRO-001 through KBDL-PRO-009)
+
+- **Blueprint section:** Profile architecture; terminology; locked/controlled/open classification; profile selection and declaration
+- **Roadmap prompt:** KBDL-009
+- **Requirement ID:** KBDL-PRO-001, 002, 003, 004, 005, 006, 007, 008, 009
+- **Specification location:** [profiles.md §4–§8](profiles.md#4-project-profile-terminology)
+- **Approval status:** `KBDL-PRO-001`–`008` Approved (restate the already-Approved `KBDL-PRN-007`, `KBDL-FND-008`, `KBDL-THM-006`, `KBDL-MOT-026`, `KBDL-A11Y-040`, `KBDL-CMP-051`, `KBDL-CMP-066`, and explicit mandatory clauses of the approved KBDL-009 prompt); `KBDL-PRO-009` (primary/secondary/hybrid policy) Recommended (new governance policy)
+- **Provenance:** Confirmed for `KBDL-PRO-001`–`008`; Assumed for `KBDL-PRO-009`.
+- **Validation status:** Not verified
+- **Validation method:** Manual cross-module architecture review once implemented; project-owner review of `KBDL-PRO-009` (not yet performed).
+- **Validation evidence:** Not verified — no implementation exists yet.
+- **Known limitation:** Implementation-dependent.
+- **Related decision:** Not applicable — pending a future decision-register entry once the project owner reviews the KBDL-009 decision packet.
+- **Related prior requirements:** `KBDL-PRN-007`, `KBDL-FND-008`, `KBDL-THM-006`, `KBDL-MOT-026`, `KBDL-A11Y-040`, `KBDL-CMP-051`, `KBDL-CMP-066`.
+- **Pending dependencies:** None for `KBDL-PRO-001`–`008`.
+- **Future customization dependency:** None.
+- **Future validation dependency:** Implementation-level profile validation (`VAL`, locked).
+- **Notes:** `KBDL-PRO-009` maps to [KBDL-009 decision packet](profiles.md#33-kbdl-009-decision-packet) item 1.
+
+### Showcase, Precision, and Flow profile definitions (KBDL-PRO-010 through KBDL-PRO-018)
+
+- **Blueprint section:** Showcase Profile; Precision Profile; Flow Profile; component interpretation per profile
+- **Roadmap prompt:** KBDL-009
+- **Requirement ID:** KBDL-PRO-010, 011, 012, 013, 014, 015, 016, 017, 018
+- **Specification location:** [profiles.md §10–§12](profiles.md#10-showcase-profile)
+- **Approval status:** `KBDL-PRO-010`–`015` Approved (consolidate the already-Approved per-profile interpretation in principles.md, foundations/README.md, themes/README.md, motion/patterns.md, responsive.md, and the already-Approved `KBDL-CMP-051`/`066`/`010`/`055`/`070`/`072`/`090`/`107` component boundaries); `KBDL-PRO-016` (Showcase composition defaults), `017` (Precision density defaults), `018` (Flow action defaults) Recommended (new discretionary profile-specific defaults)
+- **Provenance:** Confirmed for `KBDL-PRO-010`–`015`; Assumed for `KBDL-PRO-016`, `017`, `018`.
+- **Validation status:** Not verified
+- **Validation method:** Manual cross-module consistency review once implemented; project-owner review of `KBDL-PRO-016`/`017`/`018` (not yet performed).
+- **Validation evidence:** Not verified — no implementation exists yet.
+- **Known limitation:** `KBDL-PRO-016` additionally depends on the unapproved KBDL-008 `KBDL-CMP-067`; `KBDL-PRO-018` additionally depends on the unapproved KBDL-007 `KBDL-CMP-015`/`036`.
+- **Related decision:** Not applicable — pending a future decision-register entry once the project owner reviews the KBDL-009 decision packet.
+- **Related prior requirements:** `KBDL-CMP-010`, `015`, `036`, `051`, `055`, `066`, `067`, `070`, `072`, `090`, `107`.
+- **Pending dependencies:** `KBDL-CMP-067` (KBDL-008, contingent for `KBDL-PRO-016`); `KBDL-CMP-015`, `036` (KBDL-007, contingent for `KBDL-PRO-018`).
+- **Future customization dependency:** None.
+- **Future validation dependency:** Implementation-level profile validation (`VAL`, locked).
+- **Notes:** `KBDL-PRO-017` maps to [KBDL-009 decision packet](profiles.md#33-kbdl-009-decision-packet) item 2 (independently approval-ready). `KBDL-PRO-016` and `018` map to the contingent items in [profiles.md §33.3](profiles.md#333-unresolved-or-not-approval-ready), not to any approval-ready item.
+
+### Mapping, content, security, conflict, and adoption requirements (KBDL-PRO-019 through KBDL-PRO-029)
+
+- **Blueprint section:** Principles/core-component/system-component mapping; content and communication; security, privacy, and correctness; profile conflicts; profile adoption and change management
+- **Roadmap prompt:** KBDL-009
+- **Requirement ID:** KBDL-PRO-019, 020, 021, 022, 023, 024, 025, 026, 027, 028, 029
+- **Specification location:** [profiles.md §14, §20–§25](profiles.md#14-principles-mapping)
+- **Approval status:** `KBDL-PRO-019`–`026` Approved (restate the already-Approved `KBDL-PRN-003`, `KBDL-CMP-051`, `066`, `101`, `103`, `KBDL-CMP-063`/`064`/`098`/`104`, `principles.md §8`, and `governance.md`'s exception process, plus explicit mandatory clauses of the approved KBDL-009 prompt); `KBDL-PRO-027` (change/migration governance), `028` (selection rubric), `029` (review cadence) Recommended (new discretionary governance policy)
+- **Provenance:** Confirmed for `KBDL-PRO-019`–`026`; Assumed for `KBDL-PRO-027`, `028`, `029`.
+- **Validation status:** Not verified
+- **Validation method:** Manual review once implemented; project-owner review of `KBDL-PRO-027`/`028`/`029` (not yet performed).
+- **Validation evidence:** Not verified — no implementation exists yet.
+- **Known limitation:** Implementation-dependent.
+- **Related decision:** Not applicable — pending a future decision-register entry once the project owner reviews the KBDL-009 decision packet.
+- **Related prior requirements:** `KBDL-PRN-003`, `KBDL-PRN-006`, `KBDL-GOV-002`, `KBDL-GOV-003`, `KBDL-CMP-051`, `063`, `064`, `066`, `098`, `101`, `103`, `104`.
+- **Pending dependencies:** None.
+- **Future customization dependency:** Manual customization of a profile (`CUS`, locked).
+- **Future validation dependency:** Implementation-level profile validation (`VAL`, locked).
+- **Notes:** `KBDL-PRO-027`, `028`, `029` map to [KBDL-009 decision packet](profiles.md#33-kbdl-009-decision-packet) items 3, 4, and 5 respectively.
+
 ## Notes on Scope
 
 `GOV`, `PRN`, `FND`, `THM`, `MOT`, `RSP`, `A11Y`, and `CMP` are
@@ -967,16 +1031,27 @@ section above); its standards-derived and inherited Approved
 requirements remain `Approved`; its ten KBDL-specific recommendations
 (`KBDL-CMP-015`, `017`, `020`, `025`, `029`, `036`, `041`, `044`, `046`,
 `048`) remain `Recommended` and unapproved — KBDL-007 passing
-validation does not promote them. `CMP` (KBDL-008) is no longer a
-future or locked module: `docs/kbdl/components-system.md` exists with
-60 additional documented requirements (`KBDL-CMP-052`–`111`, see the
+validation does not promote them. `CMP` (KBDL-008) **passed**
+planning-agent validation before KBDL-009 began:
+`docs/kbdl/components-system.md` exists with 60 additional documented
+requirements (`KBDL-CMP-052`–`111`, see the
 [KBDL-008 — Surface, Overlay, Feedback, and System-State Components](#kbdl-008--surface-overlay-feedback-and-system-state-components)
-section above); KBDL-008 remains in initial validation, not yet passed,
-following the same pattern KBDL-007 followed before it passed. Rows for
-`PRO`, `CUS`, and `VAL` exist only to show where their future
-requirements will be traced once their roadmap step is reached; those
-modules remain locked until KBDL-008 passes the planning agent's
-validation review. Approval status and validation status are recorded independently
+section above); its standards-derived and inherited Approved
+requirements remain `Approved`; its seventeen KBDL-specific
+recommendations
+(`KBDL-CMP-067`, `069`, `073`, `074`, `076`, `080`, `083`, `085`, `089`,
+`091`, `099`, `102`, `105`, `106`, `108`, `110`, `111`) remain
+`Recommended` and unapproved — KBDL-008 passing validation does not
+promote them. `PRO` (KBDL-009) is no longer a future or locked module:
+`docs/kbdl/profiles.md` exists with 29 documented requirements
+(`KBDL-PRO-001`–`029`, see the
+[KBDL-009 — Project Profiles](#kbdl-009--project-profiles) section
+above); KBDL-009 remains in initial validation, not yet passed,
+following the same pattern KBDL-008 followed before it passed. Rows for
+`CUS` and `VAL` exist only to show where their future requirements will
+be traced once their roadmap step is reached; those modules remain
+locked until KBDL-009 passes the planning agent's validation review.
+Approval status and validation status are recorded independently
 for every row; a row being `Approved` never implies it is `Verified`, and a
 row being `Verified` never implies or grants `Approved` status. `PRN`
 requirements are approved as principles-level guidance; they do not
@@ -1126,6 +1201,29 @@ review has yet occurred. This document does not claim full WCAG
 conformance, ARIA-pattern compliance, screen-reader compatibility, or
 real-device support for any component — see
 [components-system.md §29–§32](components-system.md#29-accessibility-validation-matrix)
-for exactly what has and has not been verified. KBDL-009 (Project
-Profiles) is locked until KBDL-008 passes the planning agent's
+for exactly what has and has not been verified. `PRO` requirements
+introduced by KBDL-009 follow the same pattern: `Approved` where a
+requirement is authorized by a prior approved KBDL requirement, an
+explicit mandatory requirement in the project-owner-approved KBDL-009
+implementation prompt, or a documented combination of these (see each
+requirement's own record in
+[profiles.md §28](profiles.md#28-normative-requirements) for which
+authority applies); prompt approval authorizes only the prompt's own
+mandatory scope — it does not approve the KBDL-009 decision packet,
+promote any KBDL-006, KBDL-007, or KBDL-008 recommendation, or grant
+implementation-level validation. `Recommended` where new, discretionary
+profile-governance policy not mandated by the approved prompt is
+introduced — a primary/secondary/hybrid profile policy, exact Precision
+density defaults, profile change/migration governance, a profile-
+selection rubric, and a profile review cadence (`KBDL-PRO-009`, `016`,
+`017`, `018`, `027`, `028`, `029`). None of these `Recommended` items
+are implemented or treated as `Approved` until the project owner
+reviews the
+[KBDL-009 decision packet](profiles.md#33-kbdl-009-decision-packet);
+no decision-register entry has been created for KBDL-009, since no such
+review has yet occurred. This document does not claim implementation-
+level profile validation or production conformance — see
+[profiles.md §31–§32](profiles.md#31-profile-invariant-validation-matrix)
+for exactly what has and has not been verified. KBDL-010 (Manual
+Customization) is locked until KBDL-009 passes the planning agent's
 validation review, and has not been started.

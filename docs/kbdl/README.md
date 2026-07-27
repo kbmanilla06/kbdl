@@ -115,11 +115,28 @@ an accordion open model, a tooltip timing policy, and similar) remain
 None of the nine unapproved KBDL-006 recommendations or the ten
 unapproved KBDL-007 recommendations is treated as implementation
 authority anywhere in KBDL-008; no implementation-level validation
-exists for any KBDL-008 requirement. KBDL-008 is currently under initial
-validation, not yet passed; KBDL-009 (Project Profiles) and every later
-roadmap step remain locked until KBDL-008 passes the planning agent's
-validation review — none has been started. This is not a claim that
-the overall KBDL project is complete — three roadmap steps remain.
+exists for any KBDL-008 requirement. KBDL-008 **passed** planning-agent
+validation, which unlocked KBDL-009. KBDL-009 (Project Profiles) is now
+present: 29 `KBDL-PRO-###` requirements consolidating the profile-level
+guidance already scattered across KBDL-002 through KBDL-008 into one
+specification for Showcase, Precision, and Flow (see
+[profiles.md](profiles.md)). A requirement is `Approved` when
+authorized by a prior approved KBDL requirement, an explicit mandatory
+requirement in the project-owner-approved KBDL-009 implementation
+prompt, or a documented combination of these; prompt approval
+authorizes only its own mandatory scope, not the KBDL-009 decision
+packet. Genuinely new, discretionary profile-selection, migration, or
+profile-specific-defaults policy not mandated by the approved prompt
+remains `Recommended`, pending project-owner approval via the
+[KBDL-009 decision packet](profiles.md#33-kbdl-009-decision-packet).
+None of the nine unapproved KBDL-006, ten unapproved KBDL-007, or
+seventeen unapproved KBDL-008 recommendations is treated as
+implementation authority anywhere in KBDL-009; no implementation-level
+profile validation exists. KBDL-009 is currently under initial
+validation, not yet passed; KBDL-010 and every later roadmap step
+remain locked until KBDL-009 passes the planning agent's validation
+review — none has been started. This is not a claim that
+the overall KBDL project is complete — two roadmap steps remain.
 Progression to later roadmap steps depends on the
 planning agent's validation review, not on this index. KBDL-001
 established the documentation architecture, terminology, requirement
@@ -148,10 +165,15 @@ accessibility rules into component-level contracts (see
 surface, overlay, feedback, and system-state component specification,
 extending the KBDL-007 shared contract without redefining any KBDL-007
 trigger, field, action, or navigation contract (see
-[components-system.md](components-system.md)). None of these steps
-define implementation code, KBDL-009 profiles, or later-roadmap work —
-those remain later roadmap steps and must not be started early (see
-[governance.md](governance.md)).
+[components-system.md](components-system.md)). KBDL-009 established
+KBDL's Project Profiles specification, consolidating the Showcase,
+Precision, and Flow profile guidance already present across prior
+modules into one shared architecture, without introducing a
+profile-specific semantic, accessibility, foundation, theme, motion, or
+component system (see [profiles.md](profiles.md)). None of these steps
+define implementation code, KBDL-010 manual customization, or
+later-roadmap work — those remain later roadmap steps and must not be
+started early (see [governance.md](governance.md)).
 
 ## Intended Audience
 
@@ -179,7 +201,7 @@ specification itself.
 ## Document Hierarchy
 
 KBDL-001, KBDL-002, KBDL-003, KBDL-004, KBDL-005, KBDL-006, KBDL-007,
-and KBDL-008 deliver the documents below with real content. Rows still
+KBDL-008, and KBDL-009 deliver the documents below with real content. Rows still
 marked `Deferred` show the **planned location only** for future
 modules; those files do not exist yet and must not be created until
 their roadmap step is reached.
@@ -195,8 +217,8 @@ their roadmap step is reached.
 | 7 | Accessibility | Approved (WCAG 2.2 AA mapping)‡; Recommended (KBDL-specific enhancements) | [accessibility.md](accessibility.md) |
 | 8 | Core action, form, and navigation components | Approved (architecture)§; Recommended (component-level taxonomies) | [components-core.md](components-core.md) |
 | 9 | Surface, overlay, feedback, and system-state components | Approved (architecture)¶; Recommended (component-level taxonomies) | [components-system.md](components-system.md) |
-| 10 | Project profiles (Showcase, Precision, Flow) | Deferred (locked until KBDL-008 passes validation) | `docs/kbdl/profiles.md` (planned) |
-| 11 | Manual customization | Deferred | `docs/kbdl/customization.md` (planned) |
+| 10 | Project profiles (Showcase, Precision, Flow) | Approved (architecture)‖; Recommended (discretionary profile-governance policy) | [profiles.md](profiles.md) |
+| 11 | Manual customization | Deferred (locked until KBDL-009 passes validation) | `docs/kbdl/customization.md` (planned) |
 | 12 | Validation | Deferred | `docs/kbdl/validation.md` (planned) |
 | 13 | Governance | Approved | [governance.md](governance.md) |
 | 14 | Future expansion | Deferred | Location to be determined when needed |
@@ -283,6 +305,23 @@ None of the nine unapproved KBDL-006 recommendations or the ten
 unapproved KBDL-007 recommendations is treated as implementation
 authority anywhere in this module. No implementation-dependent
 validation is claimed `Verified` — no coded component exists yet.
+
+‖ See [profiles.md](profiles.md) for the full specification. A
+requirement is `Approved` when authorized by a prior approved KBDL
+requirement, an explicit mandatory requirement in the project-owner-
+approved KBDL-009 implementation prompt, or a documented combination of
+these; prompt approval authorizes only its own mandatory scope, not the
+KBDL-009 decision packet. Genuinely new, discretionary profile-
+governance decisions not mandated by the approved prompt — a primary/
+secondary/hybrid profile policy, exact Precision density defaults,
+profile change/migration governance, a profile-selection rubric, and a
+profile review cadence — remain `Recommended`, pending project-owner
+approval via the
+[KBDL-009 decision packet](profiles.md#33-kbdl-009-decision-packet).
+None of the nine unapproved KBDL-006, ten unapproved KBDL-007, or
+seventeen unapproved KBDL-008 recommendations is treated as
+implementation authority anywhere in this module. No implementation-
+level profile validation exists — no coded project profile exists yet.
 
 Supporting documents (not numbered modules, but required by KBDL-001 and
 referenced by KBDL-002 and KBDL-003):
