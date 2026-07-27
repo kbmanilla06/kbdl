@@ -110,6 +110,39 @@ decisions (visual values, motion timings, component designs) already exist.
 - **Customization rule** — Documented guidance describing how and where manual
   customization of KBDL is permitted. Tracked under module code `CUS`.
 
+- **Manual customization** — A human-chosen, documented project choice within
+  Approved KBDL bounds, or a governed request beyond them; it is never an
+  automated or silent mutation. See [customization.md §4](customization.md#4-customization-terminology).
+
+- **Customization request** — The intake description of a desired project
+  outcome before authority and implementation eligibility are established.
+
+- **Customization record** — The auditable project record of a customization's
+  classification, source authority, scope, impacts, evidence, history, and rollback.
+
+- **Approved option selection** — Selection of an explicitly permitted option
+  within its owning requirement's Approved bounds; selection does not change
+  KBDL lifecycle status.
+
+- **Project-local customization** — A bounded customization intended for one
+  project only.
+
+- **Reusable customization** — A customization intended for multiple projects;
+  it must be reviewed as a possible KBDL extension rather than copied silently.
+
+- **Proposed KBDL extension** — A proposed reusable role, meaning, variant,
+  option, or policy that remains non-Approved until KBDL governance approves it.
+
+- **Customization exception** — An Approved, recorded project deviation from a
+  locked rule or Approved requirement under the governance exception process.
+
+- **Stale customization** — A customization record requiring review because
+  its source, Profile, scope, dependency, or authority changed.
+
+- **Customization conformance** — The condition in which a customization is
+  both authorized and validated against every applicable Approved requirement
+  and its exact record scope.
+
 - **Data Table** — A surface presenting tabular data using native `<table>`, caption, and header semantics; distinguished from Grid, which applies only where genuine interactive, cell-level operation is required. See [components-system.md §9.5](components-system.md#95-static-data-table).
 
 - **Data Visualization** — A complex-presentation component conveying data graphically, requiring non-color-dependent encoding and a text or data-table alternative; its exact chart taxonomy and palette remain unapproved. See [components-system.md §18.4](components-system.md#184-data-visualization).

@@ -2,9 +2,9 @@
 
 Lifecycle status of this framework: `Approved`. Rows below reflect
 KBDL-001, KBDL-002, KBDL-003, KBDL-004, KBDL-005, KBDL-006, KBDL-007,
-KBDL-008, and KBDL-009 scope. KBDL-009 remains under initial
-validation, not yet passed, pending the planning agent's validation
-review — its presence here is not a claim that KBDL-009 has passed.
+KBDL-008, KBDL-009, and KBDL-010 scope. KBDL-009 passed planning-agent
+validation; KBDL-010 remains under validation, and its presence here is
+not a claim that implementation-level customization is verified.
 
 Return to the [specification index](README.md). Status labels are defined in
 [conventions.md](conventions.md#1-status-labels).
@@ -115,15 +115,15 @@ scope.
 
 - **Blueprint section:** Manual, documented customization
 - **Roadmap prompt:** KBDL-001
-- **Requirement ID:** Not applicable
-- **Specification location:** [decision-register.md § KBDL-DEC-004](decision-register.md#kbdl-dec-004--customization-is-manual-and-documented)
+- **Requirement ID:** `KBDL-CUS-001` (detailed KBDL-010 traceability appears below)
+- **Specification location:** [decision-register.md § KBDL-DEC-004](decision-register.md#kbdl-dec-004--customization-is-manual-and-documented), [customization.md §1](customization.md#1-purpose-and-scope)
 - **Approval status:** Approved
 - **Validation status:** Not verified
-- **Validation method:** Not applicable — no `CUS` requirements exist yet.
+- **Validation method:** Manual record and implementation audit once a project customization exists.
 - **Validation evidence:** Not verified.
-- **Known limitation:** Will require `CUS` requirements in a later step before it can be validated.
+- **Known limitation:** KBDL-010 requirements exist, but no project customization exists to test.
 - **Related decision:** KBDL-DEC-004
-- **Notes:** Out of scope for KBDL-001.
+- **Notes:** KBDL-010 operationalizes the KBDL-001 decision without creating a customization or approving its decision packet.
 
 ### Progressive delivery / roadmap gating
 
@@ -1002,9 +1002,98 @@ these rows summarize status for cross-module lookup.
 - **Related prior requirements:** `KBDL-PRN-003`, `KBDL-PRN-006`, `KBDL-GOV-002`, `KBDL-GOV-003`, `KBDL-CMP-051`, `063`, `064`, `066`, `098`, `101`, `103`, `104`.
 - **Pending dependencies (per-ID):** `KBDL-PRO-027`: no pending dependency (independently approval-ready). `KBDL-PRO-028`: no pending dependency (independently approval-ready). `KBDL-PRO-029`: no pending dependency (independently approval-ready). `KBDL-PRO-019`–`026`: none.
 - **Packet destination (per-ID):** `KBDL-PRO-019`–`026`: None — Approved requirement; not awaiting packet approval. `KBDL-PRO-027`: Approval-ready item 3. `KBDL-PRO-028`: Approval-ready item 4. `KBDL-PRO-029`: Approval-ready item 5.
-- **Future customization dependency:** Manual customization of a profile (`CUS`, locked).
+- **Future customization dependency:** Governed by [customization.md](customization.md); no customization is approved by this traceability row.
 - **Future validation dependency:** Implementation-level profile validation (`VAL`, locked).
 - **Notes:** `KBDL-PRO-027`, `028`, `029` map to [KBDL-009 decision packet](profiles.md#33-kbdl-009-decision-packet) approval-ready items 3, 4, and 5 respectively (not contingent; see [profiles.md §38](profiles.md#38-decision-packet-coverage-audit) for the full, corrected coverage audit).
+
+## KBDL-010 — Manual Customization
+
+The entries below trace every KBDL-010 requirement to
+[customization.md](customization.md). Each ID appears exactly once.
+
+### Authority, classification, workflow, and records (KBDL-CUS-001 through KBDL-CUS-012)
+
+- **Blueprint section:** Manual/documented customization; authority; classification; workflow; intake; records; impact/evidence; review/rollback
+- **Roadmap prompt:** KBDL-010
+- **Requirement ID:** `KBDL-CUS-001`, `KBDL-CUS-002`, `KBDL-CUS-003`, `KBDL-CUS-004`, `KBDL-CUS-005`, `KBDL-CUS-006`, `KBDL-CUS-007`, `KBDL-CUS-008`, `KBDL-CUS-009`, `KBDL-CUS-010`, `KBDL-CUS-011`, `KBDL-CUS-012`
+- **Specification location (per-ID):** `001` → [§1](customization.md#1-purpose-and-scope); `002` → [§5](customization.md#5-customization-authority-model); `003` → [§6](customization.md#6-locked-controlled-open-proposed-and-exception-classifications); `004` → [§12](customization.md#12-approval-and-escalation-paths); `005` → [§24](customization.md#24-content-and-open-brand-expression); `006` → [§26](customization.md#26-reusable-versus-project-local-customization); `007` → [§27](customization.md#27-conflict-handling-and-exceptions); `008` → [§7](customization.md#7-manual-customization-workflow); `009` → [§8](customization.md#8-customization-request-intake); `010` → [§11](customization.md#11-customization-record); `011` → [§10](customization.md#10-impact-assessment) and [§14](customization.md#14-validation-and-evidence-planning); `012` → [§15](customization.md#15-review-expiry-change-and-rollback).
+- **Lifecycle status:** All Approved.
+- **Provenance:** All Confirmed.
+- **Validation status:** All Not verified.
+- **Authority:** Per-ID prior Approved governance/principle/profile sources and/or explicit mandatory KBDL-010 prompt clauses; exact source appears in each normative record.
+- **Customization class:** `001`–`003`, `008`–`011`: A–F; `004`: A; `005`: B; `006`: C/D; `007`: E/F; `012`: A–E.
+- **Validation method / evidence:** Per-ID record, authority, classification, workflow, field, impact, proposal, exception, history, or rollback audit; evidence Not verified because no project customization exists.
+- **Known limitation:** Exact local operational policies remain Recommended; implementation behavior is absent.
+- **Related decision:** `KBDL-DEC-004` for manual documentation; no KBDL-010 packet decision exists.
+- **Related prior requirements:** `KBDL-PRN-005`, `KBDL-GOV-002`, `003`, `KBDL-PRO-004`, `005`, plus per-record references.
+- **Packet destination (per-ID):** `001`–`012`: None — Approved requirements do not await packet approval.
+- **Pending dependencies (per-ID):** `001`–`012`: None.
+- **Profile impact:** Shared across Showcase, Precision, and Flow; no Profile architecture change.
+- **Future validation dependency:** Project implementation evidence and later `VAL` policy.
+- **Notes:** A record documents authority and never creates it.
+
+### Cross-module preservation and handoff (KBDL-CUS-013 through KBDL-CUS-022)
+
+- **Blueprint section:** Foundations; themes; motion; responsive; accessibility; core/system components; Profiles; security/correctness; handoff
+- **Roadmap prompt:** KBDL-010
+- **Requirement ID:** `KBDL-CUS-013`, `KBDL-CUS-014`, `KBDL-CUS-015`, `KBDL-CUS-016`, `KBDL-CUS-017`, `KBDL-CUS-018`, `KBDL-CUS-019`, `KBDL-CUS-020`, `KBDL-CUS-021`, `KBDL-CUS-022`
+- **Specification location (per-ID):** `013` → [§16](customization.md#16-foundations-customization); `014` → [§17](customization.md#17-theme-customization); `015` → [§18](customization.md#18-motion-customization); `016` → [§19](customization.md#19-responsive-customization); `017` → [§20](customization.md#20-accessibility-customization-boundary); `018` → [§21](customization.md#21-core-component-customization); `019` → [§22](customization.md#22-system-component-customization); `020` → [§23](customization.md#23-project-profile-customization); `021` → [§25](customization.md#25-security-privacy-correctness-and-data-integrity); `022` → [§13](customization.md#13-implementation-handoff-boundary).
+- **Lifecycle status:** All Approved.
+- **Provenance:** All Confirmed.
+- **Validation status:** All Not verified.
+- **Authority:** Approved owning-module requirements plus explicit mandatory KBDL-010 preservation clauses; exact source appears per normative record.
+- **Customization class:** All A–F.
+- **Validation method / evidence:** Owning-module value, parity, safety, outcome, WCAG, component-contract, invariant, security, or handoff audit; evidence Not verified.
+- **Known limitation:** No project implementation exists; every listed earlier recommendation remains excluded.
+- **Related decision:** None new; existing owning-module decisions remain authoritative.
+- **Related prior requirements:** `KBDL-FND-001`–`012`, Approved `THM`, `MOT`, `RSP`, `A11Y`, `CMP`, and `PRO` requirements, especially `KBDL-GOV-002`, `KBDL-PRO-023`, `KBDL-CMP-103`, `104`.
+- **Packet destination (per-ID):** `013`–`022`: None — Approved.
+- **Pending dependencies (per-ID):** `013`–`022`: None; pending earlier items are exclusions, not normative dependencies.
+- **Profile impact:** One shared semantic/accessibility architecture and all invariants preserved.
+- **Future validation dependency:** Real implementation evidence and later `VAL` policy.
+- **Notes:** No exact value, technology, component semantic variant, Profile, or exception is introduced.
+
+### Discretionary KBDL-010 policy (KBDL-CUS-023 through KBDL-CUS-029)
+
+- **Blueprint section:** Identifier; local roles; risk/evidence; review/expiry; precedence; reuse; archive/licensing/rollback evidence
+- **Roadmap prompt:** KBDL-010
+- **Requirement ID:** `KBDL-CUS-023`, `KBDL-CUS-024`, `KBDL-CUS-025`, `KBDL-CUS-026`, `KBDL-CUS-027`, `KBDL-CUS-028`, `KBDL-CUS-029`
+- **Specification location (per-ID):** `023` → [§11](customization.md#11-customization-record); `024` → [§12](customization.md#12-approval-and-escalation-paths); `025` → [§14](customization.md#14-validation-and-evidence-planning); `026`, `027` → [§15](customization.md#15-review-expiry-change-and-rollback); `028` → [§26](customization.md#26-reusable-versus-project-local-customization); `029` → [§15](customization.md#15-review-expiry-change-and-rollback) and [§24](customization.md#24-content-and-open-brand-expression).
+- **Lifecycle status:** All Recommended.
+- **Provenance:** All Assumed.
+- **Validation status:** All Not applicable.
+- **Authority:** Not applicable — pending explicit project-owner approval; assignment of a CUS ID does not grant implementation authority.
+- **Customization class:** `023`, `026`, `027`, `029`: A–E; `024`, `025`: A–F; `028`: C/D.
+- **Validation method / evidence:** Project-owner review; not yet performed.
+- **Known limitation:** Exact policies are not authorized.
+- **Related decision:** None — no packet item has been approved.
+- **Related prior requirements:** `KBDL-CUS-005`, `006`, `010`, `011`, `012` as specified per record.
+- **Packet destination (per-ID):** `023` → item 1; `024` → item 2; `025` → item 3; `026` → item 4; `027` → item 5; `028` → item 6; `029` → item 7, all independently approval-ready.
+- **Pending dependencies (per-ID):** None.
+- **Profile impact:** Shared policy only; no Profile change.
+- **Future validation dependency:** Implementation evidence; item 3 excludes final-validation policy.
+- **Notes:** Approval scope and exclusions appear in [the packet](customization.md#37-kbdl-010-decision-packet).
+
+### Deferred machine-readable format (KBDL-CUS-030)
+
+- **Blueprint section:** Deferred tooling and formats
+- **Roadmap prompt:** KBDL-010
+- **Requirement ID:** `KBDL-CUS-030`
+- **Specification location:** [customization.md §41](customization.md#41-deferred-and-unresolved-items)
+- **Lifecycle status:** Deferred.
+- **Provenance:** Assumed.
+- **Validation status:** Not applicable.
+- **Authority:** Not applicable — deliberately deferred; assignment of a CUS ID does not grant implementation authority.
+- **Customization class:** A–E.
+- **Validation method / evidence:** Not applicable until resumed; no evidence.
+- **Known limitation:** No machine-readable format or tooling is authorized.
+- **Related decision:** None.
+- **Related prior requirements:** `KBDL-CUS-010`, `022`.
+- **Packet destination:** Deferred tracking.
+- **Pending dependency:** Later implementation/tooling authorization.
+- **Profile impact:** None.
+- **Future validation dependency:** Later authorized tooling and `VAL` scope.
+- **Notes:** Not an orphan packet item and not approval-ready.
 
 ## Notes on Scope
 
@@ -1052,11 +1141,10 @@ promote them. `PRO` (KBDL-009) is no longer a future or locked module:
 `docs/kbdl/profiles.md` exists with 29 documented requirements
 (`KBDL-PRO-001`–`029`, see the
 [KBDL-009 — Project Profiles](#kbdl-009--project-profiles) section
-above); KBDL-009 remains in initial validation, not yet passed,
-following the same pattern KBDL-008 followed before it passed. Rows for
-`CUS` and `VAL` exist only to show where their future requirements will
-be traced once their roadmap step is reached; those modules remain
-locked until KBDL-009 passes the planning agent's validation review.
+above); KBDL-009 passed planning-agent validation before KBDL-010 began.
+`CUS` (KBDL-010) is now present with the requirements traced above and is
+under planning-agent validation. `VAL` remains future and locked until
+KBDL-010 passes that review.
 Approval status and validation status are recorded independently
 for every row; a row being `Approved` never implies it is `Verified`, and a
 row being `Verified` never implies or grants `Approved` status. `PRN`
@@ -1230,6 +1318,9 @@ no decision-register entry has been created for KBDL-009, since no such
 review has yet occurred. This document does not claim implementation-
 level profile validation or production conformance — see
 [profiles.md §31–§32](profiles.md#31-profile-invariant-validation-matrix)
-for exactly what has and has not been verified. KBDL-010 (Manual
-Customization) is locked until KBDL-009 passes the planning agent's
-validation review, and has not been started.
+for exactly what has and has not been verified. KBDL-009 passed the
+planning agent's validation review and KBDL-010 (Manual Customization) is
+present with 30 `CUS` requirements. Its seven discretionary policy items
+remain Recommended, its format/tooling item remains Deferred, and no
+implementation-level customization behavior is verified. Final validation
+remains locked until KBDL-010 passes planning-agent review.

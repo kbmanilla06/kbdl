@@ -132,11 +132,18 @@ remains `Recommended`, pending project-owner approval via the
 None of the nine unapproved KBDL-006, ten unapproved KBDL-007, or
 seventeen unapproved KBDL-008 recommendations is treated as
 implementation authority anywhere in KBDL-009; no implementation-level
-profile validation exists. KBDL-009 is currently under initial
-validation, not yet passed; KBDL-010 and every later roadmap step
-remain locked until KBDL-009 passes the planning agent's validation
-review — none has been started. This is not a claim that
-the overall KBDL project is complete — two roadmap steps remain.
+profile validation exists. KBDL-009 **passed** planning-agent validation,
+which unlocked KBDL-010. KBDL-010 (Manual Customization) is now present:
+30 `KBDL-CUS-###` requirements make project customization manual,
+documented, attributable, reviewable, reversible, and auditable while
+protecting locked rules, shared architecture, and Profile invariants (see
+[customization.md](customization.md)). Its seven new discretionary policy
+items remain `Recommended` and its machine-readable-format item remains
+`Deferred`; no earlier recommendation is promoted and no implementation-
+level customization validation exists. KBDL-010 is under planning-agent
+validation. Final validation and later work remain locked until it passes.
+This is not a claim that the overall KBDL project is complete — one
+roadmap step remains.
 Progression to later roadmap steps depends on the
 planning agent's validation review, not on this index. KBDL-001
 established the documentation architecture, terminology, requirement
@@ -170,10 +177,12 @@ KBDL's Project Profiles specification, consolidating the Showcase,
 Precision, and Flow profile guidance already present across prior
 modules into one shared architecture, without introducing a
 profile-specific semantic, accessibility, foundation, theme, motion, or
-component system (see [profiles.md](profiles.md)). None of these steps
-define implementation code, KBDL-010 manual customization, or
-later-roadmap work — those remain later roadmap steps and must not be
-started early (see [governance.md](governance.md)).
+component system (see [profiles.md](profiles.md)). KBDL-010 established
+manual-customization governance without creating a project customization,
+implementation format, exception, or approval shortcut (see
+[customization.md](customization.md)). None of these steps defines
+implementation code or final-validation work; final validation remains
+locked (see [governance.md](governance.md)).
 
 ## Intended Audience
 
@@ -201,7 +210,7 @@ specification itself.
 ## Document Hierarchy
 
 KBDL-001, KBDL-002, KBDL-003, KBDL-004, KBDL-005, KBDL-006, KBDL-007,
-KBDL-008, and KBDL-009 deliver the documents below with real content. Rows still
+KBDL-008, KBDL-009, and KBDL-010 deliver the documents below with real content. Rows still
 marked `Deferred` show the **planned location only** for future
 modules; those files do not exist yet and must not be created until
 their roadmap step is reached.
@@ -218,8 +227,8 @@ their roadmap step is reached.
 | 8 | Core action, form, and navigation components | Approved (architecture)§; Recommended (component-level taxonomies) | [components-core.md](components-core.md) |
 | 9 | Surface, overlay, feedback, and system-state components | Approved (architecture)¶; Recommended (component-level taxonomies) | [components-system.md](components-system.md) |
 | 10 | Project profiles (Showcase, Precision, Flow) | Approved (architecture)‖; Recommended (discretionary profile-governance policy) | [profiles.md](profiles.md) |
-| 11 | Manual customization | Deferred (locked until KBDL-009 passes validation) | `docs/kbdl/customization.md` (planned) |
-| 12 | Validation | Deferred | `docs/kbdl/validation.md` (planned) |
+| 11 | Manual customization | Approved (inherited and prompt-mandated governance); Recommended/Deferred (new policy) — under validation | [customization.md](customization.md) |
+| 12 | Validation | Deferred (locked until KBDL-010 passes validation) | `docs/kbdl/validation.md` (planned) |
 | 13 | Governance | Approved | [governance.md](governance.md) |
 | 14 | Future expansion | Deferred | Location to be determined when needed |
 

@@ -66,12 +66,46 @@ Uses the same four-column result convention.
 | 32 | Pending KBDL-008 dependencies are identified and not promoted | | | | |
 | 33 | Approval-ready and contingent KBDL-009 decisions are separated correctly ([profiles.md §34](profiles.md#34-approval-ready-versus-contingent-decisions)) | | | | |
 | 34 | Every non-Approved `KBDL-PRO-###` requirement has a packet or tracking destination ([profiles.md §38](profiles.md#38-decision-packet-coverage-audit)) | | | | |
-| 35 | KBDL-010 and later roadmap work remain unstarted | | | | |
+| 35 | KBDL-011 final validation and later roadmap work remain unstarted | | | | |
 | 36 | Implementation-level profile conformance is not claimed without recorded evidence | | | | |
 
-No row above is marked `Passed` in this repository; the profile
-specification has not yet passed planning-agent validation, and no
-project-level implementation exists to generate evidence against.
+No row above is marked `Passed` in this repository; no project-level
+implementation exists to generate evidence against.
+
+## KBDL-010 Manual Customization Checklist Items
+
+Applies in addition to the generic checklist whenever a change touches
+[customization.md](customization.md), a customization record, or any
+`KBDL-CUS-###` requirement. No row is pre-marked.
+
+| # | Item | Passed | Failed | Not verified | Not applicable |
+| --- | --- | --- | --- | --- | --- |
+| 37 | Customization is manual and documented | | | | |
+| 38 | Project and declared Profile are identified | | | | |
+| 39 | Every affected module and requirement is identified | | | | |
+| 40 | Source lifecycle statuses are recorded accurately | | | | |
+| 41 | Request has exactly one correct primary class | | | | |
+| 42 | Locked rules remain unchanged | | | | |
+| 43 | Approved requirements remain unchanged unless an Approved exception exists | | | | |
+| 44 | Controlled options remain inside Approved owning-module bounds | | | | |
+| 45 | Open expression remains subordinate to locked and Approved rules | | | | |
+| 46 | Pending recommendations are not promoted | | | | |
+| 47 | Accessibility impact is reviewed | | | | |
+| 48 | Responsive impact is reviewed | | | | |
+| 49 | Theme and foundation impacts are reviewed | | | | |
+| 50 | Motion impact is reviewed | | | | |
+| 51 | Component semantics and anatomy are preserved | | | | |
+| 52 | Profile invariants are preserved | | | | |
+| 53 | Security, privacy, correctness, and data integrity are preserved | | | | |
+| 54 | Required approval and its exact authority are recorded | | | | |
+| 55 | Decision-register impact is handled correctly | | | | |
+| 56 | Validation method and required evidence are defined | | | | |
+| 57 | Implementation-level validation is not claimed prematurely | | | | |
+| 58 | Rollback is documented | | | | |
+| 59 | Duration and review conditions are documented | | | | |
+| 60 | Reusable customization is escalated appropriately | | | | |
+| 61 | Every non-Approved CUS requirement has one packet or tracking destination | | | | |
+| 62 | Final validation and later-roadmap content remain unstarted | | | | |
 
 ## Result Summary
 

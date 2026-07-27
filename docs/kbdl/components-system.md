@@ -1912,8 +1912,9 @@ decision-packet mapping is changed by this addition.
 - Browser-support matrix — not proposed.
 - Profile-specific component variants — deferred to the Project
   Profiles module (`PRO`).
-- Manual customization of any KBDL-008 component — deferred to the
-  Manual Customization module (`CUS`).
+- Manual customization of any KBDL-008 component — governed by
+  [customization.md](customization.md), without changing this module's semantics
+  or promoting any KBDL-008 recommendation.
 - Implementation-level accessibility, real-device, and production
   conformance validation — `Not verified`, no implementation exists.
 - Use of any of the nine unapproved KBDL-006 recommendations, or the

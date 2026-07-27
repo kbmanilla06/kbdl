@@ -864,8 +864,9 @@ decisions:
   - Validation method: Project-owner review (not yet performed).
   - Known limitation: Recommended — grants no implementation authority pending project-owner review; see the decision packet.
 
-Manual customization of a project's KBDL implementation is out of scope
-for this document and belongs to a later roadmap module (`CUS`).
+Manual customization of a project's KBDL implementation is governed by
+[customization.md](customization.md); this profile document does not itself
+authorize a project customization.
 
 ## 26. Conforming Examples
 
@@ -1062,7 +1063,7 @@ and its one-to-one packet mapping.
 | KBDL-007 components | `KBDL-CMP-051`, full semantic/anatomy contract | Confirmed — [§20](#20-core-component-mapping) | Confirmed — [§36](#36-kbdl-007-approval-boundary-audit) | Confirmed |
 | KBDL-008 components | `KBDL-CMP-066`, full architecture/focus/status contract | Confirmed — [§21](#21-system-component-mapping) | Confirmed — [§37](#37-kbdl-008-approval-boundary-audit) | Confirmed |
 | Governance | Design-decision hierarchy, exception process | Confirmed — [§24](#24-profile-conflicts-and-exception-handling) | Not applicable | Confirmed |
-| Future customization (`CUS`) | Not yet reached | Not applicable | Not applicable | Not applicable — locked |
+| Manual customization (`CUS`) | [customization.md](customization.md) | Confirmed — Profile invariants remain mandatory | Confirmed — pending PRO items remain excluded | Confirmed |
 | Future validation (`VAL`) | Not yet reached | Not applicable | Not applicable | Not applicable — locked |
 
 ## 31. Profile-Invariant Validation Matrix
@@ -1167,8 +1168,8 @@ requirements (`KBDL-PRO-022`–`026`).
   scope for a design-language specification.
 - **Actual screen-reader/browser matrix for any profile** — depends on
   the unapproved `KBDL-A11Y-035`.
-- **Manual customization of a profile** — deferred to the later Manual
-  Customization module (`CUS`).
+- **Manual customization of a profile** — governed by
+  [customization.md](customization.md); no customization is approved here.
 - **Implementation-level profile validation and production
   conformance** — require an implementation that does not exist yet.
 
@@ -1326,8 +1327,8 @@ earlier-module recommendation.
 
 ## 39. Deferred and Unresolved Items
 
-- Manual customization of a profile — deferred to the Manual
-  Customization module (`CUS`).
+- Manual customization of a profile — governed by
+  [customization.md](customization.md), without promoting any profile recommendation.
 - Profile-specific token implementation, coded components, framework
   APIs, product templates, and Figma libraries — out of scope.
 - Exact profile-specific density values, component sizes, breakpoints,
