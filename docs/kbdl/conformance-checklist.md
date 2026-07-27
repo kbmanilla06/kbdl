@@ -41,6 +41,38 @@ An unfinished requirement must never be marked `Passed`.
 | 16 | Unresolved risks documented | | | | |
 | 17 | Reviewer approval recorded | | | | |
 
+## KBDL-009 Project Profiles Checklist Items
+
+Applies in addition to the generic checklist above whenever a change
+touches [profiles.md](profiles.md) or any `KBDL-PRO-###` requirement.
+Uses the same four-column result convention.
+
+| # | Item | Passed | Failed | Not verified | Not applicable |
+| --- | --- | --- | --- | --- | --- |
+| 18 | Profile declaration is present where applicable ([profiles.md §8](profiles.md#8-profile-selection-and-declaration)) | | | | |
+| 19 | Profile selection rationale is documented, not based on visual preference alone | | | | |
+| 20 | Project Profile is not confused with theme mode, viewport, device, role, persona, or manual customization | | | | |
+| 21 | One shared semantic architecture is preserved across Showcase, Precision, and Flow | | | | |
+| 22 | One shared accessibility architecture is preserved across all profiles | | | | |
+| 23 | Cross-profile invariants ([profiles.md §9](profiles.md#9-cross-profile-invariants)) are preserved | | | | |
+| 24 | Foundation roles and Approved values remain shared, not profile-specific | | | | |
+| 25 | Theme semantic roles and mode behavior remain shared, not profile-specific | | | | |
+| 26 | Motion timing/easing architecture remains shared, not profile-specific | | | | |
+| 27 | Responsive and reflow outcomes remain shared, not profile-specific | | | | |
+| 28 | Component semantics and anatomy (KBDL-007 and KBDL-008) remain unchanged across profiles | | | | |
+| 29 | Security, privacy, correctness, and state-accuracy requirements remain shared across profiles | | | | |
+| 30 | Pending KBDL-006 dependencies are identified and not promoted | | | | |
+| 31 | Pending KBDL-007 dependencies are identified and not promoted | | | | |
+| 32 | Pending KBDL-008 dependencies are identified and not promoted | | | | |
+| 33 | Approval-ready and contingent KBDL-009 decisions are separated correctly ([profiles.md §34](profiles.md#34-approval-ready-versus-contingent-decisions)) | | | | |
+| 34 | Every non-Approved `KBDL-PRO-###` requirement has a packet or tracking destination ([profiles.md §38](profiles.md#38-decision-packet-coverage-audit)) | | | | |
+| 35 | KBDL-010 and later roadmap work remain unstarted | | | | |
+| 36 | Implementation-level profile conformance is not claimed without recorded evidence | | | | |
+
+No row above is marked `Passed` in this repository; the profile
+specification has not yet passed planning-agent validation, and no
+project-level implementation exists to generate evidence against.
+
 ## Result Summary
 
 State the overall result as `Passed`, `Failed`, `Not verified`, or a mix with

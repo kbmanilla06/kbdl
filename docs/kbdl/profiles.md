@@ -145,19 +145,15 @@ separately approved.
   identity, principles, foundation, theme, motion, responsive,
   accessibility, and component architecture; a profile **must not**
   define a separate architecture in any of these areas.
-  - Lifecycle status: Approved (restates and consolidates the
-    already-Approved `KBDL-PRN-007`, `KBDL-FND-008`, `KBDL-THM-006`,
-    `KBDL-MOT-026`, `KBDL-A11Y-040`, `KBDL-CMP-051`, and `KBDL-CMP-066`,
-    each of which independently requires shared architecture in its own
-    module). Provenance: Confirmed. Validation status: Not verified.
-  - Related requirement: `KBDL-PRN-007`, `KBDL-FND-008`, `KBDL-THM-006`,
-    `KBDL-MOT-026`, `KBDL-A11Y-040`, `KBDL-CMP-051`, `KBDL-CMP-066`.
+  - Lifecycle status: Approved. Provenance: Confirmed. Validation status: Not verified.
+  - Authority: restates and consolidates the already-Approved `KBDL-PRN-007`, `KBDL-FND-008`, `KBDL-THM-006`, `KBDL-MOT-026`, `KBDL-A11Y-040`, `KBDL-CMP-051`, and `KBDL-CMP-066`, each of which independently requires shared architecture in its own module
+  - Related requirement: `KBDL-PRN-007`, `KBDL-FND-008`, `KBDL-THM-006`, `KBDL-MOT-026`, `KBDL-A11Y-040`, `KBDL-CMP-051`, `KBDL-CMP-066`.
   - Applicable profiles: Showcase, Precision, Flow.
-  - Specification location: [§5](#5-profile-architecture),
-    [§9](#9-cross-profile-invariants).
-  - Validation method: Manual cross-profile architecture review
-    (performed for this document's own consistency, see implementation
-    report).
+  - Specification location: [§5](#5-profile-architecture), [§9](#9-cross-profile-invariants).
+  - Decision-packet destination: None — Approved requirement; not awaiting packet approval
+  - Pending dependencies: None.
+  - Validation method: Manual cross-profile architecture review (performed for this document's own consistency, see implementation report).
+  - Known limitation: Implementation-level profile behavior is not verified; no coded project profile exists yet to test against.
 
 - **`KBDL-PRO-002`** — A Project Profile **must** be treated as
   project-level emphasis, distinct from theme mode, brand identity,
@@ -166,17 +162,15 @@ separately approved.
   component variant, and runtime UI state; a profile **must not** be
   presented as a user-selectable accessibility or presentation
   preference unless separately approved.
-  - Lifecycle status: Approved (the accessibility-preference distinction
-    restates the already-Approved independence of reduced-motion and
-    forced-colors preferences from any presentational grouping,
-    [accessibility.md §44](accessibility.md#44-profile-interpretation);
-    the complete terminology distinction is an explicit mandatory
-    clause of the approved KBDL-009 prompt's Terminology section).
-    Provenance: Confirmed. Validation status: Not verified.
+  - Lifecycle status: Approved. Provenance: Confirmed. Validation status: Not verified.
+  - Authority: the accessibility-preference distinction restates the already-Approved independence of reduced-motion and forced-colors preferences from any presentational grouping, [accessibility.md §44](accessibility.md#44-profile-interpretation); the complete terminology distinction is an explicit mandatory clause of the approved KBDL-009 prompt's Terminology section
   - Related requirement: `KBDL-A11Y-040`.
   - Applicable profiles: Showcase, Precision, Flow.
   - Specification location: [§4](#4-project-profile-terminology).
+  - Decision-packet destination: None — Approved requirement; not awaiting packet approval
+  - Pending dependencies: None.
   - Validation method: Manual terminology-consistency review.
+  - Known limitation: Implementation-level profile behavior is not verified; no coded project profile exists yet to test against.
 
 ## 6. Shared Semantic and Accessibility Architecture
 
@@ -223,55 +217,55 @@ correctness requirements already established across those modules (see
   rules, change core interaction meaning, introduce inconsistent
   component anatomy, ignore reduced-motion behavior, or create an
   unrelated visual identity.
-  - Lifecycle status: Approved (restates
-    [principles.md §9.4](principles.md#94-shared-constraints-across-profiles)
-    and the design-decision hierarchy, [principles.md §8](principles.md#8-design-decision-hierarchy)).
-    Provenance: Confirmed. Validation status: Not verified.
+  - Lifecycle status: Approved. Provenance: Confirmed. Validation status: Not verified.
+  - Authority: restates [principles.md §9.4](principles.md#94-shared-constraints-across-profiles) and the design-decision hierarchy, [principles.md §8](principles.md#8-design-decision-hierarchy)
   - Related requirement: `KBDL-PRN-006`, `KBDL-PRN-007`.
   - Applicable profiles: Showcase, Precision, Flow.
   - Specification location: [§7](#7-locked-controlled-and-open-profile-decisions).
-  - Validation method: Manual review once a project profile is
-    implemented.
+  - Decision-packet destination: None — Approved requirement; not awaiting packet approval
+  - Pending dependencies: None.
+  - Validation method: Manual review once a project profile is implemented.
+  - Known limitation: Implementation-level profile behavior is not verified; no coded project profile exists yet to test against.
 
 - **`KBDL-PRO-004`** — Profile-controlled variables **must** vary only
   within bounds already documented in their owning module; this
   document **must not** introduce a new controlled-variable bound not
   already approved elsewhere.
-  - Lifecycle status: Approved (restates
-    [principles.md §5.2](principles.md#52-controlled-visual-variables)
-    and the already-Approved per-module profile-interpretation sections
-    cited in [§3](#3-relationship-to-prior-kbdl-modules)). Provenance:
-    Confirmed. Validation status: Not verified.
+  - Lifecycle status: Approved. Provenance: Confirmed. Validation status: Not verified.
+  - Authority: restates [principles.md §5.2](principles.md#52-controlled-visual-variables) and the already-Approved per-module profile-interpretation sections cited in [§3](#3-relationship-to-prior-kbdl-modules)
   - Related requirement: `KBDL-PRN-005`.
   - Applicable profiles: Showcase, Precision, Flow.
   - Specification location: [§7](#7-locked-controlled-and-open-profile-decisions).
-  - Validation method: Manual review once a project profile is
-    implemented.
+  - Decision-packet destination: None — Approved requirement; not awaiting packet approval
+  - Pending dependencies: None.
+  - Validation method: Manual review once a project profile is implemented.
+  - Known limitation: Implementation-level profile behavior is not verified; no coded project profile exists yet to test against.
 
 - **`KBDL-PRO-005`** — Open brand expression **must** remain
   project-owned but subordinate to every locked and Approved rule.
-  - Lifecycle status: Approved (restates
-    [principles.md §5.3](principles.md#53-open-brand-expression)).
-    Provenance: Confirmed. Validation status: Not verified.
+  - Lifecycle status: Approved. Provenance: Confirmed. Validation status: Not verified.
+  - Authority: restates [principles.md §5.3](principles.md#53-open-brand-expression)
   - Related requirement: `KBDL-PRN-005`.
   - Applicable profiles: Showcase, Precision, Flow.
   - Specification location: [§7](#7-locked-controlled-and-open-profile-decisions).
-  - Validation method: Manual review once a project profile is
-    implemented.
+  - Decision-packet destination: None — Approved requirement; not awaiting packet approval
+  - Pending dependencies: None.
+  - Validation method: Manual review once a project profile is implemented.
+  - Known limitation: Not applicable — restates an existing scope/governance rule, not independently testable against an implementation.
 
 - **`KBDL-PRO-006`** — This document **must not** convert an unapproved
   earlier-module recommendation into an Approved, controlled profile
   variable.
-  - Lifecycle status: Approved (scope-control requirement, explicit
-    mandatory clause of the approved KBDL-009 prompt's Locked/Controlled/
-    Open section). Provenance: Confirmed. Validation status: Not
+  - Lifecycle status: Approved. Provenance: Confirmed. Validation status: Not
     applicable.
+  - Authority: scope-control requirement, explicit mandatory clause of the approved KBDL-009 prompt's Locked/Controlled/ Open section
   - Related requirement: Not applicable.
   - Applicable profiles: Showcase, Precision, Flow.
-  - Specification location: [§7](#7-locked-controlled-and-open-profile-decisions),
-    [§35](#35-kbdl-006-approval-boundary-audit)–[§37](#37-kbdl-008-approval-boundary-audit).
-  - Validation method: Manual scope-compliance review (performed, see
-    implementation report).
+  - Specification location: [§7](#7-locked-controlled-and-open-profile-decisions), [§35](#35-kbdl-006-approval-boundary-audit)–[§37](#37-kbdl-008-approval-boundary-audit).
+  - Decision-packet destination: None — Approved requirement; not awaiting packet approval
+  - Pending dependencies: None.
+  - Validation method: Manual scope-compliance review (performed, see implementation report).
+  - Known limitation: Not applicable — scope-control requirement, not independently testable against an implementation.
 
 ## 8. Profile Selection and Declaration
 
@@ -283,31 +277,30 @@ correctness requirements already established across those modules (see
   profile; selection rationale; applicable profile requirements;
   approved exceptions; pending dependencies; validation status; and the
   date and owner of the declaration.
-  - Lifecycle status: Approved (the required field list is an explicit
-    mandatory clause of the approved KBDL-009 prompt's Profile
-    Selection and Declaration section). Provenance: Confirmed.
-    Validation status: Not applicable.
+  - Lifecycle status: Approved. Provenance: Confirmed. Validation status: Not applicable.
+  - Authority: the required field list is an explicit mandatory clause of the approved KBDL-009 prompt's Profile Selection and Declaration section
   - Related requirement: `KBDL-PRO-001`.
   - Applicable profiles: Showcase, Precision, Flow.
   - Specification location: [§8](#8-profile-selection-and-declaration).
-  - Validation method: Manual review of a project's declaration once
-    one exists.
+  - Decision-packet destination: None — Approved requirement; not awaiting packet approval
+  - Pending dependencies: None.
+  - Validation method: Manual review of a project's declaration once one exists.
+  - Known limitation: No project profile declaration exists yet to review against this requirement's field list.
 
 - **`KBDL-PRO-008`** — A profile **must not** be selected solely because
   its name sounds desirable, its visual style appears more attractive,
   a team wants weaker density or accessibility constraints, a viewport
   is small or large, a user prefers light or dark mode, or a product
   uses one particular component.
-  - Lifecycle status: Approved (explicit mandatory clause of the
-    approved KBDL-009 prompt's Profile Selection and Declaration
-    section; also extends the already-Approved Accessibility by Default
-    principle, [principles.md §6.8](principles.md#68-accessibility-by-default)).
-    Provenance: Confirmed. Validation status: Not applicable.
+  - Lifecycle status: Approved. Provenance: Confirmed. Validation status: Not applicable.
+  - Authority: explicit mandatory clause of the approved KBDL-009 prompt's Profile Selection and Declaration section; also extends the already-Approved Accessibility by Default principle, [principles.md §6.8](principles.md#68-accessibility-by-default)
   - Related requirement: `KBDL-PRO-002`, `KBDL-PRN-003`.
   - Applicable profiles: Showcase, Precision, Flow.
   - Specification location: [§8](#8-profile-selection-and-declaration).
-  - Validation method: Manual review of a project's stated selection
-    rationale.
+  - Decision-packet destination: None — Approved requirement; not awaiting packet approval
+  - Pending dependencies: None.
+  - Validation method: Manual review of a project's stated selection rationale.
+  - Known limitation: No project profile declaration exists yet to review against this requirement.
 
 Whether a project must select exactly one primary profile, may select a
 secondary profile, or may use a hybrid model is new governance policy:
@@ -315,14 +308,28 @@ secondary profile, or may use a hybrid model is new governance policy:
 - **`KBDL-PRO-009`** — Adopt a policy on primary-profile exclusivity,
   secondary-profile permission, and any hybrid-profile precedence
   model.
-  - Lifecycle status: Recommended (new governance policy, not mandated
-    by the approved prompt beyond requiring that the choice be made).
-    Provenance: Assumed. Validation status: Not applicable.
+  - Lifecycle status: Recommended. Provenance: Assumed. Validation status: Not applicable.
+  - Authority: Not applicable — pending explicit project-owner approval; assignment of a PRO ID does not grant implementation authority.
   - Related requirement: `KBDL-PRO-007`.
   - Applicable profiles: Showcase, Precision, Flow.
-  - Specification location: [§8](#8-profile-selection-and-declaration),
-    [§33](#33-kbdl-009-decision-packet) item 1.
+  - Specification location: [§8](#8-profile-selection-and-declaration), [§33](#33-kbdl-009-decision-packet) item 1.
+  - Decision-packet destination: Approval-ready item 1
+  - Pending dependencies: None.
   - Validation method: Project-owner review (not yet performed).
+  - Known limitation: Recommended — grants no implementation authority pending project-owner review; see the decision packet.
+
+- **`KBDL-PRO-028`** — Adopt a qualitative profile-selection rubric
+  (project characteristics to profile fit) that does not rely on a
+  numeric score.
+  - Lifecycle status: Recommended. Provenance: Assumed. Validation status: Not applicable.
+  - Authority: Not applicable — pending explicit project-owner approval; assignment of a PRO ID does not grant implementation authority.
+  - Related requirement: `KBDL-PRO-007`, `KBDL-PRO-008`.
+  - Applicable profiles: Showcase, Precision, Flow.
+  - Specification location: [§8](#8-profile-selection-and-declaration), [§33](#33-kbdl-009-decision-packet) item 4.
+  - Decision-packet destination: Approval-ready item 4
+  - Pending dependencies: None.
+  - Validation method: Project-owner review (not yet performed).
+  - Known limitation: Recommended — grants no implementation authority pending project-owner review; see the decision packet.
 
 ## 9. Cross-Profile Invariants
 
@@ -353,18 +360,15 @@ like moments, and media-led presentation.
   comfort, a clear primary message and action, motion that settles
   during consumption, stable navigation, accessible media treatment,
   and responsive content order.
-  - Lifecycle status: Approved (consolidates the already-Approved
-    Showcase interpretation already established in
-    [principles.md §9.1](principles.md#91-showcase-profile),
-    [foundations/README.md §4.1](foundations/README.md#41-showcase),
-    [themes/README.md §8](themes/README.md#8-project-profile-theme-interpretation)
-    Showcase, [motion/patterns.md §10.1](motion/patterns.md#101-showcase),
-    and [responsive.md §28](responsive.md#28-showcase-profile-interpretation)).
-    Provenance: Confirmed. Validation status: Not verified.
+  - Lifecycle status: Approved. Provenance: Confirmed. Validation status: Not verified.
+  - Authority: consolidates the already-Approved Showcase interpretation already established in [principles.md §9.1](principles.md#91-showcase-profile), [foundations/README.md §4.1](foundations/README.md#41-showcase), [themes/README.md §8](themes/README.md#8-project-profile-theme-interpretation) Showcase, [motion/patterns.md §10.1](motion/patterns.md#101-showcase), and [responsive.md §28](responsive.md#28-showcase-profile-interpretation)
   - Related requirement: `KBDL-PRO-001`, `KBDL-MOT-034`.
   - Applicable profiles: Showcase.
   - Specification location: [§10](#10-showcase-profile).
+  - Decision-packet destination: None — Approved requirement; not awaiting packet approval
+  - Pending dependencies: None.
   - Validation method: Manual cross-module consistency review.
+  - Known limitation: Implementation-level profile behavior is not verified; no coded project profile exists yet to test against.
 
 ### 10.2 Component Interpretation
 
@@ -376,17 +380,16 @@ like moments, and media-led presentation.
   actions, allow media surfaces to replace semantic headings or
   navigation, treat tooltips as accessible names, or use carousels
   without their full Approved accessibility behavior.
-  - Lifecycle status: Approved (restates the already-Approved
-    `KBDL-CMP-051`, `KBDL-CMP-066`, `KBDL-CMP-055` hover-independent-
-    discoverability prohibition, `KBDL-CMP-072` tooltip-naming-
-    independence rule, and `KBDL-CMP-107` carousel pause/stop/hide
-    requirement). Provenance: Confirmed. Validation status: Not
+  - Lifecycle status: Approved. Provenance: Confirmed. Validation status: Not
     verified.
-  - Related requirement: `KBDL-CMP-051`, `KBDL-CMP-055`, `KBDL-CMP-066`,
-    `KBDL-CMP-072`, `KBDL-CMP-107`.
+  - Authority: restates the already-Approved `KBDL-CMP-051`, `KBDL-CMP-066`, `KBDL-CMP-055` hover-independent- discoverability prohibition, `KBDL-CMP-072` tooltip-naming- independence rule, and `KBDL-CMP-107` carousel pause/stop/hide requirement
+  - Related requirement: `KBDL-CMP-051`, `KBDL-CMP-055`, `KBDL-CMP-066`, `KBDL-CMP-072`, `KBDL-CMP-107`.
   - Applicable profiles: Showcase.
   - Specification location: [§10.2](#102-component-interpretation).
+  - Decision-packet destination: None — Approved requirement; not awaiting packet approval
+  - Pending dependencies: None.
   - Validation method: Manual component-composition review.
+  - Known limitation: Implementation-level profile behavior is not verified; no coded project profile exists yet to test against.
 
 Any exact Showcase card-variant or composition default remains new
 policy:
@@ -394,16 +397,15 @@ policy:
 - **`KBDL-PRO-016`** — Adopt exact Showcase composition and
   component-emphasis defaults (which Card variant, media relationship,
   and navigation composition Showcase uses by default).
-  - Lifecycle status: Recommended (new discretionary profile-specific
-    default; also contingent on the still-unapproved KBDL-008
-    card-variant taxonomy, `KBDL-CMP-067`). Provenance: Assumed.
-    Validation status: Not applicable.
+  - Lifecycle status: Recommended. Provenance: Assumed. Validation status: Not applicable.
+  - Authority: Not applicable — pending explicit project-owner approval; assignment of a PRO ID does not grant implementation authority.
   - Related requirement: `KBDL-PRO-013`, `KBDL-CMP-067`.
   - Applicable profiles: Showcase.
-  - Specification location: [§10.2](#102-component-interpretation),
-    [§34](#34-approval-ready-versus-contingent-decisions) (contingent).
-  - Validation method: Project-owner review (not yet performed); not
-    independently approvable until `KBDL-CMP-067` is approved.
+  - Specification location: [§10.2](#102-component-interpretation), [§34](#34-approval-ready-versus-contingent-decisions) (contingent).
+  - Decision-packet destination: Contingent — [§33.3](#333-unresolved-or-not-approval-ready); not independently approval-ready
+  - Pending dependencies: `KBDL-CMP-067` (KBDL-008) — blocking.
+  - Validation method: Project-owner review (not yet performed); not independently approvable until `KBDL-CMP-067` is approved.
+  - Known limitation: Contingent on the unapproved KBDL-008 `KBDL-CMP-067`; cannot be approved independently through the KBDL-009 packet until `KBDL-CMP-067` is approved or replaced.
 
 ## 11. Precision Profile
 
@@ -417,18 +419,15 @@ repeated workflows, data review, and information-dense applications.
   predictable navigation, clear state presentation, readable density,
   alignment and structural precision, low visual noise, performance,
   error visibility, and data stability.
-  - Lifecycle status: Approved (consolidates the already-Approved
-    Precision interpretation in
-    [principles.md §9.2](principles.md#92-precision-profile),
-    [foundations/README.md §4.2](foundations/README.md#42-precision),
-    [themes/README.md §8](themes/README.md#8-project-profile-theme-interpretation)
-    Precision, [motion/patterns.md §10.2](motion/patterns.md#102-precision),
-    and [responsive.md §29](responsive.md#29-precision-profile-interpretation)).
-    Provenance: Confirmed. Validation status: Not verified.
+  - Lifecycle status: Approved. Provenance: Confirmed. Validation status: Not verified.
+  - Authority: consolidates the already-Approved Precision interpretation in [principles.md §9.2](principles.md#92-precision-profile), [foundations/README.md §4.2](foundations/README.md#42-precision), [themes/README.md §8](themes/README.md#8-project-profile-theme-interpretation) Precision, [motion/patterns.md §10.2](motion/patterns.md#102-precision), and [responsive.md §29](responsive.md#29-precision-profile-interpretation)
   - Related requirement: `KBDL-PRO-001`, `KBDL-MOT-034`.
   - Applicable profiles: Precision.
   - Specification location: [§11](#11-precision-profile).
+  - Decision-packet destination: None — Approved requirement; not awaiting packet approval
+  - Pending dependencies: None.
   - Validation method: Manual cross-module consistency review.
+  - Known limitation: Implementation-level profile behavior is not verified; no coded project profile exists yet to test against.
 
 ### 11.2 Component Interpretation
 
@@ -440,21 +439,15 @@ repeated workflows, data review, and information-dense applications.
   minimum, replace native tables with grids for styling alone, hide
   critical actions behind hover, or weaken focus, status, or error
   communication.
-  - Lifecycle status: Approved (restates the already-Approved
-    `KBDL-CMP-051`, `KBDL-CMP-066`, `KBDL-CMP-010` WCAG 24×24 target-
-    size minimum, `KBDL-CMP-070` native-table/grid-misuse prohibition,
-    and `KBDL-CMP-055` hover-independent-discoverability prohibition).
-    Provenance: Confirmed. Validation status: Not verified.
-  - Related requirement: `KBDL-CMP-010`, `KBDL-CMP-051`, `KBDL-CMP-055`,
-    `KBDL-CMP-066`, `KBDL-CMP-070`.
+  - Lifecycle status: Approved. Provenance: Confirmed. Validation status: Not verified.
+  - Authority: restates the already-Approved `KBDL-CMP-051`, `KBDL-CMP-066`, `KBDL-CMP-010` WCAG 24×24 target- size minimum, `KBDL-CMP-070` native-table/grid-misuse prohibition, and `KBDL-CMP-055` hover-independent-discoverability prohibition
+  - Related requirement: `KBDL-CMP-010`, `KBDL-CMP-051`, `KBDL-CMP-055`, `KBDL-CMP-066`, `KBDL-CMP-070`.
   - Applicable profiles: Precision.
   - Specification location: [§11.2](#112-component-interpretation).
-  - Validation method: Manual component-composition review. This
-    requirement does not adopt the pending grid-versus-table threshold
-    (`KBDL-CMP-105`) or data-dense transformation strategy
-    (`KBDL-RSP-011`) as authority — both remain cited only as
-    unapproved context (see
-    [§37](#37-kbdl-008-approval-boundary-audit)).
+  - Decision-packet destination: None — Approved requirement; not awaiting packet approval
+  - Pending dependencies: None blocking; `KBDL-CMP-105`, `KBDL-RSP-011` cited as unapproved context only, not adopted as authority.
+  - Validation method: Manual component-composition review. This requirement does not adopt the pending grid-versus-table threshold (`KBDL-CMP-105`) or data-dense transformation strategy (`KBDL-RSP-011`) as authority — both remain cited only as unapproved context (see [§37](#37-kbdl-008-approval-boundary-audit)).
+  - Known limitation: Implementation-level profile behavior is not verified; no coded project profile exists yet to test against.
 
 Any exact Precision density or component-variant default remains new
 policy:
@@ -463,13 +456,15 @@ policy:
   component-emphasis defaults (compact spacing intensity, default table
   presentation, and action-composition density Precision uses by
   default).
-  - Lifecycle status: Recommended (new discretionary profile-specific
-    default). Provenance: Assumed. Validation status: Not applicable.
+  - Lifecycle status: Recommended. Provenance: Assumed. Validation status: Not applicable.
+  - Authority: Not applicable — pending explicit project-owner approval; assignment of a PRO ID does not grant implementation authority.
   - Related requirement: `KBDL-PRO-014`.
   - Applicable profiles: Precision.
-  - Specification location: [§11.2](#112-component-interpretation),
-    [§33](#33-kbdl-009-decision-packet) item 2.
+  - Specification location: [§11.2](#112-component-interpretation), [§33](#33-kbdl-009-decision-packet) item 2.
+  - Decision-packet destination: Approval-ready item 2
+  - Pending dependencies: None blocking; `KBDL-RSP-002`, `KBDL-RSP-003` cited as unapproved context only for the eventual exact grid-interaction point, not required for this item's own approval.
   - Validation method: Project-owner review (not yet performed).
+  - Known limitation: Recommended — grants no implementation authority pending project-owner review; see the decision packet.
 
 ## 12. Flow Profile
 
@@ -483,18 +478,15 @@ workflows.
   comprehension, one clear next step, guided progression, reassuring
   feedback, recovery visibility, responsive simplicity, trust, plain
   language, immediate action acknowledgment, and balanced expression.
-  - Lifecycle status: Approved (consolidates the already-Approved Flow
-    interpretation in
-    [principles.md §9.3](principles.md#93-flow-profile),
-    [foundations/README.md §4.3](foundations/README.md#43-flow),
-    [themes/README.md §8](themes/README.md#8-project-profile-theme-interpretation)
-    Flow, [motion/patterns.md §10.3](motion/patterns.md#103-flow), and
-    [responsive.md §30](responsive.md#30-flow-profile-interpretation)).
-    Provenance: Confirmed. Validation status: Not verified.
+  - Lifecycle status: Approved. Provenance: Confirmed. Validation status: Not verified.
+  - Authority: consolidates the already-Approved Flow interpretation in [principles.md §9.3](principles.md#93-flow-profile), [foundations/README.md §4.3](foundations/README.md#43-flow), [themes/README.md §8](themes/README.md#8-project-profile-theme-interpretation) Flow, [motion/patterns.md §10.3](motion/patterns.md#103-flow), and [responsive.md §30](responsive.md#30-flow-profile-interpretation)
   - Related requirement: `KBDL-PRO-001`, `KBDL-MOT-034`.
   - Applicable profiles: Flow.
   - Specification location: [§12](#12-flow-profile).
+  - Decision-packet destination: None — Approved requirement; not awaiting packet approval
+  - Pending dependencies: None.
   - Validation method: Manual cross-module consistency review.
+  - Known limitation: Implementation-level profile behavior is not verified; no coded project profile exists yet to test against.
 
 ### 12.2 Component Interpretation
 
@@ -504,19 +496,15 @@ workflows.
   using only existing Approved component semantics; Flow **must not**
   change field, action, or navigation semantics, or present critical
   information only in a transient Toast.
-  - Lifecycle status: Approved (restates the already-Approved
-    `KBDL-CMP-051`, `KBDL-CMP-066`, and `KBDL-CMP-090` toast
-    critical-information-persistence requirement). Provenance:
-    Confirmed. Validation status: Not verified.
+  - Lifecycle status: Approved. Provenance: Confirmed. Validation status: Not verified.
+  - Authority: restates the already-Approved `KBDL-CMP-051`, `KBDL-CMP-066`, and `KBDL-CMP-090` toast critical-information-persistence requirement
   - Related requirement: `KBDL-CMP-051`, `KBDL-CMP-066`, `KBDL-CMP-090`.
   - Applicable profiles: Flow.
   - Specification location: [§12.2](#122-component-interpretation).
-  - Validation method: Manual component-composition review. This
-    requirement does not adopt the pending button-hierarchy
-    (`KBDL-CMP-015`) or form-action-row-ordering (`KBDL-CMP-036`)
-    recommendations as authority for Flow's action sequences — both
-    remain cited only as unapproved context (see
-    [§36](#36-kbdl-007-approval-boundary-audit)).
+  - Decision-packet destination: None — Approved requirement; not awaiting packet approval
+  - Pending dependencies: None blocking; `KBDL-CMP-015`, `KBDL-CMP-036` cited as unapproved context only, not adopted as authority.
+  - Validation method: Manual component-composition review. This requirement does not adopt the pending button-hierarchy (`KBDL-CMP-015`) or form-action-row-ordering (`KBDL-CMP-036`) recommendations as authority for Flow's action sequences — both remain cited only as unapproved context (see [§36](#36-kbdl-007-approval-boundary-audit)).
+  - Known limitation: Implementation-level profile behavior is not verified; no coded project profile exists yet to test against.
 
 Any exact Flow action-hierarchy or workflow-component default remains
 new policy:
@@ -524,17 +512,15 @@ new policy:
 - **`KBDL-PRO-018`** — Adopt exact Flow action-progression and
   workflow-component defaults (default action-sequence composition and
   progress-indicator treatment Flow uses by default).
-  - Lifecycle status: Recommended (new discretionary profile-specific
-    default; also contingent on the still-unapproved KBDL-007 button-
-    hierarchy, `KBDL-CMP-015`, and form-action-row-ordering,
-    `KBDL-CMP-036`, recommendations for its exact action sequencing).
-    Provenance: Assumed. Validation status: Not applicable.
+  - Lifecycle status: Recommended. Provenance: Assumed. Validation status: Not applicable.
+  - Authority: Not applicable — pending explicit project-owner approval; assignment of a PRO ID does not grant implementation authority.
   - Related requirement: `KBDL-PRO-015`, `KBDL-CMP-015`, `KBDL-CMP-036`.
   - Applicable profiles: Flow.
-  - Specification location: [§12.2](#122-component-interpretation),
-    [§34](#34-approval-ready-versus-contingent-decisions) (contingent).
-  - Validation method: Project-owner review (not yet performed); not
-    independently approvable until `KBDL-CMP-015`/`036` are approved.
+  - Specification location: [§12.2](#122-component-interpretation), [§34](#34-approval-ready-versus-contingent-decisions) (contingent).
+  - Decision-packet destination: Contingent — [§33.3](#333-unresolved-or-not-approval-ready); not independently approval-ready
+  - Pending dependencies: `KBDL-CMP-015`, `KBDL-CMP-036` (KBDL-007) — blocking.
+  - Validation method: Project-owner review (not yet performed); not independently approvable until `KBDL-CMP-015`/`036` are approved.
+  - Known limitation: Contingent on the unapproved KBDL-007 `KBDL-CMP-015`/`036`; cannot be approved independently through the KBDL-009 packet until those are approved or replaced.
 
 ## 13. Cross-Profile Comparison Matrix
 
@@ -583,14 +569,15 @@ explicitly marked `Recommended` above.
 - **`KBDL-PRO-019`** — Every profile **must** map to, and **must not**
   reinterpret into its opposite, each of the nine core KBDL principles
   in [principles.md §6](principles.md#6-core-principles).
-  - Lifecycle status: Approved (restates the already-Approved
-    `KBDL-PRN-003`, extended explicitly to per-profile mapping).
-    Provenance: Confirmed. Validation status: Not verified.
+  - Lifecycle status: Approved. Provenance: Confirmed. Validation status: Not verified.
+  - Authority: restates the already-Approved `KBDL-PRN-003`, extended explicitly to per-profile mapping
   - Related requirement: `KBDL-PRN-003`, `KBDL-PRN-007`.
   - Applicable profiles: Showcase, Precision, Flow.
   - Specification location: [§14](#14-principles-mapping).
-  - Validation method: Manual principle-by-principle review using each
-    principle's review questions ([principles.md §6](principles.md#6-core-principles)).
+  - Decision-packet destination: None — Approved requirement; not awaiting packet approval
+  - Pending dependencies: None.
+  - Validation method: Manual principle-by-principle review using each principle's review questions ([principles.md §6](principles.md#6-core-principles)).
+  - Known limitation: Implementation-level profile behavior is not verified; no coded project profile exists yet to test against.
 
 ## 15. Foundation Mapping
 
@@ -717,13 +704,15 @@ adopt.
 - **`KBDL-PRO-020`** — KBDL-007 core-component semantics and anatomy
   **must** remain unchanged and identical across Showcase, Precision,
   and Flow.
-  - Lifecycle status: Approved (restates and extends the already-
-    Approved `KBDL-CMP-051` explicitly to this module's own mapping).
-    Provenance: Confirmed. Validation status: Not verified.
+  - Lifecycle status: Approved. Provenance: Confirmed. Validation status: Not verified.
+  - Authority: restates and extends the already- Approved `KBDL-CMP-051` explicitly to this module's own mapping
   - Related requirement: `KBDL-CMP-051`.
   - Applicable profiles: Showcase, Precision, Flow.
   - Specification location: [§20](#20-core-component-mapping).
+  - Decision-packet destination: None — Approved requirement; not awaiting packet approval
+  - Pending dependencies: None.
   - Validation method: Manual cross-profile component-semantics review.
+  - Known limitation: Implementation-level profile behavior is not verified; no coded project profile exists yet to test against.
 
 ## 21. System-Component Mapping
 
@@ -746,13 +735,15 @@ seventeen pending KBDL-008 policies — see
 - **`KBDL-PRO-021`** — KBDL-008 system-component semantics, focus
   models, modality, status meaning, and recovery behavior **must**
   remain unchanged and identical across Showcase, Precision, and Flow.
-  - Lifecycle status: Approved (restates and extends the already-
-    Approved `KBDL-CMP-066` explicitly to this module's own mapping).
-    Provenance: Confirmed. Validation status: Not verified.
+  - Lifecycle status: Approved. Provenance: Confirmed. Validation status: Not verified.
+  - Authority: restates and extends the already- Approved `KBDL-CMP-066` explicitly to this module's own mapping
   - Related requirement: `KBDL-CMP-066`.
   - Applicable profiles: Showcase, Precision, Flow.
   - Specification location: [§21](#21-system-component-mapping).
+  - Decision-packet destination: None — Approved requirement; not awaiting packet approval
+  - Pending dependencies: None.
   - Validation method: Manual cross-profile component-semantics review.
+  - Known limitation: Implementation-level profile behavior is not verified; no coded project profile exists yet to test against.
 
 ## 22. Content and Communication Considerations
 
@@ -763,19 +754,16 @@ seventeen pending KBDL-008 policies — see
   communication; a profile's content-tone emphasis (editorial,
   scannable, or reassuring) **must not** create separate semantics or
   weaker error disclosure.
-  - Lifecycle status: Approved (restates the already-Approved Consumer
-    Comprehension principle, [principles.md §6.3](principles.md#63-consumer-comprehension),
-    and the already-Approved `KBDL-CMP-101`/`103` honest-system-state-
-    communication rules). Provenance: Confirmed. Validation status: Not
+  - Lifecycle status: Approved. Provenance: Confirmed. Validation status: Not
     verified.
+  - Authority: restates the already-Approved Consumer Comprehension principle, [principles.md §6.3](principles.md#63-consumer-comprehension), and the already-Approved `KBDL-CMP-101`/`103` honest-system-state- communication rules
   - Related requirement: `KBDL-PRN-003`, `KBDL-CMP-101`, `KBDL-CMP-103`.
   - Applicable profiles: Showcase, Precision, Flow.
   - Specification location: [§22](#22-content-and-communication-considerations).
-  - Validation method: Manual content review. Showcase may emphasize
-    editorial storytelling and project narrative; Precision may
-    emphasize scannable labels and operational precision; Flow may
-    emphasize reassuring instructions and recovery guidance — none of
-    these emphases changes the shared requirements above.
+  - Decision-packet destination: None — Approved requirement; not awaiting packet approval
+  - Pending dependencies: None.
+  - Validation method: Manual content review. Showcase may emphasize editorial storytelling and project narrative; Precision may emphasize scannable labels and operational precision; Flow may emphasize reassuring instructions and recovery guidance — none of these emphases changes the shared requirements above.
+  - Known limitation: Implementation-level profile behavior is not verified; no coded project profile exists yet to test against.
 
 ## 23. Security, Privacy, and Correctness
 
@@ -787,20 +775,15 @@ seventeen pending KBDL-008 policies — see
   permission-denied or not-found privacy behavior, or use profile
   emphasis to justify a less-visible error or inaccessible
   authentication.
-  - Lifecycle status: Approved (restates the already-Approved
-    `KBDL-CMP-063`, `064`, `098`, `101`, `103`, `104` security and
-    correctness principles, extended explicitly to profile emphasis by
-    the approved KBDL-009 prompt's Security Requirements section).
-    Provenance: Confirmed. Validation status: Not verified.
-  - Related requirement: `KBDL-CMP-063`, `KBDL-CMP-064`, `KBDL-CMP-098`,
-    `KBDL-CMP-101`, `KBDL-CMP-103`, `KBDL-CMP-104`.
+  - Lifecycle status: Approved. Provenance: Confirmed. Validation status: Not verified.
+  - Authority: restates the already-Approved `KBDL-CMP-063`, `064`, `098`, `101`, `103`, `104` security and correctness principles, extended explicitly to profile emphasis by the approved KBDL-009 prompt's Security Requirements section
+  - Related requirement: `KBDL-CMP-063`, `KBDL-CMP-064`, `KBDL-CMP-098`, `KBDL-CMP-101`, `KBDL-CMP-103`, `KBDL-CMP-104`.
   - Applicable profiles: Showcase, Precision, Flow.
   - Specification location: [§23](#23-security-privacy-and-correctness).
-  - Validation method: Manual security review. Precision density must
-    not obscure permissions or errors; Showcase expression must not
-    expose private media or metadata; Flow reassurance must not make
-    unconfirmed success claims — each restates the shared rule above
-    for its own emphasis area.
+  - Decision-packet destination: None — Approved requirement; not awaiting packet approval
+  - Pending dependencies: None.
+  - Validation method: Manual security review. Precision density must not obscure permissions or errors; Showcase expression must not expose private media or metadata; Flow reassurance must not make unconfirmed success claims — each restates the shared rule above for its own emphasis area.
+  - Known limitation: Implementation-level profile behavior is not verified; no coded project profile exists yet to test against.
 
 ## 24. Profile Conflicts and Exception Handling
 
@@ -813,27 +796,27 @@ seventeen pending KBDL-008 policies — see
   requirement, explain the conflict, identify impact, record
   alternatives, follow KBDL governance, receive explicit project-owner
   approval, and be entered in the decision register where required.
-  - Lifecycle status: Approved (restates
-    [principles.md §8](principles.md#8-design-decision-hierarchy) and
-    [governance.md § Exception process](governance.md#exception-process)).
-    Provenance: Confirmed. Validation status: Not verified.
-  - Related requirement: `KBDL-PRN-006`, `KBDL-GOV-002`,
-    `KBDL-GOV-003`.
+  - Lifecycle status: Approved. Provenance: Confirmed. Validation status: Not verified.
+  - Authority: restates [principles.md §8](principles.md#8-design-decision-hierarchy) and [governance.md § Exception process](governance.md#exception-process)
+  - Related requirement: `KBDL-PRN-006`, `KBDL-GOV-002`, `KBDL-GOV-003`.
   - Applicable profiles: Showcase, Precision, Flow.
   - Specification location: [§24](#24-profile-conflicts-and-exception-handling).
-  - Validation method: Manual review of any proposed exception against
-    the governance exception process.
+  - Decision-packet destination: None — Approved requirement; not awaiting packet approval
+  - Pending dependencies: None.
+  - Validation method: Manual review of any proposed exception against the governance exception process.
+  - Known limitation: Implementation-level profile behavior is not verified; no coded project profile exists yet to test against.
 
 - **`KBDL-PRO-025`** — This document **must not** create or approve any
   profile exception.
-  - Lifecycle status: Approved (scope-control requirement, explicit
-    mandatory clause of the approved KBDL-009 prompt). Provenance:
-    Confirmed. Validation status: Not applicable.
+  - Lifecycle status: Approved. Provenance: Confirmed. Validation status: Not applicable.
+  - Authority: scope-control requirement, explicit mandatory clause of the approved KBDL-009 prompt
   - Related requirement: `KBDL-PRO-024`.
   - Applicable profiles: Showcase, Precision, Flow.
   - Specification location: [§24](#24-profile-conflicts-and-exception-handling).
-  - Validation method: Manual scope-compliance review (performed, see
-    implementation report).
+  - Decision-packet destination: None — Approved requirement; not awaiting packet approval
+  - Pending dependencies: None.
+  - Validation method: Manual scope-compliance review (performed, see implementation report).
+  - Known limitation: Not applicable — scope-control requirement, not independently testable against an implementation.
 
 ## 25. Profile Adoption and Change Management
 
@@ -841,14 +824,15 @@ seventeen pending KBDL-008 policies — see
   document: initial profile selection; owner; rationale; scope; review
   date; approved exceptions; pending recommendations; affected product
   areas; change history; and validation status.
-  - Lifecycle status: Approved (explicit mandatory field list from the
-    approved KBDL-009 prompt's Profile Adoption and Change Management
-    section). Provenance: Confirmed. Validation status: Not applicable.
+  - Lifecycle status: Approved. Provenance: Confirmed. Validation status: Not applicable.
+  - Authority: explicit mandatory field list from the approved KBDL-009 prompt's Profile Adoption and Change Management section
   - Related requirement: `KBDL-PRO-007`.
   - Applicable profiles: Showcase, Precision, Flow.
   - Specification location: [§25](#25-profile-adoption-and-change-management).
-  - Validation method: Manual review of a project's adoption record
-    once one exists.
+  - Decision-packet destination: None — Approved requirement; not awaiting packet approval
+  - Pending dependencies: None.
+  - Validation method: Manual review of a project's adoption record once one exists.
+  - Known limitation: No project profile adoption record exists yet to review against this requirement's field list.
 
 Whether a profile may change after adoption, whether a project may have
 multiple profile scopes, and how migration is governed are new
@@ -858,13 +842,27 @@ decisions:
   policy: whether a profile may change after adoption, whether a
   project may have multiple concurrent profile scopes, and how a
   migration between profiles is reviewed and recorded.
-  - Lifecycle status: Recommended (new governance policy). Provenance:
-    Assumed. Validation status: Not applicable.
+  - Lifecycle status: Recommended. Provenance: Assumed. Validation status: Not applicable.
+  - Authority: Not applicable — pending explicit project-owner approval; assignment of a PRO ID does not grant implementation authority.
   - Related requirement: `KBDL-PRO-026`.
   - Applicable profiles: Showcase, Precision, Flow.
-  - Specification location: [§25](#25-profile-adoption-and-change-management),
-    [§33](#33-kbdl-009-decision-packet) item 3.
+  - Specification location: [§25](#25-profile-adoption-and-change-management), [§33](#33-kbdl-009-decision-packet) item 3.
+  - Decision-packet destination: Approval-ready item 3
+  - Pending dependencies: None.
   - Validation method: Project-owner review (not yet performed).
+  - Known limitation: Recommended — grants no implementation authority pending project-owner review; see the decision packet.
+
+- **`KBDL-PRO-029`** — Adopt a default profile-adoption-record review
+  cadence.
+  - Lifecycle status: Recommended. Provenance: Assumed. Validation status: Not applicable.
+  - Authority: Not applicable — pending explicit project-owner approval; assignment of a PRO ID does not grant implementation authority.
+  - Related requirement: `KBDL-PRO-026`.
+  - Applicable profiles: Showcase, Precision, Flow.
+  - Specification location: [§25](#25-profile-adoption-and-change-management), [§33](#33-kbdl-009-decision-packet) item 5.
+  - Decision-packet destination: Approval-ready item 5
+  - Pending dependencies: None.
+  - Validation method: Project-owner review (not yet performed).
+  - Known limitation: Recommended — grants no implementation authority pending project-owner review; see the decision packet.
 
 Manual customization of a project's KBDL implementation is out of scope
 for this document and belongs to a later roadmap module (`CUS`).
@@ -992,9 +990,11 @@ Documentation examples only; none has been implementation-tested.
 
 See each section above ([§5](#5-profile-architecture) through
 [§25](#25-profile-adoption-and-change-management)) for the full text of
-every `KBDL-PRO-001` through `KBDL-PRO-027` requirement. This section
-is a pointer, not a duplicate, consistent with the single-authoritative-
-location pattern already used in
+every `KBDL-PRO-001` through `KBDL-PRO-029` requirement — including
+`KBDL-PRO-028` (§8) and `KBDL-PRO-029` (§25), each with exactly one
+authoritative normative record. This section is a pointer, not a
+duplicate, consistent with the single-authoritative-location pattern
+already used in
 [components-system.md §27](components-system.md#27-normative-requirements).
 
 **Authoritative status summary** (derived directly from the
@@ -1017,37 +1017,37 @@ and its one-to-one packet mapping.
 
 ## 29. Requirement Coverage Matrix
 
-| ID | Title | Scope | Category | Lifecycle | Provenance | Authority | Decision-packet destination |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| `KBDL-PRO-001` | Shared profile architecture | Shared | Architecture | Approved | Confirmed | Prior-KBDL | None |
-| `KBDL-PRO-002` | Profile terminology distinction | Shared | Terminology | Approved | Confirmed | Prior-KBDL + prompt | None |
-| `KBDL-PRO-003` | Locked-decision protection | Shared | Governance | Approved | Confirmed | Prior-KBDL | None |
-| `KBDL-PRO-004` | Controlled-variable integrity | Shared | Governance | Approved | Confirmed | Prior-KBDL | None |
-| `KBDL-PRO-005` | Open-expression subordination | Shared | Governance | Approved | Confirmed | Prior-KBDL | None |
-| `KBDL-PRO-006` | No silent earlier-module conversion | Shared | Scope control | Approved | Confirmed | Prompt | None |
-| `KBDL-PRO-007` | Profile declaration fields | Shared | Process | Approved | Confirmed | Prompt | None |
-| `KBDL-PRO-008` | Prohibited selection rationale | Shared | Process | Approved | Confirmed | Prompt + prior-KBDL | None |
-| `KBDL-PRO-009` | Primary/secondary/hybrid policy | Shared | Governance | Recommended | Assumed | N/A | Item 1 |
-| `KBDL-PRO-010` | Showcase purpose/emphasis | Showcase | Definition | Approved | Confirmed | Prior-KBDL | None |
-| `KBDL-PRO-011` | Precision purpose/emphasis | Precision | Definition | Approved | Confirmed | Prior-KBDL | None |
-| `KBDL-PRO-012` | Flow purpose/emphasis | Flow | Definition | Approved | Confirmed | Prior-KBDL | None |
-| `KBDL-PRO-013` | Showcase component interpretation | Showcase | Components | Approved | Confirmed | Prior-KBDL | None |
-| `KBDL-PRO-014` | Precision component interpretation | Precision | Components | Approved | Confirmed | Prior-KBDL | None |
-| `KBDL-PRO-015` | Flow component interpretation | Flow | Components | Approved | Confirmed | Prior-KBDL | None |
-| `KBDL-PRO-016` | Showcase composition defaults | Showcase | Discretionary | Recommended | Assumed | N/A | Item 2 (contingent) |
-| `KBDL-PRO-017` | Precision density defaults | Precision | Discretionary | Recommended | Assumed | N/A | Item 3 |
-| `KBDL-PRO-018` | Flow action defaults | Flow | Discretionary | Recommended | Assumed | N/A | Item 4 (contingent) |
-| `KBDL-PRO-019` | Principles mapping completeness | Shared | Mapping | Approved | Confirmed | Prior-KBDL | None |
-| `KBDL-PRO-020` | Core-component mapping integrity | Shared | Mapping | Approved | Confirmed | Prior-KBDL | None |
-| `KBDL-PRO-021` | System-component mapping integrity | Shared | Mapping | Approved | Confirmed | Prior-KBDL | None |
-| `KBDL-PRO-022` | Content consistency | Shared | Content | Approved | Confirmed | Prior-KBDL | None |
-| `KBDL-PRO-023` | Security and correctness baseline | Shared | Security | Approved | Confirmed | Prior-KBDL + prompt | None |
-| `KBDL-PRO-024` | Conflict-resolution process | Shared | Governance | Approved | Confirmed | Prior-KBDL | None |
-| `KBDL-PRO-025` | No exception creation | Shared | Scope control | Approved | Confirmed | Prompt | None |
-| `KBDL-PRO-026` | Adoption-record fields | Shared | Process | Approved | Confirmed | Prompt | None |
-| `KBDL-PRO-027` | Change/migration governance | Shared | Governance | Recommended | Assumed | N/A | Item 3 |
-| `KBDL-PRO-028` | Profile-selection rubric | Shared | Discretionary | Recommended | Assumed | N/A | Item 4 |
-| `KBDL-PRO-029` | Adoption-record review cadence | Shared | Discretionary | Recommended | Assumed | N/A | Item 5 |
+| ID | Title | Scope | Category | Lifecycle | Provenance | Validation status | Authority | Specification location | Decision-packet destination | Pending dependency | Known limitation |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| `KBDL-PRO-001` | Shared profile architecture | Shared | Architecture | Approved | Confirmed | Not verified | Prior-KBDL | §5 | None | None | Implementation-dependent |
+| `KBDL-PRO-002` | Profile terminology distinction | Shared | Terminology | Approved | Confirmed | Not verified | Prior-KBDL + prompt | §5 | None | None | Implementation-dependent |
+| `KBDL-PRO-003` | Locked-decision protection | Shared | Governance | Approved | Confirmed | Not verified | Prior-KBDL | §7 | None | None | Implementation-dependent |
+| `KBDL-PRO-004` | Controlled-variable integrity | Shared | Governance | Approved | Confirmed | Not verified | Prior-KBDL | §7 | None | None | Implementation-dependent |
+| `KBDL-PRO-005` | Open-expression subordination | Shared | Governance | Approved | Confirmed | Not verified | Prior-KBDL | §7 | None | None | Not independently testable |
+| `KBDL-PRO-006` | No silent earlier-module conversion | Shared | Scope control | Approved | Confirmed | Not applicable | Prompt | §7 | None | None | Not independently testable |
+| `KBDL-PRO-007` | Profile declaration fields | Shared | Process | Approved | Confirmed | Not applicable | Prompt | §8 | None | None | No declaration exists yet |
+| `KBDL-PRO-008` | Prohibited selection rationale | Shared | Process | Approved | Confirmed | Not applicable | Prompt + prior-KBDL | §8 | None | None | No declaration exists yet |
+| `KBDL-PRO-009` | Primary/secondary/hybrid policy | Shared | Governance | Recommended | Assumed | Not applicable | N/A | §8 | Approval-ready item 1 | None | Recommended, unapproved |
+| `KBDL-PRO-010` | Showcase purpose/emphasis | Showcase | Definition | Approved | Confirmed | Not verified | Prior-KBDL | §10 | None | None | Implementation-dependent |
+| `KBDL-PRO-011` | Precision purpose/emphasis | Precision | Definition | Approved | Confirmed | Not verified | Prior-KBDL | §11 | None | None | Implementation-dependent |
+| `KBDL-PRO-012` | Flow purpose/emphasis | Flow | Definition | Approved | Confirmed | Not verified | Prior-KBDL | §12 | None | None | Implementation-dependent |
+| `KBDL-PRO-013` | Showcase component interpretation | Showcase | Components | Approved | Confirmed | Not verified | Prior-KBDL | §10.2 | None | None | Implementation-dependent |
+| `KBDL-PRO-014` | Precision component interpretation | Precision | Components | Approved | Confirmed | Not verified | Prior-KBDL | §11.2 | None | `KBDL-CMP-105`, `KBDL-RSP-011` (context only) | Implementation-dependent |
+| `KBDL-PRO-015` | Flow component interpretation | Flow | Components | Approved | Confirmed | Not verified | Prior-KBDL | §12.2 | None | `KBDL-CMP-015`, `036` (context only) | Implementation-dependent |
+| `KBDL-PRO-016` | Showcase composition defaults | Showcase | Discretionary | Recommended | Assumed | Not applicable | N/A | §10.2 | Contingent — §33.3 | `KBDL-CMP-067` (blocking) | Contingent, unapproved |
+| `KBDL-PRO-017` | Precision density defaults | Precision | Discretionary | Recommended | Assumed | Not applicable | N/A | §11.2 | Approval-ready item 2 | None (context: `KBDL-RSP-002`/`003`) | Recommended, unapproved |
+| `KBDL-PRO-018` | Flow action defaults | Flow | Discretionary | Recommended | Assumed | Not applicable | N/A | §12.2 | Contingent — §33.3 | `KBDL-CMP-015`, `036` (blocking) | Contingent, unapproved |
+| `KBDL-PRO-019` | Principles mapping completeness | Shared | Mapping | Approved | Confirmed | Not verified | Prior-KBDL | §14 | None | None | Implementation-dependent |
+| `KBDL-PRO-020` | Core-component mapping integrity | Shared | Mapping | Approved | Confirmed | Not verified | Prior-KBDL | §20 | None | None | Implementation-dependent |
+| `KBDL-PRO-021` | System-component mapping integrity | Shared | Mapping | Approved | Confirmed | Not verified | Prior-KBDL | §21 | None | None | Implementation-dependent |
+| `KBDL-PRO-022` | Content consistency | Shared | Content | Approved | Confirmed | Not verified | Prior-KBDL | §22 | None | None | Implementation-dependent |
+| `KBDL-PRO-023` | Security and correctness baseline | Shared | Security | Approved | Confirmed | Not verified | Prior-KBDL + prompt | §23 | None | None | Implementation-dependent |
+| `KBDL-PRO-024` | Conflict-resolution process | Shared | Governance | Approved | Confirmed | Not verified | Prior-KBDL | §24 | None | None | Implementation-dependent |
+| `KBDL-PRO-025` | No exception creation | Shared | Scope control | Approved | Confirmed | Not applicable | Prompt | §24 | None | None | Not independently testable |
+| `KBDL-PRO-026` | Adoption-record fields | Shared | Process | Approved | Confirmed | Not applicable | Prompt | §25 | None | None | No adoption record exists yet |
+| `KBDL-PRO-027` | Change/migration governance | Shared | Governance | Recommended | Assumed | Not applicable | N/A | §25 | Approval-ready item 3 | None | Recommended, unapproved |
+| `KBDL-PRO-028` | Profile-selection rubric | Shared | Discretionary | Recommended | Assumed | Not applicable | N/A | §8 | Approval-ready item 4 | None | Recommended, unapproved |
+| `KBDL-PRO-029` | Adoption-record review cadence | Shared | Discretionary | Recommended | Assumed | Not applicable | N/A | §25 | Approval-ready item 5 | None | Recommended, unapproved |
 
 ## 30. Cross-Module Mapping Matrix
 
@@ -1174,31 +1174,13 @@ requirements (`KBDL-PRO-022`–`026`).
 
 ### 33.4 Additional Discretionary Items
 
-Items 4 and 5 above introduce two additional `KBDL-PRO-###`
-requirements not otherwise described in the sections above, added here
-to keep the decision packet's five items each backed by exactly one
-requirement:
-
-- **`KBDL-PRO-028`** — Adopt a qualitative profile-selection rubric
-  (project characteristics to profile fit) that does not rely on a
-  numeric score.
-  - Lifecycle status: Recommended (new discretionary process policy).
-    Provenance: Assumed. Validation status: Not applicable.
-  - Related requirement: `KBDL-PRO-007`, `KBDL-PRO-008`.
-  - Applicable profiles: Showcase, Precision, Flow.
-  - Specification location: [§8](#8-profile-selection-and-declaration),
-    [§33](#33-kbdl-009-decision-packet) item 4.
-  - Validation method: Project-owner review (not yet performed).
-
-- **`KBDL-PRO-029`** — Adopt a default profile-adoption-record review
-  cadence.
-  - Lifecycle status: Recommended (new discretionary process policy).
-    Provenance: Assumed. Validation status: Not applicable.
-  - Related requirement: `KBDL-PRO-026`.
-  - Applicable profiles: Showcase, Precision, Flow.
-  - Specification location: [§25](#25-profile-adoption-and-change-management),
-    [§33](#33-kbdl-009-decision-packet) item 5.
-  - Validation method: Project-owner review (not yet performed).
+Items 4 and 5 above are backed by `KBDL-PRO-028` and `KBDL-PRO-029`
+respectively. Their complete, single authoritative normative records
+appear in [§8, Profile Selection and Declaration](#8-profile-selection-and-declaration)
+and [§25, Profile Adoption and Change Management](#25-profile-adoption-and-change-management),
+not here — this section does not redefine them, consistent with the
+single-authoritative-location rule stated in
+[§28](#28-normative-requirements).
 
 **Exact scope of a future approval:** an `APPROVE` response to
 [§33.2](#332-recommended-decisions--ready-for-approval) would authorize
