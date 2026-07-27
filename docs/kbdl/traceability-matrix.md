@@ -835,7 +835,7 @@ The rows below trace KBDL-004's adaptive-theme scope, defined in
 - **Validation evidence:** Not verified — no implementation exists yet.
 - **Known limitation:** Implementation-dependent.
 - **Related decision:** Not applicable — pending a future decision-register entry once the project owner reviews the KBDL-007 decision packet.
-- **Notes:** `KBDL-CMP-015`, `017`, `020` map to [KBDL-007 decision packet](components-core.md#35-kbdl-007-decision-packet) items 1, 3, and 10 respectively.
+- **Notes:** `KBDL-CMP-015`, `017`, `020` map to [KBDL-007 decision packet](components-core.md#35-kbdl-007-decision-packet) items 1, 3, and 9 respectively.
 
 ### Form architecture and components (KBDL-CMP-022 through KBDL-CMP-037)
 
@@ -894,8 +894,9 @@ accessibility decision packets, and none of the nine recommendations is
 `docs/kbdl/components-core.md` exists with 51 documented requirements
 (see the
 [KBDL-007 — Core Action, Form, and Navigation Components](#kbdl-007--core-action-form-and-navigation-components)
-section above); KBDL-007 is currently in remediation (KBDL-007-R1),
-following the same pattern KBDL-006 followed before it passed. Rows for
+section above); KBDL-007 remains in remediation and pending
+planning-agent validation, following the same pattern KBDL-006 followed
+before it passed. Rows for
 `PRO`, `CUS`, and `VAL` exist only to show where their future
 requirements will be traced once their roadmap step is reached; those
 modules remain locked until KBDL-007 passes the planning agent's
