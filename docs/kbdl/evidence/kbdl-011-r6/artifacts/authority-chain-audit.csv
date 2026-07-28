@@ -1,0 +1,267 @@
+Requirement ID,Authority,Targets,Non-Approved targets,Missing targets,Resolved
+KBDL-A11Y-001,"Approved (directly restates WCAG 2.2 SC 1.1.1, Level A, and SC 1.4.5, Level AA)",Prompt/standard,None,None,True
+KBDL-A11Y-002,"Approved (directly restates WCAG 2.2 SC 1.2.x, Level A/AA)",Prompt/standard,None,None,True
+KBDL-A11Y-003,"Approved (directly restates WCAG 2.2 SC 1.3.1 and SC 4.1.2, both Level A)",Prompt/standard,None,None,True
+KBDL-A11Y-004,"Approved (directly restates WCAG 2.2 SC 2.4.2, Level A, and SC 2.4.6, Level AA)",Prompt/standard,None,None,True
+KBDL-A11Y-005,"Approved (directly restates WCAG 2.2 SC 1.3.2 and SC 2.4.3, both Level A)",Prompt/standard,None,None,True
+KBDL-A11Y-006,"Approved (directly restates WCAG 2.2 SC 1.4.1, Level A, and the locked component-state-clarity rule)",Prompt/standard,None,None,True
+KBDL-A11Y-007,"Approved (directly restates WCAG 2.2 SC 1.4.3, Level AA)",Prompt/standard,None,None,True
+KBDL-A11Y-008,"Approved (directly restates WCAG 2.2 SC 1.4.11, Level AA)",Prompt/standard,None,None,True
+KBDL-A11Y-009,"Approved (directly restates WCAG 2.2 SC 2.4.7, Level AA)",Prompt/standard,None,None,True
+KBDL-A11Y-010,"Approved (directly restates WCAG 2.2 SC 2.4.11, Level AA)",Prompt/standard,None,None,True
+KBDL-A11Y-012,"Approved (directly restates WCAG 2.2 SC 1.4.4, Level AA)",Prompt/standard,None,None,True
+KBDL-A11Y-013,"Approved (directly restates WCAG 2.2 SC 1.4.10, Level AA)",Prompt/standard,None,None,True
+KBDL-A11Y-014,"Approved (directly restates WCAG 2.2 SC 1.4.12, Level AA)",Prompt/standard,None,None,True
+KBDL-A11Y-015,"Approved (directly restates WCAG 2.2 SC 1.3.4, Level AA)",Prompt/standard,None,None,True
+KBDL-A11Y-016,"Approved (directly restates WCAG 2.2 SC 2.1.1, SC 2.1.4, and SC 3.2.1, all Level A)",Prompt/standard,None,None,True
+KBDL-A11Y-017,"Approved (directly restates WCAG 2.2 SC 2.1.2, Level A)",Prompt/standard,None,None,True
+KBDL-A11Y-018,"Approved (directly restates WCAG 2.2 SC 2.4.1, Level A)",Prompt/standard,None,None,True
+KBDL-A11Y-019,Project-owner-approved KBDL-006 implementation prompt; authoritative provenance: Confirmed,Prompt/standard,None,None,True
+KBDL-A11Y-020,"Approved (directly restates WCAG 2.2 SC 2.5.8, Level AA)",Prompt/standard,None,None,True
+KBDL-A11Y-022,"Approved (directly restates WCAG 2.2 SC 2.5.2, Level A)",Prompt/standard,None,None,True
+KBDL-A11Y-023,"Approved (directly restates WCAG 2.2 SC 2.5.1, Level A, and SC 2.5.7, Level AA)",Prompt/standard,None,None,True
+KBDL-A11Y-024,"Approved (directly restates WCAG 2.2 SC 2.5.4, Level A)",Prompt/standard,None,None,True
+KBDL-A11Y-025,"Approved (restates KBDL-MOT-022, already Approved under KBDL-DEC-014; not reopened)",KBDL-DEC-014; KBDL-MOT-022,None,None,True
+KBDL-A11Y-026,"Approved (directly restates WCAG 2.2 SC 2.3.1, Level A, and restates the already-Approved KBDL-MOT-023)",KBDL-MOT-023,None,None,True
+KBDL-A11Y-027,"Approved (directly restates WCAG 2.2 SC 2.2.1 and SC 2.2.2, both Level A)",Prompt/standard,None,None,True
+KBDL-A11Y-028,"Approved (directly restates WCAG 2.2 SC 1.3.5, SC 2.5.3, SC 3.2.2, SC 3.3.2, and SC 3.3.7, Levels A/AA as listed)",Prompt/standard,None,None,True
+KBDL-A11Y-029,"Approved (directly restates WCAG 2.2 SC 3.3.1, Level A, and SC 3.3.3, Level AA)",Prompt/standard,None,None,True
+KBDL-A11Y-030,"Approved (directly restates WCAG 2.2 SC 3.3.4, Level AA)",Prompt/standard,None,None,True
+KBDL-A11Y-031,"Approved (directly restates WCAG 2.2 SC 4.1.3, Level AA)",Prompt/standard,None,None,True
+KBDL-A11Y-032,"Approved (directly restates WCAG 2.2 SC 3.3.8, Level AA)",Prompt/standard,None,None,True
+KBDL-A11Y-033,"Approved (directly restates WCAG 2.2 SC 3.1.1, Level A, and KBDL-PRN-003, Consumer Comprehension)",KBDL-PRN-003,None,None,True
+KBDL-A11Y-034,"Approved (directly restates WCAG 2.2 SC 2.4.4, Level A, and SC 3.2.6, Level A)",Prompt/standard,None,None,True
+KBDL-A11Y-036,Approved (cross-reference to already-Approved requirements); project-owner-approved KBDL-006 implementation prompt,Prompt/standard,None,None,True
+KBDL-A11Y-037,Approved (restates KBDL-A11Y-003 applied to tabular data),KBDL-A11Y-003,None,None,True
+KBDL-A11Y-038,Approved (cross-reference); project-owner-approved KBDL-006 implementation prompt,Prompt/standard,None,None,True
+KBDL-A11Y-039,Approved (cross-reference); project-owner-approved KBDL-006 implementation prompt,Prompt/standard,None,None,True
+KBDL-A11Y-040,Approved (directly restates principles.md §9.4); project-owner-approved KBDL-006 implementation prompt,Prompt/standard,None,None,True
+KBDL-CMP-001,Approved (structural completeness requirement); project-owner-approved KBDL-007/008 implementation prompt,Prompt/standard,None,None,True
+KBDL-CMP-002,Approved (directly restates WCAG 2.2 SC 4.1.2 and the WAI-ARIA First Rule of ARIA Use),Prompt/standard,None,None,True
+KBDL-CMP-003,Approved (directly restates WCAG 2.2 SC 4.1.2 and SC 2.5.3),Prompt/standard,None,None,True
+KBDL-CMP-004,Approved (directly restates the locked component-state-clarity rule); project-owner-approved KBDL-007/008 implementation prompt,Prompt/standard,None,None,True
+KBDL-CMP-005,Approved (scope-control requirement); project-owner-approved KBDL-007/008 implementation prompt,Prompt/standard,None,None,True
+KBDL-CMP-006,Approved (directly restates WCAG 2.2 SC 2.4.7 and SC 2.4.11),Prompt/standard,None,None,True
+KBDL-CMP-007,Approved (directly restates WCAG 2.2 SC 2.1.1 and SC 2.1.2),Prompt/standard,None,None,True
+KBDL-CMP-008,Approved (directly restates WCAG 2.2 SC 2.5.2 and SC 2.5.8),Prompt/standard,None,None,True
+KBDL-CMP-009,"Approved (directly restates KBDL-RSP-001, 006, 007, 020)",KBDL-RSP-001,None,None,True
+KBDL-CMP-010,Approved (directly restates KBDL-A11Y-020),KBDL-A11Y-020,None,None,True
+KBDL-CMP-011,Approved (directly restates the approved theme architecture); project-owner-approved KBDL-007/008 implementation prompt,Prompt/standard,None,None,True
+KBDL-CMP-012,Approved (directly restates the approved foundation architecture); project-owner-approved KBDL-007/008 implementation prompt,Prompt/standard,None,None,True
+KBDL-CMP-013,"Approved (structural requirement — the obligation to document motion necessity/purpose/hierarchy/parity per component is itself Approved; the *exact* component-specific duration, distance, scale, stagger, easing, choreography, or rendering-technology mapping for any individual component is not newly approved by this requirement where no prior approved KBDL rule already supplies it — such exact mappings remain governed by the existing motion unresolved/not-approval-ready items in motion/README.md §10.3 and this module's own §36); project-owner-approved KBDL-007/008 implementation prompt",Prompt/standard,None,None,True
+KBDL-CMP-014,Approved (core restates native-semantics-first and state-model rules); project-owner-approved KBDL-007/008 implementation prompt,Prompt/standard,None,None,True
+KBDL-CMP-016,Approved (directly restates WCAG 2.2 SC 4.1.2),Prompt/standard,None,None,True
+KBDL-CMP-018,Approved (directly restates WAI-ARIA),Prompt/standard,None,None,True
+KBDL-CMP-019,Approved (directly restates WCAG 2.2 SC 2.4.4),Prompt/standard,None,None,True
+KBDL-CMP-021,Approved (directly restates the WAI-ARIA disclosure pattern),Prompt/standard,None,None,True
+KBDL-CMP-022,"Approved (directly restates WCAG 2.2 SC 3.3.2, SC 1.3.5, SC 3.3.7)",Prompt/standard,None,None,True
+KBDL-CMP-023,Project-owner-approved KBDL-007/008 implementation prompt; authoritative provenance: Confirmed,Prompt/standard,None,None,True
+KBDL-CMP-024,Approved (directly restates WCAG 2.2 SC 3.3.8),Prompt/standard,None,None,True
+KBDL-CMP-026,Project-owner-approved KBDL-007/008 implementation prompt; authoritative provenance: Confirmed,Prompt/standard,None,None,True
+KBDL-CMP-027,Approved (directly restates native-semantics-first); project-owner-approved KBDL-007/008 implementation prompt,Prompt/standard,None,None,True
+KBDL-CMP-028,Approved (directly restates WAI-ARIA/APG),Prompt/standard,None,None,True
+KBDL-CMP-030,Project-owner-approved KBDL-007/008 implementation prompt; authoritative provenance: Confirmed,Prompt/standard,None,None,True
+KBDL-CMP-031,Project-owner-approved KBDL-007/008 implementation prompt; authoritative provenance: Confirmed,Prompt/standard,None,None,True
+KBDL-CMP-032,Approved (directly restates WAI-ARIA switch role),Prompt/standard,None,None,True
+KBDL-CMP-033,Project-owner-approved KBDL-007/008 implementation prompt; authoritative provenance: Confirmed,Prompt/standard,None,None,True
+KBDL-CMP-034,Project-owner-approved KBDL-007/008 implementation prompt; authoritative provenance: Confirmed,Prompt/standard,None,None,True
+KBDL-CMP-035,Approved (behavioral requirement); project-owner-approved KBDL-007/008 implementation prompt,Prompt/standard,None,None,True
+KBDL-CMP-037,"Approved (directly restates WCAG 2.2 SC 3.3.1, SC 3.3.3, SC 3.3.4, SC 3.3.7, SC 4.1.3)",Prompt/standard,None,None,True
+KBDL-CMP-038,Approved (directly restates WCAG 2.2 SC 2.4.1),Prompt/standard,None,None,True
+KBDL-CMP-039,Project-owner-approved KBDL-007/008 implementation prompt; authoritative provenance: Confirmed,Prompt/standard,None,None,True
+KBDL-CMP-040,Project-owner-approved KBDL-007/008 implementation prompt; authoritative provenance: Confirmed,Prompt/standard,None,None,True
+KBDL-CMP-042,Project-owner-approved KBDL-007/008 implementation prompt; authoritative provenance: Confirmed,Prompt/standard,None,None,True
+KBDL-CMP-043,Project-owner-approved KBDL-007/008 implementation prompt; authoritative provenance: Confirmed,Prompt/standard,None,None,True
+KBDL-CMP-045,Approved (directly restates the WAI-ARIA tabs pattern),Prompt/standard,None,None,True
+KBDL-CMP-047,Project-owner-approved KBDL-007/008 implementation prompt; authoritative provenance: Confirmed,Prompt/standard,None,None,True
+KBDL-CMP-049,Project-owner-approved KBDL-007/008 implementation prompt; authoritative provenance: Confirmed,Prompt/standard,None,None,True
+KBDL-CMP-050,Approved (restates the shared contract applied compositionally); project-owner-approved KBDL-007/008 implementation prompt,Prompt/standard,None,None,True
+KBDL-CMP-051,Approved (directly restates principles.md §9.4); project-owner-approved KBDL-007/008 implementation prompt,Prompt/standard,None,None,True
+KBDL-CMP-052,"Approved (scope-control requirement, extends KBDL-CMP-005)",KBDL-CMP-005,None,None,True
+KBDL-CMP-053,"Approved (extends the already-Approved native- semantics-first rule, KBDL-CMP-002, and the adopted ARIA 1.2 region role definition, to this module's surfaces)",KBDL-CMP-002,None,None,True
+KBDL-CMP-054,Approved (restates ARIA 1.2's region role definition),Prompt/standard,None,None,True
+KBDL-CMP-055,"Approved (restates the native HTML prohibition on nested interactive elements and the already-Approved hover- independent-discoverability requirement, responsive.md §24); project-owner-approved KBDL-007/008 implementation prompt",Prompt/standard,None,None,True
+KBDL-CMP-056,"Approved (dictated outcome of the already-adopted WCAG 2.2 focus, keyboard, and reading-order rules applied to layered content — a structural scope statement, not new policy)",Prompt/standard,None,None,True
+KBDL-CMP-057,"Approved (restates the already-adopted WCAG 2.2 SC 2.1.1 Keyboard and SC 2.1.2 No Keyboard Trap, and the already- Approved KBDL-007 keyboard contract, KBDL-CMP-007, applied explicitly to non-modal overlays)",KBDL-CMP-007,None,None,True
+KBDL-CMP-058,Approved (dictated outcome of the already-adopted WCAG 2.2 SC 2.4.3 Focus Order — an unset focus target would violate the requirement that focus order remain determinable),Prompt/standard,None,None,True
+KBDL-CMP-059,"Approved (restates the already-adopted WCAG 2.2 SC 2.2.1 Timing Adjustable, extended to this module's dismissible surfaces generally, beyond the Toast-specific case in KBDL-CMP-090)",KBDL-CMP-090,None,None,True
+KBDL-CMP-060,"Approved (restates the already-Approved motion- parity rule, motion/accessibility-performance.md §1); project-owner-approved KBDL-007/008 implementation prompt",Prompt/standard,None,None,True
+KBDL-CMP-061,"Approved (restates the locked component-state- clarity rule, principles.md §5.1, and KBDL-CMP-004, applied explicitly to the states this document introduces)",KBDL-CMP-004,None,None,True
+KBDL-CMP-062,"Approved (restates KBDL-CMP-053/002 as an explicit prohibition, distinguishing the general preference from the specific misuse it forbids)",KBDL-CMP-053,None,None,True
+KBDL-CMP-063,"Approved (restates the already-Approved correctness/safety priority, principles.md §4 item 1, as a general baseline; KBDL-CMP-103 states its Offline/ Reconnecting-specific application)",KBDL-CMP-103,None,None,True
+KBDL-CMP-064,Approved (extends the existing KBDL security principle already established in components-core.md §37 as a general baseline; KBDL-CMP-101 and KBDL-CMP-104 state its Error-State- and Permission/Not-Found-specific applications),KBDL-CMP-101; KBDL-CMP-104,None,None,True
+KBDL-CMP-065,"Approved (extends the already-Approved KBDL-007 accessible-naming requirement, KBDL-CMP-003, to this module)",KBDL-CMP-003,None,None,True
+KBDL-CMP-066,"Approved (restates the already-Approved KBDL-007 profile-consistency requirement, KBDL-CMP-051, applied to this module)",KBDL-CMP-051,None,None,True
+KBDL-CMP-068,Approved (restates the adopted ARIA disclosure pattern's role/state definitions and the already-Approved KBDL-007 disclosure-trigger contract),Prompt/standard,None,None,True
+KBDL-CMP-070,"Approved (restates the already-adopted WCAG 2.2 SC 1.3.1 Info and Relationships and the native-semantics-first rule, KBDL-CMP-002)",KBDL-CMP-002,None,None,True
+KBDL-CMP-071,"the adopted WAI-ARIA 1.2 aria-modal property definition, which specifies that assistive technology should restrict its reading and navigation to the modal element while it is active, directly requires background content to be excluded from that navigation — this is the primary source for ""unreachable by ... screen-reader virtual cursor."" The already-adopted WCAG 2.2 SC 2.4.3 Focus Order and SC 2.4.11 Focus Not Obscured support, but do not by themselves fully dictate, this outcome for pointer/sequential-navigation reachability. The approved KBDL-008 prompt's Overlay Architecture section explicitly requires ""Background inertness"" as a mandatory field for every modal overlay, which is the source for treating this as a complete, single normative rule rather than an inference from the standards alone",Prompt/standard,None,None,True
+KBDL-CMP-072,"""dismissible via Escape"" and ""remains visible while the trigger has hover or focus"" restate the already-adopted WCAG 2.2 SC 1.4.13 Content on Hover or Focus, which dictates exactly these three properties (dismissible, hoverable, persistent). ""Must never be the sole source of its trigger's accessible name"" restates the already- Approved KBDL-007 accessible-naming requirement, KBDL-CMP-003, and the adopted WCAG 2.2 SC 4.1.2 Name, Role, Value — not SC 1.4.13, which does not address naming. ""Contains only non- interactive text"" and ""leaves focus on its trigger"" are not dictated by SC 1.4.13 or the WAI-ARIA tooltip role definition alone (the ARIA 1.2 spec describes tooltip as advisory but does not itself prohibit interactive descendants); these two clauses are normative because the approved KBDL-008 prompt explicitly requires ""Informational, non-interactive purpose"" and ""Interactive-content prohibition"" as mandatory Tooltip fields. This requirement does not treat the APG tooltip pattern (explicitly non-consensus, see §4) as a source for any clause",KBDL-CMP-003,None,None,True
+KBDL-CMP-075,Approved (restates the adopted WAI-ARIA 1.2 menu role definitions and the already-Approved KBDL-007 trigger contract),Prompt/standard,None,None,True
+KBDL-CMP-077,Approved (restates the adopted WAI-ARIA 1.2 listbox role definitions and the already-Approved KBDL-007 combobox contract),Prompt/standard,None,None,True
+KBDL-CMP-078,"Approved (restates the already-adopted WCAG 2.2 SC 4.1.2 Name, Role, Value and SC 2.1.1 Keyboard)",Prompt/standard,None,None,True
+KBDL-CMP-079,"Approved (restates KBDL-CMP-071 and the already-adopted WCAG 2.2 SC 2.1.2 No Keyboard Trap, applied to the definition of modality itself — this is the ""modal integrity"" rule)",KBDL-CMP-071,None,None,True
+KBDL-CMP-081,Approved (restates the adopted WAI-ARIA 1.2 alertdialog role definition),Prompt/standard,None,None,True
+KBDL-CMP-082,"Approved (scope-control requirement, restates KBDL-CMP-005/KBDL-CMP-052)",KBDL-CMP-005; KBDL-CMP-052,None,None,True
+KBDL-CMP-084,"Approved (dictated outcome of the already-adopted WCAG 2.2 SC 2.4.3 Focus Order and SC 2.1.2 No Keyboard Trap applied to nested layered content — not a new policy choice, since any other outcome would create an indeterminate or trapped focus state)",Prompt/standard,None,None,True
+KBDL-CMP-086,Approved (restates KBDL-A11Y-031 and the adopted WAI-ARIA 1.2 live-region role definitions),KBDL-A11Y-031,None,None,True
+KBDL-CMP-087,Approved (restates KBDL-CMP-004's already- Approved state-clarity rule and the adopted WCAG 2.2 SC 1.4.1 Use of Color),KBDL-CMP-004,None,None,True
+KBDL-CMP-088,"""important, time-sensitive messages"" and ""must not move focus by default"" restate the adopted WAI-ARIA 1.2 alert role definition, which specifies an assertive live region for important, time-sensitive information without describing any inherent focus-moving behavior. ""Must not be used for routine or successful updates"" is not itself dictated by the ARIA alert role definition (which describes what the role announces, not which messages a component must avoid); this restriction is normative because the approved KBDL-008 prompt explicitly requires ""Do not use alert for every successful or routine update"" as a mandatory Alert constraint",Prompt/standard,None,None,True
+KBDL-CMP-090,"""sensitive information must not be exposed"" extends the existing KBDL security-safe-disclosure principle, components-core.md §37. ""Critical information must not be presented only in a transient toast without a persistent path"" and ""must not move focus to itself by default"" are not directly dictated by WCAG 2.2 SC 2.2.1 Timing Adjustable (which governs user-adjustable time limits on content generally, not the specific toast/persistent-path pattern) or by KBDL-A11Y-031 (which requires programmatic determinability, not a persistence guarantee); these two clauses are normative because the approved KBDL-008 prompt explicitly lists both as mandatory Toast/Snackbar ""Do not"" constraints. SC 2.2.1's adjustable-timing principle is cited as supporting rationale, not as the direct source of the persistent-path requirement",KBDL-A11Y-031,None,None,True
+KBDL-CMP-092,Approved (restates KBDL-A11Y-031 and the adopted WAI-ARIA 1.2 status/log role and aria-live/aria-atomic definitions),KBDL-A11Y-031,None,None,True
+KBDL-CMP-093,"Approved (restates the adopted WCAG 2.2 SC 1.1.1 Non-text Content and SC 4.1.2 Name, Role, Value)",Prompt/standard,None,None,True
+KBDL-CMP-094,Approved (restates the adopted WAI-ARIA 1.2 progressbar role definition and native <progress> semantics),Prompt/standard,None,None,True
+KBDL-CMP-095,Approved (restates the adopted WAI-ARIA 1.2 meter role definition and native <meter> semantics),Prompt/standard,None,None,True
+KBDL-CMP-096,"""hidden from assistive technology as decorative"" restates the adopted WAI-ARIA 1.2 aria-hidden semantics for purely decorative content. ""An equivalent loading announcement must be available through a separate status mechanism"" restates KBDL-A11Y-031. ""Must not expose meaningless placeholder shapes as if they were content"" is not itself dictated by either of those sources; it is normative because the approved KBDL-008 prompt explicitly requires ""Decorative accessibility treatment"" and ""Equivalent loading announcement"" as mandatory Skeleton fields, which together imply placeholder shapes must not be presented as meaningful content",KBDL-A11Y-031,None,None,True
+KBDL-CMP-097,"Approved (restates KBDL-A11Y-031 and the locked component-state-clarity rule, principles.md §5.1)",KBDL-A11Y-031,None,None,True
+KBDL-CMP-098,"Approved (extends the already-Approved KBDL-007 submit-loading/duplicate-submission-prevention contract, components-core.md §23, to the surface-level loading indicator); project-owner-approved KBDL-007/008 implementation prompt",Prompt/standard,None,None,True
+KBDL-CMP-100,"this requirement is normative because the approved KBDL-008 prompt explicitly requires ""Preservation of entered criteria"" as a mandatory No-Results State field. WCAG 2.2 SC 3.3.7 Redundant Entry (which prohibits requiring re-entry of information already supplied earlier in the same process) is cited as supporting rationale by analogy, not as a direct restatement — SC 3.3.7 governs multi-step process re-entry generally and does not by itself mandate preserving search/filter state specifically on a no-results result",Prompt/standard,None,None,True
+KBDL-CMP-101,"that an error must be identified and described restates the already-adopted WCAG 2.2 SC 3.3.1 Error Identification, which requires errors be identified and described in text, but does not itself require classifying an error as ""recoverable or blocking"" or specifying a ""retry or alternative action"" — SC 3.3.1 governs identification, not remediation-path taxonomy. The recoverable/blocking classification and the retry/alternative-action requirement are normative because the approved KBDL-008 prompt explicitly requires ""Recoverable versus blocking error,"" ""Retry,"" and ""Alternative action"" as mandatory Error State fields, consistent with the already-Approved Technical Utility recovery-support principle, principles.md §3. The prohibition on exposing stack traces, internal exception details, credentials, or private data restates KBDL-CMP-064",KBDL-CMP-064,None,None,True
+KBDL-CMP-103,"Approved (extends the already-Approved KBDL correctness/safety principle, principles.md §4 item 1, and the existing KBDL-007 form-recovery data-preservation pattern); project-owner-approved KBDL-007/008 implementation prompt",Prompt/standard,None,None,True
+KBDL-CMP-104,"Approved (extends the existing KBDL security principle already established in components-core.md §37, ""a disabled button is not access control""); project-owner-approved KBDL-007/008 implementation prompt",Prompt/standard,None,None,True
+KBDL-CMP-107,Approved (restates the already-adopted WCAG 2.2 SC 2.2.2),Prompt/standard,None,None,True
+KBDL-CMP-109,"Approved (restates the already-adopted WCAG 2.2 SC 1.4.1 Use of Color, SC 1.3.1 Info and Relationships, and SC 2.1.1 Keyboard, applied to chart content, using the existing approved Data-display roles rather than inventing new ones)",Prompt/standard,None,None,True
+KBDL-CUS-001,KBDL-DEC-004 plus the mandatory KBDL-010 prompt,KBDL-DEC-004,None,None,True
+KBDL-CUS-002,KBDL lifecycle conventions and mandatory KBDL-010 prompt; project-owner-approved KBDL-010 implementation prompt,Prompt/standard,None,None,True
+KBDL-CUS-003,Mandatory KBDL-010 classification model; project-owner-approved KBDL-010 implementation prompt,Prompt/standard,None,None,True
+KBDL-CUS-004,Mandatory KBDL-010 Class A rule and owning-module lifecycle rules; project-owner-approved KBDL-010 implementation prompt,Prompt/standard,None,None,True
+KBDL-CUS-005,"KBDL-PRN-005, KBDL-PRO-005, and mandatory KBDL-010 prompt",KBDL-PRN-005; KBDL-PRO-005,None,None,True
+KBDL-CUS-006,KBDL governance plus mandatory KBDL-010 Classes C and D; project-owner-approved KBDL-010 implementation prompt,Prompt/standard,None,None,True
+KBDL-CUS-007,"KBDL-GOV-002, governance exception process, and mandatory KBDL-010 Classes E/F",KBDL-GOV-002,None,None,True
+KBDL-CUS-008,Mandatory KBDL-010 workflow; project-owner-approved KBDL-010 implementation prompt,Prompt/standard,None,None,True
+KBDL-CUS-009,Mandatory KBDL-010 intake fields; project-owner-approved KBDL-010 implementation prompt,Prompt/standard,None,None,True
+KBDL-CUS-010,"KBDL-DEC-004, conventions, and mandatory KBDL-010 record fields",KBDL-DEC-004,None,None,True
+KBDL-CUS-011,Mandatory KBDL-010 impact and evidence clauses; project-owner-approved KBDL-010 implementation prompt,Prompt/standard,None,None,True
+KBDL-CUS-012,Mandatory KBDL-010 change and rollback clauses; project-owner-approved KBDL-010 implementation prompt,Prompt/standard,None,None,True
+KBDL-CUS-013,Approved foundation requirements plus mandatory KBDL-010 boundary; project-owner-approved KBDL-010 implementation prompt,Prompt/standard,None,None,True
+KBDL-CUS-014,"Approved KBDL-THM-003, 005, 006, 013, 014 plus mandatory KBDL-010 boundary",KBDL-THM-003,None,None,True
+KBDL-CUS-015,Approved motion requirements plus mandatory KBDL-010 boundary; project-owner-approved KBDL-010 implementation prompt,Prompt/standard,None,None,True
+KBDL-CUS-016,Approved responsive requirements plus mandatory KBDL-010 boundary; project-owner-approved KBDL-010 implementation prompt,Prompt/standard,None,None,True
+KBDL-CUS-017,"KBDL-GOV-002, Approved accessibility requirements, and mandatory KBDL-010 boundary",KBDL-GOV-002,None,None,True
+KBDL-CUS-018,Approved KBDL-007 requirements plus mandatory KBDL-010 boundary; project-owner-approved KBDL-010 implementation prompt,Prompt/standard,None,None,True
+KBDL-CUS-019,Approved KBDL-008 requirements plus mandatory KBDL-010 boundary; project-owner-approved KBDL-010 implementation prompt,Prompt/standard,None,None,True
+KBDL-CUS-020,"Approved KBDL-PRO-001–008, 010–015, 019–026 plus mandatory KBDL-010 boundary",KBDL-PRO-001,None,None,True
+KBDL-CUS-021,Prior Approved security/correctness requirements plus mandatory KBDL-010 boundary; project-owner-approved KBDL-010 implementation prompt,Prompt/standard,None,None,True
+KBDL-CUS-022,Mandatory KBDL-010 handoff and scope clauses; project-owner-approved KBDL-010 implementation prompt,Prompt/standard,None,None,True
+KBDL-FND-001,Project-owner-approved KBDL-003 implementation prompt; authoritative provenance: Confirmed (derived from KBDL-002),Prompt/standard,None,None,True
+KBDL-FND-002,Project-owner-approved KBDL-003 implementation prompt; authoritative provenance: Confirmed,Prompt/standard,None,None,True
+KBDL-FND-003,Project-owner-approved KBDL-003 implementation prompt; authoritative provenance: Confirmed,Prompt/standard,None,None,True
+KBDL-FND-004,Project-owner-approved KBDL-003 implementation prompt; authoritative provenance: Confirmed,Prompt/standard,None,None,True
+KBDL-FND-005,Project-owner-approved KBDL-003 implementation prompt; authoritative provenance: Confirmed,Prompt/standard,None,None,True
+KBDL-FND-006,Project-owner-approved KBDL-003 implementation prompt; authoritative provenance: Confirmed,Prompt/standard,None,None,True
+KBDL-FND-007,Project-owner-approved KBDL-003 implementation prompt; authoritative provenance: Confirmed,Prompt/standard,None,None,True
+KBDL-FND-008,Project-owner-approved KBDL-003 implementation prompt; authoritative provenance: Confirmed,Prompt/standard,None,None,True
+KBDL-FND-009,Approved (project owner approved via the foundation decision packet; see KBDL-DEC-012),KBDL-DEC-012,None,None,True
+KBDL-FND-010,Approved (project owner approved via the foundation decision packet; see KBDL-DEC-012),KBDL-DEC-012,None,None,True
+KBDL-FND-011,Approved (project owner approved via the foundation decision packet; see KBDL-DEC-012),KBDL-DEC-012,None,None,True
+KBDL-FND-012,Approved (project owner approved via the foundation decision packet; see KBDL-DEC-012),KBDL-DEC-012,None,None,True
+KBDL-GOV-001,Project-owner-approved KBDL-001 prompt and KBDL-DEC-002,KBDL-DEC-002,None,None,True
+KBDL-GOV-002,Project-owner-approved KBDL-001 prompt and KBDL-DEC-010,KBDL-DEC-010,None,None,True
+KBDL-GOV-003,Project-owner-approved KBDL-001 prompt and KBDL-DEC-011,KBDL-DEC-011,None,None,True
+KBDL-MOT-001,"Approved (directly restates the locked Motion Purpose rule, principles.md §5.1); project-owner-approved KBDL-005 implementation prompt",Prompt/standard,None,None,True
+KBDL-MOT-002,Project-owner-approved KBDL-005 implementation prompt; authoritative provenance: User-provided,Prompt/standard,None,None,True
+KBDL-MOT-003,Approved (directly extends KBDL-PRN-002),KBDL-PRN-002,None,None,True
+KBDL-MOT-004,"Approved (structural requirement; the categories' exact intensity defaults remain Recommended, see KBDL-MOT-006)",KBDL-MOT-006,None,None,True
+KBDL-MOT-005,Approved (per KBDL-DEC-014; the specific five-level structure and names were new KBDL-005 policy until this approval),KBDL-DEC-014,None,None,True
+KBDL-MOT-006,"Approved (per KBDL-DEC-014, decision packet item 14)",KBDL-DEC-014,None,None,True
+KBDL-MOT-007,"Approved (per KBDL-DEC-014, decision packet item 2, together with KBDL-MOT-008, as one timing system)",KBDL-DEC-014; KBDL-MOT-008,None,None,True
+KBDL-MOT-008,"Approved (per KBDL-DEC-014, decision packet item 2, together with KBDL-MOT-007, as one timing system)",KBDL-DEC-014; KBDL-MOT-007,None,None,True
+KBDL-MOT-009,"Approved (per KBDL-DEC-014, decision packet item 3)",KBDL-DEC-014,None,None,True
+KBDL-MOT-010,"Approved (per KBDL-DEC-014, decision packet item 4)",KBDL-DEC-014,None,None,True
+KBDL-MOT-011,"Approved (per KBDL-DEC-014, decision packet item 5)",KBDL-DEC-014,None,None,True
+KBDL-MOT-012,Approved (directly restates the safety/correctness priority already established in KBDL-PRN-002 and §3.3),KBDL-PRN-002,None,None,True
+KBDL-MOT-013,"Approved (per KBDL-DEC-014, decision packet item 15)",KBDL-DEC-014,None,None,True
+KBDL-MOT-014,"Approved (directly restates Technical Utility's ""visible progress"" and ""error prevention"" qualities); project-owner-approved KBDL-005 implementation prompt",Prompt/standard,None,None,True
+KBDL-MOT-015,Approved (directly restates accessibility's requirement for a non-gesture equivalent); project-owner-approved KBDL-005 implementation prompt,Prompt/standard,None,None,True
+KBDL-MOT-016,"Approved (directly restates the locked component-state-clarity rule — ""must not rely on color/motion alone"" — and Accessibility by Default); project-owner-approved KBDL-005 implementation prompt",Prompt/standard,None,None,True
+KBDL-MOT-017,"Approved (directly restates the locked Motion Purpose rule that continuous motion must be controlled, and the already-Approved reduced-motion requirement KBDL-THM-012a)",KBDL-THM-012a,None,None,True
+KBDL-MOT-018,"Approved (directly restates accessibility's requirement that content remain accessible without script/animation, and the reduced-motion requirement); project-owner-approved KBDL-005 implementation prompt",Prompt/standard,None,None,True
+KBDL-MOT-019,"Approved (directly restates WCAG 2.2 AA's autoplay-with-sound prohibition and pause/stop requirement, already adopted under KBDL-DEC-010)",KBDL-DEC-010,None,None,True
+KBDL-MOT-020,"Approved (per KBDL-DEC-014, decision packet item 10; the underlying non-blocking, readable, focus-preserving requirements were already Approved under KBDL-THM-012/012a and are unaffected)",KBDL-DEC-014; KBDL-THM-012,None,None,True
+KBDL-MOT-021,Approved (directly restates safety/correctness and state-comprehension priorities); project-owner-approved KBDL-005 implementation prompt,Prompt/standard,None,None,True
+KBDL-MOT-022,"Approved (directly restates KBDL-THM-012a and KBDL's enhanced motion-safety baseline, KBDL-DEC-010)",KBDL-DEC-010; KBDL-THM-012a,None,None,True
+KBDL-MOT-023,"Approved (directly restates KBDL's enhanced motion-safety requirement, KBDL-DEC-010)",KBDL-DEC-010,None,None,True
+KBDL-MOT-024,"Approved (directly restates Performance-Aware Enhancement, KBDL-PRN-003/§6.9)",KBDL-PRN-003,None,None,True
+KBDL-MOT-025,Approved (directly restates Accessibility by Default); project-owner-approved KBDL-005 implementation prompt,Prompt/standard,None,None,True
+KBDL-MOT-026,"Approved (directly restates KBDL-PRN-007, Adaptability Without Fragmentation)",KBDL-PRN-007,None,None,True
+KBDL-MOT-027,Approved (this governance rule itself directly restates conventions.md §1.1); project-owner-approved KBDL-005 implementation prompt,Prompt/standard,None,None,True
+KBDL-MOT-028,"Approved (per KBDL-DEC-014, decision packet item 6)",KBDL-DEC-014,None,None,True
+KBDL-MOT-029,"Approved (per KBDL-DEC-014, decision packet item 7)",KBDL-DEC-014,None,None,True
+KBDL-MOT-030,"Approved (per KBDL-DEC-014, decision packet item 8)",KBDL-DEC-014,None,None,True
+KBDL-MOT-031,"Approved (per KBDL-DEC-014, decision packet item 9)",KBDL-DEC-014,None,None,True
+KBDL-MOT-032,"Approved (per KBDL-DEC-014, decision packet item 11)",KBDL-DEC-014,None,None,True
+KBDL-MOT-033,"Approved (per KBDL-DEC-014, decision packet item 12)",KBDL-DEC-014,None,None,True
+KBDL-MOT-034,"Approved (per KBDL-DEC-014, decision packet item 13)",KBDL-DEC-014,None,None,True
+KBDL-PRN-001,Project-owner-approved KBDL-002 implementation prompt; authoritative provenance: User-provided (blueprint) and Confirmed (derived from KBDL-001 decisions),Prompt/standard,None,None,True
+KBDL-PRN-002,Project-owner-approved KBDL-002 implementation prompt; authoritative provenance: User-provided,Prompt/standard,None,None,True
+KBDL-PRN-003,Project-owner-approved KBDL-002 implementation prompt; authoritative provenance: User-provided,Prompt/standard,None,None,True
+KBDL-PRN-004,Project-owner-approved KBDL-002 implementation prompt; authoritative provenance: User-provided,Prompt/standard,None,None,True
+KBDL-PRN-005,Project-owner-approved KBDL-002 implementation prompt; authoritative provenance: User-provided,Prompt/standard,None,None,True
+KBDL-PRN-006,Project-owner-approved KBDL-002 implementation prompt; authoritative provenance: User-provided,Prompt/standard,None,None,True
+KBDL-PRN-007,Project-owner-approved KBDL-002 implementation prompt; authoritative provenance: User-provided,Prompt/standard,None,None,True
+KBDL-PRN-008,Project-owner-approved KBDL-002 implementation prompt; authoritative provenance: User-provided,Prompt/standard,None,None,True
+KBDL-PRO-001,"restates and consolidates the already-Approved KBDL-PRN-007, KBDL-FND-008, KBDL-THM-006, KBDL-MOT-026, KBDL-A11Y-040, KBDL-CMP-051, and KBDL-CMP-066, each of which independently requires shared architecture in its own module",KBDL-A11Y-040; KBDL-CMP-051; KBDL-CMP-066; KBDL-FND-008; KBDL-MOT-026; KBDL-PRN-007; KBDL-THM-006,None,None,True
+KBDL-PRO-002,"the accessibility-preference distinction restates the already-Approved independence of reduced-motion and forced-colors preferences from any presentational grouping, accessibility.md §44; the complete terminology distinction is an explicit mandatory clause of the approved KBDL-009 prompt's Terminology section",Prompt/standard,None,None,True
+KBDL-PRO-003,"restates principles.md §9.4 and the design-decision hierarchy, principles.md §8; project-owner-approved KBDL-009 implementation prompt",Prompt/standard,None,None,True
+KBDL-PRO-004,restates principles.md §5.2 and the already-Approved per-module profile-interpretation sections cited in §3; project-owner-approved KBDL-009 implementation prompt,Prompt/standard,None,None,True
+KBDL-PRO-005,restates principles.md §5.3; project-owner-approved KBDL-009 implementation prompt,Prompt/standard,None,None,True
+KBDL-PRO-006,"scope-control requirement, explicit mandatory clause of the approved KBDL-009 prompt's Locked/Controlled/ Open section",Prompt/standard,None,None,True
+KBDL-PRO-007,the required field list is an explicit mandatory clause of the approved KBDL-009 prompt's Profile Selection and Declaration section,Prompt/standard,None,None,True
+KBDL-PRO-008,"explicit mandatory clause of the approved KBDL-009 prompt's Profile Selection and Declaration section; also extends the already-Approved Accessibility by Default principle, principles.md §6.8",Prompt/standard,None,None,True
+KBDL-PRO-010,"consolidates the already-Approved Showcase interpretation already established in principles.md §9.1, foundations/README.md §4.1, themes/README.md §8 Showcase, motion/patterns.md §10.1, and responsive.md §28; project-owner-approved KBDL-009 implementation prompt",Prompt/standard,None,None,True
+KBDL-PRO-011,"consolidates the already-Approved Precision interpretation in principles.md §9.2, foundations/README.md §4.2, themes/README.md §8 Precision, motion/patterns.md §10.2, and responsive.md §29; project-owner-approved KBDL-009 implementation prompt",Prompt/standard,None,None,True
+KBDL-PRO-012,"consolidates the already-Approved Flow interpretation in principles.md §9.3, foundations/README.md §4.3, themes/README.md §8 Flow, motion/patterns.md §10.3, and responsive.md §30; project-owner-approved KBDL-009 implementation prompt",Prompt/standard,None,None,True
+KBDL-PRO-013,"restates the already-Approved KBDL-CMP-051, KBDL-CMP-066, KBDL-CMP-055 hover-independent- discoverability prohibition, KBDL-CMP-072 tooltip-naming- independence rule, and KBDL-CMP-107 carousel pause/stop/hide requirement",KBDL-CMP-051; KBDL-CMP-055; KBDL-CMP-066; KBDL-CMP-072; KBDL-CMP-107,None,None,True
+KBDL-PRO-014,"restates the already-Approved KBDL-CMP-051, KBDL-CMP-066, KBDL-CMP-010 WCAG 24×24 target- size minimum, KBDL-CMP-070 native-table/grid-misuse prohibition, and KBDL-CMP-055 hover-independent-discoverability prohibition",KBDL-CMP-010; KBDL-CMP-051; KBDL-CMP-055; KBDL-CMP-066; KBDL-CMP-070,None,None,True
+KBDL-PRO-015,"restates the already-Approved KBDL-CMP-051, KBDL-CMP-066, and KBDL-CMP-090 toast critical-information-persistence requirement",KBDL-CMP-051; KBDL-CMP-066; KBDL-CMP-090,None,None,True
+KBDL-PRO-019,"restates the already-Approved KBDL-PRN-003, extended explicitly to per-profile mapping",KBDL-PRN-003,None,None,True
+KBDL-PRO-020,restates and extends the already- Approved KBDL-CMP-051 explicitly to this module's own mapping,KBDL-CMP-051,None,None,True
+KBDL-PRO-021,restates and extends the already- Approved KBDL-CMP-066 explicitly to this module's own mapping,KBDL-CMP-066,None,None,True
+KBDL-PRO-022,"restates the already-Approved Consumer Comprehension principle, principles.md §6.3, and the already-Approved KBDL-CMP-101/103 honest-system-state- communication rules",KBDL-CMP-101,None,None,True
+KBDL-PRO-023,"restates the already-Approved KBDL-CMP-063, 064, 098, 101, 103, 104 security and correctness principles, extended explicitly to profile emphasis by the approved KBDL-009 prompt's Security Requirements section",KBDL-CMP-063,None,None,True
+KBDL-PRO-024,restates principles.md §8 and governance.md § Exception process; project-owner-approved KBDL-009 implementation prompt,Prompt/standard,None,None,True
+KBDL-PRO-025,"scope-control requirement, explicit mandatory clause of the approved KBDL-009 prompt",Prompt/standard,None,None,True
+KBDL-PRO-026,explicit mandatory field list from the approved KBDL-009 prompt's Profile Adoption and Change Management section,Prompt/standard,None,None,True
+KBDL-RSP-001,"Approved (directly restates the locked responsive-content-priority rule, principles.md §5.1); project-owner-approved KBDL-006 implementation prompt",Prompt/standard,None,None,True
+KBDL-RSP-006,"Approved (directly restates WCAG 2.2 SC 1.4.10, Level AA)",Prompt/standard,None,None,True
+KBDL-RSP-007,"Approved (directly restates WCAG 2.2 SC 1.3.2 and SC 2.4.3, both cited)",Prompt/standard,None,None,True
+KBDL-RSP-009,"Approved (directly restates KBDL-PRN-003, Clarity Before Spectacle, and Technical Utility's density exclusion)",KBDL-PRN-003,None,None,True
+KBDL-RSP-010,"Approved (directly restates foundations/iconography-media.md §2.3, §2.5); project-owner-approved KBDL-006 implementation prompt",Prompt/standard,None,None,True
+KBDL-RSP-012,"Approved (restates Showcase's documented compositional emphasis, already Approved per principles.md §9.1); project-owner-approved KBDL-006 implementation prompt",Prompt/standard,None,None,True
+KBDL-RSP-013,"Approved (directly restates WCAG 2.2 SC 2.4.11, Level AA)",Prompt/standard,None,None,True
+KBDL-RSP-014,Approved (restates Technical Utility's predictable-behavior quality); project-owner-approved KBDL-006 implementation prompt,Prompt/standard,None,None,True
+KBDL-RSP-015,"Approved (directly restates WCAG 2.2 SC 1.3.4, Level AA)",Prompt/standard,None,None,True
+KBDL-RSP-016,"Approved (directly restates WCAG 2.2 SC 1.4.4 and SC 1.4.10, both Level AA)",Prompt/standard,None,None,True
+KBDL-RSP-017,"Approved (restates motion/accessibility-performance.md §4, already Approved, extended with layout detail); project-owner-approved KBDL-006 implementation prompt",Prompt/standard,None,None,True
+KBDL-RSP-018,"Approved (directly restates WCAG 2.2 SC 2.5.1 and SC 2.5.2, both Level A)",Prompt/standard,None,None,True
+KBDL-RSP-019,"Approved (directly restates WCAG 2.2 SC 1.4.13, Level AA)",Prompt/standard,None,None,True
+KBDL-RSP-020,"Approved (directly restates WCAG 2.2 SC 2.4.3, Level A)",Prompt/standard,None,None,True
+KBDL-RSP-021,"Approved (restates motion/foundations.md §4, already Approved); project-owner-approved KBDL-006 implementation prompt",Prompt/standard,None,None,True
+KBDL-RSP-022,Approved (restates principles.md §6.9); project-owner-approved KBDL-006 implementation prompt,Prompt/standard,None,None,True
+KBDL-THM-001,Project-owner-approved KBDL-004 implementation prompt; authoritative provenance: Confirmed,Prompt/standard,None,None,True
+KBDL-THM-002,Project-owner-approved KBDL-004 implementation prompt; authoritative provenance: Confirmed,Prompt/standard,None,None,True
+KBDL-THM-003,"Approved — directly and explicitly stated in the KBDL-004 preconditions (""explicit user theme choice taking precedence where a control exists"" and ""system preference as the default source when no user choice exists""); project-owner-approved KBDL-004 implementation prompt",Prompt/standard,None,None,True
+KBDL-THM-004,"Project-owner-approved KBDL-004 implementation prompt; authoritative provenance: User-provided (project-owner approval, see KBDL-DEC-013)",KBDL-DEC-013,None,None,True
+KBDL-THM-005,"Approved — directly derived from the locked, already- approved accessibility rule in governance.md § KBDL-GOV-002 and principles.md §6.8; accessibility cannot be weakened by a project override",KBDL-GOV-002,None,None,True
+KBDL-THM-006,Project-owner-approved KBDL-004 implementation prompt; authoritative provenance: Confirmed,Prompt/standard,None,None,True
+KBDL-THM-007,Approved (opaque mappings only; the three excluded opacity values remain Recommended); project-owner-approved KBDL-004 implementation prompt,Prompt/standard,None,None,True
+KBDL-THM-008,Approved (opaque mappings only; the three excluded opacity values remain Recommended); project-owner-approved KBDL-004 implementation prompt,Prompt/standard,None,None,True
+KBDL-THM-009,Project-owner-approved KBDL-004 implementation prompt; authoritative provenance: User-provided (project-owner approval),Prompt/standard,None,None,True
+KBDL-THM-010,Approved (opaque caption-band strategy only; translucent variants remain Not verified and excluded),Prompt/standard,None,None,True
+KBDL-THM-011,Project-owner-approved KBDL-004 implementation prompt; authoritative provenance: User-provided (project-owner approval),Prompt/standard,None,None,True
+KBDL-THM-012,Approved (conceptual guidance only; no timing/easing value exists or is approved here); project-owner-approved KBDL-004 implementation prompt,Prompt/standard,None,None,True
+KBDL-THM-012a,Approved — directly derived from the already-approved enhanced motion-safety requirement (decision-register.md § KBDL-DEC-010),KBDL-DEC-010,None,None,True
+KBDL-THM-013,Project-owner-approved KBDL-004 implementation prompt; authoritative provenance: User-provided (project-owner approval),Prompt/standard,None,None,True
+KBDL-THM-014,Project-owner-approved KBDL-004 implementation prompt; authoritative provenance: User-provided (project-owner approval),Prompt/standard,None,None,True
+KBDL-THM-015,Project-owner-approved KBDL-004 implementation prompt; authoritative provenance: User-provided (project-owner approval),Prompt/standard,None,None,True
+KBDL-VAL-001,approved KBDL-011 prompt,Prompt/standard,None,None,True
+KBDL-VAL-002,approved prompt,Prompt/standard,None,None,True
+KBDL-VAL-003,approved prompt and GOV-003,Prompt/standard,None,None,True
+KBDL-VAL-004,approved prompt and GOV-003,Prompt/standard,None,None,True
+KBDL-VAL-005,approved prompt,Prompt/standard,None,None,True
+KBDL-VAL-006,approved prompt,Prompt/standard,None,None,True
+KBDL-VAL-007,approved prompt,Prompt/standard,None,None,True
+KBDL-VAL-008,approved prompt and prior shared-architecture rules,Prompt/standard,None,None,True
+KBDL-VAL-009,approved prompt,Prompt/standard,None,None,True
+KBDL-VAL-010,approved prompt,Prompt/standard,None,None,True
+KBDL-VAL-011,approved prompt,Prompt/standard,None,None,True
+KBDL-VAL-012,approved KBDL-011 prompt,Prompt/standard,None,None,True

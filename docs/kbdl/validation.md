@@ -100,7 +100,7 @@ Confirmed, User-provided, composite User-provided/Confirmed, and Assumed origins
 
 ## 11. Validation-Status Audit
 
-The 20 Verified requirements consist of 11 prior evidence-backed claims and 9 VAL methodology/results claims. R5 returns `VAL-006` to Verified only after the independent effective-record audit validates all 317 readable-group-plus-ledger records, exact locations, authority, evidence, limitations, packets, and dependencies. `VAL-003` remains Verified because every Approved authority source resolves; `VAL-008`, `010`, and `011` remain `Not verified`. Unsupported claims retained as Verified: `0`.
+The 20 Verified requirements consist of 11 prior evidence-backed claims and 9 VAL methodology/results claims. R6 returns `VAL-003` and `VAL-006` to Verified only after the independent per-ID audit validates all 317 effective records, 266 Approved authority chains, 51 exact non-Approved packet mappings, exact anchors, and every override field. `VAL-008`, `010`, and `011` remain `Not verified`. Unsupported claims retained as Verified: `0`.
 
 ## 12. Approved-Authority Audit
 
@@ -127,7 +127,7 @@ Pending requirements lacking tracking: `0`. No pending item is a defect unless a
 
 ## 15. Traceability Audit
 
-R2 found 258 historical grouped records missing one or more mandatory fields. R5 reconciles each readable group with its [companion-ledger row](traceability-metadata.csv), producing 317 effective records. Its independently implemented validator reports zero group/ledger, lifecycle, provenance, validation, exact-location, anchor, authority, evidence, limitation, packet, or dependency defects. `VAL-006` is therefore Verified for the complete effective-record method.
+R6 resolves every grouped map to an exact [per-ID companion-ledger row](traceability-metadata.csv). Its independent validator reports 317 effective records, zero unresolved maps or broad locations, valid anchors, valid Approved authority chains, exact packet ownership, and zero evidence, limitation, or dependency defects. `VAL-006` is therefore Verified for this complete per-ID method.
 
 ## 16. Cross-Reference and Documentation-Integrity Audit
 
@@ -217,7 +217,7 @@ All earlier rows remain intact and unmarked. The KBDL-011 section adds 26 unmark
 
 The independent source/history parser, complete per-ID artifacts, and captured
 command output are retained in the
-[KBDL-011-R5 evidence package](evidence/kbdl-011-r5/evidence-manifest.md).
+[KBDL-011-R6 evidence package](evidence/kbdl-011-r6/evidence-manifest.md).
 It audits 317 requirements, 266 Approved authority chains, 15 decisions, 317
 ordered traceability occurrences, source-derived theme pairs, baseline metadata,
 and documentation structure. It reports 258 incomplete historical traceability
@@ -302,7 +302,7 @@ This status concerns only the documentation repository and was recalculated from
 - **`KBDL-VAL-006` — Traceability integrity.** Every requirement **must** have one complete, per-ID auditable traceability record.
   - Lifecycle status: Approved. Provenance: Confirmed. Validation status: Verified. Authority: approved prompt. Evidence class: A.
   - Related requirements: all. Applicable modules: all. Specification location: [§15](#15-traceability-audit). Pending dependencies: None.
-  - Validation method/evidence: R5 independently validates 317 effective readable-group-plus-ledger records with zero conflicts or metadata, exact-location, anchor, authority, evidence, limitation, packet, or dependency defects. Known limitation: implementation conformance remains Not verified.
+  - Validation method/evidence: R6 independently validates 317 exact per-ID effective records, all override fields, anchors, authority chains, packets, dependencies, evidence, and limitations with zero defects. Known limitation: implementation conformance remains Not verified.
 - **`KBDL-VAL-007` — Documentation integrity.** Links, anchors, labels, headings, tables, IDs, roadmap wording, and completion claims **must** resolve consistently.
   - Lifecycle status: Approved. Provenance: Confirmed. Validation status: Verified. Authority: approved prompt. Evidence class: A.
   - Related requirements: GOV-001. Applicable modules: all. Specification location: [§16](#16-cross-reference-and-documentation-integrity-audit). Pending dependencies: None.
@@ -337,7 +337,7 @@ This status concerns only the documentation repository and was recalculated from
 | VAL-003 | Lifecycle/authority | B | Approved | Confirmed | Verified | Prompt/GOV | All | §9/§12 | None | Comparison PASS | GOV historical format |
 | VAL-004 | Validation evidence | B | Approved | Confirmed | Verified | Prompt/GOV | All | §11 | None | Evidence audit PASS | Runtime unverified |
 | VAL-005 | Decisions/pending | B | Approved | Confirmed | Verified | Prompt | All | §13/§14 | None | Mapping audit PASS | Pending unavailable |
-| VAL-006 | Traceability | A | Approved | Confirmed | Verified | Prompt | All | §15 | None | Complete R5 effective-record method PASS | Implementation unverified |
+| VAL-006 | Traceability | A | Approved | Confirmed | Verified | Prompt | All | §15 | None | Complete R6 per-ID method PASS | Implementation unverified |
 | VAL-007 | Documentation | A | Approved | Confirmed | Verified | Prompt | All | §16 | None | Validator PASS | No external availability |
 | VAL-008 | Static architecture | C | Approved | Confirmed | Not verified | Prompt/prior | All | §17–§28 | None | Complete method unsupported | Static/runtime gaps |
 | VAL-009 | Theme calculations | D | Approved | Confirmed | Verified | Prompt | FND/THM/A11Y | §20 | None | Contrast script PASS | Alpha/media excluded |

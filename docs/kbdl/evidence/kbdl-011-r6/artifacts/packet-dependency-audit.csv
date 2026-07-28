@@ -1,0 +1,52 @@
+Requirement ID,Lifecycle,Exact packet destination,Pending dependencies,Exact item present,Contingent match,Deferred match
+KBDL-A11Y-011,Recommended,accessibility.md — 49.2 Recommended Decisions — Ready for Approval — item 2,None,True,True,True
+KBDL-A11Y-021,Recommended,accessibility.md — 49.2 Recommended Decisions — Ready for Approval — item 1,None,True,True,True
+KBDL-A11Y-035,Recommended,accessibility.md — 49.2 Recommended Decisions — Ready for Approval — item 3,None,True,True,True
+KBDL-CMP-015,Recommended,components-core.md — 35.2 Recommended Decisions — Ready for Approval — item 1,None,True,True,True
+KBDL-CMP-017,Recommended,components-core.md — 35.2 Recommended Decisions — Ready for Approval — item 3,None,True,True,True
+KBDL-CMP-020,Recommended,components-core.md — 35.2 Recommended Decisions — Ready for Approval — item 9,None,True,True,True
+KBDL-CMP-025,Recommended,components-core.md — 35.2 Recommended Decisions — Ready for Approval — item 4,None,True,True,True
+KBDL-CMP-029,Recommended,components-core.md — 35.2 Recommended Decisions — Ready for Approval — item 5,None,True,True,True
+KBDL-CMP-036,Recommended,components-core.md — 35.2 Recommended Decisions — Ready for Approval — item 6,None,True,True,True
+KBDL-CMP-041,Recommended,components-core.md — §35.3 Unresolved or Not Approval-Ready — contingent item KBDL-CMP-041,None,True,True,True
+KBDL-CMP-044,Recommended,components-core.md — 35.2 Recommended Decisions — Ready for Approval — item 7,None,True,True,True
+KBDL-CMP-046,Recommended,components-core.md — 35.2 Recommended Decisions — Ready for Approval — item 2,None,True,True,True
+KBDL-CMP-048,Recommended,components-core.md — 35.2 Recommended Decisions — Ready for Approval — item 8,None,True,True,True
+KBDL-CMP-067,Recommended,components-system.md — 33.2 Recommended Decisions — Ready for Approval — item 1,None,True,True,True
+KBDL-CMP-069,Recommended,components-system.md — 33.2 Recommended Decisions — Ready for Approval — item 2,None,True,True,True
+KBDL-CMP-073,Recommended,components-system.md — 33.2 Recommended Decisions — Ready for Approval — item 3,None,True,True,True
+KBDL-CMP-074,Recommended,components-system.md — 33.2 Recommended Decisions — Ready for Approval — item 4,None,True,True,True
+KBDL-CMP-076,Recommended,components-system.md — 33.2 Recommended Decisions — Ready for Approval — item 5,None,True,True,True
+KBDL-CMP-080,Recommended,components-system.md — 33.2 Recommended Decisions — Ready for Approval — item 6,None,True,True,True
+KBDL-CMP-083,Recommended,components-system.md — 33.2 Recommended Decisions — Ready for Approval — item 7,None,True,True,True
+KBDL-CMP-085,Recommended,components-system.md — 33.2 Recommended Decisions — Ready for Approval — item 8,None,True,True,True
+KBDL-CMP-089,Recommended,components-system.md — 33.2 Recommended Decisions — Ready for Approval — item 9,None,True,True,True
+KBDL-CMP-091,Recommended,components-system.md — 33.2 Recommended Decisions — Ready for Approval — item 10,None,True,True,True
+KBDL-CMP-099,Recommended,components-system.md — 33.2 Recommended Decisions — Ready for Approval — item 11,None,True,True,True
+KBDL-CMP-102,Recommended,components-system.md — 33.2 Recommended Decisions — Ready for Approval — item 12,None,True,True,True
+KBDL-CMP-105,Recommended,components-system.md — 33.2 Recommended Decisions — Ready for Approval — item 13,None,True,True,True
+KBDL-CMP-106,Recommended,components-system.md — 33.2 Recommended Decisions — Ready for Approval — item 14,None,True,True,True
+KBDL-CMP-108,Recommended,components-system.md — 33.2 Recommended Decisions — Ready for Approval — item 15,None,True,True,True
+KBDL-CMP-110,Recommended,components-system.md — 33.2 Recommended Decisions — Ready for Approval — item 16,None,True,True,True
+KBDL-CMP-111,Recommended,components-system.md — 33.2 Recommended Decisions — Ready for Approval — item 17,None,True,True,True
+KBDL-CUS-023,Recommended,Approval-ready item 1,None,True,True,True
+KBDL-CUS-024,Recommended,Approval-ready item 2,None,True,True,True
+KBDL-CUS-025,Recommended,Approval-ready item 3,None,True,True,True
+KBDL-CUS-026,Recommended,Approval-ready item 4,None,True,True,True
+KBDL-CUS-027,Recommended,Approval-ready item 5,None,True,True,True
+KBDL-CUS-028,Recommended,Approval-ready item 6,None,True,True,True
+KBDL-CUS-029,Recommended,Approval-ready item 7,None,True,True,True
+KBDL-CUS-030,Deferred,Deferred tracking,Later implementation/tooling authorization,True,True,True
+KBDL-PRO-009,Recommended,Approval-ready item 1,None,True,True,True
+KBDL-PRO-016,Recommended,Contingent — [§33.3](#333-unresolved-or-not-approval-ready); not independently approval-ready,KBDL-CMP-067 (KBDL-008) — blocking,False,True,True
+KBDL-PRO-017,Recommended,Approval-ready item 2,"None blocking; KBDL-RSP-002, KBDL-RSP-003 cited as unapproved context only for the eventual exact grid-interaction point, not required for this item's own approval",True,True,True
+KBDL-PRO-018,Recommended,Contingent — [§33.3](#333-unresolved-or-not-approval-ready); not independently approval-ready,"KBDL-CMP-015, KBDL-CMP-036 (KBDL-007) — blocking",False,True,True
+KBDL-PRO-027,Recommended,Approval-ready item 3,None,True,True,True
+KBDL-PRO-028,Recommended,Approval-ready item 4,None,True,True,True
+KBDL-PRO-029,Recommended,Approval-ready item 5,None,True,True,True
+KBDL-RSP-002,Recommended,responsive.md — 35.2 Recommended Decisions — Ready for Approval — item 1,None,True,True,True
+KBDL-RSP-003,Recommended,responsive.md — 35.2 Recommended Decisions — Ready for Approval — item 2,None,True,True,True
+KBDL-RSP-004,Recommended,responsive.md — 35.2 Recommended Decisions — Ready for Approval — item 3,None,True,True,True
+KBDL-RSP-005,Recommended,responsive.md — 35.2 Recommended Decisions — Ready for Approval — item 4,None,True,True,True
+KBDL-RSP-008,Recommended,responsive.md — 35.2 Recommended Decisions — Ready for Approval — item 5,None,True,True,True
+KBDL-RSP-011,Recommended,responsive.md — 35.2 Recommended Decisions — Ready for Approval — item 6,None,True,True,True

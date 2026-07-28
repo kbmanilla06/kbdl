@@ -1,0 +1,33 @@
+Requirements audited: 317
+Effective records: 317
+Missing records: 0
+Duplicate records: 0
+
+Unparsed group override fields: 0
+Group/ledger conflicts: 0
+Broad or unresolved location ranges: 0
+Unresolved per-ID location maps: 0
+Invalid anchors: 0
+Location mismatches: 0
+
+Approved requirements audited: 266
+Unresolved authority: 0
+Non-Approved authority targets: 0
+Missing authority targets: 0
+Circular authority chains: 0
+Self-authority claims: 0
+
+Non-Approved requirements audited: 51
+Exact packet mismatches: 0
+Incorrect contingent mappings: 0
+Deferred tracking mismatches: 0
+Dependency mismatches: 0
+
+Method/evidence conflicts: 0
+Limitation conflicts: 0
+Unauthorized metadata changes: 0
+Completion decisions: 0
+
+Implementation conformance status: NOT VERIFIED
+Project completion status: PENDING
+Errors: 0

@@ -1,0 +1,175 @@
+PURPOSE: Fetch origin
+COMMAND: git fetch origin
+STDOUT:
+(empty)
+STDERR:
+(empty)
+EXIT CODE: 0
+RESULT: PASS
+
+PURPOSE: Remote
+COMMAND: git remote -v
+STDOUT:
+origin	https://github.com/kbmanilla06/kbdl.git (fetch)
+origin	https://github.com/kbmanilla06/kbdl.git (push)
+
+STDERR:
+(empty)
+EXIT CODE: 0
+RESULT: PASS
+
+PURPOSE: Branch
+COMMAND: git branch --show-current
+STDOUT:
+main
+
+STDERR:
+(empty)
+EXIT CODE: 0
+RESULT: PASS
+
+PURPOSE: Tree
+COMMAND: git status --short
+STDOUT:
+ M docs/kbdl/traceability-matrix.md
+ M docs/kbdl/traceability-metadata.csv
+ M docs/kbdl/validation.md
+?? docs/kbdl/evidence/kbdl-011-r6/
+
+STDERR:
+(empty)
+EXIT CODE: 0
+RESULT: PASS
+
+PURPOSE: HEAD
+COMMAND: git rev-parse HEAD
+STDOUT:
+991dfdf2f477b89295bf1b2cc09904e01730e657
+
+STDERR:
+(empty)
+EXIT CODE: 0
+RESULT: PASS
+
+PURPOSE: Remote HEAD
+COMMAND: git rev-parse origin/main
+STDOUT:
+991dfdf2f477b89295bf1b2cc09904e01730e657
+
+STDERR:
+(empty)
+EXIT CODE: 0
+RESULT: PASS
+
+PURPOSE: History
+COMMAND: git log --oneline --decorate -15
+STDOUT:
+991dfdf (HEAD -> main, origin/main, origin/HEAD) Reconcile KBDL effective traceability records
+7c09694 Remediate KBDL-011 authoritative traceability
+d7108bd Complete KBDL traceability metadata audit (KBDL-011-R3)
+5d4ecd5 Replace KBDL-011 validation evidence methodology (KBDL-011-R2)
+eab3b41 Remediate KBDL-011 roadmap and evidence audit (KBDL-011-R1)
+b5bb0a3 Add KBDL final validation audit (KBDL-011)
+55b6ba6 Remove KBDL-010 packet dependency ambiguity (KBDL-010-R1)
+12080da Add manual customization specification (KBDL-010)
+907708c Correct KBDL-009 profile location summaries (KBDL-009-R3)
+3503d95 Add per-ID traceability locations and packet destinations for KBDL-009 (KBDL-009-R2)
+8dc232c Correct KBDL-009 packet mapping, requirement metadata, and traceability (KBDL-009-R1)
+254b935 Add KBDL-009 Project Profiles specification
+5cf9060 Reconcile KBDL-008 lifecycle-authority summaries and traceability (KBDL-008-R2)
+c7d3da5 Correct KBDL-008 invalid references, section labels, and source attribution (KBDL-008-R1)
+393a980 Add KBDL-008 surface, overlay, feedback, and system-state specification
+
+STDERR:
+(empty)
+EXIT CODE: 0
+RESULT: PASS
+
+PURPOSE: Baseline
+COMMAND: git show --no-patch --format=fuller 991dfdf
+STDOUT:
+commit 991dfdf2f477b89295bf1b2cc09904e01730e657
+Author:     Khristopher Ben Manilla <kbmanilla06@gmail.com>
+AuthorDate: Tue Jul 28 12:46:58 2026 +0800
+Commit:     Khristopher Ben Manilla <kbmanilla06@gmail.com>
+CommitDate: Tue Jul 28 12:46:58 2026 +0800
+
+    Reconcile KBDL effective traceability records
+
+STDERR:
+(empty)
+EXIT CODE: 0
+RESULT: PASS
+
+PURPOSE: Resolve per-ID ledger
+COMMAND: python3 docs/kbdl/evidence/kbdl-011-r6/scripts/resolve_per_id_ledger.py
+STDOUT:
+Resolved 317 exact per-ID ledger records
+
+STDERR:
+(empty)
+EXIT CODE: 0
+RESULT: PASS
+
+PURPOSE: Independent validation
+COMMAND: python3 docs/kbdl/evidence/kbdl-011-r6/scripts/validate_per_id_records.py
+STDOUT:
+Requirements audited: 317
+Effective records: 317
+Missing records: 0
+Duplicate records: 0
+
+Unparsed group override fields: 0
+Group/ledger conflicts: 0
+Broad or unresolved location ranges: 0
+Unresolved per-ID location maps: 0
+Invalid anchors: 0
+Location mismatches: 0
+
+Approved requirements audited: 266
+Unresolved authority: 0
+Non-Approved authority targets: 0
+Missing authority targets: 0
+Circular authority chains: 0
+Self-authority claims: 0
+
+Non-Approved requirements audited: 51
+Exact packet mismatches: 0
+Incorrect contingent mappings: 0
+Deferred tracking mismatches: 0
+Dependency mismatches: 0
+
+Method/evidence conflicts: 0
+Limitation conflicts: 0
+Unauthorized metadata changes: 0
+Completion decisions: 0
+
+Implementation conformance status: NOT VERIFIED
+Project completion status: PENDING
+Errors: 0
+
+STDERR:
+(empty)
+EXIT CODE: 0
+RESULT: PASS
+
+PURPOSE: Documentation validation
+COMMAND: python3 docs/kbdl/evidence/kbdl-011-r1/scripts/repository_documentation_validator.py
+STDOUT:
+Markdown files: 46
+Stale ten-step current-roadmap claims: 0
+Documentation errors: 0
+
+STDERR:
+(empty)
+EXIT CODE: 0
+RESULT: PASS
+
+PURPOSE: Whitespace
+COMMAND: git diff --check
+STDOUT:
+(empty)
+STDERR:
+(empty)
+EXIT CODE: 0
+RESULT: PASS

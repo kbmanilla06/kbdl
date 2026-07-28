@@ -1402,8 +1402,8 @@ present with 30 `CUS` requirements. Its seven discretionary policy items
 remain Recommended, its format/tooling item remains Deferred, and no
 implementation-level customization behavior is verified. KBDL-010 passed
 planning-agent review and KBDL-011 is present with twelve Approved, Verified
-validation-methodology requirements. R5 returns `VAL-006` to Verified after
-the effective readable-group-plus-ledger audit and independent validator pass;
+validation-methodology requirements. R6 returns `VAL-003` and `VAL-006` to
+Verified after the exact per-ID override and authority-chain audit passes;
 `VAL-008`, `010`, and `011` remain Not verified. The documentation-only candidate is `PRODUCTION
 READY` subject to independent planning-agent review.
 Implementation conformance is
