@@ -13,6 +13,15 @@ and Flow (consumer-facing web applications). See the
 
 ## Specification Status
 
+On 2026-07-28 (Asia/Manila), the project owner supplied all eleven current,
+non-retroactive prompt-authority confirmations; see
+[KBDL-DEC-016](decision-register.md#kbdl-dec-016--current-non-retroactive-prompt-authority-confirmations).
+The confirmations are recorded for AR2 planning-agent validation. All eleven
+historical approval commands remain unrecovered. KBDL-011 remains unresolved
+pending semantic-evidence remediation and final validation; candidate readiness
+is `NOT READY`, implementation conformance is `NOT VERIFIED`, and project
+completion remains pending.
+
 The current gated prompt sequence contains eleven steps, KBDL-001 through
 KBDL-011, with KBDL-011 serving as Final Validation and the completion gate.
 Historical references to a ten-step roadmap describe the earlier

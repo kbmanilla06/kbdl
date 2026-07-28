@@ -534,6 +534,46 @@ rather than invented, per the source-of-truth rules in this prompt.
   any prior decision record.
 - **Review date:** Not applicable.
 
+### KBDL-DEC-016 — Current non-retroactive prompt-authority confirmations
+
+- **Date:** 2026-07-28 (Asia/Manila)
+- **Status:** Approved — current authority only; non-retroactive
+- **Decision owner:** Project owner, by explicit selection in the conversation
+  that produced KBDL-011-AR2.
+- **Context:** The validated AR1 packet identified eleven unrecovered original
+  implementation-prompt approval records and prepared eleven independent,
+  bounded current-authority confirmations.
+- **Decision:** The project owner selected `CONFIRM CURRENT AUTHORITY`
+  independently for KBDL-001, KBDL-002, KBDL-003, KBDL-004, KBDL-005,
+  KBDL-006, KBDL-007, KBDL-008, KBDL-009, KBDL-010, and KBDL-011. The exact
+  record, scope, and exclusions are retained in the
+  [durable owner-decision record](evidence/kbdl-011-authority-recovery/project-owner-authority-confirmations.md).
+  Each confirmation applies only to the normative text and relying
+  requirements enumerated by AR1 at baseline
+  `33402250e3fdb27bd8e1cba53c722b7b765daf8a`, beginning 2026-07-28 in
+  Asia/Manila.
+- **Effect:** The current authority-decision blocker is resolved for all eleven
+  prompt records. The effect is non-retroactive: no historical approval wording
+  is proved or reconstructed, unavailable prompt wording is not incorporated,
+  and historical implementation and validation history is not rewritten.
+- **Exclusions:** No decision-packet item is approved; no `Recommended` or
+  `Deferred` requirement is promoted; `KBDL-CUS-030` remains `Deferred`; no
+  implementation conformance is established; no limitation is accepted; and
+  documentation readiness and project completion are not approved.
+- **KBDL-005 separation:** This confirmation is limited to the nine KBDL-005
+  relying requirements enumerated by AR1. `KBDL-DEC-014` remains the separate,
+  later approval of fifteen motion-decision packet items and is not treated as
+  the original KBDL-005 prompt approval.
+- **Affected requirements:** The 137 relying requirements enumerated in the AR1
+  mapping, with 113 sole-prompt and 24 mixed-authority dependencies; no
+  normative text, lifecycle, provenance, or validation-status change.
+- **Implementation impact:** None. Implementation conformance remains `NOT
+  VERIFIED`.
+- **Completion impact:** The project owner's desired outcome is final
+  completion, but this decision does not approve readiness or completion.
+- **Superseded decision:** None.
+- **Review date:** Not applicable.
+
 ## Unresolved Metadata
 
 The following metadata could not be verified from available sources and is

@@ -3,6 +3,10 @@
 Lifecycle status of this framework: `Approved`. Rows below reflect
 KBDL-001 through KBDL-011 scope. KBDL-010 passed planning-agent validation.
 KBDL-011 remains in remediation and has not passed planning-agent validation.
+All eleven current, non-retroactive prompt-authority confirmations were supplied
+on 2026-07-28 (Asia/Manila) under [KBDL-DEC-016](decision-register.md#kbdl-dec-016--current-non-retroactive-prompt-authority-confirmations)
+and await AR2 planning-agent validation. Historical approval commands remain
+unrecovered.
 Implementation conformance remains `Not verified`; project completion remains
 pending explicit project-owner approval.
 

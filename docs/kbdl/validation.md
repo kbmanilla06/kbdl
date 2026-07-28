@@ -254,7 +254,14 @@ CUS-030 machine-readable customization format; automated customization/validatio
 
 ## 35. Specification Release-Readiness Assessment
 
-**Specification release candidate status: NOT READY.** R10 cannot establish durable prompt-derived authority from implementation commits or later summary assertions. Exact project-owner approval commands and approved scopes must be recovered in a separate authority action before the complete semantic audit can pass. No limitation is accepted.
+**Specification release candidate status: NOT READY.** On 2026-07-28
+(Asia/Manila), the project owner supplied all eleven current, non-retroactive
+prompt-authority confirmations under
+[KBDL-DEC-016](decision-register.md#kbdl-dec-016--current-non-retroactive-prompt-authority-confirmations).
+The current authority-decision blocker is resolved subject to AR2 planning-agent
+validation, while all eleven historical approval commands remain unrecovered.
+R10 semantic-evidence remediation and final validation have not resumed. No
+limitation is accepted.
 
 **Limitation acceptance:** Not required for this documentation-only candidate. This does not accept implementation or production limitations.
 
@@ -275,7 +282,10 @@ Implementation conformance status: NOT VERIFIED
 Project completion status: PENDING PLANNING-AGENT VALIDATION AND PROJECT-OWNER APPROVAL
 ```
 
-This status concerns only the documentation repository. Production verification and deployment are not applicable. Recommended next action: project-owner recovery/confirmation of each exact historical prompt approval command, mandatory scope, and exclusions in a separate approval record; then rerun KBDL-011-R10. Completion may not be considered.
+This status concerns only the documentation repository. Production verification
+and deployment are not applicable. `KBDL-VAL-003`, `KBDL-VAL-004`,
+`KBDL-VAL-006`, and `KBDL-VAL-007` remain `Not verified`. Completion may not be
+considered. The next permitted action is planning-agent validation of AR2.
 
 ## 38. Normative KBDL-VAL Requirements
 
