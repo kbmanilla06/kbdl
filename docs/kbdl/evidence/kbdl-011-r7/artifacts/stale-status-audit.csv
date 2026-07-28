@@ -1,0 +1,7 @@
+File,Rule,Matches,Result
+README.md,README stale R2 completion,0,PASS
+README.md,after R5,0,PASS
+README.md,validate R5 next,0,PASS
+validation.md,README stale R2 completion,0,PASS
+validation.md,after R5,0,PASS
+validation.md,validate R5 next,0,PASS

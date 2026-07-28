@@ -1,0 +1,318 @@
+Requirement ID,Independent source,Expected exact location,Effective location,Invalid anchors,Match
+KBDL-A11Y-001,accessibility.md authoritative block,accessibility.md#6-text-alternatives,accessibility.md#6-text-alternatives,None,True
+KBDL-A11Y-002,accessibility.md authoritative block,accessibility.md#7-captions-transcripts-and-audio-description,accessibility.md#7-captions-transcripts-and-audio-description,None,True
+KBDL-A11Y-003,accessibility.md authoritative block,accessibility.md#8-semantic-structure-and-relationships,accessibility.md#8-semantic-structure-and-relationships,None,True
+KBDL-A11Y-004,accessibility.md authoritative block,accessibility.md#9-landmark-and-heading-architecture,accessibility.md#9-landmark-and-heading-architecture,None,True
+KBDL-A11Y-005,accessibility.md authoritative block,accessibility.md#10-reading-and-focus-order; responsive.md#12-source-order-and-reading-order,accessibility.md#10-reading-and-focus-order; responsive.md#12-source-order-and-reading-order,None,True
+KBDL-A11Y-006,accessibility.md authoritative block,accessibility.md#11-color-independent-communication,accessibility.md#11-color-independent-communication,None,True
+KBDL-A11Y-007,accessibility.md authoritative block,accessibility.md#12-text-contrast,accessibility.md#12-text-contrast,None,True
+KBDL-A11Y-008,accessibility.md authoritative block,accessibility.md#13-non-text-contrast,accessibility.md#13-non-text-contrast,None,True
+KBDL-A11Y-009,accessibility.md authoritative block,accessibility.md#14-focus-visibility,accessibility.md#14-focus-visibility,None,True
+KBDL-A11Y-010,accessibility.md authoritative block,accessibility.md#15-focus-not-obscured; responsive.md#18-sticky-and-fixed-regions,accessibility.md#15-focus-not-obscured; responsive.md#18-sticky-and-fixed-regions,None,True
+KBDL-A11Y-011,accessibility.md authoritative block,accessibility.md#16-light-dark-forced-colors-and-high-contrast-behavior,accessibility.md#16-light-dark-forced-colors-and-high-contrast-behavior,None,True
+KBDL-A11Y-012,accessibility.md authoritative block,accessibility.md#17-resize-text,accessibility.md#17-resize-text,None,True
+KBDL-A11Y-013,accessibility.md authoritative block,accessibility.md#18-reflow,accessibility.md#18-reflow,None,True
+KBDL-A11Y-014,accessibility.md authoritative block,accessibility.md#19-text-spacing-overrides,accessibility.md#19-text-spacing-overrides,None,True
+KBDL-A11Y-015,accessibility.md authoritative block,accessibility.md#20-orientation; responsive.md#20-orientation-changes,accessibility.md#20-orientation; responsive.md#20-orientation-changes,None,True
+KBDL-A11Y-016,accessibility.md authoritative block,accessibility.md#21-keyboard-operability,accessibility.md#21-keyboard-operability,None,True
+KBDL-A11Y-017,accessibility.md authoritative block,accessibility.md#22-keyboard-traps-and-escape-behavior,accessibility.md#22-keyboard-traps-and-escape-behavior,None,True
+KBDL-A11Y-018,accessibility.md authoritative block,accessibility.md#23-bypass-mechanisms,accessibility.md#23-bypass-mechanisms,None,True
+KBDL-A11Y-019,accessibility.md authoritative block,accessibility.md#24-pointer-and-touch-behavior,accessibility.md#24-pointer-and-touch-behavior,None,True
+KBDL-A11Y-020,accessibility.md authoritative block,accessibility.md#25-target-sizing-and-spacing,accessibility.md#25-target-sizing-and-spacing,None,True
+KBDL-A11Y-021,accessibility.md authoritative block,accessibility.md#25-target-sizing-and-spacing; accessibility.md#49-accessibility-decision-packet,accessibility.md#25-target-sizing-and-spacing; accessibility.md#49-accessibility-decision-packet,None,True
+KBDL-A11Y-022,accessibility.md authoritative block,accessibility.md#26-pointer-cancellation,accessibility.md#26-pointer-cancellation,None,True
+KBDL-A11Y-023,accessibility.md authoritative block,accessibility.md#27-dragging-and-gesture-alternatives,accessibility.md#27-dragging-and-gesture-alternatives,None,True
+KBDL-A11Y-024,accessibility.md authoritative block,accessibility.md#28-motion-actuation-alternatives,accessibility.md#28-motion-actuation-alternatives,None,True
+KBDL-A11Y-025,accessibility.md authoritative block,accessibility.md#29-reduced-motion-and-no-motion-parity,accessibility.md#29-reduced-motion-and-no-motion-parity,None,True
+KBDL-A11Y-026,accessibility.md authoritative block,accessibility.md#30-flashing-vestibular-and-motion-safety-limits,accessibility.md#30-flashing-vestibular-and-motion-safety-limits,None,True
+KBDL-A11Y-027,accessibility.md authoritative block,accessibility.md#31-timing-automatic-movement-and-interruptions,accessibility.md#31-timing-automatic-movement-and-interruptions,None,True
+KBDL-A11Y-028,accessibility.md authoritative block,accessibility.md#32-forms-labels-instructions-and-autocomplete,accessibility.md#32-forms-labels-instructions-and-autocomplete,None,True
+KBDL-A11Y-029,accessibility.md authoritative block,accessibility.md#33-error-identification-and-recovery,accessibility.md#33-error-identification-and-recovery,None,True
+KBDL-A11Y-030,accessibility.md authoritative block,accessibility.md#34-error-prevention-for-consequential-actions,accessibility.md#34-error-prevention-for-consequential-actions,None,True
+KBDL-A11Y-031,accessibility.md authoritative block,accessibility.md#35-status-messages-and-live-communication,accessibility.md#35-status-messages-and-live-communication,None,True
+KBDL-A11Y-032,accessibility.md authoritative block,accessibility.md#36-authentication-accessibility,accessibility.md#36-authentication-accessibility,None,True
+KBDL-A11Y-033,accessibility.md authoritative block,accessibility.md#37-plain-language-and-cognitive-accessibility,accessibility.md#37-plain-language-and-cognitive-accessibility,None,True
+KBDL-A11Y-034,accessibility.md authoritative block,accessibility.md#38-consistent-navigation-identification-and-help,accessibility.md#38-consistent-navigation-identification-and-help,None,True
+KBDL-A11Y-035,accessibility.md authoritative block,accessibility.md#39-screen-reader-behavior; accessibility.md#49-accessibility-decision-packet,accessibility.md#39-screen-reader-behavior; accessibility.md#49-accessibility-decision-packet,None,True
+KBDL-A11Y-036,accessibility.md authoritative block,accessibility.md#40-media-and-animation-controls,accessibility.md#40-media-and-animation-controls,None,True
+KBDL-A11Y-037,accessibility.md authoritative block,accessibility.md#41-accessible-data-presentation,accessibility.md#41-accessible-data-presentation,None,True
+KBDL-A11Y-038,accessibility.md authoritative block,accessibility.md#42-mobile-accessibility,accessibility.md#42-mobile-accessibility,None,True
+KBDL-A11Y-039,accessibility.md authoritative block,accessibility.md#43-virtual-keyboard-accessibility,accessibility.md#43-virtual-keyboard-accessibility,None,True
+KBDL-A11Y-040,accessibility.md authoritative block,accessibility.md#44-profile-interpretation,accessibility.md#44-profile-interpretation,None,True
+KBDL-CMP-001,components-core.md authoritative block,components-core.md#6-shared-component-contract; components-core.md#7-component-anatomy-model,components-core.md#6-shared-component-contract; components-core.md#7-component-anatomy-model,None,True
+KBDL-CMP-002,components-core.md authoritative block,components-core.md#5-native-semantics-first-rule,components-core.md#5-native-semantics-first-rule,None,True
+KBDL-CMP-003,components-core.md authoritative block,components-core.md#10-accessible-naming-and-description,components-core.md#10-accessible-naming-and-description,None,True
+KBDL-CMP-004,components-core.md authoritative block,components-core.md#8-component-state-model; components-core.md#9-interaction-state-priority,components-core.md#8-component-state-model; components-core.md#9-interaction-state-priority,None,True
+KBDL-CMP-005,components-core.md authoritative block,components-core.md#11-kbdl-008-scope-boundary,components-core.md#11-kbdl-008-scope-boundary,None,True
+KBDL-CMP-006,components-core.md authoritative block,components-core.md#12-focus-behavior,components-core.md#12-focus-behavior,None,True
+KBDL-CMP-007,components-core.md authoritative block,components-core.md#13-keyboard-interaction,components-core.md#13-keyboard-interaction,None,True
+KBDL-CMP-008,components-core.md authoritative block,components-core.md#14-pointer-and-touch-interaction,components-core.md#14-pointer-and-touch-interaction,None,True
+KBDL-CMP-009,components-core.md authoritative block,components-core.md#15-responsive-behavior,components-core.md#15-responsive-behavior,None,True
+KBDL-CMP-010,components-core.md authoritative block,components-core.md#16-target-size-handling,components-core.md#16-target-size-handling,None,True
+KBDL-CMP-011,components-core.md authoritative block,components-core.md#17-theme-and-contrast-behavior,components-core.md#17-theme-and-contrast-behavior,None,True
+KBDL-CMP-012,components-core.md authoritative block,components-core.md#18-foundation-behavior,components-core.md#18-foundation-behavior,None,True
+KBDL-CMP-013,components-core.md authoritative block,components-core.md#19-motion-behavior,components-core.md#19-motion-behavior,None,True
+KBDL-CMP-014,components-core.md authoritative block,components-core.md#201-button,components-core.md#201-button,None,True
+KBDL-CMP-015,components-core.md authoritative block,components-core.md#201-button; components-core.md#35-kbdl-007-decision-packet,components-core.md#201-button; components-core.md#35-kbdl-007-decision-packet,None,True
+KBDL-CMP-016,components-core.md authoritative block,components-core.md#202-icon-button,components-core.md#202-icon-button,None,True
+KBDL-CMP-017,components-core.md authoritative block,components-core.md#202-icon-button,components-core.md#202-icon-button,None,True
+KBDL-CMP-018,components-core.md authoritative block,components-core.md#203-toggle-button,components-core.md#203-toggle-button,None,True
+KBDL-CMP-019,components-core.md authoritative block,components-core.md#204-link,components-core.md#204-link,None,True
+KBDL-CMP-020,components-core.md authoritative block,components-core.md#205-button-group; components-core.md#35-kbdl-007-decision-packet,components-core.md#205-button-group; components-core.md#35-kbdl-007-decision-packet,None,True
+KBDL-CMP-021,components-core.md authoritative block,components-core.md#206-disclosure-and-menu-triggers,components-core.md#206-disclosure-and-menu-triggers,None,True
+KBDL-CMP-022,components-core.md authoritative block,components-core.md#21-form-architecture,components-core.md#21-form-architecture,None,True
+KBDL-CMP-023,components-core.md authoritative block,components-core.md#221-text-input,components-core.md#221-text-input,None,True
+KBDL-CMP-024,components-core.md authoritative block,components-core.md#222-password-input,components-core.md#222-password-input,None,True
+KBDL-CMP-025,components-core.md authoritative block,components-core.md#223-search-field,components-core.md#223-search-field,None,True
+KBDL-CMP-026,components-core.md authoritative block,components-core.md#224-textarea,components-core.md#224-textarea,None,True
+KBDL-CMP-027,components-core.md authoritative block,components-core.md#225-select,components-core.md#225-select,None,True
+KBDL-CMP-028,components-core.md authoritative block,components-core.md#226-combobox-boundary,components-core.md#226-combobox-boundary,None,True
+KBDL-CMP-029,components-core.md authoritative block,components-core.md#226-combobox-boundary,components-core.md#226-combobox-boundary,None,True
+KBDL-CMP-030,components-core.md authoritative block,components-core.md#227-checkbox,components-core.md#227-checkbox,None,True
+KBDL-CMP-031,components-core.md authoritative block,components-core.md#228-radio-group,components-core.md#228-radio-group,None,True
+KBDL-CMP-032,components-core.md authoritative block,components-core.md#229-switch,components-core.md#229-switch,None,True
+KBDL-CMP-033,components-core.md authoritative block,components-core.md#2210-file-input,components-core.md#2210-file-input,None,True
+KBDL-CMP-034,components-core.md authoritative block,components-core.md#2211-field-group,components-core.md#2211-field-group,None,True
+KBDL-CMP-035,components-core.md authoritative block,components-core.md#2212-form-action-row,components-core.md#2212-form-action-row,None,True
+KBDL-CMP-036,components-core.md authoritative block,components-core.md#2212-form-action-row,components-core.md#2212-form-action-row,None,True
+KBDL-CMP-037,components-core.md authoritative block,components-core.md#23-form-validation-and-recovery,components-core.md#23-form-validation-and-recovery,None,True
+KBDL-CMP-038,components-core.md authoritative block,components-core.md#241-skip-link,components-core.md#241-skip-link,None,True
+KBDL-CMP-039,components-core.md authoritative block,components-core.md#242-navigation-link-and-list,components-core.md#242-navigation-link-and-list,None,True
+KBDL-CMP-040,components-core.md authoritative block,components-core.md#243-primary-or-global-navigation,components-core.md#243-primary-or-global-navigation,None,True
+KBDL-CMP-041,components-core.md authoritative block,components-core.md#243-primary-or-global-navigation,components-core.md#243-primary-or-global-navigation,None,True
+KBDL-CMP-042,components-core.md authoritative block,components-core.md#244-local-or-section-navigation,components-core.md#244-local-or-section-navigation,None,True
+KBDL-CMP-043,components-core.md authoritative block,components-core.md#245-breadcrumb,components-core.md#245-breadcrumb,None,True
+KBDL-CMP-044,components-core.md authoritative block,components-core.md#245-breadcrumb,components-core.md#245-breadcrumb,None,True
+KBDL-CMP-045,components-core.md authoritative block,components-core.md#246-tabs,components-core.md#246-tabs,None,True
+KBDL-CMP-046,components-core.md authoritative block,components-core.md#246-tabs,components-core.md#246-tabs,None,True
+KBDL-CMP-047,components-core.md authoritative block,components-core.md#247-pagination,components-core.md#247-pagination,None,True
+KBDL-CMP-048,components-core.md authoritative block,components-core.md#247-pagination,components-core.md#247-pagination,None,True
+KBDL-CMP-049,components-core.md authoritative block,components-core.md#248-back-link,components-core.md#248-back-link,None,True
+KBDL-CMP-050,components-core.md authoritative block,components-core.md#25-cross-component-composition-rules,components-core.md#25-cross-component-composition-rules,None,True
+KBDL-CMP-051,components-core.md authoritative block,components-core.md#26-profile-compatibility,components-core.md#26-profile-compatibility,None,True
+KBDL-CMP-052,components-system.md authoritative block,components-system.md#5-kbdl-007-ownership-boundary,components-system.md#5-kbdl-007-ownership-boundary,None,True
+KBDL-CMP-053,components-system.md authoritative block,components-system.md#8-surface-architecture,components-system.md#8-surface-architecture,None,True
+KBDL-CMP-054,components-system.md authoritative block,components-system.md#91-container-surface; components-system.md#92-panel,components-system.md#91-container-surface; components-system.md#92-panel,None,True
+KBDL-CMP-055,components-system.md authoritative block,components-system.md#93-card,components-system.md#93-card,None,True
+KBDL-CMP-056,components-system.md authoritative block,components-system.md#10-overlay-architecture,components-system.md#10-overlay-architecture,None,True
+KBDL-CMP-057,components-system.md authoritative block,components-system.md#10-overlay-architecture; components-system.md#112-popover-or-non-modal-dialog,components-system.md#10-overlay-architecture; components-system.md#112-popover-or-non-modal-dialog,None,True
+KBDL-CMP-058,components-system.md authoritative block,components-system.md#10-overlay-architecture; components-system.md#20-focus-and-modality,components-system.md#10-overlay-architecture; components-system.md#20-focus-and-modality,None,True
+KBDL-CMP-059,components-system.md authoritative block,components-system.md#10-overlay-architecture; components-system.md#21-dismissal-and-persistence,components-system.md#10-overlay-architecture; components-system.md#21-dismissal-and-persistence,None,True
+KBDL-CMP-060,components-system.md authoritative block,components-system.md#10-overlay-architecture; components-system.md#31-theme-and-motion-validation-matrix,components-system.md#10-overlay-architecture; components-system.md#31-theme-and-motion-validation-matrix,None,True
+KBDL-CMP-061,components-system.md authoritative block,components-system.md#13-feedback-architecture; components-system.md#15-system-state-architecture,components-system.md#13-feedback-architecture; components-system.md#15-system-state-architecture,None,True
+KBDL-CMP-062,components-system.md authoritative block,components-system.md#8-surface-architecture; components-system.md#17-complex-presentation-architecture,components-system.md#8-surface-architecture; components-system.md#17-complex-presentation-architecture,None,True
+KBDL-CMP-063,components-system.md authoritative block,components-system.md#23-security-and-privacy,components-system.md#23-security-and-privacy,None,True
+KBDL-CMP-064,components-system.md authoritative block,components-system.md#23-security-and-privacy,components-system.md#23-security-and-privacy,None,True
+KBDL-CMP-065,components-system.md authoritative block,components-system.md#7-extended-system-component-contract,components-system.md#7-extended-system-component-contract,None,True
+KBDL-CMP-066,components-system.md authoritative block,components-system.md#24-cross-component-composition-and-profile-compatibility,components-system.md#24-cross-component-composition-and-profile-compatibility,None,True
+KBDL-CMP-067,components-system.md authoritative block,components-system.md#93-card; components-system.md#33-kbdl-008-decision-packet,components-system.md#93-card; components-system.md#33-kbdl-008-decision-packet,None,True
+KBDL-CMP-068,components-system.md authoritative block,components-system.md#94-accordion-surface,components-system.md#94-accordion-surface,None,True
+KBDL-CMP-069,components-system.md authoritative block,components-system.md#94-accordion-surface; components-system.md#33-kbdl-008-decision-packet,components-system.md#94-accordion-surface; components-system.md#33-kbdl-008-decision-packet,None,True
+KBDL-CMP-070,components-system.md authoritative block,components-system.md#95-static-data-table; components-system.md#181-interactive-grid,components-system.md#95-static-data-table; components-system.md#181-interactive-grid,None,True
+KBDL-CMP-071,components-system.md authoritative block,components-system.md#10-overlay-architecture; components-system.md#115-dialog; components-system.md#116-modal-dialog,components-system.md#10-overlay-architecture; components-system.md#115-dialog; components-system.md#116-modal-dialog,None,True
+KBDL-CMP-072,components-system.md authoritative block,components-system.md#111-tooltip,components-system.md#111-tooltip,None,True
+KBDL-CMP-073,components-system.md authoritative block,components-system.md#111-tooltip; components-system.md#33-kbdl-008-decision-packet,components-system.md#111-tooltip; components-system.md#33-kbdl-008-decision-packet,None,True
+KBDL-CMP-074,components-system.md authoritative block,components-system.md#112-popover-or-non-modal-dialog; components-system.md#33-kbdl-008-decision-packet,components-system.md#112-popover-or-non-modal-dialog; components-system.md#33-kbdl-008-decision-packet,None,True
+KBDL-CMP-075,components-system.md authoritative block,components-system.md#113-menu-surface,components-system.md#113-menu-surface,None,True
+KBDL-CMP-076,components-system.md authoritative block,components-system.md#113-menu-surface; components-system.md#33-kbdl-008-decision-packet,components-system.md#113-menu-surface; components-system.md#33-kbdl-008-decision-packet,None,True
+KBDL-CMP-077,components-system.md authoritative block,components-system.md#114-listbox-popup,components-system.md#114-listbox-popup,None,True
+KBDL-CMP-078,components-system.md authoritative block,components-system.md#115-dialog,components-system.md#115-dialog,None,True
+KBDL-CMP-079,components-system.md authoritative block,components-system.md#116-modal-dialog,components-system.md#116-modal-dialog,None,True
+KBDL-CMP-080,components-system.md authoritative block,components-system.md#116-modal-dialog; components-system.md#33-kbdl-008-decision-packet,components-system.md#116-modal-dialog; components-system.md#33-kbdl-008-decision-packet,None,True
+KBDL-CMP-081,components-system.md authoritative block,components-system.md#117-alert-dialog,components-system.md#117-alert-dialog,None,True
+KBDL-CMP-082,components-system.md authoritative block,components-system.md#118-drawer-and-sheet,components-system.md#118-drawer-and-sheet,None,True
+KBDL-CMP-083,components-system.md authoritative block,components-system.md#118-drawer-and-sheet; components-system.md#33-kbdl-008-decision-packet,components-system.md#118-drawer-and-sheet; components-system.md#33-kbdl-008-decision-packet,None,True
+KBDL-CMP-084,components-system.md authoritative block,components-system.md#12-overlay-layering-and-nesting,components-system.md#12-overlay-layering-and-nesting,None,True
+KBDL-CMP-085,components-system.md authoritative block,components-system.md#12-overlay-layering-and-nesting; components-system.md#33-kbdl-008-decision-packet,components-system.md#12-overlay-layering-and-nesting; components-system.md#33-kbdl-008-decision-packet,None,True
+KBDL-CMP-086,components-system.md authoritative block,components-system.md#13-feedback-architecture,components-system.md#13-feedback-architecture,None,True
+KBDL-CMP-087,components-system.md authoritative block,components-system.md#141-inline-feedback,components-system.md#141-inline-feedback,None,True
+KBDL-CMP-088,components-system.md authoritative block,components-system.md#142-alert,components-system.md#142-alert,None,True
+KBDL-CMP-089,components-system.md authoritative block,components-system.md#143-banner; components-system.md#33-kbdl-008-decision-packet,components-system.md#143-banner; components-system.md#33-kbdl-008-decision-packet,None,True
+KBDL-CMP-090,components-system.md authoritative block,components-system.md#144-toast-or-snackbar,components-system.md#144-toast-or-snackbar,None,True
+KBDL-CMP-091,components-system.md authoritative block,components-system.md#144-toast-or-snackbar; components-system.md#33-kbdl-008-decision-packet,components-system.md#144-toast-or-snackbar; components-system.md#33-kbdl-008-decision-packet,None,True
+KBDL-CMP-092,components-system.md authoritative block,components-system.md#145-status-region-and-log,components-system.md#145-status-region-and-log,None,True
+KBDL-CMP-093,components-system.md authoritative block,components-system.md#146-badge-or-count-indicator,components-system.md#146-badge-or-count-indicator,None,True
+KBDL-CMP-094,components-system.md authoritative block,components-system.md#147-progress-indicator,components-system.md#147-progress-indicator,None,True
+KBDL-CMP-095,components-system.md authoritative block,components-system.md#148-meter,components-system.md#148-meter,None,True
+KBDL-CMP-096,components-system.md authoritative block,components-system.md#149-skeleton,components-system.md#149-skeleton,None,True
+KBDL-CMP-097,components-system.md authoritative block,components-system.md#15-system-state-architecture,components-system.md#15-system-state-architecture,None,True
+KBDL-CMP-098,components-system.md authoritative block,components-system.md#161-loading-state,components-system.md#161-loading-state,None,True
+KBDL-CMP-099,components-system.md authoritative block,components-system.md#162-empty-state; components-system.md#33-kbdl-008-decision-packet,components-system.md#162-empty-state; components-system.md#33-kbdl-008-decision-packet,None,True
+KBDL-CMP-100,components-system.md authoritative block,components-system.md#163-no-results-state,components-system.md#163-no-results-state,None,True
+KBDL-CMP-101,components-system.md authoritative block,components-system.md#164-error-state,components-system.md#164-error-state,None,True
+KBDL-CMP-102,components-system.md authoritative block,components-system.md#164-error-state; components-system.md#168-maintenance-unavailable-and-degraded-state; components-system.md#33-kbdl-008-decision-packet,components-system.md#164-error-state; components-system.md#168-maintenance-unavailable-and-degraded-state; components-system.md#33-kbdl-008-decision-packet,None,True
+KBDL-CMP-103,components-system.md authoritative block,components-system.md#165-offline-and-reconnecting-state,components-system.md#165-offline-and-reconnecting-state,None,True
+KBDL-CMP-104,components-system.md authoritative block,components-system.md#166-permission-denied-and-restricted-state,components-system.md#166-permission-denied-and-restricted-state,None,True
+KBDL-CMP-105,components-system.md authoritative block,components-system.md#181-interactive-grid; components-system.md#33-kbdl-008-decision-packet,components-system.md#181-interactive-grid; components-system.md#33-kbdl-008-decision-packet,None,True
+KBDL-CMP-106,components-system.md authoritative block,components-system.md#182-tree-and-treegrid; components-system.md#33-kbdl-008-decision-packet,components-system.md#182-tree-and-treegrid; components-system.md#33-kbdl-008-decision-packet,None,True
+KBDL-CMP-107,components-system.md authoritative block,components-system.md#183-carousel,components-system.md#183-carousel,None,True
+KBDL-CMP-108,components-system.md authoritative block,components-system.md#183-carousel; components-system.md#33-kbdl-008-decision-packet,components-system.md#183-carousel; components-system.md#33-kbdl-008-decision-packet,None,True
+KBDL-CMP-109,components-system.md authoritative block,components-system.md#184-data-visualization,components-system.md#184-data-visualization,None,True
+KBDL-CMP-110,components-system.md authoritative block,components-system.md#184-data-visualization; components-system.md#33-kbdl-008-decision-packet,components-system.md#184-data-visualization; components-system.md#33-kbdl-008-decision-packet,None,True
+KBDL-CMP-111,components-system.md authoritative block,components-system.md#19-responsive-transformation-policy; components-system.md#33-kbdl-008-decision-packet,components-system.md#19-responsive-transformation-policy; components-system.md#33-kbdl-008-decision-packet,None,True
+KBDL-CUS-001,customization.md authoritative block,customization.md#1-purpose-and-scope,customization.md#1-purpose-and-scope,None,True
+KBDL-CUS-002,customization.md authoritative block,customization.md#5-customization-authority-model,customization.md#5-customization-authority-model,None,True
+KBDL-CUS-003,customization.md authoritative block,customization.md#6-locked-controlled-open-proposed-and-exception-classifications,customization.md#6-locked-controlled-open-proposed-and-exception-classifications,None,True
+KBDL-CUS-004,customization.md authoritative block,customization.md#12-approval-and-escalation-paths,customization.md#12-approval-and-escalation-paths,None,True
+KBDL-CUS-005,customization.md authoritative block,customization.md#24-content-and-open-brand-expression,customization.md#24-content-and-open-brand-expression,None,True
+KBDL-CUS-006,customization.md authoritative block,customization.md#26-reusable-versus-project-local-customization,customization.md#26-reusable-versus-project-local-customization,None,True
+KBDL-CUS-007,customization.md authoritative block,customization.md#27-conflict-handling-and-exceptions,customization.md#27-conflict-handling-and-exceptions,None,True
+KBDL-CUS-008,customization.md authoritative block,customization.md#7-manual-customization-workflow,customization.md#7-manual-customization-workflow,None,True
+KBDL-CUS-009,customization.md authoritative block,customization.md#8-customization-request-intake,customization.md#8-customization-request-intake,None,True
+KBDL-CUS-010,customization.md authoritative block,customization.md#11-customization-record,customization.md#11-customization-record,None,True
+KBDL-CUS-011,customization.md authoritative block,customization.md#10-impact-assessment; customization.md#14-validation-and-evidence-planning,customization.md#10-impact-assessment; customization.md#14-validation-and-evidence-planning,None,True
+KBDL-CUS-012,customization.md authoritative block,customization.md#15-review-expiry-change-and-rollback,customization.md#15-review-expiry-change-and-rollback,None,True
+KBDL-CUS-013,customization.md authoritative block,customization.md#16-foundations-customization,customization.md#16-foundations-customization,None,True
+KBDL-CUS-014,customization.md authoritative block,customization.md#17-theme-customization,customization.md#17-theme-customization,None,True
+KBDL-CUS-015,customization.md authoritative block,customization.md#18-motion-customization,customization.md#18-motion-customization,None,True
+KBDL-CUS-016,customization.md authoritative block,customization.md#19-responsive-customization,customization.md#19-responsive-customization,None,True
+KBDL-CUS-017,customization.md authoritative block,customization.md#20-accessibility-customization-boundary,customization.md#20-accessibility-customization-boundary,None,True
+KBDL-CUS-018,customization.md authoritative block,customization.md#21-core-component-customization,customization.md#21-core-component-customization,None,True
+KBDL-CUS-019,customization.md authoritative block,customization.md#22-system-component-customization,customization.md#22-system-component-customization,None,True
+KBDL-CUS-020,customization.md authoritative block,customization.md#23-project-profile-customization,customization.md#23-project-profile-customization,None,True
+KBDL-CUS-021,customization.md authoritative block,customization.md#25-security-privacy-correctness-and-data-integrity,customization.md#25-security-privacy-correctness-and-data-integrity,None,True
+KBDL-CUS-022,customization.md authoritative block,customization.md#13-implementation-handoff-boundary,customization.md#13-implementation-handoff-boundary,None,True
+KBDL-CUS-023,customization.md authoritative block,customization.md#11-customization-record,customization.md#11-customization-record,None,True
+KBDL-CUS-024,customization.md authoritative block,customization.md#12-approval-and-escalation-paths,customization.md#12-approval-and-escalation-paths,None,True
+KBDL-CUS-025,customization.md authoritative block,customization.md#14-validation-and-evidence-planning,customization.md#14-validation-and-evidence-planning,None,True
+KBDL-CUS-026,customization.md authoritative block,customization.md#15-review-expiry-change-and-rollback,customization.md#15-review-expiry-change-and-rollback,None,True
+KBDL-CUS-027,customization.md authoritative block,customization.md#15-review-expiry-change-and-rollback,customization.md#15-review-expiry-change-and-rollback,None,True
+KBDL-CUS-028,customization.md authoritative block,customization.md#26-reusable-versus-project-local-customization,customization.md#26-reusable-versus-project-local-customization,None,True
+KBDL-CUS-029,customization.md authoritative block,customization.md#15-review-expiry-change-and-rollback; customization.md#24-content-and-open-brand-expression,customization.md#15-review-expiry-change-and-rollback; customization.md#24-content-and-open-brand-expression,None,True
+KBDL-CUS-030,customization.md authoritative block,customization.md#41-deferred-and-unresolved-items,customization.md#41-deferred-and-unresolved-items,None,True
+KBDL-FND-001,foundations/README.md authoritative block,foundations/color.md#1-architectural-principles-approved,foundations/color.md#1-architectural-principles-approved,None,True
+KBDL-FND-002,foundations/README.md authoritative block,foundations/color.md#24-status-roles; foundations/iconography-media.md#11-required-principles-approved,foundations/color.md#24-status-roles; foundations/iconography-media.md#11-required-principles-approved,None,True
+KBDL-FND-003,foundations/README.md authoritative block,foundations/spacing-layout.md#1-spacing-and-sizing-logic,foundations/spacing-layout.md#1-spacing-and-sizing-logic,None,True
+KBDL-FND-004,foundations/README.md authoritative block,foundations/spacing-layout.md#3-content-driven-breakpoint-philosophy-approved-principle-recommended-values,foundations/spacing-layout.md#3-content-driven-breakpoint-philosophy-approved-principle-recommended-values,None,True
+KBDL-FND-005,foundations/README.md authoritative block,foundations/shape-depth.md#3-elevation-and-depth,foundations/shape-depth.md#3-elevation-and-depth,None,True
+KBDL-FND-006,foundations/README.md authoritative block,foundations/iconography-media.md#1-iconography,foundations/iconography-media.md#1-iconography,None,True
+KBDL-FND-007,foundations/README.md authoritative block,foundations/iconography-media.md#2-imagery-and-media,foundations/iconography-media.md#2-imagery-and-media,None,True
+KBDL-FND-008,foundations/README.md authoritative block,foundations/README.md#4-project-profile-adjustments--foundation-summary,foundations/README.md#4-project-profile-adjustments--foundation-summary,None,True
+KBDL-FND-009,foundations/README.md authoritative block,foundations/color.md#3-default-foundation,foundations/color.md#3-default-foundation,None,True
+KBDL-FND-010,foundations/README.md authoritative block,foundations/typography.md#3-type-scale-and-text-roles,foundations/typography.md#3-type-scale-and-text-roles,None,True
+KBDL-FND-011,foundations/README.md authoritative block,foundations/spacing-layout.md#13-default-modular-spacing-system,foundations/spacing-layout.md#13-default-modular-spacing-system,None,True
+KBDL-FND-012,foundations/README.md authoritative block,foundations/shape-depth.md#13-default-corner-system,foundations/shape-depth.md#13-default-corner-system,None,True
+KBDL-GOV-001,governance.md authoritative block,governance.md#kbdl-gov-001--specification-architecture-is-established,governance.md#kbdl-gov-001--specification-architecture-is-established,None,True
+KBDL-GOV-002,governance.md authoritative block,governance.md#kbdl-gov-002--accessibility-requirements-are-protected,governance.md#kbdl-gov-002--accessibility-requirements-are-protected,None,True
+KBDL-GOV-003,governance.md authoritative block,governance.md#kbdl-gov-003--documentation-governance-process,governance.md#kbdl-gov-003--documentation-governance-process,None,True
+KBDL-MOT-001,motion/README.md authoritative block,motion/foundations.md#1-motion-purposes,motion/foundations.md#1-motion-purposes,None,True
+KBDL-MOT-002,motion/README.md authoritative block,motion/README.md#2-motion-terminology,motion/README.md#2-motion-terminology,None,True
+KBDL-MOT-003,motion/README.md authoritative block,motion/README.md#33-relationship-and-conflict-resolution,motion/README.md#33-relationship-and-conflict-resolution,None,True
+KBDL-MOT-004,motion/README.md authoritative block,motion/foundations.md#2-motion-categories,motion/foundations.md#2-motion-categories,None,True
+KBDL-MOT-005,motion/README.md authoritative block,motion/foundations.md#3-motion-hierarchy,motion/foundations.md#3-motion-hierarchy,None,True
+KBDL-MOT-006,motion/README.md authoritative block,motion/foundations.md#4-motion-intensity,motion/foundations.md#4-motion-intensity,None,True
+KBDL-MOT-007,motion/README.md authoritative block,motion/timing-easing.md#1-timing-architecture,motion/timing-easing.md#1-timing-architecture,None,True
+KBDL-MOT-008,motion/README.md authoritative block,motion/timing-easing.md#2-duration-recommendations,motion/timing-easing.md#2-duration-recommendations,None,True
+KBDL-MOT-009,motion/README.md authoritative block,motion/timing-easing.md#3-easing-architecture,motion/timing-easing.md#3-easing-architecture,None,True
+KBDL-MOT-010,motion/README.md authoritative block,motion/foundations.md#6-spatial-movement,motion/foundations.md#6-spatial-movement,None,True
+KBDL-MOT-011,motion/README.md authoritative block,motion/foundations.md#5-choreography-and-sequencing,motion/foundations.md#5-choreography-and-sequencing,None,True
+KBDL-MOT-012,motion/README.md authoritative block,motion/foundations.md#7-entrance-and-exit-behavior,motion/foundations.md#7-entrance-and-exit-behavior,None,True
+KBDL-MOT-013,motion/README.md authoritative block,motion/patterns.md#1-navigation-and-spatial-continuity,motion/patterns.md#1-navigation-and-spatial-continuity,None,True
+KBDL-MOT-014,motion/README.md authoritative block,motion/patterns.md#2-loading-and-progress,motion/patterns.md#2-loading-and-progress,None,True
+KBDL-MOT-015,motion/README.md authoritative block,motion/patterns.md#3-direct-manipulation-and-gesture-response,motion/patterns.md#3-direct-manipulation-and-gesture-response,None,True
+KBDL-MOT-016,motion/README.md authoritative block,motion/patterns.md#4-attention-motion,motion/patterns.md#4-attention-motion,None,True
+KBDL-MOT-017,motion/README.md authoritative block,motion/patterns.md#5-ambient-and-continuous-motion,motion/patterns.md#5-ambient-and-continuous-motion,None,True
+KBDL-MOT-018,motion/README.md authoritative block,motion/patterns.md#6-scroll-linked-motion,motion/patterns.md#6-scroll-linked-motion,None,True
+KBDL-MOT-019,motion/README.md authoritative block,motion/patterns.md#7-media-motion,motion/patterns.md#7-media-motion,None,True
+KBDL-MOT-020,motion/README.md authoritative block,motion/patterns.md#8-theme-transition-motion,motion/patterns.md#8-theme-transition-motion,None,True
+KBDL-MOT-021,motion/README.md authoritative block,motion/patterns.md#9-interruption-reversal-and-recovery,motion/patterns.md#9-interruption-reversal-and-recovery,None,True
+KBDL-MOT-022,motion/README.md authoritative block,motion/accessibility-performance.md#1-reduced-motion-and-no-motion-parity,motion/accessibility-performance.md#1-reduced-motion-and-no-motion-parity,None,True
+KBDL-MOT-023,motion/README.md authoritative block,motion/accessibility-performance.md#2-motion-safety,motion/accessibility-performance.md#2-motion-safety,None,True
+KBDL-MOT-024,motion/README.md authoritative block,motion/accessibility-performance.md#3-performance-requirements,motion/accessibility-performance.md#3-performance-requirements,None,True
+KBDL-MOT-025,motion/README.md authoritative block,motion/accessibility-performance.md#4-mobile-and-input-method-considerations,motion/accessibility-performance.md#4-mobile-and-input-method-considerations,None,True
+KBDL-MOT-026,motion/README.md authoritative block,motion/patterns.md#10-profile-level-motion-interpretation,motion/patterns.md#10-profile-level-motion-interpretation,None,True
+KBDL-MOT-027,motion/README.md authoritative block,motion/README.md#10-motion-decision-packet,motion/README.md#10-motion-decision-packet,None,True
+KBDL-MOT-028,motion/README.md authoritative block,motion/foundations.md#7-entrance-and-exit-behavior,motion/foundations.md#7-entrance-and-exit-behavior,None,True
+KBDL-MOT-029,motion/README.md authoritative block,motion/patterns.md#4-attention-motion,motion/patterns.md#4-attention-motion,None,True
+KBDL-MOT-030,motion/README.md authoritative block,motion/patterns.md#5-ambient-and-continuous-motion,motion/patterns.md#5-ambient-and-continuous-motion,None,True
+KBDL-MOT-031,motion/README.md authoritative block,motion/patterns.md#6-scroll-linked-motion,motion/patterns.md#6-scroll-linked-motion,None,True
+KBDL-MOT-032,motion/README.md authoritative block,motion/accessibility-performance.md#14-per-category-parity-matrix,motion/accessibility-performance.md#14-per-category-parity-matrix,None,True
+KBDL-MOT-033,motion/README.md authoritative block,motion/timing-easing.md#4-conceptual-motion-tokens,motion/timing-easing.md#4-conceptual-motion-tokens,None,True
+KBDL-MOT-034,motion/README.md authoritative block,motion/patterns.md#10-profile-level-motion-interpretation,motion/patterns.md#10-profile-level-motion-interpretation,None,True
+KBDL-PRN-001,principles.md authoritative block,principles.md#1-identity-statement,principles.md#1-identity-statement,None,True
+KBDL-PRN-002,principles.md authoritative block,principles.md#4-relationship-between-luxury-and-utility,principles.md#4-relationship-between-luxury-and-utility,None,True
+KBDL-PRN-003,principles.md authoritative block,principles.md#6-core-principles,principles.md#6-core-principles,None,True
+KBDL-PRN-004,principles.md authoritative block,principles.md#7-visual-consistency,principles.md#7-visual-consistency,None,True
+KBDL-PRN-005,principles.md authoritative block,principles.md#5-stable-and-variable-identity-elements,principles.md#5-stable-and-variable-identity-elements,None,True
+KBDL-PRN-006,principles.md authoritative block,principles.md#8-design-decision-hierarchy,principles.md#8-design-decision-hierarchy,None,True
+KBDL-PRN-007,principles.md authoritative block,principles.md#9-profile-level-interpretation,principles.md#9-profile-level-interpretation,None,True
+KBDL-PRN-008,principles.md authoritative block,principles.md#10-conforming-design-directions; principles.md#11-non-conforming-design-directions,principles.md#10-conforming-design-directions; principles.md#11-non-conforming-design-directions,None,True
+KBDL-PRO-001,profiles.md authoritative block,profiles.md#5-profile-architecture; profiles.md#9-cross-profile-invariants,profiles.md#5-profile-architecture; profiles.md#9-cross-profile-invariants,None,True
+KBDL-PRO-002,profiles.md authoritative block,profiles.md#4-project-profile-terminology,profiles.md#4-project-profile-terminology,None,True
+KBDL-PRO-003,profiles.md authoritative block,profiles.md#7-locked-controlled-and-open-profile-decisions,profiles.md#7-locked-controlled-and-open-profile-decisions,None,True
+KBDL-PRO-004,profiles.md authoritative block,profiles.md#7-locked-controlled-and-open-profile-decisions,profiles.md#7-locked-controlled-and-open-profile-decisions,None,True
+KBDL-PRO-005,profiles.md authoritative block,profiles.md#7-locked-controlled-and-open-profile-decisions,profiles.md#7-locked-controlled-and-open-profile-decisions,None,True
+KBDL-PRO-006,profiles.md authoritative block,profiles.md#7-locked-controlled-and-open-profile-decisions; profiles.md#35-kbdl-006-approval-boundary-audit; profiles.md#37-kbdl-008-approval-boundary-audit,profiles.md#7-locked-controlled-and-open-profile-decisions; profiles.md#35-kbdl-006-approval-boundary-audit; profiles.md#37-kbdl-008-approval-boundary-audit,None,True
+KBDL-PRO-007,profiles.md authoritative block,profiles.md#8-profile-selection-and-declaration,profiles.md#8-profile-selection-and-declaration,None,True
+KBDL-PRO-008,profiles.md authoritative block,profiles.md#8-profile-selection-and-declaration,profiles.md#8-profile-selection-and-declaration,None,True
+KBDL-PRO-009,profiles.md authoritative block,profiles.md#8-profile-selection-and-declaration; profiles.md#33-kbdl-009-decision-packet,profiles.md#8-profile-selection-and-declaration; profiles.md#33-kbdl-009-decision-packet,None,True
+KBDL-PRO-010,profiles.md authoritative block,profiles.md#101-purpose,profiles.md#101-purpose,None,True
+KBDL-PRO-011,profiles.md authoritative block,profiles.md#111-purpose,profiles.md#111-purpose,None,True
+KBDL-PRO-012,profiles.md authoritative block,profiles.md#121-purpose,profiles.md#121-purpose,None,True
+KBDL-PRO-013,profiles.md authoritative block,profiles.md#102-component-interpretation,profiles.md#102-component-interpretation,None,True
+KBDL-PRO-014,profiles.md authoritative block,profiles.md#112-component-interpretation,profiles.md#112-component-interpretation,None,True
+KBDL-PRO-015,profiles.md authoritative block,profiles.md#122-component-interpretation,profiles.md#122-component-interpretation,None,True
+KBDL-PRO-016,profiles.md authoritative block,profiles.md#102-component-interpretation; profiles.md#34-approval-ready-versus-contingent-decisions,profiles.md#102-component-interpretation; profiles.md#34-approval-ready-versus-contingent-decisions,None,True
+KBDL-PRO-017,profiles.md authoritative block,profiles.md#112-component-interpretation; profiles.md#33-kbdl-009-decision-packet,profiles.md#112-component-interpretation; profiles.md#33-kbdl-009-decision-packet,None,True
+KBDL-PRO-018,profiles.md authoritative block,profiles.md#122-component-interpretation; profiles.md#34-approval-ready-versus-contingent-decisions,profiles.md#122-component-interpretation; profiles.md#34-approval-ready-versus-contingent-decisions,None,True
+KBDL-PRO-019,profiles.md authoritative block,profiles.md#14-principles-mapping,profiles.md#14-principles-mapping,None,True
+KBDL-PRO-020,profiles.md authoritative block,profiles.md#20-core-component-mapping,profiles.md#20-core-component-mapping,None,True
+KBDL-PRO-021,profiles.md authoritative block,profiles.md#21-system-component-mapping,profiles.md#21-system-component-mapping,None,True
+KBDL-PRO-022,profiles.md authoritative block,profiles.md#22-content-and-communication-considerations,profiles.md#22-content-and-communication-considerations,None,True
+KBDL-PRO-023,profiles.md authoritative block,profiles.md#23-security-privacy-and-correctness,profiles.md#23-security-privacy-and-correctness,None,True
+KBDL-PRO-024,profiles.md authoritative block,profiles.md#24-profile-conflicts-and-exception-handling,profiles.md#24-profile-conflicts-and-exception-handling,None,True
+KBDL-PRO-025,profiles.md authoritative block,profiles.md#24-profile-conflicts-and-exception-handling,profiles.md#24-profile-conflicts-and-exception-handling,None,True
+KBDL-PRO-026,profiles.md authoritative block,profiles.md#25-profile-adoption-and-change-management,profiles.md#25-profile-adoption-and-change-management,None,True
+KBDL-PRO-027,profiles.md authoritative block,profiles.md#25-profile-adoption-and-change-management; profiles.md#33-kbdl-009-decision-packet,profiles.md#25-profile-adoption-and-change-management; profiles.md#33-kbdl-009-decision-packet,None,True
+KBDL-PRO-028,profiles.md authoritative block,profiles.md#8-profile-selection-and-declaration; profiles.md#33-kbdl-009-decision-packet,profiles.md#8-profile-selection-and-declaration; profiles.md#33-kbdl-009-decision-packet,None,True
+KBDL-PRO-029,profiles.md authoritative block,profiles.md#25-profile-adoption-and-change-management; profiles.md#33-kbdl-009-decision-packet,profiles.md#25-profile-adoption-and-change-management; profiles.md#33-kbdl-009-decision-packet,None,True
+KBDL-RSP-001,responsive.md authoritative block,responsive.md#4-responsive-content-priority,responsive.md#4-responsive-content-priority,None,True
+KBDL-RSP-002,responsive.md authoritative block,responsive.md#7-proposed-exact-breakpoint-thresholds,responsive.md#7-proposed-exact-breakpoint-thresholds,None,True
+KBDL-RSP-003,responsive.md authoritative block,responsive.md#8-grid-and-column-behavior,responsive.md#8-grid-and-column-behavior,None,True
+KBDL-RSP-004,responsive.md authoritative block,responsive.md#9-container-widths-and-reading-measures,responsive.md#9-container-widths-and-reading-measures,None,True
+KBDL-RSP-005,responsive.md authoritative block,responsive.md#10-gutters-and-responsive-spacing,responsive.md#10-gutters-and-responsive-spacing,None,True
+KBDL-RSP-006,responsive.md authoritative block,responsive.md#11-layout-reflow,responsive.md#11-layout-reflow,None,True
+KBDL-RSP-007,responsive.md authoritative block,responsive.md#12-source-order-and-reading-order,responsive.md#12-source-order-and-reading-order,None,True
+KBDL-RSP-008,responsive.md authoritative block,responsive.md#13-navigation-adaptation,responsive.md#13-navigation-adaptation,None,True
+KBDL-RSP-009,responsive.md authoritative block,responsive.md#14-content-density-adaptation,responsive.md#14-content-density-adaptation,None,True
+KBDL-RSP-010,responsive.md authoritative block,responsive.md#15-media-and-image-adaptation,responsive.md#15-media-and-image-adaptation,None,True
+KBDL-RSP-011,responsive.md authoritative block,responsive.md#16-data-dense-and-tabular-content,responsive.md#16-data-dense-and-tabular-content,None,True
+KBDL-RSP-012,responsive.md authoritative block,responsive.md#17-full-bleed-and-asymmetric-layouts,responsive.md#17-full-bleed-and-asymmetric-layouts,None,True
+KBDL-RSP-013,responsive.md authoritative block,responsive.md#18-sticky-and-fixed-regions,responsive.md#18-sticky-and-fixed-regions,None,True
+KBDL-RSP-014,responsive.md authoritative block,responsive.md#19-safe-areas-and-viewport-edges,responsive.md#19-safe-areas-and-viewport-edges,None,True
+KBDL-RSP-015,responsive.md authoritative block,responsive.md#20-orientation-changes,responsive.md#20-orientation-changes,None,True
+KBDL-RSP-016,responsive.md authoritative block,responsive.md#21-zoom-and-enlarged-text,responsive.md#21-zoom-and-enlarged-text,None,True
+KBDL-RSP-017,responsive.md authoritative block,responsive.md#22-virtual-keyboard-behavior,responsive.md#22-virtual-keyboard-behavior,None,True
+KBDL-RSP-018,responsive.md authoritative block,responsive.md#23-touch-pointer-keyboard-and-hybrid-input,responsive.md#23-touch-pointer-keyboard-and-hybrid-input,None,True
+KBDL-RSP-019,responsive.md authoritative block,responsive.md#24-hover-independent-discoverability,responsive.md#24-hover-independent-discoverability,None,True
+KBDL-RSP-020,responsive.md authoritative block,responsive.md#25-responsive-focus-management,responsive.md#25-responsive-focus-management,None,True
+KBDL-RSP-021,responsive.md authoritative block,responsive.md#26-responsive-motion-behavior,responsive.md#26-responsive-motion-behavior,None,True
+KBDL-RSP-022,responsive.md authoritative block,responsive.md#27-performance-and-low-capability-contexts,responsive.md#27-performance-and-low-capability-contexts,None,True
+KBDL-THM-001,themes/README.md authoritative block,themes/semantic-roles.md#1-semantic-role-inventory,themes/semantic-roles.md#1-semantic-role-inventory,None,True
+KBDL-THM-002,themes/README.md authoritative block,themes/semantic-roles.md#2-semantic-parity,themes/semantic-roles.md#2-semantic-parity,None,True
+KBDL-THM-003,themes/README.md authoritative block,themes/README.md#5-theme-selection-precedence,themes/README.md#5-theme-selection-precedence,None,True
+KBDL-THM-004,themes/README.md authoritative block,themes/README.md#7-persistence-guidance,themes/README.md#7-persistence-guidance,None,True
+KBDL-THM-005,themes/README.md authoritative block,themes/adaptation.md#12-projects-must-not,themes/adaptation.md#12-projects-must-not,None,True
+KBDL-THM-006,themes/README.md authoritative block,themes/README.md#8-project-profile-theme-interpretation,themes/README.md#8-project-profile-theme-interpretation,None,True
+KBDL-THM-007,themes/README.md authoritative block,themes/light-theme.md#1-canvas-and-surfaces,themes/light-theme.md#1-canvas-and-surfaces,None,True
+KBDL-THM-008,themes/README.md authoritative block,themes/dark-theme.md#1-elevation-strategy,themes/dark-theme.md#1-elevation-strategy,None,True
+KBDL-THM-009,themes/README.md authoritative block,themes/adaptation.md#5-status-family-theme-behavior,themes/adaptation.md#5-status-family-theme-behavior,None,True
+KBDL-THM-010,themes/README.md authoritative block,themes/adaptation.md#4-gradient-strategy,themes/adaptation.md#4-gradient-strategy,None,True
+KBDL-THM-011,themes/README.md authoritative block,themes/adaptation.md#6-color-value-expression,themes/adaptation.md#6-color-value-expression,None,True
+KBDL-THM-012,themes/README.md authoritative block,themes/adaptation.md#7-theme-transition-guidance,themes/adaptation.md#7-theme-transition-guidance,None,True
+KBDL-THM-012a,themes/README.md authoritative block,themes/adaptation.md#71-requirements,themes/adaptation.md#71-requirements,None,True
+KBDL-THM-013,themes/README.md authoritative block,themes/README.md#5-theme-selection-precedence,themes/README.md#5-theme-selection-precedence,None,True
+KBDL-THM-014,themes/README.md authoritative block,themes/adaptation.md#1-project-controlled-adaptation,themes/adaptation.md#1-project-controlled-adaptation,None,True
+KBDL-THM-015,themes/README.md authoritative block,themes/adaptation.md#2-local-contrast-contexts,themes/adaptation.md#2-local-contrast-contexts,None,True
+KBDL-VAL-001,validation.md authoritative block,validation.md#4-evidence-classification,validation.md#4-evidence-classification,None,True
+KBDL-VAL-002,validation.md authoritative block,validation.md#8-requirement-inventory,validation.md#8-requirement-inventory,None,True
+KBDL-VAL-003,validation.md authoritative block,validation.md#9-lifecycle-status-audit; validation.md#12-approved-authority-audit,validation.md#9-lifecycle-status-audit; validation.md#12-approved-authority-audit,None,True
+KBDL-VAL-004,validation.md authoritative block,validation.md#11-validation-status-audit,validation.md#11-validation-status-audit,None,True
+KBDL-VAL-005,validation.md authoritative block,validation.md#13-decision-register-audit; validation.md#14-pending-and-deferred-inventory,validation.md#13-decision-register-audit; validation.md#14-pending-and-deferred-inventory,None,True
+KBDL-VAL-006,validation.md authoritative block,validation.md#15-traceability-audit,validation.md#15-traceability-audit,None,True
+KBDL-VAL-007,validation.md authoritative block,validation.md#16-cross-reference-and-documentation-integrity-audit,validation.md#16-cross-reference-and-documentation-integrity-audit,None,True
+KBDL-VAL-008,validation.md authoritative block,validation.md#17-governance-and-conventions-audit; validation.md#28-security-privacy-correctness-and-data-integrity-audit,validation.md#17-governance-and-conventions-audit; validation.md#28-security-privacy-correctness-and-data-integrity-audit,None,True
+KBDL-VAL-009,validation.md authoritative block,validation.md#20-theme-audit,validation.md#20-theme-audit,None,True
+KBDL-VAL-010,validation.md authoritative block,validation.md#29-implementation-dependent-validation-ledger,validation.md#29-implementation-dependent-validation-ledger,None,True
+KBDL-VAL-011,validation.md authoritative block,validation.md#30-project-specific-validation-ledger,validation.md#30-project-specific-validation-ledger,None,True
+KBDL-VAL-012,validation.md authoritative block,validation.md#41-completion-and-approval-boundary,validation.md#41-completion-and-approval-boundary,None,True

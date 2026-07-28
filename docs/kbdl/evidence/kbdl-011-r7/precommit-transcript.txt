@@ -1,0 +1,161 @@
+$ git fetch origin
+[stdout]
+(empty)
+[stderr]
+(empty)
+[exit code] 0
+
+$ git remote -v
+[stdout]
+origin	https://github.com/kbmanilla06/kbdl.git (fetch)
+origin	https://github.com/kbmanilla06/kbdl.git (push)
+[stderr]
+(empty)
+[exit code] 0
+
+$ git branch --show-current
+[stdout]
+main
+[stderr]
+(empty)
+[exit code] 0
+
+$ git status --short
+[stdout]
+ M docs/kbdl/README.md
+ M docs/kbdl/traceability-matrix.md
+ M docs/kbdl/traceability-metadata.csv
+ M docs/kbdl/validation.md
+?? docs/kbdl/evidence/kbdl-011-r7/
+[stderr]
+(empty)
+[exit code] 0
+
+$ git rev-parse HEAD
+[stdout]
+bbcc13e0ecaece6b70f0ce678a8cc66b21500d6c
+[stderr]
+(empty)
+[exit code] 0
+
+$ git rev-parse origin/main
+[stdout]
+bbcc13e0ecaece6b70f0ce678a8cc66b21500d6c
+[stderr]
+(empty)
+[exit code] 0
+
+$ git log --oneline --decorate -15
+[stdout]
+bbcc13e (HEAD -> main, origin/main, origin/HEAD) Resolve KBDL traceability per requirement
+991dfdf Reconcile KBDL effective traceability records
+7c09694 Remediate KBDL-011 authoritative traceability
+d7108bd Complete KBDL traceability metadata audit (KBDL-011-R3)
+5d4ecd5 Replace KBDL-011 validation evidence methodology (KBDL-011-R2)
+eab3b41 Remediate KBDL-011 roadmap and evidence audit (KBDL-011-R1)
+b5bb0a3 Add KBDL final validation audit (KBDL-011)
+55b6ba6 Remove KBDL-010 packet dependency ambiguity (KBDL-010-R1)
+12080da Add manual customization specification (KBDL-010)
+907708c Correct KBDL-009 profile location summaries (KBDL-009-R3)
+3503d95 Add per-ID traceability locations and packet destinations for KBDL-009 (KBDL-009-R2)
+8dc232c Correct KBDL-009 packet mapping, requirement metadata, and traceability (KBDL-009-R1)
+254b935 Add KBDL-009 Project Profiles specification
+5cf9060 Reconcile KBDL-008 lifecycle-authority summaries and traceability (KBDL-008-R2)
+c7d3da5 Correct KBDL-008 invalid references, section labels, and source attribution (KBDL-008-R1)
+[stderr]
+(empty)
+[exit code] 0
+
+$ git show --no-patch --format=fuller bbcc13e0ecaece6b70f0ce678a8cc66b21500d6c
+[stdout]
+commit bbcc13e0ecaece6b70f0ce678a8cc66b21500d6c
+Author:     Khristopher Ben Manilla <kbmanilla06@gmail.com>
+AuthorDate: Tue Jul 28 12:59:16 2026 +0800
+Commit:     Khristopher Ben Manilla <kbmanilla06@gmail.com>
+CommitDate: Tue Jul 28 12:59:16 2026 +0800
+
+    Resolve KBDL traceability per requirement
+[stderr]
+(empty)
+[exit code] 0
+
+$ python3 docs/kbdl/evidence/kbdl-011-r5/scripts/build_effective_ledger.py
+[stdout]
+Wrote 317 effective ledger rows
+[stderr]
+(empty)
+[exit code] 0
+
+$ python3 docs/kbdl/evidence/kbdl-011-r6/scripts/resolve_per_id_ledger.py
+[stdout]
+Resolved 317 exact per-ID ledger records
+[stderr]
+(empty)
+[exit code] 0
+
+$ python3 docs/kbdl/evidence/kbdl-011-r7/scripts/reconcile_evidence.py
+[stdout]
+Corrected evidence attribution for 37 requirements
+[stderr]
+(empty)
+[exit code] 0
+
+$ python3 docs/kbdl/evidence/kbdl-011-r7/scripts/validate_effective_traceability.py
+[stdout]
+Requirements audited: 317
+Effective records: 317
+Missing records: 0
+Duplicate records: 0
+
+Readable groups parsed: 60
+Unparsed group fields: 0
+Unresolved per-ID maps: 0
+Group/ledger conflicts: 0
+
+File-only locations: 0
+Broad locations: 0
+Invalid anchors: 0
+Location mismatches: 0
+
+Approved requirements audited: 266
+Unresolved authority: 0
+Non-Approved authority targets: 0
+Missing authority targets: 0
+Circular authority chains: 0
+Self-authority claims: 0
+
+Non-Approved requirements audited: 51
+Exact packet mismatches: 0
+Incorrect contingent mappings: 0
+Deferred tracking mismatches: 0
+Dependency mismatches: 0
+
+Evidence-attribution mismatches: 0
+Method/evidence conflicts: 0
+Limitation mismatches: 0
+Stale R2/R5 status claims: 0
+Unauthorized metadata changes: 0
+Completion decisions: 0
+
+Implementation conformance status: NOT VERIFIED
+Project completion status: PENDING
+Errors: 0
+[stderr]
+(empty)
+[exit code] 0
+
+$ python3 docs/kbdl/evidence/kbdl-011-r1/scripts/repository_documentation_validator.py
+[stdout]
+Markdown files: 48
+Stale ten-step current-roadmap claims: 0
+Documentation errors: 0
+[stderr]
+(empty)
+[exit code] 0
+
+$ git diff --check
+[stdout]
+(empty)
+[stderr]
+(empty)
+[exit code] 0

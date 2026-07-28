@@ -150,12 +150,12 @@ items remain `Recommended` and its machine-readable-format item remains
 `Deferred`; no earlier recommendation is promoted and no implementation-
 level customization validation exists. KBDL-010 **passed** planning-agent
 validation, which unlocked KBDL-011. KBDL-011 (Final Validation) is now
-present in [validation.md](validation.md). The independent KBDL-011-R2 audit
-completes the traceability-evidence remediation and recalculates its
-documentation-only candidate as `PRODUCTION READY`; implementation conformance remains
-`NOT VERIFIED`. This is not a claim that the overall KBDL project is complete:
-planning-agent validation of KBDL-011 and explicit project-owner completion
-approval remain pending.
+present in [validation.md](validation.md). KBDL-011-R6 failed planning-agent
+review; KBDL-011-R7 is the current independent traceability/evidence
+remediation. Its documentation-only candidate may be `PRODUCTION READY` only
+after the R7 source-derived audit passes. Implementation conformance remains
+`NOT VERIFIED`, and planning-agent validation plus explicit project-owner
+completion approval remain pending.
 Progression to later roadmap steps depends on the
 planning agent's validation review, not on this index. KBDL-001
 established the documentation architecture, terminology, requirement

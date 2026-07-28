@@ -1,0 +1,16 @@
+path,bytes,sha256
+docs/kbdl/evidence/kbdl-011-r7/artifacts/authority-chain-audit.csv,88204,f5cd7414f98ce88765eebddfd225bd32fb7c93b440b053cfe319733efa11f31a
+docs/kbdl/evidence/kbdl-011-r7/artifacts/effective-record-audit.csv,249803,5ce2ce0fb142e6466421b630eb7001be982af7e6339decb990f048e8ff0a7738
+docs/kbdl/evidence/kbdl-011-r7/artifacts/evidence-attribution-audit.csv,69802,ff5e453be393c16d27e02afc6245bfb61f67c35a9ddaf9e603edd72351ae281f
+docs/kbdl/evidence/kbdl-011-r7/artifacts/exact-location-audit.csv,53844,c67f72b9a85fa1fa253adfb1116c96b1527a6b1beb822285673fc9ba6a59145b
+docs/kbdl/evidence/kbdl-011-r7/artifacts/limitation-audit.csv,73546,65efdaf52a3c257d2f576b2e7ceeac5837bb931b8bb691767727455812fc2817
+docs/kbdl/evidence/kbdl-011-r7/artifacts/packet-dependency-audit.csv,34035,9ff856b4cc3cddd58e78bc94020867bf9afd9ec0e5c2b37a33ba409506d83ae1
+docs/kbdl/evidence/kbdl-011-r7/artifacts/readable-group-parse.csv,11388,160f2347dde8d91bee81d1acc310d4f0a6196046473630a26b23b15ab7392400
+docs/kbdl/evidence/kbdl-011-r7/artifacts/stale-status-audit.csv,245,78429d84ead37ae670935cbcb028c9fb6e53644ddbcbdce999fd3d4f31723530
+docs/kbdl/evidence/kbdl-011-r7/artifacts/validation-output.txt,882,516f1863d19dd541a41273dc469214d207aeaf460c5be6551f4b30a5b68d3b14
+docs/kbdl/evidence/kbdl-011-r7/evidence-manifest.md,1831,9b7808f40ef7fe624bc6896f4a1373f341d2605f6f5f1fa0b4c5c0fe23e35e82
+docs/kbdl/evidence/kbdl-011-r7/implementation-report.md,10067,e10910b0de14cb3af56c9c6929153e9a583e5057785759c5f80cf0a76071a47d
+docs/kbdl/evidence/kbdl-011-r7/precommit-transcript.txt,4061,357095c7dc1e4a00f7dbbdcd9607bcbae5f0756df589e1d205d968a040e51797
+docs/kbdl/evidence/kbdl-011-r7/scripts/capture_precommit.py,1272,38f8e34a7d7d902539d1e971930088a9d0f3f8e0579be738f5db4ca920d80890
+docs/kbdl/evidence/kbdl-011-r7/scripts/reconcile_evidence.py,955,c4075c628b4af799996bcb6f73c643d10de6abc0a3d0d27763c6ba1fa529a2aa
+docs/kbdl/evidence/kbdl-011-r7/scripts/validate_effective_traceability.py,19844,595d93f3e67db2bec8bbc660b36d3c1b7ae99e2bfcaf3fc5f4a414acaf4e25c7

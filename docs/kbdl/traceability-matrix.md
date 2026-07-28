@@ -824,7 +824,7 @@ The rows below trace KBDL-004's adaptive-theme scope, defined in
 - **Requirement ID:** KBDL-CMP-001, 002, 003, 004, 005, 006, 007, 008, 009, 010, 011, 012, 013, 050, 051
 - **Specification location:** [components-core.md §5–§19, §25, §26](components-core.md#6-shared-component-contract)
 - **Approval status:** Approved for all fifteen — each directly restates an already-approved WCAG 2.2 Level A/AA criterion, WAI-ARIA rule, or prior approved KBDL principle/foundation/theme/motion/responsive/accessibility requirement
-- **Provenance:** Confirmed for all fifteen.
+- **Provenance:** User-provided for `KBDL-CMP-001`; Confirmed for `KBDL-CMP-002`–`013`, `050`, and `051`.
 - **Validation status:** Not verified: KBDL-CMP-001, KBDL-CMP-002, KBDL-CMP-003, KBDL-CMP-004, KBDL-CMP-006, KBDL-CMP-007, KBDL-CMP-008, KBDL-CMP-009, KBDL-CMP-010, KBDL-CMP-011, KBDL-CMP-012, KBDL-CMP-013, KBDL-CMP-051; Not applicable: KBDL-CMP-005, KBDL-CMP-050
 - **Validation method:** Manual completeness/mapping review per component once implemented; manual scope-compliance review (performed, see implementation report).
 - **Validation evidence:** Not verified — no implementation exists yet.
@@ -1402,8 +1402,9 @@ present with 30 `CUS` requirements. Its seven discretionary policy items
 remain Recommended, its format/tooling item remains Deferred, and no
 implementation-level customization behavior is verified. KBDL-010 passed
 planning-agent review and KBDL-011 is present with twelve Approved, Verified
-validation-methodology requirements. R6 returns `VAL-003` and `VAL-006` to
-Verified after the exact per-ID override and authority-chain audit passes;
+validation-methodology requirements. R7 returns `VAL-003`, `VAL-004`, and
+`VAL-006` to Verified after the independent source/readable-group/ledger,
+evidence-attribution, exact override, and authority-chain audits pass;
 `VAL-008`, `010`, and `011` remain Not verified. The documentation-only candidate is `PRODUCTION
 READY` subject to independent planning-agent review.
 Implementation conformance is
