@@ -1,0 +1,143 @@
+COMMAND 1: git fetch origin
+STDOUT:
+
+STDERR:
+
+EXIT CODE: 0
+RESULT: PASS
+
+COMMAND 2: git remote -v
+STDOUT:
+origin	https://github.com/kbmanilla06/kbdl.git (fetch)
+origin	https://github.com/kbmanilla06/kbdl.git (push)
+STDERR:
+
+EXIT CODE: 0
+RESULT: PASS
+
+COMMAND 3: git branch --show-current
+STDOUT:
+main
+STDERR:
+
+EXIT CODE: 0
+RESULT: PASS
+
+COMMAND 4: git status --short
+STDOUT:
+ M docs/kbdl/README.md
+ M docs/kbdl/traceability-matrix.md
+ M docs/kbdl/validation.md
+?? docs/kbdl/evidence/kbdl-011-r3/
+?? docs/kbdl/traceability-metadata.csv
+STDERR:
+
+EXIT CODE: 0
+RESULT: PASS
+
+COMMAND 5: git rev-parse HEAD
+STDOUT:
+5d4ecd52545d57df59d3e7551964c25b87ea2123
+STDERR:
+
+EXIT CODE: 0
+RESULT: PASS
+
+COMMAND 6: git rev-parse origin/main
+STDOUT:
+5d4ecd52545d57df59d3e7551964c25b87ea2123
+STDERR:
+
+EXIT CODE: 0
+RESULT: PASS
+
+COMMAND 7: git log --oneline --decorate -15
+STDOUT:
+5d4ecd5 (HEAD -> main, origin/main, origin/HEAD) Replace KBDL-011 validation evidence methodology (KBDL-011-R2)
+eab3b41 Remediate KBDL-011 roadmap and evidence audit (KBDL-011-R1)
+b5bb0a3 Add KBDL final validation audit (KBDL-011)
+55b6ba6 Remove KBDL-010 packet dependency ambiguity (KBDL-010-R1)
+12080da Add manual customization specification (KBDL-010)
+907708c Correct KBDL-009 profile location summaries (KBDL-009-R3)
+3503d95 Add per-ID traceability locations and packet destinations for KBDL-009 (KBDL-009-R2)
+8dc232c Correct KBDL-009 packet mapping, requirement metadata, and traceability (KBDL-009-R1)
+254b935 Add KBDL-009 Project Profiles specification
+5cf9060 Reconcile KBDL-008 lifecycle-authority summaries and traceability (KBDL-008-R2)
+c7d3da5 Correct KBDL-008 invalid references, section labels, and source attribution (KBDL-008-R1)
+393a980 Add KBDL-008 surface, overlay, feedback, and system-state specification
+ee46f5a Correct remaining KBDL-007 packet-number and remediation-state references (KBDL-007-R3)
+f45fd47 Resolve KBDL-CMP-041 approval-scope contradiction (KBDL-007-R2)
+513dd7e Correct KBDL-007 governance and decision-packet accuracy (KBDL-007-R1)
+STDERR:
+
+EXIT CODE: 0
+RESULT: PASS
+
+COMMAND 8: git show --no-patch --format=fuller 5d4ecd5
+STDOUT:
+commit 5d4ecd52545d57df59d3e7551964c25b87ea2123
+Author:     Khristopher Ben Manilla <kbmanilla06@gmail.com>
+AuthorDate: Tue Jul 28 11:02:36 2026 +0800
+Commit:     Khristopher Ben Manilla <kbmanilla06@gmail.com>
+CommitDate: Tue Jul 28 11:02:36 2026 +0800
+
+    Replace KBDL-011 validation evidence methodology (KBDL-011-R2)
+STDERR:
+
+EXIT CODE: 0
+RESULT: PASS
+
+COMMAND 9: git diff --check
+STDOUT:
+
+STDERR:
+
+EXIT CODE: 0
+RESULT: PASS
+
+COMMAND 10: python3 docs/kbdl/evidence/kbdl-011-r3/scripts/build_traceability_metadata.py
+STDOUT:
+Wrote 317 per-ID metadata rows to docs/kbdl/traceability-metadata.csv
+Wrote 258 historical missing-field rows to docs/kbdl/evidence/kbdl-011-r3/artifacts/missing-field-distribution.csv
+STDERR:
+
+EXIT CODE: 0
+RESULT: PASS
+
+COMMAND 11: python3 docs/kbdl/evidence/kbdl-011-r3/scripts/validate_traceability_metadata.py
+STDOUT:
+Requirements audited: 317
+Traceability occurrences: 317
+Missing traceability: 0
+Duplicate traceability: 0
+Orphan traceability: 0
+Incomplete traceability records: 0
+Specification-location mismatches: 0
+Lifecycle mismatches: 0
+Provenance mismatches: 0
+Validation-status mismatches: 0
+Authority inconsistencies: 0
+Packet-destination mismatches: 0
+Dependency mismatches: 0
+Historical incomplete records found: 258
+Current incomplete records: 0
+Stale traceability status claims: 0
+Unauthorized metadata changes: 0
+Implementation conformance status: NOT VERIFIED
+Project completion status: PENDING
+Errors: 0
+STDERR:
+
+EXIT CODE: 0
+RESULT: PASS
+
+COMMAND 12: python3 docs/kbdl/evidence/kbdl-011-r1/scripts/repository_documentation_validator.py
+STDOUT:
+Markdown files: 40
+Stale ten-step current-roadmap claims: 0
+Documentation errors: 0
+STDERR:
+
+EXIT CODE: 0
+RESULT: PASS
+

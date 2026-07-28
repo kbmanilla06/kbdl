@@ -1,10 +1,10 @@
 # KBDL Traceability Matrix
 
 Lifecycle status of this framework: `Approved`. Rows below reflect
-KBDL-001, KBDL-002, KBDL-003, KBDL-004, KBDL-005, KBDL-006, KBDL-007,
-KBDL-008, KBDL-009, and KBDL-010 scope. KBDL-009 passed planning-agent
-validation; KBDL-010 remains under validation, and its presence here is
-not a claim that implementation-level customization is verified.
+KBDL-001 through KBDL-011 scope. KBDL-010 passed planning-agent validation.
+KBDL-011 remains in remediation and has not passed planning-agent validation.
+Implementation conformance remains `Not verified`; project completion remains
+pending explicit project-owner approval.
 
 Return to the [specification index](README.md). Status labels are defined in
 [conventions.md](conventions.md#1-status-labels).
@@ -22,19 +22,27 @@ row, so it remains readable without horizontal scrolling.
 
 ## Fields
 
-Every row records:
+Every requirement row consists of its readable group below plus the same ID's
+row in the [per-ID metadata ledger](traceability-metadata.csv). Group fields
+and ledger fields are inherited together; an explicit group value overrides
+only an identical ledger field. This preserves grouping while making mixed
+values individually auditable. Every combined record contains:
 
 - **Blueprint section** — The approved KBDL blueprint concept this row traces to.
 - **Roadmap prompt** — The roadmap step (e.g. KBDL-001) that owns this row.
 - **Requirement ID** — The requirement ID, if one has been assigned yet.
-- **Specification location** — The file (and heading, where applicable) this concept lives in.
-- **Approval status** — The lifecycle/approval label from [conventions.md §1.1](conventions.md#11-lifecycle--approval-status). Only `Approved` authorizes implementation.
+- **Specification location** — The authoritative file and section for this ID.
+- **Lifecycle status** — The lifecycle/approval label from [conventions.md §1.1](conventions.md#11-lifecycle--approval-status). Only `Approved` authorizes implementation.
+- **Provenance** — The authoritative origin classification; historical GOV rows use documented KBDL-001 prompt/decision evidence.
 - **Validation status** — The validation label from [conventions.md §1.3](conventions.md#13-validation-status): `Verified` or `Not verified`. Independent of approval status; `Verified` never implies `Approved`, and `Approved` never implies `Verified`.
+- **Authority** — The authoritative rule, adopted standard, prompt, or decision supporting lifecycle authority.
 - **Validation method** — How this requirement is or will be checked (for example manual review, link check, Markdown lint).
 - **Validation evidence** — A concrete pointer to the evidence (a commit SHA, a named review, a tool's output), or `Not verified` if no validation has actually been performed yet. Evidence must never be the traceability matrix pointing at itself.
 - **Known limitation** — Any known gap or caveat, or `None identified`.
+- **Packet or tracking destination** — `None — Approved` or the exact owning packet/tracking destination.
+- **Pending dependencies** — The explicit dependency or `None`.
 - **Related decision** — Decision ID from the [decision register](decision-register.md), if applicable.
-- **Notes** — Free text.
+- **Notes or exclusions** — Per-ID clarification, exclusion, or ledger-inheritance note.
 
 ## KBDL-001 Rows
 
@@ -1130,7 +1138,7 @@ records and has its own specification location and evidence boundary.
 - **Specification location (per-ID):** `005` → [§13](validation.md#13-decision-register-audit) and [§14](validation.md#14-pending-and-deferred-inventory); `006` → [§15](validation.md#15-traceability-audit); `007` → [§16](validation.md#16-cross-reference-and-documentation-integrity-audit); `008` → [§17](validation.md#17-governance-and-conventions-audit) through [§28](validation.md#28-security-privacy-correctness-and-data-integrity-audit).
 - **Lifecycle status:** All Approved.
 - **Provenance:** All Confirmed.
-- **Validation status (per-ID):** `005`: Verified; `006`: Not verified; `007`: Verified; `008`: Not verified.
+- **Validation status (per-ID):** `005`, `006`, `007`: Verified; `008`: Not verified.
 - **Authority:** Explicit mandatory KBDL-011 prompt clauses approved by the project owner.
 - **Validation class (per-ID):** `005`: B; `006`: A; `007`: A; `008`: C.
 - **Validation method / evidence (per-ID):** `005`: decision/pending ledger audit; `006`: per-ID traceability audit; `007`: link, anchor, heading, table, ID, roadmap, and claim checks; `008`: static invariant comparison. Executed evidence is recorded in the linked sections.
@@ -1394,9 +1402,10 @@ present with 30 `CUS` requirements. Its seven discretionary policy items
 remain Recommended, its format/tooling item remains Deferred, and no
 implementation-level customization behavior is verified. KBDL-010 passed
 planning-agent review and KBDL-011 is present with twelve Approved, Verified
-validation-methodology requirements. R2 retains eight as Verified and changes
-four to Not verified because their complete methods lack sufficient evidence;
-the documentation candidate is `NOT READY` pending traceability remediation.
+validation-methodology requirements. R3 returns `VAL-006` to Verified after
+the complete per-ID ledger and metadata validator pass; `VAL-008`, `010`, and
+`011` remain Not verified. The documentation-only candidate is `PRODUCTION
+READY` subject to independent planning-agent review.
 Implementation conformance is
 `NOT VERIFIED`, and completion awaits independent review and explicit
 project-owner approval.

@@ -1,0 +1,259 @@
+Module,Traceability group,Missing fields,Affected ID
+A11Y,"WCAG 2.2 Level A/AA baseline requirements (KBDL-A11Y-001 through KBDL-A11Y-010, KBDL-A11Y-012 through KBDL-A11Y-020, KBDL-A11Y-022 through KBDL-A11Y-034, KBDL-A11Y-036 through KBDL-A11Y-040)",provenance;packet;dependency,KBDL-A11Y-001
+A11Y,"WCAG 2.2 Level A/AA baseline requirements (KBDL-A11Y-001 through KBDL-A11Y-010, KBDL-A11Y-012 through KBDL-A11Y-020, KBDL-A11Y-022 through KBDL-A11Y-034, KBDL-A11Y-036 through KBDL-A11Y-040)",provenance;packet;dependency,KBDL-A11Y-002
+A11Y,"WCAG 2.2 Level A/AA baseline requirements (KBDL-A11Y-001 through KBDL-A11Y-010, KBDL-A11Y-012 through KBDL-A11Y-020, KBDL-A11Y-022 through KBDL-A11Y-034, KBDL-A11Y-036 through KBDL-A11Y-040)",provenance;packet;dependency,KBDL-A11Y-003
+A11Y,"WCAG 2.2 Level A/AA baseline requirements (KBDL-A11Y-001 through KBDL-A11Y-010, KBDL-A11Y-012 through KBDL-A11Y-020, KBDL-A11Y-022 through KBDL-A11Y-034, KBDL-A11Y-036 through KBDL-A11Y-040)",provenance;packet;dependency,KBDL-A11Y-004
+A11Y,"WCAG 2.2 Level A/AA baseline requirements (KBDL-A11Y-001 through KBDL-A11Y-010, KBDL-A11Y-012 through KBDL-A11Y-020, KBDL-A11Y-022 through KBDL-A11Y-034, KBDL-A11Y-036 through KBDL-A11Y-040)",provenance;packet;dependency,KBDL-A11Y-005
+A11Y,"WCAG 2.2 Level A/AA baseline requirements (KBDL-A11Y-001 through KBDL-A11Y-010, KBDL-A11Y-012 through KBDL-A11Y-020, KBDL-A11Y-022 through KBDL-A11Y-034, KBDL-A11Y-036 through KBDL-A11Y-040)",provenance;packet;dependency,KBDL-A11Y-006
+A11Y,"WCAG 2.2 Level A/AA baseline requirements (KBDL-A11Y-001 through KBDL-A11Y-010, KBDL-A11Y-012 through KBDL-A11Y-020, KBDL-A11Y-022 through KBDL-A11Y-034, KBDL-A11Y-036 through KBDL-A11Y-040)",provenance;packet;dependency,KBDL-A11Y-007
+A11Y,"WCAG 2.2 Level A/AA baseline requirements (KBDL-A11Y-001 through KBDL-A11Y-010, KBDL-A11Y-012 through KBDL-A11Y-020, KBDL-A11Y-022 through KBDL-A11Y-034, KBDL-A11Y-036 through KBDL-A11Y-040)",provenance;packet;dependency,KBDL-A11Y-008
+A11Y,"WCAG 2.2 Level A/AA baseline requirements (KBDL-A11Y-001 through KBDL-A11Y-010, KBDL-A11Y-012 through KBDL-A11Y-020, KBDL-A11Y-022 through KBDL-A11Y-034, KBDL-A11Y-036 through KBDL-A11Y-040)",provenance;packet;dependency,KBDL-A11Y-009
+A11Y,"WCAG 2.2 Level A/AA baseline requirements (KBDL-A11Y-001 through KBDL-A11Y-010, KBDL-A11Y-012 through KBDL-A11Y-020, KBDL-A11Y-022 through KBDL-A11Y-034, KBDL-A11Y-036 through KBDL-A11Y-040)",provenance;packet;dependency,KBDL-A11Y-010
+A11Y,"New KBDL-specific accessibility enhancements (KBDL-A11Y-011, KBDL-A11Y-021, KBDL-A11Y-035)",provenance;packet;dependency,KBDL-A11Y-011
+A11Y,"WCAG 2.2 Level A/AA baseline requirements (KBDL-A11Y-001 through KBDL-A11Y-010, KBDL-A11Y-012 through KBDL-A11Y-020, KBDL-A11Y-022 through KBDL-A11Y-034, KBDL-A11Y-036 through KBDL-A11Y-040)",provenance;packet;dependency,KBDL-A11Y-012
+A11Y,"WCAG 2.2 Level A/AA baseline requirements (KBDL-A11Y-001 through KBDL-A11Y-010, KBDL-A11Y-012 through KBDL-A11Y-020, KBDL-A11Y-022 through KBDL-A11Y-034, KBDL-A11Y-036 through KBDL-A11Y-040)",provenance;packet;dependency,KBDL-A11Y-013
+A11Y,"WCAG 2.2 Level A/AA baseline requirements (KBDL-A11Y-001 through KBDL-A11Y-010, KBDL-A11Y-012 through KBDL-A11Y-020, KBDL-A11Y-022 through KBDL-A11Y-034, KBDL-A11Y-036 through KBDL-A11Y-040)",provenance;packet;dependency,KBDL-A11Y-014
+A11Y,"WCAG 2.2 Level A/AA baseline requirements (KBDL-A11Y-001 through KBDL-A11Y-010, KBDL-A11Y-012 through KBDL-A11Y-020, KBDL-A11Y-022 through KBDL-A11Y-034, KBDL-A11Y-036 through KBDL-A11Y-040)",provenance;packet;dependency,KBDL-A11Y-015
+A11Y,"WCAG 2.2 Level A/AA baseline requirements (KBDL-A11Y-001 through KBDL-A11Y-010, KBDL-A11Y-012 through KBDL-A11Y-020, KBDL-A11Y-022 through KBDL-A11Y-034, KBDL-A11Y-036 through KBDL-A11Y-040)",provenance;packet;dependency,KBDL-A11Y-016
+A11Y,"WCAG 2.2 Level A/AA baseline requirements (KBDL-A11Y-001 through KBDL-A11Y-010, KBDL-A11Y-012 through KBDL-A11Y-020, KBDL-A11Y-022 through KBDL-A11Y-034, KBDL-A11Y-036 through KBDL-A11Y-040)",provenance;packet;dependency,KBDL-A11Y-017
+A11Y,"WCAG 2.2 Level A/AA baseline requirements (KBDL-A11Y-001 through KBDL-A11Y-010, KBDL-A11Y-012 through KBDL-A11Y-020, KBDL-A11Y-022 through KBDL-A11Y-034, KBDL-A11Y-036 through KBDL-A11Y-040)",provenance;packet;dependency,KBDL-A11Y-018
+A11Y,"WCAG 2.2 Level A/AA baseline requirements (KBDL-A11Y-001 through KBDL-A11Y-010, KBDL-A11Y-012 through KBDL-A11Y-020, KBDL-A11Y-022 through KBDL-A11Y-034, KBDL-A11Y-036 through KBDL-A11Y-040)",provenance;packet;dependency,KBDL-A11Y-019
+A11Y,"WCAG 2.2 Level A/AA baseline requirements (KBDL-A11Y-001 through KBDL-A11Y-010, KBDL-A11Y-012 through KBDL-A11Y-020, KBDL-A11Y-022 through KBDL-A11Y-034, KBDL-A11Y-036 through KBDL-A11Y-040)",provenance;packet;dependency,KBDL-A11Y-020
+A11Y,"New KBDL-specific accessibility enhancements (KBDL-A11Y-011, KBDL-A11Y-021, KBDL-A11Y-035)",provenance;packet;dependency,KBDL-A11Y-021
+A11Y,"WCAG 2.2 Level A/AA baseline requirements (KBDL-A11Y-001 through KBDL-A11Y-010, KBDL-A11Y-012 through KBDL-A11Y-020, KBDL-A11Y-022 through KBDL-A11Y-034, KBDL-A11Y-036 through KBDL-A11Y-040)",provenance;packet;dependency,KBDL-A11Y-022
+A11Y,"WCAG 2.2 Level A/AA baseline requirements (KBDL-A11Y-001 through KBDL-A11Y-010, KBDL-A11Y-012 through KBDL-A11Y-020, KBDL-A11Y-022 through KBDL-A11Y-034, KBDL-A11Y-036 through KBDL-A11Y-040)",provenance;packet;dependency,KBDL-A11Y-023
+A11Y,"WCAG 2.2 Level A/AA baseline requirements (KBDL-A11Y-001 through KBDL-A11Y-010, KBDL-A11Y-012 through KBDL-A11Y-020, KBDL-A11Y-022 through KBDL-A11Y-034, KBDL-A11Y-036 through KBDL-A11Y-040)",provenance;packet;dependency,KBDL-A11Y-024
+A11Y,"WCAG 2.2 Level A/AA baseline requirements (KBDL-A11Y-001 through KBDL-A11Y-010, KBDL-A11Y-012 through KBDL-A11Y-020, KBDL-A11Y-022 through KBDL-A11Y-034, KBDL-A11Y-036 through KBDL-A11Y-040)",provenance;packet;dependency,KBDL-A11Y-025
+A11Y,"WCAG 2.2 Level A/AA baseline requirements (KBDL-A11Y-001 through KBDL-A11Y-010, KBDL-A11Y-012 through KBDL-A11Y-020, KBDL-A11Y-022 through KBDL-A11Y-034, KBDL-A11Y-036 through KBDL-A11Y-040)",provenance;packet;dependency,KBDL-A11Y-026
+A11Y,"WCAG 2.2 Level A/AA baseline requirements (KBDL-A11Y-001 through KBDL-A11Y-010, KBDL-A11Y-012 through KBDL-A11Y-020, KBDL-A11Y-022 through KBDL-A11Y-034, KBDL-A11Y-036 through KBDL-A11Y-040)",provenance;packet;dependency,KBDL-A11Y-027
+A11Y,"WCAG 2.2 Level A/AA baseline requirements (KBDL-A11Y-001 through KBDL-A11Y-010, KBDL-A11Y-012 through KBDL-A11Y-020, KBDL-A11Y-022 through KBDL-A11Y-034, KBDL-A11Y-036 through KBDL-A11Y-040)",provenance;packet;dependency,KBDL-A11Y-028
+A11Y,"WCAG 2.2 Level A/AA baseline requirements (KBDL-A11Y-001 through KBDL-A11Y-010, KBDL-A11Y-012 through KBDL-A11Y-020, KBDL-A11Y-022 through KBDL-A11Y-034, KBDL-A11Y-036 through KBDL-A11Y-040)",provenance;packet;dependency,KBDL-A11Y-029
+A11Y,"WCAG 2.2 Level A/AA baseline requirements (KBDL-A11Y-001 through KBDL-A11Y-010, KBDL-A11Y-012 through KBDL-A11Y-020, KBDL-A11Y-022 through KBDL-A11Y-034, KBDL-A11Y-036 through KBDL-A11Y-040)",provenance;packet;dependency,KBDL-A11Y-030
+A11Y,"WCAG 2.2 Level A/AA baseline requirements (KBDL-A11Y-001 through KBDL-A11Y-010, KBDL-A11Y-012 through KBDL-A11Y-020, KBDL-A11Y-022 through KBDL-A11Y-034, KBDL-A11Y-036 through KBDL-A11Y-040)",provenance;packet;dependency,KBDL-A11Y-031
+A11Y,"WCAG 2.2 Level A/AA baseline requirements (KBDL-A11Y-001 through KBDL-A11Y-010, KBDL-A11Y-012 through KBDL-A11Y-020, KBDL-A11Y-022 through KBDL-A11Y-034, KBDL-A11Y-036 through KBDL-A11Y-040)",provenance;packet;dependency,KBDL-A11Y-032
+A11Y,"WCAG 2.2 Level A/AA baseline requirements (KBDL-A11Y-001 through KBDL-A11Y-010, KBDL-A11Y-012 through KBDL-A11Y-020, KBDL-A11Y-022 through KBDL-A11Y-034, KBDL-A11Y-036 through KBDL-A11Y-040)",provenance;packet;dependency,KBDL-A11Y-033
+A11Y,"WCAG 2.2 Level A/AA baseline requirements (KBDL-A11Y-001 through KBDL-A11Y-010, KBDL-A11Y-012 through KBDL-A11Y-020, KBDL-A11Y-022 through KBDL-A11Y-034, KBDL-A11Y-036 through KBDL-A11Y-040)",provenance;packet;dependency,KBDL-A11Y-034
+A11Y,"New KBDL-specific accessibility enhancements (KBDL-A11Y-011, KBDL-A11Y-021, KBDL-A11Y-035)",provenance;packet;dependency,KBDL-A11Y-035
+A11Y,"WCAG 2.2 Level A/AA baseline requirements (KBDL-A11Y-001 through KBDL-A11Y-010, KBDL-A11Y-012 through KBDL-A11Y-020, KBDL-A11Y-022 through KBDL-A11Y-034, KBDL-A11Y-036 through KBDL-A11Y-040)",provenance;packet;dependency,KBDL-A11Y-036
+A11Y,"WCAG 2.2 Level A/AA baseline requirements (KBDL-A11Y-001 through KBDL-A11Y-010, KBDL-A11Y-012 through KBDL-A11Y-020, KBDL-A11Y-022 through KBDL-A11Y-034, KBDL-A11Y-036 through KBDL-A11Y-040)",provenance;packet;dependency,KBDL-A11Y-037
+A11Y,"WCAG 2.2 Level A/AA baseline requirements (KBDL-A11Y-001 through KBDL-A11Y-010, KBDL-A11Y-012 through KBDL-A11Y-020, KBDL-A11Y-022 through KBDL-A11Y-034, KBDL-A11Y-036 through KBDL-A11Y-040)",provenance;packet;dependency,KBDL-A11Y-038
+A11Y,"WCAG 2.2 Level A/AA baseline requirements (KBDL-A11Y-001 through KBDL-A11Y-010, KBDL-A11Y-012 through KBDL-A11Y-020, KBDL-A11Y-022 through KBDL-A11Y-034, KBDL-A11Y-036 through KBDL-A11Y-040)",provenance;packet;dependency,KBDL-A11Y-039
+A11Y,"WCAG 2.2 Level A/AA baseline requirements (KBDL-A11Y-001 through KBDL-A11Y-010, KBDL-A11Y-012 through KBDL-A11Y-020, KBDL-A11Y-022 through KBDL-A11Y-034, KBDL-A11Y-036 through KBDL-A11Y-040)",provenance;packet;dependency,KBDL-A11Y-040
+CMP,"Shared component contract and cross-cutting rules (KBDL-CMP-001 through KBDL-CMP-013, KBDL-CMP-050, KBDL-CMP-051)",packet;dependency,KBDL-CMP-001
+CMP,"Shared component contract and cross-cutting rules (KBDL-CMP-001 through KBDL-CMP-013, KBDL-CMP-050, KBDL-CMP-051)",packet;dependency,KBDL-CMP-002
+CMP,"Shared component contract and cross-cutting rules (KBDL-CMP-001 through KBDL-CMP-013, KBDL-CMP-050, KBDL-CMP-051)",packet;dependency,KBDL-CMP-003
+CMP,"Shared component contract and cross-cutting rules (KBDL-CMP-001 through KBDL-CMP-013, KBDL-CMP-050, KBDL-CMP-051)",packet;dependency,KBDL-CMP-004
+CMP,"Shared component contract and cross-cutting rules (KBDL-CMP-001 through KBDL-CMP-013, KBDL-CMP-050, KBDL-CMP-051)",packet;dependency,KBDL-CMP-005
+CMP,"Shared component contract and cross-cutting rules (KBDL-CMP-001 through KBDL-CMP-013, KBDL-CMP-050, KBDL-CMP-051)",packet;dependency,KBDL-CMP-006
+CMP,"Shared component contract and cross-cutting rules (KBDL-CMP-001 through KBDL-CMP-013, KBDL-CMP-050, KBDL-CMP-051)",packet;dependency,KBDL-CMP-007
+CMP,"Shared component contract and cross-cutting rules (KBDL-CMP-001 through KBDL-CMP-013, KBDL-CMP-050, KBDL-CMP-051)",packet;dependency,KBDL-CMP-008
+CMP,"Shared component contract and cross-cutting rules (KBDL-CMP-001 through KBDL-CMP-013, KBDL-CMP-050, KBDL-CMP-051)",packet;dependency,KBDL-CMP-009
+CMP,"Shared component contract and cross-cutting rules (KBDL-CMP-001 through KBDL-CMP-013, KBDL-CMP-050, KBDL-CMP-051)",packet;dependency,KBDL-CMP-010
+CMP,"Shared component contract and cross-cutting rules (KBDL-CMP-001 through KBDL-CMP-013, KBDL-CMP-050, KBDL-CMP-051)",packet;dependency,KBDL-CMP-011
+CMP,"Shared component contract and cross-cutting rules (KBDL-CMP-001 through KBDL-CMP-013, KBDL-CMP-050, KBDL-CMP-051)",packet;dependency,KBDL-CMP-012
+CMP,"Shared component contract and cross-cutting rules (KBDL-CMP-001 through KBDL-CMP-013, KBDL-CMP-050, KBDL-CMP-051)",packet;dependency,KBDL-CMP-013
+CMP,Action components (KBDL-CMP-014 through KBDL-CMP-021),packet;dependency,KBDL-CMP-014
+CMP,Action components (KBDL-CMP-014 through KBDL-CMP-021),packet;dependency,KBDL-CMP-015
+CMP,Action components (KBDL-CMP-014 through KBDL-CMP-021),packet;dependency,KBDL-CMP-016
+CMP,Action components (KBDL-CMP-014 through KBDL-CMP-021),packet;dependency,KBDL-CMP-017
+CMP,Action components (KBDL-CMP-014 through KBDL-CMP-021),packet;dependency,KBDL-CMP-018
+CMP,Action components (KBDL-CMP-014 through KBDL-CMP-021),packet;dependency,KBDL-CMP-019
+CMP,Action components (KBDL-CMP-014 through KBDL-CMP-021),packet;dependency,KBDL-CMP-020
+CMP,Action components (KBDL-CMP-014 through KBDL-CMP-021),packet;dependency,KBDL-CMP-021
+CMP,Form architecture and components (KBDL-CMP-022 through KBDL-CMP-037),packet;dependency,KBDL-CMP-022
+CMP,Form architecture and components (KBDL-CMP-022 through KBDL-CMP-037),packet;dependency,KBDL-CMP-023
+CMP,Form architecture and components (KBDL-CMP-022 through KBDL-CMP-037),packet;dependency,KBDL-CMP-024
+CMP,Form architecture and components (KBDL-CMP-022 through KBDL-CMP-037),packet;dependency,KBDL-CMP-025
+CMP,Form architecture and components (KBDL-CMP-022 through KBDL-CMP-037),packet;dependency,KBDL-CMP-026
+CMP,Form architecture and components (KBDL-CMP-022 through KBDL-CMP-037),packet;dependency,KBDL-CMP-027
+CMP,Form architecture and components (KBDL-CMP-022 through KBDL-CMP-037),packet;dependency,KBDL-CMP-028
+CMP,Form architecture and components (KBDL-CMP-022 through KBDL-CMP-037),packet;dependency,KBDL-CMP-029
+CMP,Form architecture and components (KBDL-CMP-022 through KBDL-CMP-037),packet;dependency,KBDL-CMP-030
+CMP,Form architecture and components (KBDL-CMP-022 through KBDL-CMP-037),packet;dependency,KBDL-CMP-031
+CMP,Form architecture and components (KBDL-CMP-022 through KBDL-CMP-037),packet;dependency,KBDL-CMP-032
+CMP,Form architecture and components (KBDL-CMP-022 through KBDL-CMP-037),packet;dependency,KBDL-CMP-033
+CMP,Form architecture and components (KBDL-CMP-022 through KBDL-CMP-037),packet;dependency,KBDL-CMP-034
+CMP,Form architecture and components (KBDL-CMP-022 through KBDL-CMP-037),packet;dependency,KBDL-CMP-035
+CMP,Form architecture and components (KBDL-CMP-022 through KBDL-CMP-037),packet;dependency,KBDL-CMP-036
+CMP,Form architecture and components (KBDL-CMP-022 through KBDL-CMP-037),packet;dependency,KBDL-CMP-037
+CMP,Navigation components (KBDL-CMP-038 through KBDL-CMP-049),packet;dependency,KBDL-CMP-038
+CMP,Navigation components (KBDL-CMP-038 through KBDL-CMP-049),packet;dependency,KBDL-CMP-039
+CMP,Navigation components (KBDL-CMP-038 through KBDL-CMP-049),packet;dependency,KBDL-CMP-040
+CMP,Navigation components (KBDL-CMP-038 through KBDL-CMP-049),packet;dependency,KBDL-CMP-041
+CMP,Navigation components (KBDL-CMP-038 through KBDL-CMP-049),packet;dependency,KBDL-CMP-042
+CMP,Navigation components (KBDL-CMP-038 through KBDL-CMP-049),packet;dependency,KBDL-CMP-043
+CMP,Navigation components (KBDL-CMP-038 through KBDL-CMP-049),packet;dependency,KBDL-CMP-044
+CMP,Navigation components (KBDL-CMP-038 through KBDL-CMP-049),packet;dependency,KBDL-CMP-045
+CMP,Navigation components (KBDL-CMP-038 through KBDL-CMP-049),packet;dependency,KBDL-CMP-046
+CMP,Navigation components (KBDL-CMP-038 through KBDL-CMP-049),packet;dependency,KBDL-CMP-047
+CMP,Navigation components (KBDL-CMP-038 through KBDL-CMP-049),packet;dependency,KBDL-CMP-048
+CMP,Navigation components (KBDL-CMP-038 through KBDL-CMP-049),packet;dependency,KBDL-CMP-049
+CMP,"Shared component contract and cross-cutting rules (KBDL-CMP-001 through KBDL-CMP-013, KBDL-CMP-050, KBDL-CMP-051)",packet;dependency,KBDL-CMP-050
+CMP,"Shared component contract and cross-cutting rules (KBDL-CMP-001 through KBDL-CMP-013, KBDL-CMP-050, KBDL-CMP-051)",packet;dependency,KBDL-CMP-051
+CMP,"Surface components and module-wide baselines (KBDL-CMP-052, 053, 054, 055, 062, 065, 067, 068, 069, 070)",packet;dependency,KBDL-CMP-052
+CMP,"Surface components and module-wide baselines (KBDL-CMP-052, 053, 054, 055, 062, 065, 067, 068, 069, 070)",packet;dependency,KBDL-CMP-053
+CMP,"Surface components and module-wide baselines (KBDL-CMP-052, 053, 054, 055, 062, 065, 067, 068, 069, 070)",packet;dependency,KBDL-CMP-054
+CMP,"Surface components and module-wide baselines (KBDL-CMP-052, 053, 054, 055, 062, 065, 067, 068, 069, 070)",packet;dependency,KBDL-CMP-055
+CMP,"Overlay components (KBDL-CMP-056 through KBDL-CMP-060, 071 through 085)",packet;dependency,KBDL-CMP-056
+CMP,"Overlay components (KBDL-CMP-056 through KBDL-CMP-060, 071 through 085)",packet;dependency,KBDL-CMP-057
+CMP,"Overlay components (KBDL-CMP-056 through KBDL-CMP-060, 071 through 085)",packet;dependency,KBDL-CMP-058
+CMP,"Overlay components (KBDL-CMP-056 through KBDL-CMP-060, 071 through 085)",packet;dependency,KBDL-CMP-059
+CMP,"Overlay components (KBDL-CMP-056 through KBDL-CMP-060, 071 through 085)",packet;dependency,KBDL-CMP-060
+CMP,"Feedback components (KBDL-CMP-061, 086 through KBDL-CMP-098)",packet;dependency,KBDL-CMP-061
+CMP,"Surface components and module-wide baselines (KBDL-CMP-052, 053, 054, 055, 062, 065, 067, 068, 069, 070)",packet;dependency,KBDL-CMP-062
+CMP,"System-state, complex-presentation, and profile/security baselines (KBDL-CMP-063, 064, 066, 097, 099–111)",packet;dependency,KBDL-CMP-063
+CMP,"System-state, complex-presentation, and profile/security baselines (KBDL-CMP-063, 064, 066, 097, 099–111)",packet;dependency,KBDL-CMP-064
+CMP,"Surface components and module-wide baselines (KBDL-CMP-052, 053, 054, 055, 062, 065, 067, 068, 069, 070)",packet;dependency,KBDL-CMP-065
+CMP,"System-state, complex-presentation, and profile/security baselines (KBDL-CMP-063, 064, 066, 097, 099–111)",packet;dependency,KBDL-CMP-066
+CMP,"Surface components and module-wide baselines (KBDL-CMP-052, 053, 054, 055, 062, 065, 067, 068, 069, 070)",packet;dependency,KBDL-CMP-067
+CMP,"Surface components and module-wide baselines (KBDL-CMP-052, 053, 054, 055, 062, 065, 067, 068, 069, 070)",packet;dependency,KBDL-CMP-068
+CMP,"Surface components and module-wide baselines (KBDL-CMP-052, 053, 054, 055, 062, 065, 067, 068, 069, 070)",packet;dependency,KBDL-CMP-069
+CMP,"Surface components and module-wide baselines (KBDL-CMP-052, 053, 054, 055, 062, 065, 067, 068, 069, 070)",packet;dependency,KBDL-CMP-070
+CMP,"Overlay components (KBDL-CMP-056 through KBDL-CMP-060, 071 through 085)",packet;dependency,KBDL-CMP-071
+CMP,"Overlay components (KBDL-CMP-056 through KBDL-CMP-060, 071 through 085)",packet;dependency,KBDL-CMP-072
+CMP,"Overlay components (KBDL-CMP-056 through KBDL-CMP-060, 071 through 085)",packet;dependency,KBDL-CMP-073
+CMP,"Overlay components (KBDL-CMP-056 through KBDL-CMP-060, 071 through 085)",packet;dependency,KBDL-CMP-074
+CMP,"Overlay components (KBDL-CMP-056 through KBDL-CMP-060, 071 through 085)",packet;dependency,KBDL-CMP-075
+CMP,"Overlay components (KBDL-CMP-056 through KBDL-CMP-060, 071 through 085)",packet;dependency,KBDL-CMP-076
+CMP,"Overlay components (KBDL-CMP-056 through KBDL-CMP-060, 071 through 085)",packet;dependency,KBDL-CMP-077
+CMP,"Overlay components (KBDL-CMP-056 through KBDL-CMP-060, 071 through 085)",packet;dependency,KBDL-CMP-078
+CMP,"Overlay components (KBDL-CMP-056 through KBDL-CMP-060, 071 through 085)",packet;dependency,KBDL-CMP-079
+CMP,"Overlay components (KBDL-CMP-056 through KBDL-CMP-060, 071 through 085)",packet;dependency,KBDL-CMP-080
+CMP,"Overlay components (KBDL-CMP-056 through KBDL-CMP-060, 071 through 085)",packet;dependency,KBDL-CMP-081
+CMP,"Overlay components (KBDL-CMP-056 through KBDL-CMP-060, 071 through 085)",packet;dependency,KBDL-CMP-082
+CMP,"Overlay components (KBDL-CMP-056 through KBDL-CMP-060, 071 through 085)",packet;dependency,KBDL-CMP-083
+CMP,"Overlay components (KBDL-CMP-056 through KBDL-CMP-060, 071 through 085)",packet;dependency,KBDL-CMP-084
+CMP,"Overlay components (KBDL-CMP-056 through KBDL-CMP-060, 071 through 085)",packet;dependency,KBDL-CMP-085
+CMP,"Feedback components (KBDL-CMP-061, 086 through KBDL-CMP-098)",packet;dependency,KBDL-CMP-086
+CMP,"Feedback components (KBDL-CMP-061, 086 through KBDL-CMP-098)",packet;dependency,KBDL-CMP-087
+CMP,"Feedback components (KBDL-CMP-061, 086 through KBDL-CMP-098)",packet;dependency,KBDL-CMP-088
+CMP,"Feedback components (KBDL-CMP-061, 086 through KBDL-CMP-098)",packet;dependency,KBDL-CMP-089
+CMP,"Feedback components (KBDL-CMP-061, 086 through KBDL-CMP-098)",packet;dependency,KBDL-CMP-090
+CMP,"Feedback components (KBDL-CMP-061, 086 through KBDL-CMP-098)",packet;dependency,KBDL-CMP-091
+CMP,"Feedback components (KBDL-CMP-061, 086 through KBDL-CMP-098)",packet;dependency,KBDL-CMP-092
+CMP,"Feedback components (KBDL-CMP-061, 086 through KBDL-CMP-098)",packet;dependency,KBDL-CMP-093
+CMP,"Feedback components (KBDL-CMP-061, 086 through KBDL-CMP-098)",packet;dependency,KBDL-CMP-094
+CMP,"Feedback components (KBDL-CMP-061, 086 through KBDL-CMP-098)",packet;dependency,KBDL-CMP-095
+CMP,"Feedback components (KBDL-CMP-061, 086 through KBDL-CMP-098)",packet;dependency,KBDL-CMP-096
+CMP,"System-state, complex-presentation, and profile/security baselines (KBDL-CMP-063, 064, 066, 097, 099–111)",packet;dependency,KBDL-CMP-097
+CMP,"Feedback components (KBDL-CMP-061, 086 through KBDL-CMP-098)",packet;dependency,KBDL-CMP-098
+CMP,"System-state, complex-presentation, and profile/security baselines (KBDL-CMP-063, 064, 066, 097, 099–111)",packet;dependency,KBDL-CMP-099
+CMP,"System-state, complex-presentation, and profile/security baselines (KBDL-CMP-063, 064, 066, 097, 099–111)",packet;dependency,KBDL-CMP-100
+CMP,"System-state, complex-presentation, and profile/security baselines (KBDL-CMP-063, 064, 066, 097, 099–111)",packet;dependency,KBDL-CMP-101
+CMP,"System-state, complex-presentation, and profile/security baselines (KBDL-CMP-063, 064, 066, 097, 099–111)",packet;dependency,KBDL-CMP-102
+CMP,"System-state, complex-presentation, and profile/security baselines (KBDL-CMP-063, 064, 066, 097, 099–111)",packet;dependency,KBDL-CMP-103
+CMP,"System-state, complex-presentation, and profile/security baselines (KBDL-CMP-063, 064, 066, 097, 099–111)",packet;dependency,KBDL-CMP-104
+CMP,"System-state, complex-presentation, and profile/security baselines (KBDL-CMP-063, 064, 066, 097, 099–111)",packet;dependency,KBDL-CMP-105
+CMP,"System-state, complex-presentation, and profile/security baselines (KBDL-CMP-063, 064, 066, 097, 099–111)",packet;dependency,KBDL-CMP-106
+CMP,"System-state, complex-presentation, and profile/security baselines (KBDL-CMP-063, 064, 066, 097, 099–111)",packet;dependency,KBDL-CMP-107
+CMP,"System-state, complex-presentation, and profile/security baselines (KBDL-CMP-063, 064, 066, 097, 099–111)",packet;dependency,KBDL-CMP-108
+CMP,"System-state, complex-presentation, and profile/security baselines (KBDL-CMP-063, 064, 066, 097, 099–111)",packet;dependency,KBDL-CMP-109
+CMP,"System-state, complex-presentation, and profile/security baselines (KBDL-CMP-063, 064, 066, 097, 099–111)",packet;dependency,KBDL-CMP-110
+CMP,"System-state, complex-presentation, and profile/security baselines (KBDL-CMP-063, 064, 066, 097, 099–111)",packet;dependency,KBDL-CMP-111
+FND,"Color role architecture (KBDL-FND-001, KBDL-FND-002)",provenance;packet;dependency,KBDL-FND-001
+FND,"Color role architecture (KBDL-FND-001, KBDL-FND-002)",provenance;packet;dependency,KBDL-FND-002
+FND,"Spacing rhythm and responsive content priority (KBDL-FND-003, KBDL-FND-004)",provenance;packet;dependency,KBDL-FND-003
+FND,"Spacing rhythm and responsive content priority (KBDL-FND-003, KBDL-FND-004)",provenance;packet;dependency,KBDL-FND-004
+FND,"Elevation and icon/media accessibility anticipation (KBDL-FND-005, KBDL-FND-006, KBDL-FND-007)",provenance;packet;dependency,KBDL-FND-005
+FND,"Elevation and icon/media accessibility anticipation (KBDL-FND-005, KBDL-FND-006, KBDL-FND-007)",provenance;packet;dependency,KBDL-FND-006
+FND,"Elevation and icon/media accessibility anticipation (KBDL-FND-005, KBDL-FND-006, KBDL-FND-007)",provenance;packet;dependency,KBDL-FND-007
+FND,Shared foundation architecture across profiles (KBDL-FND-008),provenance;packet;dependency,KBDL-FND-008
+FND,"Approved color, typography, spacing, and shape/elevation defaults (KBDL-FND-009 through KBDL-FND-012)",provenance;packet;dependency,KBDL-FND-009
+FND,"Approved color, typography, spacing, and shape/elevation defaults (KBDL-FND-009 through KBDL-FND-012)",provenance;packet;dependency,KBDL-FND-010
+FND,"Approved color, typography, spacing, and shape/elevation defaults (KBDL-FND-009 through KBDL-FND-012)",provenance;packet;dependency,KBDL-FND-011
+FND,"Approved color, typography, spacing, and shape/elevation defaults (KBDL-FND-009 through KBDL-FND-012)",provenance;packet;dependency,KBDL-FND-012
+GOV,Specification architecture,provenance;packet;dependency,KBDL-GOV-001
+GOV,Accessibility baseline protection,provenance;packet;dependency,KBDL-GOV-002
+GOV,Documentation governance process,provenance;packet;dependency,KBDL-GOV-003
+MOT,"Motion purpose, terminology, and conflict resolution (KBDL-MOT-001, KBDL-MOT-002, KBDL-MOT-003)",provenance;packet;dependency,KBDL-MOT-001
+MOT,"Motion purpose, terminology, and conflict resolution (KBDL-MOT-001, KBDL-MOT-002, KBDL-MOT-003)",provenance;packet;dependency,KBDL-MOT-002
+MOT,"Motion purpose, terminology, and conflict resolution (KBDL-MOT-001, KBDL-MOT-002, KBDL-MOT-003)",provenance;packet;dependency,KBDL-MOT-003
+MOT,"Motion category and hierarchy structure (KBDL-MOT-004, KBDL-MOT-005, KBDL-MOT-006)",provenance;packet;dependency,KBDL-MOT-004
+MOT,"Motion category and hierarchy structure (KBDL-MOT-004, KBDL-MOT-005, KBDL-MOT-006)",provenance;packet;dependency,KBDL-MOT-005
+MOT,"Motion category and hierarchy structure (KBDL-MOT-004, KBDL-MOT-005, KBDL-MOT-006)",provenance;packet;dependency,KBDL-MOT-006
+MOT,"Timing, duration, and easing architecture (KBDL-MOT-007, KBDL-MOT-008, KBDL-MOT-009)",provenance;packet;dependency,KBDL-MOT-007
+MOT,"Timing, duration, and easing architecture (KBDL-MOT-007, KBDL-MOT-008, KBDL-MOT-009)",provenance;packet;dependency,KBDL-MOT-008
+MOT,"Timing, duration, and easing architecture (KBDL-MOT-007, KBDL-MOT-008, KBDL-MOT-009)",provenance;packet;dependency,KBDL-MOT-009
+MOT,"Spatial movement and choreography (KBDL-MOT-010, KBDL-MOT-011, KBDL-MOT-012)",provenance;packet;dependency,KBDL-MOT-010
+MOT,"Spatial movement and choreography (KBDL-MOT-010, KBDL-MOT-011, KBDL-MOT-012)",provenance;packet;dependency,KBDL-MOT-011
+MOT,"Spatial movement and choreography (KBDL-MOT-010, KBDL-MOT-011, KBDL-MOT-012)",provenance;packet;dependency,KBDL-MOT-012
+MOT,Interaction-category motion rules (KBDL-MOT-013 through KBDL-MOT-019),provenance;packet;dependency,KBDL-MOT-013
+MOT,Interaction-category motion rules (KBDL-MOT-013 through KBDL-MOT-019),provenance;packet;dependency,KBDL-MOT-014
+MOT,Interaction-category motion rules (KBDL-MOT-013 through KBDL-MOT-019),provenance;packet;dependency,KBDL-MOT-015
+MOT,Interaction-category motion rules (KBDL-MOT-013 through KBDL-MOT-019),provenance;packet;dependency,KBDL-MOT-016
+MOT,Interaction-category motion rules (KBDL-MOT-013 through KBDL-MOT-019),provenance;packet;dependency,KBDL-MOT-017
+MOT,Interaction-category motion rules (KBDL-MOT-013 through KBDL-MOT-019),provenance;packet;dependency,KBDL-MOT-018
+MOT,Interaction-category motion rules (KBDL-MOT-013 through KBDL-MOT-019),provenance;packet;dependency,KBDL-MOT-019
+MOT,Theme-transition motion (KBDL-MOT-020),provenance;packet;dependency,KBDL-MOT-020
+MOT,"Interruption, recovery, and accessibility/performance requirements (KBDL-MOT-021 through KBDL-MOT-027)",provenance;packet;dependency,KBDL-MOT-021
+MOT,"Interruption, recovery, and accessibility/performance requirements (KBDL-MOT-021 through KBDL-MOT-027)",provenance;packet;dependency,KBDL-MOT-022
+MOT,"Interruption, recovery, and accessibility/performance requirements (KBDL-MOT-021 through KBDL-MOT-027)",provenance;packet;dependency,KBDL-MOT-023
+MOT,"Interruption, recovery, and accessibility/performance requirements (KBDL-MOT-021 through KBDL-MOT-027)",provenance;packet;dependency,KBDL-MOT-024
+MOT,"Interruption, recovery, and accessibility/performance requirements (KBDL-MOT-021 through KBDL-MOT-027)",provenance;packet;dependency,KBDL-MOT-025
+MOT,"Interruption, recovery, and accessibility/performance requirements (KBDL-MOT-021 through KBDL-MOT-027)",provenance;packet;dependency,KBDL-MOT-026
+MOT,"Interruption, recovery, and accessibility/performance requirements (KBDL-MOT-021 through KBDL-MOT-027)",provenance;packet;dependency,KBDL-MOT-027
+MOT,Detailed motion defaults separated from their approved cores (KBDL-MOT-028 through KBDL-MOT-034),provenance;packet;dependency,KBDL-MOT-028
+MOT,Detailed motion defaults separated from their approved cores (KBDL-MOT-028 through KBDL-MOT-034),provenance;packet;dependency,KBDL-MOT-029
+MOT,Detailed motion defaults separated from their approved cores (KBDL-MOT-028 through KBDL-MOT-034),provenance;packet;dependency,KBDL-MOT-030
+MOT,Detailed motion defaults separated from their approved cores (KBDL-MOT-028 through KBDL-MOT-034),provenance;packet;dependency,KBDL-MOT-031
+MOT,Detailed motion defaults separated from their approved cores (KBDL-MOT-028 through KBDL-MOT-034),provenance;packet;dependency,KBDL-MOT-032
+MOT,Detailed motion defaults separated from their approved cores (KBDL-MOT-028 through KBDL-MOT-034),provenance;packet;dependency,KBDL-MOT-033
+MOT,Detailed motion defaults separated from their approved cores (KBDL-MOT-028 through KBDL-MOT-034),provenance;packet;dependency,KBDL-MOT-034
+PRN,KBDL identity statement and exclusions,provenance;packet;dependency,KBDL-PRN-001
+PRN,Luxury/utility conflict resolution,provenance;packet;dependency,KBDL-PRN-002
+PRN,Core principles,provenance;packet;dependency,KBDL-PRN-003
+PRN,Visual-consistency relationships,provenance;packet;dependency,KBDL-PRN-004
+PRN,"Locked, controlled, and open identity model",provenance;packet;dependency,KBDL-PRN-005
+PRN,Design-decision hierarchy,provenance;packet;dependency,KBDL-PRN-006
+PRN,"Profile-level interpretation (Showcase, Precision, Flow)",provenance;packet;dependency,KBDL-PRN-007
+PRN,Conforming and non-conforming design directions,provenance;packet;dependency,KBDL-PRN-008
+RSP,"Responsive-content priority, source/reading order, and reflow core (KBDL-RSP-001, KBDL-RSP-006, KBDL-RSP-007, KBDL-RSP-015, KBDL-RSP-016, KBDL-RSP-020)",provenance;packet;dependency,KBDL-RSP-001
+RSP,"Breakpoint, grid, container, and gutter defaults (KBDL-RSP-002, KBDL-RSP-003, KBDL-RSP-004, KBDL-RSP-005)",provenance;packet;dependency,KBDL-RSP-002
+RSP,"Breakpoint, grid, container, and gutter defaults (KBDL-RSP-002, KBDL-RSP-003, KBDL-RSP-004, KBDL-RSP-005)",provenance;packet;dependency,KBDL-RSP-003
+RSP,"Breakpoint, grid, container, and gutter defaults (KBDL-RSP-002, KBDL-RSP-003, KBDL-RSP-004, KBDL-RSP-005)",provenance;packet;dependency,KBDL-RSP-004
+RSP,"Breakpoint, grid, container, and gutter defaults (KBDL-RSP-002, KBDL-RSP-003, KBDL-RSP-004, KBDL-RSP-005)",provenance;packet;dependency,KBDL-RSP-005
+RSP,"Responsive-content priority, source/reading order, and reflow core (KBDL-RSP-001, KBDL-RSP-006, KBDL-RSP-007, KBDL-RSP-015, KBDL-RSP-016, KBDL-RSP-020)",provenance;packet;dependency,KBDL-RSP-006
+RSP,"Responsive-content priority, source/reading order, and reflow core (KBDL-RSP-001, KBDL-RSP-006, KBDL-RSP-007, KBDL-RSP-015, KBDL-RSP-016, KBDL-RSP-020)",provenance;packet;dependency,KBDL-RSP-007
+RSP,"Navigation, density, media, and data-dense adaptation (KBDL-RSP-008, KBDL-RSP-009, KBDL-RSP-010, KBDL-RSP-011, KBDL-RSP-012)",provenance;packet;dependency,KBDL-RSP-008
+RSP,"Navigation, density, media, and data-dense adaptation (KBDL-RSP-008, KBDL-RSP-009, KBDL-RSP-010, KBDL-RSP-011, KBDL-RSP-012)",provenance;packet;dependency,KBDL-RSP-009
+RSP,"Navigation, density, media, and data-dense adaptation (KBDL-RSP-008, KBDL-RSP-009, KBDL-RSP-010, KBDL-RSP-011, KBDL-RSP-012)",provenance;packet;dependency,KBDL-RSP-010
+RSP,"Navigation, density, media, and data-dense adaptation (KBDL-RSP-008, KBDL-RSP-009, KBDL-RSP-010, KBDL-RSP-011, KBDL-RSP-012)",provenance;packet;dependency,KBDL-RSP-011
+RSP,"Navigation, density, media, and data-dense adaptation (KBDL-RSP-008, KBDL-RSP-009, KBDL-RSP-010, KBDL-RSP-011, KBDL-RSP-012)",provenance;packet;dependency,KBDL-RSP-012
+RSP,"Sticky regions, safe areas, virtual keyboard, and input parity (KBDL-RSP-013, KBDL-RSP-014, KBDL-RSP-017, KBDL-RSP-018, KBDL-RSP-019)",provenance;packet;dependency,KBDL-RSP-013
+RSP,"Sticky regions, safe areas, virtual keyboard, and input parity (KBDL-RSP-013, KBDL-RSP-014, KBDL-RSP-017, KBDL-RSP-018, KBDL-RSP-019)",provenance;packet;dependency,KBDL-RSP-014
+RSP,"Responsive-content priority, source/reading order, and reflow core (KBDL-RSP-001, KBDL-RSP-006, KBDL-RSP-007, KBDL-RSP-015, KBDL-RSP-016, KBDL-RSP-020)",provenance;packet;dependency,KBDL-RSP-015
+RSP,"Responsive-content priority, source/reading order, and reflow core (KBDL-RSP-001, KBDL-RSP-006, KBDL-RSP-007, KBDL-RSP-015, KBDL-RSP-016, KBDL-RSP-020)",provenance;packet;dependency,KBDL-RSP-016
+RSP,"Sticky regions, safe areas, virtual keyboard, and input parity (KBDL-RSP-013, KBDL-RSP-014, KBDL-RSP-017, KBDL-RSP-018, KBDL-RSP-019)",provenance;packet;dependency,KBDL-RSP-017
+RSP,"Sticky regions, safe areas, virtual keyboard, and input parity (KBDL-RSP-013, KBDL-RSP-014, KBDL-RSP-017, KBDL-RSP-018, KBDL-RSP-019)",provenance;packet;dependency,KBDL-RSP-018
+RSP,"Sticky regions, safe areas, virtual keyboard, and input parity (KBDL-RSP-013, KBDL-RSP-014, KBDL-RSP-017, KBDL-RSP-018, KBDL-RSP-019)",provenance;packet;dependency,KBDL-RSP-019
+RSP,"Responsive-content priority, source/reading order, and reflow core (KBDL-RSP-001, KBDL-RSP-006, KBDL-RSP-007, KBDL-RSP-015, KBDL-RSP-016, KBDL-RSP-020)",provenance;packet;dependency,KBDL-RSP-020
+RSP,"Responsive motion and performance (KBDL-RSP-021, KBDL-RSP-022)",provenance;packet;dependency,KBDL-RSP-021
+RSP,"Responsive motion and performance (KBDL-RSP-021, KBDL-RSP-022)",provenance;packet;dependency,KBDL-RSP-022
+THM,"Theme architecture, terminology, and semantic-role inventory (KBDL-THM-001)",provenance;packet;dependency,KBDL-THM-001
+THM,Semantic parity (KBDL-THM-002),provenance;packet;dependency,KBDL-THM-002
+THM,"Theme selection precedence — approved core (KBDL-THM-003, narrowed under KBDL-004-R1)",provenance;packet;dependency,KBDL-THM-003
+THM,"Persistence baseline (KBDL-THM-004, reclassified under KBDL-004-R1)",provenance;packet;dependency,KBDL-THM-004
+THM,"Accessibility-preserving override core (KBDL-THM-005, narrowed) and profile sharing (KBDL-THM-006)",provenance;packet;dependency,KBDL-THM-005
+THM,"Accessibility-preserving override core (KBDL-THM-005, narrowed) and profile sharing (KBDL-THM-006)",provenance;packet;dependency,KBDL-THM-006
+THM,"Recommended light and dark theme mappings (KBDL-THM-007, KBDL-THM-008)",provenance;packet;dependency,KBDL-THM-007
+THM,"Recommended light and dark theme mappings (KBDL-THM-007, KBDL-THM-008)",provenance;packet;dependency,KBDL-THM-008
+THM,"Status-family theme values, gradient strategy, and color-value expression (KBDL-THM-009, KBDL-THM-010, KBDL-THM-011)",provenance;packet;dependency,KBDL-THM-009
+THM,"Status-family theme values, gradient strategy, and color-value expression (KBDL-THM-009, KBDL-THM-010, KBDL-THM-011)",provenance;packet;dependency,KBDL-THM-010
+THM,"Status-family theme values, gradient strategy, and color-value expression (KBDL-THM-009, KBDL-THM-010, KBDL-THM-011)",provenance;packet;dependency,KBDL-THM-011
+THM,"Theme-transition guidance (KBDL-THM-012, KBDL-THM-012a)",provenance;packet;dependency,KBDL-THM-012
+THM,"Theme-transition guidance (KBDL-THM-012, KBDL-THM-012a)",provenance;packet;dependency,KBDL-THM-012a
+THM,"Detailed selection-precedence ordering (KBDL-THM-013, new under KBDL-004-R1)",provenance;packet;dependency,KBDL-THM-013
+THM,"Detailed project-override list (KBDL-THM-014, new under KBDL-004-R1)",provenance;packet;dependency,KBDL-THM-014
+THM,"Local contrast contexts (KBDL-THM-015, new under KBDL-004-R1)",provenance;packet;dependency,KBDL-THM-015
+VAL,"Evidence, inventory, lifecycle, and validation integrity (KBDL-VAL-001 through KBDL-VAL-004)",validation,KBDL-VAL-001
+VAL,"Evidence, inventory, lifecycle, and validation integrity (KBDL-VAL-001 through KBDL-VAL-004)",validation,KBDL-VAL-002
+VAL,"Evidence, inventory, lifecycle, and validation integrity (KBDL-VAL-001 through KBDL-VAL-004)",validation,KBDL-VAL-003
+VAL,"Evidence, inventory, lifecycle, and validation integrity (KBDL-VAL-001 through KBDL-VAL-004)",validation,KBDL-VAL-004
+VAL,"Decisions, traceability, documentation, and architecture (KBDL-VAL-005 through KBDL-VAL-008)",validation,KBDL-VAL-005
+VAL,"Decisions, traceability, documentation, and architecture (KBDL-VAL-005 through KBDL-VAL-008)",validation,KBDL-VAL-006
+VAL,"Decisions, traceability, documentation, and architecture (KBDL-VAL-005 through KBDL-VAL-008)",validation,KBDL-VAL-007
+VAL,"Decisions, traceability, documentation, and architecture (KBDL-VAL-005 through KBDL-VAL-008)",validation,KBDL-VAL-008
+VAL,"Calculations, evidence ledgers, and completion gate (KBDL-VAL-009 through KBDL-VAL-012)",validation,KBDL-VAL-009
+VAL,"Calculations, evidence ledgers, and completion gate (KBDL-VAL-009 through KBDL-VAL-012)",validation,KBDL-VAL-010
+VAL,"Calculations, evidence ledgers, and completion gate (KBDL-VAL-009 through KBDL-VAL-012)",validation,KBDL-VAL-011
+VAL,"Calculations, evidence ledgers, and completion gate (KBDL-VAL-009 through KBDL-VAL-012)",validation,KBDL-VAL-012
