@@ -1,0 +1,12 @@
+Source,Purpose,Classification
+docs/kbdl/README.md,Approved roadmap/status index,Durable repository source
+docs/kbdl/decision-register.md,Approved decisions including distinct KBDL-005 packet decision,Durable repository source
+docs/kbdl/traceability-matrix.md,Readable requirement traceability,Durable repository source
+docs/kbdl/traceability-metadata.csv,Per-ID authority/lifecycle/validation records,Durable repository source
+docs/kbdl/validation.md,Sequence and current status,Durable repository source
+docs/kbdl/evidence/kbdl-011-r8,Prior generated authority/evidence claims,Secondary generated evidence
+docs/kbdl/evidence/kbdl-011-r9,Prior approval registry and validators,Secondary generated evidence
+docs/kbdl/evidence/kbdl-011-r10,Blocked authority audit and recovery request,Durable remediation evidence
+sources/kbdl-010-released-prompt.md,Exact uploaded KBDL-010 prompt copy,Exact prompt text; no approval exchange
+sources/kbdl-011-released-prompt.md,Exact uploaded KBDL-011 prompt copy,Exact prompt text; no approval exchange
+git log --all,Implementation/remediation sequence,Sequence only; not approval proof

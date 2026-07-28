@@ -155,7 +155,10 @@ review; KBDL-011-R10 is the current semantic-reconciliation remediation.
 R10 found that historical project-owner prompt approval commands and their
 exact approved scopes are not durably recoverable from the repository, so the
 documentation candidate is `NOT READY` pending a separate authority-recovery
-action. Implementation conformance remains
+action. Preparation of the non-normative
+[authority-recovery packet](evidence/kbdl-011-authority-recovery/authority-recovery-packet.md)
+is authorized under KBDL-011-AR1; every project-owner confirmation remains
+pending and packet preparation grants no authority. Implementation conformance remains
 `NOT VERIFIED`, and planning-agent validation plus explicit project-owner
 completion approval remain pending.
 Progression to later roadmap steps depends on the

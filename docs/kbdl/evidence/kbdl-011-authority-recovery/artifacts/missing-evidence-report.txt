@@ -1,0 +1,7 @@
+Original prompt approvals recovered: 0
+Partial original approvals recovered: 0
+Unrecovered original approvals: 11
+Exact released prompt texts recovered: 2 (KBDL-010 and KBDL-011)
+Exact released prompt texts unavailable: 9 (KBDL-001 through KBDL-009)
+KBDL-005 direct later packet selection: recovered separately in KBDL-DEC-014; not an original prompt approval
+No approval command was inferred from sequence, lifecycle, implementation commits, or generated registries.

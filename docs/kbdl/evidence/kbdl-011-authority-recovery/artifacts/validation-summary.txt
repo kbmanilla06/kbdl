@@ -1,0 +1,21 @@
+Prompt records: 11
+Missing prompt records: 0
+Duplicate prompt records: 0
+Requirement-authority mappings: 137
+Direct original approval commands recovered: 0
+Partially recovered approval records: 0
+Unrecovered approval records: 11
+Conflicting approval records: 0
+Preselected owner decisions: 0
+Normative requirement changes: 0
+Lifecycle changes: 0
+Provenance changes: 0
+Authority changes: 0
+Validation-status changes: 0
+Decision-status changes: 0
+Recommendation promotions: 0
+Completion decisions: 0
+Implementation conformance: NOT VERIFIED
+Project completion: PENDING
+Documentation defects: 0
+Validation result: PASS
