@@ -1,0 +1,12 @@
+Prompt ID,Exact approval command,Approval date or sequence context,Approved mandatory scope,Explicit exclusions,Evidence source,Requirements relying on it,Resolution
+KBDL-001,UNRECOVERED,Before KBDL-001 implementation,UNRESOLVED,UNRESOLVED,None containing approval command,KBDL-GOV-001–003,BLOCKED
+KBDL-002,UNRECOVERED,Before KBDL-002 implementation,UNRESOLVED,UNRESOLVED,None containing approval command,KBDL-PRN-001–008,BLOCKED
+KBDL-003,UNRECOVERED,Before KBDL-003 implementation; DEC-012 covers later packet only,UNRESOLVED,UNRESOLVED,None containing prompt approval command,KBDL-FND-001–012,BLOCKED
+KBDL-004,UNRECOVERED,Before KBDL-004 implementation; DEC-013 covers later packet only,UNRESOLVED,UNRESOLVED,None containing prompt approval command,KBDL-THM-001–015,BLOCKED
+KBDL-005,UNRECOVERED,Before KBDL-005 implementation; DEC-014 covers later packet only,UNRESOLVED,UNRESOLVED,None containing prompt approval command,KBDL-MOT-001–034,BLOCKED
+KBDL-006,UNRECOVERED,Before KBDL-006 implementation,UNRESOLVED,UNRESOLVED,None containing approval command,KBDL-RSP-001–022; KBDL-A11Y-001–040,BLOCKED
+KBDL-007,UNRECOVERED,Before KBDL-007 implementation,UNRESOLVED,UNRESOLVED,None containing approval command,KBDL-CMP-001–051,BLOCKED
+KBDL-008,UNRECOVERED,Before KBDL-008 implementation,UNRESOLVED,UNRESOLVED,None containing approval command,KBDL-CMP-052–111,BLOCKED
+KBDL-009,UNRECOVERED,Before KBDL-009 implementation,UNRESOLVED,UNRESOLVED,None containing approval command,KBDL-PRO-001–029,BLOCKED
+KBDL-010,UNRECOVERED,Before KBDL-010 implementation,UNRESOLVED,UNRESOLVED,None containing approval command,KBDL-CUS-001–030,BLOCKED
+KBDL-011,UNRECOVERED,Before KBDL-011 implementation,UNRESOLVED,UNRESOLVED,None containing approval command,KBDL-VAL-001–012,BLOCKED

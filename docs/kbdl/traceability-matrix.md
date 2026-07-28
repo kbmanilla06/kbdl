@@ -1121,7 +1121,7 @@ records and has its own specification location and evidence boundary.
 - **Specification location (per-ID):** `001` → [§4](validation.md#4-evidence-classification); `002` → [§8](validation.md#8-requirement-inventory); `003` → [§9](validation.md#9-lifecycle-status-audit) and [§12](validation.md#12-approved-authority-audit); `004` → [§11](validation.md#11-validation-status-audit).
 - **Lifecycle status:** All Approved.
 - **Provenance:** All Confirmed.
-- **Validation status (per-ID):** `001`, `002`, `003`, `004`: Verified.
+- **Validation status (per-ID):** `001`, `002`: Verified; `003`, `004`: Not verified.
 - **Authority:** Explicit mandatory KBDL-011 prompt clauses approved by the project owner.
 - **Validation class (per-ID):** `001`: A; `002`: A; `003`: B; `004`: B.
 - **Validation method / evidence (per-ID):** `001`: class-assignment audit; `002`: repository inventory parser; `003`: lifecycle/authority comparison; `004`: validation-label/evidence comparison. Executed results are recorded in [§4](validation.md#4-evidence-classification), [§8](validation.md#8-requirement-inventory), [§9](validation.md#9-lifecycle-status-audit), and [§11](validation.md#11-validation-status-audit).
@@ -1142,7 +1142,7 @@ records and has its own specification location and evidence boundary.
 - **Specification location (per-ID):** `005` → [§13](validation.md#13-decision-register-audit) and [§14](validation.md#14-pending-and-deferred-inventory); `006` → [§15](validation.md#15-traceability-audit); `007` → [§16](validation.md#16-cross-reference-and-documentation-integrity-audit); `008` → [§17](validation.md#17-governance-and-conventions-audit) through [§28](validation.md#28-security-privacy-correctness-and-data-integrity-audit).
 - **Lifecycle status:** All Approved.
 - **Provenance:** All Confirmed.
-- **Validation status (per-ID):** `005`, `006`, `007`: Verified; `008`: Not verified.
+- **Validation status (per-ID):** `005`: Verified; `006`, `007`, `008`: Not verified.
 - **Authority:** Explicit mandatory KBDL-011 prompt clauses approved by the project owner.
 - **Validation class (per-ID):** `005`: B; `006`: A; `007`: A; `008`: C.
 - **Validation method / evidence (per-ID):** `005`: decision/pending ledger audit; `006`: per-ID traceability audit; `007`: link, anchor, heading, table, ID, roadmap, and claim checks; `008`: static invariant comparison. Executed evidence is recorded in the linked sections.
@@ -1405,12 +1405,12 @@ planning agent's validation review and KBDL-010 (Manual Customization) is
 present with 30 `CUS` requirements. Its seven discretionary policy items
 remain Recommended, its format/tooling item remains Deferred, and no
 implementation-level customization behavior is verified. KBDL-010 passed
-planning-agent review and KBDL-011 is present with twelve Approved, Verified
-validation-methodology requirements. R9 returns `VAL-003`, `VAL-004`,
-`VAL-006`, and `VAL-007` to Verified only after production validators and
-their controlled negative fixtures pass;
-`VAL-008`, `010`, and `011` remain Not verified. The documentation-only candidate is `PRODUCTION
-READY` subject to independent planning-agent review.
+planning-agent review and KBDL-011 is present with twelve Approved validation-
+methodology requirements. R10 keeps `VAL-003`, `VAL-004`, `VAL-006`, and
+`VAL-007` Not verified because exact historical prompt-approval commands and
+scopes are not durably recoverable. `VAL-008`, `010`, and `011` also remain
+Not verified. The documentation-only candidate is `NOT READY` pending a
+separate project-owner authority-recovery action.
 Implementation conformance is
 `NOT VERIFIED`, and completion awaits independent review and explicit
 project-owner approval.

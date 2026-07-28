@@ -1,0 +1,13 @@
+Path,Bytes,SHA-256
+docs/kbdl/evidence/kbdl-011-r10/artifacts/complete-effective-field-audit.csv,952677,eeab58a1ea2b7c0e6ef517dcf43f47195eef891d60776e012f802f6c36ba3df9
+docs/kbdl/evidence/kbdl-011-r10/artifacts/documentation-output.txt,359,fc54744f95c58047fcd3b8d3b466441724e3e6720e1e4300ef34232d9eaba631
+docs/kbdl/evidence/kbdl-011-r10/artifacts/validation-output.txt,908,1c03fc55b4c5f24f0e0d16c6716bf4f50db3811fbc1899b08db4fbe5100c8b0d
+docs/kbdl/evidence/kbdl-011-r10/artifacts/verified-clause-audit.csv,14412,da4bd6277936606f09dcdb8ef8ed48b100e63b134b72c23c0d369ec99309616d
+docs/kbdl/evidence/kbdl-011-r10/authority-recovery-request.md,636,bef3ce03ea0999713b7cda6095d7d654492e2f739c6644768cd14b79c4992feb
+docs/kbdl/evidence/kbdl-011-r10/evidence-manifest.md,1692,cf7023593b61140e4c41ed0223f37253878c262afff20b2de282ed120f8baf5e
+docs/kbdl/evidence/kbdl-011-r10/implementation-report.md,6387,1ddd321800a4c5498fc051ad8939323736b7b23f0b90401a799050602b7141cf
+docs/kbdl/evidence/kbdl-011-r10/initial-clean-state.txt,770,c16eb3d4107dc9d1b3968bd8dfb20f7bc677902b644d4ee1f94615f55d587a13
+docs/kbdl/evidence/kbdl-011-r10/precommit-transcript.txt,2298,f1a1ca28f683d0f794bc3a7bda0f0d7745914847212c8a710a7fabfedc4b7926
+docs/kbdl/evidence/kbdl-011-r10/prompt-authority-recovery.csv,1784,e180abcfeb4ea9f2352b73544f8caf58ab01f0ed150bb61c1eac35134ca4eacd
+docs/kbdl/evidence/kbdl-011-r10/scripts/capture_precommit.py,2291,954d7ccceda0d4f8275b44e5b64fb9df7e47341739c82014198ae90fed62df41
+docs/kbdl/evidence/kbdl-011-r10/scripts/semantic_audit.py,4621,2e23dd82ca7f7a7d97aaad09a4be406be02cd6f6ed58357c143995a304e9d153

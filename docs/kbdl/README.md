@@ -150,10 +150,12 @@ items remain `Recommended` and its machine-readable-format item remains
 `Deferred`; no earlier recommendation is promoted and no implementation-
 level customization validation exists. KBDL-010 **passed** planning-agent
 validation, which unlocked KBDL-011. KBDL-011 (Final Validation) is now
-present in [validation.md](validation.md). KBDL-011-R8 failed planning-agent
-review; KBDL-011-R9 is the current validator-soundness remediation. Its
-documentation-only candidate may be `PRODUCTION READY` only after every R9
-production validator and controlled negative test passes. Implementation conformance remains
+present in [validation.md](validation.md). KBDL-011-R9 failed planning-agent
+review; KBDL-011-R10 is the current semantic-reconciliation remediation.
+R10 found that historical project-owner prompt approval commands and their
+exact approved scopes are not durably recoverable from the repository, so the
+documentation candidate is `NOT READY` pending a separate authority-recovery
+action. Implementation conformance remains
 `NOT VERIFIED`, and planning-agent validation plus explicit project-owner
 completion approval remain pending.
 Progression to later roadmap steps depends on the
@@ -241,7 +243,7 @@ their roadmap step is reached.
 | 9 | Surface, overlay, feedback, and system-state components | Approved (architecture)¶; Recommended (component-level taxonomies) | [components-system.md](components-system.md) |
 | 10 | Project profiles (Showcase, Precision, Flow) | Approved (architecture)‖; Recommended (discretionary profile-governance policy) | [profiles.md](profiles.md) |
 | 11 | Manual customization | Approved (inherited and prompt-mandated governance); Recommended/Deferred (new policy) — passed planning-agent validation | [customization.md](customization.md) |
-| 12 | Validation | Approved methodology; candidate `PRODUCTION READY` for documentation only — independent review pending | [validation.md](validation.md) |
+| 12 | Validation | Approved methodology; candidate `NOT READY` pending durable prompt-authority recovery | [validation.md](validation.md) |
 | 13 | Governance | Approved | [governance.md](governance.md) |
 | 14 | Future expansion | Deferred | Location to be determined when needed |
 

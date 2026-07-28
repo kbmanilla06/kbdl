@@ -1,0 +1,32 @@
+Requirements audited: 317
+Complete effective records: 317
+Effective-field mismatches: 119
+Unresolved mappings: 0
+
+Approved requirements audited: 266
+Prompt-derived authority records: 11
+Missing approval commands: 11
+Approval-scope mismatches: 11
+Unsupported authority claims: 119
+
+Verified requirements audited: 16
+Verified method clauses audited: 29
+Clauses lacking evidence: 29
+Evidence-scope mismatches: 29
+Commit-existence-only evidence claims: 2
+Self-referential evidence claims: 0
+
+Requirement-ID defects: 0
+Decision-ID defects: 0
+Packet-reference defects: 0
+Documentation defects: 0
+
+Semantic negative controls executed: 0
+Unexpected negative-control passes: 0
+Fixtures remaining: 0
+Unauthorized metadata changes: 0
+Completion decisions: 0
+
+Candidate readiness: NOT READY — PROJECT-OWNER AUTHORITY RECOVERY REQUIRED
+Implementation conformance status: NOT VERIFIED
+Project completion status: PENDING

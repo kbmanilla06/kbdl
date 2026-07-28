@@ -100,7 +100,7 @@ Confirmed, User-provided, composite User-provided/Confirmed, and Assumed origins
 
 ## 11. Validation-Status Audit
 
-The 20 Verified requirements consist of 11 prior evidence-backed claims and 9 VAL methodology/results claims. R9 restores `VAL-003`, `VAL-004`, `VAL-006`, and `VAL-007` only after source-derived production checks pass and 21 isolated negative controls detect every injected defect. `VAL-008`, `010`, and `011` remain `Not verified`. Unsupported claims retained as Verified: `0`.
+Sixteen requirements remain Verified: 11 prior evidence-backed claims and five VAL claims whose stated repository methods remain supported. R10 sets `VAL-003`, `VAL-004`, `VAL-006`, and `VAL-007` to `Not verified` because durable historical prompt-approval commands are absent and the requested complete semantic fixed-point audit cannot close without that authority recovery. `VAL-008`, `010`, and `011` also remain `Not verified`.
 
 ## 12. Approved-Authority Audit
 
@@ -127,7 +127,7 @@ Pending requirements lacking tracking: `0`. No pending item is a defect unless a
 
 ## 15. Traceability Audit
 
-R9 validates the complete effective-record model and proves its explicit-map and historical-location checks with controlled negative mutations. Production defects and unexpected negative-test passes are zero. `VAL-006` is therefore Verified for this mutation-tested method.
+R10 does not treat R9 mutation success or the R8 ledger artifact as sufficient proof of complete semantic reconciliation. The audit remains blocked by missing durable prompt-approval commands, so `VAL-006` is Not verified.
 
 ## 16. Cross-Reference and Documentation-Integrity Audit
 
@@ -217,7 +217,7 @@ All earlier rows remain intact and unmarked. The KBDL-011 section adds 26 unmark
 
 The independent source/history parser, complete per-ID artifacts, and captured
 command output are retained in the
-[KBDL-011-R9 evidence package](evidence/kbdl-011-r9/evidence-manifest.md).
+[KBDL-011-R10 evidence package](evidence/kbdl-011-r10/evidence-manifest.md).
 It audits 317 requirements, 266 Approved authority chains, 15 decisions, 317
 ordered traceability occurrences, source-derived theme pairs, baseline metadata,
 and documentation structure. It reports 258 incomplete historical traceability
@@ -242,7 +242,7 @@ does not independently establish which one was the final validated commit.
 | KBDL-008 | System components | `5cf90601f0ec3a3d56daf0882e86eb98fe941f48` | Passed before KBDL-009 | CMP-052–111 | 43 Approved; 17 Recommended | 44 Not verified; 16 Not applicable | Runtime evidence and packet decisions pending | Delivered |
 | KBDL-009 | Project Profiles | `907708c9a9db8004a7f03a36c54fb1a265fe7a9a` | Passed before KBDL-010 | PRO-001–029 | 22 Approved; 7 Recommended | 17 Not verified; 12 Not applicable | Project adoption evidence and packet decisions pending | Delivered |
 | KBDL-010 | Manual customization | `55b6ba6d90a5e0c6f5dd9affbcc0ce302462de95` | Passed before KBDL-011 | CUS-001–030 | 22 Approved; 7 Recommended; 1 Deferred | 22 Not verified; 8 Not applicable | Project records/evidence, packet decisions, and CUS-030 remain pending | Delivered |
-| KBDL-011 | Final Validation | `e8bc06efd0a6399178213fed28907f370c923176` (latest submitted baseline) | R8 failed planning-agent review; R9 remediation current | VAL-001–012 | 12 Approved | 9 Verified; 3 Not verified | Independent R9 review and project-owner action pending | Candidate ready; completion unapproved |
+| KBDL-011 | Final Validation | `08978ea45e7ec3bfdabbe3d073671478f66ee078` (latest submitted baseline) | R9 failed planning-agent review; R10 authority recovery blocked | VAL-001–012 | 12 Approved | 5 Verified; 7 Not verified | Recover exact historical prompt approval commands/scopes; rerun R10 | Not ready; completion unapproved |
 
 ## 33. Defect and Limitation Register
 
@@ -254,7 +254,7 @@ CUS-030 machine-readable customization format; automated customization/validatio
 
 ## 35. Specification Release-Readiness Assessment
 
-**Specification release candidate status: PRODUCTION READY.** This documentation-only candidate is recalculated from the passing R9 production validators and all 21 detecting negative controls. `VAL-008`, `010`, and `011` remain explicitly Not verified. The candidate remains subject to planning-agent validation and is not project-owner approval.
+**Specification release candidate status: NOT READY.** R10 cannot establish durable prompt-derived authority from implementation commits or later summary assertions. Exact project-owner approval commands and approved scopes must be recovered in a separate authority action before the complete semantic audit can pass. No limitation is accepted.
 
 **Limitation acceptance:** Not required for this documentation-only candidate. This does not accept implementation or production limitations.
 
@@ -269,13 +269,13 @@ No coded KBDL implementation, browser/device matrix, runtime accessibility/secur
 ## 37. Candidate Final Completion Audit
 
 ```text
-Specification release candidate status: PRODUCTION READY
+Specification release candidate status: NOT READY
 Limitation acceptance: None accepted or required for the documentation-only candidate
 Implementation conformance status: NOT VERIFIED
 Project completion status: PENDING PLANNING-AGENT VALIDATION AND PROJECT-OWNER APPROVAL
 ```
 
-This status concerns only the documentation repository and was recalculated from the complete R9 soundness results. Production verification and deployment are not applicable. `VAL-008`, `010`, and `011` remain Not verified. Recommended next action: independent planning-agent validation of KBDL-011-R9; only after it passes may the project owner consider completion.
+This status concerns only the documentation repository. Production verification and deployment are not applicable. Recommended next action: project-owner recovery/confirmation of each exact historical prompt approval command, mandatory scope, and exclusions in a separate approval record; then rerun KBDL-011-R10. Completion may not be considered.
 
 ## 38. Normative KBDL-VAL Requirements
 
@@ -288,25 +288,25 @@ This status concerns only the documentation repository and was recalculated from
   - Related requirements: all. Applicable modules: all. Specification location: [§8](#8-requirement-inventory). Pending dependencies: None.
   - Validation method/evidence: Parser inventory; 317 unique requirements, zero gaps/duplicates. Known limitation: None.
 - **`KBDL-VAL-003` — Lifecycle and authority integrity.** Every lifecycle label **must** agree across sources and every Approved requirement **must** have valid authority.
-  - Lifecycle status: Approved. Provenance: Confirmed. Validation status: Verified. Authority: approved prompt and GOV-003. Evidence class: B.
+  - Lifecycle status: Approved. Provenance: Confirmed. Validation status: Not verified. Authority: approved prompt and GOV-003. Evidence class: B.
   - Related requirements: all Approved requirements. Applicable modules: all. Specification location: [§9](#9-lifecycle-status-audit), [§12](#12-approved-authority-audit). Pending dependencies: None.
-  - Validation method/evidence: Documentary comparison; zero mismatches/unsupported authority. Known limitation: Historical GOV provenance format noted.
+  - Validation method/evidence: Not verified — exact historical project-owner prompt approval commands/scopes are absent. Known limitation: authority recovery is required.
 - **`KBDL-VAL-004` — Validation-evidence integrity.** Verified claims **must** have executed evidence; untested implementation behavior **must** remain Not verified.
-  - Lifecycle status: Approved. Provenance: Confirmed. Validation status: Verified. Authority: approved prompt and GOV-003. Evidence class: B.
+  - Lifecycle status: Approved. Provenance: Confirmed. Validation status: Not verified. Authority: approved prompt and GOV-003. Evidence class: B.
   - Related requirements: all. Applicable modules: all. Specification location: [§11](#11-validation-status-audit). Pending dependencies: None.
-  - Validation method/evidence: Status/evidence audit; unsupported Verified claims zero. Known limitation: Implementation ledger remains unverified by design.
+  - Validation method/evidence: Not verified — clause-level semantic fixed-point review is incomplete while authority is unresolved. Known limitation: implementation remains unverified.
 - **`KBDL-VAL-005` — Decision and pending integrity.** Decisions, packets, dependencies, exclusions, and pending destinations **must** be unique, accurate, and non-promotional.
   - Lifecycle status: Approved. Provenance: Confirmed. Validation status: Verified. Authority: approved prompt. Evidence class: B.
   - Related requirements: all non-Approved requirements and decisions. Applicable modules: all. Specification location: [§13](#13-decision-register-audit), [§14](#14-pending-and-deferred-inventory). Pending dependencies: None.
   - Validation method/evidence: Decision/packet audit; zero orphan or untracked items. Known limitation: Pending choices remain unavailable for implementation.
 - **`KBDL-VAL-006` — Traceability integrity.** Every requirement **must** have one complete, per-ID auditable traceability record.
-  - Lifecycle status: Approved. Provenance: Confirmed. Validation status: Verified. Authority: approved prompt. Evidence class: A.
+  - Lifecycle status: Approved. Provenance: Confirmed. Validation status: Not verified. Authority: approved prompt. Evidence class: A.
   - Related requirements: all. Applicable modules: all. Specification location: [§15](#15-traceability-audit). Pending dependencies: None.
-  - Validation method/evidence: R9 production traceability/location checks pass and their explicit-conflict and wrong-location mutations fail as expected. Known limitation: implementation conformance remains Not verified.
+  - Validation method/evidence: Not verified — all-field semantic reconciliation cannot close while prompt-derived Authority values are unresolved. Known limitation: implementation conformance remains Not verified.
 - **`KBDL-VAL-007` — Documentation integrity.** Links, anchors, labels, headings, tables, IDs, roadmap wording, and completion claims **must** resolve consistently.
-  - Lifecycle status: Approved. Provenance: Confirmed. Validation status: Verified. Authority: approved prompt. Evidence class: A.
+  - Lifecycle status: Approved. Provenance: Confirmed. Validation status: Not verified. Authority: approved prompt. Evidence class: A.
   - Related requirements: GOV-001. Applicable modules: all. Specification location: [§16](#16-cross-reference-and-documentation-integrity-audit). Pending dependencies: None.
-  - Validation method/evidence: Dependency-free repository validator; PASS. Known limitation: No external-site availability claim.
+  - Validation method/evidence: Not verified — R10 has not re-established the complete current method after the authority/evidence fixed-point failure. Known limitation: No external-site availability claim.
 - **`KBDL-VAL-008` — Static architecture consistency.** Principles, foundations, themes, motion, responsive, accessibility, components, Profiles, customization, and security rules **must** preserve shared architecture.
   - Lifecycle status: Approved. Provenance: Confirmed. Validation status: Not verified. Authority: approved prompt and prior shared-architecture rules. Evidence class: C.
   - Related requirements: PRN-007, FND-008, THM-006, MOT-026, A11Y-040, CMP-051/066, PRO-001, CUS-020. Applicable modules: all. Specification location: [§17](#17-governance-and-conventions-audit)–[§28](#28-security-privacy-correctness-and-data-integrity-audit). Pending dependencies: None.
@@ -334,11 +334,11 @@ This status concerns only the documentation repository and was recalculated from
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | VAL-001 | Evidence classes | A | Approved | Confirmed | Verified | Prompt | All | §4 | None | Classification audit PASS | Runtime stays E |
 | VAL-002 | Inventory | A | Approved | Confirmed | Verified | Prompt | All | §8 | None | 317 IDs PASS | None |
-| VAL-003 | Lifecycle/authority | B | Approved | Confirmed | Verified | Prompt/GOV | All | §9/§12 | None | Comparison PASS | GOV historical format |
-| VAL-004 | Validation evidence | B | Approved | Confirmed | Verified | Prompt/GOV | All | §11 | None | Evidence audit PASS | Runtime unverified |
+| VAL-003 | Lifecycle/authority | B | Approved | Confirmed | Not verified | Prompt/GOV | All | §9/§12 | None | Historical prompt commands missing | Authority recovery required |
+| VAL-004 | Validation evidence | B | Approved | Confirmed | Not verified | Prompt/GOV | All | §11 | None | Semantic fixed point incomplete | Runtime unverified |
 | VAL-005 | Decisions/pending | B | Approved | Confirmed | Verified | Prompt | All | §13/§14 | None | Mapping audit PASS | Pending unavailable |
-| VAL-006 | Traceability | A | Approved | Confirmed | Verified | Prompt | All | §15 | None | R9 positive plus negative controls PASS | Implementation unverified |
-| VAL-007 | Documentation | A | Approved | Confirmed | Verified | Prompt | All | §16 | None | Validator PASS | No external availability |
+| VAL-006 | Traceability | A | Approved | Confirmed | Not verified | Prompt | All | §15 | None | Complete semantic reconciliation blocked | Implementation unverified |
+| VAL-007 | Documentation | A | Approved | Confirmed | Not verified | Prompt | All | §16 | None | Full semantic claim not revalidated | No external availability |
 | VAL-008 | Static architecture | C | Approved | Confirmed | Not verified | Prompt/prior | All | §17–§28 | None | Complete method unsupported | Static/runtime gaps |
 | VAL-009 | Theme calculations | D | Approved | Confirmed | Verified | Prompt | FND/THM/A11Y | §20 | None | Contrast script PASS | Alpha/media excluded |
 | VAL-010 | Implementation ledger | E | Approved | Confirmed | Not verified | Prompt | All | §29 | Implementation | Complete coverage unsupported | Behavior unverified |
