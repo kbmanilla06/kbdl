@@ -418,6 +418,64 @@ decisions (visual values, motion timings, component designs) already exist.
 
 - **Treegrid** — A complex-presentation component combining Tree's hierarchical relationships with Grid's tabular interaction, used only where both are genuinely required. See [components-system.md §18.2](components-system.md#182-tree-and-treegrid).
 
+- **Accepted limitation** — A known validation limitation explicitly accepted
+  by the authority required for completion; recording it does not convert
+  missing evidence into conformance.
+
+- **Candidate final status** — A KBDL-011 readiness recommendation made from
+  the evidence available to the validation run. It is not project completion
+  and does not bypass planning-agent review or project-owner approval.
+
+- **Completion approval** — The project owner's explicit authorization to
+  mark the KBDL roadmap complete after independent validation has passed and
+  applicable limitations have been accepted.
+
+- **Documentation validation** — Class A validation of document structure,
+  links, tables, identifiers, metadata, and inventory using repository
+  evidence.
+
+- **Evidence sufficiency** — The rule that a validation conclusion may extend
+  only as far as the executed method and retained evidence support.
+
+- **Final validation** — The KBDL-011 audit of the complete specification
+  repository. It assesses documentation readiness while keeping implementation
+  and project evidence separate.
+
+- **Implementation conformance** — Demonstrated agreement between a real
+  implementation and applicable Approved KBDL requirements. It remains `Not
+  verified` when no implementation evidence exists.
+
+- **Implementation-dependent validation** — Class E validation requiring an
+  executable implementation and runtime evidence, such as browser, device,
+  assistive-technology, security, performance, or rollback results.
+
+- **Production readiness** — A candidate release state indicating that the
+  evaluated scope has no known blocking defect. In KBDL-011, any such state is
+  explicitly scoped to documentation unless production evidence exists.
+
+- **Project-specific validation** — Class F validation requiring evidence from
+  an adopting project, such as configuration, customization, deployment, or
+  production operation.
+
+- **Specification release readiness** — The readiness of the KBDL documents
+  for specification release, assessed separately from implementation
+  conformance and production deployment.
+
+- **Static consistency validation** — Class C validation of relationships and
+  invariants that can be established by comparing specification text without
+  executing an implementation.
+
+- **Theme calculation validation** — Class D validation that reproduces a
+  theme calculation from recorded source values and formula; it does not cover
+  unknown alpha-composited or runtime contexts.
+
+- **Validation class** — One of KBDL-011's evidence classes: documentation
+  (A), governance (B), static consistency (C), calculation-based (D),
+  implementation-dependent (E), or project-specific (F).
+
 - **Validation criterion** — A documented, checkable condition used to
   determine whether a requirement is `Verified`. Tracked under module code
   `VAL`.
+
+- **Validation defect** — A specific inconsistency, missing record, broken
+  reference, unsupported claim, or failed check discovered during validation.

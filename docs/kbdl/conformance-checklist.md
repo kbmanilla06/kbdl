@@ -66,7 +66,7 @@ Uses the same four-column result convention.
 | 32 | Pending KBDL-008 dependencies are identified and not promoted | | | | |
 | 33 | Approval-ready and contingent KBDL-009 decisions are separated correctly ([profiles.md §34](profiles.md#34-approval-ready-versus-contingent-decisions)) | | | | |
 | 34 | Every non-Approved `KBDL-PRO-###` requirement has a packet or tracking destination ([profiles.md §38](profiles.md#38-decision-packet-coverage-audit)) | | | | |
-| 35 | KBDL-011 final validation and later roadmap work remain unstarted | | | | |
+| 35 | Implementation packages and post-validation work have not begun before completion approval | | | | |
 | 36 | Implementation-level profile conformance is not claimed without recorded evidence | | | | |
 
 No row above is marked `Passed` in this repository; no project-level
@@ -105,7 +105,41 @@ Applies in addition to the generic checklist whenever a change touches
 | 59 | Duration and review conditions are documented | | | | |
 | 60 | Reusable customization is escalated appropriately | | | | |
 | 61 | Every non-Approved CUS requirement has one packet or tracking destination | | | | |
-| 62 | Final validation and later-roadmap content remain unstarted | | | | |
+| 62 | Implementation packages and later scope remain unstarted; completion is not declared | | | | |
+
+## KBDL-011 Final Validation Checklist Items
+
+Applies to the final documentation audit and every `KBDL-VAL-###`
+requirement. No row is pre-marked.
+
+| # | Item | Passed | Failed | Not verified | Not applicable |
+| --- | --- | --- | --- | --- | --- |
+| 63 | Requirement inventory is complete and exact | | | | |
+| 64 | Every Approved requirement has valid implementation authority | | | | |
+| 65 | Every requirement is traced exactly once | | | | |
+| 66 | Lifecycle labels agree across authoritative sources | | | | |
+| 67 | `Approved` is used only as the implementation-authority state | | | | |
+| 68 | Every `Verified` claim has executed evidence | | | | |
+| 69 | Untested implementation behavior remains explicitly `Not verified` | | | | |
+| 70 | Every non-Approved requirement has a packet or tracking destination | | | | |
+| 71 | Decision-register entries and approval scopes are exact | | | | |
+| 72 | Internal links and anchors resolve | | | | |
+| 73 | Markdown tables are structurally sound | | | | |
+| 74 | Requirement IDs are unique and well formed | | | | |
+| 75 | One shared semantic and accessibility architecture is preserved | | | | |
+| 76 | WCAG-derived claims remain within their adopted scope | | | | |
+| 77 | Opaque theme contrast calculations are reproducible | | | | |
+| 78 | Motion runtime behavior remains `Not verified` without runtime evidence | | | | |
+| 79 | Responsive and device behavior remains `Not verified` without device evidence | | | | |
+| 80 | Component runtime behavior remains `Not verified` without implementation evidence | | | | |
+| 81 | Project Profile invariants remain shared and unchanged | | | | |
+| 82 | Manual customization remains bounded by Approved authority | | | | |
+| 83 | Security, privacy, correctness, or data-integrity conformance is not claimed without evidence | | | | |
+| 84 | Specification release readiness is reported separately | | | | |
+| 85 | Implementation conformance is reported separately | | | | |
+| 86 | Known limitations and acceptance needs are explicit | | | | |
+| 87 | Deferred and pending work remains visible | | | | |
+| 88 | Candidate readiness is not represented as project completion | | | | |
 
 ## Result Summary
 

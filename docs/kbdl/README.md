@@ -140,10 +140,13 @@ protecting locked rules, shared architecture, and Profile invariants (see
 [customization.md](customization.md)). Its seven new discretionary policy
 items remain `Recommended` and its machine-readable-format item remains
 `Deferred`; no earlier recommendation is promoted and no implementation-
-level customization validation exists. KBDL-010 is under planning-agent
-validation. Final validation and later work remain locked until it passes.
-This is not a claim that the overall KBDL project is complete — one
-roadmap step remains.
+level customization validation exists. KBDL-010 **passed** planning-agent
+validation, which unlocked KBDL-011. KBDL-011 (Final Validation) is now
+present in [validation.md](validation.md). Its documentation-only audit records
+a candidate status of `PRODUCTION READY`; implementation conformance remains
+`NOT VERIFIED`. This is not a claim that the overall KBDL project is complete:
+planning-agent validation of KBDL-011 and explicit project-owner completion
+approval remain pending.
 Progression to later roadmap steps depends on the
 planning agent's validation review, not on this index. KBDL-001
 established the documentation architecture, terminology, requirement
@@ -180,9 +183,10 @@ profile-specific semantic, accessibility, foundation, theme, motion, or
 component system (see [profiles.md](profiles.md)). KBDL-010 established
 manual-customization governance without creating a project customization,
 implementation format, exception, or approval shortcut (see
-[customization.md](customization.md)). None of these steps defines
-implementation code or final-validation work; final validation remains
-locked (see [governance.md](governance.md)).
+[customization.md](customization.md)). KBDL-011 performs final documentation
+validation without creating implementation code or production evidence (see
+[validation.md](validation.md)). Completion remains gated by independent review
+and explicit project-owner approval (see [governance.md](governance.md)).
 
 ## Intended Audience
 
@@ -210,7 +214,7 @@ specification itself.
 ## Document Hierarchy
 
 KBDL-001, KBDL-002, KBDL-003, KBDL-004, KBDL-005, KBDL-006, KBDL-007,
-KBDL-008, KBDL-009, and KBDL-010 deliver the documents below with real content. Rows still
+KBDL-008, KBDL-009, KBDL-010, and KBDL-011 deliver the documents below with real content. Rows still
 marked `Deferred` show the **planned location only** for future
 modules; those files do not exist yet and must not be created until
 their roadmap step is reached.
@@ -227,8 +231,8 @@ their roadmap step is reached.
 | 8 | Core action, form, and navigation components | Approved (architecture)§; Recommended (component-level taxonomies) | [components-core.md](components-core.md) |
 | 9 | Surface, overlay, feedback, and system-state components | Approved (architecture)¶; Recommended (component-level taxonomies) | [components-system.md](components-system.md) |
 | 10 | Project profiles (Showcase, Precision, Flow) | Approved (architecture)‖; Recommended (discretionary profile-governance policy) | [profiles.md](profiles.md) |
-| 11 | Manual customization | Approved (inherited and prompt-mandated governance); Recommended/Deferred (new policy) — under validation | [customization.md](customization.md) |
-| 12 | Validation | Deferred (locked until KBDL-010 passes validation) | `docs/kbdl/validation.md` (planned) |
+| 11 | Manual customization | Approved (inherited and prompt-mandated governance); Recommended/Deferred (new policy) — passed planning-agent validation | [customization.md](customization.md) |
+| 12 | Validation | Approved methodology; candidate `PRODUCTION READY` for documentation only — independent review pending | [validation.md](validation.md) |
 | 13 | Governance | Approved | [governance.md](governance.md) |
 | 14 | Future expansion | Deferred | Location to be determined when needed |
 

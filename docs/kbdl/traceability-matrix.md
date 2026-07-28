@@ -1095,6 +1095,75 @@ The entries below trace every KBDL-010 requirement to
 - **Future validation dependency:** Later authorized tooling and `VAL` scope.
 - **Notes:** Not an orphan packet item and not approval-ready.
 
+## KBDL-011 — Final Validation
+
+The entries below trace every KBDL-011 methodology requirement to
+[validation.md](validation.md). Each ID appears exactly once in the grouped
+records and has its own specification location and evidence boundary.
+
+### Evidence, inventory, lifecycle, and validation integrity (KBDL-VAL-001 through KBDL-VAL-004)
+
+- **Blueprint section:** Final validation methodology; evidence classification; complete inventory; authority and status integrity
+- **Roadmap prompt:** KBDL-011
+- **Requirement ID:** `KBDL-VAL-001`, `KBDL-VAL-002`, `KBDL-VAL-003`, `KBDL-VAL-004`
+- **Specification location (per-ID):** `001` → [§4](validation.md#4-evidence-classification); `002` → [§8](validation.md#8-requirement-inventory); `003` → [§9](validation.md#9-lifecycle-status-audit) and [§12](validation.md#12-approved-authority-audit); `004` → [§11](validation.md#11-validation-status-audit).
+- **Lifecycle status:** All Approved.
+- **Provenance:** All Confirmed.
+- **Validation status:** All Verified.
+- **Authority:** Explicit mandatory KBDL-011 prompt clauses approved by the project owner.
+- **Validation class (per-ID):** `001`: A; `002`: A; `003`: B; `004`: B.
+- **Validation method / evidence (per-ID):** `001`: class-assignment audit; `002`: repository inventory parser; `003`: lifecycle/authority comparison; `004`: validation-label/evidence comparison. Executed results are recorded in [§4](validation.md#4-evidence-classification), [§8](validation.md#8-requirement-inventory), [§9](validation.md#9-lifecycle-status-audit), and [§11](validation.md#11-validation-status-audit).
+- **Known limitation:** These methods validate repository evidence only; they do not execute an implementation.
+- **Related decision:** None; methodology approval does not alter earlier decisions.
+- **Related prior requirements:** `KBDL-GOV-001`–`003` and all inventoried KBDL requirements.
+- **Packet destination (per-ID):** `001`–`004`: None — Approved.
+- **Pending dependencies (per-ID):** `001`–`004`: None for the documented checks.
+- **Profile impact:** None; all Profiles remain under one shared architecture.
+- **Future validation dependency:** Runtime and project claims remain Classes E/F.
+- **Notes:** Verification is scoped to the executed validation method.
+
+### Decisions, traceability, documentation, and architecture (KBDL-VAL-005 through KBDL-VAL-008)
+
+- **Blueprint section:** Decision and pending integrity; traceability; documentation integrity; static cross-module consistency
+- **Roadmap prompt:** KBDL-011
+- **Requirement ID:** `KBDL-VAL-005`, `KBDL-VAL-006`, `KBDL-VAL-007`, `KBDL-VAL-008`
+- **Specification location (per-ID):** `005` → [§13](validation.md#13-decision-register-audit) and [§14](validation.md#14-pending-and-deferred-inventory); `006` → [§15](validation.md#15-traceability-audit); `007` → [§16](validation.md#16-cross-reference-and-documentation-integrity-audit); `008` → [§17](validation.md#17-governance-and-conventions-audit) through [§28](validation.md#28-security-privacy-correctness-and-data-integrity-audit).
+- **Lifecycle status:** All Approved.
+- **Provenance:** All Confirmed.
+- **Validation status:** All Verified.
+- **Authority:** Explicit mandatory KBDL-011 prompt clauses approved by the project owner.
+- **Validation class (per-ID):** `005`: B; `006`: A; `007`: A; `008`: C.
+- **Validation method / evidence (per-ID):** `005`: decision/pending ledger audit; `006`: per-ID traceability audit; `007`: link, anchor, heading, table, ID, roadmap, and claim checks; `008`: static invariant comparison. Executed evidence is recorded in the linked sections.
+- **Known limitation:** Static agreement does not establish runtime, assistive-technology, device, security, or production conformance.
+- **Related decision:** Existing `KBDL-DEC-001`–`015`; no new decision is created.
+- **Related prior requirements:** All module requirements, with owning-module references listed in [validation.md §17–§28](validation.md#17-governance-and-conventions-audit).
+- **Packet destination (per-ID):** `005`–`008`: None — Approved.
+- **Pending dependencies (per-ID):** `005`–`008`: None for static repository validation; recorded recommendations and deferrals remain pending.
+- **Profile impact:** Shared semantics, accessibility, components, and invariants are preserved.
+- **Future validation dependency:** Implementation/project evidence for all runtime conclusions.
+- **Notes:** Grouping is presentation only; each listed ID has a distinct evidence record.
+
+### Calculations, evidence ledgers, and completion gate (KBDL-VAL-009 through KBDL-VAL-012)
+
+- **Blueprint section:** Reproducible theme calculations; implementation and project ledgers; completion governance
+- **Roadmap prompt:** KBDL-011
+- **Requirement ID:** `KBDL-VAL-009`, `KBDL-VAL-010`, `KBDL-VAL-011`, `KBDL-VAL-012`
+- **Specification location (per-ID):** `009` → [§20](validation.md#20-theme-audit); `010` → [§29](validation.md#29-implementation-dependent-validation-ledger); `011` → [§30](validation.md#30-project-specific-validation-ledger); `012` → [§41](validation.md#41-completion-and-approval-boundary).
+- **Lifecycle status:** All Approved.
+- **Provenance:** All Confirmed.
+- **Validation status:** All Verified.
+- **Authority:** Explicit mandatory KBDL-011 prompt clauses approved by the project owner.
+- **Validation class (per-ID):** `009`: D; `010`: E; `011`: F; `012`: B.
+- **Validation method / evidence (per-ID):** `009`: independently executed WCAG opaque-color contrast calculation; `010`: implementation-evidence ledger audit; `011`: project-evidence/exclusion ledger audit; `012`: completion-claim and approval-gate audit. Results are retained in the linked sections and validator artifacts named there.
+- **Known limitation:** `009` excludes unknown alpha/media contexts; `010` and `011` verify ledger honesty, not implementation or project conformance; `012` records a pending gate.
+- **Related decision:** No completion decision exists; earlier decision scopes remain unchanged.
+- **Related prior requirements:** Theme and accessibility contrast requirements for `009`; all implementation-dependent requirements for `010`; `PRO`/`CUS` and project adoption rules for `011`; `KBDL-GOV-003` for `012`.
+- **Packet destination (per-ID):** `009`–`012`: None — Approved methodology requirements.
+- **Pending dependencies (per-ID):** `009`: none for opaque checks; `010`: implementation evidence; `011`: adopting-project evidence; `012`: planning-agent validation and explicit project-owner approval.
+- **Profile impact:** No Profile-specific system is introduced; project evidence remains absent.
+- **Future validation dependency:** Exactly the Class E/F evidence and completion approvals stated above.
+- **Notes:** Candidate documentation readiness is not project completion.
+
 ## Notes on Scope
 
 `GOV`, `PRN`, `FND`, `THM`, `MOT`, `RSP`, `A11Y`, and `CMP` are
@@ -1322,5 +1391,9 @@ for exactly what has and has not been verified. KBDL-009 passed the
 planning agent's validation review and KBDL-010 (Manual Customization) is
 present with 30 `CUS` requirements. Its seven discretionary policy items
 remain Recommended, its format/tooling item remains Deferred, and no
-implementation-level customization behavior is verified. Final validation
-remains locked until KBDL-010 passes planning-agent review.
+implementation-level customization behavior is verified. KBDL-010 passed
+planning-agent review and KBDL-011 is present with twelve Approved, Verified
+validation-methodology requirements. Its candidate `PRODUCTION READY` status
+applies only to the documentation repository; implementation conformance is
+`NOT VERIFIED`, and completion awaits independent review and explicit
+project-owner approval.

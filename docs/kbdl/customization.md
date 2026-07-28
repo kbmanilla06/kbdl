@@ -371,7 +371,7 @@ Each record below has one authoritative normative location identified by its Spe
   - Authority: Not applicable — pending explicit project-owner approval; assignment of a CUS ID does not grant implementation authority.
   - Related requirements: `KBDL-CUS-011`. Applicable Profiles: all. Customization class: A–F.
   - Specification location: [§14](#14-validation-and-evidence-planning). Decision-packet destination: Approval-ready item 3. Pending dependencies: None.
-  - Validation method: Project-owner review. Known limitation: Final validation policy remains later scope.
+  - Validation method: Project-owner review. Known limitation: KBDL-011 does not approve this discretionary policy.
 
 - **`KBDL-CUS-026` — Review, expiry, and renewal policy.** Adopt default cadence, expiry, stale-record handling, and exception-renewal rules.
   - Lifecycle status: Recommended. Provenance: Assumed. Validation status: Not applicable.
@@ -472,7 +472,7 @@ All Profiles means Showcase, Precision, and Flow. `Prompt` authority means an ex
 | Project Profiles | shared architecture/invariants/Approved emphasis | Seven KBDL-009 items | Hidden/fourth/hybrid Profile | Declaration/invariant audit |
 | Content/open expression | accessibility-safe project assets/voice | Licensing policy details | Misleading/inaccessible/unsafe content | Asset/content review |
 | Security/privacy/correctness | Approved safeguards | Backend design out of scope | Access/state/privacy weakening | Security review; no backend prescription |
-| Future validation | Evidence planning only | Final validation policy | Claiming production conformance | Later VAL module remains locked |
+| Final validation | Evidence planning only | KBDL-011 validation policy | Claiming production conformance | Project evidence remains unavailable |
 
 ## 34. Customization-Record Completeness Matrix
 
@@ -545,7 +545,7 @@ All seven items are `Recommended`, `Assumed`, `Not applicable` for validation, i
 - **Rationale / alternatives / trade-offs:** Consistent scrutiny; alternatives are uniform evidence or case-by-case judgment; classification overhead.
 - **Accessibility / responsive / theme-foundation / motion / component / Profile impacts:** Higher-risk impacts require relevant evidence without changing requirements.
 - **Security, privacy, correctness / performance:** Security/correctness impact raises scrutiny; evidence effort may increase.
-- **Dependencies / affected requirements:** None for documentation policy; `KBDL-CUS-025`. Final validation remains later scope.
+- **Dependencies / affected requirements:** None for documentation policy; `KBDL-CUS-025`. KBDL-011 does not promote this recommendation.
 - **Approval scope / exclusions:** Tiering/evidence planning only; excludes production conformance and exact final-validation policy.
 
 ### Item 4 — Review, expiry, stale records, and renewal
@@ -701,4 +701,4 @@ Deferred and unauthorized: automated customization tooling; machine-readable sch
 
 ## 42. Traceability
 
-Complete per-ID traceability is maintained in [traceability-matrix.md § KBDL-010](traceability-matrix.md#kbdl-010--manual-customization). The Requirement Coverage Matrix in §31 is not treated as validation evidence. Future implementation-level validation (`VAL`) remains locked pending planning-agent validation of KBDL-010.
+Complete per-ID traceability is maintained in [traceability-matrix.md § KBDL-010](traceability-matrix.md#kbdl-010--manual-customization). The Requirement Coverage Matrix in §31 is not treated as validation evidence. KBDL-010 passed planning-agent validation; [KBDL-011](validation.md) now audits the documentation while implementation-level customization behavior remains `Not verified`.
