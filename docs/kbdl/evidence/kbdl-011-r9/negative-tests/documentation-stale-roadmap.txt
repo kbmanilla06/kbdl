@@ -1,0 +1,18 @@
+Exit code: 1
+Markdown files: 53
+relative links: 0
+anchors: 0
+heading hierarchy: 0
+duplicate headings: 0
+empty required sections: 0
+placeholder text: 0
+conflict markers: 0
+markdown tables: 0
+requirement IDs: 0
+decision IDs: 0
+packet references: 0
+visible numbered-section labels: 0
+stale roadmap wording: 1
+premature readiness/completion claims: 0
+Documentation defects: 1
+stale roadmap wording: stale roadmap phrase

@@ -1,0 +1,24 @@
+Exit code: 1
+Markdown files: 52
+relative links: 0
+anchors: 6
+heading hierarchy: 0
+duplicate headings: 0
+empty required sections: 0
+placeholder text: 0
+conflict markers: 0
+markdown tables: 0
+requirement IDs: 0
+decision IDs: 1
+packet references: 0
+visible numbered-section labels: 0
+stale roadmap wording: 0
+premature readiness/completion claims: 0
+Documentation defects: 7
+anchors: components-core.md->decision-register.md#kbdl-dec-015--kbdl-006-remediation-and-id-governance-amendment
+anchors: components-core.md->decision-register.md#kbdl-dec-015--kbdl-006-remediation-and-id-governance-amendment
+anchors: components-system.md->decision-register.md#kbdl-dec-015--kbdl-006-remediation-and-id-governance-amendment
+anchors: conventions.md->decision-register.md#kbdl-dec-015--kbdl-006-remediation-and-id-governance-amendment
+anchors: profiles.md->decision-register.md#kbdl-dec-015--kbdl-006-remediation-and-id-governance-amendment
+anchors: traceability-matrix.md->decision-register.md#kbdl-dec-015--kbdl-006-remediation-and-id-governance-amendment
+decision IDs: count/order/unique defect: ['KBDL-DEC-001', 'KBDL-DEC-002', 'KBDL-DEC-003', 'KBDL-DEC-004', 'KBDL-DEC-005', 'KBDL-DEC-006', 'KBDL-DEC-007', 'KBDL-DEC-008', 'KBDL-DEC-009', 'KBDL-DEC-010', 'KBDL-DEC-011', 'KBDL-DEC-012', 'KBDL-DEC-013', 'KBDL-DEC-014', 'KBDL-DEC-014']

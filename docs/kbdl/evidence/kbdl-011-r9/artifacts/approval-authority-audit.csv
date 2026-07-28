@@ -1,0 +1,12 @@
+Prompt ID,Exact approval command or decision,Evidence source,Approved scope,Exclusions,Requirements relying on prompt,Result
+KBDL-001,User-approved implementation prompt recorded by accepted commit,2d356b427f60e6737dd971bcafe231b15dfdf6e0,Specification architecture and governance foundation,No later module or completion approval,KBDL-GOV-001–003,PASS
+KBDL-002,User-approved implementation prompt recorded by accepted commit,867306c380decb2b2582109b6445942e4e0bba43,Identity principles and visual consistency,No implementation conformance,KBDL-PRN-001–008,PASS
+KBDL-003,User-approved prompt plus decision KBDL-DEC-012,f3fbb98b1d004d4a0ed5420ae96bacabba35bf1f,Approved foundation requirements and packet decisions,Recommendations and implementation excluded,KBDL-FND-001–012,PASS
+KBDL-004,User-approved prompt plus decision KBDL-DEC-013,cad830711df6e5c425a04b75ed0bd45bc4749fdf,Approved theme requirements and opaque decisions,Translucent and excluded contexts,KBDL-THM-001–015,PASS
+KBDL-005,User-approved prompt plus decision KBDL-DEC-014,e6916acef004e3a62ca8a5bbc15ae6346fbc0f25,Approved motion requirements and decisions,Runtime implementation excluded,KBDL-MOT-001–034,PASS
+KBDL-006,User-approved implementation prompt recorded by accepted commit,14ef110fca5994b6b3ef18a75f4e28e4bc0a1ee7,Responsive and accessibility mandatory scope,Recommendations and runtime validation excluded,KBDL-RSP-001–022; KBDL-A11Y-001–040,PASS
+KBDL-007,User-approved implementation prompt recorded by accepted commit,332ae95d3447c2a59fe23faffa70f63a0e28b4c1,Approved core component mandatory scope,Recommended packet items excluded,KBDL-CMP-001–051,PASS
+KBDL-008,User-approved implementation prompt recorded by accepted commit,393a9800e5cd2bd1ff476930cbee9d0f44fa91ce,Approved system component mandatory scope,Recommended packet items excluded,KBDL-CMP-052–111,PASS
+KBDL-009,User-approved implementation prompt recorded by accepted commit,254b93572bffaf5a11e6869e5a973124ff6ae124,Approved Project Profile mandatory scope,Seven Recommended policies excluded,KBDL-PRO-001–029,PASS
+KBDL-010,User-approved implementation prompt recorded by accepted commit,12080da3cd11e0e9ec403fac4ff68ce184e1c31e,Approved manual customization mandatory scope,Recommended items and CUS-030 excluded,KBDL-CUS-001–030,PASS
+KBDL-011,User-approved implementation prompt recorded by accepted commit,b5bb0a3379a9399ca448fcaf6166892163a604e2,Final validation methodology and completion gate,No completion or implementation approval,KBDL-VAL-001–012,PASS

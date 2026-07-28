@@ -1,0 +1,25 @@
+negative-group-conflict: PASS (exit 1)
+negative-missing-evidence: PASS (exit 1)
+negative-failed-evidence: PASS (exit 1)
+negative-partial-scope: PASS (exit 1)
+negative-self-reference: PASS (exit 1)
+negative-missing-approval: PASS (exit 1)
+negative-wrong-location: PASS (exit 1)
+documentation-relative-link: PASS (exit 1)
+documentation-anchor: PASS (exit 1)
+documentation-heading-hierarchy: PASS (exit 1)
+documentation-duplicate-heading: PASS (exit 1)
+documentation-empty-section: PASS (exit 1)
+documentation-placeholder: PASS (exit 1)
+documentation-conflict-marker: PASS (exit 1)
+documentation-table: PASS (exit 1)
+documentation-requirement-id: PASS (exit 1)
+documentation-decision-id: PASS (exit 1)
+documentation-packet-reference: PASS (exit 1)
+documentation-visible-label: PASS (exit 1)
+documentation-stale-roadmap: PASS (exit 1)
+documentation-premature-completion: PASS (exit 1)
+
+Negative controls executed: 21
+Unexpected negative-test passes: 0
+Fixtures remaining after restoration: 0

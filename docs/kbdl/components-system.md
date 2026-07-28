@@ -107,7 +107,7 @@ and [§36](#36-kbdl-007-approval-boundary-audit)).
 - The APG tooltip pattern is explicitly work in progress and lacks
   task-force consensus; this document does not mark a complete tooltip
   interaction policy `Approved` solely because it appears in that
-  pattern (see [§8.1](#111-tooltip)).
+  pattern (see [§11.1](#111-tooltip)).
 - Native host-language semantics (`<table>`, `<details>`/`<summary>`,
   `<progress>`, `<meter>`, `<dialog>`) are preferred when they provide
   the required behavior; ARIA supplements missing semantics and must
@@ -402,7 +402,7 @@ restricts to one is new policy:
     `accessibility.md §8`), `KBDL-CMP-002`.
   - Applicable profiles: Showcase, Precision, Flow.
   - Specification location: [§9.5](#95-static-data-table),
-    [§14.1](#181-interactive-grid) (distinction).
+    [§18.1](#181-interactive-grid) (distinction).
   - Validation method: Manual semantic-structure review once
     implemented.
 
@@ -731,7 +731,7 @@ decisions:
 - **`KBDL-CMP-081`** — An alert dialog **must** be reserved for urgent
   messages requiring an explicit user response, using the `alertdialog`
   role, and **must not** be used for routine or successful informational
-  feedback (see Alert, [§13.2](#142-alert)).
+  feedback (see Alert, [§14.2](#142-alert)).
   - Lifecycle status: Approved (restates the adopted WAI-ARIA 1.2
     `alertdialog` role definition). Provenance: Confirmed. Validation
     status: Not verified.

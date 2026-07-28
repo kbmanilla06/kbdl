@@ -1,0 +1,2 @@
+Verified registry rows checked: 20
+Evidence source defects: 0

@@ -1,0 +1,14 @@
+Command: production_validator.py --root <isolated-fixture>
+Exit code: 1
+Production requirements audited: 317
+Production effective-record defects: 0
+Production authority defects: 0
+Production Verified-evidence defects: 1
+Production location defects: 0
+Production documentation defects: 0
+
+Unauthorized metadata changes: 0
+Completion decisions: 0
+
+Implementation conformance status: NOT VERIFIED
+Project completion status: PENDING

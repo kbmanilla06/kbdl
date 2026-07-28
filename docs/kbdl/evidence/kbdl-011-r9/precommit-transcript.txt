@@ -1,0 +1,160 @@
+$ git fetch origin
+[stdout]
+(empty)
+[stderr]
+(empty)
+[exit code] 0
+
+$ git remote -v
+[stdout]
+origin	https://github.com/kbmanilla06/kbdl.git (fetch)
+origin	https://github.com/kbmanilla06/kbdl.git (push)
+[stderr]
+(empty)
+[exit code] 0
+
+$ git branch --show-current
+[stdout]
+main
+[stderr]
+(empty)
+[exit code] 0
+
+$ git status --short
+[stdout]
+ M docs/kbdl/README.md
+ M docs/kbdl/components-system.md
+ M docs/kbdl/traceability-matrix.md
+ M docs/kbdl/traceability-metadata.csv
+ M docs/kbdl/validation.md
+?? docs/kbdl/evidence/kbdl-011-r9/
+[stderr]
+(empty)
+[exit code] 0
+
+$ git rev-parse HEAD
+[stdout]
+e8bc06efd0a6399178213fed28907f370c923176
+[stderr]
+(empty)
+[exit code] 0
+
+$ git rev-parse origin/main
+[stdout]
+e8bc06efd0a6399178213fed28907f370c923176
+[stderr]
+(empty)
+[exit code] 0
+
+$ git log --oneline --decorate -15
+[stdout]
+e8bc06e (HEAD -> main, origin/main, origin/HEAD) docs(kbdl): complete R8 effective evidence audit
+62f64f0 docs(kbdl): remediate independent R7 traceability audit
+bbcc13e Resolve KBDL traceability per requirement
+991dfdf Reconcile KBDL effective traceability records
+7c09694 Remediate KBDL-011 authoritative traceability
+d7108bd Complete KBDL traceability metadata audit (KBDL-011-R3)
+5d4ecd5 Replace KBDL-011 validation evidence methodology (KBDL-011-R2)
+eab3b41 Remediate KBDL-011 roadmap and evidence audit (KBDL-011-R1)
+b5bb0a3 Add KBDL final validation audit (KBDL-011)
+55b6ba6 Remove KBDL-010 packet dependency ambiguity (KBDL-010-R1)
+12080da Add manual customization specification (KBDL-010)
+907708c Correct KBDL-009 profile location summaries (KBDL-009-R3)
+3503d95 Add per-ID traceability locations and packet destinations for KBDL-009 (KBDL-009-R2)
+8dc232c Correct KBDL-009 packet mapping, requirement metadata, and traceability (KBDL-009-R1)
+254b935 Add KBDL-009 Project Profiles specification
+[stderr]
+(empty)
+[exit code] 0
+
+$ git show --no-patch --format=fuller e8bc06efd0a6399178213fed28907f370c923176
+[stdout]
+commit e8bc06efd0a6399178213fed28907f370c923176
+Author:     Khristopher Ben Manilla <kbmanilla06@gmail.com>
+AuthorDate: Tue Jul 28 13:38:06 2026 +0800
+Commit:     Khristopher Ben Manilla <kbmanilla06@gmail.com>
+CommitDate: Tue Jul 28 13:38:06 2026 +0800
+
+    docs(kbdl): complete R8 effective evidence audit
+[stderr]
+(empty)
+[exit code] 0
+
+$ python3 docs/kbdl/evidence/kbdl-011-r5/scripts/build_effective_ledger.py
+[stdout]
+Wrote 317 effective ledger rows
+[stderr]
+(empty)
+[exit code] 0
+
+$ python3 docs/kbdl/evidence/kbdl-011-r6/scripts/resolve_per_id_ledger.py
+[stdout]
+Resolved 317 exact per-ID ledger records
+[stderr]
+(empty)
+[exit code] 0
+
+$ python3 docs/kbdl/evidence/kbdl-011-r8/scripts/reconcile_evidence.py
+[stdout]
+Corrected evidence attribution for 37 requirements
+[stderr]
+(empty)
+[exit code] 0
+
+$ python3 docs/kbdl/evidence/kbdl-011-r9/scripts/run_full_validation.py
+[stdout]
+Production requirements audited: 317
+Production effective-record defects: 0
+Production authority defects: 0
+Production Verified-evidence defects: 0
+Production location defects: 0
+Production documentation defects: 0
+
+Negative group-conflict fixture detected: PASS
+Negative missing-evidence fixture detected: PASS
+Negative failed-evidence fixture detected: PASS
+Negative partial-scope fixture detected: PASS
+Negative self-reference fixture detected: PASS
+Negative missing-approval fixture detected: PASS
+Negative wrong-location fixture detected: PASS
+Negative documentation fixtures detected: PASS
+
+Unexpected negative-test passes: 0
+Fixtures remaining after restoration: 0
+Unauthorized metadata changes: 0
+Completion decisions: 0
+
+Implementation conformance status: NOT VERIFIED
+Project completion status: PENDING
+[stderr]
+(empty)
+[exit code] 0
+
+$ python3 docs/kbdl/evidence/kbdl-011-r9/scripts/documentation_validator.py --root .
+[stdout]
+Markdown files: 52
+relative links: 0
+anchors: 0
+heading hierarchy: 0
+duplicate headings: 0
+empty required sections: 0
+placeholder text: 0
+conflict markers: 0
+markdown tables: 0
+requirement IDs: 0
+decision IDs: 0
+packet references: 0
+visible numbered-section labels: 0
+stale roadmap wording: 0
+premature readiness/completion claims: 0
+Documentation defects: 0
+[stderr]
+(empty)
+[exit code] 0
+
+$ git diff --check
+[stdout]
+(empty)
+[stderr]
+(empty)
+[exit code] 0

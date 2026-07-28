@@ -1,0 +1,9 @@
+Requirement ID,Normative statement link,Derived location,Ledger location,Result
+KBDL-PRN-001,#1-identity-statement,principles.md#1-identity-statement,principles.md#1-identity-statement,PASS
+KBDL-PRN-002,#4-relationship-between-luxury-and-utility,principles.md#4-relationship-between-luxury-and-utility,principles.md#4-relationship-between-luxury-and-utility,PASS
+KBDL-PRN-003,#6-core-principles,principles.md#6-core-principles,principles.md#6-core-principles,PASS
+KBDL-PRN-004,#7-visual-consistency,principles.md#7-visual-consistency,principles.md#7-visual-consistency,PASS
+KBDL-PRN-005,#51-locked-identity-rules,principles.md#5-stable-and-variable-identity-elements,principles.md#5-stable-and-variable-identity-elements,PASS
+KBDL-PRN-006,#8-design-decision-hierarchy,principles.md#8-design-decision-hierarchy,principles.md#8-design-decision-hierarchy,PASS
+KBDL-PRN-007,#94-shared-constraints-across-profiles,principles.md#9-profile-level-interpretation,principles.md#9-profile-level-interpretation,PASS
+KBDL-PRN-008,#11-non-conforming-design-directions,principles.md#11-non-conforming-design-directions,principles.md#10-conforming-design-directions; principles.md#11-non-conforming-design-directions,PASS

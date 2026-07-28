@@ -150,10 +150,10 @@ items remain `Recommended` and its machine-readable-format item remains
 `Deferred`; no earlier recommendation is promoted and no implementation-
 level customization validation exists. KBDL-010 **passed** planning-agent
 validation, which unlocked KBDL-011. KBDL-011 (Final Validation) is now
-present in [validation.md](validation.md). KBDL-011-R7 failed planning-agent
-review; KBDL-011-R8 is the current complete effective-record and Verified-evidence
-remediation. Its documentation-only candidate may be `PRODUCTION READY` only
-after the R8 source-derived audit passes. Implementation conformance remains
+present in [validation.md](validation.md). KBDL-011-R8 failed planning-agent
+review; KBDL-011-R9 is the current validator-soundness remediation. Its
+documentation-only candidate may be `PRODUCTION READY` only after every R9
+production validator and controlled negative test passes. Implementation conformance remains
 `NOT VERIFIED`, and planning-agent validation plus explicit project-owner
 completion approval remain pending.
 Progression to later roadmap steps depends on the
