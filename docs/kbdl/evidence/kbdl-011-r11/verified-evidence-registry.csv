@@ -1,0 +1,21 @@
+Requirement ID,Evidence kind,Evidence source,Required result,Verified scope,Independent basis
+KBDL-GOV-001,commit,2d356b427f60e6737dd971bcafe231b15dfdf6e0,commit exists,Documentation architecture,Historical accepted implementation commit plus current documentation validator
+KBDL-GOV-003,commit,2d356b427f60e6737dd971bcafe231b15dfdf6e0,commit exists,Governance process,Historical accepted implementation commit plus current documentation validator
+KBDL-FND-009,section,foundations/color.md#4-contrast-evidence-illustrative-not-a-theme-mapping,5.59:1,Recorded opaque contrast calculations,Source calculation table
+KBDL-THM-002,section,themes/semantic-roles.md#parity-matrix-corrected-under-kbdl-004-r1,72,Parity inventory and mappings,Source parity matrix
+KBDL-THM-007,section,themes/validation.md#3-consolidated-contrast-evidence,52,Opaque light-theme contrast scope,Shared executed contrast calculation
+KBDL-THM-008,section,themes/validation.md#3-consolidated-contrast-evidence,52,Opaque dark-theme contrast scope,Shared executed contrast calculation
+KBDL-THM-009,section,themes/validation.md#3-consolidated-contrast-evidence,52,Opaque status-pair contrast scope,Shared executed contrast calculation
+KBDL-THM-010,section,themes/adaptation.md#43-worked-example--worst-case-contrast-corrected-kbdl-004-r1,both,Opaque worked gradient example,Recorded endpoint calculation
+KBDL-A11Y-007,section,themes/validation.md#3-consolidated-contrast-evidence,52,Text contrast claim only,Explicit shared contrast claim
+KBDL-A11Y-008,section,themes/validation.md#3-consolidated-contrast-evidence,52,Non-text contrast claim only,Explicit shared contrast claim
+KBDL-A11Y-009,section,themes/validation.md#3-consolidated-contrast-evidence,52,Focus-indicator contrast claim only,Explicit shared contrast claim; keyboard runtime remains separate
+KBDL-VAL-001,artifact,evidence/kbdl-011-r8/artifacts/validation-output.txt,Errors: 0,Evidence classification method,Committed prior independent output
+KBDL-VAL-002,artifact,evidence/kbdl-011-r8/artifacts/validation-output.txt,Requirements audited: 317,Complete inventory method,Committed prior independent output
+KBDL-VAL-003,artifact,evidence/kbdl-011-r11/artifacts/val-003-audit.txt,VAL-003 result: Verified,Lifecycle and authority method,R11 dependency-ordered audit; VAL result does not use its own metadata row as proof
+KBDL-VAL-004,artifact,evidence/kbdl-011-r11/artifacts/val-004-audit.txt,VAL-004 result: Verified,Complete Verified-evidence source method,R11 dependency-ordered audit; VAL result does not use its own metadata row as proof
+KBDL-VAL-005,artifact,evidence/kbdl-011-r8/artifacts/validation-output.txt,Packet mismatches: 0,Decision packet and pending method,Committed prior independent output
+KBDL-VAL-006,artifact,evidence/kbdl-011-r11/artifacts/val-006-audit.txt,VAL-006 result: Verified,Complete 317-record traceability method,R11 dependency-ordered audit; VAL result does not use its own metadata row as proof
+KBDL-VAL-007,artifact,evidence/kbdl-011-r11/artifacts/val-007-audit.txt,VAL-007 result: Verified,Complete documentation-integrity method,R11 dependency-ordered audit; VAL result does not use its own metadata row as proof
+KBDL-VAL-009,artifact,evidence/kbdl-011-r1/validation-transcript.txt,Errors: 0,Recorded opaque theme calculation method,Dependency-free calculation transcript
+KBDL-VAL-012,artifact,evidence/kbdl-011-r9/artifacts/completion-scan.txt,Completion decisions: 0,Completion-claim scan,Distinct repository claim scan

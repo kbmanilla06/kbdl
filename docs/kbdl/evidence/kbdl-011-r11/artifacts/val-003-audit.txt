@@ -1,0 +1,5 @@
+Requirements audited: 317
+Approved requirements audited: 266
+Current-authority mappings audited: 137
+Lifecycle/authority defects: 0
+VAL-003 result: Verified

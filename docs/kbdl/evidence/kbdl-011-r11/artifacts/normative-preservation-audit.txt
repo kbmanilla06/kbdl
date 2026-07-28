@@ -1,0 +1,6 @@
+Protected normative files audited: 11
+Unauthorized normative changes: 0
+Lifecycle changes: 0
+Provenance changes: 0
+Authority-scope changes: 0
+Packet/dependency changes: 0

@@ -1,0 +1,4 @@
+Complete effective records: 317
+Effective-field mismatches: 0
+Invalid exact locations: 0
+VAL-006 result: Verified

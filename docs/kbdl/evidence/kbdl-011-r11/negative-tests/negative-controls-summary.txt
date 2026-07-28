@@ -1,0 +1,24 @@
+wrong-blueprint-section: PASS (exit 1)
+wrong-roadmap-prompt: PASS (exit 1)
+wrong-exact-location: PASS (exit 1)
+wrong-lifecycle: PASS (exit 1)
+wrong-provenance: PASS (exit 1)
+wrong-validation-classification: PASS (exit 1)
+wrong-authority-mapping: PASS (exit 1)
+authority-scope-exclusion: PASS (exit 1)
+missing-owner-confirmation: PASS (exit 1)
+backdated-authority: PASS (exit 1)
+wrong-packet-item: PASS (exit 1)
+wrong-dependency-class: PASS (exit 1)
+missing-evidence: PASS (exit 1)
+failed-evidence-result: PASS (exit 1)
+partial-evidence-scope: PASS (exit 1)
+self-referential-evidence: PASS (exit 1)
+unsupported-no-limitation: PASS (exit 1)
+duplicate-authoritative-requirement: PASS (exit 1)
+stale-readiness-statement: PASS (exit 1)
+premature-completion-statement: PASS (exit 1)
+
+Negative controls executed: 20
+Unexpected negative-control passes: 0
+Fixtures remaining: 0

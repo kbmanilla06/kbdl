@@ -16,11 +16,11 @@ and Flow (consumer-facing web applications). See the
 On 2026-07-28 (Asia/Manila), the project owner supplied all eleven current,
 non-retroactive prompt-authority confirmations; see
 [KBDL-DEC-016](decision-register.md#kbdl-dec-016--current-non-retroactive-prompt-authority-confirmations).
-The confirmations are recorded for AR2 planning-agent validation. All eleven
-historical approval commands remain unrecovered. KBDL-011 remains unresolved
-pending semantic-evidence remediation and final validation; candidate readiness
-is `NOT READY`, implementation conformance is `NOT VERIFIED`, and project
-completion remains pending.
+The confirmations passed AR2 planning-agent validation. All eleven historical
+approval commands remain unrecovered. R11 is the current semantic remediation
+pending planning-agent validation; its documentation-only candidate
+recommendation is `PRODUCTION READY`, not an approval. Implementation
+conformance remains `NOT VERIFIED`, and project completion remains pending.
 
 The current gated prompt sequence contains eleven steps, KBDL-001 through
 KBDL-011, with KBDL-011 serving as Final Validation and the completion gate.
@@ -160,14 +160,13 @@ items remain `Recommended` and its machine-readable-format item remains
 level customization validation exists. KBDL-010 **passed** planning-agent
 validation, which unlocked KBDL-011. KBDL-011 (Final Validation) is now
 present in [validation.md](validation.md). KBDL-011-R9 failed planning-agent
-review; KBDL-011-R10 is the current semantic-reconciliation remediation.
-R10 found that historical project-owner prompt approval commands and their
-exact approved scopes are not durably recoverable from the repository, so the
-documentation candidate is `NOT READY` pending a separate authority-recovery
-action. Preparation of the non-normative
-[authority-recovery packet](evidence/kbdl-011-authority-recovery/authority-recovery-packet.md)
-is authorized under KBDL-011-AR1; every project-owner confirmation remains
-pending and packet preparation grants no authority. Implementation conformance remains
+review and R10 correctly blocked on missing historical authority evidence. AR1
+and AR2 passed; the project owner's eleven current, non-retroactive
+confirmations are effective under KBDL-DEC-016 while historical approval
+commands remain unrecovered. R11 is the current semantic remediation pending
+planning-agent validation. Its documentation-only candidate recommendation is
+`PRODUCTION READY`; readiness and completion are not approved. Implementation
+conformance remains
 `NOT VERIFIED`, and planning-agent validation plus explicit project-owner
 completion approval remain pending.
 Progression to later roadmap steps depends on the
@@ -255,7 +254,7 @@ their roadmap step is reached.
 | 9 | Surface, overlay, feedback, and system-state components | Approved (architecture)¶; Recommended (component-level taxonomies) | [components-system.md](components-system.md) |
 | 10 | Project profiles (Showcase, Precision, Flow) | Approved (architecture)‖; Recommended (discretionary profile-governance policy) | [profiles.md](profiles.md) |
 | 11 | Manual customization | Approved (inherited and prompt-mandated governance); Recommended/Deferred (new policy) — passed planning-agent validation | [customization.md](customization.md) |
-| 12 | Validation | Approved methodology; candidate `NOT READY` pending durable prompt-authority recovery | [validation.md](validation.md) |
+| 12 | Validation | Approved methodology; R11 candidate recommendation `PRODUCTION READY` pending planning-agent validation (not approved) | [validation.md](validation.md) |
 | 13 | Governance | Approved | [governance.md](governance.md) |
 | 14 | Future expansion | Deferred | Location to be determined when needed |
 
