@@ -1,0 +1,6 @@
+Case: commit-only-manual-review
+Expected: commit existence is insufficient manual-review evidence
+Exit code: 1
+Detected: True
+Output:
+commit existence is insufficient manual-review evidence

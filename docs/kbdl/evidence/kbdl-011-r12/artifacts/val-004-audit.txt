@@ -1,0 +1,2 @@
+Retained clauses: 25; clauses lacking independent evidence: 11
+VAL-004 result: Not verified

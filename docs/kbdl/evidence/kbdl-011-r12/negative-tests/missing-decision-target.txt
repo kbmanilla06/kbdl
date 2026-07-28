@@ -1,0 +1,6 @@
+Case: missing-decision-target
+Expected: missing authority decision target
+Exit code: 1
+Detected: True
+Output:
+missing authority decision target

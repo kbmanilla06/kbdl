@@ -1,0 +1,16 @@
+baseline-current-shared-wrong: PASS (exit 1)
+wrong-authoritative-source: PASS (exit 1)
+contrast-for-keyboard: PASS (exit 1)
+contrast-for-brand: PASS (exit 1)
+commit-only-manual-review: PASS (exit 1)
+unexecuted-in-verified-scope: PASS (exit 1)
+missing-decision-target: PASS (exit 1)
+nonapproved-authority-target: PASS (exit 1)
+circular-authority-chain: PASS (exit 1)
+self-authority: PASS (exit 1)
+wrong-readable-group: PASS (exit 1)
+wrong-ledger: PASS (exit 1)
+
+Source-independence negative controls: 12
+Unexpected negative-control passes: 0
+Fixtures remaining: 0

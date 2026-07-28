@@ -1,0 +1,6 @@
+Case: self-authority
+Expected: self-authority claim
+Exit code: 1
+Detected: True
+Output:
+self-authority claim

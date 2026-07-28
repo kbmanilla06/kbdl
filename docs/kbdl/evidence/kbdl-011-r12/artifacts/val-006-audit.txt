@@ -1,0 +1,2 @@
+Blocks: 317; complete direct records: 0; unresolved source fields: 3307
+VAL-006 result: Not verified

@@ -1,0 +1,6 @@
+Case: baseline-current-shared-wrong
+Expected: authoritative source disagrees with both ledgers
+Exit code: 1
+Detected: True
+Output:
+authoritative source disagrees with both ledgers

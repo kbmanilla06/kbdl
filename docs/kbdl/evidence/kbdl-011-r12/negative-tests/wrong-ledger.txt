@@ -1,0 +1,6 @@
+Case: wrong-ledger
+Expected: ledger conflicts with authoritative source and readable group
+Exit code: 1
+Detected: True
+Output:
+ledger conflicts with authoritative source and readable group

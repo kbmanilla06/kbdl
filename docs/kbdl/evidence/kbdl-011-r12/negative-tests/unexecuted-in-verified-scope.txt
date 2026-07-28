@@ -1,0 +1,6 @@
+Case: unexecuted-in-verified-scope
+Expected: unexecuted clause included in Verified scope
+Exit code: 1
+Detected: True
+Output:
+unexecuted clause included in Verified scope

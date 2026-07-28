@@ -1,0 +1,15 @@
+Normative design/product files changed: 0
+Requirement-ID changes: 0
+Lifecycle changes: 0
+Provenance changes: 0
+Authority changes: 0
+Decision/confirmation changes: 0
+Packet/dependency changes: 0
+Recommendation promotions: 0
+Deferred promotions: 0
+Accepted limitations: 0
+
+Authorized validation-classification corrections:
+- KBDL-VAL-003: Verified -> Not verified
+- KBDL-VAL-004: Verified -> Not verified
+- KBDL-VAL-006: Verified -> Not verified

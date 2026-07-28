@@ -1,0 +1,38 @@
+Requirements parsed from authoritative sources: 317
+Complete effective records: 0
+Authoritative-field mismatches: 0
+Group/ledger conflicts: not completely resolvable from explicit per-ID source mappings
+Unresolved mappings: 3307
+
+Approved requirements audited: 266
+Prompt-derived authority mappings: 137
+Other Approved authority chains audited: 129
+Missing authority targets/expressions: 122
+Non-Approved authority targets: 0
+Self-authority claims: 0
+Circular authority chains: 0
+
+Wholly or partly Verified requirements audited: 17
+Retained Verified clauses audited: 25
+Not-verified clauses inventoried: 6
+Unresolved clause/scope mappings: 0
+Clauses lacking evidence: 11
+Evidence-scope mismatches: 0
+Commit-existence-only evidence claims: 0
+Self-referential evidence claims: 0
+
+VAL-003 result: Not verified
+VAL-004 result: Not verified
+VAL-006 result: Not verified
+VAL-007 result: Verified
+
+Source-independence negative controls: 12
+Unexpected negative-control passes: 0
+Fixtures remaining: 0
+Unauthorized metadata changes: 0
+Accepted limitations: 0
+Readiness approvals: 0
+Completion approvals: 0
+
+Implementation conformance: NOT VERIFIED
+Project completion: PENDING

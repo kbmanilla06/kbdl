@@ -1,0 +1,12 @@
+Documentation candidate recommendation: NOT READY
+Recommendation approval status: NOT APPROVED
+VAL-003: Not verified
+VAL-004: Not verified
+VAL-006: Not verified
+VAL-007: Verified
+Accepted limitations: 0
+Implementation conformance: NOT VERIFIED
+Project completion: PENDING PLANNING-AGENT VALIDATION AND PROJECT-OWNER APPROVAL
+
+R12 removes the R11 false-positive PRODUCTION READY recommendation. Complete
+source-derived effective-field and Approved-authority methods remain unresolved.

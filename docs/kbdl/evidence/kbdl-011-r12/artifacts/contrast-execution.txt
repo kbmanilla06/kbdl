@@ -1,0 +1,26 @@
+light primary: #23252B/#FFFFFF 15.32:1 threshold=4.5 PASS
+light secondary: #636872/#FFFFFF 5.59:1 threshold=4.5 PASS
+light large/nontext: #8A8F99/#FFFFFF 3.25:1 threshold=3 PASS
+dark primary: #F5F6F8/#121317 17.17:1 threshold=4.5 PASS
+dark secondary: #8A8F99/#121317 5.72:1 threshold=4.5 PASS
+light accent: #4A4EE0/#FFFFFF 6.07:1 threshold=4.5 PASS
+dark accent: #A9ACFF/#121317 8.87:1 threshold=4.5 PASS
+light structural: #52565F/#FFFFFF 7.36:1 threshold=3 PASS
+light decorative: #D3D6DC/#FFFFFF 1.46:1 threshold=decorative EXEMPT
+dark structural: #8A8F99/#23252B 4.72:1 threshold=3 PASS
+dark decorative: #52565F/#23252B 2.08:1 threshold=decorative EXEMPT
+light informational: #164499/#FFFFFF 9.05:1 threshold=4.5 PASS
+light positive: #146B3A/#FFFFFF 6.57:1 threshold=4.5 PASS
+light caution: #8A5A00/#FFFFFF 5.93:1 threshold=4.5 PASS
+light critical: #B3261E/#FFFFFF 6.54:1 threshold=4.5 PASS
+light info on strong: #F5F6F8/#164499 8.37:1 threshold=4.5 PASS
+dark informational: #7CC4FF/#121317 9.90:1 threshold=4.5 PASS
+dark positive: #6FD19A/#121317 9.96:1 threshold=4.5 PASS
+dark caution: #E0A840/#121317 8.70:1 threshold=4.5 PASS
+dark critical: #FF8A80/#121317 8.13:1 threshold=4.5 PASS
+dark info subtle: #7CC4FF/#23252B 8.17:1 threshold=4.5 PASS
+dark positive subtle: #6FD19A/#23252B 8.22:1 threshold=4.5 PASS
+dark caution subtle: #E0A840/#23252B 7.18:1 threshold=4.5 PASS
+dark critical subtle: #FF8A80/#23252B 6.71:1 threshold=4.5 PASS
+opaque caption: #F5F6F8/#121317 17.17:1 threshold=4.5 PASS
+Pairs: 25; applicable failures: 0

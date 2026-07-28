@@ -1,0 +1,6 @@
+Case: wrong-readable-group
+Expected: readable group conflicts with authoritative source
+Exit code: 1
+Detected: True
+Output:
+readable group conflicts with authoritative source

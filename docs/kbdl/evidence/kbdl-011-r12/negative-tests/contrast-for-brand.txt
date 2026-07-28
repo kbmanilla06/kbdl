@@ -1,0 +1,6 @@
+Case: contrast-for-brand
+Expected: evidence type contrast cannot cover brand-suitability review
+Exit code: 1
+Detected: True
+Output:
+evidence type contrast cannot cover brand-suitability review
