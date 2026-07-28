@@ -1,0 +1,16 @@
+a00925a1285405d1cf0e7e3808026f3d3524f004f454cd668f0b6d51cfa4bdf9  docs/kbdl/evidence/kbdl-011-r8/artifacts/authority-source-registry.csv
+fddd001ddd8bc23691ef223efa016c825aa8884e17ee90809c31611b6a8cf7e4  docs/kbdl/evidence/kbdl-011-r8/artifacts/defects.csv
+57e22046febf9820f5241abe6aad12a8a554c5447177ca17cb028a3568a6ad09  docs/kbdl/evidence/kbdl-011-r8/artifacts/effective-record-audit.csv
+36dcda9ee2543664fc0a1b6b39d625a755fc4dc9fa9e57c0ff45b7f094f9868a  docs/kbdl/evidence/kbdl-011-r8/artifacts/exact-location-audit.csv
+4949bc17228fbf0bd5d7902071a23fad0aff3249f0b13b2adced49f3d6724fdd  docs/kbdl/evidence/kbdl-011-r8/artifacts/limitation-audit.csv
+2e822dfc3fe5cac2aacc6eab7db0de0c0d4ac8a2ac416c31b41b504ea7004350  docs/kbdl/evidence/kbdl-011-r8/artifacts/mapping-resolution-audit.csv
+f71b6d374d457db556c261c5d49936822de62894760e58005d49fbe849a9b42f  docs/kbdl/evidence/kbdl-011-r8/artifacts/packet-dependency-audit.csv
+eacfe99e63132b82efa553ad2907447d1f4c2be2e91c8a51b3b3c875c01379ab  docs/kbdl/evidence/kbdl-011-r8/artifacts/validation-output.txt
+55b4e8f64aefd92d41a871b763bc072864a041ecfa8acf14ab16e51077b474e3  docs/kbdl/evidence/kbdl-011-r8/artifacts/verified-evidence-audit.csv
+fecb4181c82042d01cd3b1c71d40dc891cbb8e1958b07fcce4a9f05b5e91e83e  docs/kbdl/evidence/kbdl-011-r8/evidence-inventory.csv
+48d6721af2f9ec51e41abe9ce5145220417353976de86eb2a044030bfb8ee1af  docs/kbdl/evidence/kbdl-011-r8/evidence-manifest.md
+ffe7f1b7a18faa4fc734eb9f4e393a27cc87323e354cf9145935713b6ede3201  docs/kbdl/evidence/kbdl-011-r8/implementation-report.md
+eb7a621148aef7a026a38aae11652895697fde30a930cef6d536438942228e5f  docs/kbdl/evidence/kbdl-011-r8/precommit-transcript.txt
+4298f4ff162b5e9dfbee09effd5259667ec11bb15ccb35c960cb03dd1326cdf2  docs/kbdl/evidence/kbdl-011-r8/scripts/capture_precommit.py
+95f8cf3434b675dcc7affd4bb967e4531cb33f6fbbf8137633c6e202fec5d50b  docs/kbdl/evidence/kbdl-011-r8/scripts/reconcile_evidence.py
+55b228bc2d0cd7c1fd2d8ad47acb1f9324b4ab62e9a4b4e27410c0dffc25bcf0  docs/kbdl/evidence/kbdl-011-r8/scripts/validate_effective_traceability.py

@@ -23,10 +23,14 @@ row, so it remains readable without horizontal scrolling.
 ## Fields
 
 Every requirement row consists of its readable group below plus the same ID's
-row in the [per-ID metadata ledger](traceability-metadata.csv). Group fields
-and ledger fields are inherited together; an explicit group value overrides
-only an identical ledger field. This preserves grouping while making mixed
-values individually auditable. Every combined record contains:
+row in the [per-ID metadata ledger](traceability-metadata.csv). Effective
+values use one precedence order: (1) the authoritative normative requirement
+record; (2) explicit Approved decision or approved-prompt authority; (3) the
+exact per-ID ledger value; and (4) a readable-group value only when it is a
+shared default for a missing exact value or an explicit per-ID mapping that
+agrees with the ledger. Broad group summaries, including multi-section
+location summaries, are non-overriding context and never replace a more exact
+per-ID value. Every combined record contains:
 
 - **Blueprint section** — The approved KBDL blueprint concept this row traces to.
 - **Roadmap prompt** — The roadmap step (e.g. KBDL-001) that owns this row.
@@ -1402,7 +1406,7 @@ present with 30 `CUS` requirements. Its seven discretionary policy items
 remain Recommended, its format/tooling item remains Deferred, and no
 implementation-level customization behavior is verified. KBDL-010 passed
 planning-agent review and KBDL-011 is present with twelve Approved, Verified
-validation-methodology requirements. R7 returns `VAL-003`, `VAL-004`, and
+validation-methodology requirements. R8 returns `VAL-003`, `VAL-004`, and
 `VAL-006` to Verified after the independent source/readable-group/ledger,
 evidence-attribution, exact override, and authority-chain audits pass;
 `VAL-008`, `010`, and `011` remain Not verified. The documentation-only candidate is `PRODUCTION

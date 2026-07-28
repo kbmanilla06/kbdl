@@ -1,0 +1,36 @@
+Requirements audited: 317
+Effective records: 317
+Missing effective fields: 0
+
+Readable groups parsed: 60
+Non-overriding summary fields: 3625
+Unparsed fields: 0
+Unresolved per-ID maps: 0
+Whole-group mapping fallbacks: 0
+Group/ledger conflicts: 0
+
+Effective broad locations: 0
+Effective file-only locations: 0
+Invalid anchors: 0
+Effective location mismatches: 0
+
+Approved requirements audited: 266
+Approved requirements lacking independent authority: 0
+Missing authority evidence: 0
+Non-Approved authority targets: 0
+Circular authority chains: 0
+
+Verified requirements audited: 20
+Verified claims lacking evidence: 0
+Evidence-scope mismatches: 0
+Self-referential evidence claims: 0
+Limitation mismatches: 0
+
+Packet mismatches: 0
+Dependency mismatches: 0
+Unauthorized metadata changes: 0
+Completion decisions: 0
+
+Implementation conformance status: NOT VERIFIED
+Project completion status: PENDING
+Errors: 0

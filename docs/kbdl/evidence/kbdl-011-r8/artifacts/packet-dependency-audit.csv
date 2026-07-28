@@ -1,0 +1,52 @@
+Requirement ID,Expected packet,Effective packet,Expected dependency,Effective dependency,Result
+KBDL-A11Y-011,accessibility.md — 49.2 Recommended Decisions — Ready for Approval — item 2,accessibility.md — 49.2 Recommended Decisions — Ready for Approval — item 2,None,None,PASS
+KBDL-A11Y-021,accessibility.md — 49.2 Recommended Decisions — Ready for Approval — item 1,accessibility.md — 49.2 Recommended Decisions — Ready for Approval — item 1,None,None,PASS
+KBDL-A11Y-035,accessibility.md — 49.2 Recommended Decisions — Ready for Approval — item 3,accessibility.md — 49.2 Recommended Decisions — Ready for Approval — item 3,None,None,PASS
+KBDL-CMP-015,components-core.md — 35.2 Recommended Decisions — Ready for Approval — item 1,components-core.md — 35.2 Recommended Decisions — Ready for Approval — item 1,None,None,PASS
+KBDL-CMP-017,components-core.md — 35.2 Recommended Decisions — Ready for Approval — item 3,components-core.md — 35.2 Recommended Decisions — Ready for Approval — item 3,None,None,PASS
+KBDL-CMP-020,components-core.md — 35.2 Recommended Decisions — Ready for Approval — item 9,components-core.md — 35.2 Recommended Decisions — Ready for Approval — item 9,None,None,PASS
+KBDL-CMP-025,components-core.md — 35.2 Recommended Decisions — Ready for Approval — item 4,components-core.md — 35.2 Recommended Decisions — Ready for Approval — item 4,None,None,PASS
+KBDL-CMP-029,components-core.md — 35.2 Recommended Decisions — Ready for Approval — item 5,components-core.md — 35.2 Recommended Decisions — Ready for Approval — item 5,None,None,PASS
+KBDL-CMP-036,components-core.md — 35.2 Recommended Decisions — Ready for Approval — item 6,components-core.md — 35.2 Recommended Decisions — Ready for Approval — item 6,None,None,PASS
+KBDL-CMP-041,components-core.md — §35.3 Unresolved or Not Approval-Ready — contingent item KBDL-CMP-041,components-core.md — §35.3 Unresolved or Not Approval-Ready — contingent item KBDL-CMP-041,None,None,PASS
+KBDL-CMP-044,components-core.md — 35.2 Recommended Decisions — Ready for Approval — item 7,components-core.md — 35.2 Recommended Decisions — Ready for Approval — item 7,None,None,PASS
+KBDL-CMP-046,components-core.md — 35.2 Recommended Decisions — Ready for Approval — item 2,components-core.md — 35.2 Recommended Decisions — Ready for Approval — item 2,None,None,PASS
+KBDL-CMP-048,components-core.md — 35.2 Recommended Decisions — Ready for Approval — item 8,components-core.md — 35.2 Recommended Decisions — Ready for Approval — item 8,None,None,PASS
+KBDL-CMP-067,components-system.md — 33.2 Recommended Decisions — Ready for Approval — item 1,components-system.md — 33.2 Recommended Decisions — Ready for Approval — item 1,None,None,PASS
+KBDL-CMP-069,components-system.md — 33.2 Recommended Decisions — Ready for Approval — item 2,components-system.md — 33.2 Recommended Decisions — Ready for Approval — item 2,None,None,PASS
+KBDL-CMP-073,components-system.md — 33.2 Recommended Decisions — Ready for Approval — item 3,components-system.md — 33.2 Recommended Decisions — Ready for Approval — item 3,None,None,PASS
+KBDL-CMP-074,components-system.md — 33.2 Recommended Decisions — Ready for Approval — item 4,components-system.md — 33.2 Recommended Decisions — Ready for Approval — item 4,None,None,PASS
+KBDL-CMP-076,components-system.md — 33.2 Recommended Decisions — Ready for Approval — item 5,components-system.md — 33.2 Recommended Decisions — Ready for Approval — item 5,None,None,PASS
+KBDL-CMP-080,components-system.md — 33.2 Recommended Decisions — Ready for Approval — item 6,components-system.md — 33.2 Recommended Decisions — Ready for Approval — item 6,None,None,PASS
+KBDL-CMP-083,components-system.md — 33.2 Recommended Decisions — Ready for Approval — item 7,components-system.md — 33.2 Recommended Decisions — Ready for Approval — item 7,None,None,PASS
+KBDL-CMP-085,components-system.md — 33.2 Recommended Decisions — Ready for Approval — item 8,components-system.md — 33.2 Recommended Decisions — Ready for Approval — item 8,None,None,PASS
+KBDL-CMP-089,components-system.md — 33.2 Recommended Decisions — Ready for Approval — item 9,components-system.md — 33.2 Recommended Decisions — Ready for Approval — item 9,None,None,PASS
+KBDL-CMP-091,components-system.md — 33.2 Recommended Decisions — Ready for Approval — item 10,components-system.md — 33.2 Recommended Decisions — Ready for Approval — item 10,None,None,PASS
+KBDL-CMP-099,components-system.md — 33.2 Recommended Decisions — Ready for Approval — item 11,components-system.md — 33.2 Recommended Decisions — Ready for Approval — item 11,None,None,PASS
+KBDL-CMP-102,components-system.md — 33.2 Recommended Decisions — Ready for Approval — item 12,components-system.md — 33.2 Recommended Decisions — Ready for Approval — item 12,None,None,PASS
+KBDL-CMP-105,components-system.md — 33.2 Recommended Decisions — Ready for Approval — item 13,components-system.md — 33.2 Recommended Decisions — Ready for Approval — item 13,None,None,PASS
+KBDL-CMP-106,components-system.md — 33.2 Recommended Decisions — Ready for Approval — item 14,components-system.md — 33.2 Recommended Decisions — Ready for Approval — item 14,None,None,PASS
+KBDL-CMP-108,components-system.md — 33.2 Recommended Decisions — Ready for Approval — item 15,components-system.md — 33.2 Recommended Decisions — Ready for Approval — item 15,None,None,PASS
+KBDL-CMP-110,components-system.md — 33.2 Recommended Decisions — Ready for Approval — item 16,components-system.md — 33.2 Recommended Decisions — Ready for Approval — item 16,None,None,PASS
+KBDL-CMP-111,components-system.md — 33.2 Recommended Decisions — Ready for Approval — item 17,components-system.md — 33.2 Recommended Decisions — Ready for Approval — item 17,None,None,PASS
+KBDL-CUS-023,Approval-ready item 1,Approval-ready item 1,None,None,PASS
+KBDL-CUS-024,Approval-ready item 2,Approval-ready item 2,None,None,PASS
+KBDL-CUS-025,Approval-ready item 3,Approval-ready item 3,None,None,PASS
+KBDL-CUS-026,Approval-ready item 4,Approval-ready item 4,None,None,PASS
+KBDL-CUS-027,Approval-ready item 5,Approval-ready item 5,None,None,PASS
+KBDL-CUS-028,Approval-ready item 6,Approval-ready item 6,None,None,PASS
+KBDL-CUS-029,Approval-ready item 7,Approval-ready item 7,None,None,PASS
+KBDL-CUS-030,Deferred tracking,Deferred tracking,Later implementation/tooling authorization,Later implementation/tooling authorization,PASS
+KBDL-PRO-009,Approval-ready item 1,Approval-ready item 1,None,None,PASS
+KBDL-PRO-016,Contingent — [§33.3](#333-unresolved-or-not-approval-ready); not independently approval-ready,Contingent — [§33.3](#333-unresolved-or-not-approval-ready); not independently approval-ready,KBDL-CMP-067 (KBDL-008) — blocking,KBDL-CMP-067 (KBDL-008) — blocking,PASS
+KBDL-PRO-017,Approval-ready item 2,Approval-ready item 2,"None blocking; KBDL-RSP-002, KBDL-RSP-003 cited as unapproved context only for the eventual exact grid-interaction point, not required for this item's own approval","None blocking; KBDL-RSP-002, KBDL-RSP-003 cited as unapproved context only for the eventual exact grid-interaction point, not required for this item's own approval",PASS
+KBDL-PRO-018,Contingent — [§33.3](#333-unresolved-or-not-approval-ready); not independently approval-ready,Contingent — [§33.3](#333-unresolved-or-not-approval-ready); not independently approval-ready,"KBDL-CMP-015, KBDL-CMP-036 (KBDL-007) — blocking","KBDL-CMP-015, KBDL-CMP-036 (KBDL-007) — blocking",PASS
+KBDL-PRO-027,Approval-ready item 3,Approval-ready item 3,None,None,PASS
+KBDL-PRO-028,Approval-ready item 4,Approval-ready item 4,None,None,PASS
+KBDL-PRO-029,Approval-ready item 5,Approval-ready item 5,None,None,PASS
+KBDL-RSP-002,responsive.md — 35.2 Recommended Decisions — Ready for Approval — item 1,responsive.md — 35.2 Recommended Decisions — Ready for Approval — item 1,None,None,PASS
+KBDL-RSP-003,responsive.md — 35.2 Recommended Decisions — Ready for Approval — item 2,responsive.md — 35.2 Recommended Decisions — Ready for Approval — item 2,None,None,PASS
+KBDL-RSP-004,responsive.md — 35.2 Recommended Decisions — Ready for Approval — item 3,responsive.md — 35.2 Recommended Decisions — Ready for Approval — item 3,None,None,PASS
+KBDL-RSP-005,responsive.md — 35.2 Recommended Decisions — Ready for Approval — item 4,responsive.md — 35.2 Recommended Decisions — Ready for Approval — item 4,None,None,PASS
+KBDL-RSP-008,responsive.md — 35.2 Recommended Decisions — Ready for Approval — item 5,responsive.md — 35.2 Recommended Decisions — Ready for Approval — item 5,None,None,PASS
+KBDL-RSP-011,responsive.md — 35.2 Recommended Decisions — Ready for Approval — item 6,responsive.md — 35.2 Recommended Decisions — Ready for Approval — item 6,None,None,PASS

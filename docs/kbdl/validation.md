@@ -100,7 +100,7 @@ Confirmed, User-provided, composite User-provided/Confirmed, and Assumed origins
 
 ## 11. Validation-Status Audit
 
-The 20 Verified requirements consist of 11 prior evidence-backed claims and 9 VAL methodology/results claims. R7 returns `VAL-003`, `VAL-004`, and `VAL-006` to Verified only after its independent source/readable-group/ledger audit validates all 317 effective records, 266 Approved authority chains, 51 exact non-Approved packet mappings, exact anchors, evidence attribution, and every override field. `VAL-008`, `010`, and `011` remain `Not verified`. Unsupported claims retained as Verified: `0`.
+The 20 Verified requirements consist of 11 prior evidence-backed claims and 9 VAL methodology/results claims. R8 returns `VAL-003`, `VAL-004`, and `VAL-006` to Verified only after its complete precedence-aware source/readable-group/ledger audit validates all 317 effective records, 266 Approved authority chains, 51 exact non-Approved packet mappings, exact anchors, and every one of the 20 Verified claims. `VAL-008`, `010`, and `011` remain `Not verified`. Unsupported claims retained as Verified: `0`.
 
 ## 12. Approved-Authority Audit
 
@@ -127,7 +127,7 @@ Pending requirements lacking tracking: `0`. No pending item is a defect unless a
 
 ## 15. Traceability Audit
 
-R7 independently parses every readable group and resolves every grouped map against the exact [per-ID companion-ledger row](traceability-metadata.csv). Its source-derived validator reports 317 effective records, zero unresolved maps or broad locations, valid anchors, valid Approved authority chains, exact packet ownership, and zero evidence, limitation, or dependency defects. `VAL-006` is therefore Verified for this complete per-ID method.
+R8 independently parses every readable group under the documented authority/decision/exact-ledger/group precedence model. Its validator reports 317 complete effective records, zero unresolved maps or effective broad locations, valid anchors, independently supported Approved authority, exact packet ownership, and zero evidence, limitation, or dependency defects. `VAL-006` is therefore Verified for this complete per-ID method.
 
 ## 16. Cross-Reference and Documentation-Integrity Audit
 
@@ -217,7 +217,7 @@ All earlier rows remain intact and unmarked. The KBDL-011 section adds 26 unmark
 
 The independent source/history parser, complete per-ID artifacts, and captured
 command output are retained in the
-[KBDL-011-R7 evidence package](evidence/kbdl-011-r7/evidence-manifest.md).
+[KBDL-011-R8 evidence package](evidence/kbdl-011-r8/evidence-manifest.md).
 It audits 317 requirements, 266 Approved authority chains, 15 decisions, 317
 ordered traceability occurrences, source-derived theme pairs, baseline metadata,
 and documentation structure. It reports 258 incomplete historical traceability
@@ -242,11 +242,11 @@ does not independently establish which one was the final validated commit.
 | KBDL-008 | System components | `5cf90601f0ec3a3d56daf0882e86eb98fe941f48` | Passed before KBDL-009 | CMP-052–111 | 43 Approved; 17 Recommended | 44 Not verified; 16 Not applicable | Runtime evidence and packet decisions pending | Delivered |
 | KBDL-009 | Project Profiles | `907708c9a9db8004a7f03a36c54fb1a265fe7a9a` | Passed before KBDL-010 | PRO-001–029 | 22 Approved; 7 Recommended | 17 Not verified; 12 Not applicable | Project adoption evidence and packet decisions pending | Delivered |
 | KBDL-010 | Manual customization | `55b6ba6d90a5e0c6f5dd9affbcc0ce302462de95` | Passed before KBDL-011 | CUS-001–030 | 22 Approved; 7 Recommended; 1 Deferred | 22 Not verified; 8 Not applicable | Project records/evidence, packet decisions, and CUS-030 remain pending | Delivered |
-| KBDL-011 | Final Validation | `bbcc13e0ecaece6b70f0ce678a8cc66b21500d6c` (latest submitted baseline) | R6 failed planning-agent review; R7 remediation current | VAL-001–012 | 12 Approved | 9 Verified; 3 Not verified | Independent R7 review and project-owner action pending | Candidate ready; completion unapproved |
+| KBDL-011 | Final Validation | `62f64f040b98de9b2007d4ca2ba326033bb010e5` (latest submitted baseline) | R7 failed planning-agent review; R8 remediation current | VAL-001–012 | 12 Approved | 9 Verified; 3 Not verified | Independent R8 review and project-owner action pending | Candidate ready; completion unapproved |
 
 ## 33. Defect and Limitation Register
 
-R1 through R6 remain visible historical remediation evidence: R2 found 258 incomplete grouped records, R4 rebuilt the ledger, R5 exposed effective-record gaps, and R6 failed planning-agent review because its validator did not parse readable groups independently and misattributed evidence. R7 replaces those checks with a source-derived group-plus-ledger audit. Exact final validated commits for KBDL-001 through KBDL-006 remain disclosed evidence gaps. No limitation is accepted; implementation/project evidence remains absent.
+R1 through R7 remain visible historical remediation evidence. R7 independently parsed groups but compared only five fields, permitted unresolved summary fallbacks, used incomplete Verified-evidence heuristics, and left post-commit placeholders. R8 establishes the complete precedence model, all-field effective records, structured mapping results, an independent authority registry, and one complete audit row for every Verified requirement. Exact final validated commits for KBDL-001 through KBDL-006 remain disclosed evidence gaps. No limitation is accepted; implementation/project evidence remains absent.
 
 ## 34. Deferred Backlog
 
@@ -254,7 +254,7 @@ CUS-030 machine-readable customization format; automated customization/validatio
 
 ## 35. Specification Release-Readiness Assessment
 
-**Specification release candidate status: PRODUCTION READY.** This documentation-only candidate is recalculated from the complete R7 source-derived results. `VAL-008`, `010`, and `011` remain explicitly Not verified. The candidate remains subject to planning-agent validation and is not project-owner approval.
+**Specification release candidate status: PRODUCTION READY.** This documentation-only candidate is recalculated from the complete R8 effective-record and Verified-evidence results. `VAL-008`, `010`, and `011` remain explicitly Not verified. The candidate remains subject to planning-agent validation and is not project-owner approval.
 
 **Limitation acceptance:** Not required for this documentation-only candidate. This does not accept implementation or production limitations.
 
@@ -275,7 +275,7 @@ Implementation conformance status: NOT VERIFIED
 Project completion status: PENDING PLANNING-AGENT VALIDATION AND PROJECT-OWNER APPROVAL
 ```
 
-This status concerns only the documentation repository and was recalculated from the complete R7 independent results. Production verification and deployment are not applicable. `VAL-008`, `010`, and `011` remain Not verified. Recommended next action: independent planning-agent validation of KBDL-011-R7; only after it passes may the project owner consider completion.
+This status concerns only the documentation repository and was recalculated from the complete R8 independent results. Production verification and deployment are not applicable. `VAL-008`, `010`, and `011` remain Not verified. Recommended next action: independent planning-agent validation of KBDL-011-R8; only after it passes may the project owner consider completion.
 
 ## 38. Normative KBDL-VAL Requirements
 
@@ -302,7 +302,7 @@ This status concerns only the documentation repository and was recalculated from
 - **`KBDL-VAL-006` — Traceability integrity.** Every requirement **must** have one complete, per-ID auditable traceability record.
   - Lifecycle status: Approved. Provenance: Confirmed. Validation status: Verified. Authority: approved prompt. Evidence class: A.
   - Related requirements: all. Applicable modules: all. Specification location: [§15](#15-traceability-audit). Pending dependencies: None.
-  - Validation method/evidence: R7 independently validates 317 source/readable-group/ledger effective records, all override fields, anchors, authority chains, packets, dependencies, evidence, and limitations with zero defects. Known limitation: implementation conformance remains Not verified.
+  - Validation method/evidence: R8 independently validates all required fields for 317 effective records, structured mappings, anchors, authority sources, packets, dependencies, 20 Verified evidence claims, and limitations with zero defects. Known limitation: implementation conformance remains Not verified.
 - **`KBDL-VAL-007` — Documentation integrity.** Links, anchors, labels, headings, tables, IDs, roadmap wording, and completion claims **must** resolve consistently.
   - Lifecycle status: Approved. Provenance: Confirmed. Validation status: Verified. Authority: approved prompt. Evidence class: A.
   - Related requirements: GOV-001. Applicable modules: all. Specification location: [§16](#16-cross-reference-and-documentation-integrity-audit). Pending dependencies: None.
@@ -337,7 +337,7 @@ This status concerns only the documentation repository and was recalculated from
 | VAL-003 | Lifecycle/authority | B | Approved | Confirmed | Verified | Prompt/GOV | All | §9/§12 | None | Comparison PASS | GOV historical format |
 | VAL-004 | Validation evidence | B | Approved | Confirmed | Verified | Prompt/GOV | All | §11 | None | Evidence audit PASS | Runtime unverified |
 | VAL-005 | Decisions/pending | B | Approved | Confirmed | Verified | Prompt | All | §13/§14 | None | Mapping audit PASS | Pending unavailable |
-| VAL-006 | Traceability | A | Approved | Confirmed | Verified | Prompt | All | §15 | None | Complete R7 source-derived method PASS | Implementation unverified |
+| VAL-006 | Traceability | A | Approved | Confirmed | Verified | Prompt | All | §15 | None | Complete R8 effective-record method PASS | Implementation unverified |
 | VAL-007 | Documentation | A | Approved | Confirmed | Verified | Prompt | All | §16 | None | Validator PASS | No external availability |
 | VAL-008 | Static architecture | C | Approved | Confirmed | Not verified | Prompt/prior | All | §17–§28 | None | Complete method unsupported | Static/runtime gaps |
 | VAL-009 | Theme calculations | D | Approved | Confirmed | Verified | Prompt | FND/THM/A11Y | §20 | None | Contrast script PASS | Alpha/media excluded |
