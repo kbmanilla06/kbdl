@@ -1,0 +1,12 @@
+Baseline: 0bc8423e58dd8ad5767a932955da84cad69258ac
+Normative product/design rule documents changed: 0
+Requirement IDs changed: 0
+Lifecycle values changed: 0
+Provenance values changed: 0
+AR2 confirmation scope changed: 0
+Approved decision scope changed: 0
+Packet numbering or pending dependencies changed: 0
+Permitted validation-classification changes: KBDL-VAL-003 and KBDL-VAL-006 only
+KBDL-VAL-004: Not verified
+Result: PASS
+

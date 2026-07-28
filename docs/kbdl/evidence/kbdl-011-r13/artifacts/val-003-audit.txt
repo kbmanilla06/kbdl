@@ -1,0 +1,4 @@
+Approved requirements: 266
+AR2 mappings: 137
+Authority defects: 0
+VAL-003 result: Verified

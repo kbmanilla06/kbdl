@@ -1,0 +1,6 @@
+Case: circular-authority-chain
+Expected: circular authority chain
+Exit code: 1
+Detected: True
+Output:
+circular authority chain

@@ -1,0 +1,6 @@
+Case: missing-source-rule
+Expected: field has no source ownership or derivation rule
+Exit code: 1
+Detected: True
+Output:
+field has no source ownership or derivation rule

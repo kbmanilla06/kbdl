@@ -1,0 +1,6 @@
+Case: lifecycle-only-authority
+Expected: Approved lifecycle is not an authority chain
+Exit code: 1
+Detected: True
+Output:
+Approved lifecycle is not an authority chain

@@ -1,0 +1,4 @@
+Field-source rows: 5389
+Effective records: 317
+Field defects: 0
+VAL-006 result: Verified

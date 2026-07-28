@@ -1,0 +1,6 @@
+Case: ledger-vs-decision
+Expected: ledger conflicts with Approved-decision-owned field
+Exit code: 1
+Detected: True
+Output:
+ledger conflicts with Approved-decision-owned field

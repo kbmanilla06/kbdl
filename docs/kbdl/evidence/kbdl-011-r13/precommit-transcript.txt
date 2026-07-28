@@ -1,0 +1,21 @@
+KBDL-011-R13 precommit validation transcript
+
+Precondition commands:
+git fetch origin
+git remote -v
+git branch --show-current
+git status --short
+git rev-parse HEAD
+git rev-parse origin/main
+git ls-remote origin refs/heads/main
+git log --oneline --decorate -25
+
+Precondition result: main clean and synchronized at 0bc8423e58dd8ad5767a932955da84cad69258ac; exit 0.
+
+Validation commands:
+python3 docs/kbdl/evidence/kbdl-011-r13/scripts/run_source_model_controls.py
+python3 docs/kbdl/evidence/kbdl-011-r13/scripts/field_model_audit.py
+git diff --check
+
+Validation result: all commands exit 0. Complete stdout is retained in negative-tests/source-model-summary.txt and artifacts/production-summary.txt; validator stdout is retained in artifacts/val-007-audit.txt.
+

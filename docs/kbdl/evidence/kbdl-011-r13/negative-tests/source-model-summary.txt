@@ -1,0 +1,20 @@
+ledger-vs-normative: PASS (exit 1)
+ledger-vs-decision: PASS (exit 1)
+missing-administrative-field: PASS (exit 1)
+missing-source-rule: PASS (exit 1)
+wrong-blueprint: PASS (exit 1)
+wrong-roadmap: PASS (exit 1)
+wrong-anchor: PASS (exit 1)
+wrong-packet: PASS (exit 1)
+wrong-dependency: PASS (exit 1)
+lifecycle-only-authority: PASS (exit 1)
+missing-standard-basis: PASS (exit 1)
+nonapproved-authority-target: PASS (exit 1)
+circular-authority-chain: PASS (exit 1)
+self-authority: PASS (exit 1)
+ar2-scope-exclusion: PASS (exit 1)
+historical-falsely-recovered: PASS (exit 1)
+
+Source-model negative controls: 16
+Unexpected negative-control passes: 0
+Fixtures remaining: 0

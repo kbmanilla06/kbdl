@@ -1,0 +1,6 @@
+Case: ar2-scope-exclusion
+Expected: requirement is outside the confirmed AR2 prompt scope
+Exit code: 1
+Detected: True
+Output:
+requirement is outside the confirmed AR2 prompt scope

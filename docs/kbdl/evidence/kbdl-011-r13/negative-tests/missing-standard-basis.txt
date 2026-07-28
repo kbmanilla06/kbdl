@@ -1,0 +1,6 @@
+Case: missing-standard-basis
+Expected: standard-derived authority lacks normative basis
+Exit code: 1
+Detected: True
+Output:
+standard-derived authority lacks normative basis

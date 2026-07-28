@@ -1,0 +1,6 @@
+Case: wrong-blueprint
+Expected: blueprint assignment conflicts with readable grouping
+Exit code: 1
+Detected: True
+Output:
+blueprint assignment conflicts with readable grouping

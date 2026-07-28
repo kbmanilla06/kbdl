@@ -1,0 +1,6 @@
+Case: nonapproved-authority-target
+Expected: authority chain ends in non-Approved target
+Exit code: 1
+Detected: True
+Output:
+authority chain ends in non-Approved target

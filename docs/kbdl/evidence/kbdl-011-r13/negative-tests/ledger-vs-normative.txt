@@ -1,0 +1,6 @@
+Case: ledger-vs-normative
+Expected: ledger conflicts with normative-owned field
+Exit code: 1
+Detected: True
+Output:
+ledger conflicts with normative-owned field

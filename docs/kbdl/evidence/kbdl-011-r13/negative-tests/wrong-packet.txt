@@ -1,0 +1,6 @@
+Case: wrong-packet
+Expected: packet destination does not resolve
+Exit code: 1
+Detected: True
+Output:
+packet destination does not resolve

@@ -1,0 +1,6 @@
+Case: missing-administrative-field
+Expected: required administrative field is missing
+Exit code: 1
+Detected: True
+Output:
+required administrative field is missing

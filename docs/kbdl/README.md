@@ -17,9 +17,9 @@ On 2026-07-28 (Asia/Manila), the project owner supplied all eleven current,
 non-retroactive prompt-authority confirmations; see
 [KBDL-DEC-016](decision-register.md#kbdl-dec-016--current-non-retroactive-prompt-authority-confirmations).
 The confirmations passed AR2 planning-agent validation. All eleven historical
-approval commands remain unrecovered. R12 is the current semantic remediation
+approval commands remain unrecovered. R13 is the current field-source remediation
 pending planning-agent validation; its documentation-only candidate
-recommendation is `NOT READY`, not an approval. Implementation
+recommendation is `NOT READY — CLAUSE-EVIDENCE REMEDIATION REQUIRED`, not an approval. Implementation
 conformance remains `NOT VERIFIED`, and project completion remains pending.
 
 The current gated prompt sequence contains eleven steps, KBDL-001 through
@@ -163,9 +163,9 @@ present in [validation.md](validation.md). KBDL-011-R9 failed planning-agent
 review and R10 correctly blocked on missing historical authority evidence. AR1
 and AR2 passed; the project owner's eleven current, non-retroactive
 confirmations are effective under KBDL-DEC-016 while historical approval
-commands remain unrecovered. R12 is the current semantic remediation pending
+commands remain unrecovered. R13 is the current field-source remediation pending
 planning-agent validation. Its documentation-only candidate recommendation is
-`NOT READY`; readiness and completion are not approved. Implementation
+`NOT READY — CLAUSE-EVIDENCE REMEDIATION REQUIRED`; readiness and completion are not approved. Implementation
 conformance remains
 `NOT VERIFIED`, and planning-agent validation plus explicit project-owner
 completion approval remain pending.
@@ -254,7 +254,7 @@ their roadmap step is reached.
 | 9 | Surface, overlay, feedback, and system-state components | Approved (architecture)¶; Recommended (component-level taxonomies) | [components-system.md](components-system.md) |
 | 10 | Project profiles (Showcase, Precision, Flow) | Approved (architecture)‖; Recommended (discretionary profile-governance policy) | [profiles.md](profiles.md) |
 | 11 | Manual customization | Approved (inherited and prompt-mandated governance); Recommended/Deferred (new policy) — passed planning-agent validation | [customization.md](customization.md) |
-| 12 | Validation | Approved methodology; R12 candidate recommendation `NOT READY` pending planning-agent validation (not approved) | [validation.md](validation.md) |
+| 12 | Validation | Approved methodology; R13 candidate recommendation `NOT READY — CLAUSE-EVIDENCE REMEDIATION REQUIRED` pending planning-agent validation (not approved) | [validation.md](validation.md) |
 | 13 | Governance | Approved | [governance.md](governance.md) |
 | 14 | Future expansion | Deferred | Location to be determined when needed |
 
