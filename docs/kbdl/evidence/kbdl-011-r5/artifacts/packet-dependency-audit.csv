@@ -1,0 +1,318 @@
+Requirement ID,Packet destination,Pending dependencies,Packet match,Dependency match
+KBDL-A11Y-001,None — Approved,None,True,True
+KBDL-A11Y-002,None — Approved,None,True,True
+KBDL-A11Y-003,None — Approved,None,True,True
+KBDL-A11Y-004,None — Approved,None,True,True
+KBDL-A11Y-005,None — Approved,None,True,True
+KBDL-A11Y-006,None — Approved,None,True,True
+KBDL-A11Y-007,None — Approved,None,True,True
+KBDL-A11Y-008,None — Approved,None,True,True
+KBDL-A11Y-009,None — Approved,None,True,True
+KBDL-A11Y-010,None — Approved,None,True,True
+KBDL-A11Y-011,accessibility.md — 49.2 Recommended Decisions — Ready for Approval — item 2,None,True,True
+KBDL-A11Y-012,None — Approved,None,True,True
+KBDL-A11Y-013,None — Approved,None,True,True
+KBDL-A11Y-014,None — Approved,None,True,True
+KBDL-A11Y-015,None — Approved,None,True,True
+KBDL-A11Y-016,None — Approved,None,True,True
+KBDL-A11Y-017,None — Approved,None,True,True
+KBDL-A11Y-018,None — Approved,None,True,True
+KBDL-A11Y-019,None — Approved,None,True,True
+KBDL-A11Y-020,None — Approved,None,True,True
+KBDL-A11Y-021,accessibility.md — 49.2 Recommended Decisions — Ready for Approval — item 1,None,True,True
+KBDL-A11Y-022,None — Approved,None,True,True
+KBDL-A11Y-023,None — Approved,None,True,True
+KBDL-A11Y-024,None — Approved,None,True,True
+KBDL-A11Y-025,None — Approved,None,True,True
+KBDL-A11Y-026,None — Approved,None,True,True
+KBDL-A11Y-027,None — Approved,None,True,True
+KBDL-A11Y-028,None — Approved,None,True,True
+KBDL-A11Y-029,None — Approved,None,True,True
+KBDL-A11Y-030,None — Approved,None,True,True
+KBDL-A11Y-031,None — Approved,None,True,True
+KBDL-A11Y-032,None — Approved,None,True,True
+KBDL-A11Y-033,None — Approved,None,True,True
+KBDL-A11Y-034,None — Approved,None,True,True
+KBDL-A11Y-035,accessibility.md — 49.2 Recommended Decisions — Ready for Approval — item 3,None,True,True
+KBDL-A11Y-036,None — Approved,None,True,True
+KBDL-A11Y-037,None — Approved,None,True,True
+KBDL-A11Y-038,None — Approved,None,True,True
+KBDL-A11Y-039,None — Approved,None,True,True
+KBDL-A11Y-040,None — Approved,None,True,True
+KBDL-CMP-001,None — Approved,None,True,True
+KBDL-CMP-002,None — Approved,None,True,True
+KBDL-CMP-003,None — Approved,None,True,True
+KBDL-CMP-004,None — Approved,None,True,True
+KBDL-CMP-005,None — Approved,None,True,True
+KBDL-CMP-006,None — Approved,None,True,True
+KBDL-CMP-007,None — Approved,None,True,True
+KBDL-CMP-008,None — Approved,None,True,True
+KBDL-CMP-009,None — Approved,None,True,True
+KBDL-CMP-010,None — Approved,None,True,True
+KBDL-CMP-011,None — Approved,None,True,True
+KBDL-CMP-012,None — Approved,None,True,True
+KBDL-CMP-013,None — Approved,None,True,True
+KBDL-CMP-014,None — Approved,None,True,True
+KBDL-CMP-015,components-core.md — 35.2 Recommended Decisions — Ready for Approval — item 1,None,True,True
+KBDL-CMP-016,None — Approved,None,True,True
+KBDL-CMP-017,components-core.md — 35.2 Recommended Decisions — Ready for Approval — item 3,None,True,True
+KBDL-CMP-018,None — Approved,None,True,True
+KBDL-CMP-019,None — Approved,None,True,True
+KBDL-CMP-020,components-core.md — 35.2 Recommended Decisions — Ready for Approval — item 9,None,True,True
+KBDL-CMP-021,None — Approved,None,True,True
+KBDL-CMP-022,None — Approved,None,True,True
+KBDL-CMP-023,None — Approved,None,True,True
+KBDL-CMP-024,None — Approved,None,True,True
+KBDL-CMP-025,components-core.md — 35.2 Recommended Decisions — Ready for Approval — item 4,None,True,True
+KBDL-CMP-026,None — Approved,None,True,True
+KBDL-CMP-027,None — Approved,None,True,True
+KBDL-CMP-028,None — Approved,None,True,True
+KBDL-CMP-029,components-core.md — 35.2 Recommended Decisions — Ready for Approval — item 5,None,True,True
+KBDL-CMP-030,None — Approved,None,True,True
+KBDL-CMP-031,None — Approved,None,True,True
+KBDL-CMP-032,None — Approved,None,True,True
+KBDL-CMP-033,None — Approved,None,True,True
+KBDL-CMP-034,None — Approved,None,True,True
+KBDL-CMP-035,None — Approved,None,True,True
+KBDL-CMP-036,components-core.md — 35.2 Recommended Decisions — Ready for Approval — item 6,None,True,True
+KBDL-CMP-037,None — Approved,None,True,True
+KBDL-CMP-038,None — Approved,None,True,True
+KBDL-CMP-039,None — Approved,None,True,True
+KBDL-CMP-040,None — Approved,None,True,True
+KBDL-CMP-041,components-system.md — 33.2 Recommended Decisions — Ready for Approval — item 7,None,True,True
+KBDL-CMP-042,None — Approved,None,True,True
+KBDL-CMP-043,None — Approved,None,True,True
+KBDL-CMP-044,components-core.md — 35.2 Recommended Decisions — Ready for Approval — item 7,None,True,True
+KBDL-CMP-045,None — Approved,None,True,True
+KBDL-CMP-046,components-core.md — 35.2 Recommended Decisions — Ready for Approval — item 2,None,True,True
+KBDL-CMP-047,None — Approved,None,True,True
+KBDL-CMP-048,components-core.md — 35.2 Recommended Decisions — Ready for Approval — item 8,None,True,True
+KBDL-CMP-049,None — Approved,None,True,True
+KBDL-CMP-050,None — Approved,None,True,True
+KBDL-CMP-051,None — Approved,None,True,True
+KBDL-CMP-052,None — Approved,None,True,True
+KBDL-CMP-053,None — Approved,None,True,True
+KBDL-CMP-054,None — Approved,None,True,True
+KBDL-CMP-055,None — Approved,None,True,True
+KBDL-CMP-056,None — Approved,None,True,True
+KBDL-CMP-057,None — Approved,None,True,True
+KBDL-CMP-058,None — Approved,None,True,True
+KBDL-CMP-059,None — Approved,None,True,True
+KBDL-CMP-060,None — Approved,None,True,True
+KBDL-CMP-061,None — Approved,None,True,True
+KBDL-CMP-062,None — Approved,None,True,True
+KBDL-CMP-063,None — Approved,None,True,True
+KBDL-CMP-064,None — Approved,None,True,True
+KBDL-CMP-065,None — Approved,None,True,True
+KBDL-CMP-066,None — Approved,None,True,True
+KBDL-CMP-067,components-system.md — 33.2 Recommended Decisions — Ready for Approval — item 1,None,True,True
+KBDL-CMP-068,None — Approved,None,True,True
+KBDL-CMP-069,components-system.md — 33.2 Recommended Decisions — Ready for Approval — item 2,None,True,True
+KBDL-CMP-070,None — Approved,None,True,True
+KBDL-CMP-071,None — Approved,None,True,True
+KBDL-CMP-072,None — Approved,None,True,True
+KBDL-CMP-073,components-system.md — 33.2 Recommended Decisions — Ready for Approval — item 3,None,True,True
+KBDL-CMP-074,components-system.md — 33.2 Recommended Decisions — Ready for Approval — item 4,None,True,True
+KBDL-CMP-075,None — Approved,None,True,True
+KBDL-CMP-076,components-system.md — 33.2 Recommended Decisions — Ready for Approval — item 5,None,True,True
+KBDL-CMP-077,None — Approved,None,True,True
+KBDL-CMP-078,None — Approved,None,True,True
+KBDL-CMP-079,None — Approved,None,True,True
+KBDL-CMP-080,components-system.md — 33.2 Recommended Decisions — Ready for Approval — item 17; components-system.md — 33.2 Recommended Decisions — Ready for Approval — item 6; components-system.md — 33.2 Recommended Decisions — Ready for Approval — item 8,None,True,True
+KBDL-CMP-081,None — Approved,None,True,True
+KBDL-CMP-082,None — Approved,None,True,True
+KBDL-CMP-083,components-system.md — 33.2 Recommended Decisions — Ready for Approval — item 7,None,True,True
+KBDL-CMP-084,None — Approved,None,True,True
+KBDL-CMP-085,components-system.md — 33.2 Recommended Decisions — Ready for Approval — item 8,None,True,True
+KBDL-CMP-086,None — Approved,None,True,True
+KBDL-CMP-087,None — Approved,None,True,True
+KBDL-CMP-088,None — Approved,None,True,True
+KBDL-CMP-089,components-system.md — 33.2 Recommended Decisions — Ready for Approval — item 9,None,True,True
+KBDL-CMP-090,None — Approved,None,True,True
+KBDL-CMP-091,components-system.md — 33.2 Recommended Decisions — Ready for Approval — item 10,None,True,True
+KBDL-CMP-092,None — Approved,None,True,True
+KBDL-CMP-093,None — Approved,None,True,True
+KBDL-CMP-094,None — Approved,None,True,True
+KBDL-CMP-095,None — Approved,None,True,True
+KBDL-CMP-096,None — Approved,None,True,True
+KBDL-CMP-097,None — Approved,None,True,True
+KBDL-CMP-098,None — Approved,None,True,True
+KBDL-CMP-099,components-system.md — 33.2 Recommended Decisions — Ready for Approval — item 11,None,True,True
+KBDL-CMP-100,None — Approved,None,True,True
+KBDL-CMP-101,None — Approved,None,True,True
+KBDL-CMP-102,components-system.md — 33.2 Recommended Decisions — Ready for Approval — item 12,None,True,True
+KBDL-CMP-103,None — Approved,None,True,True
+KBDL-CMP-104,None — Approved,None,True,True
+KBDL-CMP-105,components-system.md — 33.2 Recommended Decisions — Ready for Approval — item 13; components-system.md — 33.2 Recommended Decisions — Ready for Approval — item 14,None,True,True
+KBDL-CMP-106,components-system.md — 33.2 Recommended Decisions — Ready for Approval — item 14,None,True,True
+KBDL-CMP-107,None — Approved,None,True,True
+KBDL-CMP-108,components-system.md — 33.2 Recommended Decisions — Ready for Approval — item 15,None,True,True
+KBDL-CMP-109,None — Approved,None,True,True
+KBDL-CMP-110,components-system.md — 33.2 Recommended Decisions — Ready for Approval — item 16,None,True,True
+KBDL-CMP-111,components-system.md — 33.2 Recommended Decisions — Ready for Approval — item 17,None,True,True
+KBDL-CUS-001,None — Approved,None,True,True
+KBDL-CUS-002,None — Approved,None,True,True
+KBDL-CUS-003,None — Approved,None,True,True
+KBDL-CUS-004,None — Approved,None,True,True
+KBDL-CUS-005,None — Approved,None,True,True
+KBDL-CUS-006,None — Approved,None,True,True
+KBDL-CUS-007,None — Approved,None,True,True
+KBDL-CUS-008,None — Approved,None,True,True
+KBDL-CUS-009,None — Approved,None,True,True
+KBDL-CUS-010,None — Approved,None,True,True
+KBDL-CUS-011,None — Approved,None,True,True
+KBDL-CUS-012,None — Approved,None,True,True
+KBDL-CUS-013,None — Approved,None,True,True
+KBDL-CUS-014,None — Approved,None,True,True
+KBDL-CUS-015,None — Approved,None,True,True
+KBDL-CUS-016,None — Approved,None,True,True
+KBDL-CUS-017,None — Approved,None,True,True
+KBDL-CUS-018,None — Approved,None,True,True
+KBDL-CUS-019,None — Approved,None,True,True
+KBDL-CUS-020,None — Approved,None,True,True
+KBDL-CUS-021,None — Approved,None,True,True
+KBDL-CUS-022,None — Approved,None,True,True
+KBDL-CUS-023,Approval-ready item 1,None,True,True
+KBDL-CUS-024,Approval-ready item 2,None,True,True
+KBDL-CUS-025,Approval-ready item 3,None,True,True
+KBDL-CUS-026,Approval-ready item 4,None,True,True
+KBDL-CUS-027,Approval-ready item 5,None,True,True
+KBDL-CUS-028,Approval-ready item 6,None,True,True
+KBDL-CUS-029,Approval-ready item 7,None,True,True
+KBDL-CUS-030,Deferred tracking,Later implementation/tooling authorization,True,True
+KBDL-FND-001,None — Approved,None,True,True
+KBDL-FND-002,None — Approved,None,True,True
+KBDL-FND-003,None — Approved,None,True,True
+KBDL-FND-004,None — Approved,None,True,True
+KBDL-FND-005,None — Approved,None,True,True
+KBDL-FND-006,None — Approved,None,True,True
+KBDL-FND-007,None — Approved,None,True,True
+KBDL-FND-008,None — Approved,None,True,True
+KBDL-FND-009,None — Approved,None,True,True
+KBDL-FND-010,None — Approved,None,True,True
+KBDL-FND-011,None — Approved,None,True,True
+KBDL-FND-012,None — Approved,None,True,True
+KBDL-GOV-001,None — Approved,None,True,True
+KBDL-GOV-002,None — Approved,None,True,True
+KBDL-GOV-003,None — Approved,None,True,True
+KBDL-MOT-001,None — Approved,None,True,True
+KBDL-MOT-002,None — Approved,None,True,True
+KBDL-MOT-003,None — Approved,None,True,True
+KBDL-MOT-004,None — Approved,None,True,True
+KBDL-MOT-005,None — Approved,None,True,True
+KBDL-MOT-006,None — Approved,None,True,True
+KBDL-MOT-007,None — Approved,None,True,True
+KBDL-MOT-008,None — Approved,None,True,True
+KBDL-MOT-009,None — Approved,None,True,True
+KBDL-MOT-010,None — Approved,None,True,True
+KBDL-MOT-011,None — Approved,None,True,True
+KBDL-MOT-012,None — Approved,None,True,True
+KBDL-MOT-013,None — Approved,None,True,True
+KBDL-MOT-014,None — Approved,None,True,True
+KBDL-MOT-015,None — Approved,None,True,True
+KBDL-MOT-016,None — Approved,None,True,True
+KBDL-MOT-017,None — Approved,None,True,True
+KBDL-MOT-018,None — Approved,None,True,True
+KBDL-MOT-019,None — Approved,None,True,True
+KBDL-MOT-020,None — Approved,None,True,True
+KBDL-MOT-021,None — Approved,None,True,True
+KBDL-MOT-022,None — Approved,None,True,True
+KBDL-MOT-023,None — Approved,None,True,True
+KBDL-MOT-024,None — Approved,None,True,True
+KBDL-MOT-025,None — Approved,None,True,True
+KBDL-MOT-026,None — Approved,None,True,True
+KBDL-MOT-027,None — Approved,None,True,True
+KBDL-MOT-028,None — Approved,None,True,True
+KBDL-MOT-029,None — Approved,None,True,True
+KBDL-MOT-030,None — Approved,None,True,True
+KBDL-MOT-031,None — Approved,None,True,True
+KBDL-MOT-032,None — Approved,None,True,True
+KBDL-MOT-033,None — Approved,None,True,True
+KBDL-MOT-034,None — Approved,None,True,True
+KBDL-PRN-001,None — Approved,None,True,True
+KBDL-PRN-002,None — Approved,None,True,True
+KBDL-PRN-003,None — Approved,None,True,True
+KBDL-PRN-004,None — Approved,None,True,True
+KBDL-PRN-005,None — Approved,None,True,True
+KBDL-PRN-006,None — Approved,None,True,True
+KBDL-PRN-007,None — Approved,None,True,True
+KBDL-PRN-008,None — Approved,None,True,True
+KBDL-PRO-001,None — Approved,None,True,True
+KBDL-PRO-002,None — Approved,None,True,True
+KBDL-PRO-003,None — Approved,None,True,True
+KBDL-PRO-004,None — Approved,None,True,True
+KBDL-PRO-005,None — Approved,None,True,True
+KBDL-PRO-006,None — Approved,None,True,True
+KBDL-PRO-007,None — Approved,None,True,True
+KBDL-PRO-008,None — Approved,None,True,True
+KBDL-PRO-009,Approval-ready item 1,None,True,True
+KBDL-PRO-010,None — Approved,None,True,True
+KBDL-PRO-011,None — Approved,None,True,True
+KBDL-PRO-012,None — Approved,None,True,True
+KBDL-PRO-013,None — Approved,None,True,True
+KBDL-PRO-014,None — Approved,"None blocking; KBDL-CMP-105, KBDL-RSP-011 cited as unapproved context only, not adopted as authority",True,True
+KBDL-PRO-015,None — Approved,"None blocking; KBDL-CMP-015, KBDL-CMP-036 cited as unapproved context only, not adopted as authority",True,True
+KBDL-PRO-016,Contingent — §33.3; not independently approval-ready,KBDL-CMP-067 (KBDL-008) — blocking,True,True
+KBDL-PRO-017,Approval-ready item 2,"None blocking; KBDL-RSP-002, KBDL-RSP-003 cited as unapproved context only for the eventual exact grid-interaction point, not required for this item's own approval",True,True
+KBDL-PRO-018,Contingent — §33.3; not independently approval-ready,"KBDL-CMP-015, KBDL-CMP-036 (KBDL-007) — blocking",True,True
+KBDL-PRO-019,None — Approved,None,True,True
+KBDL-PRO-020,None — Approved,None,True,True
+KBDL-PRO-021,None — Approved,None,True,True
+KBDL-PRO-022,None — Approved,None,True,True
+KBDL-PRO-023,None — Approved,None,True,True
+KBDL-PRO-024,None — Approved,None,True,True
+KBDL-PRO-025,None — Approved,None,True,True
+KBDL-PRO-026,None — Approved,None,True,True
+KBDL-PRO-027,Approval-ready item 3,None,True,True
+KBDL-PRO-028,Approval-ready item 4,None,True,True
+KBDL-PRO-029,Approval-ready item 5,None,True,True
+KBDL-RSP-001,None — Approved,None,True,True
+KBDL-RSP-002,responsive.md — 35.2 Recommended Decisions — Ready for Approval — item 1; responsive.md — 35.2 Recommended Decisions — Ready for Approval — item 2; responsive.md — 35.2 Recommended Decisions — Ready for Approval — item 3; responsive.md — 35.2 Recommended Decisions — Ready for Approval — item 4; responsive.md — 35.2 Recommended Decisions — Ready for Approval — item 5,None,True,True
+KBDL-RSP-003,responsive.md — 35.2 Recommended Decisions — Ready for Approval — item 2,None,True,True
+KBDL-RSP-004,responsive.md — 35.2 Recommended Decisions — Ready for Approval — item 3,None,True,True
+KBDL-RSP-005,responsive.md — 35.2 Recommended Decisions — Ready for Approval — item 4,None,True,True
+KBDL-RSP-006,None — Approved,None,True,True
+KBDL-RSP-007,None — Approved,None,True,True
+KBDL-RSP-008,responsive.md — 35.2 Recommended Decisions — Ready for Approval — item 5,None,True,True
+KBDL-RSP-009,None — Approved,None,True,True
+KBDL-RSP-010,None — Approved,None,True,True
+KBDL-RSP-011,responsive.md — 35.2 Recommended Decisions — Ready for Approval — item 6,None,True,True
+KBDL-RSP-012,None — Approved,None,True,True
+KBDL-RSP-013,None — Approved,None,True,True
+KBDL-RSP-014,None — Approved,None,True,True
+KBDL-RSP-015,None — Approved,None,True,True
+KBDL-RSP-016,None — Approved,None,True,True
+KBDL-RSP-017,None — Approved,None,True,True
+KBDL-RSP-018,None — Approved,None,True,True
+KBDL-RSP-019,None — Approved,None,True,True
+KBDL-RSP-020,None — Approved,None,True,True
+KBDL-RSP-021,None — Approved,None,True,True
+KBDL-RSP-022,None — Approved,None,True,True
+KBDL-THM-001,None — Approved,None,True,True
+KBDL-THM-002,None — Approved,None,True,True
+KBDL-THM-003,None — Approved,None,True,True
+KBDL-THM-004,None — Approved,None,True,True
+KBDL-THM-005,None — Approved,None,True,True
+KBDL-THM-006,None — Approved,None,True,True
+KBDL-THM-007,None — Approved,None,True,True
+KBDL-THM-008,None — Approved,None,True,True
+KBDL-THM-009,None — Approved,None,True,True
+KBDL-THM-010,None — Approved,None,True,True
+KBDL-THM-011,None — Approved,None,True,True
+KBDL-THM-012,None — Approved,None,True,True
+KBDL-THM-012a,None — Approved,None,True,True
+KBDL-THM-013,None — Approved,None,True,True
+KBDL-THM-014,None — Approved,None,True,True
+KBDL-THM-015,None — Approved,None,True,True
+KBDL-VAL-001,None — Approved,None,True,True
+KBDL-VAL-002,None — Approved,None,True,True
+KBDL-VAL-003,None — Approved,None,True,True
+KBDL-VAL-004,None — Approved,None,True,True
+KBDL-VAL-005,None — Approved,None,True,True
+KBDL-VAL-006,None — Approved,None,True,True
+KBDL-VAL-007,None — Approved,None,True,True
+KBDL-VAL-008,None — Approved,None,True,True
+KBDL-VAL-009,None — Approved,None,True,True
+KBDL-VAL-010,None — Approved,Future implementation,True,True
+KBDL-VAL-011,None — Approved,Adopting project,True,True
+KBDL-VAL-012,None — Approved,Planning-agent and project-owner review,True,True

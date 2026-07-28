@@ -1,0 +1,25 @@
+Requirements audited: 317
+Effective traceability records: 317
+Missing effective records: 0
+Duplicate effective records: 0
+
+Group/ledger conflicts: 0
+Validation-status mismatches: 0
+File-only specification locations: 0
+Invalid location anchors: 0
+Effective location mismatches: 0
+
+Lifecycle-only authority fallbacks: 0
+Approved requirements with unresolved authority: 0
+Authority inconsistencies: 0
+Method-as-evidence fallbacks: 0
+Unsupported generic limitations: 0
+
+Packet-destination mismatches: 0
+Dependency mismatches: 0
+Unauthorized metadata changes: 0
+Completion decisions: 0
+
+Implementation conformance status: NOT VERIFIED
+Project completion status: PENDING
+Errors: 0

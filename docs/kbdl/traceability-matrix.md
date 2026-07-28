@@ -96,7 +96,7 @@ scope.
 - **Blueprint section:** Governance and change control
 - **Roadmap prompt:** KBDL-001
 - **Requirement ID:** KBDL-GOV-003
-- **Specification location:** [governance.md](governance.md)
+- **Specification location:** [governance.md § KBDL-GOV-003](governance.md#kbdl-gov-003--documentation-governance-process)
 - **Approval status:** Approved
 - **Validation status:** Verified
 - **Validation method:** Manual review against this prompt's required governance topics (ownership, proposal, review, approval, scope-change, exception, deprecation, versioning, documentation-update, accessibility/motion/responsive review, conformance-review, conflict-resolution, restoration, evidence).
@@ -285,10 +285,10 @@ consistency scope, defined in [principles.md](principles.md).
 - **Requirement ID:** KBDL-PRN-003
 - **Specification location:** [principles.md § 6](principles.md#6-core-principles)
 - **Approval status:** Approved
-- **Validation status:** Verified
+- **Validation status:** Not verified
 - **Validation method:** Manual review confirming all nine principles include every required field (normative statement, purpose, required/prohibited behavior, profile interpretation, accessibility/responsive/motion implications, review questions) and that the nine required concepts (clarity before spectacle, precision, comprehension, hierarchy, controlled expression, consistency, adaptability, accessibility by default, performance) are all present.
-- **Validation evidence:** Manual field-completeness review recorded in the KBDL-002 commit.
-- **Known limitation:** None identified.
+- **Validation evidence:** Not verified — the requirement's later-module approval-gate method has not been executed completely.
+- **Known limitation:** Complete evidence across every later module is unavailable.
 - **Related decision:** Not applicable
 - **Notes:** Nine principles defined (blueprint required six to nine).
 
@@ -313,9 +313,9 @@ consistency scope, defined in [principles.md](principles.md).
 - **Requirement ID:** KBDL-PRN-005
 - **Specification location:** [principles.md § 5](principles.md#5-stable-and-variable-identity-elements)
 - **Approval status:** Approved
-- **Validation status:** Verified
+- **Validation status:** Not verified
 - **Validation method:** Manual review confirming all three categories (locked, controlled, open) address every element listed in this prompt's scope, and that no final ranges or values were introduced.
-- **Validation evidence:** Manual scope-compliance review recorded in the KBDL-002 commit (see the scope-search evidence in the KBDL-002 final report).
+- **Validation evidence:** Not verified — the requirement's full later-module and implementation review has not been executed.
 - **Known limitation:** Controlled-variable ranges are intentionally undefined pending later modules.
 - **Related decision:** Not applicable
 - **Notes:** Ties directly to [governance.md § Exception process](governance.md#exception-process).
@@ -355,9 +355,9 @@ consistency scope, defined in [principles.md](principles.md).
 - **Requirement ID:** KBDL-PRN-008
 - **Specification location:** [principles.md § 10](principles.md#10-conforming-design-directions), [principles.md § 11](principles.md#11-non-conforming-design-directions)
 - **Approval status:** Approved
-- **Validation status:** Verified
+- **Validation status:** Not verified
 - **Validation method:** Manual count and coverage review confirming at least six conforming examples spanning all three profiles, both themes, an expressive moment, a repeated workflow, and a mobile context; and at least eight non-conforming patterns each with reason, broken principle, risk, and correction.
-- **Validation evidence:** Manual coverage review recorded in the KBDL-002 commit — six conforming examples and sixteen non-conforming patterns were produced, exceeding the required minimums.
+- **Validation evidence:** Not verified — example-count evidence does not execute the requirement's later-module conformance-review method.
 - **Known limitation:** Examples are conceptual; no mockups or token values exist to check them against yet.
 - **Related decision:** Not applicable
 - **Notes:** Sixteen non-conforming patterns exceed the required minimum of eight.
@@ -407,7 +407,7 @@ status, and evidence, per this file's field definitions.
 - **Requirement ID:** KBDL-FND-005, KBDL-FND-006, KBDL-FND-007
 - **Specification location:** [foundations/shape-depth.md §3](foundations/shape-depth.md#3-elevation-and-depth), [foundations/iconography-media.md §1.1, §2.1](foundations/iconography-media.md#1-iconography)
 - **Approval status:** Approved
-- **Validation status:** Verified
+- **Validation status:** Not verified
 - **Validation method:** Manual review confirming each elevation level states a simplified fallback, and that icon/media required principles explicitly state the state-clarity and reduced-motion anticipation rules.
 - **Validation evidence:** Manual completeness review recorded in the KBDL-003 commit — confirmed all five elevation levels list a non-shadow-dependent fallback, and both icon and media sections state their respective anticipation requirements.
 - **Known limitation:** None identified.
@@ -435,7 +435,7 @@ status, and evidence, per this file's field definitions.
 - **Requirement ID:** KBDL-FND-009, KBDL-FND-010, KBDL-FND-011, KBDL-FND-012
 - **Specification location:** [foundations/README.md §6](foundations/README.md#6-foundation-decision-packet)
 - **Approval status:** Approved — the project owner approved all eleven recommended defaults in full, with no changes, per [KBDL-DEC-012](decision-register.md#kbdl-dec-012--foundation-decision-packet-approved)
-- **Validation status:** Verified for the color-contrast calculations in [foundations/color.md §4](foundations/color.md#4-contrast-evidence-illustrative-not-a-theme-mapping) only; Not verified for all other aspects (typeface licensing of the eventual specific family, brand suitability beyond the tested pairs, final spacing/corner/elevation numeric values)
+- **Validation status:** Mixed — Verified / Not verified: KBDL-FND-009; Not verified: KBDL-FND-010, KBDL-FND-011, KBDL-FND-012
 - **Validation method:** WCAG relative-luminance contrast calculation (completed for the color pairs listed); project-owner review (completed — see KBDL-DEC-012); typeface-licensing verification (not yet performed, applies to a future specific font-family decision).
 - **Validation evidence:** Contrast-ratio table in [foundations/color.md §4](foundations/color.md#4-contrast-evidence-illustrative-not-a-theme-mapping), computed via a local dependency-free script (see the KBDL-003 validation evidence for the script and full output). Updated under KBDL-003-R1: `neutral-50` (3.25:1) was found to fail the 4.5:1 normal-text threshold and is now restricted to large-text/non-text-UI/decorative use only; a new `neutral-60` (5.59:1) was added and verified as the safe value for normal-sized secondary/tertiary text.
 - **Known limitation:** Approval authorizes these defaults for implementation; it does not itself constitute rendering, brand-suitability, or licensing validation — those remain `Not verified` as noted above.
@@ -452,7 +452,7 @@ The rows below trace KBDL-004's adaptive-theme scope, defined in
 - **Blueprint section:** Theme architecture and semantic-role inventory
 - **Roadmap prompt:** KBDL-004
 - **Requirement ID:** KBDL-THM-001
-- **Specification location:** [themes/semantic-roles.md](themes/semantic-roles.md)
+- **Specification location:** [themes/semantic-roles.md §1](themes/semantic-roles.md#1-semantic-role-inventory)
 - **Approval status:** Approved
 - **Validation status:** Not verified
 - **Validation method:** Manual review of role usage against the inventory at each later module's approval gate.
@@ -564,9 +564,9 @@ The rows below trace KBDL-004's adaptive-theme scope, defined in
 - **Blueprint section:** Light and dark theme semantic mappings
 - **Roadmap prompt:** KBDL-004
 - **Requirement ID:** KBDL-THM-007, KBDL-THM-008
-- **Specification location:** [themes/light-theme.md](themes/light-theme.md), [themes/dark-theme.md](themes/dark-theme.md)
+- **Specification location:** [themes/light-theme.md §1–§7](themes/light-theme.md#1-canvas-and-surfaces), [themes/dark-theme.md §1–§8](themes/dark-theme.md#1-elevation-strategy)
 - **Approval status:** Approved for the **opaque semantic mappings only** — per [KBDL-DEC-013](decision-register.md#kbdl-dec-013--kbdl-004-theme-decisions-approved); Accent-surface, Scrim, and Selection-background opacity remain `Recommended` and are explicitly excluded from this approval, per [conventions.md §1.1](conventions.md#11-lifecycle--approval-status)
-- **Validation status:** Verified for every **opaque** contrast pair listed in [themes/validation.md § Consolidated Contrast Evidence](themes/validation.md#3-consolidated-contrast-evidence), each with an exact foreground, exact background, threshold, and result, no alpha compositing involved; Not verified for suitability beyond the tested pairs, and for the translucent-role opacity values (Accent-surface, Scrim, Selection-background — genuinely `Not verified`, no alpha-composite calculation performed) — these opacity values are explicitly excluded from the approval, per [themes/README.md §10.2](themes/README.md#10-theme-decision-packet-approved-under-kbdl-004-a1) items 1–2
+- **Validation status:** Mixed — Verified / Not verified
 - **Validation method:** WCAG relative-luminance contrast calculation via a local dependency-free script (completed for opaque pairs); project-owner review (performed for approval scope, per KBDL-DEC-013).
 - **Validation evidence:** [themes/validation.md §3](themes/validation.md#3-consolidated-contrast-evidence) — 52 pairs tested, all opaque, all passing their applicable threshold except 4 explicitly decorative-exempt borders/gridlines. The two Informational failures identified in the original KBDL-004 report (3.78:1, 4.21:1) are resolved by a revised hue (`#164499`) for the Text/Icon/Border/Strong-surface roles, with `neutral-10` correctly retained for On-strong-surface content (role assignment corrected under KBDL-004-R2) — see [adaptation.md §5.2](themes/adaptation.md#52-informational-correction-kbdl-004-r1). The Media caption row was corrected under KBDL-004-R2 to describe a fully opaque `neutral-100` band (17.17:1 is directly correct for this pair, not inherited or assumed).
 - **Known limitation:** Approval covers the opaque mappings only; opacity values must not be treated as `Approved` or implemented until a future decision addresses them. The dark theme was independently designed, not inverted from light — see [dark-theme.md § Design Strategy](themes/dark-theme.md#design-strategy--why-some-roles-use-a-different-step-than-light-mode) for the `neutral-60`/`neutral-50` asymmetry this produced. Translucent opacity values remain entirely out of scope for this row.
@@ -580,7 +580,7 @@ The rows below trace KBDL-004's adaptive-theme scope, defined in
 - **Requirement ID:** KBDL-THM-009, KBDL-THM-010, KBDL-THM-011
 - **Specification location:** [themes/adaptation.md §5, §4, §6](themes/adaptation.md#5-status-family-theme-behavior)
 - **Approval status:** Approved — per [KBDL-DEC-013](decision-register.md#kbdl-dec-013--kbdl-004-theme-decisions-approved); `KBDL-THM-010`'s approval is scoped to the **opaque** gradient caption-band strategy only, any translucent variant remains `Recommended`/`Not verified` (extends the still-pending [color.md §3.3–§3.5](foundations/color.md#33-supporting-status-families) recommendations)
-- **Validation status:** Verified for the status-family contrast pairs (see [themes/validation.md §3](themes/validation.md#3-consolidated-contrast-evidence)) and for the **opaque** gradient caption-band substitute (`neutral-10` on fully opaque `neutral-100`, 17.17:1, directly correct — not a translucent/composited claim); Not verified for any translucent variant of the caption band, and for the color-value-expression convention (a documentation convention, not a testable claim)
+- **Validation status:** Mixed — Verified / Not verified: KBDL-THM-009, KBDL-THM-010; Not applicable: KBDL-THM-011
 - **Validation method:** WCAG contrast calculation (completed for status pairs and the opaque gradient caption substitute); manual review (color-expression, performed for approval scope).
 - **Validation evidence:** [themes/validation.md §3](themes/validation.md#3-consolidated-contrast-evidence) for the recalculated pairs and [themes/adaptation.md §5.2](themes/adaptation.md#52-informational-correction-kbdl-004-r1) for the Informational correction record. [themes/adaptation.md §4.3](themes/adaptation.md#43-worked-example--worst-case-contrast-corrected-kbdl-004-r1) documents both gradient endpoints tested against both candidate text colors and the corrected, fully-opaque caption-band resolution (KBDL-004-R2).
 - **Known limitation:** New dark-mode status hues (`#7CC4FF`, `#6FD19A`, `#E0A840`, `#FF8A80`) were introduced here since the light-mode-only values from KBDL-003 fail contrast against a dark canvas; these dark hues, along with the light-mode Informational value revised to `#164499` under KBDL-004-R1, are now `Approved` as part of the theme layer under KBDL-004-A1 (its correct role assignment — `#164499` for Text/Icon/Border/Strong-surface, `neutral-10` for On-strong-surface content — was clarified under KBDL-004-R2). Any translucent caption-band variant remains outside this row's approved scope.
@@ -638,7 +638,7 @@ The rows below trace KBDL-004's adaptive-theme scope, defined in
 - **Requirement ID:** KBDL-MOT-007, KBDL-MOT-008, KBDL-MOT-009
 - **Specification location:** [motion/timing-easing.md §1, §2, §3](motion/timing-easing.md#1-timing-architecture)
 - **Approval status:** Approved — per [KBDL-DEC-014](decision-register.md#kbdl-dec-014--kbdl-005-motion-decisions-approved), per [conventions.md §1.1](conventions.md#11-lifecycle--approval-status)
-- **Validation status:** Not applicable — numerical and curve recommendations, not yet a testable implementation claim
+- **Validation status:** Not verified: KBDL-MOT-007; Not applicable: KBDL-MOT-008, KBDL-MOT-009
 - **Validation method:** Manual internal-consistency review (performed, see [motion/validation.md §2](motion/validation.md#2-numerical-consistency-review-performed)); project-owner review (performed, see KBDL-DEC-014); implementation-level review once an implementation exists.
 - **Validation evidence:** [motion/validation.md §2](motion/validation.md#2-numerical-consistency-review-performed) — every value has a stated purpose, exit durations are equal to or shorter than paired entrances, and no value is marked `Verified` without implementation evidence.
 - **Known limitation:** Approval is a lifecycle decision, not implementation validation; these values must not be treated as `Verified` until an implementation exists and is measured.
@@ -680,7 +680,7 @@ The rows below trace KBDL-004's adaptive-theme scope, defined in
 - **Requirement ID:** KBDL-MOT-020
 - **Specification location:** [motion/patterns.md §8](motion/patterns.md#8-theme-transition-motion)
 - **Approval status:** Approved — per [KBDL-DEC-014](decision-register.md#kbdl-dec-014--kbdl-005-motion-decisions-approved) (decision packet item 10); the underlying non-blocking, readable, focus-preserving requirements were already `Approved` under `KBDL-THM-012`/`KBDL-THM-012a` and are unaffected either way
-- **Validation status:** Not applicable — conceptual recommendation, not yet a testable implementation claim
+- **Validation status:** Not verified
 - **Validation method:** Manual review of the worked example (performed); project-owner review (performed, see KBDL-DEC-014).
 - **Validation evidence:** [motion/patterns.md §8](motion/patterns.md#8-theme-transition-motion) — conceptually verified against the already-`Verified` opaque contrast pair (17.17:1, unrelated example) and the KBDL-004 non-blocking/readability requirements; no live implementation has been rendered or measured.
 - **Known limitation:** No intermediate-frame contrast measurement has actually been performed against a live implementation.
@@ -694,7 +694,7 @@ The rows below trace KBDL-004's adaptive-theme scope, defined in
 - **Requirement ID:** KBDL-MOT-021, KBDL-MOT-022, KBDL-MOT-023, KBDL-MOT-024, KBDL-MOT-025, KBDL-MOT-026, KBDL-MOT-027
 - **Specification location:** [motion/patterns.md §9](motion/patterns.md#9-interruption-reversal-and-recovery), [motion/accessibility-performance.md §1–§4](motion/accessibility-performance.md#1-reduced-motion-and-no-motion-parity), [motion/README.md §10](motion/README.md#10-motion-decision-packet)
 - **Approval status:** Approved for all seven — each directly restates an already-approved safety/correctness priority, `KBDL-THM-012a` (reduced motion), `KBDL-DEC-010` (motion-safety baseline), Performance-Aware Enhancement (`KBDL-PRN-003`), Accessibility by Default, `KBDL-PRN-007` (profile consistency), or [conventions.md §1.1](conventions.md#11-lifecycle--approval-status) itself
-- **Validation status:** Not verified (implementation-level); Not applicable for `KBDL-MOT-027` (a governance rule, not a testable claim)
+- **Validation status:** Not verified: KBDL-MOT-021, KBDL-MOT-022, KBDL-MOT-023, KBDL-MOT-024, KBDL-MOT-025, KBDL-MOT-026; Not applicable: KBDL-MOT-027
 - **Validation method:** Manual parity/safety/performance review performed conceptually (see [motion/validation.md §3, §4](motion/validation.md#3-reduced-motion-matrix-review-performed)); implementation-level measurement not yet performed.
 - **Validation evidence:** [motion/validation.md §3](motion/validation.md#3-reduced-motion-matrix-review-performed) (reduced-motion parity, passed) and [motion/validation.md §4](motion/validation.md#4-pattern-coverage-review-performed) (pattern coverage, passed).
 - **Known limitation:** No implementation exists to measure actual frame rate, input latency, or cross-input-method behavior.
@@ -708,7 +708,7 @@ The rows below trace KBDL-004's adaptive-theme scope, defined in
 - **Requirement ID:** KBDL-MOT-028, KBDL-MOT-029, KBDL-MOT-030, KBDL-MOT-031, KBDL-MOT-032, KBDL-MOT-033, KBDL-MOT-034
 - **Specification location:** [motion/foundations.md §7](motion/foundations.md#7-entrance-and-exit-behavior), [motion/patterns.md §4, §5, §6, §10](motion/patterns.md#4-attention-motion), [motion/accessibility-performance.md §1.4](motion/accessibility-performance.md#14-per-category-parity-matrix), [motion/timing-easing.md §4](motion/timing-easing.md#4-conceptual-motion-tokens)
 - **Approval status:** All seven Approved — per [KBDL-DEC-014](decision-register.md#kbdl-dec-014--kbdl-005-motion-decisions-approved) (decision packet items 6, 7, 8, 9, 11, 12, and 13 respectively); each remains distinct from its already-`Approved` parent core (`KBDL-MOT-012`, `KBDL-MOT-016`, `KBDL-MOT-017`, `KBDL-MOT-018`, `KBDL-MOT-022`, and `KBDL-MOT-026` respectively; `KBDL-MOT-033` has no prior parent, since no earlier decision defines motion tokens)
-- **Validation status:** Not verified (`KBDL-MOT-030`, `KBDL-MOT-031`, `KBDL-MOT-034`); Not applicable (`KBDL-MOT-028`, `KBDL-MOT-029`, `KBDL-MOT-032`, `KBDL-MOT-033` — numerical/documentation/naming recommendations, not yet testable implementation claims)
+- **Validation status:** Not applicable: KBDL-MOT-028, KBDL-MOT-029, KBDL-MOT-032, KBDL-MOT-033; Not verified: KBDL-MOT-030, KBDL-MOT-031, KBDL-MOT-034
 - **Validation method:** Manual review once implemented; project-owner review via the [motion decision packet](motion/README.md#10-motion-decision-packet) (performed, see KBDL-DEC-014, items 6–9 and 11–13).
 - **Validation evidence:** Not verified — no implementation exists yet; conceptual manual review recorded in [motion/validation.md](motion/validation.md) where applicable.
 - **Known limitation:** Approval is a lifecycle decision, not implementation validation; these values must not be treated as `Verified` until an implementation exists and is measured.
@@ -738,7 +738,7 @@ The rows below trace KBDL-004's adaptive-theme scope, defined in
 - **Requirement ID:** KBDL-RSP-002, KBDL-RSP-003, KBDL-RSP-004, KBDL-RSP-005
 - **Specification location:** [responsive.md §7, §8, §9, §10](responsive.md#7-proposed-exact-breakpoint-thresholds)
 - **Approval status:** Recommended (not `Approved` — requires project-owner approval, per [conventions.md §1.1](conventions.md#11-lifecycle--approval-status); the four named breakpoint roles themselves remain `Approved` under `KBDL-DEC-012`, unaffected)
-- **Validation status:** Not applicable — numerical recommendations, not yet a testable implementation claim
+- **Validation status:** Not applicable
 - **Validation method:** Project-owner review (not yet performed); implementation-level review once an implementation exists.
 - **Validation evidence:** Not verified — no implementation exists yet.
 - **Known limitation:** These are recommendations awaiting project-owner approval; must not be treated as `Approved` or implemented until that approval is recorded.
@@ -794,7 +794,7 @@ The rows below trace KBDL-004's adaptive-theme scope, defined in
 - **Requirement ID:** KBDL-A11Y-001–010, 012–020, 022–034, 036–040 (37 requirements; excludes `KBDL-A11Y-011`, `021`, `035`, which are new KBDL enhancements listed separately below)
 - **Specification location:** [accessibility.md §6–§45](accessibility.md#3-wcag-22-level-aa-mapping)
 - **Approval status:** Approved for all 37 — each directly restates a WCAG 2.2 Level A or AA success criterion already adopted under `KBDL-DEC-010`, or an already-approved KBDL principle/foundation/theme/motion requirement, per the full mapping in [accessibility.md §3](accessibility.md#3-wcag-22-level-aa-mapping)
-- **Validation status:** Verified for `KBDL-A11Y-007`, `008`, `009` (text contrast, non-text contrast, focus visibility — verified against the already-`Verified` theme contrast evidence, [themes/validation.md §3](themes/validation.md#3-consolidated-contrast-evidence)); Not verified for the remaining 34 (implementation-dependent: keyboard, screen-reader, zoom, flash, and form-behavior testing require an implementation that does not yet exist)
+- **Validation status:** Not verified: KBDL-A11Y-001, KBDL-A11Y-002, KBDL-A11Y-003, KBDL-A11Y-004, KBDL-A11Y-005, KBDL-A11Y-006, KBDL-A11Y-010, KBDL-A11Y-012, KBDL-A11Y-013, KBDL-A11Y-014, KBDL-A11Y-015, KBDL-A11Y-016, KBDL-A11Y-017, KBDL-A11Y-018, KBDL-A11Y-020, KBDL-A11Y-022, KBDL-A11Y-023, KBDL-A11Y-024, KBDL-A11Y-025, KBDL-A11Y-026, KBDL-A11Y-027, KBDL-A11Y-028, KBDL-A11Y-029, KBDL-A11Y-030, KBDL-A11Y-031, KBDL-A11Y-032, KBDL-A11Y-033, KBDL-A11Y-034, KBDL-A11Y-037, KBDL-A11Y-040; Verified: KBDL-A11Y-007, KBDL-A11Y-008, KBDL-A11Y-009; Not applicable: KBDL-A11Y-019, KBDL-A11Y-036, KBDL-A11Y-038, KBDL-A11Y-039
 - **Validation method:** WCAG relative-luminance contrast calculation (completed for contrast/focus rows); manual + automated static accessibility review, keyboard testing, screen-reader testing, and flash analysis (all pending an implementation).
 - **Validation evidence:** [themes/validation.md §3](themes/validation.md#3-consolidated-contrast-evidence) for the three Verified rows; not verified for the rest.
 - **Known limitation:** This document does not claim full WCAG conformance, screen-reader compatibility, or real-device support — those require an implementation and recorded test evidence.
@@ -808,7 +808,7 @@ The rows below trace KBDL-004's adaptive-theme scope, defined in
 - **Requirement ID:** KBDL-A11Y-011, KBDL-A11Y-021, KBDL-A11Y-035
 - **Specification location:** [accessibility.md §16, §25, §39](accessibility.md#16-light-dark-forced-colors-and-high-contrast-behavior)
 - **Approval status:** Recommended (not `Approved` — requires project-owner approval, per [conventions.md §1.1](conventions.md#11-lifecycle--approval-status))
-- **Validation status:** Not applicable — policy/numerical recommendations, not yet testable implementation claims
+- **Validation status:** Not verified: KBDL-A11Y-011; Not applicable: KBDL-A11Y-021, KBDL-A11Y-035
 - **Validation method:** Project-owner review (not yet performed); implementation-level review once an implementation exists.
 - **Validation evidence:** Not verified — no implementation exists yet.
 - **Known limitation:** Forced-colors/high-contrast mode is currently unaddressed elsewhere in the specification and was explicitly excluded from the KBDL-004 theme approval (`KBDL-DEC-013`); these three requirements must not be treated as `Approved` until reviewed.
@@ -825,7 +825,7 @@ The rows below trace KBDL-004's adaptive-theme scope, defined in
 - **Specification location:** [components-core.md §5–§19, §25, §26](components-core.md#6-shared-component-contract)
 - **Approval status:** Approved for all fifteen — each directly restates an already-approved WCAG 2.2 Level A/AA criterion, WAI-ARIA rule, or prior approved KBDL principle/foundation/theme/motion/responsive/accessibility requirement
 - **Provenance:** Confirmed for all fifteen.
-- **Validation status:** Not verified (implementation-dependent); Not applicable for `KBDL-CMP-005` and `KBDL-CMP-050` (scope-control and composition requirements, not independently testable)
+- **Validation status:** Not verified: KBDL-CMP-001, KBDL-CMP-002, KBDL-CMP-003, KBDL-CMP-004, KBDL-CMP-006, KBDL-CMP-007, KBDL-CMP-008, KBDL-CMP-009, KBDL-CMP-010, KBDL-CMP-011, KBDL-CMP-012, KBDL-CMP-013, KBDL-CMP-051; Not applicable: KBDL-CMP-005, KBDL-CMP-050
 - **Validation method:** Manual completeness/mapping review per component once implemented; manual scope-compliance review (performed, see implementation report).
 - **Validation evidence:** Not verified — no implementation exists yet.
 - **Known limitation:** Implementation-dependent; cannot be tested until real components exist.
@@ -840,7 +840,7 @@ The rows below trace KBDL-004's adaptive-theme scope, defined in
 - **Specification location:** [components-core.md §20](components-core.md#20-action-components)
 - **Approval status:** `KBDL-CMP-014`, `016`, `018`, `019`, `021` Approved (restate native-semantics-first, WCAG, and WAI-ARIA rules); `KBDL-CMP-015` (button hierarchy taxonomy), `017` (icon-only visible-label threshold), `020` (button-group composition guidance) Recommended (new component-level taxonomy/guidance)
 - **Provenance:** Confirmed for `KBDL-CMP-014`, `016`, `018`, `019`, `021`; Assumed for `KBDL-CMP-015`, `017`, `020`.
-- **Validation status:** Not verified
+- **Validation status:** Not verified: KBDL-CMP-014, KBDL-CMP-016, KBDL-CMP-018, KBDL-CMP-019, KBDL-CMP-021; Not applicable: KBDL-CMP-015, KBDL-CMP-017, KBDL-CMP-020
 - **Validation method:** Manual + automated static accessibility review, manual keyboard/ARIA review once implemented; project-owner review of `KBDL-CMP-015`/`017`/`020` (not yet performed).
 - **Validation evidence:** Not verified — no implementation exists yet.
 - **Known limitation:** Implementation-dependent.
@@ -855,7 +855,7 @@ The rows below trace KBDL-004's adaptive-theme scope, defined in
 - **Specification location:** [components-core.md §21–§23](components-core.md#21-form-architecture)
 - **Approval status:** `KBDL-CMP-022`, `023`, `024`, `026`, `027`, `028`, `030`, `031`, `032`, `033`, `034`, `035`, `037` Approved (restate WCAG 2.2 and WAI-ARIA form/error requirements); `KBDL-CMP-025` (search-field model), `029` (combobox-justification threshold), `036` (form-action-row reflow order) Recommended (new component-level guidance)
 - **Provenance:** Confirmed for `KBDL-CMP-022`, `023`, `024`, `026`, `027`, `028`, `030`, `031`, `032`, `033`, `034`, `035`, `037`; Assumed for `KBDL-CMP-025`, `029`, `036`.
-- **Validation status:** Not verified
+- **Validation status:** Not verified: KBDL-CMP-022, KBDL-CMP-023, KBDL-CMP-024, KBDL-CMP-026, KBDL-CMP-027, KBDL-CMP-028, KBDL-CMP-030, KBDL-CMP-031, KBDL-CMP-032, KBDL-CMP-033, KBDL-CMP-034, KBDL-CMP-035, KBDL-CMP-037; Not applicable: KBDL-CMP-025, KBDL-CMP-029, KBDL-CMP-036
 - **Validation method:** Manual + automated static accessibility review once implemented; project-owner review of `KBDL-CMP-025`/`029`/`036` (not yet performed).
 - **Validation evidence:** Not verified — no implementation exists yet.
 - **Known limitation:** Implementation-dependent.
@@ -870,7 +870,7 @@ The rows below trace KBDL-004's adaptive-theme scope, defined in
 - **Specification location:** [components-core.md §24](components-core.md#24-navigation-components)
 - **Approval status:** `KBDL-CMP-038`, `039`, `040`, `042`, `043`, `045`, `047`, `049` Approved (restate WCAG 2.2, WAI-ARIA tabs pattern, and already-approved responsive/navigation rules); `KBDL-CMP-041` (navigation collapse threshold), `044` (breadcrumb truncation model), `046` (tabs activation model), `048` (pagination truncation model) Recommended (new component-level guidance, some contingent on unapproved `KBDL-RSP-002`/`008`)
 - **Provenance:** Confirmed for `KBDL-CMP-038`, `039`, `040`, `042`, `043`, `045`, `047`, `049`; Assumed for `KBDL-CMP-041`, `044`, `046`, `048`.
-- **Validation status:** Not verified
+- **Validation status:** Not verified: KBDL-CMP-038, KBDL-CMP-039, KBDL-CMP-040, KBDL-CMP-042, KBDL-CMP-043, KBDL-CMP-045, KBDL-CMP-047, KBDL-CMP-049; Not applicable: KBDL-CMP-041, KBDL-CMP-044, KBDL-CMP-046, KBDL-CMP-048
 - **Validation method:** Manual keyboard/ARIA review once implemented; project-owner review of `KBDL-CMP-041`/`044`/`046`/`048` (not yet performed).
 - **Validation evidence:** Not verified — no implementation exists yet.
 - **Known limitation:** `KBDL-CMP-041` additionally depends on the unapproved `KBDL-RSP-002`/`008` and cannot be approved independently of them.
@@ -892,7 +892,7 @@ that document; these rows summarize status for cross-module lookup.
 - **Specification location:** [components-system.md §5, §7, §8, §9](components-system.md#5-kbdl-007-ownership-boundary)
 - **Approval status:** `KBDL-CMP-052`, `053`, `054`, `055`, `062`, `065`, `068`, `070` Approved (restate KBDL-007's scope-control and accessible-naming rules, native-semantics-first rule, WCAG 1.3.1/1.4.1, and the adopted ARIA disclosure/region definitions); `KBDL-CMP-067` (card-variant taxonomy), `069` (accordion open model) Recommended (new component-level taxonomy)
 - **Provenance:** Confirmed for `KBDL-CMP-052`, `053`, `054`, `055`, `062`, `065`, `068`, `070`; Assumed for `KBDL-CMP-067`, `069`.
-- **Validation status:** Not verified
+- **Validation status:** Not applicable: KBDL-CMP-052, KBDL-CMP-067, KBDL-CMP-069; Not verified: KBDL-CMP-053, KBDL-CMP-054, KBDL-CMP-055, KBDL-CMP-062, KBDL-CMP-065, KBDL-CMP-068, KBDL-CMP-070
 - **Validation method:** Manual semantic-structure and DOM-relationship review once implemented; project-owner review of `KBDL-CMP-067`/`069` (not yet performed).
 - **Validation evidence:** Not verified — no implementation exists yet.
 - **Known limitation:** Implementation-dependent.
@@ -907,7 +907,7 @@ that document; these rows summarize status for cross-module lookup.
 - **Specification location:** [components-system.md §10–§12](components-system.md#10-overlay-architecture)
 - **Approval status:** `KBDL-CMP-056`, `057`, `058`, `059`, `060`, `075`, `077`, `078`, `079`, `081`, `082`, `084` Approved (restate WCAG 2.1.1/2.1.2/2.2.1/2.4.3/2.4.11/4.1.2, the already-Approved motion-parity rule, adopted ARIA menu/listbox/dialog/alertdialog role definitions, and the KBDL-007 scope-control rule); `KBDL-CMP-071` Approved with mixed authority (background-inertness-for-screen-readers is authorized by the adopted WAI-ARIA `aria-modal` property definition, supported by WCAG 2.4.3/2.4.11; treating this as one complete rule is additionally authorized by the approved KBDL-008 prompt's explicit "Background inertness" requirement); `KBDL-CMP-072` Approved with mixed authority (dismissible/hoverable/persistent restates WCAG 1.4.13; accessible-name independence restates WCAG 4.1.2/`KBDL-CMP-003`; non-interactive-content and focus-remains-on-trigger are authorized only by the approved KBDL-008 prompt's explicit Tooltip requirements, not by WCAG 1.4.13 or the ARIA tooltip role alone); `KBDL-CMP-073` (tooltip timing), `074` (popover taxonomy), `076` (menu interaction model), `080` (modal sizing/nesting), `083` (drawer/sheet taxonomy), `085` (overlay nesting policy) Recommended (new, discretionary component-level timing, taxonomy, or nesting policy not mandated by the approved prompt)
 - **Provenance:** Confirmed for `KBDL-CMP-056`, `057`, `058`, `059`, `060`, `071`, `072`, `075`, `077`, `078`, `079`, `081`, `082`, `084`; Assumed for `KBDL-CMP-073`, `074`, `076`, `080`, `083`, `085`.
-- **Validation status:** Not verified
+- **Validation status:** Not applicable: KBDL-CMP-056, KBDL-CMP-073, KBDL-CMP-074, KBDL-CMP-076, KBDL-CMP-080, KBDL-CMP-082, KBDL-CMP-083, KBDL-CMP-085; Not verified: KBDL-CMP-057, KBDL-CMP-058, KBDL-CMP-059, KBDL-CMP-060, KBDL-CMP-071, KBDL-CMP-072, KBDL-CMP-075, KBDL-CMP-077, KBDL-CMP-078, KBDL-CMP-079, KBDL-CMP-081, KBDL-CMP-084
 - **Validation method:** Manual focus-containment, keyboard, and ARIA-relationship review once implemented; project-owner review of the Recommended subset (not yet performed).
 - **Validation evidence:** Not verified — no implementation exists yet.
 - **Known limitation:** `KBDL-CMP-083` additionally notes that navigation-drawer use remains bound by the unapproved `KBDL-CMP-041` (KBDL-007) regardless of this item's own approval.
@@ -922,7 +922,7 @@ that document; these rows summarize status for cross-module lookup.
 - **Specification location:** [components-system.md §13–§14](components-system.md#13-feedback-architecture)
 - **Approval status:** `KBDL-CMP-061`, `086`, `087`, `092`, `093`, `094`, `095`, `098` Approved (restate the locked component-state-clarity rule, `KBDL-A11Y-031`, adopted WAI-ARIA live-region/progressbar/meter role definitions, WCAG 1.1.1/1.4.1, and the existing KBDL-007 submit-loading contract); `KBDL-CMP-088` Approved with mixed authority (urgency/no-focus-theft restates the adopted ARIA `alert` role definition; "must not be used for routine or successful updates" is authorized only by the approved KBDL-008 prompt's explicit Alert constraint, not by the ARIA role definition alone); `KBDL-CMP-090` Approved with mixed authority (no sensitive-information exposure restates the existing KBDL security principle, `components-core.md §37`; the persistent-path and no-default-focus-move requirements are authorized by the approved KBDL-008 prompt's explicit Toast/Snackbar constraints, with WCAG 2.2.1 as supporting rationale only); `KBDL-CMP-096` Approved with mixed authority (decorative/hidden treatment restates the adopted ARIA `aria-hidden` semantics and `KBDL-A11Y-031`; "must not expose meaningless placeholder shapes as content" is authorized only by the approved KBDL-008 prompt's explicit Skeleton requirements); `KBDL-CMP-089` (banner taxonomy), `091` (toast lifecycle model) Recommended (new, discretionary component-level taxonomy/timing not mandated by the approved prompt)
 - **Provenance:** Confirmed for `KBDL-CMP-061`, `086`, `087`, `088`, `090`, `092`, `093`, `094`, `095`, `096`, `098`; Assumed for `KBDL-CMP-089`, `091`.
-- **Validation status:** Not verified
+- **Validation status:** Not verified: KBDL-CMP-061, KBDL-CMP-086, KBDL-CMP-087, KBDL-CMP-088, KBDL-CMP-090, KBDL-CMP-092, KBDL-CMP-093, KBDL-CMP-094, KBDL-CMP-095, KBDL-CMP-096, KBDL-CMP-098; Not applicable: KBDL-CMP-089, KBDL-CMP-091
 - **Validation method:** Manual live-region, role, and content-classification review once implemented; project-owner review of `KBDL-CMP-089`/`091` (not yet performed).
 - **Validation evidence:** Not verified — no implementation exists yet.
 - **Known limitation:** Implementation-dependent.
@@ -937,7 +937,7 @@ that document; these rows summarize status for cross-module lookup.
 - **Specification location:** [components-system.md §15–§19, §23, §24](components-system.md#15-system-state-architecture)
 - **Approval status:** `KBDL-CMP-063`, `064`, `066`, `097`, `103`, `104`, `107`, `109` Approved (restate `KBDL-A11Y-031`, the locked component-state-clarity rule, WCAG 2.2.2/1.4.1/1.3.1/2.1.1, the existing KBDL correctness/safety and security principles, the existing Data-display theme roles, and the already-Approved `KBDL-CMP-051` profile-consistency rule); `KBDL-CMP-100` Approved with mixed authority (preserving entered query/filter criteria is authorized by the approved KBDL-008 prompt's explicit No-Results State requirement, with WCAG 3.3.7 cited only as supporting analogy, not a direct restatement); `KBDL-CMP-101` Approved with mixed authority (error identification restates WCAG 3.3.1; the recoverable/blocking classification and retry/alternative-action requirement are authorized by the approved KBDL-008 prompt's explicit Error State requirements and the already-Approved Technical Utility recovery-support principle; the no-diagnostic-exposure clause restates `KBDL-CMP-064`); `KBDL-CMP-099` (empty-state taxonomy), `102` (error/system-state severity taxonomy), `105` (grid-versus-table threshold), `106` (treegrid justification threshold), `108` (carousel auto-rotation policy), `110` (data-visualization interaction model), `111` (responsive transformation policy) Recommended (new, discretionary component-level taxonomy, threshold, or policy not mandated by the approved prompt)
 - **Provenance:** Confirmed for `KBDL-CMP-063`, `064`, `066`, `097`, `100`, `101`, `103`, `104`, `107`, `109`; Assumed for `KBDL-CMP-099`, `102`, `105`, `106`, `108`, `110`, `111`.
-- **Validation status:** Not verified
+- **Validation status:** Not verified: KBDL-CMP-063, KBDL-CMP-064, KBDL-CMP-066, KBDL-CMP-097, KBDL-CMP-100, KBDL-CMP-101, KBDL-CMP-103, KBDL-CMP-104, KBDL-CMP-107, KBDL-CMP-109; Not applicable: KBDL-CMP-099, KBDL-CMP-102, KBDL-CMP-105, KBDL-CMP-106, KBDL-CMP-108, KBDL-CMP-110, KBDL-CMP-111
 - **Validation method:** Manual review once implemented; project-owner review of the Recommended subset (not yet performed).
 - **Validation evidence:** Not verified — no implementation exists yet.
 - **Known limitation:** `KBDL-CMP-105` additionally cites the unapproved `KBDL-RSP-011` as related context; `KBDL-CMP-111` additionally depends on the eventual `KBDL-RSP-002` value for its exact trigger point.
@@ -959,7 +959,7 @@ these rows summarize status for cross-module lookup.
 - **Specification location (per-ID map):** `KBDL-PRO-001` → [profiles.md §5](profiles.md#5-profile-architecture); `002` → [§4](profiles.md#4-project-profile-terminology) (terminology distinction, not §5 — verified directly against the requirement's own record); `003` → [§7](profiles.md#7-locked-controlled-and-open-profile-decisions); `004` → [§7](profiles.md#7-locked-controlled-and-open-profile-decisions); `005` → [§7](profiles.md#7-locked-controlled-and-open-profile-decisions); `006` → [§7](profiles.md#7-locked-controlled-and-open-profile-decisions); `007` → [§8](profiles.md#8-profile-selection-and-declaration); `008` → [§8](profiles.md#8-profile-selection-and-declaration); `009` → [§8](profiles.md#8-profile-selection-and-declaration).
 - **Approval status:** `KBDL-PRO-001`–`008` Approved (restate the already-Approved `KBDL-PRN-007`, `KBDL-FND-008`, `KBDL-THM-006`, `KBDL-MOT-026`, `KBDL-A11Y-040`, `KBDL-CMP-051`, `KBDL-CMP-066`, and explicit mandatory clauses of the approved KBDL-009 prompt); `KBDL-PRO-009` (primary/secondary/hybrid policy) Recommended (new governance policy)
 - **Provenance:** Confirmed for `KBDL-PRO-001`–`008`; Assumed for `KBDL-PRO-009`.
-- **Validation status:** Not verified
+- **Validation status:** Not verified: KBDL-PRO-001, KBDL-PRO-002, KBDL-PRO-003, KBDL-PRO-004, KBDL-PRO-005; Not applicable: KBDL-PRO-006, KBDL-PRO-007, KBDL-PRO-008, KBDL-PRO-009
 - **Authority:** `KBDL-PRO-001`–`008`: prior-Approved KBDL requirements and/or explicit mandatory clauses of the approved KBDL-009 prompt (see each ID's own record for the exact split). `KBDL-PRO-009`: not applicable — pending explicit project-owner approval; assignment of a PRO ID does not grant implementation authority.
 - **Validation method:** Manual cross-module architecture review once implemented; project-owner review of `KBDL-PRO-009` (not yet performed).
 - **Validation evidence:** Not verified — no implementation exists yet.
@@ -980,7 +980,7 @@ these rows summarize status for cross-module lookup.
 - **Specification location (per-ID map):** `KBDL-PRO-010` → [profiles.md §10.1](profiles.md#101-purpose); `011` → [§11.1](profiles.md#111-purpose); `012` → [§12.1](profiles.md#121-purpose); `013` → [§10.2](profiles.md#102-component-interpretation); `014` → [§11.2](profiles.md#112-component-interpretation); `015` → [§12.2](profiles.md#122-component-interpretation); `016` → [§10.2](profiles.md#102-component-interpretation); `017` → [§11.2](profiles.md#112-component-interpretation); `018` → [§12.2](profiles.md#122-component-interpretation).
 - **Approval status:** `KBDL-PRO-010`–`015` Approved (consolidate the already-Approved per-profile interpretation in principles.md, foundations/README.md, themes/README.md, motion/patterns.md, responsive.md, and the already-Approved `KBDL-CMP-051`/`066`/`010`/`055`/`070`/`072`/`090`/`107` component boundaries); `KBDL-PRO-016` (Showcase composition defaults), `017` (Precision density defaults), `018` (Flow action defaults) Recommended (new discretionary profile-specific defaults)
 - **Provenance:** Confirmed for `KBDL-PRO-010`–`015`; Assumed for `KBDL-PRO-016`, `017`, `018`.
-- **Validation status:** Not verified
+- **Validation status:** Not verified: KBDL-PRO-010, KBDL-PRO-011, KBDL-PRO-012, KBDL-PRO-013, KBDL-PRO-014, KBDL-PRO-015; Not applicable: KBDL-PRO-016, KBDL-PRO-017, KBDL-PRO-018
 - **Authority:** `KBDL-PRO-010`–`015`: prior-Approved KBDL requirements (see each ID's own record for the exact sources). `KBDL-PRO-016`, `017`, `018`: not applicable — pending explicit project-owner approval; assignment of a PRO ID does not grant implementation authority.
 - **Validation method:** Manual cross-module consistency review once implemented; project-owner review of `KBDL-PRO-016`/`017`/`018` (not yet performed).
 - **Validation evidence:** Not verified — no implementation exists yet.
@@ -1001,7 +1001,7 @@ these rows summarize status for cross-module lookup.
 - **Specification location (per-ID map):** `KBDL-PRO-019` → [profiles.md §14](profiles.md#14-principles-mapping); `020` → [§20](profiles.md#20-core-component-mapping); `021` → [§21](profiles.md#21-system-component-mapping); `022` → [§22](profiles.md#22-content-and-communication-considerations); `023` → [§23](profiles.md#23-security-privacy-and-correctness); `024`, `025` → [§24](profiles.md#24-profile-conflicts-and-exception-handling); `026`, `027`, `029` → [§25](profiles.md#25-profile-adoption-and-change-management); `028` → [§8](profiles.md#8-profile-selection-and-declaration) (grouped thematically with adoption/selection governance here, but normatively located at its own authoritative record in §8, not §25).
 - **Approval status:** `KBDL-PRO-019`–`026` Approved (restate the already-Approved `KBDL-PRN-003`, `KBDL-CMP-051`, `066`, `101`, `103`, `KBDL-CMP-063`/`064`/`098`/`104`, `principles.md §8`, and `governance.md`'s exception process, plus explicit mandatory clauses of the approved KBDL-009 prompt); `KBDL-PRO-027` (change/migration governance), `028` (selection rubric), `029` (review cadence) Recommended (new discretionary governance policy)
 - **Provenance:** Confirmed for `KBDL-PRO-019`–`026`; Assumed for `KBDL-PRO-027`, `028`, `029`.
-- **Validation status:** Not verified
+- **Validation status:** Not verified: KBDL-PRO-019, KBDL-PRO-020, KBDL-PRO-021, KBDL-PRO-022, KBDL-PRO-023, KBDL-PRO-024; Not applicable: KBDL-PRO-025, KBDL-PRO-026, KBDL-PRO-027, KBDL-PRO-028, KBDL-PRO-029
 - **Authority:** `KBDL-PRO-019`–`026`: prior-Approved KBDL requirements and/or explicit mandatory clauses of the approved KBDL-009 prompt (see each ID's own record for the exact split). `KBDL-PRO-027`, `028`, `029`: not applicable — pending explicit project-owner approval; assignment of a PRO ID does not grant implementation authority.
 - **Validation method:** Manual review once implemented; project-owner review of `KBDL-PRO-027`/`028`/`029` (not yet performed).
 - **Validation evidence:** Not verified — no implementation exists yet.
@@ -1027,7 +1027,7 @@ The entries below trace every KBDL-010 requirement to
 - **Specification location (per-ID):** `001` → [§1](customization.md#1-purpose-and-scope); `002` → [§5](customization.md#5-customization-authority-model); `003` → [§6](customization.md#6-locked-controlled-open-proposed-and-exception-classifications); `004` → [§12](customization.md#12-approval-and-escalation-paths); `005` → [§24](customization.md#24-content-and-open-brand-expression); `006` → [§26](customization.md#26-reusable-versus-project-local-customization); `007` → [§27](customization.md#27-conflict-handling-and-exceptions); `008` → [§7](customization.md#7-manual-customization-workflow); `009` → [§8](customization.md#8-customization-request-intake); `010` → [§11](customization.md#11-customization-record); `011` → [§10](customization.md#10-impact-assessment) and [§14](customization.md#14-validation-and-evidence-planning); `012` → [§15](customization.md#15-review-expiry-change-and-rollback).
 - **Lifecycle status:** All Approved.
 - **Provenance:** All Confirmed.
-- **Validation status:** All Not verified.
+- **Validation status:** Not verified
 - **Authority:** Per-ID prior Approved governance/principle/profile sources and/or explicit mandatory KBDL-010 prompt clauses; exact source appears in each normative record.
 - **Customization class:** `001`–`003`, `008`–`011`: A–F; `004`: A; `005`: B; `006`: C/D; `007`: E/F; `012`: A–E.
 - **Validation method / evidence:** Per-ID record, authority, classification, workflow, field, impact, proposal, exception, history, or rollback audit; evidence Not verified because no project customization exists.
@@ -1048,7 +1048,7 @@ The entries below trace every KBDL-010 requirement to
 - **Specification location (per-ID):** `013` → [§16](customization.md#16-foundations-customization); `014` → [§17](customization.md#17-theme-customization); `015` → [§18](customization.md#18-motion-customization); `016` → [§19](customization.md#19-responsive-customization); `017` → [§20](customization.md#20-accessibility-customization-boundary); `018` → [§21](customization.md#21-core-component-customization); `019` → [§22](customization.md#22-system-component-customization); `020` → [§23](customization.md#23-project-profile-customization); `021` → [§25](customization.md#25-security-privacy-correctness-and-data-integrity); `022` → [§13](customization.md#13-implementation-handoff-boundary).
 - **Lifecycle status:** All Approved.
 - **Provenance:** All Confirmed.
-- **Validation status:** All Not verified.
+- **Validation status:** Not verified
 - **Authority:** Approved owning-module requirements plus explicit mandatory KBDL-010 preservation clauses; exact source appears per normative record.
 - **Customization class:** All A–F.
 - **Validation method / evidence:** Owning-module value, parity, safety, outcome, WCAG, component-contract, invariant, security, or handoff audit; evidence Not verified.
@@ -1069,7 +1069,7 @@ The entries below trace every KBDL-010 requirement to
 - **Specification location (per-ID):** `023` → [§11](customization.md#11-customization-record); `024` → [§12](customization.md#12-approval-and-escalation-paths); `025` → [§14](customization.md#14-validation-and-evidence-planning); `026`, `027` → [§15](customization.md#15-review-expiry-change-and-rollback); `028` → [§26](customization.md#26-reusable-versus-project-local-customization); `029` → [§15](customization.md#15-review-expiry-change-and-rollback) and [§24](customization.md#24-content-and-open-brand-expression).
 - **Lifecycle status:** All Recommended.
 - **Provenance:** All Assumed.
-- **Validation status:** All Not applicable.
+- **Validation status:** Not applicable
 - **Authority:** Not applicable — pending explicit project-owner approval; assignment of a CUS ID does not grant implementation authority.
 - **Customization class:** `023`, `026`, `027`, `029`: A–E; `024`, `025`: A–F; `028`: C/D.
 - **Validation method / evidence:** Project-owner review; not yet performed.
@@ -1090,7 +1090,7 @@ The entries below trace every KBDL-010 requirement to
 - **Specification location:** [customization.md §41](customization.md#41-deferred-and-unresolved-items)
 - **Lifecycle status:** Deferred.
 - **Provenance:** Assumed.
-- **Validation status:** Not applicable.
+- **Validation status:** Not applicable
 - **Authority:** Not applicable — deliberately deferred; assignment of a CUS ID does not grant implementation authority.
 - **Customization class:** A–E.
 - **Validation method / evidence:** Not applicable until resumed; no evidence.
@@ -1402,8 +1402,8 @@ present with 30 `CUS` requirements. Its seven discretionary policy items
 remain Recommended, its format/tooling item remains Deferred, and no
 implementation-level customization behavior is verified. KBDL-010 passed
 planning-agent review and KBDL-011 is present with twelve Approved, Verified
-validation-methodology requirements. R4 returns `VAL-006` to Verified after
-the direct-authority per-ID ledger and independent metadata validator pass;
+validation-methodology requirements. R5 returns `VAL-006` to Verified after
+the effective readable-group-plus-ledger audit and independent validator pass;
 `VAL-008`, `010`, and `011` remain Not verified. The documentation-only candidate is `PRODUCTION
 READY` subject to independent planning-agent review.
 Implementation conformance is
