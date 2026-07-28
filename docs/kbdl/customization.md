@@ -366,7 +366,7 @@ Each record below has one authoritative normative location identified by its Spe
   - Specification location: [§12](#12-approval-and-escalation-paths). Decision-packet destination: Approval-ready item 2. Pending dependencies: None.
   - Validation method: Project-owner review. Known limitation: Current governance does not define exact local roles.
 
-- **`KBDL-CUS-025` — Risk-tier evidence policy.** Adopt customization risk tiers, minor/material thresholds, and evidence expectations by tier.
+- **`KBDL-CUS-025` — Risk-tier evidence policy.** Adopt customization risk tiers, minor/material thresholds, evidence expectations by tier, and any independent-review trigger based on material classification.
   - Lifecycle status: Recommended. Provenance: Assumed. Validation status: Not applicable.
   - Authority: Not applicable — pending explicit project-owner approval; assignment of a CUS ID does not grant implementation authority.
   - Related requirements: `KBDL-CUS-011`. Applicable Profiles: all. Customization class: A–F.
@@ -532,16 +532,16 @@ All seven items are `Recommended`, `Assumed`, `Not applicable` for validation, i
 
 ### Item 2 — Local roles and independent review
 
-- **Decision / recommendation:** Whether to define owner, approver, and independent reviewer responsibilities; recommend separation for material, accessibility-, or security-impacting work.
+- **Decision / recommendation:** Whether to define owner, approver, and independent reviewer responsibilities; recommend separation of owner/approver responsibilities and an independent reviewer for accessibility- or security-impacting customization. Any additional independent-review trigger based on material-risk classification belongs exclusively to item 3.
 - **Rationale / alternatives / trade-offs:** Reduces self-approval; alternatives are one local owner or case-by-case governance; adds review cost.
 - **Accessibility / responsive / theme-foundation / motion / component / Profile impacts:** Specialist review follows affected areas; no architecture changes.
-- **Security, privacy, correctness / performance:** Independent review for material risk; organizational overhead.
+- **Security, privacy, correctness / performance:** Independent review applies to security-impacting customization without requiring a risk-tier or materiality threshold; organizational overhead.
 - **Dependencies / affected requirements:** None; `KBDL-CUS-024`.
 - **Approval scope / exclusions:** Role responsibilities only; excludes naming specific people or granting KBDL lifecycle authority locally.
 
 ### Item 3 — Risk tiers and evidence
 
-- **Decision / recommendation:** Whether to adopt risk tiers and minor/material thresholds; recommend impact-based tiers with evidence proportional to affected accessibility, security, semantics, and reversibility.
+- **Decision / recommendation:** Whether to adopt risk tiers and minor/material thresholds; recommend impact-based tiers with evidence proportional to affected accessibility, security, semantics, and reversibility. Item 3 exclusively owns any independent-review trigger based on material classification.
 - **Rationale / alternatives / trade-offs:** Consistent scrutiny; alternatives are uniform evidence or case-by-case judgment; classification overhead.
 - **Accessibility / responsive / theme-foundation / motion / component / Profile impacts:** Higher-risk impacts require relevant evidence without changing requirements.
 - **Security, privacy, correctness / performance:** Security/correctness impact raises scrutiny; evidence effort may increase.
@@ -589,6 +589,22 @@ All seven items are `Recommended`, `Assumed`, `Not applicable` for validation, i
 ### Independently approval-ready
 
 Items 1–7 are independently approval-ready because none requires an earlier pending requirement, later validation policy, or implementation assumption.
+
+| Item | Affected CUS requirement | Earlier-module dependency | Other packet-item dependency | Later-validation dependency | Implementation assumption | Independence verdict | Evidence |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 1 | `KBDL-CUS-023` | None | None | None | None | Independent | Identifier policy excludes schemas, generators, and implementation registries |
+| 2 | `KBDL-CUS-024` | None | None | None | None | Independent | Accessibility/security triggers are direct impacts; material-risk triggers are expressly excluded and owned by item 3 |
+| 3 | `KBDL-CUS-025` | None | None | None — final-validation policy expressly excluded | None | Independent | Owns risk tiers, minor/material thresholds, proportional evidence, and material-classification reviewer triggers |
+| 4 | `KBDL-CUS-026` | None | None | None | None | Independent | Event-triggered record review does not require an exact earlier-module cadence |
+| 5 | `KBDL-CUS-027` | None | None | None | None | Independent | Record precedence is governance-only and excludes implementation cascades |
+| 6 | `KBDL-CUS-028` | None | None | None | None | Independent | Reuse threshold governs escalation only and approves no extension |
+| 7 | `KBDL-CUS-029` | None | None | None | None | Independent | Archive/licensing/rollback-evidence policy excludes retention duration and implementation architecture |
+
+```text
+KBDL-010 approval-ready items: 7
+Hidden cross-item dependencies: 0
+Contingent KBDL-010 packet items: 0
+```
 
 ### Contingent or not approval-ready
 

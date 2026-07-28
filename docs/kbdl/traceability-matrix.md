@@ -1055,7 +1055,7 @@ The entries below trace every KBDL-010 requirement to
 
 ### Discretionary KBDL-010 policy (KBDL-CUS-023 through KBDL-CUS-029)
 
-- **Blueprint section:** Identifier; local roles; risk/evidence; review/expiry; precedence; reuse; archive/licensing/rollback evidence
+- **Blueprint section:** Identifier; local roles; risk/evidence and material-classification review triggers; review/expiry; precedence; reuse; archive/licensing/rollback evidence
 - **Roadmap prompt:** KBDL-010
 - **Requirement ID:** `KBDL-CUS-023`, `KBDL-CUS-024`, `KBDL-CUS-025`, `KBDL-CUS-026`, `KBDL-CUS-027`, `KBDL-CUS-028`, `KBDL-CUS-029`
 - **Specification location (per-ID):** `023` → [§11](customization.md#11-customization-record); `024` → [§12](customization.md#12-approval-and-escalation-paths); `025` → [§14](customization.md#14-validation-and-evidence-planning); `026`, `027` → [§15](customization.md#15-review-expiry-change-and-rollback); `028` → [§26](customization.md#26-reusable-versus-project-local-customization); `029` → [§15](customization.md#15-review-expiry-change-and-rollback) and [§24](customization.md#24-content-and-open-brand-expression).
@@ -1072,7 +1072,7 @@ The entries below trace every KBDL-010 requirement to
 - **Pending dependencies (per-ID):** None.
 - **Profile impact:** Shared policy only; no Profile change.
 - **Future validation dependency:** Implementation evidence; item 3 excludes final-validation policy.
-- **Notes:** Approval scope and exclusions appear in [the packet](customization.md#37-kbdl-010-decision-packet).
+- **Notes:** Approval scope and exclusions appear in [the packet](customization.md#37-kbdl-010-decision-packet). Item 2's accessibility/security independent-review rule has no material-threshold dependency; item 3 exclusively owns risk tiers, minor/material thresholds, and any material-classification reviewer trigger.
 
 ### Deferred machine-readable format (KBDL-CUS-030)
 
