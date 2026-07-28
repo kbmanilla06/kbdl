@@ -1,0 +1,12 @@
+Baseline: eed4cfe5a6509e79588f05f1022783bb2874db31
+Normative design/product rules changed: 0
+Requirement IDs changed: 0
+Lifecycle values changed: 0
+Authoritative provenance changed: 0
+AR2 confirmation scope changed: 0
+Approved decision scope changed: 0
+Packet numbering/dependencies changed: 0
+Permitted validation changes: VAL-003 and VAL-006 evidence/classification only
+VAL-004: Not verified
+Result: PASS
+

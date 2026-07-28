@@ -1,0 +1,318 @@
+Requirement ID,Lifecycle/readiness class,Ledger packet destination,Resolved source,Contingent,Deferred,Result
+KBDL-A11Y-001,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-A11Y-002,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-A11Y-003,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-A11Y-004,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-A11Y-005,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-A11Y-006,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-A11Y-007,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-A11Y-008,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-A11Y-009,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-A11Y-010,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-A11Y-011,Recommended,accessibility.md — 49.2 Recommended Decisions — Ready for Approval — item 2,profiles.md; traceability-matrix.md; components-core.md; components-system.md,False,False,PASS
+KBDL-A11Y-012,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-A11Y-013,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-A11Y-014,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-A11Y-015,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-A11Y-016,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-A11Y-017,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-A11Y-018,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-A11Y-019,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-A11Y-020,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-A11Y-021,Recommended,accessibility.md — 49.2 Recommended Decisions — Ready for Approval — item 1,profiles.md; traceability-matrix.md; responsive.md; components-core.md; components-system.md,False,False,PASS
+KBDL-A11Y-022,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-A11Y-023,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-A11Y-024,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-A11Y-025,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-A11Y-026,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-A11Y-027,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-A11Y-028,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-A11Y-029,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-A11Y-030,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-A11Y-031,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-A11Y-032,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-A11Y-033,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-A11Y-034,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-A11Y-035,Recommended,accessibility.md — 49.2 Recommended Decisions — Ready for Approval — item 3,profiles.md; traceability-matrix.md; components-core.md; components-system.md,False,False,PASS
+KBDL-A11Y-036,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-A11Y-037,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-A11Y-038,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-A11Y-039,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-A11Y-040,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CMP-001,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CMP-002,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CMP-003,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CMP-004,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CMP-005,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CMP-006,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CMP-007,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CMP-008,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CMP-009,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CMP-010,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CMP-011,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CMP-012,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CMP-013,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CMP-014,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CMP-015,Recommended,components-core.md — 35.2 Recommended Decisions — Ready for Approval — item 1,profiles.md; traceability-matrix.md; components-system.md,False,False,PASS
+KBDL-CMP-016,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CMP-017,Recommended,components-core.md — 35.2 Recommended Decisions — Ready for Approval — item 3,profiles.md; traceability-matrix.md; components-system.md,False,False,PASS
+KBDL-CMP-018,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CMP-019,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CMP-020,Recommended,components-core.md — 35.2 Recommended Decisions — Ready for Approval — item 9,profiles.md; traceability-matrix.md; components-system.md,False,False,PASS
+KBDL-CMP-021,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CMP-022,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CMP-023,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CMP-024,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CMP-025,Recommended,components-core.md — 35.2 Recommended Decisions — Ready for Approval — item 4,profiles.md; traceability-matrix.md; components-system.md,False,False,PASS
+KBDL-CMP-026,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CMP-027,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CMP-028,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CMP-029,Recommended,components-core.md — 35.2 Recommended Decisions — Ready for Approval — item 5,profiles.md; traceability-matrix.md; components-system.md,False,False,PASS
+KBDL-CMP-030,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CMP-031,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CMP-032,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CMP-033,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CMP-034,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CMP-035,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CMP-036,Recommended,components-core.md — 35.2 Recommended Decisions — Ready for Approval — item 6,profiles.md; traceability-matrix.md; components-system.md,False,False,PASS
+KBDL-CMP-037,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CMP-038,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CMP-039,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CMP-040,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CMP-041,Recommended,components-core.md — §35.3 Unresolved or Not Approval-Ready — contingent item KBDL-CMP-041,profiles.md; traceability-matrix.md; components-system.md,True,False,PASS
+KBDL-CMP-042,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CMP-043,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CMP-044,Recommended,components-core.md — 35.2 Recommended Decisions — Ready for Approval — item 7,profiles.md; traceability-matrix.md; components-system.md,False,False,PASS
+KBDL-CMP-045,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CMP-046,Recommended,components-core.md — 35.2 Recommended Decisions — Ready for Approval — item 2,profiles.md; traceability-matrix.md; components-system.md,False,False,PASS
+KBDL-CMP-047,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CMP-048,Recommended,components-core.md — 35.2 Recommended Decisions — Ready for Approval — item 8,profiles.md; traceability-matrix.md; components-system.md,False,False,PASS
+KBDL-CMP-049,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CMP-050,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CMP-051,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CMP-052,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CMP-053,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CMP-054,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CMP-055,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CMP-056,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CMP-057,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CMP-058,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CMP-059,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CMP-060,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CMP-061,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CMP-062,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CMP-063,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CMP-064,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CMP-065,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CMP-066,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CMP-067,Recommended,components-system.md — 33.2 Recommended Decisions — Ready for Approval — item 1,profiles.md; traceability-matrix.md; components-system.md,False,False,PASS
+KBDL-CMP-068,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CMP-069,Recommended,components-system.md — 33.2 Recommended Decisions — Ready for Approval — item 2,profiles.md; traceability-matrix.md; components-system.md,False,False,PASS
+KBDL-CMP-070,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CMP-071,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CMP-072,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CMP-073,Recommended,components-system.md — 33.2 Recommended Decisions — Ready for Approval — item 3,profiles.md; traceability-matrix.md; components-system.md,False,False,PASS
+KBDL-CMP-074,Recommended,components-system.md — 33.2 Recommended Decisions — Ready for Approval — item 4,profiles.md; traceability-matrix.md; components-system.md,False,False,PASS
+KBDL-CMP-075,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CMP-076,Recommended,components-system.md — 33.2 Recommended Decisions — Ready for Approval — item 5,profiles.md; traceability-matrix.md; components-system.md,False,False,PASS
+KBDL-CMP-077,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CMP-078,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CMP-079,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CMP-080,Recommended,components-system.md — 33.2 Recommended Decisions — Ready for Approval — item 6,profiles.md; traceability-matrix.md; components-system.md,False,False,PASS
+KBDL-CMP-081,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CMP-082,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CMP-083,Recommended,components-system.md — 33.2 Recommended Decisions — Ready for Approval — item 7,profiles.md; traceability-matrix.md; components-system.md,False,False,PASS
+KBDL-CMP-084,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CMP-085,Recommended,components-system.md — 33.2 Recommended Decisions — Ready for Approval — item 8,profiles.md; traceability-matrix.md; components-system.md,False,False,PASS
+KBDL-CMP-086,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CMP-087,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CMP-088,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CMP-089,Recommended,components-system.md — 33.2 Recommended Decisions — Ready for Approval — item 9,profiles.md; traceability-matrix.md; components-system.md,False,False,PASS
+KBDL-CMP-090,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CMP-091,Recommended,components-system.md — 33.2 Recommended Decisions — Ready for Approval — item 10,profiles.md; traceability-matrix.md; components-system.md,False,False,PASS
+KBDL-CMP-092,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CMP-093,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CMP-094,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CMP-095,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CMP-096,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CMP-097,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CMP-098,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CMP-099,Recommended,components-system.md — 33.2 Recommended Decisions — Ready for Approval — item 11,profiles.md; traceability-matrix.md; components-system.md,False,False,PASS
+KBDL-CMP-100,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CMP-101,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CMP-102,Recommended,components-system.md — 33.2 Recommended Decisions — Ready for Approval — item 12,profiles.md; traceability-matrix.md; components-system.md,False,False,PASS
+KBDL-CMP-103,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CMP-104,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CMP-105,Recommended,components-system.md — 33.2 Recommended Decisions — Ready for Approval — item 13,profiles.md; traceability-matrix.md; components-system.md,False,False,PASS
+KBDL-CMP-106,Recommended,components-system.md — 33.2 Recommended Decisions — Ready for Approval — item 14,profiles.md; traceability-matrix.md; components-system.md,False,False,PASS
+KBDL-CMP-107,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CMP-108,Recommended,components-system.md — 33.2 Recommended Decisions — Ready for Approval — item 15,profiles.md; traceability-matrix.md; components-system.md,False,False,PASS
+KBDL-CMP-109,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CMP-110,Recommended,components-system.md — 33.2 Recommended Decisions — Ready for Approval — item 16,profiles.md; traceability-matrix.md; components-system.md,False,False,PASS
+KBDL-CMP-111,Recommended,components-system.md — 33.2 Recommended Decisions — Ready for Approval — item 17,profiles.md; traceability-matrix.md; README.md; components-system.md,False,False,PASS
+KBDL-CUS-001,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CUS-002,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CUS-003,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CUS-004,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CUS-005,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CUS-006,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CUS-007,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CUS-008,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CUS-009,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CUS-010,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CUS-011,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CUS-012,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CUS-013,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CUS-014,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CUS-015,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CUS-016,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CUS-017,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CUS-018,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CUS-019,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CUS-020,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CUS-021,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CUS-022,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-CUS-023,Recommended,Approval-ready item 1,customization.md; traceability-matrix.md,False,False,PASS
+KBDL-CUS-024,Recommended,Approval-ready item 2,customization.md; traceability-matrix.md,False,False,PASS
+KBDL-CUS-025,Recommended,Approval-ready item 3,customization.md; traceability-matrix.md,False,False,PASS
+KBDL-CUS-026,Recommended,Approval-ready item 4,customization.md; traceability-matrix.md,False,False,PASS
+KBDL-CUS-027,Recommended,Approval-ready item 5,customization.md; traceability-matrix.md,False,False,PASS
+KBDL-CUS-028,Recommended,Approval-ready item 6,customization.md,False,False,PASS
+KBDL-CUS-029,Recommended,Approval-ready item 7,customization.md,False,False,PASS
+KBDL-CUS-030,Deferred,Deferred tracking,customization.md; traceability-matrix.md,False,True,PASS
+KBDL-FND-001,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-FND-002,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-FND-003,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-FND-004,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-FND-005,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-FND-006,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-FND-007,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-FND-008,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-FND-009,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-FND-010,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-FND-011,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-FND-012,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-GOV-001,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-GOV-002,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-GOV-003,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-MOT-001,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-MOT-002,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-MOT-003,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-MOT-004,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-MOT-005,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-MOT-006,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-MOT-007,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-MOT-008,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-MOT-009,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-MOT-010,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-MOT-011,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-MOT-012,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-MOT-013,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-MOT-014,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-MOT-015,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-MOT-016,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-MOT-017,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-MOT-018,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-MOT-019,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-MOT-020,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-MOT-021,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-MOT-022,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-MOT-023,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-MOT-024,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-MOT-025,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-MOT-026,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-MOT-027,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-MOT-028,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-MOT-029,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-MOT-030,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-MOT-031,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-MOT-032,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-MOT-033,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-MOT-034,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-PRN-001,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-PRN-002,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-PRN-003,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-PRN-004,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-PRN-005,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-PRN-006,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-PRN-007,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-PRN-008,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-PRO-001,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-PRO-002,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-PRO-003,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-PRO-004,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-PRO-005,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-PRO-006,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-PRO-007,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-PRO-008,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-PRO-009,Recommended,Approval-ready item 1,profiles.md; customization.md; traceability-matrix.md,False,False,PASS
+KBDL-PRO-010,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-PRO-011,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-PRO-012,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-PRO-013,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-PRO-014,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-PRO-015,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-PRO-016,Recommended,Contingent — [§33.3](#333-unresolved-or-not-approval-ready); not independently approval-ready,profiles.md; customization.md; traceability-matrix.md,True,False,PASS
+KBDL-PRO-017,Recommended,Approval-ready item 2,profiles.md; customization.md; traceability-matrix.md,False,False,PASS
+KBDL-PRO-018,Recommended,Contingent — [§33.3](#333-unresolved-or-not-approval-ready); not independently approval-ready,profiles.md; customization.md; traceability-matrix.md,True,False,PASS
+KBDL-PRO-019,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-PRO-020,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-PRO-021,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-PRO-022,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-PRO-023,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-PRO-024,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-PRO-025,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-PRO-026,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-PRO-027,Recommended,Approval-ready item 3,profiles.md; customization.md; traceability-matrix.md,False,False,PASS
+KBDL-PRO-028,Recommended,Approval-ready item 4,profiles.md; customization.md; traceability-matrix.md,False,False,PASS
+KBDL-PRO-029,Recommended,Approval-ready item 5,profiles.md; customization.md; traceability-matrix.md,False,False,PASS
+KBDL-RSP-001,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-RSP-002,Recommended,responsive.md — 35.2 Recommended Decisions — Ready for Approval — item 1,profiles.md; traceability-matrix.md; components-core.md; components-system.md,False,False,PASS
+KBDL-RSP-003,Recommended,responsive.md — 35.2 Recommended Decisions — Ready for Approval — item 2,profiles.md; traceability-matrix.md; components-core.md; components-system.md,False,False,PASS
+KBDL-RSP-004,Recommended,responsive.md — 35.2 Recommended Decisions — Ready for Approval — item 3,profiles.md; traceability-matrix.md; components-core.md; components-system.md,False,False,PASS
+KBDL-RSP-005,Recommended,responsive.md — 35.2 Recommended Decisions — Ready for Approval — item 4,profiles.md; traceability-matrix.md; components-core.md; components-system.md,False,False,PASS
+KBDL-RSP-006,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-RSP-007,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-RSP-008,Recommended,responsive.md — 35.2 Recommended Decisions — Ready for Approval — item 5,profiles.md; traceability-matrix.md; components-core.md; components-system.md,False,False,PASS
+KBDL-RSP-009,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-RSP-010,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-RSP-011,Recommended,responsive.md — 35.2 Recommended Decisions — Ready for Approval — item 6,profiles.md; traceability-matrix.md; components-core.md; accessibility.md; components-system.md,False,False,PASS
+KBDL-RSP-012,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-RSP-013,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-RSP-014,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-RSP-015,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-RSP-016,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-RSP-017,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-RSP-018,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-RSP-019,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-RSP-020,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-RSP-021,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-RSP-022,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-THM-001,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-THM-002,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-THM-003,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-THM-004,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-THM-005,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-THM-006,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-THM-007,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-THM-008,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-THM-009,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-THM-010,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-THM-011,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-THM-012,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-THM-012a,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-THM-013,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-THM-014,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-THM-015,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-VAL-001,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-VAL-002,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-VAL-003,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-VAL-004,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-VAL-005,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-VAL-006,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-VAL-007,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-VAL-008,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-VAL-009,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-VAL-010,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-VAL-011,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS
+KBDL-VAL-012,Approved,None — Approved,Explicit None permitted only for Approved,False,False,PASS

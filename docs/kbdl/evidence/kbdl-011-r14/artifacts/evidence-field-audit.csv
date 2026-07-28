@@ -1,0 +1,318 @@
+Requirement ID,Validation classification,Evidence value,Referenced paths,Resolved paths,Result
+KBDL-A11Y-001,Not verified,Not verified — the requirement’s stated validation method has not been executed.,None,None,PASS
+KBDL-A11Y-002,Not verified,Not verified — the requirement’s stated validation method has not been executed.,None,None,PASS
+KBDL-A11Y-003,Not verified,Not verified — the requirement’s stated validation method has not been executed.,None,None,PASS
+KBDL-A11Y-004,Not verified,Not verified — the requirement’s stated validation method has not been executed.,None,None,PASS
+KBDL-A11Y-005,Not verified,Not verified — the requirement’s stated validation method has not been executed.,None,None,PASS
+KBDL-A11Y-006,Not verified,Not verified — the requirement’s stated validation method has not been executed.,None,None,PASS
+KBDL-A11Y-007,Verified,themes/validation.md §3 for the three Verified rows; not verified for the rest,themes/validation.md,docs/kbdl/themes/validation.md,PASS
+KBDL-A11Y-008,Verified,themes/validation.md §3 for the three Verified rows; not verified for the rest,themes/validation.md,docs/kbdl/themes/validation.md,PASS
+KBDL-A11Y-009,Verified,themes/validation.md §3 for the three Verified rows; not verified for the rest,themes/validation.md,docs/kbdl/themes/validation.md,PASS
+KBDL-A11Y-010,Not verified,Not verified — the requirement’s stated validation method has not been executed.,None,None,PASS
+KBDL-A11Y-011,Not verified,Not verified — the requirement’s stated validation method has not been executed.,None,None,PASS
+KBDL-A11Y-012,Not verified,Not verified — the requirement’s stated validation method has not been executed.,None,None,PASS
+KBDL-A11Y-013,Not verified,Not verified — the requirement’s stated validation method has not been executed.,None,None,PASS
+KBDL-A11Y-014,Not verified,Not verified — the requirement’s stated validation method has not been executed.,None,None,PASS
+KBDL-A11Y-015,Not verified,Not verified — the requirement’s stated validation method has not been executed.,None,None,PASS
+KBDL-A11Y-016,Not verified,Not verified — the requirement’s stated validation method has not been executed.,None,None,PASS
+KBDL-A11Y-017,Not verified,Not verified — the requirement’s stated validation method has not been executed.,None,None,PASS
+KBDL-A11Y-018,Not verified,Not verified — the requirement’s stated validation method has not been executed.,None,None,PASS
+KBDL-A11Y-019,Not applicable,Not applicable — no executed implementation claim is asserted for this requirement.,None,None,PASS
+KBDL-A11Y-020,Not verified,Not verified — the requirement’s stated validation method has not been executed.,None,None,PASS
+KBDL-A11Y-021,Not applicable,Not applicable — no executed implementation claim is asserted for this requirement.,None,None,PASS
+KBDL-A11Y-022,Not verified,Not verified — the requirement’s stated validation method has not been executed.,None,None,PASS
+KBDL-A11Y-023,Not verified,Not verified — the requirement’s stated validation method has not been executed.,None,None,PASS
+KBDL-A11Y-024,Not verified,Not verified — the requirement’s stated validation method has not been executed.,None,None,PASS
+KBDL-A11Y-025,Not verified,Not verified — the requirement’s stated validation method has not been executed.,None,None,PASS
+KBDL-A11Y-026,Not verified,Not verified — the requirement’s stated validation method has not been executed.,None,None,PASS
+KBDL-A11Y-027,Not verified,Not verified — the requirement’s stated validation method has not been executed.,None,None,PASS
+KBDL-A11Y-028,Not verified,Not verified — the requirement’s stated validation method has not been executed.,None,None,PASS
+KBDL-A11Y-029,Not verified,Not verified — the requirement’s stated validation method has not been executed.,None,None,PASS
+KBDL-A11Y-030,Not verified,Not verified — the requirement’s stated validation method has not been executed.,None,None,PASS
+KBDL-A11Y-031,Not verified,Not verified — the requirement’s stated validation method has not been executed.,None,None,PASS
+KBDL-A11Y-032,Not verified,Not verified — the requirement’s stated validation method has not been executed.,None,None,PASS
+KBDL-A11Y-033,Not verified,Not verified — the requirement’s stated validation method has not been executed.,None,None,PASS
+KBDL-A11Y-034,Not verified,Not verified — the requirement’s stated validation method has not been executed.,None,None,PASS
+KBDL-A11Y-035,Not applicable,Not applicable — no executed implementation claim is asserted for this requirement.,None,None,PASS
+KBDL-A11Y-036,Not applicable,Not applicable — no executed implementation claim is asserted for this requirement.,None,None,PASS
+KBDL-A11Y-037,Not verified,Not verified — the requirement’s stated validation method has not been executed.,None,None,PASS
+KBDL-A11Y-038,Not applicable,Not applicable — no executed implementation claim is asserted for this requirement.,None,None,PASS
+KBDL-A11Y-039,Not applicable,Not applicable — no executed implementation claim is asserted for this requirement.,None,None,PASS
+KBDL-A11Y-040,Not verified,Not verified — the requirement’s stated validation method has not been executed.,None,None,PASS
+KBDL-CMP-001,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-002,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-003,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-004,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-005,Not applicable,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-006,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-007,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-008,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-009,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-010,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-011,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-012,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-013,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-014,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-015,Not applicable,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-016,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-017,Not applicable,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-018,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-019,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-020,Not applicable,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-021,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-022,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-023,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-024,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-025,Not applicable,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-026,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-027,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-028,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-029,Not applicable,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-030,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-031,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-032,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-033,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-034,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-035,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-036,Not applicable,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-037,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-038,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-039,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-040,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-041,Not applicable,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-042,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-043,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-044,Not applicable,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-045,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-046,Not applicable,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-047,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-048,Not applicable,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-049,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-050,Not applicable,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-051,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-052,Not applicable,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-053,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-054,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-055,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-056,Not applicable,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-057,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-058,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-059,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-060,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-061,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-062,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-063,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-064,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-065,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-066,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-067,Not applicable,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-068,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-069,Not applicable,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-070,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-071,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-072,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-073,Not applicable,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-074,Not applicable,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-075,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-076,Not applicable,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-077,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-078,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-079,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-080,Not applicable,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-081,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-082,Not applicable,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-083,Not applicable,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-084,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-085,Not applicable,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-086,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-087,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-088,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-089,Not applicable,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-090,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-091,Not applicable,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-092,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-093,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-094,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-095,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-096,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-097,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-098,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-099,Not applicable,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-100,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-101,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-102,Not applicable,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-103,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-104,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-105,Not applicable,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-106,Not applicable,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-107,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-108,Not applicable,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-109,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-110,Not applicable,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CMP-111,Not applicable,Not verified — no implementation exists yet,None,None,PASS
+KBDL-CUS-001,Not verified,Not verified — validation method has not been executed,None,None,PASS
+KBDL-CUS-002,Not verified,Not verified — validation method has not been executed,None,None,PASS
+KBDL-CUS-003,Not verified,Not verified — validation method has not been executed,None,None,PASS
+KBDL-CUS-004,Not verified,Not verified — validation method has not been executed,None,None,PASS
+KBDL-CUS-005,Not verified,Not verified — validation method has not been executed,None,None,PASS
+KBDL-CUS-006,Not verified,Not verified — validation method has not been executed,None,None,PASS
+KBDL-CUS-007,Not verified,Not verified — validation method has not been executed,None,None,PASS
+KBDL-CUS-008,Not verified,Not verified — validation method has not been executed,None,None,PASS
+KBDL-CUS-009,Not verified,Not verified — validation method has not been executed,None,None,PASS
+KBDL-CUS-010,Not verified,Not verified — validation method has not been executed,None,None,PASS
+KBDL-CUS-011,Not verified,Not verified — validation method has not been executed,None,None,PASS
+KBDL-CUS-012,Not verified,Not verified — validation method has not been executed,None,None,PASS
+KBDL-CUS-013,Not verified,Not verified — validation method has not been executed,None,None,PASS
+KBDL-CUS-014,Not verified,Not verified — validation method has not been executed,None,None,PASS
+KBDL-CUS-015,Not verified,Not verified — validation method has not been executed,None,None,PASS
+KBDL-CUS-016,Not verified,Not verified — validation method has not been executed,None,None,PASS
+KBDL-CUS-017,Not verified,Not verified — validation method has not been executed,None,None,PASS
+KBDL-CUS-018,Not verified,Not verified — validation method has not been executed,None,None,PASS
+KBDL-CUS-019,Not verified,Not verified — validation method has not been executed,None,None,PASS
+KBDL-CUS-020,Not verified,Not verified — validation method has not been executed,None,None,PASS
+KBDL-CUS-021,Not verified,Not verified — validation method has not been executed,None,None,PASS
+KBDL-CUS-022,Not verified,Not verified — validation method has not been executed,None,None,PASS
+KBDL-CUS-023,Not applicable,Not verified — validation method has not been executed,None,None,PASS
+KBDL-CUS-024,Not applicable,Not verified — validation method has not been executed,None,None,PASS
+KBDL-CUS-025,Not applicable,Not verified — validation method has not been executed,None,None,PASS
+KBDL-CUS-026,Not applicable,Not verified — validation method has not been executed,None,None,PASS
+KBDL-CUS-027,Not applicable,Not verified — validation method has not been executed,None,None,PASS
+KBDL-CUS-028,Not applicable,Not verified — validation method has not been executed,None,None,PASS
+KBDL-CUS-029,Not applicable,Not verified — validation method has not been executed,None,None,PASS
+KBDL-CUS-030,Not applicable,Not verified — validation method has not been executed,None,None,PASS
+KBDL-FND-001,Not verified,Not verified — no theme or component content exists yet to check role usage against,None,None,PASS
+KBDL-FND-002,Not verified,Not verified — no theme or component content exists yet to check role usage against,None,None,PASS
+KBDL-FND-003,Not verified,Not verified — no responsive-behavior module exists yet,None,None,PASS
+KBDL-FND-004,Not verified,Not verified — no responsive-behavior module exists yet,None,None,PASS
+KBDL-FND-005,Not verified,"Manual completeness review recorded in the KBDL-003 commit — confirmed all five elevation levels list a non-shadow-dependent fallback, and both icon and media sections state their respective anticipation requirements",None,None,PASS
+KBDL-FND-006,Not verified,"Manual completeness review recorded in the KBDL-003 commit — confirmed all five elevation levels list a non-shadow-dependent fallback, and both icon and media sections state their respective anticipation requirements",None,None,PASS
+KBDL-FND-007,Not verified,"Manual completeness review recorded in the KBDL-003 commit — confirmed all five elevation levels list a non-shadow-dependent fallback, and both icon and media sections state their respective anticipation requirements",None,None,PASS
+KBDL-FND-008,Not verified,Not verified — PRO requirements do not exist yet,None,None,PASS
+KBDL-FND-009,Mixed — Verified / Not verified,"Contrast-ratio table in foundations/color.md §4, computed via a local dependency-free script (see the KBDL-003 validation evidence for the script and full output). Updated under KBDL-003-R1: neutral-50 (3.25:1) was found to fail the 4.5:1 normal-text threshold and is now restricted to large-text/non-text-UI/decorative use only; a new neutral-60 (5.59:1) was added and verified as the safe value for normal-sized secondary/tertiary text",foundations/color.md,docs/kbdl/foundations/color.md,PASS
+KBDL-FND-010,Not verified,"Contrast-ratio table in foundations/color.md §4, computed via a local dependency-free script (see the KBDL-003 validation evidence for the script and full output). Updated under KBDL-003-R1: neutral-50 (3.25:1) was found to fail the 4.5:1 normal-text threshold and is now restricted to large-text/non-text-UI/decorative use only; a new neutral-60 (5.59:1) was added and verified as the safe value for normal-sized secondary/tertiary text",foundations/color.md,docs/kbdl/foundations/color.md,PASS
+KBDL-FND-011,Not verified,"Contrast-ratio table in foundations/color.md §4, computed via a local dependency-free script (see the KBDL-003 validation evidence for the script and full output). Updated under KBDL-003-R1: neutral-50 (3.25:1) was found to fail the 4.5:1 normal-text threshold and is now restricted to large-text/non-text-UI/decorative use only; a new neutral-60 (5.59:1) was added and verified as the safe value for normal-sized secondary/tertiary text",foundations/color.md,docs/kbdl/foundations/color.md,PASS
+KBDL-FND-012,Not verified,"Contrast-ratio table in foundations/color.md §4, computed via a local dependency-free script (see the KBDL-003 validation evidence for the script and full output). Updated under KBDL-003-R1: neutral-50 (3.25:1) was found to fail the 4.5:1 normal-text threshold and is now restricted to large-text/non-text-UI/decorative use only; a new neutral-60 (5.59:1) was added and verified as the safe value for normal-sized secondary/tertiary text",foundations/color.md,docs/kbdl/foundations/color.md,PASS
+KBDL-GOV-001,Verified,Manual review recorded in commit 2d356b4 (KBDL-001 initial commit); re-checked for this remediation in commit-to-follow (see decision-register.md § KBDL-DEC-011),decision-register.md,docs/kbdl/decision-register.md,PASS
+KBDL-GOV-002,Not verified,Not verified — no A11Y requirement exists yet for this rule to be checked against,None,None,PASS
+KBDL-GOV-003,Verified,"Manual review recorded in commit 2d356b4, corrected in the remediation commit for this status-model fix",None,None,PASS
+KBDL-MOT-001,Not verified,Manual review recorded in motion/validation.md §6,motion/validation.md,docs/kbdl/motion/validation.md,PASS
+KBDL-MOT-002,Not verified,Manual review recorded in motion/validation.md §6,motion/validation.md,docs/kbdl/motion/validation.md,PASS
+KBDL-MOT-003,Not verified,Manual review recorded in motion/validation.md §6,motion/validation.md,docs/kbdl/motion/validation.md,PASS
+KBDL-MOT-004,Not verified,Manual review recorded in motion/validation.md §1,motion/validation.md,docs/kbdl/motion/validation.md,PASS
+KBDL-MOT-005,Not verified,Manual review recorded in motion/validation.md §1,motion/validation.md,docs/kbdl/motion/validation.md,PASS
+KBDL-MOT-006,Not verified,Manual review recorded in motion/validation.md §1,motion/validation.md,docs/kbdl/motion/validation.md,PASS
+KBDL-MOT-007,Not verified,"motion/validation.md §2 — every value has a stated purpose, exit durations are equal to or shorter than paired entrances, and no value is marked Verified without implementation evidence",motion/validation.md,docs/kbdl/motion/validation.md,PASS
+KBDL-MOT-008,Not applicable,"motion/validation.md §2 — every value has a stated purpose, exit durations are equal to or shorter than paired entrances, and no value is marked Verified without implementation evidence",motion/validation.md,docs/kbdl/motion/validation.md,PASS
+KBDL-MOT-009,Not applicable,"motion/validation.md §2 — every value has a stated purpose, exit durations are equal to or shorter than paired entrances, and no value is marked Verified without implementation evidence",motion/validation.md,docs/kbdl/motion/validation.md,PASS
+KBDL-MOT-010,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-MOT-011,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-MOT-012,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-MOT-013,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-MOT-014,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-MOT-015,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-MOT-016,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-MOT-017,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-MOT-018,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-MOT-019,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-MOT-020,Not verified,"motion/patterns.md §8 — conceptually verified against the already-Verified opaque contrast pair (17.17:1, unrelated example) and the KBDL-004 non-blocking/readability requirements; no live implementation has been rendered or measured",motion/patterns.md,docs/kbdl/motion/patterns.md,PASS
+KBDL-MOT-021,Not verified,"motion/validation.md §3 (reduced-motion parity, passed) and motion/validation.md §4 (pattern coverage, passed)",motion/validation.md; motion/validation.md,docs/kbdl/motion/validation.md; docs/kbdl/motion/validation.md,PASS
+KBDL-MOT-022,Not verified,"motion/validation.md §3 (reduced-motion parity, passed) and motion/validation.md §4 (pattern coverage, passed)",motion/validation.md; motion/validation.md,docs/kbdl/motion/validation.md; docs/kbdl/motion/validation.md,PASS
+KBDL-MOT-023,Not verified,"motion/validation.md §3 (reduced-motion parity, passed) and motion/validation.md §4 (pattern coverage, passed)",motion/validation.md; motion/validation.md,docs/kbdl/motion/validation.md; docs/kbdl/motion/validation.md,PASS
+KBDL-MOT-024,Not verified,"motion/validation.md §3 (reduced-motion parity, passed) and motion/validation.md §4 (pattern coverage, passed)",motion/validation.md; motion/validation.md,docs/kbdl/motion/validation.md; docs/kbdl/motion/validation.md,PASS
+KBDL-MOT-025,Not verified,"motion/validation.md §3 (reduced-motion parity, passed) and motion/validation.md §4 (pattern coverage, passed)",motion/validation.md; motion/validation.md,docs/kbdl/motion/validation.md; docs/kbdl/motion/validation.md,PASS
+KBDL-MOT-026,Not verified,"motion/validation.md §3 (reduced-motion parity, passed) and motion/validation.md §4 (pattern coverage, passed)",motion/validation.md; motion/validation.md,docs/kbdl/motion/validation.md; docs/kbdl/motion/validation.md,PASS
+KBDL-MOT-027,Not applicable,"motion/validation.md §3 (reduced-motion parity, passed) and motion/validation.md §4 (pattern coverage, passed)",motion/validation.md; motion/validation.md,docs/kbdl/motion/validation.md; docs/kbdl/motion/validation.md,PASS
+KBDL-MOT-028,Not applicable,Not verified — no implementation exists yet; conceptual manual review recorded in motion/validation.md where applicable,motion/validation.md,docs/kbdl/motion/validation.md,PASS
+KBDL-MOT-029,Not applicable,Not verified — no implementation exists yet; conceptual manual review recorded in motion/validation.md where applicable,motion/validation.md,docs/kbdl/motion/validation.md,PASS
+KBDL-MOT-030,Not verified,Not verified — no implementation exists yet; conceptual manual review recorded in motion/validation.md where applicable,motion/validation.md,docs/kbdl/motion/validation.md,PASS
+KBDL-MOT-031,Not verified,Not verified — no implementation exists yet; conceptual manual review recorded in motion/validation.md where applicable,motion/validation.md,docs/kbdl/motion/validation.md,PASS
+KBDL-MOT-032,Not applicable,Not verified — no implementation exists yet; conceptual manual review recorded in motion/validation.md where applicable,motion/validation.md,docs/kbdl/motion/validation.md,PASS
+KBDL-MOT-033,Not applicable,Not verified — no implementation exists yet; conceptual manual review recorded in motion/validation.md where applicable,motion/validation.md,docs/kbdl/motion/validation.md,PASS
+KBDL-MOT-034,Not verified,Not verified — no implementation exists yet; conceptual manual review recorded in motion/validation.md where applicable,motion/validation.md,docs/kbdl/motion/validation.md,PASS
+KBDL-PRN-001,Not verified,"Not verified — validation method has not yet been run against a later module, since none exist yet",None,None,PASS
+KBDL-PRN-002,Not verified,Not verified,None,None,PASS
+KBDL-PRN-003,Not verified,Not verified — the requirement's later-module approval-gate method has not been executed completely,None,None,PASS
+KBDL-PRN-004,Not verified,Not verified — dependent modules do not exist yet,None,None,PASS
+KBDL-PRN-005,Not verified,Not verified — the requirement's full later-module and implementation review has not been executed,None,None,PASS
+KBDL-PRN-006,Not verified,Not verified — no real design decision has been escalated through this hierarchy yet,None,None,PASS
+KBDL-PRN-007,Not verified,Not verified — the project-profiles module (PRO) does not exist yet,None,None,PASS
+KBDL-PRN-008,Not verified,Not verified — example-count evidence does not execute the requirement's later-module conformance-review method,None,None,PASS
+KBDL-PRO-001,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-PRO-002,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-PRO-003,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-PRO-004,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-PRO-005,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-PRO-006,Not applicable,Not verified — no implementation exists yet,None,None,PASS
+KBDL-PRO-007,Not applicable,Not verified — no implementation exists yet,None,None,PASS
+KBDL-PRO-008,Not applicable,Not verified — no implementation exists yet,None,None,PASS
+KBDL-PRO-009,Not applicable,Not verified — no implementation exists yet,None,None,PASS
+KBDL-PRO-010,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-PRO-011,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-PRO-012,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-PRO-013,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-PRO-014,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-PRO-015,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-PRO-016,Not applicable,Not verified — no implementation exists yet,None,None,PASS
+KBDL-PRO-017,Not applicable,Not verified — no implementation exists yet,None,None,PASS
+KBDL-PRO-018,Not applicable,Not verified — no implementation exists yet,None,None,PASS
+KBDL-PRO-019,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-PRO-020,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-PRO-021,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-PRO-022,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-PRO-023,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-PRO-024,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-PRO-025,Not applicable,Not verified — no implementation exists yet,None,None,PASS
+KBDL-PRO-026,Not applicable,Not verified — no implementation exists yet,None,None,PASS
+KBDL-PRO-027,Not applicable,Not verified — no implementation exists yet,None,None,PASS
+KBDL-PRO-028,Not applicable,Not verified — no implementation exists yet,None,None,PASS
+KBDL-PRO-029,Not applicable,Not verified — no implementation exists yet,None,None,PASS
+KBDL-RSP-001,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-RSP-002,Not applicable,Not verified — no implementation exists yet,None,None,PASS
+KBDL-RSP-003,Not applicable,Not verified — no implementation exists yet,None,None,PASS
+KBDL-RSP-004,Not applicable,Not verified — no implementation exists yet,None,None,PASS
+KBDL-RSP-005,Not applicable,Not verified — no implementation exists yet,None,None,PASS
+KBDL-RSP-006,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-RSP-007,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-RSP-008,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-RSP-009,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-RSP-010,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-RSP-011,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-RSP-012,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-RSP-013,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-RSP-014,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-RSP-015,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-RSP-016,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-RSP-017,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-RSP-018,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-RSP-019,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-RSP-020,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-RSP-021,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-RSP-022,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-THM-001,Not verified,Not verified — no component module exists yet to check role usage against,None,None,PASS
+KBDL-THM-002,Verified,"Parity matrix in themes/semantic-roles.md § Parity Matrix — 72 unique roles, 72 light mappings, 72 dark mappings, 1 role-level alias (corrected under KBDL-004-R3, previously miscounted as 2), 0 unresolved; recorded in the KBDL-004-R3 commit. The KBDL-004-R1 re-run found and fixed a real table-formatting defect (an inserted paragraph had broken the Status Families table in light-theme.md §5, orphaning its ""Neutral status"" row)",themes/semantic-roles.md; light-theme.md,docs/kbdl/themes/semantic-roles.md,PASS
+KBDL-THM-003,Not verified,Not verified — no implementation exists yet,None,None,PASS
+KBDL-THM-004,Not verified,"Not verified — no implementation exists yet; approval is a lifecycle decision, not validation evidence",None,None,PASS
+KBDL-THM-005,Not verified,Not verified — no project theme or PRO module exists yet,None,None,PASS
+KBDL-THM-006,Not verified,Not verified — no project theme or PRO module exists yet,None,None,PASS
+KBDL-THM-007,Mixed — Verified / Not verified,"themes/validation.md §3 — 52 pairs tested, all opaque, all passing their applicable threshold except 4 explicitly decorative-exempt borders/gridlines. The two Informational failures identified in the original KBDL-004 report (3.78:1, 4.21:1) are resolved by a revised hue (#164499) for the Text/Icon/Border/Strong-surface roles, with neutral-10 correctly retained for On-strong-surface content (role assignment corrected under KBDL-004-R2) — see adaptation.md §5.2. The Media caption row was corrected under KBDL-004-R2 to describe a fully opaque neutral-100 band (17.17:1 is directly correct for this pair, not inherited or assumed)",themes/validation.md; adaptation.md,docs/kbdl/themes/validation.md,PASS
+KBDL-THM-008,Mixed — Verified / Not verified,"themes/validation.md §3 — 52 pairs tested, all opaque, all passing their applicable threshold except 4 explicitly decorative-exempt borders/gridlines. The two Informational failures identified in the original KBDL-004 report (3.78:1, 4.21:1) are resolved by a revised hue (#164499) for the Text/Icon/Border/Strong-surface roles, with neutral-10 correctly retained for On-strong-surface content (role assignment corrected under KBDL-004-R2) — see adaptation.md §5.2. The Media caption row was corrected under KBDL-004-R2 to describe a fully opaque neutral-100 band (17.17:1 is directly correct for this pair, not inherited or assumed)",themes/validation.md; adaptation.md,docs/kbdl/themes/validation.md,PASS
+KBDL-THM-009,Mixed — Verified / Not verified,"themes/validation.md §3 for the recalculated pairs and themes/adaptation.md §5.2 for the Informational correction record. themes/adaptation.md §4.3 documents both gradient endpoints tested against both candidate text colors and the corrected, fully-opaque caption-band resolution (KBDL-004-R2)",themes/validation.md; themes/adaptation.md; themes/adaptation.md,docs/kbdl/themes/validation.md; docs/kbdl/themes/adaptation.md; docs/kbdl/themes/adaptation.md,PASS
+KBDL-THM-010,Mixed — Verified / Not verified,"themes/validation.md §3 for the recalculated pairs and themes/adaptation.md §5.2 for the Informational correction record. themes/adaptation.md §4.3 documents both gradient endpoints tested against both candidate text colors and the corrected, fully-opaque caption-band resolution (KBDL-004-R2)",themes/validation.md; themes/adaptation.md; themes/adaptation.md,docs/kbdl/themes/validation.md; docs/kbdl/themes/adaptation.md; docs/kbdl/themes/adaptation.md,PASS
+KBDL-THM-011,Not applicable,"themes/validation.md §3 for the recalculated pairs and themes/adaptation.md §5.2 for the Informational correction record. themes/adaptation.md §4.3 documents both gradient endpoints tested against both candidate text colors and the corrected, fully-opaque caption-band resolution (KBDL-004-R2)",themes/validation.md; themes/adaptation.md; themes/adaptation.md,docs/kbdl/themes/validation.md; docs/kbdl/themes/adaptation.md; docs/kbdl/themes/adaptation.md,PASS
+KBDL-THM-012,Not verified,Manual scope-compliance review recorded in the KBDL-004 commit — confirmed zero millisecond/easing values anywhere in docs/kbdl/themes/,None,None,PASS
+KBDL-THM-012a,Not verified,Manual scope-compliance review recorded in the KBDL-004 commit — confirmed zero millisecond/easing values anywhere in docs/kbdl/themes/,None,None,PASS
+KBDL-THM-013,Not verified,"Not verified — approval is a lifecycle decision, not validation evidence",None,None,PASS
+KBDL-THM-014,Not verified,"Not verified — approval is a lifecycle decision, not validation evidence",None,None,PASS
+KBDL-THM-015,Not verified,"Not verified — approval is a lifecycle decision, not validation evidence",None,None,PASS
+KBDL-VAL-001,Verified,Executed evidence — docs/kbdl/evidence/kbdl-011-r8/artifacts/validation-output.txt; stated repository method PASS.,docs/kbdl/evidence/kbdl-011-r8/artifacts/validation-output.txt,docs/kbdl/evidence/kbdl-011-r8/artifacts/validation-output.txt,PASS
+KBDL-VAL-002,Verified,Executed evidence — docs/kbdl/evidence/kbdl-011-r8/artifacts/validation-output.txt; stated repository method PASS.,docs/kbdl/evidence/kbdl-011-r8/artifacts/validation-output.txt,docs/kbdl/evidence/kbdl-011-r8/artifacts/validation-output.txt,PASS
+KBDL-VAL-003,Verified,Executed evidence — docs/kbdl/evidence/kbdl-011-r14/artifacts/val-003-audit.txt; corrected method PASS.,docs/kbdl/evidence/kbdl-011-r14/artifacts/val-003-audit.txt,docs/kbdl/evidence/kbdl-011-r14/artifacts/val-003-audit.txt,PASS
+KBDL-VAL-004,Not verified,R12 source-derived audit records the unresolved source coverage; no PASS claimed,None,None,PASS
+KBDL-VAL-005,Verified,Executed evidence — docs/kbdl/evidence/kbdl-011-r8/artifacts/validation-output.txt; stated repository method PASS.,docs/kbdl/evidence/kbdl-011-r8/artifacts/validation-output.txt,docs/kbdl/evidence/kbdl-011-r8/artifacts/validation-output.txt,PASS
+KBDL-VAL-006,Verified,Executed evidence — docs/kbdl/evidence/kbdl-011-r14/artifacts/val-006-audit.txt; corrected method PASS.,docs/kbdl/evidence/kbdl-011-r14/artifacts/val-006-audit.txt,docs/kbdl/evidence/kbdl-011-r14/artifacts/val-006-audit.txt,PASS
+KBDL-VAL-007,Verified,Executed evidence — docs/kbdl/evidence/kbdl-011-r11/artifacts/val-007-audit.txt; complete stated method PASS.,docs/kbdl/evidence/kbdl-011-r11/artifacts/val-007-audit.txt,docs/kbdl/evidence/kbdl-011-r11/artifacts/val-007-audit.txt,PASS
+KBDL-VAL-008,Not verified,Executed evidence — No executed independent method covers every stated cross-module invariant; complete method not established,None,None,PASS
+KBDL-VAL-009,Verified,Executed evidence — docs/kbdl/evidence/kbdl-011-r8/artifacts/validation-output.txt; stated repository method PASS.,docs/kbdl/evidence/kbdl-011-r8/artifacts/validation-output.txt,docs/kbdl/evidence/kbdl-011-r8/artifacts/validation-output.txt,PASS
+KBDL-VAL-010,Not verified,Executed evidence — No independent per-ID ledger-coverage proof covers the complete stated method,None,None,PASS
+KBDL-VAL-011,Not verified,Not verified — validation method has not been executed,None,None,PASS
+KBDL-VAL-012,Verified,Executed evidence — docs/kbdl/evidence/kbdl-011-r8/artifacts/validation-output.txt; stated repository method PASS.,docs/kbdl/evidence/kbdl-011-r8/artifacts/validation-output.txt,docs/kbdl/evidence/kbdl-011-r8/artifacts/validation-output.txt,PASS

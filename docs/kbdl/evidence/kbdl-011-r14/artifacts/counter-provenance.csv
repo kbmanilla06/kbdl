@@ -1,0 +1,32 @@
+Counter name,Source collection or artifact,Row count,Defect IDs
+Requirements audited,computed source set/artifact,317,None
+Effective records,computed source set/artifact,317,None
+Field-source rows,computed source set/artifact,5389,None
+Unresolved field sources,computed source set/artifact,0,None
+Source-precedence conflicts,computed source set/artifact,0,None
+Explicit group/ledger conflicts,computed source set/artifact,0,None
+Unresolved readable-group mappings,computed source set/artifact,0,None
+Approved requirements audited,computed source set/artifact,266,None
+Approved prompt-derived requirements,computed source set/artifact,131,None
+Other Approved authority requirements,computed source set/artifact,135,None
+Non-Approved AR2 mappings,computed source set/artifact,6,None
+Approved population overlap defects,computed source set/artifact,0,None
+Approved population omissions,computed source set/artifact,0,None
+Missing authority targets,computed source set/artifact,0,None
+Non-Approved authority targets,computed source set/artifact,0,None
+Lifecycle-only authority claims,computed source set/artifact,0,None
+Unsupported generic authority claims,computed source set/artifact,0,None
+Self-authority claims,computed source set/artifact,0,None
+Circular authority chains,computed source set/artifact,0,None
+Exact-location mismatches,computed source set/artifact,0,None
+Packet mismatches,computed source set/artifact,0,None
+Dependency mismatches,computed source set/artifact,0,None
+Evidence-field mismatches,computed source set/artifact,0,None
+Limitation-field mismatches,computed source set/artifact,0,None
+Hardcoded defect counters,computed source set/artifact,0,None
+Counters lacking source collections,computed source set/artifact,0,None
+Real source-model mutations executed,negative-tests/mutation-summary.txt,16,None
+Mutations detected by production validator,negative-tests/mutation-summary.txt,16,None
+Unexpected mutation passes,negative-tests/mutation-summary.txt,0,None
+Wrong-category mutation detections,negative-tests/mutation-summary.txt,0,None
+Fixtures remaining,negative-tests/mutation-summary.txt,0,None

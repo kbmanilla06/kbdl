@@ -1,0 +1,56 @@
+Case: ar2-scope-exclusion
+Mutation: actual source file changed in isolated repository copy
+Production validator: /var/folders/c9/2xxl5ws102d1hzrzrsjzjp_80000gn/T/kbdl-r14-mut-_4nn2pef/repo/docs/kbdl/evidence/kbdl-011-r14/scripts/production_validator.py
+Expected category: AR2_SCOPE
+Exit code: 1
+Detected categories: AR2_SCOPE; UNRESOLVED_FIELD_SOURCE
+Intended detection: True
+Fixture destroyed: yes
+
+STDOUT
+Requirements audited: 317
+Effective records: 317
+Field-source rows: 5389
+Unresolved field sources: 1
+Source-precedence conflicts: 0
+Explicit group/ledger conflicts: 0
+Unresolved readable-group mappings: 0
+Approved requirements audited: 266
+Approved prompt-derived requirements: 131
+Other Approved authority requirements: 135
+Non-Approved AR2 mappings: 6
+Approved population overlap defects: 0
+Approved population omissions: 0
+Missing authority targets: 0
+Non-Approved authority targets: 0
+Lifecycle-only authority claims: 0
+Unsupported generic authority claims: 0
+Self-authority claims: 0
+Circular authority chains: 0
+Exact-location mismatches: 0
+Packet mismatches: 0
+Dependency mismatches: 0
+Evidence-field mismatches: 0
+Limitation-field mismatches: 0
+Hardcoded defect counters: 0
+Counters lacking source collections: 0
+Real source-model mutations executed: 16
+Mutations detected by production validator: 16
+Unexpected mutation passes: 0
+Wrong-category mutation detections: 0
+Fixtures remaining: 0
+
+VAL-003 result: Not verified
+VAL-004 result: Not verified
+VAL-006 result: Not verified
+VAL-007 result: Verified
+
+Accepted limitations: 0
+Readiness approvals: 0
+Completion approvals: 0
+Implementation conformance: NOT VERIFIED
+Project completion: PENDING
+
+STDERR
+AR2_SCOPE:KBDL-GOV-001: missing confirmation or scope inclusion
+UNRESOLVED_FIELD_SOURCE:KBDL-GOV-001:Authority: Authority graph

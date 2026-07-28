@@ -1,0 +1,21 @@
+KBDL-011-R14 command transcript
+
+Preconditions:
+git fetch origin
+git remote -v
+git branch --show-current
+git status --short
+git rev-parse HEAD
+git rev-parse origin/main
+git ls-remote origin refs/heads/main
+git log --oneline --decorate -25
+
+Result: clean synchronized main at eed4cfe5a6509e79588f05f1022783bb2874db31; exit 0.
+
+Corrected validation:
+python3 docs/kbdl/evidence/kbdl-011-r14/scripts/run_mutation_controls.py
+python3 docs/kbdl/evidence/kbdl-011-r14/scripts/production_validator.py --root .
+git diff --check
+
+Mutation and production commands exit 0. Complete stdout, categories, individual mutation exit codes, and production counters are retained in negative-tests/mutation-summary.txt, individual negative-test artifacts, and artifacts/production-summary.txt.
+

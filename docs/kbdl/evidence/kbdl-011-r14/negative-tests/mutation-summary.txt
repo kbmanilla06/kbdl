@@ -1,0 +1,22 @@
+ledger-normative-lifecycle: PASS (exit 1; expected SOURCE_PRECEDENCE_CONFLICT; detected SOURCE_PRECEDENCE_CONFLICT)
+ledger-approved-decision: PASS (exit 1; expected DECISION_FIELD_MISMATCH; detected DECISION_FIELD_MISMATCH;UNRESOLVED_FIELD_SOURCE)
+missing-administrative-field: PASS (exit 1; expected MISSING_ADMIN_FIELD; detected GROUP_LEDGER_CONFLICT;MISSING_ADMIN_FIELD)
+missing-derivation-rule: PASS (exit 1; expected MISSING_SOURCE_RULE; detected MISSING_SOURCE_RULE)
+wrong-blueprint: PASS (exit 1; expected BLUEPRINT_MISMATCH; detected BLUEPRINT_MISMATCH;GROUP_LEDGER_CONFLICT)
+wrong-roadmap: PASS (exit 1; expected ROADMAP_MISMATCH; detected ROADMAP_MISMATCH)
+wrong-anchor: PASS (exit 1; expected LOCATION_MISMATCH; detected LOCATION_MISMATCH)
+wrong-packet: PASS (exit 1; expected PACKET_MISMATCH; detected PACKET_MISMATCH;UNRESOLVED_FIELD_SOURCE)
+wrong-dependency: PASS (exit 1; expected DEPENDENCY_MISMATCH; detected DEPENDENCY_MISMATCH;UNRESOLVED_FIELD_SOURCE)
+lifecycle-only-authority: PASS (exit 1; expected LIFECYCLE_ONLY_AUTHORITY; detected LIFECYCLE_ONLY_AUTHORITY;UNRESOLVED_FIELD_SOURCE)
+missing-standard-basis: PASS (exit 1; expected MISSING_STANDARD_BASIS; detected MISSING_STANDARD_BASIS;UNRESOLVED_FIELD_SOURCE)
+nonapproved-authority-target: PASS (exit 1; expected NONAPPROVED_AUTHORITY_TARGET; detected NONAPPROVED_AUTHORITY_TARGET;UNRESOLVED_FIELD_SOURCE)
+multi-node-cycle: PASS (exit 1; expected CIRCULAR_AUTHORITY; detected CIRCULAR_AUTHORITY;UNRESOLVED_FIELD_SOURCE)
+self-authority: PASS (exit 1; expected SELF_AUTHORITY; detected SELF_AUTHORITY;UNRESOLVED_FIELD_SOURCE)
+ar2-scope-exclusion: PASS (exit 1; expected AR2_SCOPE; detected AR2_SCOPE;UNRESOLVED_FIELD_SOURCE)
+historical-falsely-recovered: PASS (exit 1; expected HISTORICAL_RECOVERY; detected HISTORICAL_RECOVERY;UNRESOLVED_FIELD_SOURCE)
+
+Real source-model mutations executed: 16
+Mutations detected by production validator: 16
+Unexpected mutation passes: 0
+Wrong-category mutation detections: 0
+Fixtures remaining: 0
