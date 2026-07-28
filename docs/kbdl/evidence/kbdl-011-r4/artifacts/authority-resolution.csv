@@ -1,0 +1,318 @@
+Requirement ID,Authority,Targets,Missing targets,Circular
+KBDL-A11Y-001,"Lifecycle authority: Approved (directly restates WCAG 2.2 SC 1.1.1, Level A, and SC 1.4.5, Level AA)",None,None,False
+KBDL-A11Y-002,"Lifecycle authority: Approved (directly restates WCAG 2.2 SC 1.2.x, Level A/AA)",None,None,False
+KBDL-A11Y-003,"Lifecycle authority: Approved (directly restates WCAG 2.2 SC 1.3.1 and SC 4.1.2, both Level A)",None,None,False
+KBDL-A11Y-004,"Lifecycle authority: Approved (directly restates WCAG 2.2 SC 2.4.2, Level A, and SC 2.4.6, Level AA)",None,None,False
+KBDL-A11Y-005,"Lifecycle authority: Approved (directly restates WCAG 2.2 SC 1.3.2 and SC 2.4.3, both Level A)",None,None,False
+KBDL-A11Y-006,"Lifecycle authority: Approved (directly restates WCAG 2.2 SC 1.4.1, Level A, and the locked component-state-clarity rule)",None,None,False
+KBDL-A11Y-007,"Lifecycle authority: Approved (directly restates WCAG 2.2 SC 1.4.3, Level AA)",None,None,False
+KBDL-A11Y-008,"Lifecycle authority: Approved (directly restates WCAG 2.2 SC 1.4.11, Level AA)",None,None,False
+KBDL-A11Y-009,"Lifecycle authority: Approved (directly restates WCAG 2.2 SC 2.4.7, Level AA)",None,None,False
+KBDL-A11Y-010,"Lifecycle authority: Approved (directly restates WCAG 2.2 SC 2.4.11, Level AA)",None,None,False
+KBDL-A11Y-011,Lifecycle authority: Recommended (new KBDL policy — no prior theme decision addresses forced-colors mode; explicitly excluded from KBDL-DEC-013),KBDL-DEC-013,None,False
+KBDL-A11Y-012,"Lifecycle authority: Approved (directly restates WCAG 2.2 SC 1.4.4, Level AA)",None,None,False
+KBDL-A11Y-013,"Lifecycle authority: Approved (directly restates WCAG 2.2 SC 1.4.10, Level AA)",None,None,False
+KBDL-A11Y-014,"Lifecycle authority: Approved (directly restates WCAG 2.2 SC 1.4.12, Level AA)",None,None,False
+KBDL-A11Y-015,"Lifecycle authority: Approved (directly restates WCAG 2.2 SC 1.3.4, Level AA)",None,None,False
+KBDL-A11Y-016,"Lifecycle authority: Approved (directly restates WCAG 2.2 SC 2.1.1, SC 2.1.4, and SC 3.2.1, all Level A)",None,None,False
+KBDL-A11Y-017,"Lifecycle authority: Approved (directly restates WCAG 2.2 SC 2.1.2, Level A)",None,None,False
+KBDL-A11Y-018,"Lifecycle authority: Approved (directly restates WCAG 2.2 SC 2.4.1, Level A)",None,None,False
+KBDL-A11Y-019,Lifecycle authority: Approved,None,None,False
+KBDL-A11Y-020,"Lifecycle authority: Approved (directly restates WCAG 2.2 SC 2.5.8, Level AA)",None,None,False
+KBDL-A11Y-021,"Lifecycle authority: Recommended (new KBDL enhancement, not yet approved)",None,None,False
+KBDL-A11Y-022,"Lifecycle authority: Approved (directly restates WCAG 2.2 SC 2.5.2, Level A)",None,None,False
+KBDL-A11Y-023,"Lifecycle authority: Approved (directly restates WCAG 2.2 SC 2.5.1, Level A, and SC 2.5.7, Level AA)",None,None,False
+KBDL-A11Y-024,"Lifecycle authority: Approved (directly restates WCAG 2.2 SC 2.5.4, Level A)",None,None,False
+KBDL-A11Y-025,"Lifecycle authority: Approved (restates KBDL-MOT-022, already Approved under KBDL-DEC-014; not reopened)",KBDL-DEC-014; KBDL-MOT-022,None,False
+KBDL-A11Y-026,"Lifecycle authority: Approved (directly restates WCAG 2.2 SC 2.3.1, Level A, and restates the already-Approved KBDL-MOT-023)",KBDL-MOT-023,None,False
+KBDL-A11Y-027,"Lifecycle authority: Approved (directly restates WCAG 2.2 SC 2.2.1 and SC 2.2.2, both Level A)",None,None,False
+KBDL-A11Y-028,"Lifecycle authority: Approved (directly restates WCAG 2.2 SC 1.3.5, SC 2.5.3, SC 3.2.2, SC 3.3.2, and SC 3.3.7, Levels A/AA as listed)",None,None,False
+KBDL-A11Y-029,"Lifecycle authority: Approved (directly restates WCAG 2.2 SC 3.3.1, Level A, and SC 3.3.3, Level AA)",None,None,False
+KBDL-A11Y-030,"Lifecycle authority: Approved (directly restates WCAG 2.2 SC 3.3.4, Level AA)",None,None,False
+KBDL-A11Y-031,"Lifecycle authority: Approved (directly restates WCAG 2.2 SC 4.1.3, Level AA)",None,None,False
+KBDL-A11Y-032,"Lifecycle authority: Approved (directly restates WCAG 2.2 SC 3.3.8, Level AA)",None,None,False
+KBDL-A11Y-033,"Lifecycle authority: Approved (directly restates WCAG 2.2 SC 3.1.1, Level A, and KBDL-PRN-003, Consumer Comprehension)",KBDL-PRN-003,None,False
+KBDL-A11Y-034,"Lifecycle authority: Approved (directly restates WCAG 2.2 SC 2.4.4, Level A, and SC 3.2.6, Level A)",None,None,False
+KBDL-A11Y-035,"Lifecycle authority: Recommended (new KBDL testing-process enhancement, not yet approved)",None,None,False
+KBDL-A11Y-036,Lifecycle authority: Approved (cross-reference to already-Approved requirements),None,None,False
+KBDL-A11Y-037,Lifecycle authority: Approved (restates KBDL-A11Y-003 applied to tabular data),KBDL-A11Y-003,None,False
+KBDL-A11Y-038,Lifecycle authority: Approved (cross-reference),None,None,False
+KBDL-A11Y-039,Lifecycle authority: Approved (cross-reference),None,None,False
+KBDL-A11Y-040,Lifecycle authority: Approved (directly restates principles.md §9.4),None,None,False
+KBDL-CMP-001,Lifecycle authority: Approved (structural completeness requirement),None,None,False
+KBDL-CMP-002,Lifecycle authority: Approved (directly restates WCAG 2.2 SC 4.1.2 and the WAI-ARIA First Rule of ARIA Use),None,None,False
+KBDL-CMP-003,Lifecycle authority: Approved (directly restates WCAG 2.2 SC 4.1.2 and SC 2.5.3),None,None,False
+KBDL-CMP-004,Lifecycle authority: Approved (directly restates the locked component-state-clarity rule),None,None,False
+KBDL-CMP-005,Lifecycle authority: Approved (scope-control requirement),None,None,False
+KBDL-CMP-006,Lifecycle authority: Approved (directly restates WCAG 2.2 SC 2.4.7 and SC 2.4.11),None,None,False
+KBDL-CMP-007,Lifecycle authority: Approved (directly restates WCAG 2.2 SC 2.1.1 and SC 2.1.2),None,None,False
+KBDL-CMP-008,Lifecycle authority: Approved (directly restates WCAG 2.2 SC 2.5.2 and SC 2.5.8),None,None,False
+KBDL-CMP-009,"Lifecycle authority: Approved (directly restates KBDL-RSP-001, 006, 007, 020)",KBDL-RSP-001,None,False
+KBDL-CMP-010,Lifecycle authority: Approved (directly restates KBDL-A11Y-020),KBDL-A11Y-020,None,False
+KBDL-CMP-011,Lifecycle authority: Approved (directly restates the approved theme architecture),None,None,False
+KBDL-CMP-012,Lifecycle authority: Approved (directly restates the approved foundation architecture),None,None,False
+KBDL-CMP-013,"Lifecycle authority: Approved (structural requirement — the obligation to document motion necessity/purpose/hierarchy/parity per component is itself Approved; the *exact* component-specific duration, distance, scale, stagger, easing, choreography, or rendering-technology mapping for any individual component is not newly approved by this requirement where no prior approved KBDL rule already supplies it — such exact mappings remain governed by the existing motion unresolved/not-approval-ready items in motion/README.md §10.3 and this module's own §36)",None,None,False
+KBDL-CMP-014,Lifecycle authority: Approved (core restates native-semantics-first and state-model rules),None,None,False
+KBDL-CMP-015,Lifecycle authority: Recommended (new component taxonomy),None,None,False
+KBDL-CMP-016,Lifecycle authority: Approved (directly restates WCAG 2.2 SC 4.1.2),None,None,False
+KBDL-CMP-017,Lifecycle authority: Recommended (new threshold guidance),None,None,False
+KBDL-CMP-018,Lifecycle authority: Approved (directly restates WAI-ARIA),None,None,False
+KBDL-CMP-019,Lifecycle authority: Approved (directly restates WCAG 2.2 SC 2.4.4),None,None,False
+KBDL-CMP-020,Lifecycle authority: Recommended (new composition guidance),None,None,False
+KBDL-CMP-021,Lifecycle authority: Approved (directly restates the WAI-ARIA disclosure pattern),None,None,False
+KBDL-CMP-022,"Lifecycle authority: Approved (directly restates WCAG 2.2 SC 3.3.2, SC 1.3.5, SC 3.3.7)",None,None,False
+KBDL-CMP-023,Lifecycle authority: Approved,None,None,False
+KBDL-CMP-024,Lifecycle authority: Approved (directly restates WCAG 2.2 SC 3.3.8),None,None,False
+KBDL-CMP-025,Lifecycle authority: Recommended (new component taxonomy),None,None,False
+KBDL-CMP-026,Lifecycle authority: Approved,None,None,False
+KBDL-CMP-027,Lifecycle authority: Approved (directly restates native-semantics-first),None,None,False
+KBDL-CMP-028,Lifecycle authority: Approved (directly restates WAI-ARIA/APG),None,None,False
+KBDL-CMP-029,Lifecycle authority: Recommended (new threshold guidance),None,None,False
+KBDL-CMP-030,Lifecycle authority: Approved,None,None,False
+KBDL-CMP-031,Lifecycle authority: Approved,None,None,False
+KBDL-CMP-032,Lifecycle authority: Approved (directly restates WAI-ARIA switch role),None,None,False
+KBDL-CMP-033,Lifecycle authority: Approved,None,None,False
+KBDL-CMP-034,Lifecycle authority: Approved,None,None,False
+KBDL-CMP-035,Lifecycle authority: Approved (behavioral requirement),None,None,False
+KBDL-CMP-036,Lifecycle authority: Recommended (new component-level guidance),None,None,False
+KBDL-CMP-037,"Lifecycle authority: Approved (directly restates WCAG 2.2 SC 3.3.1, SC 3.3.3, SC 3.3.4, SC 3.3.7, SC 4.1.3)",None,None,False
+KBDL-CMP-038,Lifecycle authority: Approved (directly restates WCAG 2.2 SC 2.4.1),None,None,False
+KBDL-CMP-039,Lifecycle authority: Approved,None,None,False
+KBDL-CMP-040,Lifecycle authority: Approved,None,None,False
+KBDL-CMP-041,Lifecycle authority: Recommended (depends on unapproved responsive values),None,None,False
+KBDL-CMP-042,Lifecycle authority: Approved,None,None,False
+KBDL-CMP-043,Lifecycle authority: Approved,None,None,False
+KBDL-CMP-044,Lifecycle authority: Recommended,None,None,False
+KBDL-CMP-045,Lifecycle authority: Approved (directly restates the WAI-ARIA tabs pattern),None,None,False
+KBDL-CMP-046,Lifecycle authority: Recommended (new component choice),None,None,False
+KBDL-CMP-047,Lifecycle authority: Approved,None,None,False
+KBDL-CMP-048,Lifecycle authority: Recommended,None,None,False
+KBDL-CMP-049,Lifecycle authority: Approved,None,None,False
+KBDL-CMP-050,Lifecycle authority: Approved (restates the shared contract applied compositionally),None,None,False
+KBDL-CMP-051,Lifecycle authority: Approved (directly restates principles.md §9.4),None,None,False
+KBDL-CMP-052,"Lifecycle authority: Approved (scope-control requirement, extends KBDL-CMP-005)",KBDL-CMP-005,None,False
+KBDL-CMP-053,"Lifecycle authority: Approved (extends the already-Approved native- semantics-first rule, KBDL-CMP-002, and the adopted ARIA 1.2 region role definition, to this module's surfaces)",KBDL-CMP-002,None,False
+KBDL-CMP-054,Lifecycle authority: Approved (restates ARIA 1.2's region role definition),None,None,False
+KBDL-CMP-055,"Lifecycle authority: Approved (restates the native HTML prohibition on nested interactive elements and the already-Approved hover- independent-discoverability requirement, responsive.md §24)",None,None,False
+KBDL-CMP-056,"Lifecycle authority: Approved (dictated outcome of the already-adopted WCAG 2.2 focus, keyboard, and reading-order rules applied to layered content — a structural scope statement, not new policy)",None,None,False
+KBDL-CMP-057,"Lifecycle authority: Approved (restates the already-adopted WCAG 2.2 SC 2.1.1 Keyboard and SC 2.1.2 No Keyboard Trap, and the already- Approved KBDL-007 keyboard contract, KBDL-CMP-007, applied explicitly to non-modal overlays)",KBDL-CMP-007,None,False
+KBDL-CMP-058,Lifecycle authority: Approved (dictated outcome of the already-adopted WCAG 2.2 SC 2.4.3 Focus Order — an unset focus target would violate the requirement that focus order remain determinable),None,None,False
+KBDL-CMP-059,"Lifecycle authority: Approved (restates the already-adopted WCAG 2.2 SC 2.2.1 Timing Adjustable, extended to this module's dismissible surfaces generally, beyond the Toast-specific case in KBDL-CMP-090)",KBDL-CMP-090,None,False
+KBDL-CMP-060,"Lifecycle authority: Approved (restates the already-Approved motion- parity rule, motion/accessibility-performance.md §1)",None,None,False
+KBDL-CMP-061,"Lifecycle authority: Approved (restates the locked component-state- clarity rule, principles.md §5.1, and KBDL-CMP-004, applied explicitly to the states this document introduces)",KBDL-CMP-004,None,False
+KBDL-CMP-062,"Lifecycle authority: Approved (restates KBDL-CMP-053/002 as an explicit prohibition, distinguishing the general preference from the specific misuse it forbids)",KBDL-CMP-053,None,False
+KBDL-CMP-063,"Lifecycle authority: Approved (restates the already-Approved correctness/safety priority, principles.md §4 item 1, as a general baseline; KBDL-CMP-103 states its Offline/ Reconnecting-specific application)",KBDL-CMP-103,None,False
+KBDL-CMP-064,Lifecycle authority: Approved (extends the existing KBDL security principle already established in components-core.md §37 as a general baseline; KBDL-CMP-101 and KBDL-CMP-104 state its Error-State- and Permission/Not-Found-specific applications),KBDL-CMP-101; KBDL-CMP-104,None,False
+KBDL-CMP-065,"Lifecycle authority: Approved (extends the already-Approved KBDL-007 accessible-naming requirement, KBDL-CMP-003, to this module)",KBDL-CMP-003,None,False
+KBDL-CMP-066,"Lifecycle authority: Approved (restates the already-Approved KBDL-007 profile-consistency requirement, KBDL-CMP-051, applied to this module)",KBDL-CMP-051,None,False
+KBDL-CMP-067,Lifecycle authority: Recommended (new component-level taxonomy),None,None,False
+KBDL-CMP-068,Lifecycle authority: Approved (restates the adopted ARIA disclosure pattern's role/state definitions and the already-Approved KBDL-007 disclosure-trigger contract),None,None,False
+KBDL-CMP-069,Lifecycle authority: Recommended (new component-level policy),None,None,False
+KBDL-CMP-070,"Lifecycle authority: Approved (restates the already-adopted WCAG 2.2 SC 1.3.1 Info and Relationships and the native-semantics-first rule, KBDL-CMP-002)",KBDL-CMP-002,None,False
+KBDL-CMP-071,"the adopted WAI-ARIA 1.2 aria-modal property definition, which specifies that assistive technology should restrict its reading and navigation to the modal element while it is active, directly requires background content to be excluded from that navigation — this is the primary source for ""unreachable by ... screen-reader virtual cursor."" The already-adopted WCAG 2.2 SC 2.4.3 Focus Order and SC 2.4.11 Focus Not Obscured support, but do not by themselves fully dictate, this outcome for pointer/sequential-navigation reachability. The approved KBDL-008 prompt's Overlay Architecture section explicitly requires ""Background inertness"" as a mandatory field for every modal overlay, which is the source for treating this as a complete, single normative rule rather than an inference from the standards alone",None,None,False
+KBDL-CMP-072,"""dismissible via Escape"" and ""remains visible while the trigger has hover or focus"" restate the already-adopted WCAG 2.2 SC 1.4.13 Content on Hover or Focus, which dictates exactly these three properties (dismissible, hoverable, persistent). ""Must never be the sole source of its trigger's accessible name"" restates the already- Approved KBDL-007 accessible-naming requirement, KBDL-CMP-003, and the adopted WCAG 2.2 SC 4.1.2 Name, Role, Value — not SC 1.4.13, which does not address naming. ""Contains only non- interactive text"" and ""leaves focus on its trigger"" are not dictated by SC 1.4.13 or the WAI-ARIA tooltip role definition alone (the ARIA 1.2 spec describes tooltip as advisory but does not itself prohibit interactive descendants); these two clauses are normative because the approved KBDL-008 prompt explicitly requires ""Informational, non-interactive purpose"" and ""Interactive-content prohibition"" as mandatory Tooltip fields. This requirement does not treat the APG tooltip pattern (explicitly non-consensus, see §4) as a source for any clause",KBDL-CMP-003,None,False
+KBDL-CMP-073,"Lifecycle authority: Recommended (new KBDL-specific timing/placement policy, not dictated by the non-consensus APG tooltip pattern)",None,None,False
+KBDL-CMP-074,Lifecycle authority: Recommended (new component-level taxonomy and dismissal policy),None,None,False
+KBDL-CMP-075,Lifecycle authority: Approved (restates the adopted WAI-ARIA 1.2 menu role definitions and the already-Approved KBDL-007 trigger contract),None,None,False
+KBDL-CMP-076,Lifecycle authority: Recommended (new component-level interaction policy; the underlying APG menu pattern is not automatically Approved),None,None,False
+KBDL-CMP-077,Lifecycle authority: Approved (restates the adopted WAI-ARIA 1.2 listbox role definitions and the already-Approved KBDL-007 combobox contract),None,None,False
+KBDL-CMP-078,"Lifecycle authority: Approved (restates the already-adopted WCAG 2.2 SC 4.1.2 Name, Role, Value and SC 2.1.1 Keyboard)",None,None,False
+KBDL-CMP-079,"Lifecycle authority: Approved (restates KBDL-CMP-071 and the already-adopted WCAG 2.2 SC 2.1.2 No Keyboard Trap, applied to the definition of modality itself — this is the ""modal integrity"" rule)",KBDL-CMP-071,None,False
+KBDL-CMP-080,Lifecycle authority: Recommended (new component-level sizing and nesting policy),None,None,False
+KBDL-CMP-081,Lifecycle authority: Approved (restates the adopted WAI-ARIA 1.2 alertdialog role definition),None,None,False
+KBDL-CMP-082,"Lifecycle authority: Approved (scope-control requirement, restates KBDL-CMP-005/KBDL-CMP-052)",KBDL-CMP-005; KBDL-CMP-052,None,False
+KBDL-CMP-083,Lifecycle authority: Recommended (new component-level taxonomy),None,None,False
+KBDL-CMP-084,"Lifecycle authority: Approved (dictated outcome of the already-adopted WCAG 2.2 SC 2.4.3 Focus Order and SC 2.1.2 No Keyboard Trap applied to nested layered content — not a new policy choice, since any other outcome would create an indeterminate or trapped focus state)",None,None,False
+KBDL-CMP-085,Lifecycle authority: Recommended (new component-level policy),None,None,False
+KBDL-CMP-086,Lifecycle authority: Approved (restates KBDL-A11Y-031 and the adopted WAI-ARIA 1.2 live-region role definitions),KBDL-A11Y-031,None,False
+KBDL-CMP-087,Lifecycle authority: Approved (restates KBDL-CMP-004's already- Approved state-clarity rule and the adopted WCAG 2.2 SC 1.4.1 Use of Color),KBDL-CMP-004,None,False
+KBDL-CMP-088,"""important, time-sensitive messages"" and ""must not move focus by default"" restate the adopted WAI-ARIA 1.2 alert role definition, which specifies an assertive live region for important, time-sensitive information without describing any inherent focus-moving behavior. ""Must not be used for routine or successful updates"" is not itself dictated by the ARIA alert role definition (which describes what the role announces, not which messages a component must avoid); this restriction is normative because the approved KBDL-008 prompt explicitly requires ""Do not use alert for every successful or routine update"" as a mandatory Alert constraint",None,None,False
+KBDL-CMP-089,Lifecycle authority: Recommended (new component-level taxonomy),None,None,False
+KBDL-CMP-090,"""sensitive information must not be exposed"" extends the existing KBDL security-safe-disclosure principle, components-core.md §37. ""Critical information must not be presented only in a transient toast without a persistent path"" and ""must not move focus to itself by default"" are not directly dictated by WCAG 2.2 SC 2.2.1 Timing Adjustable (which governs user-adjustable time limits on content generally, not the specific toast/persistent-path pattern) or by KBDL-A11Y-031 (which requires programmatic determinability, not a persistence guarantee); these two clauses are normative because the approved KBDL-008 prompt explicitly lists both as mandatory Toast/Snackbar ""Do not"" constraints. SC 2.2.1's adjustable-timing principle is cited as supporting rationale, not as the direct source of the persistent-path requirement",KBDL-A11Y-031,None,False
+KBDL-CMP-091,Lifecycle authority: Recommended (new component-level timing and queueing policy),None,None,False
+KBDL-CMP-092,Lifecycle authority: Approved (restates KBDL-A11Y-031 and the adopted WAI-ARIA 1.2 status/log role and aria-live/aria-atomic definitions),KBDL-A11Y-031,None,False
+KBDL-CMP-093,"Lifecycle authority: Approved (restates the adopted WCAG 2.2 SC 1.1.1 Non-text Content and SC 4.1.2 Name, Role, Value)",None,None,False
+KBDL-CMP-094,Lifecycle authority: Approved (restates the adopted WAI-ARIA 1.2 progressbar role definition and native <progress> semantics),None,None,False
+KBDL-CMP-095,Lifecycle authority: Approved (restates the adopted WAI-ARIA 1.2 meter role definition and native <meter> semantics),None,None,False
+KBDL-CMP-096,"""hidden from assistive technology as decorative"" restates the adopted WAI-ARIA 1.2 aria-hidden semantics for purely decorative content. ""An equivalent loading announcement must be available through a separate status mechanism"" restates KBDL-A11Y-031. ""Must not expose meaningless placeholder shapes as if they were content"" is not itself dictated by either of those sources; it is normative because the approved KBDL-008 prompt explicitly requires ""Decorative accessibility treatment"" and ""Equivalent loading announcement"" as mandatory Skeleton fields, which together imply placeholder shapes must not be presented as meaningful content",KBDL-A11Y-031,None,False
+KBDL-CMP-097,"Lifecycle authority: Approved (restates KBDL-A11Y-031 and the locked component-state-clarity rule, principles.md §5.1)",KBDL-A11Y-031,None,False
+KBDL-CMP-098,"Lifecycle authority: Approved (extends the already-Approved KBDL-007 submit-loading/duplicate-submission-prevention contract, components-core.md §23, to the surface-level loading indicator)",None,None,False
+KBDL-CMP-099,Lifecycle authority: Recommended (new component-level taxonomy),None,None,False
+KBDL-CMP-100,"this requirement is normative because the approved KBDL-008 prompt explicitly requires ""Preservation of entered criteria"" as a mandatory No-Results State field. WCAG 2.2 SC 3.3.7 Redundant Entry (which prohibits requiring re-entry of information already supplied earlier in the same process) is cited as supporting rationale by analogy, not as a direct restatement — SC 3.3.7 governs multi-step process re-entry generally and does not by itself mandate preserving search/filter state specifically on a no-results result",None,None,False
+KBDL-CMP-101,"that an error must be identified and described restates the already-adopted WCAG 2.2 SC 3.3.1 Error Identification, which requires errors be identified and described in text, but does not itself require classifying an error as ""recoverable or blocking"" or specifying a ""retry or alternative action"" — SC 3.3.1 governs identification, not remediation-path taxonomy. The recoverable/blocking classification and the retry/alternative-action requirement are normative because the approved KBDL-008 prompt explicitly requires ""Recoverable versus blocking error,"" ""Retry,"" and ""Alternative action"" as mandatory Error State fields, consistent with the already-Approved Technical Utility recovery-support principle, principles.md §3. The prohibition on exposing stack traces, internal exception details, credentials, or private data restates KBDL-CMP-064",KBDL-CMP-064,None,False
+KBDL-CMP-102,Lifecycle authority: Recommended (new component-level taxonomy),None,None,False
+KBDL-CMP-103,"Lifecycle authority: Approved (extends the already-Approved KBDL correctness/safety principle, principles.md §4 item 1, and the existing KBDL-007 form-recovery data-preservation pattern)",None,None,False
+KBDL-CMP-104,"Lifecycle authority: Approved (extends the existing KBDL security principle already established in components-core.md §37, ""a disabled button is not access control"")",None,None,False
+KBDL-CMP-105,Lifecycle authority: Recommended (new component-level threshold and interaction model; the APG grid pattern is not automatically Approved),None,None,False
+KBDL-CMP-106,Lifecycle authority: Recommended (new component-level threshold and interaction model; the APG tree pattern is not automatically Approved),None,None,False
+KBDL-CMP-107,Lifecycle authority: Approved (restates the already-adopted WCAG 2.2 SC 2.2.2),None,None,False
+KBDL-CMP-108,Lifecycle authority: Recommended (new component-level policy),None,None,False
+KBDL-CMP-109,"Lifecycle authority: Approved (restates the already-adopted WCAG 2.2 SC 1.4.1 Use of Color, SC 1.3.1 Info and Relationships, and SC 2.1.1 Keyboard, applied to chart content, using the existing approved Data-display roles rather than inventing new ones)",None,None,False
+KBDL-CMP-110,Lifecycle authority: Recommended (new component-level taxonomy and interaction model),None,None,False
+KBDL-CMP-111,"Lifecycle authority: Recommended (new component-level transformation policy; the exact trigger point depends on the eventual approved KBDL-RSP-002 breakpoint values, cited here only as related context, not as authority)",KBDL-RSP-002,None,False
+KBDL-CUS-001,KBDL-DEC-004 plus the mandatory KBDL-010 prompt,KBDL-DEC-004,None,False
+KBDL-CUS-002,KBDL lifecycle conventions and mandatory KBDL-010 prompt,None,None,False
+KBDL-CUS-003,Mandatory KBDL-010 classification model,None,None,False
+KBDL-CUS-004,Mandatory KBDL-010 Class A rule and owning-module lifecycle rules,None,None,False
+KBDL-CUS-005,"KBDL-PRN-005, KBDL-PRO-005, and mandatory KBDL-010 prompt",KBDL-PRN-005; KBDL-PRO-005,None,False
+KBDL-CUS-006,KBDL governance plus mandatory KBDL-010 Classes C and D,None,None,False
+KBDL-CUS-007,"KBDL-GOV-002, governance exception process, and mandatory KBDL-010 Classes E/F",None,None,False
+KBDL-CUS-008,Mandatory KBDL-010 workflow,None,None,False
+KBDL-CUS-009,Mandatory KBDL-010 intake fields,None,None,False
+KBDL-CUS-010,"KBDL-DEC-004, conventions, and mandatory KBDL-010 record fields",KBDL-DEC-004,None,False
+KBDL-CUS-011,Mandatory KBDL-010 impact and evidence clauses,None,None,False
+KBDL-CUS-012,Mandatory KBDL-010 change and rollback clauses,None,None,False
+KBDL-CUS-013,Approved foundation requirements plus mandatory KBDL-010 boundary,None,None,False
+KBDL-CUS-014,"Approved KBDL-THM-003, 005, 006, 013, 014 plus mandatory KBDL-010 boundary",KBDL-THM-003,None,False
+KBDL-CUS-015,Approved motion requirements plus mandatory KBDL-010 boundary,None,None,False
+KBDL-CUS-016,Approved responsive requirements plus mandatory KBDL-010 boundary,None,None,False
+KBDL-CUS-017,"KBDL-GOV-002, Approved accessibility requirements, and mandatory KBDL-010 boundary",None,None,False
+KBDL-CUS-018,Approved KBDL-007 requirements plus mandatory KBDL-010 boundary,None,None,False
+KBDL-CUS-019,Approved KBDL-008 requirements plus mandatory KBDL-010 boundary,None,None,False
+KBDL-CUS-020,"Approved KBDL-PRO-001–008, 010–015, 019–026 plus mandatory KBDL-010 boundary",KBDL-PRO-001,None,False
+KBDL-CUS-021,Prior Approved security/correctness requirements plus mandatory KBDL-010 boundary,None,None,False
+KBDL-CUS-022,Mandatory KBDL-010 handoff and scope clauses,None,None,False
+KBDL-CUS-023,Not applicable — pending explicit project-owner approval; assignment of a CUS ID does not grant implementation authority,None,None,False
+KBDL-CUS-024,Not applicable — pending explicit project-owner approval; assignment of a CUS ID does not grant implementation authority,None,None,False
+KBDL-CUS-025,Not applicable — pending explicit project-owner approval; assignment of a CUS ID does not grant implementation authority,None,None,False
+KBDL-CUS-026,Not applicable — pending explicit project-owner approval; assignment of a CUS ID does not grant implementation authority,None,None,False
+KBDL-CUS-027,Not applicable — pending explicit project-owner approval; assignment of a CUS ID does not grant implementation authority,None,None,False
+KBDL-CUS-028,Not applicable — pending explicit project-owner approval; assignment of a CUS ID does not grant implementation authority,None,None,False
+KBDL-CUS-029,Not applicable — pending explicit project-owner approval; assignment of a CUS ID does not grant implementation authority,None,None,False
+KBDL-CUS-030,Not applicable — deliberately deferred; assignment of a CUS ID does not grant implementation authority,None,None,False
+KBDL-FND-001,Lifecycle authority: Approved,None,None,False
+KBDL-FND-002,Lifecycle authority: Approved,None,None,False
+KBDL-FND-003,Lifecycle authority: Approved,None,None,False
+KBDL-FND-004,Lifecycle authority: Approved,None,None,False
+KBDL-FND-005,Lifecycle authority: Approved,None,None,False
+KBDL-FND-006,Lifecycle authority: Approved,None,None,False
+KBDL-FND-007,Lifecycle authority: Approved,None,None,False
+KBDL-FND-008,Lifecycle authority: Approved,None,None,False
+KBDL-FND-009,Lifecycle authority: Approved (project owner approved via the foundation decision packet; see KBDL-DEC-012),KBDL-DEC-012,None,False
+KBDL-FND-010,Lifecycle authority: Approved (project owner approved via the foundation decision packet; see KBDL-DEC-012),KBDL-DEC-012,None,False
+KBDL-FND-011,Lifecycle authority: Approved (project owner approved via the foundation decision packet; see KBDL-DEC-012),KBDL-DEC-012,None,False
+KBDL-FND-012,Lifecycle authority: Approved (project owner approved via the foundation decision packet; see KBDL-DEC-012),KBDL-DEC-012,None,False
+KBDL-GOV-001,Approved KBDL-001 prompt and KBDL-DEC-001/KBDL-DEC-002,KBDL-DEC-001; KBDL-DEC-002,None,False
+KBDL-GOV-002,Approved KBDL-001 prompt and KBDL-DEC-001/KBDL-DEC-002,KBDL-DEC-001; KBDL-DEC-002,None,False
+KBDL-GOV-003,Approved KBDL-001 prompt and KBDL-DEC-001/KBDL-DEC-002,KBDL-DEC-001; KBDL-DEC-002,None,False
+KBDL-MOT-001,"Lifecycle authority: Approved (directly restates the locked Motion Purpose rule, principles.md §5.1)",None,None,False
+KBDL-MOT-002,Lifecycle authority: Approved,None,None,False
+KBDL-MOT-003,Lifecycle authority: Approved (directly extends KBDL-PRN-002),KBDL-PRN-002,None,False
+KBDL-MOT-004,"Lifecycle authority: Approved (structural requirement; the categories' exact intensity defaults remain Recommended, see KBDL-MOT-006)",KBDL-MOT-006,None,False
+KBDL-MOT-005,Lifecycle authority: Approved (per KBDL-DEC-014; the specific five-level structure and names were new KBDL-005 policy until this approval),KBDL-DEC-014,None,False
+KBDL-MOT-006,"Lifecycle authority: Approved (per KBDL-DEC-014, decision packet item 14)",KBDL-DEC-014,None,False
+KBDL-MOT-007,"Lifecycle authority: Approved (per KBDL-DEC-014, decision packet item 2, together with KBDL-MOT-008, as one timing system)",KBDL-DEC-014; KBDL-MOT-008,None,False
+KBDL-MOT-008,"Lifecycle authority: Approved (per KBDL-DEC-014, decision packet item 2, together with KBDL-MOT-007, as one timing system)",KBDL-DEC-014; KBDL-MOT-007,None,False
+KBDL-MOT-009,"Lifecycle authority: Approved (per KBDL-DEC-014, decision packet item 3)",KBDL-DEC-014,None,False
+KBDL-MOT-010,"Lifecycle authority: Approved (per KBDL-DEC-014, decision packet item 4)",KBDL-DEC-014,None,False
+KBDL-MOT-011,"Lifecycle authority: Approved (per KBDL-DEC-014, decision packet item 5)",KBDL-DEC-014,None,False
+KBDL-MOT-012,Lifecycle authority: Approved (directly restates the safety/correctness priority already established in KBDL-PRN-002 and §3.3),KBDL-PRN-002,None,False
+KBDL-MOT-013,"Lifecycle authority: Approved (per KBDL-DEC-014, decision packet item 15)",KBDL-DEC-014,None,False
+KBDL-MOT-014,"Lifecycle authority: Approved (directly restates Technical Utility's ""visible progress"" and ""error prevention"" qualities)",None,None,False
+KBDL-MOT-015,Lifecycle authority: Approved (directly restates accessibility's requirement for a non-gesture equivalent),None,None,False
+KBDL-MOT-016,"Lifecycle authority: Approved (directly restates the locked component-state-clarity rule — ""must not rely on color/motion alone"" — and Accessibility by Default)",None,None,False
+KBDL-MOT-017,"Lifecycle authority: Approved (directly restates the locked Motion Purpose rule that continuous motion must be controlled, and the already-Approved reduced-motion requirement KBDL-THM-012a)",KBDL-THM-012a,None,False
+KBDL-MOT-018,"Lifecycle authority: Approved (directly restates accessibility's requirement that content remain accessible without script/animation, and the reduced-motion requirement)",None,None,False
+KBDL-MOT-019,"Lifecycle authority: Approved (directly restates WCAG 2.2 AA's autoplay-with-sound prohibition and pause/stop requirement, already adopted under KBDL-DEC-010)",KBDL-DEC-010,None,False
+KBDL-MOT-020,"Lifecycle authority: Approved (per KBDL-DEC-014, decision packet item 10; the underlying non-blocking, readable, focus-preserving requirements were already Approved under KBDL-THM-012/012a and are unaffected)",KBDL-DEC-014; KBDL-THM-012,None,False
+KBDL-MOT-021,Lifecycle authority: Approved (directly restates safety/correctness and state-comprehension priorities),None,None,False
+KBDL-MOT-022,"Lifecycle authority: Approved (directly restates KBDL-THM-012a and KBDL's enhanced motion-safety baseline, KBDL-DEC-010)",KBDL-DEC-010; KBDL-THM-012a,None,False
+KBDL-MOT-023,"Lifecycle authority: Approved (directly restates KBDL's enhanced motion-safety requirement, KBDL-DEC-010)",KBDL-DEC-010,None,False
+KBDL-MOT-024,"Lifecycle authority: Approved (directly restates Performance-Aware Enhancement, KBDL-PRN-003/§6.9)",KBDL-PRN-003,None,False
+KBDL-MOT-025,Lifecycle authority: Approved (directly restates Accessibility by Default),None,None,False
+KBDL-MOT-026,"Lifecycle authority: Approved (directly restates KBDL-PRN-007, Adaptability Without Fragmentation)",KBDL-PRN-007,None,False
+KBDL-MOT-027,Lifecycle authority: Approved (this governance rule itself directly restates conventions.md §1.1),None,None,False
+KBDL-MOT-028,"Lifecycle authority: Approved (per KBDL-DEC-014, decision packet item 6)",KBDL-DEC-014,None,False
+KBDL-MOT-029,"Lifecycle authority: Approved (per KBDL-DEC-014, decision packet item 7)",KBDL-DEC-014,None,False
+KBDL-MOT-030,"Lifecycle authority: Approved (per KBDL-DEC-014, decision packet item 8)",KBDL-DEC-014,None,False
+KBDL-MOT-031,"Lifecycle authority: Approved (per KBDL-DEC-014, decision packet item 9)",KBDL-DEC-014,None,False
+KBDL-MOT-032,"Lifecycle authority: Approved (per KBDL-DEC-014, decision packet item 11)",KBDL-DEC-014,None,False
+KBDL-MOT-033,"Lifecycle authority: Approved (per KBDL-DEC-014, decision packet item 12)",KBDL-DEC-014,None,False
+KBDL-MOT-034,"Lifecycle authority: Approved (per KBDL-DEC-014, decision packet item 13)",KBDL-DEC-014,None,False
+KBDL-PRN-001,Lifecycle authority: Approved,None,None,False
+KBDL-PRN-002,Lifecycle authority: Approved,None,None,False
+KBDL-PRN-003,Lifecycle authority: Approved,None,None,False
+KBDL-PRN-004,Lifecycle authority: Approved,None,None,False
+KBDL-PRN-005,Lifecycle authority: Approved,None,None,False
+KBDL-PRN-006,Lifecycle authority: Approved,None,None,False
+KBDL-PRN-007,Lifecycle authority: Approved,None,None,False
+KBDL-PRN-008,Lifecycle authority: Approved,None,None,False
+KBDL-PRO-001,"restates and consolidates the already-Approved KBDL-PRN-007, KBDL-FND-008, KBDL-THM-006, KBDL-MOT-026, KBDL-A11Y-040, KBDL-CMP-051, and KBDL-CMP-066, each of which independently requires shared architecture in its own module",KBDL-A11Y-040; KBDL-CMP-051; KBDL-CMP-066; KBDL-FND-008; KBDL-MOT-026; KBDL-PRN-007; KBDL-THM-006,None,False
+KBDL-PRO-002,"the accessibility-preference distinction restates the already-Approved independence of reduced-motion and forced-colors preferences from any presentational grouping, accessibility.md §44; the complete terminology distinction is an explicit mandatory clause of the approved KBDL-009 prompt's Terminology section",None,None,False
+KBDL-PRO-003,"restates principles.md §9.4 and the design-decision hierarchy, principles.md §8",None,None,False
+KBDL-PRO-004,restates principles.md §5.2 and the already-Approved per-module profile-interpretation sections cited in §3,None,None,False
+KBDL-PRO-005,restates principles.md §5.3,None,None,False
+KBDL-PRO-006,"scope-control requirement, explicit mandatory clause of the approved KBDL-009 prompt's Locked/Controlled/ Open section",None,None,False
+KBDL-PRO-007,the required field list is an explicit mandatory clause of the approved KBDL-009 prompt's Profile Selection and Declaration section,None,None,False
+KBDL-PRO-008,"explicit mandatory clause of the approved KBDL-009 prompt's Profile Selection and Declaration section; also extends the already-Approved Accessibility by Default principle, principles.md §6.8",None,None,False
+KBDL-PRO-009,Not applicable — pending explicit project-owner approval; assignment of a PRO ID does not grant implementation authority,None,None,False
+KBDL-PRO-010,"consolidates the already-Approved Showcase interpretation already established in principles.md §9.1, foundations/README.md §4.1, themes/README.md §8 Showcase, motion/patterns.md §10.1, and responsive.md §28",None,None,False
+KBDL-PRO-011,"consolidates the already-Approved Precision interpretation in principles.md §9.2, foundations/README.md §4.2, themes/README.md §8 Precision, motion/patterns.md §10.2, and responsive.md §29",None,None,False
+KBDL-PRO-012,"consolidates the already-Approved Flow interpretation in principles.md §9.3, foundations/README.md §4.3, themes/README.md §8 Flow, motion/patterns.md §10.3, and responsive.md §30",None,None,False
+KBDL-PRO-013,"restates the already-Approved KBDL-CMP-051, KBDL-CMP-066, KBDL-CMP-055 hover-independent- discoverability prohibition, KBDL-CMP-072 tooltip-naming- independence rule, and KBDL-CMP-107 carousel pause/stop/hide requirement",KBDL-CMP-051; KBDL-CMP-055; KBDL-CMP-066; KBDL-CMP-072; KBDL-CMP-107,None,False
+KBDL-PRO-014,"restates the already-Approved KBDL-CMP-051, KBDL-CMP-066, KBDL-CMP-010 WCAG 24×24 target- size minimum, KBDL-CMP-070 native-table/grid-misuse prohibition, and KBDL-CMP-055 hover-independent-discoverability prohibition",KBDL-CMP-010; KBDL-CMP-051; KBDL-CMP-055; KBDL-CMP-066; KBDL-CMP-070,None,False
+KBDL-PRO-015,"restates the already-Approved KBDL-CMP-051, KBDL-CMP-066, and KBDL-CMP-090 toast critical-information-persistence requirement",KBDL-CMP-051; KBDL-CMP-066; KBDL-CMP-090,None,False
+KBDL-PRO-016,Not applicable — pending explicit project-owner approval; assignment of a PRO ID does not grant implementation authority,None,None,False
+KBDL-PRO-017,Not applicable — pending explicit project-owner approval; assignment of a PRO ID does not grant implementation authority,None,None,False
+KBDL-PRO-018,Not applicable — pending explicit project-owner approval; assignment of a PRO ID does not grant implementation authority,None,None,False
+KBDL-PRO-019,"restates the already-Approved KBDL-PRN-003, extended explicitly to per-profile mapping",KBDL-PRN-003,None,False
+KBDL-PRO-020,restates and extends the already- Approved KBDL-CMP-051 explicitly to this module's own mapping,KBDL-CMP-051,None,False
+KBDL-PRO-021,restates and extends the already- Approved KBDL-CMP-066 explicitly to this module's own mapping,KBDL-CMP-066,None,False
+KBDL-PRO-022,"restates the already-Approved Consumer Comprehension principle, principles.md §6.3, and the already-Approved KBDL-CMP-101/103 honest-system-state- communication rules",KBDL-CMP-101,None,False
+KBDL-PRO-023,"restates the already-Approved KBDL-CMP-063, 064, 098, 101, 103, 104 security and correctness principles, extended explicitly to profile emphasis by the approved KBDL-009 prompt's Security Requirements section",KBDL-CMP-063,None,False
+KBDL-PRO-024,restates principles.md §8 and governance.md § Exception process,None,None,False
+KBDL-PRO-025,"scope-control requirement, explicit mandatory clause of the approved KBDL-009 prompt",None,None,False
+KBDL-PRO-026,explicit mandatory field list from the approved KBDL-009 prompt's Profile Adoption and Change Management section,None,None,False
+KBDL-PRO-027,Not applicable — pending explicit project-owner approval; assignment of a PRO ID does not grant implementation authority,None,None,False
+KBDL-PRO-028,Not applicable — pending explicit project-owner approval; assignment of a PRO ID does not grant implementation authority,None,None,False
+KBDL-PRO-029,Not applicable — pending explicit project-owner approval; assignment of a PRO ID does not grant implementation authority,None,None,False
+KBDL-RSP-001,"Lifecycle authority: Approved (directly restates the locked responsive-content-priority rule, principles.md §5.1)",None,None,False
+KBDL-RSP-002,Lifecycle authority: Recommended,None,None,False
+KBDL-RSP-003,Lifecycle authority: Recommended,None,None,False
+KBDL-RSP-004,Lifecycle authority: Recommended,None,None,False
+KBDL-RSP-005,Lifecycle authority: Recommended,None,None,False
+KBDL-RSP-006,"Lifecycle authority: Approved (directly restates WCAG 2.2 SC 1.4.10, Level AA)",None,None,False
+KBDL-RSP-007,"Lifecycle authority: Approved (directly restates WCAG 2.2 SC 1.3.2 and SC 2.4.3, both cited)",None,None,False
+KBDL-RSP-008,Lifecycle authority: Recommended (the constant-meaning rule is Approved per KBDL-PRN-006; exact collapse thresholds are new),KBDL-PRN-006,None,False
+KBDL-RSP-009,"Lifecycle authority: Approved (directly restates KBDL-PRN-003, Clarity Before Spectacle, and Technical Utility's density exclusion)",KBDL-PRN-003,None,False
+KBDL-RSP-010,"Lifecycle authority: Approved (directly restates foundations/iconography-media.md §2.3, §2.5)",None,None,False
+KBDL-RSP-011,Lifecycle authority: Recommended (new KBDL-006 policy),None,None,False
+KBDL-RSP-012,"Lifecycle authority: Approved (restates Showcase's documented compositional emphasis, already Approved per principles.md §9.1)",None,None,False
+KBDL-RSP-013,"Lifecycle authority: Approved (directly restates WCAG 2.2 SC 2.4.11, Level AA)",None,None,False
+KBDL-RSP-014,Lifecycle authority: Approved (restates Technical Utility's predictable-behavior quality),None,None,False
+KBDL-RSP-015,"Lifecycle authority: Approved (directly restates WCAG 2.2 SC 1.3.4, Level AA)",None,None,False
+KBDL-RSP-016,"Lifecycle authority: Approved (directly restates WCAG 2.2 SC 1.4.4 and SC 1.4.10, both Level AA)",None,None,False
+KBDL-RSP-017,"Lifecycle authority: Approved (restates motion/accessibility-performance.md §4, already Approved, extended with layout detail)",None,None,False
+KBDL-RSP-018,"Lifecycle authority: Approved (directly restates WCAG 2.2 SC 2.5.1 and SC 2.5.2, both Level A)",None,None,False
+KBDL-RSP-019,"Lifecycle authority: Approved (directly restates WCAG 2.2 SC 1.4.13, Level AA)",None,None,False
+KBDL-RSP-020,"Lifecycle authority: Approved (directly restates WCAG 2.2 SC 2.4.3, Level A)",None,None,False
+KBDL-RSP-021,"Lifecycle authority: Approved (restates motion/foundations.md §4, already Approved)",None,None,False
+KBDL-RSP-022,Lifecycle authority: Approved (restates principles.md §6.9),None,None,False
+KBDL-THM-001,Lifecycle authority: Approved,None,None,False
+KBDL-THM-002,Lifecycle authority: Approved,None,None,False
+KBDL-THM-003,"Lifecycle authority: Approved — directly and explicitly stated in the KBDL-004 preconditions (""explicit user theme choice taking precedence where a control exists"" and ""system preference as the default source when no user choice exists"")",None,None,False
+KBDL-THM-004,Lifecycle authority: Approved,None,None,False
+KBDL-THM-005,"Lifecycle authority: Approved — directly derived from the locked, already- approved accessibility rule in governance.md § KBDL-GOV-002 and principles.md §6.8; accessibility cannot be weakened by a project override",None,None,False
+KBDL-THM-006,Lifecycle authority: Approved,None,None,False
+KBDL-THM-007,Lifecycle authority: Approved (opaque mappings only; the three excluded opacity values remain Recommended),None,None,False
+KBDL-THM-008,Lifecycle authority: Approved (opaque mappings only; the three excluded opacity values remain Recommended),None,None,False
+KBDL-THM-009,Lifecycle authority: Approved,None,None,False
+KBDL-THM-010,Lifecycle authority: Approved (opaque caption-band strategy only; translucent variants remain Not verified and excluded),None,None,False
+KBDL-THM-011,Lifecycle authority: Approved,None,None,False
+KBDL-THM-012,Lifecycle authority: Approved (conceptual guidance only; no timing/easing value exists or is approved here),None,None,False
+KBDL-THM-012a,Lifecycle authority: Approved — directly derived from the already-approved enhanced motion-safety requirement (decision-register.md § KBDL-DEC-010),KBDL-DEC-010,None,False
+KBDL-THM-013,Lifecycle authority: Approved,None,None,False
+KBDL-THM-014,Lifecycle authority: Approved,None,None,False
+KBDL-THM-015,Lifecycle authority: Approved,None,None,False
+KBDL-VAL-001,approved KBDL-011 prompt,None,None,False
+KBDL-VAL-002,approved prompt,None,None,False
+KBDL-VAL-003,approved prompt and GOV-003,None,None,False
+KBDL-VAL-004,approved prompt and GOV-003,None,None,False
+KBDL-VAL-005,approved prompt,None,None,False
+KBDL-VAL-006,approved prompt,None,None,False
+KBDL-VAL-007,approved prompt,None,None,False
+KBDL-VAL-008,approved prompt and prior shared-architecture rules,None,None,False
+KBDL-VAL-009,approved prompt,None,None,False
+KBDL-VAL-010,approved prompt,None,None,False
+KBDL-VAL-011,approved prompt,None,None,False
+KBDL-VAL-012,approved KBDL-011 prompt,None,None,False

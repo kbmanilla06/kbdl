@@ -100,7 +100,7 @@ Confirmed, User-provided, composite User-provided/Confirmed, and Assumed origins
 
 ## 11. Validation-Status Audit
 
-The 20 Verified requirements consist of 11 prior evidence-backed claims and 9 VAL methodology/results claims. R3 returns `VAL-006` to Verified after all 317 combined group/ledger records pass ordered cardinality, completeness, location, lifecycle, provenance, validation, authority, packet, and dependency validation. `VAL-008`, `010`, and `011` remain `Not verified`; lifecycle and authority are unchanged. The resulting 227 Not verified and 70 Not applicable totals preserve every prior-module status. Unsupported claims retained as Verified: `0`.
+The 20 Verified requirements consist of 11 prior evidence-backed claims and 9 VAL methodology/results claims. R4 returns `VAL-006` to Verified only after independent Markdown parsers validate all 317 ledger rows, including multiline provenance, mixed scopes, authority, exact packets, and dependencies. `VAL-008`, `010`, and `011` remain `Not verified`; lifecycle and authority are unchanged. Unsupported claims retained as Verified: `0`.
 
 ## 12. Approved-Authority Audit
 
@@ -127,7 +127,7 @@ Pending requirements lacking tracking: `0`. No pending item is a defect unless a
 
 ## 15. Traceability Audit
 
-R2 found 258 historical grouped records missing one or more mandatory fields. R3 makes each grouped occurrence inherit the matching row in [traceability-metadata.csv](traceability-metadata.csv), producing one combined, individually auditable record per ID. The upgraded validator reports: historical incomplete records found `258`; current incomplete records `0`; traceability metadata mismatches `0`; specification-location mismatches `0`; missing/duplicate/orphan occurrences `0`. `VAL-006` is therefore Verified for its complete stated method. The historical defect remains recorded rather than erased.
+R2 found 258 historical grouped records missing one or more mandatory fields. R4 rebuilds [traceability-metadata.csv](traceability-metadata.csv) directly from authoritative Markdown and approved decisions. Its separately implemented validator reports 317 complete rows; zero missing, duplicate, orphan, provenance, mixed-scope, authority, packet, dependency, or location defects. `VAL-006` is therefore Verified for this complete, non-circular method. The historical defect remains recorded rather than erased.
 
 ## 16. Cross-Reference and Documentation-Integrity Audit
 
@@ -217,7 +217,7 @@ All earlier rows remain intact and unmarked. The KBDL-011 section adds 26 unmark
 
 The independent source/history parser, complete per-ID artifacts, and captured
 command output are retained in the
-[KBDL-011-R3 evidence package](evidence/kbdl-011-r3/evidence-manifest.md).
+[KBDL-011-R4 evidence package](evidence/kbdl-011-r4/evidence-manifest.md).
 It audits 317 requirements, 266 Approved authority chains, 15 decisions, 317
 ordered traceability occurrences, source-derived theme pairs, baseline metadata,
 and documentation structure. It reports 258 incomplete historical traceability
@@ -246,7 +246,7 @@ does not independently establish which one was the final validated commit.
 
 ## 33. Defect and Limitation Register
 
-KBDL-011-R1 remediated stale roadmap wording and vague scope-completion values. R2 replaced circular/count-only evidence and found 258 incomplete traceability records plus four legacy duplicate occurrence labels. R3 completes the 317-row companion metadata ledger and independently validates every combined record with zero current incompleteness or mismatch. Open blocking documentation defects after R3: none. Exact final validated commits for KBDL-001 through KBDL-006 remain disclosed evidence gaps, not hidden claims. No limitation is accepted; implementation/project evidence remains absent.
+KBDL-011-R1 remediated stale roadmap wording and vague scope-completion values. R2 found 258 incomplete grouped records. R4 replaces R3's circular source model and independently validates a direct-authority 317-row ledger with zero current incompleteness or mismatch. Open blocking documentation defects after R4: none. Exact final validated commits for KBDL-001 through KBDL-006 remain disclosed evidence gaps, not hidden claims. No limitation is accepted; implementation/project evidence remains absent.
 
 ## 34. Deferred Backlog
 
@@ -254,7 +254,7 @@ CUS-030 machine-readable customization format; automated customization/validatio
 
 ## 35. Specification Release-Readiness Assessment
 
-**Specification release candidate status: PRODUCTION READY.** This candidate applies only to the documentation repository. All mandatory documentation and traceability criteria pass after R3; `VAL-008`, `010`, and `011` remain explicitly Not verified and do not become implementation/project conformance claims. The candidate remains subject to planning-agent validation and is not project-owner approval.
+**Specification release candidate status: PRODUCTION READY.** This candidate applies only to the documentation repository. All mandatory documentation and traceability criteria pass after R4's non-circular validation; `VAL-008`, `010`, and `011` remain explicitly Not verified. The candidate remains subject to planning-agent validation and is not project-owner approval.
 
 **Limitation acceptance:** Not required for this documentation-only candidate. This does not accept implementation or production limitations.
 
@@ -275,7 +275,7 @@ Implementation conformance status: NOT VERIFIED
 Project completion status: PENDING PLANNING-AGENT VALIDATION AND PROJECT-OWNER APPROVAL
 ```
 
-This status concerns only the documentation repository and was recalculated from the complete R3 results. Production verification and deployment are not applicable. `VAL-008`, `010`, and `011` remain Not verified. Recommended next release: independent planning-agent validation of KBDL-011-R3; only after it passes may the project owner consider completion.
+This status concerns only the documentation repository and was recalculated from the complete R4 results. Production verification and deployment are not applicable. `VAL-008`, `010`, and `011` remain Not verified. Recommended next release: independent planning-agent validation of KBDL-011-R4; only after it passes may the project owner consider completion.
 
 ## 38. Normative KBDL-VAL Requirements
 
@@ -302,7 +302,7 @@ This status concerns only the documentation repository and was recalculated from
 - **`KBDL-VAL-006` — Traceability integrity.** Every requirement **must** have one complete, per-ID auditable traceability record.
   - Lifecycle status: Approved. Provenance: Confirmed. Validation status: Verified. Authority: approved prompt. Evidence class: A.
   - Related requirements: all. Applicable modules: all. Specification location: [§15](#15-traceability-audit). Pending dependencies: None.
-  - Validation method/evidence: R3 validates 317 ordered combined group/ledger records; zero cardinality, completeness, location, metadata, packet, or dependency defects. Known limitation: grouping depends on the committed companion ledger.
+  - Validation method/evidence: R4 independently parses authoritative Markdown and validates 317 ledger rows with zero cardinality, completeness, provenance, mixed-scope, authority, packet, dependency, or location defects. Known limitation: implementation conformance remains Not verified.
 - **`KBDL-VAL-007` — Documentation integrity.** Links, anchors, labels, headings, tables, IDs, roadmap wording, and completion claims **must** resolve consistently.
   - Lifecycle status: Approved. Provenance: Confirmed. Validation status: Verified. Authority: approved prompt. Evidence class: A.
   - Related requirements: GOV-001. Applicable modules: all. Specification location: [§16](#16-cross-reference-and-documentation-integrity-audit). Pending dependencies: None.
@@ -337,7 +337,7 @@ This status concerns only the documentation repository and was recalculated from
 | VAL-003 | Lifecycle/authority | B | Approved | Confirmed | Verified | Prompt/GOV | All | §9/§12 | None | Comparison PASS | GOV historical format |
 | VAL-004 | Validation evidence | B | Approved | Confirmed | Verified | Prompt/GOV | All | §11 | None | Evidence audit PASS | Runtime unverified |
 | VAL-005 | Decisions/pending | B | Approved | Confirmed | Verified | Prompt | All | §13/§14 | None | Mapping audit PASS | Pending unavailable |
-| VAL-006 | Traceability | A | Approved | Confirmed | Verified | Prompt | All | §15 | None | Complete R3 method PASS | Group + ledger model |
+| VAL-006 | Traceability | A | Approved | Confirmed | Verified | Prompt | All | §15 | None | Complete R4 independent method PASS | Implementation unverified |
 | VAL-007 | Documentation | A | Approved | Confirmed | Verified | Prompt | All | §16 | None | Validator PASS | No external availability |
 | VAL-008 | Static architecture | C | Approved | Confirmed | Not verified | Prompt/prior | All | §17–§28 | None | Complete method unsupported | Static/runtime gaps |
 | VAL-009 | Theme calculations | D | Approved | Confirmed | Verified | Prompt | FND/THM/A11Y | §20 | None | Contrast script PASS | Alpha/media excluded |

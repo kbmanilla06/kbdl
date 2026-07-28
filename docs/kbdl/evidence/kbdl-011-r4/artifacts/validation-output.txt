@@ -1,0 +1,31 @@
+Requirements audited: 317
+Ledger rows: 317
+Missing rows: 0
+Duplicate rows: 0
+Orphan rows: 0
+
+Truncated provenance values: 0
+Provenance mismatches: 0
+Mixed validation-scope mismatches: 0
+Authority inconsistencies: 0
+Missing authority targets: 0
+Circular authority claims: 0
+Generic packet fallbacks: 0
+Packet-destination mismatches: 0
+Dependency mismatches: 0
+Specification-location mismatches: 0
+
+Unauthorized lifecycle changes: 0
+Unauthorized provenance changes: 0
+Unauthorized authority changes: 0
+Unauthorized packet changes: 0
+Unauthorized dependency changes: 0
+
+Historical incomplete count: 258
+Current incomplete count: 0
+Stale traceability status claims: 0
+Completion decisions: 0
+Hardcoded validation-result lines: 0
+Implementation conformance status: NOT VERIFIED
+Project completion status: PENDING
+Errors: 0
