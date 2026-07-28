@@ -1,0 +1,40 @@
+KBDL-011-R15 precommit validation transcript
+
+Command: git diff --check
+stdout/stderr: (empty)
+Exit: 0
+
+Command: python3 docs/kbdl/evidence/kbdl-011-r15/scripts/production_validator.py
+Exit: 0
+Key stdout: Requirements audited 317; Effective records 317; Field-source rows 5389; Readable groups parsed 60; Status buckets resolved 75; every reported semantic defect counter 0; Approved requirements audited 266; Real mutations executed 26; detected 26; unexpected passes 0; wrong-category detections 0; fixtures remaining 0; counters lacking exact provenance 0; VAL-003 Verified; VAL-004 Not verified; VAL-006 Verified; VAL-007 Verified; accepted limitations/readiness approvals/completion approvals 0; implementation conformance NOT VERIFIED; project completion PENDING.
+stderr: (empty)
+
+Command: python3 docs/kbdl/evidence/kbdl-011-r15/scripts/documentation_validator.py
+Exit: 0
+stdout: Markdown files 76; all fourteen documentation defect categories 0; Documentation defects 0.
+stderr: (empty)
+
+Command: python3 docs/kbdl/evidence/kbdl-011-r15/scripts/run_mutation_controls.py
+Exit: 0
+stdout: all 26 named mutations PASS; Real mutations executed 26; Mutations detected by production validator 26; Unexpected mutation passes 0; Wrong-category detections 0; Fixtures remaining 0.
+stderr: (empty)
+
+Mutation case: misparsed-status-bucket
+Fixture target occurrence before mutation: exactly 1
+Mutation application bound: `.replace(..., 1)`
+Production-validator exit: 1
+Expected category: STATUS_BUCKET_MISMATCH
+Expected category detected: yes
+Wrong-category detection: no
+Fixture destroyed: yes
+
+Commands: production validator run twice from unchanged source state; `shasum -a 256` after each run; recursive `diff -qr` of all generated artifacts.
+Run 1 SHA-256: 78f9b6431944d77062097c3fa70431657d09a15b751070c6d8c370720b458800
+Run 2 SHA-256: 78f9b6431944d77062097c3fa70431657d09a15b751070c6d8c370720b458800
+Artifact diff exit: 0; no generated artifact changed on the second run.
+
+Command: PYTHONPYCACHEPREFIX=/tmp/kbdl-r15-pycache python3 -m py_compile docs/kbdl/evidence/kbdl-011-r15/scripts/production_validator.py docs/kbdl/evidence/kbdl-011-r15/scripts/run_mutation_controls.py docs/kbdl/evidence/kbdl-011-r15/scripts/documentation_validator.py
+stdout/stderr: (empty)
+Exit: 0
+
+Failed or skipped checks: none within R15 scope. The eleven unresolved VAL-004 clause-evidence methods were deliberately not executed as required.

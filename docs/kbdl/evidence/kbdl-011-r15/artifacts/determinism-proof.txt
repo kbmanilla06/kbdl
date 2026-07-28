@@ -1,0 +1,8 @@
+KBDL-011-R15 authority-reference determinism proof
+
+Run 1 SHA-256: 78f9b6431944d77062097c3fa70431657d09a15b751070c6d8c370720b458800
+Run 2 SHA-256: 78f9b6431944d77062097c3fa70431657d09a15b751070c6d8c370720b458800
+Byte comparison: identical
+Complete generated-artifact comparison: no differences (diff -qr exit 0)
+Source state between runs: unchanged
+Result: PASS

@@ -1,0 +1,2 @@
+Rows=5389 records=317 defects=0
+VAL-006 result: Verified

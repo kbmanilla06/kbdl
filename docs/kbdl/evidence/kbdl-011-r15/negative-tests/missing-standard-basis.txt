@@ -1,0 +1,59 @@
+Case: missing-standard-basis
+Mutation: actual source file changed in isolated repository copy
+Production validator: docs/kbdl/evidence/kbdl-011-r15/scripts/production_validator.py
+Expected category: MISSING_STANDARD_BASIS
+Exit code: 1
+Detected categories: MISSING_STANDARD_BASIS; UNRESOLVED_FIELD_SOURCE
+Intended detection: True
+Fixture destroyed: yes
+
+STDOUT
+Requirements audited: 317
+Effective records: 317
+Field-source rows: 5389
+Readable groups parsed: 60
+Status buckets resolved: 75
+Unresolved field sources: 1
+Source-precedence conflicts: 0
+Explicit group/ledger conflicts: 0
+Unresolved group mappings: 0
+Exact-location mismatches: 0
+Valid-but-wrong location defects: 0
+Packet-row mismatches: 0
+Packet-item mismatches: 0
+Dependency-value mismatches: 0
+Dependency-class mismatches: 0
+Evidence-reference mismatches: 0
+Missing Git evidence objects: 0
+Evidence-scope relationship defects: 0
+Limitation-scope mismatches: 0
+Approved requirements audited: 266
+Standard-clause mismatches: 0
+Missing authority targets: 0
+Non-Approved authority targets: 0
+Unsupported generic authority claims: 0
+Unclassified authority references: 0
+Self-authority claims: 0
+Circular authority chains: 0
+Hardcoded defect counters: 0
+Real mutations executed: 26
+Mutations detected by production validator: 25
+Unexpected mutation passes: 1
+Wrong-category detections: 1
+Fixtures remaining: 0
+Counters lacking exact provenance: 0
+
+VAL-003 result: Not verified
+VAL-004 result: Not verified
+VAL-006 result: Not verified
+VAL-007 result: Verified
+
+Accepted limitations: 0
+Readiness approvals: 0
+Completion approvals: 0
+Implementation conformance: NOT VERIFIED
+Project completion: PENDING
+
+STDERR
+MISSING_STANDARD_BASIS:KBDL-CMP-064: generic standard reference lacks an exact clause
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-064:Authority: Authority graph

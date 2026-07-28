@@ -1,0 +1,18 @@
+Field name,Ownership class,Primary basis,Derivation rule,Allows explicit none
+Requirement ID,A — Normative-owned,Normative requirement record,Parse the ID from the normative record,No
+Blueprint section,C — Traceability-owned administrative,Readable traceability group,Parse exact group heading or explicit per-ID mapping,No
+Roadmap prompt,C — Traceability-owned administrative,Approved roadmap and module ownership,Derive base prompt from module/file and validate any remediation annotation,No
+Specification location,A — Normative-owned,Containing normative Markdown section,Derive file and containing heading anchor around the requirement record,No
+Lifecycle status,A — Normative-owned,Normative requirement record,Parse explicit lifecycle and compare every lower source,No
+Provenance,A — Normative-owned,Normative requirement record,Parse explicit provenance and compare every lower source,No
+Validation classification,A — Normative-owned,Normative requirement record,Parse explicit validation status and compare every lower source,No
+Verified scope,D — Evidence-owned,Executed evidence and stated scope,Require evidence-compatible scope,Yes
+Not-verified scope,D — Evidence-owned,Unexecuted or excluded scope,Require honest unexecuted scope,Yes
+Authority,B — Governance-owned,AR2 confirmation approved decision standard or Approved requirement,Resolve every component and graph edge,No
+Validation method,D — Evidence-owned,Normative method or exact ledger fallback,Compare method to evidence classification,No
+Validation evidence,D — Evidence-owned,Existing evidence source or honest Not verified record,Resolve paths and prevent unsupported execution claims,No
+Known limitation,D — Evidence-owned,Actual excluded or unverified scope,Require consistency with validation scope,No
+Packet or tracking destination,C — Traceability-owned administrative,Exact packet or tracking section,Resolve file section item owner and readiness class,Yes
+Pending dependencies,C — Traceability-owned administrative,Normative record packet or deferred tracking,Resolve and classify dependency source,Yes
+Related decision,B — Governance-owned,Approved decision register,Resolve every cited decision and status,Yes
+Notes or exclusions,C — Traceability-owned administrative,Higher-priority exclusion or bounded administrative note,Reject unsupported promotion or completion claims,Yes

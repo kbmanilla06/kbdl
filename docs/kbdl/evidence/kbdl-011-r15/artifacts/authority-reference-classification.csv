@@ -1,0 +1,104 @@
+Requirement ID,Referenced target,Reference classification,Classification basis,Graph edge
+KBDL-A11Y-025,KBDL-DEC-014,Authority edge,Decision cited in authority expression,Yes
+KBDL-A11Y-025,KBDL-MOT-022,Authority edge,"approved (restates kbdl-mot-022, already approved under kbdl-dec-014; not reopened)",Yes
+KBDL-A11Y-026,KBDL-MOT-023,Authority edge,"approved (directly restates wcag 2.2 sc 2.3.1, level a, and restates the already-approved kbdl-mot-023)",Yes
+KBDL-A11Y-033,KBDL-PRN-003,Authority edge,"approved (directly restates wcag 2.2 sc 3.1.1, level a, and kbdl-prn-003, consumer comprehension)",Yes
+KBDL-A11Y-037,KBDL-A11Y-003,Authority edge,approved (restates kbdl-a11y-003 applied to tabular data),Yes
+KBDL-CMP-009,KBDL-RSP-001,Authority edge,"approved (directly restates kbdl-rsp-001, 006, 007, 020)",Yes
+KBDL-CMP-010,KBDL-A11Y-020,Authority edge,approved (directly restates kbdl-a11y-020),Yes
+KBDL-CMP-052,KBDL-CMP-005,Authority edge,"approved (scope-control requirement, extends kbdl-cmp-005)",Yes
+KBDL-CMP-053,KBDL-CMP-002,Authority edge,"approved (extends the already-approved native- semantics-first rule, kbdl-cmp-002, and the adopted aria 1.2 region role definition, to this module's surfaces)",Yes
+KBDL-CMP-057,KBDL-CMP-007,Authority edge,"adopted wcag 2.2 sc 2.1.1 keyboard and sc 2.1.2 no keyboard trap, and the already- approved kbdl-007 keyboard contract, kbdl-cmp-007, applied explicitly to non-modal overlays)",Yes
+KBDL-CMP-059,KBDL-CMP-090,Authority edge,"sc 2.2.1 timing adjustable, extended to this module's dismissible surfaces generally, beyond the toast-specific case in kbdl-cmp-090)",Yes
+KBDL-CMP-061,KBDL-CMP-004,Authority edge,"approved (restates the locked component-state- clarity rule, principles.md §5.1, and kbdl-cmp-004, applied explicitly to the states this document introduces)",Yes
+KBDL-CMP-062,KBDL-CMP-053,Authority edge,"approved (restates kbdl-cmp-053/002 as an explicit prohibition, distinguishing the general preference from the specific misuse it forbids)",Yes
+KBDL-CMP-063,KBDL-CMP-103,Authority edge,"approved (restates the already-approved correctness/safety priority, principles.md §4 item 1, as a general baseline; kbdl-cmp-103 states its offline/ reconnecting-specific application)",Yes
+KBDL-CMP-064,KBDL-CMP-101,Context-only reference,oved (extends the existing kbdl security principle already established in components-core.md §37 as a general baseline; kbdl-cmp-101 and kbdl-cmp-104 state its error-state- and permission/not-found-specific applications),No
+KBDL-CMP-064,KBDL-CMP-104,Context-only reference,existing kbdl security principle already established in components-core.md §37 as a general baseline; kbdl-cmp-101 and kbdl-cmp-104 state its error-state- and permission/not-found-specific applications),No
+KBDL-CMP-065,KBDL-CMP-003,Authority edge,"approved (extends the already-approved kbdl-007 accessible-naming requirement, kbdl-cmp-003, to this module)",Yes
+KBDL-CMP-066,KBDL-CMP-051,Authority edge,"approved (restates the already-approved kbdl-007 profile-consistency requirement, kbdl-cmp-051, applied to this module)",Yes
+KBDL-CMP-070,KBDL-CMP-002,Authority edge,"approved (restates the already-adopted wcag 2.2 sc 1.3.1 info and relationships and the native-semantics-first rule, kbdl-cmp-002)",Yes
+KBDL-CMP-072,KBDL-CMP-003,Authority edge,"he sole source of its trigger's accessible name"" restates the already- approved kbdl-007 accessible-naming requirement, kbdl-cmp-003, and the adopted wcag 2.2 sc 4.1.2 name, role, value — not sc 1.4.13, which does not address naming. ""contains only non",Yes
+KBDL-CMP-079,KBDL-CMP-071,Authority edge,"approved (restates kbdl-cmp-071 and the already-adopted wcag 2.2 sc 2.1.2 no keyboard trap, applied to the definition of modality itself — this is the",Yes
+KBDL-CMP-082,KBDL-CMP-005,Authority edge,"approved (scope-control requirement, restates kbdl-cmp-005/kbdl-cmp-052)",Yes
+KBDL-CMP-082,KBDL-CMP-052,Authority edge,"approved (scope-control requirement, restates kbdl-cmp-005/kbdl-cmp-052)",Yes
+KBDL-CMP-086,KBDL-A11Y-031,Authority edge,approved (restates kbdl-a11y-031 and the adopted wai-aria 1.2 live-region role definitions),Yes
+KBDL-CMP-087,KBDL-CMP-004,Authority edge,approved (restates kbdl-cmp-004's already- approved state-clarity rule and the adopted wcag 2.2 sc 1.4.1 use of color),Yes
+KBDL-CMP-090,KBDL-A11Y-031,Authority edge,"(which governs user-adjustable time limits on content generally, not the specific toast/persistent-path pattern) or by kbdl-a11y-031 (which requires programmatic determinability, not a persistence guarantee); these two clauses are normative because the",Yes
+KBDL-CMP-092,KBDL-A11Y-031,Authority edge,approved (restates kbdl-a11y-031 and the adopted wai-aria 1.2 status/log role and aria-live/aria-atomic definitions),Yes
+KBDL-CMP-096,KBDL-A11Y-031,Authority edge,"decorative content. ""an equivalent loading announcement must be available through a separate status mechanism"" restates kbdl-a11y-031. ""must not expose meaningless placeholder shapes as if they were content"" is not itself dictated by either of those sou",Yes
+KBDL-CMP-097,KBDL-A11Y-031,Authority edge,"approved (restates kbdl-a11y-031 and the locked component-state-clarity rule, principles.md §5.1)",Yes
+KBDL-CMP-101,KBDL-CMP-064,Authority edge,"ples.md §3. the prohibition on exposing stack traces, internal exception details, credentials, or private data restates kbdl-cmp-064",Yes
+KBDL-CUS-001,KBDL-DEC-004,Authority edge,Decision cited in authority expression,Yes
+KBDL-CUS-005,KBDL-PRN-005,Authority edge,"kbdl-prn-005, kbdl-pro-005, and mandatory kbdl-010 prompt",Yes
+KBDL-CUS-005,KBDL-PRO-005,Authority edge,"kbdl-prn-005, kbdl-pro-005, and mandatory kbdl-010 prompt",Yes
+KBDL-CUS-007,KBDL-GOV-002,Authority edge,"kbdl-gov-002, governance exception process, and mandatory kbdl-010 classes e/f",Yes
+KBDL-CUS-010,KBDL-DEC-004,Authority edge,Decision cited in authority expression,Yes
+KBDL-CUS-014,KBDL-THM-003,Authority edge,"approved kbdl-thm-003, 005, 006, 013, 014 plus mandatory kbdl-010 boundary",Yes
+KBDL-CUS-017,KBDL-GOV-002,Authority edge,"kbdl-gov-002, approved accessibility requirements, and mandatory kbdl-010 boundary",Yes
+KBDL-CUS-020,KBDL-PRO-001,Authority edge,"approved kbdl-pro-001–008, 010–015, 019–026 plus mandatory kbdl-010 boundary",Yes
+KBDL-FND-009,KBDL-DEC-012,Authority edge,Decision cited in authority expression,Yes
+KBDL-FND-010,KBDL-DEC-012,Authority edge,Decision cited in authority expression,Yes
+KBDL-FND-011,KBDL-DEC-012,Authority edge,Decision cited in authority expression,Yes
+KBDL-FND-012,KBDL-DEC-012,Authority edge,Decision cited in authority expression,Yes
+KBDL-GOV-001,KBDL-DEC-002,Authority edge,Decision cited in authority expression,Yes
+KBDL-GOV-002,KBDL-DEC-010,Authority edge,Decision cited in authority expression,Yes
+KBDL-GOV-003,KBDL-DEC-011,Authority edge,Decision cited in authority expression,Yes
+KBDL-MOT-003,KBDL-PRN-002,Authority edge,approved (directly extends kbdl-prn-002),Yes
+KBDL-MOT-004,KBDL-MOT-006,Authority edge,"approved (structural requirement; the categories' exact intensity defaults remain recommended, see kbdl-mot-006)",Yes
+KBDL-MOT-005,KBDL-DEC-014,Authority edge,Decision cited in authority expression,Yes
+KBDL-MOT-006,KBDL-DEC-014,Authority edge,Decision cited in authority expression,Yes
+KBDL-MOT-007,KBDL-DEC-014,Authority edge,Decision cited in authority expression,Yes
+KBDL-MOT-007,KBDL-MOT-008,Context-only reference,"approved (per kbdl-dec-014, decision packet item 2, together with kbdl-mot-008, as one timing system)",No
+KBDL-MOT-008,KBDL-DEC-014,Authority edge,Decision cited in authority expression,Yes
+KBDL-MOT-008,KBDL-MOT-007,Context-only reference,"approved (per kbdl-dec-014, decision packet item 2, together with kbdl-mot-007, as one timing system)",No
+KBDL-MOT-009,KBDL-DEC-014,Authority edge,Decision cited in authority expression,Yes
+KBDL-MOT-010,KBDL-DEC-014,Authority edge,Decision cited in authority expression,Yes
+KBDL-MOT-011,KBDL-DEC-014,Authority edge,Decision cited in authority expression,Yes
+KBDL-MOT-012,KBDL-PRN-002,Authority edge,approved (directly restates the safety/correctness priority already established in kbdl-prn-002 and §3.3),Yes
+KBDL-MOT-013,KBDL-DEC-014,Authority edge,Decision cited in authority expression,Yes
+KBDL-MOT-017,KBDL-THM-012a,Authority edge,"cked motion purpose rule that continuous motion must be controlled, and the already-approved reduced-motion requirement kbdl-thm-012a)",Yes
+KBDL-MOT-019,KBDL-DEC-010,Authority edge,Decision cited in authority expression,Yes
+KBDL-MOT-020,KBDL-DEC-014,Authority edge,Decision cited in authority expression,Yes
+KBDL-MOT-020,KBDL-THM-012,Authority edge,"cision packet item 10; the underlying non-blocking, readable, focus-preserving requirements were already approved under kbdl-thm-012/012a and are unaffected)",Yes
+KBDL-MOT-022,KBDL-DEC-010,Authority edge,Decision cited in authority expression,Yes
+KBDL-MOT-022,KBDL-THM-012a,Authority edge,"approved (directly restates kbdl-thm-012a and kbdl's enhanced motion-safety baseline, kbdl-dec-010)",Yes
+KBDL-MOT-023,KBDL-DEC-010,Authority edge,Decision cited in authority expression,Yes
+KBDL-MOT-024,KBDL-PRN-003,Authority edge,"approved (directly restates performance-aware enhancement, kbdl-prn-003/§6.9)",Yes
+KBDL-MOT-026,KBDL-PRN-007,Authority edge,"approved (directly restates kbdl-prn-007, adaptability without fragmentation)",Yes
+KBDL-MOT-028,KBDL-DEC-014,Authority edge,Decision cited in authority expression,Yes
+KBDL-MOT-029,KBDL-DEC-014,Authority edge,Decision cited in authority expression,Yes
+KBDL-MOT-030,KBDL-DEC-014,Authority edge,Decision cited in authority expression,Yes
+KBDL-MOT-031,KBDL-DEC-014,Authority edge,Decision cited in authority expression,Yes
+KBDL-MOT-032,KBDL-DEC-014,Authority edge,Decision cited in authority expression,Yes
+KBDL-MOT-033,KBDL-DEC-014,Authority edge,Decision cited in authority expression,Yes
+KBDL-MOT-034,KBDL-DEC-014,Authority edge,Decision cited in authority expression,Yes
+KBDL-PRO-001,KBDL-A11Y-040,Authority edge,"restates and consolidates the already-approved kbdl-prn-007, kbdl-fnd-008, kbdl-thm-006, kbdl-mot-026, kbdl-a11y-040, kbdl-cmp-051, and kbdl-cmp-066, each of which independently requires shared architecture in its own module",Yes
+KBDL-PRO-001,KBDL-CMP-051,Authority edge,"restates and consolidates the already-approved kbdl-prn-007, kbdl-fnd-008, kbdl-thm-006, kbdl-mot-026, kbdl-a11y-040, kbdl-cmp-051, and kbdl-cmp-066, each of which independently requires shared architecture in its own module",Yes
+KBDL-PRO-001,KBDL-CMP-066,Authority edge,"solidates the already-approved kbdl-prn-007, kbdl-fnd-008, kbdl-thm-006, kbdl-mot-026, kbdl-a11y-040, kbdl-cmp-051, and kbdl-cmp-066, each of which independently requires shared architecture in its own module",Yes
+KBDL-PRO-001,KBDL-FND-008,Authority edge,"restates and consolidates the already-approved kbdl-prn-007, kbdl-fnd-008, kbdl-thm-006, kbdl-mot-026, kbdl-a11y-040, kbdl-cmp-051, and kbdl-cmp-066, each of which independently requires shared",Yes
+KBDL-PRO-001,KBDL-MOT-026,Authority edge,"restates and consolidates the already-approved kbdl-prn-007, kbdl-fnd-008, kbdl-thm-006, kbdl-mot-026, kbdl-a11y-040, kbdl-cmp-051, and kbdl-cmp-066, each of which independently requires shared architecture in its own mod",Yes
+KBDL-PRO-001,KBDL-PRN-007,Authority edge,"restates and consolidates the already-approved kbdl-prn-007, kbdl-fnd-008, kbdl-thm-006, kbdl-mot-026, kbdl-a11y-040, kbdl-cmp-051, and kbdl-cmp-066, each of which independently r",Yes
+KBDL-PRO-001,KBDL-THM-006,Authority edge,"restates and consolidates the already-approved kbdl-prn-007, kbdl-fnd-008, kbdl-thm-006, kbdl-mot-026, kbdl-a11y-040, kbdl-cmp-051, and kbdl-cmp-066, each of which independently requires shared architecture",Yes
+KBDL-PRO-013,KBDL-CMP-051,Authority edge,"restates the already-approved kbdl-cmp-051, kbdl-cmp-066, kbdl-cmp-055 hover-independent- discoverability prohibition, kbdl-cmp-072 tooltip-naming- independence r",Yes
+KBDL-PRO-013,KBDL-CMP-055,Authority edge,"restates the already-approved kbdl-cmp-051, kbdl-cmp-066, kbdl-cmp-055 hover-independent- discoverability prohibition, kbdl-cmp-072 tooltip-naming- independence rule, and kbdl-cmp-107 carous",Yes
+KBDL-PRO-013,KBDL-CMP-066,Authority edge,"restates the already-approved kbdl-cmp-051, kbdl-cmp-066, kbdl-cmp-055 hover-independent- discoverability prohibition, kbdl-cmp-072 tooltip-naming- independence rule, and kbdl-",Yes
+KBDL-PRO-013,KBDL-CMP-072,Authority edge,"restates the already-approved kbdl-cmp-051, kbdl-cmp-066, kbdl-cmp-055 hover-independent- discoverability prohibition, kbdl-cmp-072 tooltip-naming- independence rule, and kbdl-cmp-107 carousel pause/stop/hide requirement",Yes
+KBDL-PRO-013,KBDL-CMP-107,Authority edge,"p-066, kbdl-cmp-055 hover-independent- discoverability prohibition, kbdl-cmp-072 tooltip-naming- independence rule, and kbdl-cmp-107 carousel pause/stop/hide requirement",Yes
+KBDL-PRO-014,KBDL-CMP-010,Authority edge,"restates the already-approved kbdl-cmp-051, kbdl-cmp-066, kbdl-cmp-010 wcag 24×24 target- size minimum, kbdl-cmp-070 native-table/grid-misuse prohibition, and kbdl-cmp-055 hover-independent-",Yes
+KBDL-PRO-014,KBDL-CMP-051,Authority edge,"restates the already-approved kbdl-cmp-051, kbdl-cmp-066, kbdl-cmp-010 wcag 24×24 target- size minimum, kbdl-cmp-070 native-table/grid-misuse prohibition, and kbd",Yes
+KBDL-PRO-014,KBDL-CMP-055,Authority edge,"051, kbdl-cmp-066, kbdl-cmp-010 wcag 24×24 target- size minimum, kbdl-cmp-070 native-table/grid-misuse prohibition, and kbdl-cmp-055 hover-independent-discoverability prohibition",Yes
+KBDL-PRO-014,KBDL-CMP-066,Authority edge,"restates the already-approved kbdl-cmp-051, kbdl-cmp-066, kbdl-cmp-010 wcag 24×24 target- size minimum, kbdl-cmp-070 native-table/grid-misuse prohibition, and kbdl-cmp-055 hove",Yes
+KBDL-PRO-014,KBDL-CMP-070,Authority edge,"restates the already-approved kbdl-cmp-051, kbdl-cmp-066, kbdl-cmp-010 wcag 24×24 target- size minimum, kbdl-cmp-070 native-table/grid-misuse prohibition, and kbdl-cmp-055 hover-independent-discoverability prohibition",Yes
+KBDL-PRO-015,KBDL-CMP-051,Authority edge,"restates the already-approved kbdl-cmp-051, kbdl-cmp-066, and kbdl-cmp-090 toast critical-information-persistence requirement",Yes
+KBDL-PRO-015,KBDL-CMP-066,Authority edge,"restates the already-approved kbdl-cmp-051, kbdl-cmp-066, and kbdl-cmp-090 toast critical-information-persistence requirement",Yes
+KBDL-PRO-015,KBDL-CMP-090,Authority edge,"restates the already-approved kbdl-cmp-051, kbdl-cmp-066, and kbdl-cmp-090 toast critical-information-persistence requirement",Yes
+KBDL-PRO-019,KBDL-PRN-003,Authority edge,"restates the already-approved kbdl-prn-003, extended explicitly to per-profile mapping",Yes
+KBDL-PRO-020,KBDL-CMP-051,Authority edge,restates and extends the already- approved kbdl-cmp-051 explicitly to this module's own mapping,Yes
+KBDL-PRO-021,KBDL-CMP-066,Authority edge,restates and extends the already- approved kbdl-cmp-066 explicitly to this module's own mapping,Yes
+KBDL-PRO-022,KBDL-CMP-101,Authority edge,"restates the already-approved consumer comprehension principle, principles.md §6.3, and the already-approved kbdl-cmp-101/103 honest-system-state- communication rules",Yes
+KBDL-PRO-023,KBDL-CMP-063,Authority edge,"restates the already-approved kbdl-cmp-063, 064, 098, 101, 103, 104 security and correctness principles, extended explicitly to profile emphasis by the approved k",Yes
+KBDL-RSP-009,KBDL-PRN-003,Authority edge,"approved (directly restates kbdl-prn-003, clarity before spectacle, and technical utility's density exclusion)",Yes
+KBDL-THM-004,KBDL-DEC-013,Authority edge,Decision cited in authority expression,Yes
+KBDL-THM-005,KBDL-GOV-002,Authority edge,"approved — directly derived from the locked, already- approved accessibility rule in governance.md § kbdl-gov-002 and principles.md §6.8; accessibility cannot be weakened by a project override",Yes
+KBDL-THM-012a,KBDL-DEC-010,Authority edge,Decision cited in authority expression,Yes

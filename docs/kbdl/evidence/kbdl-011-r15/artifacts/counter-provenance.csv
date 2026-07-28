@@ -1,0 +1,35 @@
+Counter name,Exact defect collection,Producing script,Producing artifact,Filter or counting rule,Row count,Defect IDs
+Requirements audited,blocks,docs/kbdl/evidence/kbdl-011-r15/scripts/production_validator.py,production-summary.txt,one parsed normative record per ID,317,None
+Effective records,effective,docs/kbdl/evidence/kbdl-011-r15/scripts/production_validator.py,effective-record-audit.csv,all effective-record rows,317,None
+Field-source rows,fieldrows,docs/kbdl/evidence/kbdl-011-r15/scripts/production_validator.py,field-source-registry.csv,all requirement/field pairs,5389,None
+Readable groups parsed,group headings,docs/kbdl/evidence/kbdl-011-r15/scripts/production_validator.py,readable-group-parse.csv,distinct nonempty group headings,60,None
+Status buckets resolved,group_rows,docs/kbdl/evidence/kbdl-011-r15/scripts/production_validator.py,readable-group-parse.csv,status-bucket rows with PASS resolution,75,None
+Unresolved field sources,UNRESOLVED_FIELD_SOURCE,docs/kbdl/evidence/kbdl-011-r15/scripts/production_validator.py,defects.csv,category equals UNRESOLVED_FIELD_SOURCE,0,
+Source-precedence conflicts,SOURCE_PRECEDENCE_CONFLICT,docs/kbdl/evidence/kbdl-011-r15/scripts/production_validator.py,source-precedence-comparison.csv,category equals SOURCE_PRECEDENCE_CONFLICT,0,
+Explicit group/ledger conflicts,GROUP_LEDGER_CONFLICT,docs/kbdl/evidence/kbdl-011-r15/scripts/production_validator.py,group-ledger-comparison.csv,category equals GROUP_LEDGER_CONFLICT,0,
+Unresolved group mappings,UNRESOLVED_GROUP_MAPPING,docs/kbdl/evidence/kbdl-011-r15/scripts/production_validator.py,readable-group-parse.csv,category equals UNRESOLVED_GROUP_MAPPING,0,
+Exact-location mismatches,LOCATION_MISMATCH,docs/kbdl/evidence/kbdl-011-r15/scripts/production_validator.py,exact-location-audit.csv,category equals LOCATION_MISMATCH,0,
+Valid-but-wrong location defects,LOCATION_MISMATCH,docs/kbdl/evidence/kbdl-011-r15/scripts/production_validator.py,exact-location-audit.csv,resolved anchor without semantic support,0,
+Packet-row mismatches,PACKET_MISMATCH,docs/kbdl/evidence/kbdl-011-r15/scripts/production_validator.py,packet-audit.csv,category equals PACKET_MISMATCH,0,
+Packet-item mismatches,PACKET_ITEM_MISMATCH,docs/kbdl/evidence/kbdl-011-r15/scripts/production_validator.py,packet-audit.csv,category equals PACKET_ITEM_MISMATCH,0,
+Dependency-value mismatches,DEPENDENCY_MISMATCH,docs/kbdl/evidence/kbdl-011-r15/scripts/production_validator.py,dependency-audit.csv,category equals DEPENDENCY_MISMATCH,0,
+Dependency-class mismatches,DEPENDENCY_CLASS_MISMATCH,docs/kbdl/evidence/kbdl-011-r15/scripts/production_validator.py,dependency-audit.csv,category equals DEPENDENCY_CLASS_MISMATCH,0,
+Evidence-reference mismatches,EVIDENCE_REFERENCE_MISMATCH,docs/kbdl/evidence/kbdl-011-r15/scripts/production_validator.py,evidence-field-audit.csv,category equals EVIDENCE_REFERENCE_MISMATCH,0,
+Missing Git evidence objects,MISSING_GIT_EVIDENCE_OBJECT,docs/kbdl/evidence/kbdl-011-r15/scripts/production_validator.py,evidence-field-audit.csv,git cat-file failures,0,
+Evidence-scope relationship defects,EVIDENCE_SCOPE_RELATIONSHIP,docs/kbdl/evidence/kbdl-011-r15/scripts/production_validator.py,evidence-field-audit.csv,category equals EVIDENCE_SCOPE_RELATIONSHIP,0,
+Limitation-scope mismatches,LIMITATION_MISMATCH,docs/kbdl/evidence/kbdl-011-r15/scripts/production_validator.py,limitation-field-audit.csv,category equals LIMITATION_MISMATCH,0,
+Approved requirements audited,approved,docs/kbdl/evidence/kbdl-011-r15/scripts/production_validator.py,approved-authority-population.csv,lifecycle equals Approved,266,None
+Standard-clause mismatches,STANDARD_CLAUSE_MISMATCH,docs/kbdl/evidence/kbdl-011-r15/scripts/production_validator.py,adopted-standard-clause-audit.csv,category equals STANDARD_CLAUSE_MISMATCH,0,
+Missing authority targets,MISSING_AUTHORITY_TARGET,docs/kbdl/evidence/kbdl-011-r15/scripts/production_validator.py,authority-graph-audit.csv,category equals MISSING_AUTHORITY_TARGET,0,
+Non-Approved authority targets,NONAPPROVED_AUTHORITY_TARGET,docs/kbdl/evidence/kbdl-011-r15/scripts/production_validator.py,authority-graph-audit.csv,category equals NONAPPROVED_AUTHORITY_TARGET,0,
+Unsupported generic authority claims,UNSUPPORTED_GENERIC_AUTHORITY,docs/kbdl/evidence/kbdl-011-r15/scripts/production_validator.py,authority-graph-audit.csv,category equals UNSUPPORTED_GENERIC_AUTHORITY,0,
+Unclassified authority references,UNCLASSIFIED_AUTHORITY_REFERENCE,docs/kbdl/evidence/kbdl-011-r15/scripts/production_validator.py,authority-reference-classification.csv,category equals UNCLASSIFIED_AUTHORITY_REFERENCE,0,
+Self-authority claims,SELF_AUTHORITY,docs/kbdl/evidence/kbdl-011-r15/scripts/production_validator.py,authority-graph-audit.csv,category equals SELF_AUTHORITY,0,
+Circular authority chains,CIRCULAR_AUTHORITY,docs/kbdl/evidence/kbdl-011-r15/scripts/production_validator.py,authority-graph-audit.csv,category equals CIRCULAR_AUTHORITY,0,
+Hardcoded defect counters,hardcoded,docs/kbdl/evidence/kbdl-011-r15/scripts/production_validator.py,production_validator.py,literal defect totals found by self-audit,0,None
+Real mutations executed,negative-tests/mutation-summary.txt,docs/kbdl/evidence/kbdl-011-r15/scripts/run_mutation_controls.py,negative-tests/mutation-summary.txt,exact summary line Real mutations executed,26,None
+Mutations detected by production validator,negative-tests/mutation-summary.txt,docs/kbdl/evidence/kbdl-011-r15/scripts/run_mutation_controls.py,negative-tests/mutation-summary.txt,exact summary line Mutations detected by production validator,26,None
+Unexpected mutation passes,negative-tests/mutation-summary.txt,docs/kbdl/evidence/kbdl-011-r15/scripts/run_mutation_controls.py,negative-tests/mutation-summary.txt,exact summary line Unexpected mutation passes,0,None
+Wrong-category detections,negative-tests/mutation-summary.txt,docs/kbdl/evidence/kbdl-011-r15/scripts/run_mutation_controls.py,negative-tests/mutation-summary.txt,exact summary line Wrong-category detections,0,None
+Fixtures remaining,negative-tests/mutation-summary.txt,docs/kbdl/evidence/kbdl-011-r15/scripts/run_mutation_controls.py,negative-tests/mutation-summary.txt,exact summary line Fixtures remaining,0,None
+Counters lacking exact provenance,counter-provenance rows,docs/kbdl/evidence/kbdl-011-r15/scripts/production_validator.py,counter-provenance.csv,rows missing any exact provenance column,0,None

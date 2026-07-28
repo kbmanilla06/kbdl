@@ -1,0 +1,318 @@
+Requirement ID,Normative dependency,Packet/tracking basis,Ledger dependency,Classification,Result
+KBDL-A11Y-001,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-A11Y-002,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-A11Y-003,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-A11Y-004,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-A11Y-005,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-A11Y-006,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-A11Y-007,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-A11Y-008,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-A11Y-009,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-A11Y-010,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-A11Y-011,ABSENT,Packet/tracking record,None,Explicit none,PASS
+KBDL-A11Y-012,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-A11Y-013,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-A11Y-014,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-A11Y-015,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-A11Y-016,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-A11Y-017,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-A11Y-018,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-A11Y-019,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-A11Y-020,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-A11Y-021,ABSENT,Packet/tracking record,None,Explicit none,PASS
+KBDL-A11Y-022,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-A11Y-023,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-A11Y-024,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-A11Y-025,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-A11Y-026,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-A11Y-027,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-A11Y-028,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-A11Y-029,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-A11Y-030,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-A11Y-031,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-A11Y-032,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-A11Y-033,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-A11Y-034,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-A11Y-035,ABSENT,Packet/tracking record,None,Explicit none,PASS
+KBDL-A11Y-036,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-A11Y-037,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-A11Y-038,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-A11Y-039,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-A11Y-040,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-CMP-001,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-CMP-002,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-CMP-003,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-CMP-004,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-CMP-005,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-CMP-006,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-CMP-007,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-CMP-008,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-CMP-009,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-CMP-010,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-CMP-011,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-CMP-012,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-CMP-013,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-CMP-014,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-CMP-015,ABSENT,Packet/tracking record,None,Explicit none,PASS
+KBDL-CMP-016,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-CMP-017,ABSENT,Packet/tracking record,None,Explicit none,PASS
+KBDL-CMP-018,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-CMP-019,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-CMP-020,ABSENT,Packet/tracking record,None,Explicit none,PASS
+KBDL-CMP-021,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-CMP-022,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-CMP-023,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-CMP-024,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-CMP-025,ABSENT,Packet/tracking record,None,Explicit none,PASS
+KBDL-CMP-026,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-CMP-027,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-CMP-028,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-CMP-029,ABSENT,Packet/tracking record,None,Explicit none,PASS
+KBDL-CMP-030,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-CMP-031,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-CMP-032,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-CMP-033,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-CMP-034,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-CMP-035,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-CMP-036,ABSENT,Packet/tracking record,None,Explicit none,PASS
+KBDL-CMP-037,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-CMP-038,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-CMP-039,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-CMP-040,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-CMP-041,ABSENT,Packet/tracking record,None,Contingent,PASS
+KBDL-CMP-042,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-CMP-043,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-CMP-044,ABSENT,Packet/tracking record,None,Explicit none,PASS
+KBDL-CMP-045,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-CMP-046,ABSENT,Packet/tracking record,None,Explicit none,PASS
+KBDL-CMP-047,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-CMP-048,ABSENT,Packet/tracking record,None,Explicit none,PASS
+KBDL-CMP-049,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-CMP-050,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-CMP-051,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-CMP-052,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-CMP-053,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-CMP-054,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-CMP-055,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-CMP-056,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-CMP-057,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-CMP-058,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-CMP-059,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-CMP-060,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-CMP-061,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-CMP-062,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-CMP-063,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-CMP-064,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-CMP-065,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-CMP-066,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-CMP-067,ABSENT,Packet/tracking record,None,Explicit none,PASS
+KBDL-CMP-068,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-CMP-069,ABSENT,Packet/tracking record,None,Explicit none,PASS
+KBDL-CMP-070,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-CMP-071,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-CMP-072,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-CMP-073,ABSENT,Packet/tracking record,None,Explicit none,PASS
+KBDL-CMP-074,ABSENT,Packet/tracking record,None,Explicit none,PASS
+KBDL-CMP-075,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-CMP-076,ABSENT,Packet/tracking record,None,Explicit none,PASS
+KBDL-CMP-077,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-CMP-078,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-CMP-079,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-CMP-080,ABSENT,Packet/tracking record,None,Explicit none,PASS
+KBDL-CMP-081,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-CMP-082,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-CMP-083,ABSENT,Packet/tracking record,None,Explicit none,PASS
+KBDL-CMP-084,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-CMP-085,ABSENT,Packet/tracking record,None,Explicit none,PASS
+KBDL-CMP-086,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-CMP-087,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-CMP-088,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-CMP-089,ABSENT,Packet/tracking record,None,Explicit none,PASS
+KBDL-CMP-090,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-CMP-091,ABSENT,Packet/tracking record,None,Explicit none,PASS
+KBDL-CMP-092,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-CMP-093,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-CMP-094,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-CMP-095,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-CMP-096,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-CMP-097,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-CMP-098,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-CMP-099,ABSENT,Packet/tracking record,None,Explicit none,PASS
+KBDL-CMP-100,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-CMP-101,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-CMP-102,ABSENT,Packet/tracking record,None,Explicit none,PASS
+KBDL-CMP-103,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-CMP-104,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-CMP-105,ABSENT,Packet/tracking record,None,Explicit none,PASS
+KBDL-CMP-106,ABSENT,Packet/tracking record,None,Explicit none,PASS
+KBDL-CMP-107,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-CMP-108,ABSENT,Packet/tracking record,None,Explicit none,PASS
+KBDL-CMP-109,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-CMP-110,ABSENT,Packet/tracking record,None,Explicit none,PASS
+KBDL-CMP-111,ABSENT,Packet/tracking record,None,Explicit none,PASS
+KBDL-CUS-001,None.,None.,None,Explicit none,PASS
+KBDL-CUS-002,None.,None.,None,Explicit none,PASS
+KBDL-CUS-003,None.,None.,None,Explicit none,PASS
+KBDL-CUS-004,None.,None.,None,Explicit none,PASS
+KBDL-CUS-005,None.,None.,None,Explicit none,PASS
+KBDL-CUS-006,None.,None.,None,Explicit none,PASS
+KBDL-CUS-007,None.,None.,None,Explicit none,PASS
+KBDL-CUS-008,None.,None.,None,Explicit none,PASS
+KBDL-CUS-009,None.,None.,None,Explicit none,PASS
+KBDL-CUS-010,None.,None.,None,Explicit none,PASS
+KBDL-CUS-011,None.,None.,None,Explicit none,PASS
+KBDL-CUS-012,None.,None.,None,Explicit none,PASS
+KBDL-CUS-013,None.,None.,None,Explicit none,PASS
+KBDL-CUS-014,None.,None.,None,Explicit none,PASS
+KBDL-CUS-015,None.,None.,None,Explicit none,PASS
+KBDL-CUS-016,None.,None.,None,Explicit none,PASS
+KBDL-CUS-017,None.,None.,None,Explicit none,PASS
+KBDL-CUS-018,None.,None.,None,Explicit none,PASS
+KBDL-CUS-019,None.,None.,None,Explicit none,PASS
+KBDL-CUS-020,None.,None.,None,Explicit none,PASS
+KBDL-CUS-021,None.,None.,None,Explicit none,PASS
+KBDL-CUS-022,None.,None.,None,Explicit none,PASS
+KBDL-CUS-023,None.,None.,None,Explicit none,PASS
+KBDL-CUS-024,None.,None.,None,Explicit none,PASS
+KBDL-CUS-025,None.,None.,None,Explicit none,PASS
+KBDL-CUS-026,None.,None.,None,Explicit none,PASS
+KBDL-CUS-027,None.,None.,None,Explicit none,PASS
+KBDL-CUS-028,None.,None.,None,Explicit none,PASS
+KBDL-CUS-029,None.,None.,None,Explicit none,PASS
+KBDL-CUS-030,Later implementation/tooling authorization.,Later implementation/tooling authorization.,Later implementation/tooling authorization,Deferred,PASS
+KBDL-FND-001,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-FND-002,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-FND-003,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-FND-004,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-FND-005,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-FND-006,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-FND-007,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-FND-008,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-FND-009,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-FND-010,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-FND-011,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-FND-012,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-GOV-001,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-GOV-002,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-GOV-003,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-MOT-001,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-MOT-002,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-MOT-003,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-MOT-004,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-MOT-005,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-MOT-006,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-MOT-007,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-MOT-008,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-MOT-009,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-MOT-010,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-MOT-011,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-MOT-012,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-MOT-013,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-MOT-014,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-MOT-015,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-MOT-016,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-MOT-017,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-MOT-018,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-MOT-019,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-MOT-020,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-MOT-021,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-MOT-022,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-MOT-023,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-MOT-024,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-MOT-025,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-MOT-026,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-MOT-027,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-MOT-028,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-MOT-029,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-MOT-030,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-MOT-031,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-MOT-032,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-MOT-033,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-MOT-034,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-PRN-001,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-PRN-002,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-PRN-003,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-PRN-004,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-PRN-005,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-PRN-006,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-PRN-007,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-PRN-008,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-PRO-001,None.,None.,None,Explicit none,PASS
+KBDL-PRO-002,None.,None.,None,Explicit none,PASS
+KBDL-PRO-003,None.,None.,None,Explicit none,PASS
+KBDL-PRO-004,None.,None.,None,Explicit none,PASS
+KBDL-PRO-005,None.,None.,None,Explicit none,PASS
+KBDL-PRO-006,None.,None.,None,Explicit none,PASS
+KBDL-PRO-007,None.,None.,None,Explicit none,PASS
+KBDL-PRO-008,None.,None.,None,Explicit none,PASS
+KBDL-PRO-009,None.,None.,None,Explicit none,PASS
+KBDL-PRO-010,None.,None.,None,Explicit none,PASS
+KBDL-PRO-011,None.,None.,None,Explicit none,PASS
+KBDL-PRO-012,None.,None.,None,Explicit none,PASS
+KBDL-PRO-013,None.,None.,None,Explicit none,PASS
+KBDL-PRO-014,"None blocking; `KBDL-CMP-105`, `KBDL-RSP-011` cited as unapproved context only, not adopted as authority.","None blocking; `KBDL-CMP-105`, `KBDL-RSP-011` cited as unapproved context only, not adopted as authority.","None blocking; KBDL-CMP-105, KBDL-RSP-011 cited as unapproved context only, not adopted as authority",Recorded dependency,PASS
+KBDL-PRO-015,"None blocking; `KBDL-CMP-015`, `KBDL-CMP-036` cited as unapproved context only, not adopted as authority.","None blocking; `KBDL-CMP-015`, `KBDL-CMP-036` cited as unapproved context only, not adopted as authority.","None blocking; KBDL-CMP-015, KBDL-CMP-036 cited as unapproved context only, not adopted as authority",Recorded dependency,PASS
+KBDL-PRO-016,`KBDL-CMP-067` (KBDL-008) — blocking.,`KBDL-CMP-067` (KBDL-008) — blocking.,KBDL-CMP-067 (KBDL-008) — blocking,Contingent,PASS
+KBDL-PRO-017,"None blocking; `KBDL-RSP-002`, `KBDL-RSP-003` cited as unapproved context only for the eventual exact grid-interaction point, not required for this item's own approval.","None blocking; `KBDL-RSP-002`, `KBDL-RSP-003` cited as unapproved context only for the eventual exact grid-interaction point, not required for this item's own approval.","None blocking; KBDL-RSP-002, KBDL-RSP-003 cited as unapproved context only for the eventual exact grid-interaction point, not required for this item's own approval",Recorded dependency,PASS
+KBDL-PRO-018,"`KBDL-CMP-015`, `KBDL-CMP-036` (KBDL-007) — blocking.","`KBDL-CMP-015`, `KBDL-CMP-036` (KBDL-007) — blocking.","KBDL-CMP-015, KBDL-CMP-036 (KBDL-007) — blocking",Contingent,PASS
+KBDL-PRO-019,None.,None.,None,Explicit none,PASS
+KBDL-PRO-020,None.,None.,None,Explicit none,PASS
+KBDL-PRO-021,None.,None.,None,Explicit none,PASS
+KBDL-PRO-022,None.,None.,None,Explicit none,PASS
+KBDL-PRO-023,None.,None.,None,Explicit none,PASS
+KBDL-PRO-024,None.,None.,None,Explicit none,PASS
+KBDL-PRO-025,None.,None.,None,Explicit none,PASS
+KBDL-PRO-026,None.,None.,None,Explicit none,PASS
+KBDL-PRO-027,None.,None.,None,Explicit none,PASS
+KBDL-PRO-028,None.,None.,None,Explicit none,PASS
+KBDL-PRO-029,None.,None.,None,Explicit none,PASS
+KBDL-RSP-001,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-RSP-002,ABSENT,Packet/tracking record,None,Explicit none,PASS
+KBDL-RSP-003,ABSENT,Packet/tracking record,None,Explicit none,PASS
+KBDL-RSP-004,ABSENT,Packet/tracking record,None,Explicit none,PASS
+KBDL-RSP-005,ABSENT,Packet/tracking record,None,Explicit none,PASS
+KBDL-RSP-006,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-RSP-007,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-RSP-008,ABSENT,Packet/tracking record,None,Explicit none,PASS
+KBDL-RSP-009,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-RSP-010,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-RSP-011,ABSENT,Packet/tracking record,None,Explicit none,PASS
+KBDL-RSP-012,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-RSP-013,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-RSP-014,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-RSP-015,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-RSP-016,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-RSP-017,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-RSP-018,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-RSP-019,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-RSP-020,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-RSP-021,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-RSP-022,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-THM-001,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-THM-002,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-THM-003,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-THM-004,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-THM-005,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-THM-006,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-THM-007,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-THM-008,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-THM-009,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-THM-010,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-THM-011,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-THM-012,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-THM-012a,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-THM-013,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-THM-014,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-THM-015,ABSENT,Explicit None,None,Explicit none,PASS
+KBDL-VAL-001,None.,None.,None,Explicit none,PASS
+KBDL-VAL-002,None.,None.,None,Explicit none,PASS
+KBDL-VAL-003,None.,None.,None,Explicit none,PASS
+KBDL-VAL-004,None.,None.,None,Explicit none,PASS
+KBDL-VAL-005,None.,None.,None,Explicit none,PASS
+KBDL-VAL-006,None.,None.,None,Explicit none,PASS
+KBDL-VAL-007,None.,None.,None,Explicit none,PASS
+KBDL-VAL-008,None.,None.,None,Explicit none,PASS
+KBDL-VAL-009,None.,None.,None,Explicit none,PASS
+KBDL-VAL-010,Future implementation.,Future implementation.,Future implementation,Recorded dependency,PASS
+KBDL-VAL-011,Adopting project.,Adopting project.,Adopting project,Recorded dependency,PASS
+KBDL-VAL-012,Planning-agent and project-owner review.,Planning-agent and project-owner review.,Planning-agent and project-owner review,Recorded dependency,PASS

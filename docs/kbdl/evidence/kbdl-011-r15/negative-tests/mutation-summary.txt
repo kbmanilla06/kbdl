@@ -1,0 +1,32 @@
+ledger-normative-lifecycle: PASS (exit 1; expected SOURCE_PRECEDENCE_CONFLICT; detected GROUP_LEDGER_CONFLICT;SOURCE_PRECEDENCE_CONFLICT)
+ledger-approved-decision: PASS (exit 1; expected DECISION_FIELD_MISMATCH; detected DECISION_FIELD_MISMATCH;UNRESOLVED_FIELD_SOURCE)
+missing-administrative-field: PASS (exit 1; expected MISSING_ADMIN_FIELD; detected GROUP_LEDGER_CONFLICT;MISSING_ADMIN_FIELD)
+missing-derivation-rule: PASS (exit 1; expected MISSING_SOURCE_RULE; detected MISSING_SOURCE_RULE)
+wrong-blueprint: PASS (exit 1; expected BLUEPRINT_MISMATCH; detected BLUEPRINT_MISMATCH;GROUP_LEDGER_CONFLICT)
+wrong-roadmap: PASS (exit 1; expected ROADMAP_MISMATCH; detected GROUP_LEDGER_CONFLICT;ROADMAP_MISMATCH)
+wrong-anchor: PASS (exit 1; expected LOCATION_MISMATCH; detected LOCATION_MISMATCH)
+wrong-packet: PASS (exit 1; expected PACKET_MISMATCH; detected PACKET_ITEM_MISMATCH;PACKET_MISMATCH;UNRESOLVED_FIELD_SOURCE)
+wrong-dependency: PASS (exit 1; expected DEPENDENCY_MISMATCH; detected DEPENDENCY_CLASS_MISMATCH;DEPENDENCY_MISMATCH;UNRESOLVED_FIELD_SOURCE)
+lifecycle-only-authority: PASS (exit 1; expected LIFECYCLE_ONLY_AUTHORITY; detected LIFECYCLE_ONLY_AUTHORITY;UNRESOLVED_FIELD_SOURCE)
+missing-standard-basis: PASS (exit 1; expected MISSING_STANDARD_BASIS; detected MISSING_STANDARD_BASIS;UNRESOLVED_FIELD_SOURCE)
+nonapproved-authority-target: PASS (exit 1; expected NONAPPROVED_AUTHORITY_TARGET; detected NONAPPROVED_AUTHORITY_TARGET;UNRESOLVED_FIELD_SOURCE)
+multi-node-cycle: PASS (exit 1; expected CIRCULAR_AUTHORITY; detected CIRCULAR_AUTHORITY;UNRESOLVED_FIELD_SOURCE)
+self-authority: PASS (exit 1; expected SELF_AUTHORITY; detected SELF_AUTHORITY;UNRESOLVED_FIELD_SOURCE)
+ar2-scope-exclusion: PASS (exit 1; expected AR2_SCOPE; detected AR2_SCOPE;UNRESOLVED_FIELD_SOURCE)
+historical-falsely-recovered: PASS (exit 1; expected HISTORICAL_RECOVERY; detected HISTORICAL_RECOVERY;UNRESOLVED_FIELD_SOURCE)
+explicit-group-conflict: PASS (exit 1; expected GROUP_LEDGER_CONFLICT; detected GROUP_LEDGER_CONFLICT)
+misparsed-status-bucket: PASS (exit 1; expected STATUS_BUCKET_MISMATCH; detected GROUP_LEDGER_CONFLICT;STATUS_BUCKET_MISMATCH)
+valid-wrong-anchor: PASS (exit 1; expected LOCATION_MISMATCH; detected LOCATION_MISMATCH)
+wrong-packet-item: PASS (exit 1; expected PACKET_ITEM_MISMATCH; detected PACKET_ITEM_MISMATCH;PACKET_MISMATCH;UNRESOLVED_FIELD_SOURCE)
+wrong-dependency-class: PASS (exit 1; expected DEPENDENCY_CLASS_MISMATCH; detected DEPENDENCY_CLASS_MISMATCH;DEPENDENCY_MISMATCH;UNRESOLVED_FIELD_SOURCE)
+nonexistent-evidence-sha: PASS (exit 1; expected MISSING_GIT_EVIDENCE_OBJECT; detected EVIDENCE_MISMATCH;MISSING_GIT_EVIDENCE_OBJECT;UNRESOLVED_FIELD_SOURCE)
+unrelated-evidence-artifact: PASS (exit 1; expected EVIDENCE_SCOPE_RELATIONSHIP; detected EVIDENCE_MISMATCH;EVIDENCE_SCOPE_RELATIONSHIP;UNRESOLVED_FIELD_SOURCE)
+unrelated-limitation: PASS (exit 1; expected LIMITATION_MISMATCH; detected LIMITATION_MISMATCH;UNRESOLVED_FIELD_SOURCE)
+wrong-standard-clause: PASS (exit 1; expected STANDARD_CLAUSE_MISMATCH; detected STANDARD_CLAUSE_MISMATCH;UNRESOLVED_FIELD_SOURCE)
+implicit-verb-cycle: PASS (exit 1; expected CIRCULAR_AUTHORITY; detected CIRCULAR_AUTHORITY;UNRESOLVED_FIELD_SOURCE)
+
+Real mutations executed: 26
+Mutations detected by production validator: 26
+Unexpected mutation passes: 0
+Wrong-category detections: 0
+Fixtures remaining: 0
