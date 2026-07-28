@@ -13,6 +13,14 @@ and Flow (consumer-facing web applications). See the
 
 ## Specification Status
 
+The current gated prompt sequence contains eleven steps, KBDL-001 through
+KBDL-011, with KBDL-011 serving as Final Validation and the completion gate.
+Historical references to a ten-step roadmap describe the earlier
+specification-building scope governed by KBDL-DEC-002 (KBDL-001 through
+KBDL-010); they do not describe the current gated sequence. The presence of
+KBDL-011 does not approve candidate readiness, limitations, or project
+completion.
+
 **KBDL-001: Specification Architecture and Governance Foundation**,
 **KBDL-002: Identity, Principles, and Visual Consistency Rules**,
 **KBDL-003: Core Visual Foundations**,
@@ -20,8 +28,8 @@ and Flow (consumer-facing web applications). See the
 **KBDL-005: Expressive Motion Language**,
 **KBDL-006: Responsive Behavior and Accessibility**, and
 **KBDL-007: Core Action, Form, and Navigation Components** deliverables
-are present in the repository, the first seven steps of a ten-step
-approved roadmap. Their
+are present in the repository as the first seven specification-building
+steps of the current eleven-step gated sequence. Their
 lifecycle status is `Approved` for architecture, rules, and (as of the
 project owner's foundation-defaults approval, see
 [KBDL-DEC-012](decision-register.md#kbdl-dec-012--foundation-decision-packet-approved))

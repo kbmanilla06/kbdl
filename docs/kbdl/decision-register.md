@@ -74,6 +74,12 @@ rather than invented, per the source-of-truth rules in this prompt.
 - **Implementation impact:** No implementation code is produced until later roadmap steps.
 - **Superseded decision:** None.
 - **Review date:** Not applicable.
+- **Roadmap-evolution clarification (KBDL-011-R1):** The original decision
+  above governs the written-specification scope KBDL-001 through KBDL-010.
+  The subsequently approved roadmap adds KBDL-011 as a separate Final
+  Validation and completion gate. This clarification preserves and does not
+  supersede the original written-specification decision; it does not approve
+  candidate readiness, accept any limitation, or approve project completion.
 
 ### KBDL-DEC-003 — Visual consistency is the cross-project strategy
 

@@ -108,7 +108,7 @@ Every Approved requirement traces to a prior Approved rule, adopted WCAG/WAI-ARI
 
 ## 13. Decision-Register Audit
 
-`KBDL-DEC-001` through `015` are sequential, unique, titled, scoped, dated, owned, mapped, and bounded by their recorded exclusions. No orphan or duplicate decision exists; no requirement cites a nonexistent decision; no unapproved packet or completion/limitation decision is represented as approved.
+`KBDL-DEC-001` through `015` are sequential, unique, titled, scoped, dated, owned, mapped, and bounded by their recorded exclusions. KBDL-011-R1 adds a non-superseding clarification to KBDL-DEC-002: its original ten-step decision governs the KBDL-001-through-KBDL-010 written-specification scope, while the subsequently approved roadmap adds KBDL-011 as the separate Final Validation and completion gate. The original decision text and affected scope remain unchanged. No orphan or duplicate decision exists; no requirement cites a nonexistent decision; no unapproved packet, candidate-readiness status, limitation acceptance, or completion decision is represented as approved.
 
 ## 14. Pending and Deferred Inventory
 
@@ -131,7 +131,7 @@ All 317 requirements are present exactly once in their authoritative traceabilit
 
 ## 16. Cross-Reference and Documentation-Integrity Audit
 
-Dependency-free checks cover all Markdown relative links, anchors, visible section labels, headings, duplicate/empty sections, placeholders, conflict markers, tables, IDs, decisions, packets, planned-file references, stale locks, roadmap wording, and completion claims. Failures: `0`.
+KBDL-011-R1 found two documentation-integrity defect classes in the KBDL-011 baseline: README described the current roadmap as ten steps, and the scope-completion matrix used vague/non-auditable commit values. The remediation distinguishes the historical KBDL-001-through-KBDL-010 specification-building scope from the current eleven-step gated sequence and replaces every matrix commit value with an exact full SHA or the explicit unresolved marker. Dependency-free checks then covered all Markdown relative links, anchors, visible section labels, headings, duplicate/empty sections, placeholders, conflict markers, tables, IDs, decisions, packets, planned-file references, stale locks, roadmap wording, scope-completion values, and completion claims. Post-remediation failures: `0`.
 
 ## 17. Governance and Conventions Audit
 
@@ -149,9 +149,10 @@ Color, typography, spacing/layout, shape/corners, elevation/depth, iconography, 
 
 The 72-role inventory maps 72 light and 72 dark roles with one alias and no missing mapping. The alias and parity models reconcile. Opaque text, focus, status, and caption-band pairs were recalculated with WCAG relative luminance. Decorative failures retain explicit restrictions. Opacity, translucency, actual project media, forced-colors policy, and visualization palettes remain pending or Not verified.
 
-Reproduction artifact: `/tmp/kbdl-011-theme-contrast.py`; 30 opaque pairs,
-zero applicable failures; SHA-256
-`91a2a4fac9a6e90fe3b0088a66271b86bd2c60f8dd4958459ea35ff6237f0090`.
+Reproduction artifact:
+[`theme_contrast_validator.py`](evidence/kbdl-011-r1/scripts/theme_contrast_validator.py);
+25 representative opaque pairs, zero applicable failures; SHA-256
+`07aa3a1b6185e0b5a61abcb78275edd5789297d61d8ab7ea0c533d8cd3e19aef`.
 
 ## 21. Motion Audit
 
@@ -214,30 +215,35 @@ Every applicable Not verified requirement is covered by the ledger below; ranges
 
 All earlier rows remain intact and unmarked. The KBDL-011 section adds 26 unmarked controls for inventory, authority, evidence, integrity, module consistency, ledgers, readiness separation, limitations, backlog, and the completion gate.
 
-Repository-validation artifact: `/tmp/kbdl-011-validate.py`; 34 Markdown
-files, 317 requirements, 15 decisions, and 88 checklist rows passed;
-SHA-256
-`81941bf9854bf03008bef7f2aaa95485ee396fc015ced6b3466dc38fa5f5133e`.
+The complete reproducible suite and captured command output are retained in
+the [KBDL-011-R1 evidence package](evidence/kbdl-011-r1/evidence-manifest.md).
+The post-remediation run validated 36 Markdown files, 317 requirements, 15
+decisions, 11 scope-completion rows, and the completion gate with zero errors.
 
 ## 32. Scope-Completion Matrix
 
-| Step | Module/deliverable | Validated commit / planning status | Requirements / lifecycle | Validation summary / open work | Completion status |
-| --- | --- | --- | --- | --- | --- |
-| 001 | Governance | Historical KBDL-001 commits / passed | GOV-001–003 Approved | 2 Verified; GOV-002 runtime effect unverified | Delivered |
-| 002 | Principles | Historical KBDL-002 commits / passed | PRN-001–008 Approved | Static architecture present; implementation unverified | Delivered |
-| 003 | Foundations | Decision 012 and history / passed | FND-001–012 Approved | Calculation subset verified | Delivered |
-| 004 | Themes | Decision 013 and history / passed | THM 16 Approved | Parity/opaque calculations verified; pending exclusions | Delivered |
-| 005 | Motion | Decision 014 and history / passed | MOT-001–034 Approved | Documentation complete; runtime unverified | Delivered |
-| 006 | Responsive/accessibility | `14ef110`, `0c5789e` / passed | RSP/A11Y 62; 9 Recommended | Runtime unverified | Delivered |
-| 007 | Core components | `332ae95` plus remediations / passed | CMP-001–051; 10 Recommended | Runtime unverified | Delivered |
-| 008 | System components | `393a980` plus remediations / passed | CMP-052–111; 17 Recommended | Runtime unverified | Delivered |
-| 009 | Profiles | `254b935` plus remediations / passed | PRO-001–029; 7 Recommended | Adoption unverified | Delivered |
-| 010 | Customization | `12080da`, `55b6ba6` / passed | CUS-001–030; 7 Recommended, 1 Deferred | No project record/implementation | Delivered |
-| 011 | Final validation | This commit / pending planning review | VAL-001–012 Approved | Documentation candidate only | Under review |
+An exact SHA means repository history and approved project-state evidence
+identify that commit as the final validated commit. An unresolved marker
+means the history contains candidate implementation/remediation commits but
+does not independently establish which one was the final validated commit.
+
+| Prompt ID | Module | Exact final validated commit | Planning-agent result | Requirement range | Lifecycle summary | Validation summary | Open work | Completion status |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| KBDL-001 | Governance | Unresolved — final validated commit not independently confirmed | Passed; later progression records this result | GOV-001–003 | 3 Approved | 2 Verified; 1 Not verified | Confirm final validated commit; implementation effect unverified | Delivered; commit evidence unresolved |
+| KBDL-002 | Principles | Unresolved — final validated commit not independently confirmed | Passed; later progression records this result | PRN-001–008 | 8 Approved | 8 Not verified | Confirm final validated commit; implementation unverified | Delivered; commit evidence unresolved |
+| KBDL-003 | Foundations | Unresolved — final validated commit not independently confirmed | Passed; later progression records this result | FND-001–012 | 12 Approved | 1 Verified; 11 Not verified | Confirm final validated commit | Delivered; commit evidence unresolved |
+| KBDL-004 | Themes | Unresolved — final validated commit not independently confirmed | Passed; later progression records this result | THM-001–015 including 012a/012b | 16 Approved | 5 Verified; 10 Not verified; 1 Not applicable | Confirm final validated commit; excluded theme contexts remain pending | Delivered; commit evidence unresolved |
+| KBDL-005 | Motion | Unresolved — final validated commit not independently confirmed | Passed; later progression records this result | MOT-001–034 | 34 Approved | 27 Not verified; 7 Not applicable | Confirm final validated commit; runtime unverified | Delivered; commit evidence unresolved |
+| KBDL-006 | Responsive/accessibility | Unresolved — final validated commit not independently confirmed | Passed before KBDL-007 | RSP-001–022; A11Y-001–040 | 53 Approved; 9 Recommended | 3 Verified; 49 Not verified; 10 Not applicable | Confirm final validated commit; runtime/device evidence and packets pending | Delivered; commit evidence unresolved |
+| KBDL-007 | Core components | `ee46f5a8cbf05bbbf272708c00464fa7d2fbd294` | Passed before KBDL-008 | CMP-001–051 | 41 Approved; 10 Recommended | 35 Not verified; 16 Not applicable | Runtime evidence and packet decisions pending | Delivered |
+| KBDL-008 | System components | `5cf90601f0ec3a3d56daf0882e86eb98fe941f48` | Passed before KBDL-009 | CMP-052–111 | 43 Approved; 17 Recommended | 44 Not verified; 16 Not applicable | Runtime evidence and packet decisions pending | Delivered |
+| KBDL-009 | Project Profiles | `907708c9a9db8004a7f03a36c54fb1a265fe7a9a` | Passed before KBDL-010 | PRO-001–029 | 22 Approved; 7 Recommended | 17 Not verified; 12 Not applicable | Project adoption evidence and packet decisions pending | Delivered |
+| KBDL-010 | Manual customization | `55b6ba6d90a5e0c6f5dd9affbcc0ce302462de95` | Passed before KBDL-011 | CUS-001–030 | 22 Approved; 7 Recommended; 1 Deferred | 22 Not verified; 8 Not applicable | Project records/evidence, packet decisions, and CUS-030 remain pending | Delivered |
+| KBDL-011 | Final Validation | `b5bb0a3379a9399ca448fcaf6166892163a604e2` (accepted validation baseline) | Pending independent review; candidate status not accepted | VAL-001–012 | 12 Approved | 12 Verified methodology claims | KBDL-011-R1 planning review and project-owner completion decision pending | Under review; completion unapproved |
 
 ## 33. Defect and Limitation Register
 
-P0/P1/P2/P3 documentation defects: none found. Known limitations: no coded implementation, adopting project, deployment, runtime accessibility/security/performance/browser/device evidence, or executed rollback. These are intentional scope limitations, not accepted production limitations. Pending recommendations and Deferred backlog remain listed separately.
+KBDL-011-R1 recorded and remediated two P2 documentation defects: (1) stale README wording presented the current roadmap as ten steps, and (2) the scope-completion matrix used non-auditable commit placeholders and mixed implementation/remediation SHAs without identifying final validated commits. It also corrected the resulting readiness-reporting defect by rerunning validation after remediation. Open P0/P1/P2/P3 documentation defects after remediation: none. Exact final validated commits for KBDL-001 through KBDL-006 remain explicitly unresolved evidence gaps, not concealed defects. Known limitations remain: no coded implementation, adopting project, deployment, runtime accessibility/security/performance/browser/device evidence, or executed rollback. No limitation is accepted. Pending recommendations and Deferred backlog remain listed separately.
 
 ## 34. Deferred Backlog
 
@@ -266,7 +272,7 @@ Implementation conformance status: NOT VERIFIED
 Project completion status: PENDING PLANNING-AGENT VALIDATION AND PROJECT-OWNER APPROVAL
 ```
 
-This status concerns only the documentation repository. Production verification and deployment are not applicable. Known documentation defects: none. Deferred and pending work remains explicit. Recommended next release: planning-agent validation of KBDL-011, followed by explicit project-owner completion review.
+This status concerns only the documentation repository and was recalculated after KBDL-011-R1 remediation checks passed. Production verification and deployment are not applicable. Open documentation defects: none; the R1 defect history remains recorded in §33. Deferred and pending work remains explicit. Recommended next release: planning-agent validation of KBDL-011-R1, followed by explicit project-owner completion review.
 
 ## 38. Normative KBDL-VAL Requirements
 

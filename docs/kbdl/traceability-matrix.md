@@ -1211,9 +1211,10 @@ promote them. `PRO` (KBDL-009) is no longer a future or locked module:
 (`KBDL-PRO-001`–`029`, see the
 [KBDL-009 — Project Profiles](#kbdl-009--project-profiles) section
 above); KBDL-009 passed planning-agent validation before KBDL-010 began.
-`CUS` (KBDL-010) is now present with the requirements traced above and is
-under planning-agent validation. `VAL` remains future and locked until
-KBDL-010 passes that review.
+`CUS` (KBDL-010) is present with the requirements traced above and passed
+planning-agent validation before KBDL-011 began. `VAL` (KBDL-011) is present
+as the Final Validation and completion gate; its baseline and candidate status
+remain pending independent planning-agent review and project-owner action.
 Approval status and validation status are recorded independently
 for every row; a row being `Approved` never implies it is `Verified`, and a
 row being `Verified` never implies or grants `Approved` status. `PRN`

@@ -1,0 +1,210 @@
+COMMAND 1: git fetch origin
+PURPOSE: required Git inspection
+STDOUT:
+
+STDERR:
+
+EXIT CODE: 0
+RESULT: PASS
+
+COMMAND 2: git remote -v
+PURPOSE: required Git inspection
+STDOUT:
+origin	https://github.com/kbmanilla06/kbdl.git (fetch)
+origin	https://github.com/kbmanilla06/kbdl.git (push)
+STDERR:
+
+EXIT CODE: 0
+RESULT: PASS
+
+COMMAND 3: git branch --show-current
+PURPOSE: required Git inspection
+STDOUT:
+main
+STDERR:
+
+EXIT CODE: 0
+RESULT: PASS
+
+COMMAND 4: git status --short
+PURPOSE: required Git inspection
+STDOUT:
+ M docs/kbdl/README.md
+ M docs/kbdl/decision-register.md
+ M docs/kbdl/traceability-matrix.md
+ M docs/kbdl/validation.md
+?? docs/kbdl/evidence/
+STDERR:
+
+EXIT CODE: 0
+RESULT: PASS
+
+COMMAND 5: git rev-parse HEAD
+PURPOSE: required Git inspection
+STDOUT:
+b5bb0a3379a9399ca448fcaf6166892163a604e2
+STDERR:
+
+EXIT CODE: 0
+RESULT: PASS
+
+COMMAND 6: git rev-parse origin/main
+PURPOSE: required Git inspection
+STDOUT:
+b5bb0a3379a9399ca448fcaf6166892163a604e2
+STDERR:
+
+EXIT CODE: 0
+RESULT: PASS
+
+COMMAND 7: git log --oneline --decorate -15
+PURPOSE: required Git inspection
+STDOUT:
+b5bb0a3 (HEAD -> main, origin/main, origin/HEAD) Add KBDL final validation audit (KBDL-011)
+55b6ba6 Remove KBDL-010 packet dependency ambiguity (KBDL-010-R1)
+12080da Add manual customization specification (KBDL-010)
+907708c Correct KBDL-009 profile location summaries (KBDL-009-R3)
+3503d95 Add per-ID traceability locations and packet destinations for KBDL-009 (KBDL-009-R2)
+8dc232c Correct KBDL-009 packet mapping, requirement metadata, and traceability (KBDL-009-R1)
+254b935 Add KBDL-009 Project Profiles specification
+5cf9060 Reconcile KBDL-008 lifecycle-authority summaries and traceability (KBDL-008-R2)
+c7d3da5 Correct KBDL-008 invalid references, section labels, and source attribution (KBDL-008-R1)
+393a980 Add KBDL-008 surface, overlay, feedback, and system-state specification
+ee46f5a Correct remaining KBDL-007 packet-number and remediation-state references (KBDL-007-R3)
+f45fd47 Resolve KBDL-CMP-041 approval-scope contradiction (KBDL-007-R2)
+513dd7e Correct KBDL-007 governance and decision-packet accuracy (KBDL-007-R1)
+332ae95 Add KBDL-007 core action, form, and navigation component specification
+0c5789e Correct KBDL-006 governance, WCAG accuracy, and traceability (KBDL-006-R1)
+STDERR:
+
+EXIT CODE: 0
+RESULT: PASS
+
+COMMAND 8: git show --no-patch --format=fuller b5bb0a3
+PURPOSE: required Git inspection
+STDOUT:
+commit b5bb0a3379a9399ca448fcaf6166892163a604e2
+Author:     Khristopher Ben Manilla <kbmanilla06@gmail.com>
+AuthorDate: Tue Jul 28 10:28:43 2026 +0800
+Commit:     Khristopher Ben Manilla <kbmanilla06@gmail.com>
+CommitDate: Tue Jul 28 10:28:43 2026 +0800
+
+    Add KBDL final validation audit (KBDL-011)
+STDERR:
+
+EXIT CODE: 0
+RESULT: PASS
+
+COMMAND 9: git diff --check
+PURPOSE: required Git inspection
+STDOUT:
+
+STDERR:
+
+EXIT CODE: 0
+RESULT: PASS
+
+COMMAND 10: python3 docs/kbdl/evidence/kbdl-011-r1/scripts/decision_packet_validator.py
+PURPOSE: reproducible KBDL-011-R1 validation
+STDOUT:
+Decisions unique/sequential: 15/15
+KBDL-DEC-002 roadmap clarification present: 1
+Pending promotions: 0
+Completion decisions created: 0
+Errors: 0
+STDERR:
+
+EXIT CODE: 0
+RESULT: PASS
+
+COMMAND 11: python3 docs/kbdl/evidence/kbdl-011-r1/scripts/repository_documentation_validator.py
+PURPOSE: reproducible KBDL-011-R1 validation
+STDOUT:
+Markdown files: 36
+Stale ten-step current-roadmap claims: 0
+Documentation errors: 0
+STDERR:
+
+EXIT CODE: 0
+RESULT: PASS
+
+COMMAND 12: python3 docs/kbdl/evidence/kbdl-011-r1/scripts/requirement_status_authority_validator.py
+PURPOSE: reproducible KBDL-011-R1 validation
+STDOUT:
+Requirements total/unique: 317/317
+Lifecycle totals: Approved=266 Recommended=50 Deferred=1
+Validation totals: Verified=23 Not verified=224 Not applicable=70
+Approved-authority audit recorded: 1
+Approved-authority defects: 0
+Errors: 0
+STDERR:
+
+EXIT CODE: 0
+RESULT: PASS
+
+COMMAND 13: python3 docs/kbdl/evidence/kbdl-011-r1/scripts/scope_completion_validator.py
+PURPOSE: reproducible KBDL-011-R1 validation
+STDOUT:
+Current roadmap steps: 11
+Stale ten-step current-roadmap claims: 0
+KBDL-DEC-002 roadmap clarification present: 1
+Scope-completion rows: 11
+Rows with exact final validated commit: 5
+Rows explicitly unresolved: 6
+Vague commit placeholders: 0
+Lifecycle changes: 0
+Pending promotions: 0
+Completion decisions created: 0
+Implementation conformance status: NOT VERIFIED
+Project completion status: PENDING
+Errors: 0
+STDERR:
+
+EXIT CODE: 0
+RESULT: PASS
+
+COMMAND 14: python3 docs/kbdl/evidence/kbdl-011-r1/scripts/theme_contrast_validator.py
+PURPOSE: reproducible KBDL-011-R1 validation
+STDOUT:
+light primary: #23252B/#FFFFFF 15.32:1 threshold=4.5 PASS
+light secondary: #636872/#FFFFFF 5.59:1 threshold=4.5 PASS
+light large/nontext: #8A8F99/#FFFFFF 3.25:1 threshold=3 PASS
+dark primary: #F5F6F8/#121317 17.17:1 threshold=4.5 PASS
+dark secondary: #8A8F99/#121317 5.72:1 threshold=4.5 PASS
+light accent: #4A4EE0/#FFFFFF 6.07:1 threshold=4.5 PASS
+dark accent: #A9ACFF/#121317 8.87:1 threshold=4.5 PASS
+light structural: #52565F/#FFFFFF 7.36:1 threshold=3 PASS
+light decorative: #D3D6DC/#FFFFFF 1.46:1 threshold=decorative EXEMPT
+dark structural: #8A8F99/#23252B 4.72:1 threshold=3 PASS
+dark decorative: #52565F/#23252B 2.08:1 threshold=decorative EXEMPT
+light informational: #164499/#FFFFFF 9.05:1 threshold=4.5 PASS
+light positive: #146B3A/#FFFFFF 6.57:1 threshold=4.5 PASS
+light caution: #8A5A00/#FFFFFF 5.93:1 threshold=4.5 PASS
+light critical: #B3261E/#FFFFFF 6.54:1 threshold=4.5 PASS
+light info on strong: #F5F6F8/#164499 8.37:1 threshold=4.5 PASS
+dark informational: #7CC4FF/#121317 9.90:1 threshold=4.5 PASS
+dark positive: #6FD19A/#121317 9.96:1 threshold=4.5 PASS
+dark caution: #E0A840/#121317 8.70:1 threshold=4.5 PASS
+dark critical: #FF8A80/#121317 8.13:1 threshold=4.5 PASS
+dark info subtle: #7CC4FF/#23252B 8.17:1 threshold=4.5 PASS
+dark positive subtle: #6FD19A/#23252B 8.22:1 threshold=4.5 PASS
+dark caution subtle: #E0A840/#23252B 7.18:1 threshold=4.5 PASS
+dark critical subtle: #FF8A80/#23252B 6.71:1 threshold=4.5 PASS
+opaque caption: #F5F6F8/#121317 17.17:1 threshold=4.5 PASS
+Pairs: 25; applicable failures: 0
+STDERR:
+
+EXIT CODE: 0
+RESULT: PASS
+
+COMMAND 15: python3 docs/kbdl/evidence/kbdl-011-r1/scripts/traceability_validator.py
+PURPOSE: reproducible KBDL-011-R1 validation
+STDOUT:
+Traceability roadmap sections: 11
+Requirement traceability expected: 317
+Traceability errors: 0
+STDERR:
+
+EXIT CODE: 0
+RESULT: PASS
+
