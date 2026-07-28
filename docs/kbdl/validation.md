@@ -76,8 +76,8 @@ The table includes twelve VAL requirements added in §38.
 | CMP | CMP-001–111 | 111 | 0 / 0 | 84 | 27 | 0 | 0 | 79 | 32 | 0 |
 | PRO | PRO-001–029 | 29 | 0 / 0 | 22 | 7 | 0 | 0 | 17 | 12 | 0 |
 | CUS | CUS-001–030 | 30 | 0 / 0 | 22 | 7 | 1 | 0 | 22 | 8 | 0 |
-| VAL | VAL-001–012 | 12 | 0 / 0 | 12 | 0 | 0 | 12 | 0 | 0 | 0 |
-| **Total** | — | **317** | **0 / 0** | **266** | **50** | **1** | **23** | **224** | **70** | **0** |
+| VAL | VAL-001–012 | 12 | 0 / 0 | 12 | 0 | 0 | 8 | 4 | 0 | 0 |
+| **Total** | — | **317** | **0 / 0** | **266** | **50** | **1** | **19** | **228** | **70** | **0** |
 
 Unresolved, Blocked, Deprecated, and Superseded requirement counts are zero. No authoritative record, status field, or source requirement is missing.
 
@@ -100,7 +100,7 @@ Confirmed, User-provided, composite User-provided/Confirmed, and Assumed origins
 
 ## 11. Validation-Status Audit
 
-The 23 Verified requirements consist of 11 prior evidence-backed claims and 12 VAL methodology/results claims executed here. The 224 Not verified labels remain for unexecuted or implementation-dependent behavior. Seventy Not applicable labels cover non-testable scope-control, pending numerical/policy choices, and Deferred format policy. Unsupported Verified claims: `0`.
+The 19 Verified requirements consist of 11 prior evidence-backed claims and 8 VAL methodology/results claims supported by independent R2 validators. Four VAL claims (`VAL-006`, `008`, `010`, and `011`) lacked evidence covering their complete stated method and are now `Not verified`; lifecycle and authority remain Approved. The resulting 228 Not verified labels cover those four methodology claims plus unexecuted or implementation-dependent behavior. Seventy Not applicable labels are unchanged. Unsupported claims retained as Verified: `0`.
 
 ## 12. Approved-Authority Audit
 
@@ -127,7 +127,7 @@ Pending requirements lacking tracking: `0`. No pending item is a defect unless a
 
 ## 15. Traceability Audit
 
-All 317 requirements are present exactly once in their authoritative traceability group, including per-ID locations, lifecycle/provenance/validation, authority, method/evidence, limitation, decision, packet/dependency, Profile/future-validation impact, and notes where applicable. Missing requirement traceability: `0`; duplicates: `0`; orphan entries: `0`.
+R2's ordered-occurrence parser finds 317 authoritative requirements and 317 traceability occurrences after relabeling four legacy summary references that were incorrectly counted as authoritative occurrences. Missing, duplicate, and orphan occurrences are zero. Historical grouped traceability records do not yet contain every per-ID provenance, exact-location, method/evidence, packet/tracking, and dependency field required by `VAL-006`; therefore `VAL-006` is `Not verified` and traceability-field completion remains a blocking documentation defect.
 
 ## 16. Cross-Reference and Documentation-Integrity Audit
 
@@ -215,10 +215,13 @@ Every applicable Not verified requirement is covered by the ledger below; ranges
 
 All earlier rows remain intact and unmarked. The KBDL-011 section adds 26 unmarked controls for inventory, authority, evidence, integrity, module consistency, ledgers, readiness separation, limitations, backlog, and the completion gate.
 
-The complete reproducible suite and captured command output are retained in
-the [KBDL-011-R1 evidence package](evidence/kbdl-011-r1/evidence-manifest.md).
-The post-remediation run validated 36 Markdown files, 317 requirements, 15
-decisions, 11 scope-completion rows, and the completion gate with zero errors.
+The independent source/history parser, complete per-ID artifacts, and captured
+command output are retained in the
+[KBDL-011-R2 evidence package](evidence/kbdl-011-r2/evidence-manifest.md).
+It audits 317 requirements, 266 Approved authority chains, 15 decisions, 317
+ordered traceability occurrences, source-derived theme pairs, baseline metadata,
+and documentation structure. It reports 258 incomplete historical traceability
+records as blocking evidence findings.
 
 ## 32. Scope-Completion Matrix
 
@@ -239,11 +242,11 @@ does not independently establish which one was the final validated commit.
 | KBDL-008 | System components | `5cf90601f0ec3a3d56daf0882e86eb98fe941f48` | Passed before KBDL-009 | CMP-052–111 | 43 Approved; 17 Recommended | 44 Not verified; 16 Not applicable | Runtime evidence and packet decisions pending | Delivered |
 | KBDL-009 | Project Profiles | `907708c9a9db8004a7f03a36c54fb1a265fe7a9a` | Passed before KBDL-010 | PRO-001–029 | 22 Approved; 7 Recommended | 17 Not verified; 12 Not applicable | Project adoption evidence and packet decisions pending | Delivered |
 | KBDL-010 | Manual customization | `55b6ba6d90a5e0c6f5dd9affbcc0ce302462de95` | Passed before KBDL-011 | CUS-001–030 | 22 Approved; 7 Recommended; 1 Deferred | 22 Not verified; 8 Not applicable | Project records/evidence, packet decisions, and CUS-030 remain pending | Delivered |
-| KBDL-011 | Final Validation | `b5bb0a3379a9399ca448fcaf6166892163a604e2` (accepted validation baseline) | Pending independent review; candidate status not accepted | VAL-001–012 | 12 Approved | 12 Verified methodology claims | KBDL-011-R1 planning review and project-owner completion decision pending | Under review; completion unapproved |
+| KBDL-011 | Final Validation | `b5bb0a3379a9399ca448fcaf6166892163a604e2` (accepted validation baseline) | R2 remediation implemented; independent planning review pending | VAL-001–012 | 12 Approved | 8 Verified; 4 Not verified | Traceability metadata remediation and project-owner action pending | Not ready; completion unapproved |
 
 ## 33. Defect and Limitation Register
 
-KBDL-011-R1 recorded and remediated two P2 documentation defects: (1) stale README wording presented the current roadmap as ten steps, and (2) the scope-completion matrix used non-auditable commit placeholders and mixed implementation/remediation SHAs without identifying final validated commits. It also corrected the resulting readiness-reporting defect by rerunning validation after remediation. Open P0/P1/P2/P3 documentation defects after remediation: none. Exact final validated commits for KBDL-001 through KBDL-006 remain explicitly unresolved evidence gaps, not concealed defects. Known limitations remain: no coded implementation, adopting project, deployment, runtime accessibility/security/performance/browser/device evidence, or executed rollback. No limitation is accepted. Pending recommendations and Deferred backlog remain listed separately.
+KBDL-011-R1 recorded and remediated stale roadmap wording and vague scope-completion commit values. R2 found that its authority check was circular, its traceability check discarded duplicates and did not validate metadata, several preservation results were hardcoded, documentation coverage was narrower than claimed, theme inputs were copied, and final evidence stopped before commit/push. R2 replaces those checks. The ordered traceability audit also found four legacy duplicate occurrence labels, now corrected. Open blocking documentation defect: historical traceability records lack complete per-ID metadata required by `VAL-006`. Exact final validated commits for KBDL-001 through KBDL-006 remain unresolved evidence gaps. No limitation is accepted; implementation/project evidence remains absent.
 
 ## 34. Deferred Backlog
 
@@ -251,7 +254,7 @@ CUS-030 machine-readable customization format; automated customization/validatio
 
 ## 35. Specification Release-Readiness Assessment
 
-**Specification release candidate status: PRODUCTION READY.** This candidate applies only to the KBDL specification repository as a documentation deliverable. Mandatory documentation criteria pass, no blocking defect remains, and intentional implementation/project absence requires no limitation acceptance for documentation release.
+**Specification release candidate status: NOT READY — TRACEABILITY EVIDENCE REMEDIATION REQUIRED.** Ordered occurrence cardinality passes, but mandatory per-ID traceability metadata is incomplete and four VAL methodology claims lack evidence covering their complete methods. No limitation acceptance can substitute for missing mandatory evidence.
 
 **Limitation acceptance:** Not required for this documentation-only candidate. This does not accept implementation or production limitations.
 
@@ -266,13 +269,13 @@ No coded KBDL implementation, browser/device matrix, runtime accessibility/secur
 ## 37. Candidate Final Completion Audit
 
 ```text
-Specification release candidate status: PRODUCTION READY
-Limitation acceptance: Not required
+Specification release candidate status: NOT READY — TRACEABILITY EVIDENCE REMEDIATION REQUIRED
+Limitation acceptance: None accepted
 Implementation conformance status: NOT VERIFIED
 Project completion status: PENDING PLANNING-AGENT VALIDATION AND PROJECT-OWNER APPROVAL
 ```
 
-This status concerns only the documentation repository and was recalculated after KBDL-011-R1 remediation checks passed. Production verification and deployment are not applicable. Open documentation defects: none; the R1 defect history remains recorded in §33. Deferred and pending work remains explicit. Recommended next release: planning-agent validation of KBDL-011-R1, followed by explicit project-owner completion review.
+This status concerns only the documentation repository and was recalculated from the independent R2 results. Production verification and deployment are not applicable. The blocking traceability-field defect and four downgraded VAL evidence claims remain explicit. Recommended next release: a separately authorized traceability-metadata remediation, followed by independent planning-agent review; project-owner completion review is not yet appropriate.
 
 ## 38. Normative KBDL-VAL Requirements
 
@@ -297,29 +300,29 @@ This status concerns only the documentation repository and was recalculated afte
   - Related requirements: all non-Approved requirements and decisions. Applicable modules: all. Specification location: [§13](#13-decision-register-audit), [§14](#14-pending-and-deferred-inventory). Pending dependencies: None.
   - Validation method/evidence: Decision/packet audit; zero orphan or untracked items. Known limitation: Pending choices remain unavailable for implementation.
 - **`KBDL-VAL-006` — Traceability integrity.** Every requirement **must** have one complete, per-ID auditable traceability record.
-  - Lifecycle status: Approved. Provenance: Confirmed. Validation status: Verified. Authority: approved prompt. Evidence class: A.
+  - Lifecycle status: Approved. Provenance: Confirmed. Validation status: Not verified. Authority: approved prompt. Evidence class: A.
   - Related requirements: all. Applicable modules: all. Specification location: [§15](#15-traceability-audit). Pending dependencies: None.
-  - Validation method/evidence: Traceability parser; zero missing, duplicate, or orphan entries. Known limitation: Grouped prose remains human-readable.
+  - Validation method/evidence: R2 ordered parser confirms cardinality but reports incomplete historical per-ID metadata; complete method FAIL. Known limitation: grouped historical records require remediation.
 - **`KBDL-VAL-007` — Documentation integrity.** Links, anchors, labels, headings, tables, IDs, roadmap wording, and completion claims **must** resolve consistently.
   - Lifecycle status: Approved. Provenance: Confirmed. Validation status: Verified. Authority: approved prompt. Evidence class: A.
   - Related requirements: GOV-001. Applicable modules: all. Specification location: [§16](#16-cross-reference-and-documentation-integrity-audit). Pending dependencies: None.
   - Validation method/evidence: Dependency-free repository validator; PASS. Known limitation: No external-site availability claim.
 - **`KBDL-VAL-008` — Static architecture consistency.** Principles, foundations, themes, motion, responsive, accessibility, components, Profiles, customization, and security rules **must** preserve shared architecture.
-  - Lifecycle status: Approved. Provenance: Confirmed. Validation status: Verified. Authority: approved prompt and prior shared-architecture rules. Evidence class: C.
+  - Lifecycle status: Approved. Provenance: Confirmed. Validation status: Not verified. Authority: approved prompt and prior shared-architecture rules. Evidence class: C.
   - Related requirements: PRN-007, FND-008, THM-006, MOT-026, A11Y-040, CMP-051/066, PRO-001, CUS-020. Applicable modules: all. Specification location: [§17](#17-governance-and-conventions-audit)–[§28](#28-security-privacy-correctness-and-data-integrity-audit). Pending dependencies: None.
-  - Validation method/evidence: Cross-module static audit; contradictions zero. Known limitation: Runtime architecture untested.
+  - Validation method/evidence: R2 does not independently cover every stated cross-module invariant; complete method not established. Known limitation: static and runtime architecture require further evidence.
 - **`KBDL-VAL-009` — Theme-calculation reproducibility.** Approved opaque contrast evidence **must** be reproducible from recorded inputs and formula without extending to unknown alpha contexts.
   - Lifecycle status: Approved. Provenance: Confirmed. Validation status: Verified. Authority: approved prompt. Evidence class: D.
   - Related requirements: THM-002, 007–010. Applicable modules: FND/THM/A11Y. Specification location: [§20](#20-theme-audit). Pending dependencies: None.
   - Validation method/evidence: WCAG contrast script; PASS and checksum recorded. Known limitation: Translucency/media remain unverified.
 - **`KBDL-VAL-010` — Implementation ledger honesty.** Every implementation-dependent gap **must** remain explicit and **must not** be represented as conformance.
-  - Lifecycle status: Approved. Provenance: Confirmed. Validation status: Verified. Authority: approved prompt. Evidence class: E.
+  - Lifecycle status: Approved. Provenance: Confirmed. Validation status: Not verified. Authority: approved prompt. Evidence class: E.
   - Related requirements: all implementation-dependent requirements. Applicable modules: all. Specification location: [§29](#29-implementation-dependent-validation-ledger). Pending dependencies: Future implementation.
-  - Validation method/evidence: Ledger coverage audit; PASS. Known limitation: Listed behavior remains Not verified.
+  - Validation method/evidence: No independent per-ID ledger-coverage proof covers the complete stated method. Known limitation: listed behavior and ledger completeness remain Not verified.
 - **`KBDL-VAL-011` — Project-specific ledger honesty.** Adoption, customization, deployment, and production claims **must** remain unverified or not applicable until project evidence exists.
-  - Lifecycle status: Approved. Provenance: Confirmed. Validation status: Verified. Authority: approved prompt. Evidence class: F.
+  - Lifecycle status: Approved. Provenance: Confirmed. Validation status: Not verified. Authority: approved prompt. Evidence class: F.
   - Related requirements: PRO/CUS. Applicable modules: PRO/CUS/VAL. Specification location: [§30](#30-project-specific-validation-ledger). Pending dependencies: Adopting project.
-  - Validation method/evidence: Project-artifact exclusion scan; PASS. Known limitation: No adopting project.
+  - Validation method/evidence: Project absence is established, but complete project-ledger coverage is not independently proven. Known limitation: No adopting project.
 - **`KBDL-VAL-012` — Completion gate.** Candidate readiness **must not** be represented as completion before planning-agent validation and explicit project-owner approval.
   - Lifecycle status: Approved. Provenance: Confirmed. Validation status: Verified. Authority: approved KBDL-011 prompt. Evidence class: B.
   - Related requirements: GOV-003. Applicable modules: all. Specification location: [§41](#41-completion-and-approval-boundary). Pending dependencies: Planning-agent and project-owner review.
@@ -334,12 +337,12 @@ This status concerns only the documentation repository and was recalculated afte
 | VAL-003 | Lifecycle/authority | B | Approved | Confirmed | Verified | Prompt/GOV | All | §9/§12 | None | Comparison PASS | GOV historical format |
 | VAL-004 | Validation evidence | B | Approved | Confirmed | Verified | Prompt/GOV | All | §11 | None | Evidence audit PASS | Runtime unverified |
 | VAL-005 | Decisions/pending | B | Approved | Confirmed | Verified | Prompt | All | §13/§14 | None | Mapping audit PASS | Pending unavailable |
-| VAL-006 | Traceability | A | Approved | Confirmed | Verified | Prompt | All | §15 | None | Parser PASS | Grouped prose |
+| VAL-006 | Traceability | A | Approved | Confirmed | Not verified | Prompt | All | §15 | None | Cardinality PASS; metadata FAIL | Historical groups incomplete |
 | VAL-007 | Documentation | A | Approved | Confirmed | Verified | Prompt | All | §16 | None | Validator PASS | No external availability |
-| VAL-008 | Static architecture | C | Approved | Confirmed | Verified | Prompt/prior | All | §17–§28 | None | Static audit PASS | Runtime untested |
+| VAL-008 | Static architecture | C | Approved | Confirmed | Not verified | Prompt/prior | All | §17–§28 | None | Complete method unsupported | Static/runtime gaps |
 | VAL-009 | Theme calculations | D | Approved | Confirmed | Verified | Prompt | FND/THM/A11Y | §20 | None | Contrast script PASS | Alpha/media excluded |
-| VAL-010 | Implementation ledger | E | Approved | Confirmed | Verified | Prompt | All | §29 | Implementation | Ledger audit PASS | Behavior unverified |
-| VAL-011 | Project ledger | F | Approved | Confirmed | Verified | Prompt | PRO/CUS/VAL | §30 | Project | Exclusion scan PASS | No project |
+| VAL-010 | Implementation ledger | E | Approved | Confirmed | Not verified | Prompt | All | §29 | Implementation | Complete coverage unsupported | Behavior unverified |
+| VAL-011 | Project ledger | F | Approved | Confirmed | Not verified | Prompt | PRO/CUS/VAL | §30 | Project | Complete coverage unsupported | No project |
 | VAL-012 | Completion gate | B | Approved | Confirmed | Verified | Prompt | All | §41 | Reviews | Claim scan PASS | Candidate only |
 
 ## 40. VAL Traceability

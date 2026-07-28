@@ -1,0 +1,17 @@
+source_role,source_file_section,foreground,background_role,background,formula,ratio,threshold,restriction,result
+neutral-90,foundations/color.md and themes mode/status tables,#23252B,neutral-0,#FFFFFF,WCAG relative luminance (L1+0.05)/(L2+0.05),15.3176,4.5,,PASS
+neutral-60,foundations/color.md and themes mode/status tables,#636872,neutral-0,#FFFFFF,WCAG relative luminance (L1+0.05)/(L2+0.05),5.5946,4.5,,PASS
+neutral-50,foundations/color.md and themes mode/status tables,#8A8F99,neutral-0,#FFFFFF,WCAG relative luminance (L1+0.05)/(L2+0.05),3.2459,3,large/nontext,PASS
+neutral-10,foundations/color.md and themes mode/status tables,#F5F6F8,neutral-100,#121317,WCAG relative luminance (L1+0.05)/(L2+0.05),17.1672,4.5,,PASS
+accent-50,foundations/color.md and themes mode/status tables,#4A4EE0,neutral-0,#FFFFFF,WCAG relative luminance (L1+0.05)/(L2+0.05),6.0741,4.5,,PASS
+accent-30,foundations/color.md and themes mode/status tables,#A9ACFF,neutral-100,#121317,WCAG relative luminance (L1+0.05)/(L2+0.05),8.8681,4.5,,PASS
+neutral-30,foundations/color.md and themes mode/status tables,#D3D6DC,neutral-0,#FFFFFF,WCAG relative luminance (L1+0.05)/(L2+0.05),1.4561,decorative,decorative,EXEMPT
+neutral-70,foundations/color.md and themes mode/status tables,#52565F,neutral-90,#23252B,WCAG relative luminance (L1+0.05)/(L2+0.05),2.0826,decorative,decorative,EXEMPT
+informational-light,foundations/color.md and themes mode/status tables,#164499,neutral-0,#FFFFFF,WCAG relative luminance (L1+0.05)/(L2+0.05),9.0480,4.5,,PASS
+positive-light,foundations/color.md and themes mode/status tables,#146B3A,neutral-0,#FFFFFF,WCAG relative luminance (L1+0.05)/(L2+0.05),6.5750,4.5,,PASS
+caution-light,foundations/color.md and themes mode/status tables,#8A5A00,neutral-0,#FFFFFF,WCAG relative luminance (L1+0.05)/(L2+0.05),5.9270,4.5,,PASS
+critical-light,foundations/color.md and themes mode/status tables,#B3261E,neutral-0,#FFFFFF,WCAG relative luminance (L1+0.05)/(L2+0.05),6.5365,4.5,,PASS
+informational-dark,foundations/color.md and themes mode/status tables,#7CC4FF,neutral-100,#121317,WCAG relative luminance (L1+0.05)/(L2+0.05),9.8980,4.5,,PASS
+positive-dark,foundations/color.md and themes mode/status tables,#6FD19A,neutral-100,#121317,WCAG relative luminance (L1+0.05)/(L2+0.05),9.9561,4.5,,PASS
+caution-dark,foundations/color.md and themes mode/status tables,#E0A840,neutral-100,#121317,WCAG relative luminance (L1+0.05)/(L2+0.05),8.7024,4.5,,PASS
+critical-dark,foundations/color.md and themes mode/status tables,#FF8A80,neutral-100,#121317,WCAG relative luminance (L1+0.05)/(L2+0.05),8.1319,4.5,,PASS

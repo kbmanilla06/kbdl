@@ -1,0 +1,318 @@
+id,authoritative,occurrences,groups,lifecycle,provenance,validation,authority,method,evidence,limitation,packet,dependency,complete
+KBDL-A11Y-001,True,1,"WCAG 2.2 Level A/AA baseline requirements (KBDL-A11Y-001 through KBDL-A11Y-010, KBDL-A11Y-012 through KBDL-A11Y-020, KBDL-A11Y-022 through KBDL-A11Y-034, KBDL-A11Y-036 through KBDL-A11Y-040)",True,False,True,True,True,True,True,False,False,False
+KBDL-A11Y-002,True,1,"WCAG 2.2 Level A/AA baseline requirements (KBDL-A11Y-001 through KBDL-A11Y-010, KBDL-A11Y-012 through KBDL-A11Y-020, KBDL-A11Y-022 through KBDL-A11Y-034, KBDL-A11Y-036 through KBDL-A11Y-040)",True,False,True,True,True,True,True,False,False,False
+KBDL-A11Y-003,True,1,"WCAG 2.2 Level A/AA baseline requirements (KBDL-A11Y-001 through KBDL-A11Y-010, KBDL-A11Y-012 through KBDL-A11Y-020, KBDL-A11Y-022 through KBDL-A11Y-034, KBDL-A11Y-036 through KBDL-A11Y-040)",True,False,True,True,True,True,True,False,False,False
+KBDL-A11Y-004,True,1,"WCAG 2.2 Level A/AA baseline requirements (KBDL-A11Y-001 through KBDL-A11Y-010, KBDL-A11Y-012 through KBDL-A11Y-020, KBDL-A11Y-022 through KBDL-A11Y-034, KBDL-A11Y-036 through KBDL-A11Y-040)",True,False,True,True,True,True,True,False,False,False
+KBDL-A11Y-005,True,1,"WCAG 2.2 Level A/AA baseline requirements (KBDL-A11Y-001 through KBDL-A11Y-010, KBDL-A11Y-012 through KBDL-A11Y-020, KBDL-A11Y-022 through KBDL-A11Y-034, KBDL-A11Y-036 through KBDL-A11Y-040)",True,False,True,True,True,True,True,False,False,False
+KBDL-A11Y-006,True,1,"WCAG 2.2 Level A/AA baseline requirements (KBDL-A11Y-001 through KBDL-A11Y-010, KBDL-A11Y-012 through KBDL-A11Y-020, KBDL-A11Y-022 through KBDL-A11Y-034, KBDL-A11Y-036 through KBDL-A11Y-040)",True,False,True,True,True,True,True,False,False,False
+KBDL-A11Y-007,True,1,"WCAG 2.2 Level A/AA baseline requirements (KBDL-A11Y-001 through KBDL-A11Y-010, KBDL-A11Y-012 through KBDL-A11Y-020, KBDL-A11Y-022 through KBDL-A11Y-034, KBDL-A11Y-036 through KBDL-A11Y-040)",True,False,True,True,True,True,True,False,False,False
+KBDL-A11Y-008,True,1,"WCAG 2.2 Level A/AA baseline requirements (KBDL-A11Y-001 through KBDL-A11Y-010, KBDL-A11Y-012 through KBDL-A11Y-020, KBDL-A11Y-022 through KBDL-A11Y-034, KBDL-A11Y-036 through KBDL-A11Y-040)",True,False,True,True,True,True,True,False,False,False
+KBDL-A11Y-009,True,1,"WCAG 2.2 Level A/AA baseline requirements (KBDL-A11Y-001 through KBDL-A11Y-010, KBDL-A11Y-012 through KBDL-A11Y-020, KBDL-A11Y-022 through KBDL-A11Y-034, KBDL-A11Y-036 through KBDL-A11Y-040)",True,False,True,True,True,True,True,False,False,False
+KBDL-A11Y-010,True,1,"WCAG 2.2 Level A/AA baseline requirements (KBDL-A11Y-001 through KBDL-A11Y-010, KBDL-A11Y-012 through KBDL-A11Y-020, KBDL-A11Y-022 through KBDL-A11Y-034, KBDL-A11Y-036 through KBDL-A11Y-040)",True,False,True,True,True,True,True,False,False,False
+KBDL-A11Y-011,True,1,"New KBDL-specific accessibility enhancements (KBDL-A11Y-011, KBDL-A11Y-021, KBDL-A11Y-035)",True,False,True,True,True,True,True,False,False,False
+KBDL-A11Y-012,True,1,"WCAG 2.2 Level A/AA baseline requirements (KBDL-A11Y-001 through KBDL-A11Y-010, KBDL-A11Y-012 through KBDL-A11Y-020, KBDL-A11Y-022 through KBDL-A11Y-034, KBDL-A11Y-036 through KBDL-A11Y-040)",True,False,True,True,True,True,True,False,False,False
+KBDL-A11Y-013,True,1,"WCAG 2.2 Level A/AA baseline requirements (KBDL-A11Y-001 through KBDL-A11Y-010, KBDL-A11Y-012 through KBDL-A11Y-020, KBDL-A11Y-022 through KBDL-A11Y-034, KBDL-A11Y-036 through KBDL-A11Y-040)",True,False,True,True,True,True,True,False,False,False
+KBDL-A11Y-014,True,1,"WCAG 2.2 Level A/AA baseline requirements (KBDL-A11Y-001 through KBDL-A11Y-010, KBDL-A11Y-012 through KBDL-A11Y-020, KBDL-A11Y-022 through KBDL-A11Y-034, KBDL-A11Y-036 through KBDL-A11Y-040)",True,False,True,True,True,True,True,False,False,False
+KBDL-A11Y-015,True,1,"WCAG 2.2 Level A/AA baseline requirements (KBDL-A11Y-001 through KBDL-A11Y-010, KBDL-A11Y-012 through KBDL-A11Y-020, KBDL-A11Y-022 through KBDL-A11Y-034, KBDL-A11Y-036 through KBDL-A11Y-040)",True,False,True,True,True,True,True,False,False,False
+KBDL-A11Y-016,True,1,"WCAG 2.2 Level A/AA baseline requirements (KBDL-A11Y-001 through KBDL-A11Y-010, KBDL-A11Y-012 through KBDL-A11Y-020, KBDL-A11Y-022 through KBDL-A11Y-034, KBDL-A11Y-036 through KBDL-A11Y-040)",True,False,True,True,True,True,True,False,False,False
+KBDL-A11Y-017,True,1,"WCAG 2.2 Level A/AA baseline requirements (KBDL-A11Y-001 through KBDL-A11Y-010, KBDL-A11Y-012 through KBDL-A11Y-020, KBDL-A11Y-022 through KBDL-A11Y-034, KBDL-A11Y-036 through KBDL-A11Y-040)",True,False,True,True,True,True,True,False,False,False
+KBDL-A11Y-018,True,1,"WCAG 2.2 Level A/AA baseline requirements (KBDL-A11Y-001 through KBDL-A11Y-010, KBDL-A11Y-012 through KBDL-A11Y-020, KBDL-A11Y-022 through KBDL-A11Y-034, KBDL-A11Y-036 through KBDL-A11Y-040)",True,False,True,True,True,True,True,False,False,False
+KBDL-A11Y-019,True,1,"WCAG 2.2 Level A/AA baseline requirements (KBDL-A11Y-001 through KBDL-A11Y-010, KBDL-A11Y-012 through KBDL-A11Y-020, KBDL-A11Y-022 through KBDL-A11Y-034, KBDL-A11Y-036 through KBDL-A11Y-040)",True,False,True,True,True,True,True,False,False,False
+KBDL-A11Y-020,True,1,"WCAG 2.2 Level A/AA baseline requirements (KBDL-A11Y-001 through KBDL-A11Y-010, KBDL-A11Y-012 through KBDL-A11Y-020, KBDL-A11Y-022 through KBDL-A11Y-034, KBDL-A11Y-036 through KBDL-A11Y-040)",True,False,True,True,True,True,True,False,False,False
+KBDL-A11Y-021,True,1,"New KBDL-specific accessibility enhancements (KBDL-A11Y-011, KBDL-A11Y-021, KBDL-A11Y-035)",True,False,True,True,True,True,True,False,False,False
+KBDL-A11Y-022,True,1,"WCAG 2.2 Level A/AA baseline requirements (KBDL-A11Y-001 through KBDL-A11Y-010, KBDL-A11Y-012 through KBDL-A11Y-020, KBDL-A11Y-022 through KBDL-A11Y-034, KBDL-A11Y-036 through KBDL-A11Y-040)",True,False,True,True,True,True,True,False,False,False
+KBDL-A11Y-023,True,1,"WCAG 2.2 Level A/AA baseline requirements (KBDL-A11Y-001 through KBDL-A11Y-010, KBDL-A11Y-012 through KBDL-A11Y-020, KBDL-A11Y-022 through KBDL-A11Y-034, KBDL-A11Y-036 through KBDL-A11Y-040)",True,False,True,True,True,True,True,False,False,False
+KBDL-A11Y-024,True,1,"WCAG 2.2 Level A/AA baseline requirements (KBDL-A11Y-001 through KBDL-A11Y-010, KBDL-A11Y-012 through KBDL-A11Y-020, KBDL-A11Y-022 through KBDL-A11Y-034, KBDL-A11Y-036 through KBDL-A11Y-040)",True,False,True,True,True,True,True,False,False,False
+KBDL-A11Y-025,True,1,"WCAG 2.2 Level A/AA baseline requirements (KBDL-A11Y-001 through KBDL-A11Y-010, KBDL-A11Y-012 through KBDL-A11Y-020, KBDL-A11Y-022 through KBDL-A11Y-034, KBDL-A11Y-036 through KBDL-A11Y-040)",True,False,True,True,True,True,True,False,False,False
+KBDL-A11Y-026,True,1,"WCAG 2.2 Level A/AA baseline requirements (KBDL-A11Y-001 through KBDL-A11Y-010, KBDL-A11Y-012 through KBDL-A11Y-020, KBDL-A11Y-022 through KBDL-A11Y-034, KBDL-A11Y-036 through KBDL-A11Y-040)",True,False,True,True,True,True,True,False,False,False
+KBDL-A11Y-027,True,1,"WCAG 2.2 Level A/AA baseline requirements (KBDL-A11Y-001 through KBDL-A11Y-010, KBDL-A11Y-012 through KBDL-A11Y-020, KBDL-A11Y-022 through KBDL-A11Y-034, KBDL-A11Y-036 through KBDL-A11Y-040)",True,False,True,True,True,True,True,False,False,False
+KBDL-A11Y-028,True,1,"WCAG 2.2 Level A/AA baseline requirements (KBDL-A11Y-001 through KBDL-A11Y-010, KBDL-A11Y-012 through KBDL-A11Y-020, KBDL-A11Y-022 through KBDL-A11Y-034, KBDL-A11Y-036 through KBDL-A11Y-040)",True,False,True,True,True,True,True,False,False,False
+KBDL-A11Y-029,True,1,"WCAG 2.2 Level A/AA baseline requirements (KBDL-A11Y-001 through KBDL-A11Y-010, KBDL-A11Y-012 through KBDL-A11Y-020, KBDL-A11Y-022 through KBDL-A11Y-034, KBDL-A11Y-036 through KBDL-A11Y-040)",True,False,True,True,True,True,True,False,False,False
+KBDL-A11Y-030,True,1,"WCAG 2.2 Level A/AA baseline requirements (KBDL-A11Y-001 through KBDL-A11Y-010, KBDL-A11Y-012 through KBDL-A11Y-020, KBDL-A11Y-022 through KBDL-A11Y-034, KBDL-A11Y-036 through KBDL-A11Y-040)",True,False,True,True,True,True,True,False,False,False
+KBDL-A11Y-031,True,1,"WCAG 2.2 Level A/AA baseline requirements (KBDL-A11Y-001 through KBDL-A11Y-010, KBDL-A11Y-012 through KBDL-A11Y-020, KBDL-A11Y-022 through KBDL-A11Y-034, KBDL-A11Y-036 through KBDL-A11Y-040)",True,False,True,True,True,True,True,False,False,False
+KBDL-A11Y-032,True,1,"WCAG 2.2 Level A/AA baseline requirements (KBDL-A11Y-001 through KBDL-A11Y-010, KBDL-A11Y-012 through KBDL-A11Y-020, KBDL-A11Y-022 through KBDL-A11Y-034, KBDL-A11Y-036 through KBDL-A11Y-040)",True,False,True,True,True,True,True,False,False,False
+KBDL-A11Y-033,True,1,"WCAG 2.2 Level A/AA baseline requirements (KBDL-A11Y-001 through KBDL-A11Y-010, KBDL-A11Y-012 through KBDL-A11Y-020, KBDL-A11Y-022 through KBDL-A11Y-034, KBDL-A11Y-036 through KBDL-A11Y-040)",True,False,True,True,True,True,True,False,False,False
+KBDL-A11Y-034,True,1,"WCAG 2.2 Level A/AA baseline requirements (KBDL-A11Y-001 through KBDL-A11Y-010, KBDL-A11Y-012 through KBDL-A11Y-020, KBDL-A11Y-022 through KBDL-A11Y-034, KBDL-A11Y-036 through KBDL-A11Y-040)",True,False,True,True,True,True,True,False,False,False
+KBDL-A11Y-035,True,1,"New KBDL-specific accessibility enhancements (KBDL-A11Y-011, KBDL-A11Y-021, KBDL-A11Y-035)",True,False,True,True,True,True,True,False,False,False
+KBDL-A11Y-036,True,1,"WCAG 2.2 Level A/AA baseline requirements (KBDL-A11Y-001 through KBDL-A11Y-010, KBDL-A11Y-012 through KBDL-A11Y-020, KBDL-A11Y-022 through KBDL-A11Y-034, KBDL-A11Y-036 through KBDL-A11Y-040)",True,False,True,True,True,True,True,False,False,False
+KBDL-A11Y-037,True,1,"WCAG 2.2 Level A/AA baseline requirements (KBDL-A11Y-001 through KBDL-A11Y-010, KBDL-A11Y-012 through KBDL-A11Y-020, KBDL-A11Y-022 through KBDL-A11Y-034, KBDL-A11Y-036 through KBDL-A11Y-040)",True,False,True,True,True,True,True,False,False,False
+KBDL-A11Y-038,True,1,"WCAG 2.2 Level A/AA baseline requirements (KBDL-A11Y-001 through KBDL-A11Y-010, KBDL-A11Y-012 through KBDL-A11Y-020, KBDL-A11Y-022 through KBDL-A11Y-034, KBDL-A11Y-036 through KBDL-A11Y-040)",True,False,True,True,True,True,True,False,False,False
+KBDL-A11Y-039,True,1,"WCAG 2.2 Level A/AA baseline requirements (KBDL-A11Y-001 through KBDL-A11Y-010, KBDL-A11Y-012 through KBDL-A11Y-020, KBDL-A11Y-022 through KBDL-A11Y-034, KBDL-A11Y-036 through KBDL-A11Y-040)",True,False,True,True,True,True,True,False,False,False
+KBDL-A11Y-040,True,1,"WCAG 2.2 Level A/AA baseline requirements (KBDL-A11Y-001 through KBDL-A11Y-010, KBDL-A11Y-012 through KBDL-A11Y-020, KBDL-A11Y-022 through KBDL-A11Y-034, KBDL-A11Y-036 through KBDL-A11Y-040)",True,False,True,True,True,True,True,False,False,False
+KBDL-CMP-001,True,1,"Shared component contract and cross-cutting rules (KBDL-CMP-001 through KBDL-CMP-013, KBDL-CMP-050, KBDL-CMP-051)",True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-002,True,1,"Shared component contract and cross-cutting rules (KBDL-CMP-001 through KBDL-CMP-013, KBDL-CMP-050, KBDL-CMP-051)",True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-003,True,1,"Shared component contract and cross-cutting rules (KBDL-CMP-001 through KBDL-CMP-013, KBDL-CMP-050, KBDL-CMP-051)",True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-004,True,1,"Shared component contract and cross-cutting rules (KBDL-CMP-001 through KBDL-CMP-013, KBDL-CMP-050, KBDL-CMP-051)",True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-005,True,1,"Shared component contract and cross-cutting rules (KBDL-CMP-001 through KBDL-CMP-013, KBDL-CMP-050, KBDL-CMP-051)",True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-006,True,1,"Shared component contract and cross-cutting rules (KBDL-CMP-001 through KBDL-CMP-013, KBDL-CMP-050, KBDL-CMP-051)",True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-007,True,1,"Shared component contract and cross-cutting rules (KBDL-CMP-001 through KBDL-CMP-013, KBDL-CMP-050, KBDL-CMP-051)",True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-008,True,1,"Shared component contract and cross-cutting rules (KBDL-CMP-001 through KBDL-CMP-013, KBDL-CMP-050, KBDL-CMP-051)",True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-009,True,1,"Shared component contract and cross-cutting rules (KBDL-CMP-001 through KBDL-CMP-013, KBDL-CMP-050, KBDL-CMP-051)",True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-010,True,1,"Shared component contract and cross-cutting rules (KBDL-CMP-001 through KBDL-CMP-013, KBDL-CMP-050, KBDL-CMP-051)",True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-011,True,1,"Shared component contract and cross-cutting rules (KBDL-CMP-001 through KBDL-CMP-013, KBDL-CMP-050, KBDL-CMP-051)",True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-012,True,1,"Shared component contract and cross-cutting rules (KBDL-CMP-001 through KBDL-CMP-013, KBDL-CMP-050, KBDL-CMP-051)",True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-013,True,1,"Shared component contract and cross-cutting rules (KBDL-CMP-001 through KBDL-CMP-013, KBDL-CMP-050, KBDL-CMP-051)",True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-014,True,1,Action components (KBDL-CMP-014 through KBDL-CMP-021),True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-015,True,1,Action components (KBDL-CMP-014 through KBDL-CMP-021),True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-016,True,1,Action components (KBDL-CMP-014 through KBDL-CMP-021),True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-017,True,1,Action components (KBDL-CMP-014 through KBDL-CMP-021),True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-018,True,1,Action components (KBDL-CMP-014 through KBDL-CMP-021),True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-019,True,1,Action components (KBDL-CMP-014 through KBDL-CMP-021),True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-020,True,1,Action components (KBDL-CMP-014 through KBDL-CMP-021),True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-021,True,1,Action components (KBDL-CMP-014 through KBDL-CMP-021),True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-022,True,1,Form architecture and components (KBDL-CMP-022 through KBDL-CMP-037),True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-023,True,1,Form architecture and components (KBDL-CMP-022 through KBDL-CMP-037),True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-024,True,1,Form architecture and components (KBDL-CMP-022 through KBDL-CMP-037),True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-025,True,1,Form architecture and components (KBDL-CMP-022 through KBDL-CMP-037),True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-026,True,1,Form architecture and components (KBDL-CMP-022 through KBDL-CMP-037),True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-027,True,1,Form architecture and components (KBDL-CMP-022 through KBDL-CMP-037),True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-028,True,1,Form architecture and components (KBDL-CMP-022 through KBDL-CMP-037),True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-029,True,1,Form architecture and components (KBDL-CMP-022 through KBDL-CMP-037),True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-030,True,1,Form architecture and components (KBDL-CMP-022 through KBDL-CMP-037),True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-031,True,1,Form architecture and components (KBDL-CMP-022 through KBDL-CMP-037),True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-032,True,1,Form architecture and components (KBDL-CMP-022 through KBDL-CMP-037),True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-033,True,1,Form architecture and components (KBDL-CMP-022 through KBDL-CMP-037),True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-034,True,1,Form architecture and components (KBDL-CMP-022 through KBDL-CMP-037),True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-035,True,1,Form architecture and components (KBDL-CMP-022 through KBDL-CMP-037),True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-036,True,1,Form architecture and components (KBDL-CMP-022 through KBDL-CMP-037),True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-037,True,1,Form architecture and components (KBDL-CMP-022 through KBDL-CMP-037),True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-038,True,1,Navigation components (KBDL-CMP-038 through KBDL-CMP-049),True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-039,True,1,Navigation components (KBDL-CMP-038 through KBDL-CMP-049),True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-040,True,1,Navigation components (KBDL-CMP-038 through KBDL-CMP-049),True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-041,True,1,Navigation components (KBDL-CMP-038 through KBDL-CMP-049),True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-042,True,1,Navigation components (KBDL-CMP-038 through KBDL-CMP-049),True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-043,True,1,Navigation components (KBDL-CMP-038 through KBDL-CMP-049),True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-044,True,1,Navigation components (KBDL-CMP-038 through KBDL-CMP-049),True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-045,True,1,Navigation components (KBDL-CMP-038 through KBDL-CMP-049),True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-046,True,1,Navigation components (KBDL-CMP-038 through KBDL-CMP-049),True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-047,True,1,Navigation components (KBDL-CMP-038 through KBDL-CMP-049),True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-048,True,1,Navigation components (KBDL-CMP-038 through KBDL-CMP-049),True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-049,True,1,Navigation components (KBDL-CMP-038 through KBDL-CMP-049),True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-050,True,1,"Shared component contract and cross-cutting rules (KBDL-CMP-001 through KBDL-CMP-013, KBDL-CMP-050, KBDL-CMP-051)",True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-051,True,1,"Shared component contract and cross-cutting rules (KBDL-CMP-001 through KBDL-CMP-013, KBDL-CMP-050, KBDL-CMP-051)",True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-052,True,1,"Surface components and module-wide baselines (KBDL-CMP-052, 053, 054, 055, 062, 065, 067, 068, 069, 070)",True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-053,True,1,"Surface components and module-wide baselines (KBDL-CMP-052, 053, 054, 055, 062, 065, 067, 068, 069, 070)",True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-054,True,1,"Surface components and module-wide baselines (KBDL-CMP-052, 053, 054, 055, 062, 065, 067, 068, 069, 070)",True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-055,True,1,"Surface components and module-wide baselines (KBDL-CMP-052, 053, 054, 055, 062, 065, 067, 068, 069, 070)",True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-056,True,1,"Overlay components (KBDL-CMP-056 through KBDL-CMP-060, 071 through 085)",True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-057,True,1,"Overlay components (KBDL-CMP-056 through KBDL-CMP-060, 071 through 085)",True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-058,True,1,"Overlay components (KBDL-CMP-056 through KBDL-CMP-060, 071 through 085)",True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-059,True,1,"Overlay components (KBDL-CMP-056 through KBDL-CMP-060, 071 through 085)",True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-060,True,1,"Overlay components (KBDL-CMP-056 through KBDL-CMP-060, 071 through 085)",True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-061,True,1,"Feedback components (KBDL-CMP-061, 086 through KBDL-CMP-098)",True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-062,True,1,"Surface components and module-wide baselines (KBDL-CMP-052, 053, 054, 055, 062, 065, 067, 068, 069, 070)",True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-063,True,1,"System-state, complex-presentation, and profile/security baselines (KBDL-CMP-063, 064, 066, 097, 099–111)",True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-064,True,1,"System-state, complex-presentation, and profile/security baselines (KBDL-CMP-063, 064, 066, 097, 099–111)",True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-065,True,1,"Surface components and module-wide baselines (KBDL-CMP-052, 053, 054, 055, 062, 065, 067, 068, 069, 070)",True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-066,True,1,"System-state, complex-presentation, and profile/security baselines (KBDL-CMP-063, 064, 066, 097, 099–111)",True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-067,True,1,"Surface components and module-wide baselines (KBDL-CMP-052, 053, 054, 055, 062, 065, 067, 068, 069, 070)",True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-068,True,1,"Surface components and module-wide baselines (KBDL-CMP-052, 053, 054, 055, 062, 065, 067, 068, 069, 070)",True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-069,True,1,"Surface components and module-wide baselines (KBDL-CMP-052, 053, 054, 055, 062, 065, 067, 068, 069, 070)",True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-070,True,1,"Surface components and module-wide baselines (KBDL-CMP-052, 053, 054, 055, 062, 065, 067, 068, 069, 070)",True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-071,True,1,"Overlay components (KBDL-CMP-056 through KBDL-CMP-060, 071 through 085)",True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-072,True,1,"Overlay components (KBDL-CMP-056 through KBDL-CMP-060, 071 through 085)",True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-073,True,1,"Overlay components (KBDL-CMP-056 through KBDL-CMP-060, 071 through 085)",True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-074,True,1,"Overlay components (KBDL-CMP-056 through KBDL-CMP-060, 071 through 085)",True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-075,True,1,"Overlay components (KBDL-CMP-056 through KBDL-CMP-060, 071 through 085)",True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-076,True,1,"Overlay components (KBDL-CMP-056 through KBDL-CMP-060, 071 through 085)",True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-077,True,1,"Overlay components (KBDL-CMP-056 through KBDL-CMP-060, 071 through 085)",True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-078,True,1,"Overlay components (KBDL-CMP-056 through KBDL-CMP-060, 071 through 085)",True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-079,True,1,"Overlay components (KBDL-CMP-056 through KBDL-CMP-060, 071 through 085)",True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-080,True,1,"Overlay components (KBDL-CMP-056 through KBDL-CMP-060, 071 through 085)",True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-081,True,1,"Overlay components (KBDL-CMP-056 through KBDL-CMP-060, 071 through 085)",True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-082,True,1,"Overlay components (KBDL-CMP-056 through KBDL-CMP-060, 071 through 085)",True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-083,True,1,"Overlay components (KBDL-CMP-056 through KBDL-CMP-060, 071 through 085)",True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-084,True,1,"Overlay components (KBDL-CMP-056 through KBDL-CMP-060, 071 through 085)",True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-085,True,1,"Overlay components (KBDL-CMP-056 through KBDL-CMP-060, 071 through 085)",True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-086,True,1,"Feedback components (KBDL-CMP-061, 086 through KBDL-CMP-098)",True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-087,True,1,"Feedback components (KBDL-CMP-061, 086 through KBDL-CMP-098)",True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-088,True,1,"Feedback components (KBDL-CMP-061, 086 through KBDL-CMP-098)",True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-089,True,1,"Feedback components (KBDL-CMP-061, 086 through KBDL-CMP-098)",True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-090,True,1,"Feedback components (KBDL-CMP-061, 086 through KBDL-CMP-098)",True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-091,True,1,"Feedback components (KBDL-CMP-061, 086 through KBDL-CMP-098)",True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-092,True,1,"Feedback components (KBDL-CMP-061, 086 through KBDL-CMP-098)",True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-093,True,1,"Feedback components (KBDL-CMP-061, 086 through KBDL-CMP-098)",True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-094,True,1,"Feedback components (KBDL-CMP-061, 086 through KBDL-CMP-098)",True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-095,True,1,"Feedback components (KBDL-CMP-061, 086 through KBDL-CMP-098)",True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-096,True,1,"Feedback components (KBDL-CMP-061, 086 through KBDL-CMP-098)",True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-097,True,1,"System-state, complex-presentation, and profile/security baselines (KBDL-CMP-063, 064, 066, 097, 099–111)",True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-098,True,1,"Feedback components (KBDL-CMP-061, 086 through KBDL-CMP-098)",True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-099,True,1,"System-state, complex-presentation, and profile/security baselines (KBDL-CMP-063, 064, 066, 097, 099–111)",True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-100,True,1,"System-state, complex-presentation, and profile/security baselines (KBDL-CMP-063, 064, 066, 097, 099–111)",True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-101,True,1,"System-state, complex-presentation, and profile/security baselines (KBDL-CMP-063, 064, 066, 097, 099–111)",True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-102,True,1,"System-state, complex-presentation, and profile/security baselines (KBDL-CMP-063, 064, 066, 097, 099–111)",True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-103,True,1,"System-state, complex-presentation, and profile/security baselines (KBDL-CMP-063, 064, 066, 097, 099–111)",True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-104,True,1,"System-state, complex-presentation, and profile/security baselines (KBDL-CMP-063, 064, 066, 097, 099–111)",True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-105,True,1,"System-state, complex-presentation, and profile/security baselines (KBDL-CMP-063, 064, 066, 097, 099–111)",True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-106,True,1,"System-state, complex-presentation, and profile/security baselines (KBDL-CMP-063, 064, 066, 097, 099–111)",True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-107,True,1,"System-state, complex-presentation, and profile/security baselines (KBDL-CMP-063, 064, 066, 097, 099–111)",True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-108,True,1,"System-state, complex-presentation, and profile/security baselines (KBDL-CMP-063, 064, 066, 097, 099–111)",True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-109,True,1,"System-state, complex-presentation, and profile/security baselines (KBDL-CMP-063, 064, 066, 097, 099–111)",True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-110,True,1,"System-state, complex-presentation, and profile/security baselines (KBDL-CMP-063, 064, 066, 097, 099–111)",True,True,True,True,True,True,True,False,False,False
+KBDL-CMP-111,True,1,"System-state, complex-presentation, and profile/security baselines (KBDL-CMP-063, 064, 066, 097, 099–111)",True,True,True,True,True,True,True,False,False,False
+KBDL-CUS-001,True,1,"Authority, classification, workflow, and records (KBDL-CUS-001 through KBDL-CUS-012)",True,True,True,True,True,True,True,True,True,True
+KBDL-CUS-002,True,1,"Authority, classification, workflow, and records (KBDL-CUS-001 through KBDL-CUS-012)",True,True,True,True,True,True,True,True,True,True
+KBDL-CUS-003,True,1,"Authority, classification, workflow, and records (KBDL-CUS-001 through KBDL-CUS-012)",True,True,True,True,True,True,True,True,True,True
+KBDL-CUS-004,True,1,"Authority, classification, workflow, and records (KBDL-CUS-001 through KBDL-CUS-012)",True,True,True,True,True,True,True,True,True,True
+KBDL-CUS-005,True,1,"Authority, classification, workflow, and records (KBDL-CUS-001 through KBDL-CUS-012)",True,True,True,True,True,True,True,True,True,True
+KBDL-CUS-006,True,1,"Authority, classification, workflow, and records (KBDL-CUS-001 through KBDL-CUS-012)",True,True,True,True,True,True,True,True,True,True
+KBDL-CUS-007,True,1,"Authority, classification, workflow, and records (KBDL-CUS-001 through KBDL-CUS-012)",True,True,True,True,True,True,True,True,True,True
+KBDL-CUS-008,True,1,"Authority, classification, workflow, and records (KBDL-CUS-001 through KBDL-CUS-012)",True,True,True,True,True,True,True,True,True,True
+KBDL-CUS-009,True,1,"Authority, classification, workflow, and records (KBDL-CUS-001 through KBDL-CUS-012)",True,True,True,True,True,True,True,True,True,True
+KBDL-CUS-010,True,1,"Authority, classification, workflow, and records (KBDL-CUS-001 through KBDL-CUS-012)",True,True,True,True,True,True,True,True,True,True
+KBDL-CUS-011,True,1,"Authority, classification, workflow, and records (KBDL-CUS-001 through KBDL-CUS-012)",True,True,True,True,True,True,True,True,True,True
+KBDL-CUS-012,True,1,"Authority, classification, workflow, and records (KBDL-CUS-001 through KBDL-CUS-012)",True,True,True,True,True,True,True,True,True,True
+KBDL-CUS-013,True,1,Cross-module preservation and handoff (KBDL-CUS-013 through KBDL-CUS-022),True,True,True,True,True,True,True,True,True,True
+KBDL-CUS-014,True,1,Cross-module preservation and handoff (KBDL-CUS-013 through KBDL-CUS-022),True,True,True,True,True,True,True,True,True,True
+KBDL-CUS-015,True,1,Cross-module preservation and handoff (KBDL-CUS-013 through KBDL-CUS-022),True,True,True,True,True,True,True,True,True,True
+KBDL-CUS-016,True,1,Cross-module preservation and handoff (KBDL-CUS-013 through KBDL-CUS-022),True,True,True,True,True,True,True,True,True,True
+KBDL-CUS-017,True,1,Cross-module preservation and handoff (KBDL-CUS-013 through KBDL-CUS-022),True,True,True,True,True,True,True,True,True,True
+KBDL-CUS-018,True,1,Cross-module preservation and handoff (KBDL-CUS-013 through KBDL-CUS-022),True,True,True,True,True,True,True,True,True,True
+KBDL-CUS-019,True,1,Cross-module preservation and handoff (KBDL-CUS-013 through KBDL-CUS-022),True,True,True,True,True,True,True,True,True,True
+KBDL-CUS-020,True,1,Cross-module preservation and handoff (KBDL-CUS-013 through KBDL-CUS-022),True,True,True,True,True,True,True,True,True,True
+KBDL-CUS-021,True,1,Cross-module preservation and handoff (KBDL-CUS-013 through KBDL-CUS-022),True,True,True,True,True,True,True,True,True,True
+KBDL-CUS-022,True,1,Cross-module preservation and handoff (KBDL-CUS-013 through KBDL-CUS-022),True,True,True,True,True,True,True,True,True,True
+KBDL-CUS-023,True,1,Discretionary KBDL-010 policy (KBDL-CUS-023 through KBDL-CUS-029),True,True,True,True,True,True,True,True,True,True
+KBDL-CUS-024,True,1,Discretionary KBDL-010 policy (KBDL-CUS-023 through KBDL-CUS-029),True,True,True,True,True,True,True,True,True,True
+KBDL-CUS-025,True,1,Discretionary KBDL-010 policy (KBDL-CUS-023 through KBDL-CUS-029),True,True,True,True,True,True,True,True,True,True
+KBDL-CUS-026,True,1,Discretionary KBDL-010 policy (KBDL-CUS-023 through KBDL-CUS-029),True,True,True,True,True,True,True,True,True,True
+KBDL-CUS-027,True,1,Discretionary KBDL-010 policy (KBDL-CUS-023 through KBDL-CUS-029),True,True,True,True,True,True,True,True,True,True
+KBDL-CUS-028,True,1,Discretionary KBDL-010 policy (KBDL-CUS-023 through KBDL-CUS-029),True,True,True,True,True,True,True,True,True,True
+KBDL-CUS-029,True,1,Discretionary KBDL-010 policy (KBDL-CUS-023 through KBDL-CUS-029),True,True,True,True,True,True,True,True,True,True
+KBDL-CUS-030,True,1,Deferred machine-readable format (KBDL-CUS-030),True,True,True,True,True,True,True,True,True,True
+KBDL-FND-001,True,1,"Color role architecture (KBDL-FND-001, KBDL-FND-002)",True,False,True,True,True,True,True,False,False,False
+KBDL-FND-002,True,1,"Color role architecture (KBDL-FND-001, KBDL-FND-002)",True,False,True,True,True,True,True,False,False,False
+KBDL-FND-003,True,1,"Spacing rhythm and responsive content priority (KBDL-FND-003, KBDL-FND-004)",True,False,True,True,True,True,True,False,False,False
+KBDL-FND-004,True,1,"Spacing rhythm and responsive content priority (KBDL-FND-003, KBDL-FND-004)",True,False,True,True,True,True,True,False,False,False
+KBDL-FND-005,True,1,"Elevation and icon/media accessibility anticipation (KBDL-FND-005, KBDL-FND-006, KBDL-FND-007)",True,False,True,True,True,True,True,False,False,False
+KBDL-FND-006,True,1,"Elevation and icon/media accessibility anticipation (KBDL-FND-005, KBDL-FND-006, KBDL-FND-007)",True,False,True,True,True,True,True,False,False,False
+KBDL-FND-007,True,1,"Elevation and icon/media accessibility anticipation (KBDL-FND-005, KBDL-FND-006, KBDL-FND-007)",True,False,True,True,True,True,True,False,False,False
+KBDL-FND-008,True,1,Shared foundation architecture across profiles (KBDL-FND-008),True,False,True,True,True,True,True,False,False,False
+KBDL-FND-009,True,1,"Approved color, typography, spacing, and shape/elevation defaults (KBDL-FND-009 through KBDL-FND-012)",True,False,True,True,True,True,True,False,False,False
+KBDL-FND-010,True,1,"Approved color, typography, spacing, and shape/elevation defaults (KBDL-FND-009 through KBDL-FND-012)",True,False,True,True,True,True,True,False,False,False
+KBDL-FND-011,True,1,"Approved color, typography, spacing, and shape/elevation defaults (KBDL-FND-009 through KBDL-FND-012)",True,False,True,True,True,True,True,False,False,False
+KBDL-FND-012,True,1,"Approved color, typography, spacing, and shape/elevation defaults (KBDL-FND-009 through KBDL-FND-012)",True,False,True,True,True,True,True,False,False,False
+KBDL-GOV-001,True,1,Specification architecture,True,False,True,True,True,True,True,False,False,False
+KBDL-GOV-002,True,1,Accessibility baseline protection,True,False,True,True,True,True,True,False,False,False
+KBDL-GOV-003,True,1,Documentation governance process,True,False,True,True,True,True,True,False,False,False
+KBDL-MOT-001,True,1,"Motion purpose, terminology, and conflict resolution (KBDL-MOT-001, KBDL-MOT-002, KBDL-MOT-003)",True,False,True,True,True,True,True,False,False,False
+KBDL-MOT-002,True,1,"Motion purpose, terminology, and conflict resolution (KBDL-MOT-001, KBDL-MOT-002, KBDL-MOT-003)",True,False,True,True,True,True,True,False,False,False
+KBDL-MOT-003,True,1,"Motion purpose, terminology, and conflict resolution (KBDL-MOT-001, KBDL-MOT-002, KBDL-MOT-003)",True,False,True,True,True,True,True,False,False,False
+KBDL-MOT-004,True,1,"Motion category and hierarchy structure (KBDL-MOT-004, KBDL-MOT-005, KBDL-MOT-006)",True,False,True,True,True,True,True,False,False,False
+KBDL-MOT-005,True,1,"Motion category and hierarchy structure (KBDL-MOT-004, KBDL-MOT-005, KBDL-MOT-006)",True,False,True,True,True,True,True,False,False,False
+KBDL-MOT-006,True,1,"Motion category and hierarchy structure (KBDL-MOT-004, KBDL-MOT-005, KBDL-MOT-006)",True,False,True,True,True,True,True,False,False,False
+KBDL-MOT-007,True,1,"Timing, duration, and easing architecture (KBDL-MOT-007, KBDL-MOT-008, KBDL-MOT-009)",True,False,True,True,True,True,True,False,False,False
+KBDL-MOT-008,True,1,"Timing, duration, and easing architecture (KBDL-MOT-007, KBDL-MOT-008, KBDL-MOT-009)",True,False,True,True,True,True,True,False,False,False
+KBDL-MOT-009,True,1,"Timing, duration, and easing architecture (KBDL-MOT-007, KBDL-MOT-008, KBDL-MOT-009)",True,False,True,True,True,True,True,False,False,False
+KBDL-MOT-010,True,1,"Spatial movement and choreography (KBDL-MOT-010, KBDL-MOT-011, KBDL-MOT-012)",True,False,True,True,True,True,True,False,False,False
+KBDL-MOT-011,True,1,"Spatial movement and choreography (KBDL-MOT-010, KBDL-MOT-011, KBDL-MOT-012)",True,False,True,True,True,True,True,False,False,False
+KBDL-MOT-012,True,1,"Spatial movement and choreography (KBDL-MOT-010, KBDL-MOT-011, KBDL-MOT-012)",True,False,True,True,True,True,True,False,False,False
+KBDL-MOT-013,True,1,Interaction-category motion rules (KBDL-MOT-013 through KBDL-MOT-019),True,False,True,True,True,True,True,False,False,False
+KBDL-MOT-014,True,1,Interaction-category motion rules (KBDL-MOT-013 through KBDL-MOT-019),True,False,True,True,True,True,True,False,False,False
+KBDL-MOT-015,True,1,Interaction-category motion rules (KBDL-MOT-013 through KBDL-MOT-019),True,False,True,True,True,True,True,False,False,False
+KBDL-MOT-016,True,1,Interaction-category motion rules (KBDL-MOT-013 through KBDL-MOT-019),True,False,True,True,True,True,True,False,False,False
+KBDL-MOT-017,True,1,Interaction-category motion rules (KBDL-MOT-013 through KBDL-MOT-019),True,False,True,True,True,True,True,False,False,False
+KBDL-MOT-018,True,1,Interaction-category motion rules (KBDL-MOT-013 through KBDL-MOT-019),True,False,True,True,True,True,True,False,False,False
+KBDL-MOT-019,True,1,Interaction-category motion rules (KBDL-MOT-013 through KBDL-MOT-019),True,False,True,True,True,True,True,False,False,False
+KBDL-MOT-020,True,1,Theme-transition motion (KBDL-MOT-020),True,False,True,True,True,True,True,False,False,False
+KBDL-MOT-021,True,1,"Interruption, recovery, and accessibility/performance requirements (KBDL-MOT-021 through KBDL-MOT-027)",True,False,True,True,True,True,True,False,False,False
+KBDL-MOT-022,True,1,"Interruption, recovery, and accessibility/performance requirements (KBDL-MOT-021 through KBDL-MOT-027)",True,False,True,True,True,True,True,False,False,False
+KBDL-MOT-023,True,1,"Interruption, recovery, and accessibility/performance requirements (KBDL-MOT-021 through KBDL-MOT-027)",True,False,True,True,True,True,True,False,False,False
+KBDL-MOT-024,True,1,"Interruption, recovery, and accessibility/performance requirements (KBDL-MOT-021 through KBDL-MOT-027)",True,False,True,True,True,True,True,False,False,False
+KBDL-MOT-025,True,1,"Interruption, recovery, and accessibility/performance requirements (KBDL-MOT-021 through KBDL-MOT-027)",True,False,True,True,True,True,True,False,False,False
+KBDL-MOT-026,True,1,"Interruption, recovery, and accessibility/performance requirements (KBDL-MOT-021 through KBDL-MOT-027)",True,False,True,True,True,True,True,False,False,False
+KBDL-MOT-027,True,1,"Interruption, recovery, and accessibility/performance requirements (KBDL-MOT-021 through KBDL-MOT-027)",True,False,True,True,True,True,True,False,False,False
+KBDL-MOT-028,True,1,Detailed motion defaults separated from their approved cores (KBDL-MOT-028 through KBDL-MOT-034),True,False,True,True,True,True,True,False,False,False
+KBDL-MOT-029,True,1,Detailed motion defaults separated from their approved cores (KBDL-MOT-028 through KBDL-MOT-034),True,False,True,True,True,True,True,False,False,False
+KBDL-MOT-030,True,1,Detailed motion defaults separated from their approved cores (KBDL-MOT-028 through KBDL-MOT-034),True,False,True,True,True,True,True,False,False,False
+KBDL-MOT-031,True,1,Detailed motion defaults separated from their approved cores (KBDL-MOT-028 through KBDL-MOT-034),True,False,True,True,True,True,True,False,False,False
+KBDL-MOT-032,True,1,Detailed motion defaults separated from their approved cores (KBDL-MOT-028 through KBDL-MOT-034),True,False,True,True,True,True,True,False,False,False
+KBDL-MOT-033,True,1,Detailed motion defaults separated from their approved cores (KBDL-MOT-028 through KBDL-MOT-034),True,False,True,True,True,True,True,False,False,False
+KBDL-MOT-034,True,1,Detailed motion defaults separated from their approved cores (KBDL-MOT-028 through KBDL-MOT-034),True,False,True,True,True,True,True,False,False,False
+KBDL-PRN-001,True,1,KBDL identity statement and exclusions,True,False,True,True,True,True,True,False,False,False
+KBDL-PRN-002,True,1,Luxury/utility conflict resolution,True,False,True,True,True,True,True,False,False,False
+KBDL-PRN-003,True,1,Core principles,True,False,True,True,True,True,True,False,False,False
+KBDL-PRN-004,True,1,Visual-consistency relationships,True,False,True,True,True,True,True,False,False,False
+KBDL-PRN-005,True,1,"Locked, controlled, and open identity model",True,False,True,True,True,True,True,False,False,False
+KBDL-PRN-006,True,1,Design-decision hierarchy,True,False,True,True,True,True,True,False,False,False
+KBDL-PRN-007,True,1,"Profile-level interpretation (Showcase, Precision, Flow)",True,False,True,True,True,True,True,False,False,False
+KBDL-PRN-008,True,1,Conforming and non-conforming design directions,True,False,True,True,True,True,True,False,False,False
+KBDL-PRO-001,True,1,"Shared architecture, terminology, and governance (KBDL-PRO-001 through KBDL-PRO-009)",True,True,True,True,True,True,True,True,True,True
+KBDL-PRO-002,True,1,"Shared architecture, terminology, and governance (KBDL-PRO-001 through KBDL-PRO-009)",True,True,True,True,True,True,True,True,True,True
+KBDL-PRO-003,True,1,"Shared architecture, terminology, and governance (KBDL-PRO-001 through KBDL-PRO-009)",True,True,True,True,True,True,True,True,True,True
+KBDL-PRO-004,True,1,"Shared architecture, terminology, and governance (KBDL-PRO-001 through KBDL-PRO-009)",True,True,True,True,True,True,True,True,True,True
+KBDL-PRO-005,True,1,"Shared architecture, terminology, and governance (KBDL-PRO-001 through KBDL-PRO-009)",True,True,True,True,True,True,True,True,True,True
+KBDL-PRO-006,True,1,"Shared architecture, terminology, and governance (KBDL-PRO-001 through KBDL-PRO-009)",True,True,True,True,True,True,True,True,True,True
+KBDL-PRO-007,True,1,"Shared architecture, terminology, and governance (KBDL-PRO-001 through KBDL-PRO-009)",True,True,True,True,True,True,True,True,True,True
+KBDL-PRO-008,True,1,"Shared architecture, terminology, and governance (KBDL-PRO-001 through KBDL-PRO-009)",True,True,True,True,True,True,True,True,True,True
+KBDL-PRO-009,True,1,"Shared architecture, terminology, and governance (KBDL-PRO-001 through KBDL-PRO-009)",True,True,True,True,True,True,True,True,True,True
+KBDL-PRO-010,True,1,"Showcase, Precision, and Flow profile definitions (KBDL-PRO-010 through KBDL-PRO-018)",True,True,True,True,True,True,True,True,True,True
+KBDL-PRO-011,True,1,"Showcase, Precision, and Flow profile definitions (KBDL-PRO-010 through KBDL-PRO-018)",True,True,True,True,True,True,True,True,True,True
+KBDL-PRO-012,True,1,"Showcase, Precision, and Flow profile definitions (KBDL-PRO-010 through KBDL-PRO-018)",True,True,True,True,True,True,True,True,True,True
+KBDL-PRO-013,True,1,"Showcase, Precision, and Flow profile definitions (KBDL-PRO-010 through KBDL-PRO-018)",True,True,True,True,True,True,True,True,True,True
+KBDL-PRO-014,True,1,"Showcase, Precision, and Flow profile definitions (KBDL-PRO-010 through KBDL-PRO-018)",True,True,True,True,True,True,True,True,True,True
+KBDL-PRO-015,True,1,"Showcase, Precision, and Flow profile definitions (KBDL-PRO-010 through KBDL-PRO-018)",True,True,True,True,True,True,True,True,True,True
+KBDL-PRO-016,True,1,"Showcase, Precision, and Flow profile definitions (KBDL-PRO-010 through KBDL-PRO-018)",True,True,True,True,True,True,True,True,True,True
+KBDL-PRO-017,True,1,"Showcase, Precision, and Flow profile definitions (KBDL-PRO-010 through KBDL-PRO-018)",True,True,True,True,True,True,True,True,True,True
+KBDL-PRO-018,True,1,"Showcase, Precision, and Flow profile definitions (KBDL-PRO-010 through KBDL-PRO-018)",True,True,True,True,True,True,True,True,True,True
+KBDL-PRO-019,True,1,"Mapping, content, security, conflict, and adoption requirements (KBDL-PRO-019 through KBDL-PRO-029)",True,True,True,True,True,True,True,True,True,True
+KBDL-PRO-020,True,1,"Mapping, content, security, conflict, and adoption requirements (KBDL-PRO-019 through KBDL-PRO-029)",True,True,True,True,True,True,True,True,True,True
+KBDL-PRO-021,True,1,"Mapping, content, security, conflict, and adoption requirements (KBDL-PRO-019 through KBDL-PRO-029)",True,True,True,True,True,True,True,True,True,True
+KBDL-PRO-022,True,1,"Mapping, content, security, conflict, and adoption requirements (KBDL-PRO-019 through KBDL-PRO-029)",True,True,True,True,True,True,True,True,True,True
+KBDL-PRO-023,True,1,"Mapping, content, security, conflict, and adoption requirements (KBDL-PRO-019 through KBDL-PRO-029)",True,True,True,True,True,True,True,True,True,True
+KBDL-PRO-024,True,1,"Mapping, content, security, conflict, and adoption requirements (KBDL-PRO-019 through KBDL-PRO-029)",True,True,True,True,True,True,True,True,True,True
+KBDL-PRO-025,True,1,"Mapping, content, security, conflict, and adoption requirements (KBDL-PRO-019 through KBDL-PRO-029)",True,True,True,True,True,True,True,True,True,True
+KBDL-PRO-026,True,1,"Mapping, content, security, conflict, and adoption requirements (KBDL-PRO-019 through KBDL-PRO-029)",True,True,True,True,True,True,True,True,True,True
+KBDL-PRO-027,True,1,"Mapping, content, security, conflict, and adoption requirements (KBDL-PRO-019 through KBDL-PRO-029)",True,True,True,True,True,True,True,True,True,True
+KBDL-PRO-028,True,1,"Mapping, content, security, conflict, and adoption requirements (KBDL-PRO-019 through KBDL-PRO-029)",True,True,True,True,True,True,True,True,True,True
+KBDL-PRO-029,True,1,"Mapping, content, security, conflict, and adoption requirements (KBDL-PRO-019 through KBDL-PRO-029)",True,True,True,True,True,True,True,True,True,True
+KBDL-RSP-001,True,1,"Responsive-content priority, source/reading order, and reflow core (KBDL-RSP-001, KBDL-RSP-006, KBDL-RSP-007, KBDL-RSP-015, KBDL-RSP-016, KBDL-RSP-020)",True,False,True,True,True,True,True,False,False,False
+KBDL-RSP-002,True,1,"Breakpoint, grid, container, and gutter defaults (KBDL-RSP-002, KBDL-RSP-003, KBDL-RSP-004, KBDL-RSP-005)",True,False,True,True,True,True,True,False,False,False
+KBDL-RSP-003,True,1,"Breakpoint, grid, container, and gutter defaults (KBDL-RSP-002, KBDL-RSP-003, KBDL-RSP-004, KBDL-RSP-005)",True,False,True,True,True,True,True,False,False,False
+KBDL-RSP-004,True,1,"Breakpoint, grid, container, and gutter defaults (KBDL-RSP-002, KBDL-RSP-003, KBDL-RSP-004, KBDL-RSP-005)",True,False,True,True,True,True,True,False,False,False
+KBDL-RSP-005,True,1,"Breakpoint, grid, container, and gutter defaults (KBDL-RSP-002, KBDL-RSP-003, KBDL-RSP-004, KBDL-RSP-005)",True,False,True,True,True,True,True,False,False,False
+KBDL-RSP-006,True,1,"Responsive-content priority, source/reading order, and reflow core (KBDL-RSP-001, KBDL-RSP-006, KBDL-RSP-007, KBDL-RSP-015, KBDL-RSP-016, KBDL-RSP-020)",True,False,True,True,True,True,True,False,False,False
+KBDL-RSP-007,True,1,"Responsive-content priority, source/reading order, and reflow core (KBDL-RSP-001, KBDL-RSP-006, KBDL-RSP-007, KBDL-RSP-015, KBDL-RSP-016, KBDL-RSP-020)",True,False,True,True,True,True,True,False,False,False
+KBDL-RSP-008,True,1,"Navigation, density, media, and data-dense adaptation (KBDL-RSP-008, KBDL-RSP-009, KBDL-RSP-010, KBDL-RSP-011, KBDL-RSP-012)",True,False,True,True,True,True,True,False,False,False
+KBDL-RSP-009,True,1,"Navigation, density, media, and data-dense adaptation (KBDL-RSP-008, KBDL-RSP-009, KBDL-RSP-010, KBDL-RSP-011, KBDL-RSP-012)",True,False,True,True,True,True,True,False,False,False
+KBDL-RSP-010,True,1,"Navigation, density, media, and data-dense adaptation (KBDL-RSP-008, KBDL-RSP-009, KBDL-RSP-010, KBDL-RSP-011, KBDL-RSP-012)",True,False,True,True,True,True,True,False,False,False
+KBDL-RSP-011,True,1,"Navigation, density, media, and data-dense adaptation (KBDL-RSP-008, KBDL-RSP-009, KBDL-RSP-010, KBDL-RSP-011, KBDL-RSP-012)",True,False,True,True,True,True,True,False,False,False
+KBDL-RSP-012,True,1,"Navigation, density, media, and data-dense adaptation (KBDL-RSP-008, KBDL-RSP-009, KBDL-RSP-010, KBDL-RSP-011, KBDL-RSP-012)",True,False,True,True,True,True,True,False,False,False
+KBDL-RSP-013,True,1,"Sticky regions, safe areas, virtual keyboard, and input parity (KBDL-RSP-013, KBDL-RSP-014, KBDL-RSP-017, KBDL-RSP-018, KBDL-RSP-019)",True,False,True,True,True,True,True,False,False,False
+KBDL-RSP-014,True,1,"Sticky regions, safe areas, virtual keyboard, and input parity (KBDL-RSP-013, KBDL-RSP-014, KBDL-RSP-017, KBDL-RSP-018, KBDL-RSP-019)",True,False,True,True,True,True,True,False,False,False
+KBDL-RSP-015,True,1,"Responsive-content priority, source/reading order, and reflow core (KBDL-RSP-001, KBDL-RSP-006, KBDL-RSP-007, KBDL-RSP-015, KBDL-RSP-016, KBDL-RSP-020)",True,False,True,True,True,True,True,False,False,False
+KBDL-RSP-016,True,1,"Responsive-content priority, source/reading order, and reflow core (KBDL-RSP-001, KBDL-RSP-006, KBDL-RSP-007, KBDL-RSP-015, KBDL-RSP-016, KBDL-RSP-020)",True,False,True,True,True,True,True,False,False,False
+KBDL-RSP-017,True,1,"Sticky regions, safe areas, virtual keyboard, and input parity (KBDL-RSP-013, KBDL-RSP-014, KBDL-RSP-017, KBDL-RSP-018, KBDL-RSP-019)",True,False,True,True,True,True,True,False,False,False
+KBDL-RSP-018,True,1,"Sticky regions, safe areas, virtual keyboard, and input parity (KBDL-RSP-013, KBDL-RSP-014, KBDL-RSP-017, KBDL-RSP-018, KBDL-RSP-019)",True,False,True,True,True,True,True,False,False,False
+KBDL-RSP-019,True,1,"Sticky regions, safe areas, virtual keyboard, and input parity (KBDL-RSP-013, KBDL-RSP-014, KBDL-RSP-017, KBDL-RSP-018, KBDL-RSP-019)",True,False,True,True,True,True,True,False,False,False
+KBDL-RSP-020,True,1,"Responsive-content priority, source/reading order, and reflow core (KBDL-RSP-001, KBDL-RSP-006, KBDL-RSP-007, KBDL-RSP-015, KBDL-RSP-016, KBDL-RSP-020)",True,False,True,True,True,True,True,False,False,False
+KBDL-RSP-021,True,1,"Responsive motion and performance (KBDL-RSP-021, KBDL-RSP-022)",True,False,True,True,True,True,True,False,False,False
+KBDL-RSP-022,True,1,"Responsive motion and performance (KBDL-RSP-021, KBDL-RSP-022)",True,False,True,True,True,True,True,False,False,False
+KBDL-THM-001,True,1,"Theme architecture, terminology, and semantic-role inventory (KBDL-THM-001)",True,False,True,True,True,True,True,False,False,False
+KBDL-THM-002,True,1,Semantic parity (KBDL-THM-002),True,False,True,True,True,True,True,False,False,False
+KBDL-THM-003,True,1,"Theme selection precedence — approved core (KBDL-THM-003, narrowed under KBDL-004-R1)",True,False,True,True,True,True,True,False,False,False
+KBDL-THM-004,True,1,"Persistence baseline (KBDL-THM-004, reclassified under KBDL-004-R1)",True,False,True,True,True,True,True,False,False,False
+KBDL-THM-005,True,1,"Accessibility-preserving override core (KBDL-THM-005, narrowed) and profile sharing (KBDL-THM-006)",True,False,True,True,True,True,True,False,False,False
+KBDL-THM-006,True,1,"Accessibility-preserving override core (KBDL-THM-005, narrowed) and profile sharing (KBDL-THM-006)",True,False,True,True,True,True,True,False,False,False
+KBDL-THM-007,True,1,"Recommended light and dark theme mappings (KBDL-THM-007, KBDL-THM-008)",True,False,True,True,True,True,True,False,False,False
+KBDL-THM-008,True,1,"Recommended light and dark theme mappings (KBDL-THM-007, KBDL-THM-008)",True,False,True,True,True,True,True,False,False,False
+KBDL-THM-009,True,1,"Status-family theme values, gradient strategy, and color-value expression (KBDL-THM-009, KBDL-THM-010, KBDL-THM-011)",True,False,True,True,True,True,True,False,False,False
+KBDL-THM-010,True,1,"Status-family theme values, gradient strategy, and color-value expression (KBDL-THM-009, KBDL-THM-010, KBDL-THM-011)",True,False,True,True,True,True,True,False,False,False
+KBDL-THM-011,True,1,"Status-family theme values, gradient strategy, and color-value expression (KBDL-THM-009, KBDL-THM-010, KBDL-THM-011)",True,False,True,True,True,True,True,False,False,False
+KBDL-THM-012,True,1,"Theme-transition guidance (KBDL-THM-012, KBDL-THM-012a)",True,False,True,True,True,True,True,False,False,False
+KBDL-THM-012a,True,1,"Theme-transition guidance (KBDL-THM-012, KBDL-THM-012a)",True,False,True,True,True,True,True,False,False,False
+KBDL-THM-013,True,1,"Detailed selection-precedence ordering (KBDL-THM-013, new under KBDL-004-R1)",True,False,True,True,True,True,True,False,False,False
+KBDL-THM-014,True,1,"Detailed project-override list (KBDL-THM-014, new under KBDL-004-R1)",True,False,True,True,True,True,True,False,False,False
+KBDL-THM-015,True,1,"Local contrast contexts (KBDL-THM-015, new under KBDL-004-R1)",True,False,True,True,True,True,True,False,False,False
+KBDL-VAL-001,True,1,"Evidence, inventory, lifecycle, and validation integrity (KBDL-VAL-001 through KBDL-VAL-004)",True,True,False,True,True,True,True,True,True,False
+KBDL-VAL-002,True,1,"Evidence, inventory, lifecycle, and validation integrity (KBDL-VAL-001 through KBDL-VAL-004)",True,True,False,True,True,True,True,True,True,False
+KBDL-VAL-003,True,1,"Evidence, inventory, lifecycle, and validation integrity (KBDL-VAL-001 through KBDL-VAL-004)",True,True,False,True,True,True,True,True,True,False
+KBDL-VAL-004,True,1,"Evidence, inventory, lifecycle, and validation integrity (KBDL-VAL-001 through KBDL-VAL-004)",True,True,False,True,True,True,True,True,True,False
+KBDL-VAL-005,True,1,"Decisions, traceability, documentation, and architecture (KBDL-VAL-005 through KBDL-VAL-008)",True,True,False,True,True,True,True,True,True,False
+KBDL-VAL-006,True,1,"Decisions, traceability, documentation, and architecture (KBDL-VAL-005 through KBDL-VAL-008)",True,True,False,True,True,True,True,True,True,False
+KBDL-VAL-007,True,1,"Decisions, traceability, documentation, and architecture (KBDL-VAL-005 through KBDL-VAL-008)",True,True,False,True,True,True,True,True,True,False
+KBDL-VAL-008,True,1,"Decisions, traceability, documentation, and architecture (KBDL-VAL-005 through KBDL-VAL-008)",True,True,False,True,True,True,True,True,True,False
+KBDL-VAL-009,True,1,"Calculations, evidence ledgers, and completion gate (KBDL-VAL-009 through KBDL-VAL-012)",True,True,False,True,True,True,True,True,True,False
+KBDL-VAL-010,True,1,"Calculations, evidence ledgers, and completion gate (KBDL-VAL-009 through KBDL-VAL-012)",True,True,False,True,True,True,True,True,True,False
+KBDL-VAL-011,True,1,"Calculations, evidence ledgers, and completion gate (KBDL-VAL-009 through KBDL-VAL-012)",True,True,False,True,True,True,True,True,True,False
+KBDL-VAL-012,True,1,"Calculations, evidence ledgers, and completion gate (KBDL-VAL-009 through KBDL-VAL-012)",True,True,False,True,True,True,True,True,True,False
