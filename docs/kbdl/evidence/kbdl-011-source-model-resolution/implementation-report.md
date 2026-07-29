@@ -88,9 +88,10 @@ language and `project-owner-review.md`'s sign-off table describing the
 pre-BH-R1, zero-decision state (commit `662ee28`). BH-R2 is a narrow,
 documentation-only follow-up, published as one child commit of
 `ea86add`, that: (1) corrects both documents so the historical
-(`662ee28`: PREPARED — NO OWNER DECISIONS RECORDED) and current (OWNER
-REVIEW IN PROGRESS — 3 DURABLY RECORDED BATCH H DECISIONS; 418 OTHER
-ISSUES PENDING) states are stated without contradiction; (2) completes
+(`662ee28`: PREPARED — NO OWNER DECISIONS RECORDED) and the then-current,
+historical-as-of-BH-R2 (OWNER REVIEW IN PROGRESS — 3 DURABLY RECORDED
+BATCH H DECISIONS; 418 OTHER ISSUES PENDING) states are stated without
+contradiction; (2) completes
 `project-owner-review.md`'s review-cycle sign-off summary (3 decisions
 recorded / Project owner / 2026-07-29 / Batch H / Implementation
 authorization NOT AUTHORIZED / planning-agent validation PENDING); (3)
@@ -106,8 +107,11 @@ adds `batch-h-r2-validation-transcript.txt`, a durable command/output
 transcript for this correction and its publication; and (6) regenerates
 `checksums.sha256` and `evidence-inventory.csv`. BH-R2 selects no new
 owner decision, changes no protected file, and authorizes no
-implementation action; the exact three Batch H decisions and the other
-418 PENDING issues are unchanged.
+implementation action; at the historical BH-R2 point, the exact three
+Batch H decisions and the other 418 PENDING issues were unchanged by
+BH-R2 (superseded by the current 4-recorded/417-pending state as of
+KBDL-011-SMR1-BA-OD1-DR1-R1; see the "KBDL-011-SMR1-BA-OD1-DR1 Batch A"
+section below).
 
 Stale packet-state statements after BH-R2: 0. Review-summary mismatches
 after BH-R2: 0.
@@ -145,10 +149,12 @@ adds `authority-graph-agc1-validation-transcript.txt`; and (7)
 regenerates `checksums.sha256`/`evidence-inventory.csv`. No new
 decision-register entry was created (see the transcript's
 decision-register determination) — `KBDL-DEC-014`'s scope and meaning
-are unchanged. The exact three Batch H decisions, the 418 other PENDING
-issues, all four fully-protected files, requirement lifecycle/
-provenance/validation-status, and every unrelated MOT requirement are
-unchanged. No VAL status, candidate status, implementation conformance,
+are unchanged. At the historical BH-AGC1 point, the exact three Batch H
+decisions and the 418 other PENDING issues were unchanged by BH-AGC1
+(superseded by the current 4-recorded/417-pending state as of
+KBDL-011-SMR1-BA-OD1-DR1-R1). All four fully-protected files, requirement
+lifecycle/provenance/validation-status, and every unrelated MOT
+requirement remain unchanged. No VAL status, candidate status, implementation conformance,
 or completion status changed; no implementation action is authorized.
 
 Authority-cycle status after BH-AGC1: removed (0 directional authority
@@ -161,10 +167,11 @@ the original cycle preserved unchanged).
 does not reopen, reinterpret, or change the BH-AGC1 authority-graph
 correction itself: `KBDL-MOT-007` and `KBDL-MOT-008` remain independently
 authorized by `KBDL-DEC-014`, decision packet item 2; their relationship
-remains related-requirement only, in both directions; the three Batch H
-decisions and the other 418 PENDING SMR1 issues are unchanged; no VAL
-status, lifecycle, provenance, or implementation-authorization status
-changed.
+remains related-requirement only, in both directions; at the historical
+VF1 point, the three Batch H decisions and the other 418 PENDING SMR1
+issues were unchanged (superseded by the current 4-recorded/417-pending
+state as of KBDL-011-SMR1-BA-OD1-DR1-R1); no VAL status, lifecycle,
+provenance, or implementation-authorization status changed.
 
 A clean, post-publication run of `scripts/validate_packet.py` against
 commit `0fadb9713299fb861830e419e06da8d82175ea1a` (parent
@@ -208,9 +215,13 @@ This correction is additive evidence: it does not amend or rewrite the
 post-publication 70/70 evidence existed at BH-AGC1 commit time. The
 original BH-AGC1 correction remains applied and its substance is
 unaffected; VF1 only supersedes the non-reproducible validator claim.
-Planning-agent validation of KBDL-011-SMR1-BH-AGC1 remains required;
-KBDL-011 remains incomplete; the other 418 SMR1 issues remain PENDING;
-no implementation action is authorized by this correction.
+At the historical VF1 point, planning-agent validation of
+KBDL-011-SMR1-BH-AGC1 was still required and the other 418 SMR1 issues
+remained PENDING. **As of the current KBDL-011-SMR1-BA-OD1-DR1-R1
+point, KBDL-011-SMR1-BH-AGC1 has passed planning-agent validation; four
+decisions are durably recorded in total (3 Batch H + 1 Batch A) and 417
+issues remain PENDING.** KBDL-011 remains incomplete; no implementation
+action is authorized by this correction.
 
 Changed files (validator-tooling and additive evidence only):
 `scripts/validate_packet.py` (delegates the three narrow-diff checks to
@@ -270,15 +281,65 @@ and `docs/kbdl/traceability-metadata.csv` remain byte-identical), does
 not change lifecycle or provenance, does not resolve `SMR1-KL-0001`,
 does not restore `VAL-003` or `VAL-006`, does not authorize
 implementation, does not begin KBDL-011-SMR2, and does not approve or
-record any other Batch A issue. Planning-agent validation of
-KBDL-011-SMR1-BA-OD1-DR1 remains required.
+record any other Batch A issue. Planning-agent review of
+KBDL-011-SMR1-BA-OD1-DR1 found it required remediation (see the next
+section); its decision recording itself is not reopened.
 
 Decision counts after BA-OD1-DR1: 4 durably recorded (3 Batch H, 1 Batch
 A); 417 pending.
 
+## KBDL-011-SMR1-BA-OD1-DR1-R1 authority-wording and stale-prose remediation
+
+Planning-agent review of `KBDL-011-SMR1-BA-OD1-DR1` identified two
+defects despite the prior validator run passing 74/74: (1)
+`batch-a-smr1-vc-0001-owner-decision-record.md` stated the `SET TO NOT
+VERIFIED` selection "selects no new authority, source, or evidence,"
+contradicting the approved meaning that the decision creates new
+current, non-retroactive authority for retaining the `Not verified`
+classification; (2) several current-state passages across the packet
+still stated or could be read as stating 418 pending issues, or AGC1/
+VF1 planning-agent validation as still pending, when the current state
+is 417 pending and AGC1/VF1 have both passed planning-agent validation.
+Neither defect was detectable by the prior validator — a coverage gap,
+not a validator failure, since `scripts/decision_state.py` had no check
+for authority-wording contradictions or stale current-state count/
+AGC1-VF1 prose.
+
+`KBDL-011-SMR1-BA-OD1-DR1-R1`: (1) corrects the durable record's
+authority wording to state explicitly that the decision creates new
+current, non-retroactive authority for retaining the classification,
+and that this authority is decision authority only, not accessibility-
+testing/WCAG-conformance evidence — without changing the selected
+choice, issue ID, requirement ID, decision date, timezone, evidence
+identifier, or Implementation authorization status; (2) audits every
+packet/evidence file for stale 418/three-recorded/AGC1-pending prose,
+adds explicit historical markers to every preserved historical mention,
+and corrects every current-state mention to 4 recorded/417 pending and
+AGC1/VF1-passed; (3) extends `scripts/decision_state.py` with `AR1`
+(authority-contradiction), `AR2` (evidence-conflation), `SP1` (stale
+418/three-recorded current-state prose without a historical marker),
+`SP2` (stale "N decisions ... in total" claim), `SP3` (stale AGC1/VF1
+pending claim), and `SP4` (recorded/per-batch/pending arithmetic
+consistency) fail-closed checks, without weakening D1-D14, PS1-PS5, AG,
+or AGC1-narrow-diff checks; (4) adds `scripts/dr1_r1_fixtures.py`, ten
+new fixtures (eight rejection fixtures proving each new check fails
+closed, plus two positive-control fixtures proving the corrected
+repository state still passes), all on temporary copies only; (5) adds
+`batch-a-od1-dr1-r1-validation-transcript.txt`; and (6) regenerates
+`evidence-inventory.csv` and `checksums.sha256`. This remediation does
+not reopen, reinterpret, or change the `SMR1-VC-0001` = SET TO NOT
+VERIFIED decision itself, its decision date, or its evidence identifier;
+does not change any protected file; does not resolve `SMR1-KL-0001`;
+does not restore `VAL-003`/`VAL-006`; and does not authorize
+implementation.
+
+Decision counts after DR1-R1 (unchanged by this remediation): 4 durably
+recorded (3 Batch H, 1 Batch A); 417 pending.
+
 ## Recommended next action
 
-Planning-agent validation of KBDL-011-SMR1-BA-OD1-DR1 (the Batch A /
+Planning-agent validation of `KBDL-011-SMR1-BA-OD1-DR1-R1` (the
+authority-wording and stale-prose remediation of the Batch A /
 SMR1-VC-0001 owner-decision recording). This is the only recommended
 next action; beginning KBDL-011-SMR2, another SMR1 batch, restoring any
 VAL status, implementation work, or any readiness/completion approval
@@ -297,3 +358,9 @@ correction itself.
 Batch A / SMR1-VC-0001 owner-decision-recording and validator/evidence
 changes (restoring `SMR1-VC-0001` to PENDING and the ledger/decision-state
 checks to their pre-DR1 form) without affecting AGC1 or VF1.
+
+`git revert <KBDL-011-SMR1-BA-OD1-DR1-R1-commit-sha>` reverts only this
+remediation's authority-wording, stale-prose, validator, and fixture
+corrections (restoring DR1-R1's specific text/checks to their pre-R1
+form) without removing the original `SMR1-VC-0001` = SET TO NOT VERIFIED
+owner decision recorded by DR1, and without affecting AGC1 or VF1.

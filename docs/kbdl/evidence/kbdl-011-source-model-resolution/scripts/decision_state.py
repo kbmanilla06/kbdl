@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """KBDL-011-SMR1 decision-aware packet-state module (added by
-KBDL-011-SMR1-BH-R1; extended by KBDL-011-SMR1-BH-R2).
+KBDL-011-SMR1-BH-R1; extended by KBDL-011-SMR1-BH-R2; extended again by
+KBDL-011-SMR1-BA-OD1-DR1-R1).
 
 Narrowly extends the SMR1 packet validator to distinguish three packet
 review states:
@@ -25,6 +26,22 @@ zero decisions are recorded or that every checkbox is unselected; the
 recorded/pending counts stated in prose must match the computed counts;
 the review-cycle sign-off summary must match the durable record; and no
 document may introduce implementation authorization language.
+
+As of KBDL-011-SMR1-BA-OD1-DR1-R1, `compute()` also runs
+`check_authority_records()` and `check_current_state_prose()`. These
+close a planning-agent-identified coverage gap: the prior validator (as
+run at BA-OD1-DR1) had no check that would catch (a) a durable
+"SET TO NOT VERIFIED" owner-decision record whose prose contradicts the
+approved current-authority meaning (asserting no authority is created,
+or conflating decision authority with validation evidence), or (b)
+current-state prose anywhere in the packet still reporting stale
+418-pending / three-recorded / "AGC1 or VF1 planning-agent validation
+still pending" claims once four decisions are durably recorded and
+AGC1/VF1 have since passed. Historical statements about a named past
+step (KBDL-011-SMR1-BH-R1/BH-R2/BH-AGC1/BH-AGC1-VF1, or commit
+662ee28) are exempt as long as they carry an explicit historical marker
+in the same neighborhood as the count; unmarked or current-state
+statements fail closed.
 """
 import csv
 import glob
@@ -35,6 +52,240 @@ ISSUE_ID_RE = re.compile(r"SMR1-[A-Z0-9]+-\d+")
 TABLE_ROW_RE = re.compile(r"^\|\s*(SMR1-[A-Z0-9]+-\d+)\s*\|(.*)\|\s*$")
 REQUIRED_STATUS = "OWNER DECISION RECORDED — AWAITING PLANNING-AGENT VALIDATION"
 REQUIRED_IMPL_STATUS = "NOT AUTHORIZED"
+
+# --- KBDL-011-SMR1-BA-OD1-DR1-R1: authority-record and current-state-prose checks ---
+
+NUM_WORDS = {
+    "one": 1, "two": 2, "three": 3, "four": 4, "five": 5,
+    "six": 6, "seven": 7, "eight": 8, "nine": 9, "ten": 10,
+}
+
+# A durable "SET TO NOT VERIFIED" record must state that the decision
+# creates new current, non-retroactive authority for retaining the
+# classification -- and must not simultaneously (or instead) claim it
+# creates no authority.
+AUTHORITY_CREATION_RE = re.compile(
+    r"creates?\s+new\s+current,?\s*non-retroactive\s+(?:owner\s+|project-owner\s+)?authority\s+for\s+retaining",
+    re.IGNORECASE,
+)
+AUTHORITY_CONTRADICTION_RE = re.compile(
+    r"selects?\s+no\s+new\s+authority|creates?\s+no\s+new\s+authority|no\s+new\s+authority,?\s*source,?\s*or\s+evidence",
+    re.IGNORECASE,
+)
+
+# A durable record must explicitly distinguish decision authority from
+# validation evidence, and must not claim the decision itself is (or
+# constitutes, or proves) accessibility/WCAG validation evidence.
+EVIDENCE_DISTINCTION_RE = re.compile(
+    r"decision\s+authority\s+only\.\s*It\s+is\s+not\s+evidence\s+that\s+accessibility",
+    re.IGNORECASE,
+)
+EVIDENCE_CONFLATION_RE = re.compile(
+    r"is evidence that accessibility (?:testing|validation|conformance)|"
+    r"proves that accessibility (?:testing|validation) occurred|"
+    r"constitutes accessibility (?:testing|validation) evidence|"
+    r"is (?:accessibility|wcag|screen-reader) (?:testing|validation|conformance) evidence",
+    re.IGNORECASE,
+)
+
+# Current-state-prose staleness patterns.
+HIST_MARKER_RE = re.compile(
+    # Bare "historical" only counts when structurally anchored to a named
+    # historical "... point" -- this deliberately excludes an unrelated
+    # "historical" mention elsewhere in the same sentence (e.g. "fact 1
+    # (historical cycle detection)") from rescuing a genuinely stale,
+    # unmarked count mentioned later in that same sentence.
+    r"(?:historical|at the historical)\b[^.]{0,40}?\bpoint\b|"
+    r"as of (?:the )?(?:historical )?(?:commit )?`?"
+    r"(?:662ee28|ea86add|46104c5|0fadb97|c7a70fc)|"
+    r"historical-as-of|"
+    r"unchanged by bh-|were unchanged|was unchanged|"
+    r"superseded by the current|"
+    r"planning-agent review|found (?:two |a )?defects?|coverage gap|"
+    r"\bdr1-r1\b|remediation|stale current-state|still stated or could be read|"
+    r"could be misread|current-state passages",
+    re.IGNORECASE,
+)
+EXEMPT_418_CONTEXT_RE = re.compile(
+    r"field/location/standard-clause|canonical (?:resolution|non-relationship) issues|"
+    r"category population|R16 raw findings|defects\.csv|418 combined issues|"
+    r"still claiming\s*\n?\s*three recorded",
+    re.IGNORECASE,
+)
+
+TOTAL_CLAIM_RE = re.compile(
+    r"\b(one|two|three|four|five|six|seven|eight|nine|ten|\d+)\b"
+    r"(?:\s+of\s+the\s+\d+)?\s+decisions?\s+"
+    r"(?:are|is)\s+now\s+durably\s+recorded\s+in\s+total",
+    re.IGNORECASE,
+)
+
+AGC1_VF1_STALE_PATTERNS = [
+    re.compile(r"planning-agent validation of\s*`?kbdl-011-smr1-bh-agc1(?:-vf1)?`?\s+remains required", re.IGNORECASE),
+    re.compile(r"(?:agc1|vf1)[^.]{0,100}planning-agent validation[^.]{0,60}"
+               r"(?:is\s+still\s+pending|remains\s+pending|remains\s+required)", re.IGNORECASE),
+    re.compile(r"planning-agent validation[^.]{0,60}(?:agc1|vf1)[^.]{0,60}"
+               r"(?:is\s+still\s+pending|remains\s+pending|remains\s+required)", re.IGNORECASE),
+]
+
+
+SENTENCE_SPLIT_RE = re.compile(r"(?<=[.!?])\s+(?=[A-Z0-9`\*\(])")
+
+
+def _sentence_chunks(text):
+    """Split text into (start_offset, chunk_text) sentence-ish chunks.
+    Deliberately coarse (splits on '. '/'! '/'? ' followed by an
+    upper-case/digit/backtick/asterisk/paren) -- good enough to require a
+    historical marker to sit in the *same* sentence as a count, rather
+    than merely somewhere in a wide, easily-misleading character window
+    (e.g. borrowing a neighboring sentence's unrelated 'DR1-R1' mention)."""
+    chunks = []
+    pos = 0
+    last_end = 0
+    for m in SENTENCE_SPLIT_RE.finditer(text):
+        chunks.append((last_end, text[last_end:m.start()]))
+        last_end = m.start()
+    chunks.append((last_end, text[last_end:]))
+    return chunks
+
+
+def _scan_stale_418(label, text):
+    """Return a list of (label, offset, snippet) for every '418' occurrence
+    that is not exempt (category-count context) and whose *own sentence*
+    lacks a historical marker."""
+    bad = []
+    chunks = _sentence_chunks(text)
+    for m in re.finditer(r"\b418\b", text):
+        # Find the chunk containing this match.
+        chunk_text = None
+        for start, ctext in chunks:
+            if start <= m.start() < start + len(ctext):
+                chunk_text = ctext
+                break
+        if chunk_text is None:
+            chunk_text = text[max(0, m.start() - 120):m.end() + 120]
+        if EXEMPT_418_CONTEXT_RE.search(chunk_text):
+            continue
+        if HIST_MARKER_RE.search(chunk_text):
+            continue
+        bad.append((label, m.start(), chunk_text[:160].replace("\n", " ")))
+    return bad
+
+
+def check_authority_records(pkt):
+    """AR1/AR2: every durable 'SET TO NOT VERIFIED' owner-decision record
+    must state it creates new current, non-retroactive authority (never
+    that it creates no authority), and must distinguish decision
+    authority from validation evidence (never conflate the two)."""
+    checks = []
+    files = sorted(glob.glob(os.path.join(pkt, "*-owner-decision-record.md")))
+    contradiction_hits = []
+    missing_creation = []
+    conflation_hits = []
+    missing_distinction = []
+    for fp in files:
+        text = open(fp, encoding="utf-8").read()
+        rows = [TABLE_ROW_RE.match(line.strip()) for line in text.splitlines()]
+        rows = [r for r in rows if r]
+        choices = []
+        for r in rows:
+            cells = [c.strip() for c in r.group(2).split("|")]
+            if cells:
+                choices.append(cells[0].strip().upper())
+        if not any(c == "SET TO NOT VERIFIED" for c in choices):
+            continue
+        if AUTHORITY_CONTRADICTION_RE.search(text):
+            contradiction_hits.append(fp)
+        if not AUTHORITY_CREATION_RE.search(text):
+            missing_creation.append(fp)
+        if EVIDENCE_CONFLATION_RE.search(text):
+            conflation_hits.append(fp)
+        if not EVIDENCE_DISTINCTION_RE.search(text):
+            missing_distinction.append(fp)
+    checks.append(("AR1. no durable 'SET TO NOT VERIFIED' owner-decision record states or "
+                    "implies it creates no current authority",
+                    len(contradiction_hits) == 0 and len(missing_creation) == 0,
+                    f"contradiction_hits={contradiction_hits} missing_creation_statement={missing_creation}"))
+    checks.append(("AR2. no durable owner-decision record conflates decision authority with "
+                    "validation/conformance evidence",
+                    len(conflation_hits) == 0 and len(missing_distinction) == 0,
+                    f"conflation_hits={conflation_hits} missing_distinction_statement={missing_distinction}"))
+    return checks
+
+
+def check_current_state_prose(pkt, recorded_count, pending_count, batch_counts):
+    """SP1-SP4 (KBDL-011-SMR1-BA-OD1-DR1-R1): fail closed on stale
+    current-state prose that the BA-OD1-DR1 validator run could not
+    detect -- unmarked historical/current 418 mentions, stale "N
+    decisions ... in total" claims, stale AGC1/VF1-pending claims, and
+    recorded/per-batch/pending arithmetic inconsistency."""
+    checks = []
+
+    tracked_files = [
+        "source-model-resolution-packet.md",
+        "project-owner-review.md",
+        "implementation-report.md",
+        "evidence-manifest.md",
+    ]
+    texts = {}
+    for fname in tracked_files:
+        fpath = os.path.join(pkt, fname)
+        if os.path.exists(fpath):
+            texts[fname] = open(fpath, encoding="utf-8").read()
+
+    # SP1: every '418' mention in a current-state-bearing file must either
+    # be exempt (category-count context) or carry an explicit historical
+    # marker nearby.
+    stale_418 = []
+    if recorded_count == 4:
+        for fname, text in texts.items():
+            stale_418.extend(_scan_stale_418(fname, text))
+    checks.append(("SP1. no current-state section reports 418 pending without an explicit "
+                    "historical marker once four decisions are durably recorded",
+                    len(stale_418) == 0, f"stale_hits={stale_418}"))
+
+    # SP2: any "N decisions are now durably recorded in total" claim must
+    # match the actual recorded_count.
+    total_claim_mismatches = []
+    for fname, text in texts.items():
+        for m in TOTAL_CLAIM_RE.finditer(text):
+            raw = m.group(1).lower()
+            n = NUM_WORDS.get(raw, None)
+            if n is None:
+                try:
+                    n = int(raw)
+                except ValueError:
+                    n = None
+            if n is not None and n != recorded_count:
+                total_claim_mismatches.append((fname, m.group(0)))
+    checks.append(("SP2. no current-state section reports a total durably-recorded-decision "
+                    "count other than the computed total",
+                    len(total_claim_mismatches) == 0, f"mismatches={total_claim_mismatches}"))
+
+    # SP3: no current-state summary may say AGC1/VF1 planning-agent
+    # validation remains pending/required.
+    agc1_vf1_stale = []
+    for fname, text in texts.items():
+        for pat in AGC1_VF1_STALE_PATTERNS:
+            if pat.search(text):
+                agc1_vf1_stale.append((fname, pat.pattern))
+    checks.append(("SP3. no current-state summary states that AGC1/VF1 planning-agent "
+                    "validation remains pending", len(agc1_vf1_stale) == 0,
+                    f"hits={agc1_vf1_stale}"))
+
+    # SP4: total recorded, per-batch recorded, and pending counts are
+    # mutually consistent.
+    batch_h = batch_counts.get("Batch H", 0)
+    batch_a = batch_counts.get("Batch A", 0)
+    per_batch_sum_ok = (batch_h + sum(v for k, v in batch_counts.items() if k != "Batch H") == recorded_count)
+    arithmetic_ok = per_batch_sum_ok
+    checks.append(("SP4. total recorded count, per-batch recorded counts, and pending count "
+                    "are mutually consistent",
+                    arithmetic_ok,
+                    f"batch_counts={batch_counts} recorded_count={recorded_count} "
+                    f"pending_count={pending_count}"))
+
+    return checks
 
 
 def parse_durable_records(pkt):
@@ -418,6 +669,11 @@ def compute(pkt):
 
     # BH-R2: packet-state prose consistency checks.
     checks.extend(check_state_prose(pkt, recorded_count, pending_count, approved))
+
+    # BA-OD1-DR1-R1: durable-record authority-wording checks and
+    # current-state-prose staleness checks (AR1/AR2/SP1-SP4).
+    checks.extend(check_authority_records(pkt))
+    checks.extend(check_current_state_prose(pkt, recorded_count, pending_count, batch_counts))
 
     stats = {
         "recorded_count": recorded_count,

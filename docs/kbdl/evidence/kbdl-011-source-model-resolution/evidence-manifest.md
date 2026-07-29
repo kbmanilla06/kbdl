@@ -124,10 +124,15 @@ analysis, the fixture results, and the post-fix clean pre-commit/
 post-commit/post-push validation runs. This correction is additive: the
 `0fadb97` commit and message are unchanged; the BH-AGC1 authority
 correction's substance is unaffected; only the previously
-non-reproducible "70/70" validator claim is superseded. The three Batch
-H decisions and the other 418 PENDING SMR1 issues are unchanged; no VAL
-status, lifecycle, provenance, or implementation-authorization status
-changed; no implementation action is authorized.
+non-reproducible "70/70" validator claim is superseded. At the
+historical VF1 point, the three Batch H decisions and the other 418
+PENDING SMR1 issues were unchanged (superseded by the current
+4-recorded/417-pending state as of `KBDL-011-SMR1-BA-OD1-DR1-R1`, which
+also records that `KBDL-011-SMR1-BH-AGC1` and
+`KBDL-011-SMR1-BH-AGC1-VF1` have since passed planning-agent
+validation); no VAL status, lifecycle, provenance, or
+implementation-authorization status changed; no implementation action is
+authorized.
 
 `KBDL-011-SMR1-BA-OD1-DR1` durably records exactly one Batch A decision
 — `SMR1-VC-0001` (`KBDL-A11Y-001` validation classification) = SET TO
@@ -160,4 +165,41 @@ BA-OD1-DR1 command/output evidence. This step does not apply the SET TO
 NOT VERIFIED classification to effective normative or traceability
 metadata, does not change lifecycle or provenance, does not resolve
 `SMR1-KL-0001`, does not restore `VAL-003` or `VAL-006`, and does not
+authorize implementation.
+
+`KBDL-011-SMR1-BA-OD1-DR1-R1` is a prose-and-validator-only remediation
+found necessary by planning-agent review of `KBDL-011-SMR1-BA-OD1-DR1`:
+(1) `batch-a-smr1-vc-0001-owner-decision-record.md` contained language
+saying the `SET TO NOT VERIFIED` selection "selects no new authority,
+source, or evidence," contradicting the approved meaning that the
+decision creates new current, non-retroactive authority for retaining
+the `Not verified` classification; (2) several current-state passages
+across `source-model-resolution-packet.md`, `project-owner-review.md`,
+`implementation-report.md`, and this manifest still read (or could be
+misread) as reporting 418 pending issues or pending AGC1/VF1
+planning-agent validation as current state, when the current state is
+417 pending and AGC1/VF1 have both passed; (3) `scripts/decision_state.py`
+had no check that would catch either defect. DR1-R1: (a) corrects the
+durable record's authority wording (adding the required "creates new
+current, non-retroactive authority" / "decision authority only, not
+[testing] evidence" sentences) without changing the selected choice,
+issue ID, requirement ID, decision date, timezone, evidence identifier,
+or Implementation authorization status; (b) adds explicit historical
+markers to every preserved historical 418/three-recorded mention and
+corrects every current-state mention to 417/four-recorded, and to state
+that AGC1/VF1 have passed planning-agent validation while DR1-R1 itself
+is the current open gate; (c) extends `scripts/decision_state.py` with
+new fail-closed checks (`AR1`, `AR2`, `SP1`–`SP4`) covering the authority
+contradiction, the evidence-conflation risk, stale current-state 418/
+three-recorded prose lacking a historical marker, stale "AGC1/VF1
+pending" prose, and count-arithmetic consistency; (d) adds
+`scripts/dr1_r1_fixtures.py`, ten new deterministic fixtures (eight
+rejection fixtures plus two positive-control fixtures) proving the new
+checks fail closed and that the corrected repository state still
+passes, all on temporary copies only; (e) adds
+`batch-a-od1-dr1-r1-validation-transcript.txt`; and (f) regenerates
+`evidence-inventory.csv` and `checksums.sha256`. DR1-R1 does not reopen,
+reinterpret, or change the `SMR1-VC-0001` = SET TO NOT VERIFIED decision
+itself, does not change any protected file, does not resolve
+`SMR1-KL-0001`, does not restore `VAL-003`/`VAL-006`, and does not
 authorize implementation.

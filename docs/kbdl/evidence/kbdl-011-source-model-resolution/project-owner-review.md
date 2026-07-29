@@ -276,8 +276,11 @@ any protected field — per this packet's design, it still requires a
 separate durable recording and validation prompt (an authority-graph
 correction prompt for KBDL-MOT-007/MOT-008, followed by planning-agent
 validation) before it takes effect. No other batch's decisions are
-affected or preselected by this entry; all other 418 canonical issues
-remain literally `PENDING`.
+affected or preselected by this entry. At the historical Batch H point
+(`KBDL-011-SMR1-BH-R1`), all other 418 canonical issues remained
+literally `PENDING`. As of the current `KBDL-011-SMR1-BA-OD1-DR1-R1`
+point (following the additional Batch A / `SMR1-VC-0001` decision), 417
+canonical issues remain literally `PENDING`.
 
 ---
 
@@ -290,7 +293,7 @@ remain literally `PENDING`.
 | Review date | 2026-07-29 |
 | Batch with decisions recorded | Batch H (3, prior cycle); Batch A (1: SMR1-VC-0001, this cycle) |
 | Implementation authorization | NOT AUTHORIZED |
-| Planning-agent validation | PENDING for KBDL-011-SMR1-BA-OD1-DR1 until this prompt passes |
+| Planning-agent validation | KBDL-011-SMR1-BH-AGC1 and KBDL-011-SMR1-BH-AGC1-VF1: PASSED. KBDL-011-SMR1-BA-OD1-DR1: superseded by KBDL-011-SMR1-BA-OD1-DR1-R1 (this remediation), which is the current open gate — PENDING until this remediation prompt passes planning-agent validation |
 | Other batches this cycle | None newly recorded this cycle beyond SMR1-VC-0001 — all other 417 issues remain `PENDING` |
 | Follow-on recording prompt(s) requested | Not yet requested (a separate metadata-recording prompt for KBDL-A11Y-001's validation classification field would be required before the Batch A / SMR1-VC-0001 choice takes effect; a separate authority-graph correction prompt for KBDL-MOT-007/MOT-008 would be required before the Batch H cycle-level choice takes effect) |
 
@@ -298,4 +301,4 @@ Recording 4 decisions in total (3 Batch H, 1 Batch A) is not, and does
 not imply, implementation approval: it is a durably recorded
 review-cycle choice only. This form's completion does not itself change
 any protected field, VAL status, candidate status, implementation
-conformance, or completion status.
+conformance, or completion status. KBDL-011 remains incomplete.

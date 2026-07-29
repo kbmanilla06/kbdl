@@ -197,15 +197,23 @@ Four distinct facts must not be conflated:
    `batch-h-owner-decision-record.md` — it does not reopen, reinterpret,
    or broaden them, and it fabricates no new project-owner decision
    (`KBDL-DEC-014` itself is unchanged in scope and meaning).
-3. **Pending planning-agent validation.** The correction above has not
-   yet been validated by a planning agent. Until that validation
-   occurs, the corrected graph is applied-but-unvalidated current state,
-   not a confirmed final state.
-4. **Remaining unresolved KBDL-011 work.** Applying this one correction
-   does not resolve any of the other 418 SMR1 issues, does not restore
-   any `VAL-###` status, does not change candidate/implementation-
-   conformance/completion status, and does not authorize source-model
-   implementation. KBDL-011 remains open.
+3. **Planning-agent validation status.** At the historical KBDL-011-SMR1-BH-AGC1
+   point, this correction had not yet been validated by a planning agent
+   and was applied-but-unvalidated current state. As of the current
+   KBDL-011-SMR1-BA-OD1-DR1-R1 point, **KBDL-011-SMR1-BH-AGC1 has passed
+   planning-agent validation**; that specific gate is closed. The
+   current open planning-agent-validation gate is
+   KBDL-011-SMR1-BA-OD1-DR1-R1 itself (this remediation), not AGC1.
+4. **Remaining unresolved KBDL-011 work.** At the historical
+   KBDL-011-SMR1-BH-AGC1 point (3 durably recorded, 418 other SMR1
+   issues pending), applying this one correction did not resolve any of
+   the other pending SMR1 issues. As of the current
+   KBDL-011-SMR1-BA-OD1-DR1-R1 point, four decisions are durably
+   recorded in total (3 Batch H + 1 Batch A) and 417 issues remain
+   PENDING. This correction does not restore any `VAL-###` status, does
+   not change candidate/implementation-conformance/completion status,
+   and does not authorize source-model implementation. KBDL-011 remains
+   open.
 
 `scripts/authority_graph.py` and `scripts/authority_graph_fixtures.py`
 implement fail-closed regression checks and negative fixtures for this
@@ -214,10 +222,14 @@ correction (see `scripts/validate_packet.py`'s `AG.*` checks).
 ## 9. Validator-reproducibility correction (added by KBDL-011-SMR1-BH-AGC1-VF1)
 
 This is a validator-tooling-only correction. It does not change fact 2
-above (the applied Batch H correction), does not reopen fact 1
-(historical cycle detection), does not resolve fact 3 (planning-agent
-validation is still pending), and does not change fact 4 (KBDL-011
-remains open, the other 418 issues remain PENDING).
+above (the applied Batch H correction) and does not reopen fact 1
+(historical cycle detection). At the historical KBDL-011-SMR1-BH-AGC1-VF1
+point, fact 3 (planning-agent validation) was still pending and fact 4
+(KBDL-011 remains open, the other 418 issues pending) was unchanged; as
+of the current KBDL-011-SMR1-BA-OD1-DR1-R1 point, KBDL-011-SMR1-BH-AGC1
+and KBDL-011-SMR1-BH-AGC1-VF1 have both since passed planning-agent
+validation, four decisions are durably recorded in total (3 Batch H + 1
+Batch A), 417 issues remain PENDING, and KBDL-011 remains incomplete.
 
 A clean post-publication run of `scripts/validate_packet.py` against
 the published Batch H correction commit (`0fadb9713299fb861830e419e06da8d82175ea1a`,
@@ -240,8 +252,9 @@ The originally reported "70/70" claim for the Batch H correction commit
 was therefore not reproducible from a clean post-publication checkout;
 this correction supersedes that specific validator claim without
 amending or rewriting the original commit, and without implying the
-underlying source-model correction was ever unsound. Planning-agent
-validation of KBDL-011-SMR1-BH-AGC1 remains required.
+underlying source-model correction was ever unsound. **As of the
+current KBDL-011-SMR1-BA-OD1-DR1-R1 point, planning-agent validation of
+KBDL-011-SMR1-BH-AGC1 has passed; it is no longer an open gate.**
 
 ## 10. Batch A / SMR1-VC-0001 decision recording (added by KBDL-011-SMR1-BA-OD1-DR1)
 
@@ -293,8 +306,36 @@ does not restore `VAL-003` or `VAL-006`, does not authorize
 implementation, does not begin KBDL-011-SMR2, and does not approve or
 record any other Batch A issue. A later, separate metadata-recording
 prompt and planning-agent validation are required before this decision
-has any normative effect. Planning-agent validation of
-KBDL-011-SMR1-BA-OD1-DR1 remains required.
+has any normative effect. Planning-agent review of
+KBDL-011-SMR1-BA-OD1-DR1 identified an internal authority contradiction
+in the durable record and stale current-state prose (see §11);
+`KBDL-011-SMR1-BA-OD1-DR1-R1` corrects those defects additively, without
+reopening or reinterpreting the underlying `SET TO NOT VERIFIED`
+decision itself.
+
+## 11. Current planning-agent validation status (as of KBDL-011-SMR1-BA-OD1-DR1-R1)
+
+This section states the current planning-agent-validation gate status
+without rewriting any prior commit or historical transcript:
+
+- `KBDL-011-SMR1-BH-R1` / `KBDL-011-SMR1-BH-R2`: passed planning-agent
+  validation.
+- `KBDL-011-SMR1-BH-AGC1`: **passed planning-agent validation.**
+- `KBDL-011-SMR1-BH-AGC1-VF1`: **passed planning-agent validation.**
+- `KBDL-011-SMR1-BA-OD1-DR1`: planning-agent review found two defects —
+  (1) the durable record's authority wording contradicted the approved
+  current-authority meaning; (2) stale current-state prose (418
+  pending / AGC1 pending) survived in several sections. DR1's decision
+  recording itself (`SMR1-VC-0001` = SET TO NOT VERIFIED, 2026-07-29)
+  is not reopened, reinterpreted, or changed by this correction.
+- `KBDL-011-SMR1-BA-OD1-DR1-R1` (this remediation): **planning-agent
+  validation of this remediation is the current open gate.** Until it
+  passes, `KBDL-011-SMR1-BA-OD1-DR1`'s validation claims remain
+  superseded by this section, and `KBDL-011` remains incomplete.
+
+Current decision-state counts (unchanged by this remediation): 4
+decisions durably recorded in total (3 Batch H, 1 Batch A); 417 issues
+remain PENDING.
 
 ## 8. Progression gate
 

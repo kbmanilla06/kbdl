@@ -21,8 +21,13 @@ selected on 2026-07-29 for this exact issue (only this record is).
 - `SMR1-VC-0001` — Requirement `KBDL-A11Y-001`, Field "Validation
   classification": **SET TO NOT VERIFIED**. The requirement's validation
   classification is retained as `Not verified`. This is the most
-  conservative of the five available options; it selects no new
-  authority, source, or evidence for the current candidate value.
+  conservative of the five available options.
+
+  **This durable project-owner decision creates new current,
+  non-retroactive authority for retaining `KBDL-A11Y-001`'s validation
+  classification as `Not verified`. This authority is decision authority
+  only. It is not evidence that accessibility testing, screen-reader
+  testing, automated checking, or WCAG conformance assessment occurred.**
 
 This record covers only `SMR1-VC-0001`. It does not select, approve, or
 preselect any decision for any of the other 58 Batch A issues

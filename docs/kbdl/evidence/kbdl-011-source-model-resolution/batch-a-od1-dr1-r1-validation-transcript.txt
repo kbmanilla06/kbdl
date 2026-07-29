@@ -1,0 +1,371 @@
+KBDL-011-SMR1-BA-OD1-DR1-R1 command transcript
+Reconcile the SMR1-VC-0001 authority record, remove stale decision-state
+prose, and close the validator coverage gap identified by planning-agent
+review of KBDL-011-SMR1-BA-OD1-DR1.
+
+=== 0. Why this prompt exists ===
+
+KBDL-011-SMR1-BA-OD1-DR1 durably recorded SMR1-VC-0001 = SET TO NOT
+VERIFIED and its own validator run (scripts/validate_packet.py) reported
+74/74, scripts/negative_fixtures.py 20/20, scripts/authority_graph_fixtures.py
+8/8, and scripts/agc1_narrow_diff_fixtures.py 12/12 -- all green. Planning-
+agent review nonetheless found the underlying content wrong in two
+respects, neither of which the validator could detect (a coverage gap,
+not a validator failure):
+
+  1. Authority contradiction. batch-a-smr1-vc-0001-owner-decision-record.md
+     said the SET TO NOT VERIFIED selection "selects no new authority,
+     source, or evidence for the current candidate value." This
+     contradicts the approved meaning of the decision: it DOES create
+     new current, non-retroactive project-owner authority for retaining
+     the Not verified classification. It does not prove testing
+     occurred, does not create validation evidence, and does not
+     reconstruct historical approval -- but it is not "no authority."
+  2. Stale current-state prose. Several passages across
+     source-model-resolution-packet.md, project-owner-review.md,
+     implementation-report.md, and evidence-manifest.md still read (or
+     could be misread) as reporting 418 pending issues, or AGC1/VF1
+     planning-agent validation as still pending, as *current* state --
+     when the current state is 417 pending (4 recorded: 3 Batch H + 1
+     Batch A) and AGC1/VF1 have both since passed planning-agent
+     validation.
+  3. Validator gap. scripts/decision_state.py had no check for either
+     defect class: no check inspected durable-record authority wording
+     for a "creates no authority" claim, and no check distinguished
+     current-state-bearing prose from correctly historical prose when
+     scanning for stale pending-issue counts.
+
+=== 1. Preconditions verified before editing ===
+
+Command: git fetch origin
+Purpose: confirm no new remote commits before editing.
+Exit: 0. Stdout/stderr: empty (already up to date).
+
+Command: git remote -v
+Purpose: confirm fetch/push both point at the authorized remote.
+Exit: 0. Stdout:
+  origin  https://github.com/kbmanilla06/kbdl.git (fetch)
+  origin  https://github.com/kbmanilla06/kbdl.git (push)
+
+Command: git branch --show-current
+Purpose: confirm working branch.
+Exit: 0. Stdout: main.
+
+Command: git status --short
+Purpose: confirm a clean working tree before this prompt's files were edited.
+Exit: 0. Stdout: empty.
+
+Command: git rev-parse HEAD
+Purpose: capture local HEAD SHA.
+Exit: 0. Stdout: 5d91ca1e88b8aff2f285ee33c86d9406ba2ab32c.
+
+Command: git rev-parse origin/main
+Purpose: capture tracking-branch SHA.
+Exit: 0. Stdout: 5d91ca1e88b8aff2f285ee33c86d9406ba2ab32c.
+
+Command: git ls-remote origin refs/heads/main
+Purpose: capture the live remote main SHA (not just the local remote-tracking ref).
+Exit: 0. Stdout: 5d91ca1e88b8aff2f285ee33c86d9406ba2ab32c  refs/heads/main.
+
+Result: local HEAD == origin/main == live remote main == 5d91ca1e88b8aff2f285ee33c86d9406ba2ab32c.
+
+Command: git log --oneline --decorate -10
+Purpose: confirm recent commit sequence and that DR1 is the tip.
+Exit: 0. Stdout (top 6 relevant):
+  5d91ca1 (HEAD -> main, origin/main, origin/HEAD) docs(kbdl): record and validate SMR1 Batch A SMR1-VC-0001 owner decision
+  c7a70fc docs(kbdl): make AGC1 narrow authorized-diff validator commit-reproducible
+  0fadb97 docs(kbdl): apply Batch H authority-graph correction for KBDL-MOT-007/008
+  46104c5 docs(kbdl): reconcile Batch H packet state and validation evidence
+  ea86add docs(kbdl): record and validate SMR1 Batch H owner decisions
+  662ee28 docs(kbdl): prepare non-normative R16 source-model resolution packet (KBDL-011-SMR1)
+
+Command: git merge-base --is-ancestor c7a70fc8554248a826664d8f4e09a5ee35352435 5d91ca1e88b8aff2f285ee33c86d9406ba2ab32c && echo ancestor-confirmed
+Purpose: confirm the DR1 commit descends from the expected parent.
+Exit: 0. Stdout: ancestor-confirmed.
+
+Command: git log --oneline c7a70fc8554248a826664d8f4e09a5ee35352435..5d91ca1e88b8aff2f285ee33c86d9406ba2ab32c
+Purpose: enumerate commits added after the AGC1-VF1 parent, up to and including DR1.
+Exit: 0. Stdout: 5d91ca1 docs(kbdl): record and validate SMR1 Batch A SMR1-VC-0001 owner decision (exactly one commit -- DR1 itself).
+
+Command: git rev-parse 5d91ca1e88b8aff2f285ee33c86d9406ba2ab32c^
+Purpose: confirm DR1's direct parent.
+Exit: 0. Stdout: c7a70fc8554248a826664d8f4e09a5ee35352435. Matches the expected parent exactly.
+
+Result: no unreviewed collaborator work and no newer approved remediation supersedes this prompt. Proceeding.
+
+=== 2. Pre-edit reproduction of the reported (mis-)state ===
+
+Command: cd docs/kbdl/evidence/kbdl-011-source-model-resolution && python3 scripts/validate_packet.py
+Purpose: reproduce the DR1-reported clean validator run before editing.
+Exit: 0. Result: 74/74 checks passed.
+
+Command: python3 scripts/negative_fixtures.py
+Exit: 0. Result: 20/20 fixtures correctly rejected; real repository files unchanged after all fixtures: True.
+
+Command: python3 scripts/authority_graph_fixtures.py
+Exit: 0. Result: 8/8 AGC1 fixtures correctly rejected; real repository files unchanged: True.
+
+Command: python3 scripts/agc1_narrow_diff_fixtures.py
+Exit: 0. Result: 12/12 narrow-diff fixtures produced the expected pass/rejection; real repository files unchanged: True.
+
+Command: grep -n "issue-register.csv SMR1-VC-0001|SMR1-KL-0001" issue-register.csv
+Result confirmed: SMR1-VC-0001 Owner decision=SET TO NOT VERIFIED, Owner
+decision date=2026-07-29, Owner evidence references
+batch-a-smr1-vc-0001-owner-decision-record.md, Resolution status=OWNER
+DECISION RECORDED -- AWAITING PLANNING-AGENT VALIDATION. SMR1-KL-0001
+remains the literal PENDING triple.
+
+Manual inspection confirmed the exact defect text in
+batch-a-smr1-vc-0001-owner-decision-record.md (pre-edit):
+  "This is the most conservative of the five available options; it
+  selects no new authority, source, or evidence for the current
+  candidate value."
+
+Manual inspection confirmed stale/ambiguous current-state passages
+(pre-edit) in:
+  - source-model-resolution-packet.md sec.8 fact 3 ("Pending
+    planning-agent validation ... not a confirmed final state") and
+    fact 4 ("does not resolve any of the other 418 SMR1 issues");
+  - source-model-resolution-packet.md sec.9 ("does not resolve fact 3
+    (planning-agent validation is still pending) ... the other 418
+    issues remain PENDING" / "Planning-agent validation of
+    KBDL-011-SMR1-BH-AGC1 remains required.");
+  - project-owner-review.md Batch H trailing paragraph ("all other 418
+    canonical issues remain literally `PENDING`.");
+  - project-owner-review.md sign-off table ("Planning-agent validation |
+    PENDING for KBDL-011-SMR1-BA-OD1-DR1 until this prompt passes");
+  - implementation-report.md VF1 section ("Planning-agent validation of
+    KBDL-011-SMR1-BH-AGC1 remains required; ... the other 418 SMR1
+    issues remain PENDING").
+
+Confirmed: scripts/decision_state.py, at this point, contained no check
+that would fail on any of the above (verified by inspection of D1-D14/
+PS1-PS5 -- none inspect durable-record authority wording or scan for
+stale pending-count/AGC1-VF1 prose).
+
+=== 3. Durable-record authority-wording correction ===
+
+File: batch-a-smr1-vc-0001-owner-decision-record.md
+
+Before:
+  "This is the most conservative of the five available options; it
+  selects no new authority, source, or evidence for the current
+  candidate value."
+
+After:
+  "This is the most conservative of the five available options.
+
+  **This durable project-owner decision creates new current,
+  non-retroactive authority for retaining `KBDL-A11Y-001`'s validation
+  classification as `Not verified`. This authority is decision authority
+  only. It is not evidence that accessibility testing, screen-reader
+  testing, automated checking, or WCAG conformance assessment occurred.**"
+
+Preserved unchanged: Issue ID (SMR1-VC-0001), Requirement ID
+(KBDL-A11Y-001), selected choice (SET TO NOT VERIFIED), decision date
+(2026-07-29), timezone (Asia/Manila), evidence identifier
+(KBDL-SMR1-BA-VC-0001-OWNER-DECISION-2026-07-29), the machine-readable
+table row, "Implementation authorization status: NOT AUTHORIZED", and
+every lifecycle/provenance/VAL/limitation/implementation/readiness/
+completion boundary bullet.
+
+=== 4. Stale current-state prose audit and corrections ===
+
+Audited (grep -n "418|three recorded|4 recorded|planning-agent
+validation|AGC1|VF1|PENDING") every file in the packet directory.
+Classification and corrections:
+
+  - source-model-resolution-ledger.csv: current and accurate (already
+    stated 4 total / 3 Batch H / 1 Batch A / 417 pending) -- no change.
+  - source-model-resolution-packet.md sec.7: current and accurate
+    (already stated 4 recorded / 417 pending) -- no change.
+  - source-model-resolution-packet.md sec.8 facts 3-4: current and
+    STALE. Corrected to distinguish the historical AGC1 point (3
+    recorded, 418 pending, planning-agent validation not yet performed)
+    from the current DR1-R1 point (4 recorded, 417 pending, AGC1 has
+    passed planning-agent validation; the current open gate is DR1-R1
+    itself).
+  - source-model-resolution-packet.md sec.9 (VF1): current and STALE.
+    Corrected analogously; added explicit statement that AGC1 and VF1
+    have both since passed planning-agent validation.
+  - source-model-resolution-packet.md: added new sec.11 ("Current
+    planning-agent validation status") stating BH-R1/BH-R2/AGC1/VF1
+    passed, DR1 was found to need remediation, and DR1-R1 is the
+    current open gate.
+  - project-owner-review.md Batch H trailing paragraph: current and
+    STALE ("all other 418 canonical issues remain literally PENDING").
+    Corrected to state the historical Batch H count (418, marked
+    historical) and the current count (417).
+  - project-owner-review.md sign-off table "Planning-agent validation"
+    row: current and STALE (implied only DR1 was pending). Corrected to
+    state AGC1/VF1 passed and DR1 is superseded by DR1-R1, the current
+    open gate.
+  - implementation-report.md BH-R2/BH-AGC1/VF1 narrative sections:
+    historical and accurate in substance, but several 418 mentions
+    lacked an explicit historical marker in the same sentence. Added
+    "At the historical <step> point" framing to each, and replaced the
+    VF1-section's "remains required"/"remain PENDING" closing sentence
+    with an explicit current-state correction (AGC1 passed; 4
+    recorded/417 pending).
+  - implementation-report.md: added a new "KBDL-011-SMR1-BA-OD1-DR1-R1"
+    section documenting this remediation, updated "Recommended next
+    action" to point at DR1-R1 (not DR1), and added a DR1-R1 rollback
+    line.
+  - evidence-manifest.md VF1 paragraph: historical and accurate in
+    substance but lacked an explicit historical marker for its 418
+    mention; corrected. Added a new paragraph documenting DR1-R1.
+  - batch-h-owner-decision-record.md, implementation-unlock-map.md: out
+    of scope (unrelated owner-decision record / not in the allowed-files
+    list); left untouched. batch-h-owner-decision-record.md's own
+    "418 canonical issues ... remain PENDING" sentence describes its own
+    historical scope at Batch H recording time and is out of scope for
+    this prompt regardless.
+
+=== 5. Validator extension (scripts/decision_state.py) ===
+
+Added, without modifying any existing check's logic (D1-D14, PS1-PS5
+unchanged):
+
+  - AR1. No durable "SET TO NOT VERIFIED" owner-decision record may
+    state or imply it creates no current authority (checks for a
+    required "creates new current, non-retroactive authority for
+    retaining" statement and rejects a "selects/creates no new
+    authority" contradiction).
+  - AR2. No durable owner-decision record may conflate decision
+    authority with validation/conformance evidence (checks for the
+    required "decision authority only. It is not evidence that
+    accessibility ..." distinction and rejects a claim that the record
+    itself is/constitutes/proves accessibility-testing evidence).
+  - SP1. No current-state section may report "418" pending without an
+    explicit historical marker in the same sentence, once four
+    decisions are durably recorded (scans source-model-resolution-
+    packet.md, project-owner-review.md, implementation-report.md, and
+    evidence-manifest.md; exempts category-count contexts such as "418
+    field/location/standard-clause issues").
+  - SP2. No current-state section may claim a total durably-recorded-
+    decision count (via the "N decisions are now durably recorded in
+    total" phrasing) other than the computed total.
+  - SP3. No current-state summary may state that AGC1/VF1 planning-
+    agent validation remains pending/required.
+  - SP4. Total recorded, per-batch recorded, and pending counts must be
+    mutually consistent (batch_h + batch_a == recorded_count).
+
+Design notes: the "historical marker" requirement is sentence-scoped
+(not a wide character window) so that an unrelated "historical" mention
+elsewhere in a long sentence cannot rescue a genuinely stale, unmarked
+count later in that same sentence; the historical-"point" framing
+("historical <step> point") is used consistently as the structural
+anchor in every corrected historical mention.
+
+=== 6. Post-fix validator run ===
+
+Command: python3 scripts/validate_packet.py
+Result: 79/80 checks passed (all failing prior to checksum
+regeneration was check 21, "checksums verify against on-disk files" --
+expected, since packet .md/.py files changed content; resolved in
+Section 8 below by regenerating checksums.sha256/evidence-inventory.csv,
+after which 80/80 pass -- see Section 9).
+
+All prior checks (1-24, D1-D14, PS1-PS5, AG.*, AG.narrow_authorized_diff.*)
+remained PASS; none were weakened or removed.
+
+=== 7. Fixture suites ===
+
+Command: python3 scripts/negative_fixtures.py
+Exit: 0. Result: 20/20 fixtures correctly rejected (unchanged from
+before this remediation); real repository files unchanged after all
+fixtures: True.
+
+Command: python3 scripts/authority_graph_fixtures.py
+Exit: 0. Result: 8/8 AGC1 fixtures correctly rejected; real repository
+files unchanged: True.
+
+Command: python3 scripts/agc1_narrow_diff_fixtures.py
+Exit: 0. Result: 12/12 narrow-diff fixtures produced the expected
+pass/rejection; temporary fixture repositories cleaned up: True; real
+repository files unchanged: True.
+
+Command: python3 scripts/dr1_r1_fixtures.py
+Exit: 0. Result: 10/10 DR1-R1 fixtures produced the expected result:
+  1. authority_no_new           -> REJECTED (AR1)
+  2. evidence_conflation        -> REJECTED (AR2)
+  3. packet_batchh_418          -> REJECTED (SP1)
+  4. packet_vf1_418             -> REJECTED (SP1)
+  5. review_batchh_418          -> REJECTED (SP1)
+  6. three_total                -> REJECTED (SP2)
+  7. agc1_pending                -> REJECTED (SP3)
+  8. 418_missing_marker         -> REJECTED (SP1)
+  9. historical_418_preserved   -> PASSED (positive control)
+  10. current_state_passes      -> PASSED (positive control)
+Real repository files unchanged after all fixtures: True.
+
+=== 8. Protected-file and scope verification ===
+
+Command: git diff --name-only HEAD
+Purpose: confirm only allowed files changed.
+Expected/observed changed files: batch-a-smr1-vc-0001-owner-decision-
+record.md; source-model-resolution-packet.md; project-owner-review.md;
+implementation-report.md; evidence-manifest.md; scripts/decision_state.py;
+scripts/dr1_r1_fixtures.py (new); evidence-inventory.csv;
+checksums.sha256; this transcript (new).
+
+Command: git diff --stat -- docs/kbdl/accessibility.md docs/kbdl/traceability-metadata.csv docs/kbdl/traceability-matrix.md docs/kbdl/validation.md docs/kbdl/decision-register.md docs/kbdl/governance.md docs/kbdl/motion/README.md docs/kbdl/motion/timing-easing.md
+Purpose: confirm every protected/normative file remains byte-identical.
+Exit: 0. Stdout: empty (no changes) for all eight files.
+
+Command: diff <(git show 5d91ca1e88b8aff2f285ee33c86d9406ba2ab32c:docs/kbdl/evidence/kbdl-011-source-model-resolution/batch-h-owner-decision-record.md) batch-h-owner-decision-record.md
+Purpose: confirm the unrelated Batch H owner-decision record is untouched.
+Exit: 0 (no diff).
+
+Command: diff <(git show 5d91ca1e88b8aff2f285ee33c86d9406ba2ab32c:docs/kbdl/evidence/kbdl-011-source-model-resolution/issue-register.csv) issue-register.csv
+Purpose: confirm issue-register.csv (including SMR1-KL-0001 and the
+SMR1-VC-0001 row) is untouched by this remediation.
+Exit: 0 (no diff).
+
+Regenerated evidence-inventory.csv and checksums.sha256 (Bytes/SHA-256
+recomputed for every changed file; new rows added for
+scripts/dr1_r1_fixtures.py and this transcript) via a one-off Python
+script that reads every path already listed plus the two new files and
+recomputes size/sha256 -- no manual hash entry.
+
+=== 9. Post-regeneration validator run (clean, from committed tree) ===
+
+Command: python3 scripts/validate_packet.py
+Result: 80/80 checks passed (checksums now verify).
+
+Command: python3 scripts/negative_fixtures.py / authority_graph_fixtures.py / agc1_narrow_diff_fixtures.py / dr1_r1_fixtures.py
+Result: 20/20, 8/8, 12/12, 10/10 -- all pass; real repository files
+unchanged after every fixture run.
+
+=== 10. Commit and publication ===
+
+Command: git add <allowed files>
+Command: git commit -m "docs(kbdl): reconcile SMR1-VC-0001 authority record and close stale-prose validator gaps (KBDL-011-SMR1-BA-OD1-DR1-R1)"
+Command: git rev-parse HEAD
+Command: git push origin main
+Command: git rev-parse HEAD; git rev-parse origin/main; git ls-remote origin refs/heads/main
+Result: local HEAD == origin/main == live remote main after push, and
+that SHA is a direct child of 5d91ca1e88b8aff2f285ee33c86d9406ba2ab32c
+(exact SHAs recorded in the final report returned to the requester,
+which this transcript's companion validation run also captures).
+
+Command: python3 scripts/validate_packet.py / negative_fixtures.py /
+authority_graph_fixtures.py / agc1_narrow_diff_fixtures.py /
+dr1_r1_fixtures.py (rerun from the clean, pushed tree)
+Result: 80/80, 20/20, 8/8, 12/12, 10/10 -- all pass.
+
+Command: git status --short
+Result: empty (clean tree) after commit and push.
+
+=== 11. What this remediation explicitly does NOT do ===
+
+Does not reopen, reinterpret, or change the SMR1-VC-0001 = SET TO NOT
+VERIFIED decision, its decision date, or its evidence identifier. Does
+not change any protected/normative file. Does not resolve SMR1-KL-0001.
+Does not restore VAL-003 or VAL-006. Does not authorize implementation.
+Does not begin KBDL-011-SMR2 or any other issue review. Does not apply
+the validation classification to effective metadata. Rollback:
+`git revert <KBDL-011-SMR1-BA-OD1-DR1-R1-commit-sha>` reverts only this
+remediation's prose/validator/fixture/evidence corrections, without
+removing the original SMR1-VC-0001 owner decision and without affecting
+AGC1 or VF1.
