@@ -43,11 +43,35 @@ As of KBDL-011-SMR1-BH-R1, three of those 421 rows (Batch H:
 `SMR1-MOTEDGE-0001`, `SMR1-MOTEDGE-0002`, `SMR1-MOTCYCLE-0001`) carry a
 recorded owner decision, backed by the durable record
 `batch-h-owner-decision-record.md`. `scripts/decision_state.py` (invoked
-by `scripts/validate_packet.py`, checks 7/7b/7c/7d/8/25–31) asserts
-programmatically that: every non-`PENDING` cell exactly matches a durable
-owner-decision record (issue ID, choice, date, evidence reference,
-resolution status); every other cell remains literally `PENDING`; every
-`project-owner-review.md` checkbox selection is backed by, and exactly
-matches, that same durable record; no durable record is duplicated,
-references an unknown issue ID, or claims implementation authorization;
-and it fails closed if any of these conditions is violated.
+by `scripts/validate_packet.py`, checks 7/7b/7c/7d/8/D1–D3/D6–D7/D9–D12)
+asserts programmatically that: every non-`PENDING` cell exactly matches a
+durable owner-decision record (issue ID, choice, date, evidence
+reference, resolution status); every other cell remains literally
+`PENDING`; every `project-owner-review.md` checkbox selection is backed
+by, and exactly matches, that same durable record; no durable record is
+duplicated, references an unknown issue ID, or claims implementation
+authorization; and it fails closed if any of these conditions is
+violated.
+
+`KBDL-011-SMR1-BH-R1` durably recorded the three Batch H decisions but
+left `source-model-resolution-packet.md` and `project-owner-review.md`'s
+own descriptive prose (opening statement, contents-table cells, and
+sign-off table) describing the pre-BH-R1, zero-decision state.
+`KBDL-011-SMR1-BH-R2` is the narrow follow-up that corrects that stale
+prose, completes the sign-off summary, and extends
+`scripts/decision_state.py` with five new checks (PS1–PS5) that verify
+the packet's own state description is not stale or contradictory: when
+durable decisions exist, neither document may claim zero decisions are
+recorded or every checkbox unselected; the stated recorded/pending
+counts must match the computed counts; the historical (`662ee28`) and
+current states must remain distinguished; the review-cycle sign-off
+summary must match the durable record; and no document may introduce
+implementation-authorization language. `scripts/negative_fixtures.py` now
+proves 8/8 deterministic negative fixtures fail validation as expected —
+the original six (BH-R1) plus two new stale-prose regressions
+(`stale_packet_overview`, `stale_review_summary`) added by BH-R2 — all
+operating on temporary copies only, with the real packet files verified
+byte-unchanged after every fixture run. `batch-h-r2-validation-
+transcript.txt` durably captures the BH-R2 command/output evidence
+(positive validator run, all 8 negative fixtures, protected-field audit,
+checksum verification, commit, and push).

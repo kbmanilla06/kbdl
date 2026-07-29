@@ -2,10 +2,25 @@
 
 Prompt ID: KBDL-011-SMR1. Original prompt context: KBDL-011-R16 / KBDL-011-R16A.
 
-This packet prepares project-owner decisions. It does not make, record, or
-implement any decision. It preselects no choice. It changes no protected
-project field. The project remains exactly as blocked after this packet as
-before it.
+This packet was originally prepared, at commit `662ee28`, to present
+project-owner decisions for review without making, recording, or
+implementing any of them, and without preselecting any choice: at that
+commit every one of its 421 owner-decision fields was literally `PENDING`
+and every `project-owner-review.md` checkbox was unselected — **PREPARED
+— NO OWNER DECISIONS RECORDED**.
+
+As of KBDL-011-SMR1-BH-R1 (durably recorded 2026-07-29, corrected and
+republished as KBDL-011-SMR1-BH-R2), the project owner has reviewed and
+recorded exactly three of those 421 decisions (Batch H:
+`SMR1-MOTEDGE-0001`, `SMR1-MOTEDGE-0002`, `SMR1-MOTCYCLE-0001`); the other
+418 remain literally `PENDING`. The packet's current state is **OWNER
+REVIEW IN PROGRESS — 3 DURABLY RECORDED BATCH H DECISIONS; 418 OTHER
+ISSUES PENDING** (see §7 for the full state model). This is a
+packet-review state only. Neither the original prepared state nor the
+current owner-review state makes, implements, or self-executes any
+decision; neither changes any protected project field; and the project
+remains exactly as blocked, for implementation purposes, as it was before
+this packet existed.
 
 ## 1. Why this packet exists
 
@@ -35,19 +50,20 @@ implementation authorization.
 
 | File | Purpose |
 | --- | --- |
-| `issue-register.csv` | One canonical row per distinct unresolved decision (421 rows). Every owner-decision field is literally `PENDING`. |
+| `issue-register.csv` | One canonical row per distinct unresolved decision (421 rows). At commit `662ee28`, every owner-decision field was literally `PENDING`. As of KBDL-011-SMR1-BH-R1, 3 rows (Batch H) carry a durably recorded Owner decision / Owner decision date / Owner evidence, each backed by `batch-h-owner-decision-record.md`; the other 418 rows remain literally `PENDING`. |
 | `source-model-resolution-ledger.csv` | The reconciliation arithmetic: raw findings, canonical issues, overlaps, cross-category dependencies, all computed from the R16 artifacts, not invented. |
-| `project-owner-review.md` | The reviewable decision form, grouped by category, with every checkbox/decision cell unselected. |
+| `project-owner-review.md` | The reviewable decision form, grouped by category. At commit `662ee28`, every checkbox/decision cell was unselected. As of KBDL-011-SMR1-BH-R1, the three Batch H checkboxes are selected to exactly match the durable record; every other checkbox, across all other batches, remains unselected. |
 | `impact-assessment.md` | Change-impact analysis per decision group (requirements, modules, validation, traceability, documentation, regression risk, rollback complexity). |
 | `implementation-unlock-map.md` | What each decision could unlock later — never phrased as current authorization. |
 | `evidence-manifest.md`, `evidence-inventory.csv`, `checksums.sha256` | Evidence integrity records for this packet, mirroring the R16A conventions. |
 | `implementation-report.md` | The required summary block with computed reconciliation numbers. |
 | `precommit-transcript.txt`, `initial-repository-state.txt` | Exact commands, outputs, and interpretations for repository-safety validation. |
+| `batch-h-r2-validation-transcript.txt` | (Added by KBDL-011-SMR1-BH-R2.) Durable command/output transcript for the BH-R2 packet-state correction and republication, including current positive/negative validation runs and post-push SHA equality. |
 | `scripts/reconciliation_compute.py` | Reproduces the raw-findings/category computation directly from the R16 CSVs. |
 | `scripts/generate_issue_register.py` | Reproduces `issue-register.csv` directly from the R16 CSVs (no hand-entered rows). |
 | `scripts/validate_packet.py` | Programmatic check of the 24 required validation points, plus (as of KBDL-011-SMR1-BH-R1) state-aware owner-decision checks. |
-| `scripts/decision_state.py` | (Added by KBDL-011-SMR1-BH-R1.) Loads durable `*-owner-decision-record.md` files and cross-checks them against `issue-register.csv` and `project-owner-review.md`. |
-| `scripts/negative_fixtures.py` | (Added by KBDL-011-SMR1-BH-R1.) Deterministic negative-validation fixtures proving `decision_state.py` fails closed on unbacked/mismatched/duplicate/unknown/implementation-authorizing decisions; operates on temporary copies only. |
+| `scripts/decision_state.py` | (Added by KBDL-011-SMR1-BH-R1; extended by KBDL-011-SMR1-BH-R2.) Loads durable `*-owner-decision-record.md` files, cross-checks them against `issue-register.csv` and `project-owner-review.md`, and (as of BH-R2) verifies the packet's own state-description prose and review-cycle summary are not stale or contradictory. |
+| `scripts/negative_fixtures.py` | (Added by KBDL-011-SMR1-BH-R1; extended by KBDL-011-SMR1-BH-R2.) Deterministic negative-validation fixtures proving `decision_state.py` fails closed on unbacked/mismatched/duplicate/unknown/implementation-authorizing decisions and stale packet-state prose; operates on temporary copies only. |
 | `batch-h-owner-decision-record.md` | (Added by KBDL-011-SMR1-BH-R1.) Durable current-owner evidence for the three Batch H decisions. |
 
 ## 3. Source-of-truth hierarchy applied
@@ -116,7 +132,12 @@ Implementation conformance: NOT VERIFIED
 Project completion: PENDING
 ```
 
-## 7. Packet review-state model (added by KBDL-011-SMR1-BH-R1)
+## 7. Packet review-state model (added by KBDL-011-SMR1-BH-R1; kept
+consistent by KBDL-011-SMR1-BH-R2)
+
+Stated without contradiction: **at commit `662ee28`: PREPARED — NO OWNER
+DECISIONS RECORDED. At the current commit: OWNER REVIEW IN PROGRESS — 3
+DURABLY RECORDED BATCH H DECISIONS; 418 OTHER ISSUES PENDING.**
 
 This packet's `scripts/validate_packet.py` / `scripts/decision_state.py`
 recognize exactly three packet states:

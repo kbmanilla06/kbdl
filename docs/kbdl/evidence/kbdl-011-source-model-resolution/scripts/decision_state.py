@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """KBDL-011-SMR1 decision-aware packet-state module (added by
-KBDL-011-SMR1-BH-R1).
+KBDL-011-SMR1-BH-R1; extended by KBDL-011-SMR1-BH-R2).
 
 Narrowly extends the SMR1 packet validator to distinguish three packet
 review states:
@@ -16,6 +16,15 @@ module is imported by `validate_packet.py` (for the real packet) and by
 `negative_fixtures.py` (for temporary, deliberately-mutated copies used
 only to prove validation fails correctly). Neither this module nor
 `negative_fixtures.py` ever writes to the real repository.
+
+As of KBDL-011-SMR1-BH-R2, `compute()` also runs `check_state_prose()`,
+which verifies that `source-model-resolution-packet.md` and
+`project-owner-review.md` describe the *current* packet state without
+contradiction: when durable decisions exist, neither document may claim
+zero decisions are recorded or that every checkbox is unselected; the
+recorded/pending counts stated in prose must match the computed counts;
+the review-cycle sign-off summary must match the durable record; and no
+document may introduce implementation authorization language.
 """
 import csv
 import glob
@@ -85,6 +94,121 @@ def parse_review_form_selections(review_text):
         for iid in ids_in_para:
             form_selections.setdefault(iid, []).extend(selected_labels)
     return form_selections, orphan_selected
+
+
+STALE_ZERO_DECISION_PATTERNS = [
+    re.compile(r"Every owner-decision field is literally `PENDING`\s*\.\s*(?!\s*As of)", re.IGNORECASE),
+    re.compile(r"every checkbox/decision cell unselected(?!\.\s*As of)", re.IGNORECASE),
+    re.compile(r"^\s*It records no decision\. Every\s*\n?\s*decision cell below is unselected\.", re.IGNORECASE | re.MULTILINE),
+]
+
+SIGNOFF_FIELD_RE = re.compile(r"\|\s*([^|]+?)\s*\|\s*([^|]+?)\s*\|")
+
+
+def _parse_signoff_table(review_text):
+    """Return dict of sign-off field name -> value from the 'Sign-off'
+    section table in project-owner-review.md (or {} if not found)."""
+    m = re.search(r"## Sign-off.*?\n\n(\|.*?\n(?:\|.*?\n)+)", review_text, re.DOTALL)
+    if not m:
+        return {}
+    table = m.group(1)
+    fields = {}
+    for line in table.splitlines():
+        row = SIGNOFF_FIELD_RE.match(line.strip())
+        if not row:
+            continue
+        key, val = row.group(1).strip(), row.group(2).strip()
+        if key in ("Field", "---"):
+            continue
+        fields[key] = val
+    return fields
+
+
+def check_state_prose(pkt, recorded_count, pending_count, approved):
+    """Verify the packet's own state-description prose is not stale or
+    contradictory relative to the computed decision state (BH-R2).
+
+    Returns a list of (name, ok, detail) tuples in the same shape as the
+    other checks in this module.
+    """
+    checks = []
+
+    packet_path = os.path.join(pkt, "source-model-resolution-packet.md")
+    packet_text = open(packet_path, encoding="utf-8").read() if os.path.exists(packet_path) else ""
+    review_path = os.path.join(pkt, "project-owner-review.md")
+    review_text = open(review_path, encoding="utf-8").read() if os.path.exists(review_path) else ""
+
+    has_decisions = recorded_count > 0
+
+    # PS1: when durable decisions exist, neither document may contain an
+    # unqualified "zero decisions recorded" / "every checkbox unselected"
+    # claim about the packet's *current* state.
+    stale_hits = []
+    if has_decisions:
+        for label, text in (("source-model-resolution-packet.md", packet_text),
+                             ("project-owner-review.md", review_text)):
+            for pat in STALE_ZERO_DECISION_PATTERNS:
+                if pat.search(text):
+                    stale_hits.append((label, pat.pattern))
+    checks.append(("PS1. when durable decisions exist, the packet introduction/contents-table "
+                    "does not claim zero decisions are recorded",
+                    len(stale_hits) == 0, f"stale_hits={stale_hits}"))
+
+    # PS2: recorded/pending counts stated in the packet's prose match the
+    # computed decision-state counts (only meaningful once decisions exist;
+    # trivially true at the zero-decision state).
+    counts_ok = True
+    counts_detail = ""
+    if has_decisions:
+        expected_pair_present = (
+            str(recorded_count) in packet_text and str(pending_count) in packet_text
+        )
+        if not expected_pair_present:
+            counts_ok = False
+            counts_detail = (f"expected recorded_count={recorded_count} and "
+                              f"pending_count={pending_count} both stated in "
+                              f"source-model-resolution-packet.md")
+    checks.append(("PS2. packet-state prose recorded/pending counts match the computed "
+                    "decision-state counts", counts_ok, counts_detail))
+
+    # PS3: the historical (662ee28) prepared state remains distinguished
+    # from the current state -- both documents must still name 662ee28
+    # as the zero-decision state.
+    hist_ok = ("662ee28" in packet_text) and (
+        "PENDING" in packet_text or "PREPARED" in packet_text.upper())
+    checks.append(("PS3. historical zero-decision state (commit 662ee28) remains "
+                    "distinguished from the current state", hist_ok,
+                    "662ee28 reference missing or unqualified" if not hist_ok else ""))
+
+    # PS4/PS5: the review-cycle sign-off summary matches the durable record.
+    signoff = _parse_signoff_table(review_text)
+    signoff_mismatches = []
+    if has_decisions:
+        expected = {
+            "Decisions recorded in this review cycle": str(recorded_count),
+        }
+        for key, want in expected.items():
+            got = signoff.get(key, "")
+            if got != want:
+                signoff_mismatches.append((key, "want=" + want, "got=" + got))
+        # The summary must not still say PENDING for a field that has a
+        # recorded, non-zero value.
+        if signoff.get("Decisions recorded in this review cycle", "").strip().upper() == "PENDING":
+            signoff_mismatches.append(("Decisions recorded in this review cycle",
+                                        "still PENDING", "durable decisions exist"))
+    checks.append(("PS4. review-cycle sign-off summary matches the durable record",
+                    len(signoff_mismatches) == 0, f"mismatches={signoff_mismatches}"))
+
+    # PS5: no document may introduce implementation authorization language
+    # in the sign-off/state-summary areas.
+    auth_bad = []
+    signoff_auth = signoff.get("Implementation authorization", "")
+    if signoff_auth and signoff_auth.strip().upper() not in ("NOT AUTHORIZED", ""):
+        auth_bad.append(("project-owner-review.md sign-off", signoff_auth))
+    checks.append(("PS5. no implementation authorization is introduced by the "
+                    "review-cycle summary", len(auth_bad) == 0, f"bad={auth_bad}"))
+
+    return checks
 
 
 def compute(pkt):
@@ -230,6 +354,9 @@ def compute(pkt):
             ledger_detail = "no 'Durably recorded owner decisions' row present in ledger"
     checks.append(("D12. source-model-resolution-ledger.csv durable owner-decision count matches "
                     "the actual durable-record count", ledger_ok, ledger_detail))
+
+    # BH-R2: packet-state prose consistency checks.
+    checks.extend(check_state_prose(pkt, recorded_count, pending_count, approved))
 
     stats = {
         "recorded_count": recorded_count,

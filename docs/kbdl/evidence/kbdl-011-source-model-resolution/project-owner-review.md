@@ -1,12 +1,17 @@
 # Project-Owner Review Form — KBDL-011-SMR1
 
-This is a non-normative review form. It records no decision. Every
-decision cell below is unselected. Blanket or bulk approval across any
-category is unsafe and is not supported by this form's structure — each
-row must be reviewed and decided individually, because categories overlap
-(see `source-model-resolution-ledger.csv`) and a single requirement may
-depend on more than one category's outcome (91 requirements do; see
-`impact-assessment.md`).
+This is a non-normative review form. At commit `662ee28` it recorded no
+decision and every decision cell below was unselected. As of
+KBDL-011-SMR1-BH-R1, three checkboxes are selected — Batch H:
+`SMR1-MOTEDGE-0001`, `SMR1-MOTEDGE-0002`, `SMR1-MOTCYCLE-0001` — each
+backed by an exactly matching durable owner-decision record
+(`batch-h-owner-decision-record.md`); every other decision cell, across
+all other batches, remains unselected. Blanket or bulk approval across
+any category is unsafe and is not supported by this form's structure —
+each row must be reviewed and decided individually, because categories
+overlap (see `source-model-resolution-ledger.csv`) and a single
+requirement may depend on more than one category's outcome (91
+requirements do; see `impact-assessment.md`).
 
 Each decision the owner accepts here still requires a **separate, later
 recording and validation prompt** before it has any normative effect.
@@ -240,16 +245,21 @@ remain literally `PENDING`.
 
 ---
 
-## Sign-off (not completed by this packet)
+## Sign-off (recorded for Batch H only; all other batches remain open)
 
 | Field | Value |
 | --- | --- |
-| Decisions recorded in this review cycle | PENDING |
-| Reviewer | PENDING |
-| Review date | PENDING |
-| Batches approved this cycle | PENDING |
-| Follow-on recording prompt(s) requested | PENDING |
+| Decisions recorded in this review cycle | 3 |
+| Reviewer | Project owner |
+| Review date | 2026-07-29 |
+| Batch with decisions recorded | Batch H |
+| Implementation authorization | NOT AUTHORIZED |
+| Planning-agent validation | PENDING for BH-R2 until this prompt passes |
+| Other batches this cycle | None recorded — all other 418 issues remain `PENDING` |
+| Follow-on recording prompt(s) requested | Not yet requested (a separate authority-graph correction prompt for KBDL-MOT-007/MOT-008 would be required before the Batch H cycle-level choice takes effect) |
 
-This form's completion does not itself change any protected field, VAL
-status, candidate status, implementation conformance, or completion
+Recording 3 decisions in this review cycle is not, and does not imply,
+implementation approval: it is a durably recorded review-cycle choice
+only. This form's completion does not itself change any protected field,
+VAL status, candidate status, implementation conformance, or completion
 status.

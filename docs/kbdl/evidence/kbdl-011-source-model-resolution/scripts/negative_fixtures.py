@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
-"""KBDL-011-SMR1-BH-R1 negative validation fixtures.
+"""KBDL-011-SMR1-BH-R1/BH-R2 negative validation fixtures.
 
 Deterministically proves that decision_state.compute() fails closed for
-six categories of defect. Every fixture operates on a temporary copy of
-the packet directory (made with shutil.copytree into a tempfile.mkdtemp()
+eight categories of defect (six from BH-R1, plus two BH-R2 stale-prose
+regression fixtures). Every fixture operates on a temporary copy of the
+packet directory (made with shutil.copytree into a tempfile.mkdtemp()
 directory) and mutates only that copy -- the real repository is never
 written to. After every fixture, this script re-reads the real packet
 files' mtimes/hashes to confirm they are unchanged, and deletes the
@@ -11,7 +12,7 @@ temporary directory.
 
 Exit code: 0 if every fixture fails validation as expected (i.e. this
 script's own "did validation correctly reject this?" meta-check passes
-for all six fixtures); 1 if any fixture unexpectedly *passes* validation
+for all fixtures); 1 if any fixture unexpectedly *passes* validation
 (a validator weakness) or errors.
 """
 import csv
@@ -143,6 +144,39 @@ def fixture_implementation_authorizing_record(tmp_pkt):
     open(path, "w", encoding="utf-8").write(text)
 
 
+def fixture_stale_packet_overview(tmp_pkt):
+    # Mutation 7 (BH-R2): reintroduce the stale, pre-BH-R2 claim that the
+    # packet's issue-register.csv has every owner-decision field PENDING,
+    # even though durable Batch H decisions exist in this copy.
+    path = os.path.join(tmp_pkt, "source-model-resolution-packet.md")
+    text = open(path, encoding="utf-8").read()
+    text = text.replace(
+        "At commit `662ee28`, every owner-decision field was literally "
+        "`PENDING`. As of KBDL-011-SMR1-BH-R1, 3 rows (Batch H) carry a "
+        "durably recorded Owner decision / Owner decision date / Owner "
+        "evidence, each backed by `batch-h-owner-decision-record.md`; the "
+        "other 418 rows remain literally `PENDING`.",
+        "Every owner-decision field is literally `PENDING`.",
+        1,
+    )
+    open(path, "w", encoding="utf-8").write(text)
+
+
+def fixture_stale_review_summary(tmp_pkt):
+    # Mutation 8 (BH-R2): revert the review-cycle sign-off summary to
+    # PENDING even though the review form's Batch H checkboxes remain
+    # selected in this copy -- proves the summary/selection contradiction
+    # is caught.
+    path = os.path.join(tmp_pkt, "project-owner-review.md")
+    text = open(path, encoding="utf-8").read()
+    text = text.replace(
+        "| Decisions recorded in this review cycle | 3 |",
+        "| Decisions recorded in this review cycle | PENDING |",
+        1,
+    )
+    open(path, "w", encoding="utf-8").write(text)
+
+
 FIXTURES = [
     ("unbacked_unrelated_decision", fixture_unbacked_unrelated_decision,
      {"7. every Owner decision field is literally PENDING or exactly matches its durable owner-decision record's selected choice",
@@ -160,6 +194,10 @@ FIXTURES = [
      {"D3. every durable-record issue ID exists in issue-register.csv (no unknown issue ID)"}),
     ("implementation_authorizing_record", fixture_implementation_authorizing_record,
      {"D2. every durable owner-decision record states 'Implementation authorization status: NOT AUTHORIZED'"}),
+    ("stale_packet_overview", fixture_stale_packet_overview,
+     {"PS1. when durable decisions exist, the packet introduction/contents-table does not claim zero decisions are recorded"}),
+    ("stale_review_summary", fixture_stale_review_summary,
+     {"PS4. review-cycle sign-off summary matches the durable record"}),
 ]
 
 
@@ -169,6 +207,7 @@ def main():
         os.path.join(PKT, "project-owner-review.md"),
         os.path.join(PKT, "batch-h-owner-decision-record.md"),
         os.path.join(PKT, "source-model-resolution-ledger.csv"),
+        os.path.join(PKT, "source-model-resolution-packet.md"),
     ]
     before = _snapshot(real_files)
 

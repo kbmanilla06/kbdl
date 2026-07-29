@@ -74,13 +74,44 @@ decision date / Owner evidence cell, and no other checkbox in
 selected cell or checkbox lacks an exactly matching durable record, or if
 any other cell/checkbox deviates from `PENDING`/unselected.
 
+## KBDL-011-SMR1-BH-R2 correction
+
+`KBDL-011-SMR1-BH-R1` durably recorded the three Batch H decisions but
+left `source-model-resolution-packet.md`'s opening/contents-table
+language and `project-owner-review.md`'s sign-off table describing the
+pre-BH-R1, zero-decision state (commit `662ee28`). BH-R2 is a narrow,
+documentation-only follow-up, published as one child commit of
+`ea86add`, that: (1) corrects both documents so the historical
+(`662ee28`: PREPARED — NO OWNER DECISIONS RECORDED) and current (OWNER
+REVIEW IN PROGRESS — 3 DURABLY RECORDED BATCH H DECISIONS; 418 OTHER
+ISSUES PENDING) states are stated without contradiction; (2) completes
+`project-owner-review.md`'s review-cycle sign-off summary (3 decisions
+recorded / Project owner / 2026-07-29 / Batch H / Implementation
+authorization NOT AUTHORIZED / planning-agent validation PENDING); (3)
+extends `scripts/decision_state.py` with five new state-prose checks
+(PS1–PS5, invoked by `scripts/validate_packet.py`) that fail closed on
+stale zero-decision claims, mismatched recorded/pending counts, a
+missing historical/current distinction, a stale sign-off summary, or an
+introduced implementation-authorization claim; (4) adds two new
+regression fixtures (`stale_packet_overview`, `stale_review_summary`) to
+`scripts/negative_fixtures.py`, bringing the total to 8/8 deterministic
+negative fixtures, all still operating on temporary copies only; (5)
+adds `batch-h-r2-validation-transcript.txt`, a durable command/output
+transcript for this correction and its publication; and (6) regenerates
+`checksums.sha256` and `evidence-inventory.csv`. BH-R2 selects no new
+owner decision, changes no protected file, and authorizes no
+implementation action; the exact three Batch H decisions and the other
+418 PENDING issues are unchanged.
+
+Stale packet-state statements after BH-R2: 0. Review-summary mismatches
+after BH-R2: 0.
+
 ## Recommended next action
 
-Planning-agent validation of the corrected Batch H owner-decision-
-recording commit (KBDL-011-SMR1-BH-R1). This is the only recommended next
-action; beginning source-model implementation, VAL-004 execution, or any
-readiness/completion approval is explicitly out of scope for this
-prompt.
+Planning-agent validation of BH-R2. This is the only recommended next
+action; beginning source-model implementation (the MOT-007/MOT-008
+authority-graph correction), VAL-004 execution, or any readiness/
+completion approval is explicitly out of scope for this prompt.
 
 ## Rollback
 

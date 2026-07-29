@@ -1,0 +1,309 @@
+KBDL-011-SMR1-BH-R2 command transcript
+Reconcile Batch H packet-state documentation and preserve complete
+validation evidence.
+
+=== 0. BH-R1 historical output availability ===
+
+This transcript documents BH-R2's own execution. BH-R1
+(KBDL-011-SMR1-BH-R1, published as commit ea86adda7a94936653d360eeefdea
+3f024230754) did not commit a dedicated command transcript of its own
+positive/negative validation runs, amendment evidence, or push output;
+that omission is exactly Defect 3 that this prompt (BH-R2) corrects.
+Any BH-R1-era command output that is not otherwise already durably
+recorded in the repository (e.g. in precommit-transcript.txt, which
+predates BH-R1 and covers only the original KBDL-011-SMR1 packet
+preparation) is labeled below as:
+
+  NOT DURABLY CAPTURED DURING BH-R1
+
+Fresh, equivalent validation against the current, BH-R2-corrected state
+is captured in full in the sections below.
+
+=== 1. Preconditions / initial repository state (captured at BH-R2 start) ===
+
+Command: git fetch origin
+Purpose: confirm no new remote commits before editing.
+Exit: 0. Stdout/stderr: empty (already up to date).
+
+Command: git remote -v
+Purpose: confirm fetch/push both point at the authorized remote.
+Exit: 0. Stdout: origin https://github.com/kbmanilla06/kbdl.git (fetch), origin https://github.com/kbmanilla06/kbdl.git (push).
+
+Command: git branch --show-current
+Purpose: confirm working branch.
+Exit: 0. Stdout: main.
+
+Command: git status --short
+Purpose: confirm a clean working tree before this prompt's files were edited.
+Exit: 0. Stdout: empty.
+
+Command: git rev-parse HEAD
+Purpose: capture local HEAD SHA.
+Exit: 0. Stdout: ea86adda7a94936653d360eeefdea3f024230754.
+
+Command: git rev-parse origin/main
+Purpose: capture tracking-branch SHA.
+Exit: 0. Stdout: ea86adda7a94936653d360eeefdea3f024230754.
+
+Command: git ls-remote origin refs/heads/main
+Purpose: capture live remote SHA (independent of local tracking refs).
+Exit: 0. Stdout: ea86adda7a94936653d360eeefdea3f024230754	refs/heads/main.
+
+Interpretation: local HEAD, origin/main, and the live remote main all
+equal ea86adda7a94936653d360eeefdea3f024230754 (parent
+662ee2889d958bb078c90debca82c834a206f15f); tree clean; safe to proceed
+per this prompt's Preconditions section.
+
+Command: git log --oneline --decorate -10
+Purpose: confirm no later collaborator commit exists beyond the required
+baseline.
+Exit: 0. Stdout (most recent first):
+  ea86add (HEAD -> main, origin/main, origin/HEAD) docs(kbdl): record and validate SMR1 Batch H owner decisions
+  662ee28 docs(kbdl): prepare non-normative R16 source-model resolution packet (KBDL-011-SMR1)
+  c592127 Preserve blocked source-independent R16 audit
+  873577a docs(kbdl): close R15 semantic validator gaps
+  49ee9f8 docs(kbdl): make R14 validators source sound
+  eed4cfe docs(kbdl): complete R13 field source audit
+  0bc8423 docs(kbdl): correct R12 semantic evidence audit
+  e8e1be0 docs(kbdl): complete R11 semantic validation
+  f6bd0e1 docs(kbdl): record current authority confirmations
+  a6b416e docs(kbdl): prepare authority recovery packet
+Interpretation: ea86add is the tip; no later commit exists; safe to
+create one new child commit.
+
+=== 2. Baseline validation of ea86add (before any BH-R2 edit) ===
+
+Command: python3 docs/kbdl/evidence/kbdl-011-source-model-resolution/scripts/validate_packet.py
+Purpose: confirm the published BH-R1 state still validates cleanly
+before making any BH-R2 correction.
+Exit: 0. Stdout: 37/37 checks passed (checks 1-24 plus D1-D3, D6-D7,
+D9-D12, plus composite sub-checks 7b/7c/7d and 20b).
+
+Command: python3 docs/kbdl/evidence/kbdl-011-source-model-resolution/scripts/negative_fixtures.py
+Purpose: confirm the six BH-R1 negative fixtures still fail closed as
+expected before making any BH-R2 correction.
+Exit: 0. Stdout: 6/6 fixtures correctly rejected; real repository files
+unchanged after all fixtures: True.
+
+=== 3. Defects identified (BH-R2 scope) ===
+
+Defect 1 (stale packet introduction): source-model-resolution-packet.md
+opening paragraph and its §2 contents-table rows for issue-register.csv
+and project-owner-review.md still stated the packet "preselects no
+choice" / "every owner-decision field is literally PENDING" / "every
+checkbox/decision cell unselected" as the packet's current state, even
+though three Batch H decisions were durably recorded by BH-R1.
+
+Defect 2 (stale review sign-off): project-owner-review.md's opening
+paragraph still stated "It records no decision. Every decision cell
+below is unselected," and its Sign-off table still held every
+review-cycle field at the literal string PENDING, despite three selected
+Batch H checkboxes and a durable owner-decision record existing in the
+same file.
+
+Defect 3 (missing durable BH-R1/R2 execution evidence): no committed
+transcript preserved positive/negative validator output, protected-field
+audit, checksum verification, commit, or push evidence for BH-R1. This
+file is the BH-R2 remedy.
+
+=== 4. Corrections made (BH-R2) ===
+
+- source-model-resolution-packet.md: rewrote the opening paragraph to
+  state, without contradiction, "At commit 662ee28: PREPARED — NO OWNER
+  DECISIONS RECORDED. At the current commit: OWNER REVIEW IN PROGRESS —
+  3 DURABLY RECORDED BATCH H DECISIONS; 418 OTHER ISSUES PENDING."
+  (also restated verbatim in the new §7 preamble); corrected the §2
+  contents-table rows for issue-register.csv and project-owner-review.md
+  to name the 3-recorded/418-pending split instead of claiming all
+  fields PENDING / all checkboxes unselected; added a contents-table row
+  for this transcript file.
+- project-owner-review.md: rewrote the opening paragraph to name the
+  three selected Batch H checkboxes and their durable-record backing
+  instead of claiming every decision cell is unselected; replaced the
+  all-PENDING Sign-off table with: Decisions recorded in this review
+  cycle = 3; Reviewer = Project owner; Review date = 2026-07-29; Batch
+  with decisions recorded = Batch H; Implementation authorization = NOT
+  AUTHORIZED; Planning-agent validation = PENDING for BH-R2 until this
+  prompt passes; plus an explicit "does not imply implementation
+  approval" sentence.
+- scripts/decision_state.py: added check_state_prose() implementing five
+  new checks (PS1-PS5), wired into compute() so validate_packet.py runs
+  them automatically: PS1 (no stale zero-decision claim once durable
+  decisions exist), PS2 (recorded/pending counts stated in prose match
+  computed counts), PS3 (662ee28 historical state remains named and
+  distinguished), PS4 (review-cycle sign-off summary matches the durable
+  record), PS5 (no implementation-authorization language introduced by
+  the sign-off summary).
+- scripts/negative_fixtures.py: added two regression fixtures,
+  stale_packet_overview (reverts the packet's contents-table description
+  to the old unqualified all-PENDING claim while durable decisions still
+  exist in the copy -- must trigger PS1) and stale_review_summary
+  (reverts the sign-off table's "Decisions recorded" field to PENDING
+  while checkboxes remain selected -- must trigger PS4); added
+  source-model-resolution-packet.md to the real-file unchanged-snapshot
+  list for extra safety.
+- implementation-report.md: added a "KBDL-011-SMR1-BH-R2 correction"
+  section describing the defects and corrections, and restated the
+  recommended next action as "Planning-agent validation of BH-R2."
+- evidence-manifest.md: documented the new PS1-PS5 checks, the 8/8
+  negative-fixture count, and this transcript file.
+- No change to issue-register.csv, source-model-resolution-ledger.csv,
+  batch-h-owner-decision-record.md, or any protected file. The exact
+  three Batch H decisions and the other 418 PENDING issues are
+  unchanged. No implementation authorization is introduced anywhere.
+
+=== 5. Positive packet-validator output (after corrections, checksums
+regenerated for this commit) ===
+
+Command: python3 docs/kbdl/evidence/kbdl-011-source-model-resolution/scripts/validate_packet.py
+Purpose: confirm every prior check still passes and the five new PS1-PS5
+checks pass against the corrected packet.
+Exit: 0.
+Stdout (42/42 checks passed): every check 1-24 (with composite 7b/7c/7d
+and 20b), D1-D3/D6-D7/D9-D12, and PS1-PS5 printed [PASS], including:
+  [PASS] PS1. when durable decisions exist, the packet introduction/contents-table does not claim zero decisions are recorded
+  [PASS] PS2. packet-state prose recorded/pending counts match the computed decision-state counts
+  [PASS] PS3. historical zero-decision state (commit 662ee28) remains distinguished from the current state
+  [PASS] PS4. review-cycle sign-off summary matches the durable record
+  [PASS] PS5. no implementation authorization is introduced by the review-cycle summary
+42/42 checks passed.
+Interpretation: no unmapped findings, no duplicate canonical issues, no
+protected-field change, no forbidden implementation-status token, all
+CSV/Markdown structure consistent, checksums verified, no unrelated
+working-tree change, and the packet's own state-description prose is
+internally consistent with the computed decision state.
+
+=== 6. Negative-fixture output (after corrections) ===
+
+Command: python3 docs/kbdl/evidence/kbdl-011-source-model-resolution/scripts/negative_fixtures.py
+Purpose: confirm all six BH-R1 fixtures and the two new BH-R2
+stale-prose regression fixtures fail validation as expected, and that no
+real repository file is modified by any fixture.
+Exit: 0.
+Stdout (8/8 fixtures correctly rejected):
+  [REJECTED (as expected)] fixture=unbacked_unrelated_decision
+  [REJECTED (as expected)] fixture=choice_mismatch
+  [REJECTED (as expected)] fixture=review_form_mismatch
+  [REJECTED (as expected)] fixture=duplicate_durable_decision
+  [REJECTED (as expected)] fixture=unknown_issue_id
+  [REJECTED (as expected)] fixture=implementation_authorizing_record
+  [REJECTED (as expected)] fixture=stale_packet_overview
+      triggered_as_expected: ['PS1. when durable decisions exist, the packet introduction/contents-table does not claim zero decisions are recorded']
+  [REJECTED (as expected)] fixture=stale_review_summary
+      triggered_as_expected: ['PS4. review-cycle sign-off summary matches the durable record']
+Real repository files unchanged after all fixtures: True.
+All 8 fixtures correctly rejected: True.
+
+=== 7. Documentation / CSV / line-ending checks ===
+
+Command: git diff --check
+Purpose: whitespace/line-ending integrity across every changed file.
+Exit: 0. Stdout/stderr: empty.
+
+Command: file docs/kbdl/evidence/kbdl-011-source-model-resolution/*.csv
+Purpose: confirm CSV files remain plain text (no encoding corruption
+introduced).
+Exit: 0. Stdout: all three packet-root CSVs report "CSV text".
+
+Validator check 18 (internal markdown links resolve) and check 19 (CSV
+headers/row widths consistent) both reported PASS in section 5 above.
+
+=== 8. Protected-field diff audit ===
+
+Command: git diff --stat HEAD -- docs/kbdl/validation.md docs/kbdl/decision-register.md docs/kbdl/traceability-matrix.md docs/kbdl/traceability-metadata.csv docs/kbdl/motion/README.md docs/kbdl/motion/timing-easing.md
+Purpose: confirm every protected file remains byte-identical to HEAD.
+Exit: 0. Stdout: empty (no changes).
+
+Command: git diff --name-status HEAD
+Purpose: enumerate every changed file for this commit.
+Exit: 0. Stdout (before the final `git add`):
+  M	docs/kbdl/evidence/kbdl-011-source-model-resolution/evidence-manifest.md
+  M	docs/kbdl/evidence/kbdl-011-source-model-resolution/implementation-report.md
+  M	docs/kbdl/evidence/kbdl-011-source-model-resolution/project-owner-review.md
+  M	docs/kbdl/evidence/kbdl-011-source-model-resolution/scripts/decision_state.py
+  M	docs/kbdl/evidence/kbdl-011-source-model-resolution/scripts/negative_fixtures.py
+  M	docs/kbdl/evidence/kbdl-011-source-model-resolution/source-model-resolution-packet.md
+  (plus, once added: this transcript file, and regenerated
+  checksums.sha256 / evidence-inventory.csv)
+Interpretation: every changed/added path is under
+docs/kbdl/evidence/kbdl-011-source-model-resolution/; zero protected
+paths appear.
+
+=== 9. Checksum / evidence-integrity verification ===
+
+checksums.sha256 and evidence-inventory.csv were regenerated after every
+content edit above (including this transcript file) to include: their
+new/updated byte counts and SHA-256 digests. Per the packet's
+established non-recursive convention, checksums.sha256 does not include
+an entry for itself or for evidence-inventory.csv, and
+evidence-inventory.csv does not include a row for itself or for
+checksums.sha256. Validator check 21 ("checksums verify against on-disk
+files") reported PASS in section 5 above against the fully regenerated
+checksums.sha256.
+
+=== 10. Precommit diff / file list ===
+
+Command: git status --short (immediately before `git add`)
+Purpose: final enumeration of every path this commit will include.
+Exit: 0. Stdout: modifications to evidence-manifest.md,
+implementation-report.md, project-owner-review.md,
+scripts/decision_state.py, scripts/negative_fixtures.py,
+source-model-resolution-packet.md, checksums.sha256,
+evidence-inventory.csv, plus one new untracked file,
+batch-h-r2-validation-transcript.txt. No other path in the repository is
+touched.
+
+=== 11. Commit ===
+
+Command: git add docs/kbdl/evidence/kbdl-011-source-model-resolution
+Command: git commit -m "docs(kbdl): reconcile Batch H packet state and validation evidence" (with Co-Authored-By trailer)
+Purpose: create exactly one new child commit of
+ea86adda7a94936653d360eeefdea3f024230754.
+Expected output form: "[main <7-hex>] docs(kbdl): reconcile Batch H
+packet state and validation evidence" plus a file-change summary.
+
+Note on the resulting commit SHA: the full 40-character SHA of this
+commit is SELF-REFERENTIAL — it cannot be embedded inside this file's
+own content without invalidating the very hash it would report (this
+file is part of the tree that SHA covers). It is therefore not stated
+inline here. It is durably recorded in git history itself
+(`git log --oneline -1` on `main`, or `git show <this-file-path>` at any
+later commit) and is reported in full in this task's (KBDL-011-SMR1-
+BH-R2) Required Final Report, "Commit and Branch" section.
+
+=== 12. Push ===
+
+Command: git merge-base --is-ancestor origin/main HEAD
+Purpose: confirm the new commit is a fast-forward descendant of
+origin/main before pushing.
+Expected: exit 0 (true).
+
+Command: git push origin main
+Purpose: publish the new commit as a normal fast-forward update; no
+force flag used.
+Expected output form: "ea86add..<new-sha>  main -> main".
+(New SHA: see note in §11 -- same self-referential limitation applies to
+the push output line quoting it.)
+
+Command: git fetch origin && git rev-parse HEAD && git rev-parse origin/main && git ls-remote origin refs/heads/main
+Purpose: confirm local HEAD, origin/main, and the live remote main all
+equal the new commit SHA after push.
+Expected: all three values identical to each other and to the new
+commit's SHA.
+
+Command: git status --short
+Purpose: confirm a clean working tree/index after commit and push.
+Expected: empty output.
+
+Command: git diff --check
+Purpose: final whitespace/line-ending integrity check post-push.
+Expected: exit 0, empty output.
+
+=== 13. Scope confirmation ===
+
+This commit selects no new owner decision (the exact three Batch H
+decisions and the other 418 PENDING issues are unchanged); changes no
+protected file; restores no VAL status; executes no VAL-004 method;
+approves no candidate readiness, implementation conformance, or project
+completion; and authorizes no implementation action. The only
+recommended next action is planning-agent validation of BH-R2.
