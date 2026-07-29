@@ -21,6 +21,8 @@ MOT edge decisions: 2
 MOT cycle decisions: 1
 
 Preselected owner decisions: 0
+Durably recorded owner decisions (Batch H, KBDL-011-SMR1-BH-R1): 3
+Other owner decisions remaining PENDING: 418
 Protected-field changes: 0
 VAL-status changes: 0
 Accepted limitations: 0
@@ -55,18 +57,30 @@ re-derivation that happens to differ.
 
 No finding was resolved, suppressed, or converted into a PASS. No
 protected field, VAL status, candidate status, implementation
-conformance, or completion status changed. No checkbox in
-`project-owner-review.md` is selected. No decision cell in
-`issue-register.csv` holds anything other than the literal string
-`PENDING`. VAL-004's eleven clause methods were not executed. No
-implementation package, application code, dependency, schema, CI
-configuration, database, or deployment file was added.
+conformance, or completion status changed. VAL-004's eleven clause
+methods were not executed. No implementation package, application code,
+dependency, schema, CI configuration, database, or deployment file was
+added.
+
+As of KBDL-011-SMR1-BH-R1, exactly 3 of the 421 canonical issues (Batch
+H: `SMR1-MOTEDGE-0001`, `SMR1-MOTEDGE-0002`, `SMR1-MOTCYCLE-0001`) carry a
+durably recorded owner decision — see
+`batch-h-owner-decision-record.md` — and their corresponding checkboxes
+in `project-owner-review.md` are selected to match. The other 418 rows
+still hold the literal string `PENDING` in every Owner decision / Owner
+decision date / Owner evidence cell, and no other checkbox in
+`project-owner-review.md` is selected. `scripts/decision_state.py`
+(invoked by `scripts/validate_packet.py`) fails validation closed if any
+selected cell or checkbox lacks an exactly matching durable record, or if
+any other cell/checkbox deviates from `PENDING`/unselected.
 
 ## Recommended next action
 
-Planning-agent validation of this KBDL-011-SMR1 packet. This is the only
-recommended next action; beginning implementation actions is explicitly
-out of scope for this prompt.
+Planning-agent validation of the corrected Batch H owner-decision-
+recording commit (KBDL-011-SMR1-BH-R1). This is the only recommended next
+action; beginning source-model implementation, VAL-004 execution, or any
+readiness/completion approval is explicitly out of scope for this
+prompt.
 
 ## Rollback
 

@@ -36,6 +36,18 @@ or Validation-classification batches, per the SMR1 specification's
 requirement for a separate, prominent cycle review record.
 
 Every `Owner decision`, `Owner decision date`, and `Owner evidence` cell
-across all 421 rows of `issue-register.csv` is the literal string
-`PENDING`; `scripts/validate_packet.py` asserts this programmatically
-(checks 7, 7b, 7c) and fails closed if any cell deviates.
+across all 421 rows of `issue-register.csv` was the literal string
+`PENDING` as prepared by KBDL-011-SMR1 (commit 662ee28).
+
+As of KBDL-011-SMR1-BH-R1, three of those 421 rows (Batch H:
+`SMR1-MOTEDGE-0001`, `SMR1-MOTEDGE-0002`, `SMR1-MOTCYCLE-0001`) carry a
+recorded owner decision, backed by the durable record
+`batch-h-owner-decision-record.md`. `scripts/decision_state.py` (invoked
+by `scripts/validate_packet.py`, checks 7/7b/7c/7d/8/25–31) asserts
+programmatically that: every non-`PENDING` cell exactly matches a durable
+owner-decision record (issue ID, choice, date, evidence reference,
+resolution status); every other cell remains literally `PENDING`; every
+`project-owner-review.md` checkbox selection is backed by, and exactly
+matches, that same durable record; no durable record is duplicated,
+references an unknown issue ID, or claims implementation authorization;
+and it fails closed if any of these conditions is violated.

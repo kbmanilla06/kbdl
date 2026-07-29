@@ -169,7 +169,10 @@ Status vocabulary:
 
 - Decision required: two independent edge classifications plus one
   cycle-level disposition (3 total, see `project-owner-review.md` Batch
-  H).
+  H). **Recorded, per KBDL-011-SMR1-BH-R1:** all three are now durably
+  recorded — see `batch-h-owner-decision-record.md` — pending
+  planning-agent validation. Recording alone does not advance this batch
+  past `LOCKED`.
 - Later remediation prompt that could be prepared: "KBDL-011-SMR9:
   MOT-007/MOT-008 authority-graph correction," scoped strictly to the
   graph representation, not to the requirements' Approved lifecycle
@@ -194,15 +197,22 @@ Status vocabulary:
   additionally gated by VAL-004.
 - Could affect candidate readiness: **Yes** — VAL-003 cannot verify while
   this cycle is unresolved.
-- Status: `LOCKED — OWNER DECISION REQUIRED`.
+- Status: `LOCKED — PLANNING-AGENT VALIDATION REQUIRED`.
 
 ## Summary
 
 All nine batches (A–H, with H counted as one decision group of three
-issues) are currently `LOCKED`. None is `ELIGIBLE FOR FUTURE PROMPT AFTER
-APPROVAL` because no owner decision has yet been recorded for any of the
-421 canonical issues in `issue-register.csv`. A batch moves to
+issues) are currently `LOCKED`. As of KBDL-011-SMR1-BH-R1, Batch H's three
+issues have a durably recorded, non-deferred owner decision (see
+`batch-h-owner-decision-record.md`), which is why Batch H's status moved
+from `LOCKED — OWNER DECISION REQUIRED` to
+`LOCKED — PLANNING-AGENT VALIDATION REQUIRED`. Batches A–G remain
+`LOCKED — OWNER DECISION REQUIRED` (or, for Batch C/G,
+`LOCKED — ADDITIONAL EVIDENCE REQUIRED`) because no owner decision has yet
+been recorded for any of their 418 combined issues. No batch is
+`ELIGIBLE FOR FUTURE PROMPT AFTER APPROVAL` — recording a decision alone
+never reaches that status; a batch moves to
 `ELIGIBLE FOR FUTURE PROMPT AFTER APPROVAL` only after (a) the owner
-records a non-deferred decision for every issue in that batch and (b) a
-planning agent validates that recording — neither has occurred, and
-neither occurs as a result of this packet.
+records a non-deferred decision for every issue in that batch (done for
+Batch H; not yet done for A–G) and (b) a planning agent validates that
+recording (not yet done for any batch, including Batch H).

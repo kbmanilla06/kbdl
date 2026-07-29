@@ -194,7 +194,7 @@ producing the two-node cycle `KBDL-MOT-007 → KBDL-MOT-008 → KBDL-MOT-007`.
 - [ ] AUTHORITY EDGE
 - [ ] SUPPORTING AUTHORITY
 - [ ] CONTEXT-ONLY
-- [ ] RELATED REQUIREMENT
+- [x] RELATED REQUIREMENT
 - [ ] REMOVE OR REVISE RELATIONSHIP
 - [ ] PROVIDE ORIGINAL EVIDENCE
 - [ ] DEFER DECISION
@@ -203,7 +203,7 @@ producing the two-node cycle `KBDL-MOT-007 → KBDL-MOT-008 → KBDL-MOT-007`.
 - [ ] AUTHORITY EDGE
 - [ ] SUPPORTING AUTHORITY
 - [ ] CONTEXT-ONLY
-- [ ] RELATED REQUIREMENT
+- [x] RELATED REQUIREMENT
 - [ ] REMOVE OR REVISE RELATIONSHIP
 - [ ] PROVIDE ORIGINAL EVIDENCE
 - [ ] DEFER DECISION
@@ -212,14 +212,31 @@ producing the two-node cycle `KBDL-MOT-007 → KBDL-MOT-008 → KBDL-MOT-007`.
 edges above are reviewed):**
 - [ ] Break cycle via MOT-007 edge revision
 - [ ] Break cycle via MOT-008 edge revision
-- [ ] Replace both edges with shared independent authority
+- [x] Replace both edges with shared independent authority
 - [ ] Preserve the cycle and keep VAL-003 Not verified
 - [ ] Provide original governance evidence
 
-No cycle-level resolution is recommended or preselected here. Do not
-select an edge or the cycle disposition in bulk; review both normative
-requirement blocks (`docs/kbdl/motion/README.md` lines 396–421) together
-before deciding.
+**Owner decisions recorded (2026-07-29):** SMR1-MOTEDGE-0001 = RELATED
+REQUIREMENT; SMR1-MOTEDGE-0002 = RELATED REQUIREMENT; SMR1-MOTCYCLE-0001 =
+REPLACE BOTH EDGES WITH SHARED INDEPENDENT AUTHORITY. The durable evidence
+of this selection is
+`docs/kbdl/evidence/kbdl-011-source-model-resolution/batch-h-owner-decision-record.md`
+(record `KBDL-SMR1-BH-OWNER-DECISION-2026-07-29`) — not `KBDL-DEC-014`
+alone. The cycle-level choice separately cites `KBDL-DEC-014`, decision
+packet item 2, as the *selected shared independent authority* for both
+KBDL-MOT-007 and KBDL-MOT-008; that citation is the substantive authority
+being selected, while the durable record above is the evidence that this
+selection happened on 2026-07-29. Mirrored in `issue-register.csv` (Owner
+decision / Owner decision date / Owner evidence / Resolution status
+columns for these three rows, status `OWNER DECISION RECORDED — AWAITING
+PLANNING-AGENT VALIDATION`). This selection alone does not reclassify the
+requirements' authority graph, change VAL-003 from Not verified, or alter
+any protected field — per this packet's design, it still requires a
+separate durable recording and validation prompt (an authority-graph
+correction prompt for KBDL-MOT-007/MOT-008, followed by planning-agent
+validation) before it takes effect. No other batch's decisions are
+affected or preselected by this entry; all other 418 canonical issues
+remain literally `PENDING`.
 
 ---
 

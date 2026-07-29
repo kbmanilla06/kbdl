@@ -45,7 +45,10 @@ implementation authorization.
 | `precommit-transcript.txt`, `initial-repository-state.txt` | Exact commands, outputs, and interpretations for repository-safety validation. |
 | `scripts/reconciliation_compute.py` | Reproduces the raw-findings/category computation directly from the R16 CSVs. |
 | `scripts/generate_issue_register.py` | Reproduces `issue-register.csv` directly from the R16 CSVs (no hand-entered rows). |
-| `scripts/validate_packet.py` | Programmatic check of the 24 required validation points. |
+| `scripts/validate_packet.py` | Programmatic check of the 24 required validation points, plus (as of KBDL-011-SMR1-BH-R1) state-aware owner-decision checks. |
+| `scripts/decision_state.py` | (Added by KBDL-011-SMR1-BH-R1.) Loads durable `*-owner-decision-record.md` files and cross-checks them against `issue-register.csv` and `project-owner-review.md`. |
+| `scripts/negative_fixtures.py` | (Added by KBDL-011-SMR1-BH-R1.) Deterministic negative-validation fixtures proving `decision_state.py` fails closed on unbacked/mismatched/duplicate/unknown/implementation-authorizing decisions; operates on temporary copies only. |
+| `batch-h-owner-decision-record.md` | (Added by KBDL-011-SMR1-BH-R1.) Durable current-owner evidence for the three Batch H decisions. |
 
 ## 3. Source-of-truth hierarchy applied
 
@@ -113,7 +116,38 @@ Implementation conformance: NOT VERIFIED
 Project completion: PENDING
 ```
 
-## 7. Progression gate
+## 7. Packet review-state model (added by KBDL-011-SMR1-BH-R1)
+
+This packet's `scripts/validate_packet.py` / `scripts/decision_state.py`
+recognize exactly three packet states:
+
+- **PREPARED — NO OWNER DECISIONS RECORDED.** Every Owner decision /
+  Owner decision date / Owner evidence cell in `issue-register.csv` is
+  literally `PENDING`; no `project-owner-review.md` checkbox is selected.
+  This was the state of commit `662ee28`.
+- **OWNER REVIEW IN PROGRESS — DURABLY RECORDED DECISIONS PRESENT.** One
+  or more issues have a non-`PENDING` decision, and every such issue is
+  backed by an exactly matching durable owner-decision record (a
+  `*-owner-decision-record.md` file); every other issue remains
+  `PENDING`; every selected review-form checkbox exactly matches its
+  durable record. This is a packet-review state only, **not** an
+  implementation-readiness state. This is the current state, after
+  KBDL-011-SMR1-BH-R1, for Batch H's three issues (418 issues remain
+  `PENDING`).
+- **INVALID — SELECTED DECISIONS LACK DURABLE OR CONSISTENT OWNER
+  EVIDENCE.** Validation fails when: a selected issue has no durable
+  owner-decision record; a durable record references an unknown issue;
+  a selected option differs from its durable record; a review-form
+  selection differs from the issue register; duplicate or conflicting
+  decisions exist; a decision record authorizes implementation,
+  readiness, limitations, conformance, or completion; or integrity
+  artifacts (checksums, ledger counts) are stale or inconsistent.
+
+No state above is, or implies, implementation readiness, VAL-status
+restoration, candidate readiness, implementation conformance, or project
+completion.
+
+## 8. Progression gate
 
 This packet completes only KBDL-011-SMR1. The recommended next action is
 planning-agent validation of this packet. No decision recording, metadata

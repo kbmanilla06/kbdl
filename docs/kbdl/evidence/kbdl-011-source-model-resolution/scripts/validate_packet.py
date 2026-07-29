@@ -2,14 +2,27 @@
 """KBDL-011-SMR1 packet validator.
 
 Programmatically checks the 24 validation points required by the SMR1
-task specification against the generated packet. Exits 0 on full pass,
-1 if any check fails. Prints one PASS/FAIL line per check.
+task specification against the generated packet, plus (as of
+KBDL-011-SMR1-BH-R1) a state-aware owner-decision model implemented in
+`decision_state.py`. Exits 0 on full pass, 1 if any check fails. Prints
+one PASS/FAIL line per check.
+
+Packet review states recognized (see decision_state.py and
+source-model-resolution-packet.md §7): PREPARED — NO OWNER DECISIONS
+RECORDED / OWNER REVIEW IN PROGRESS — DURABLY RECORDED DECISIONS PRESENT
+/ INVALID — SELECTED DECISIONS LACK DURABLE OR CONSISTENT OWNER EVIDENCE.
+Reaching either of the first two states never implies implementation
+readiness, VAL-status restoration, candidate readiness, implementation
+conformance, or project completion.
 """
 import csv, os, re, subprocess, sys
 
 REPO = "/Users/kbmanilla/Desktop/KBDL"
 PKT = f"{REPO}/docs/kbdl/evidence/kbdl-011-source-model-resolution"
 R16 = f"{REPO}/docs/kbdl/evidence/kbdl-011-r16/artifacts"
+
+sys.path.insert(0, os.path.join(PKT, "scripts"))
+import decision_state
 
 checks = []
 def check(name, cond, detail=""):
@@ -72,15 +85,19 @@ check("5. R16 evidence reference identified for every issue", all(r["R16 evidenc
 # 6. affected validation gates identified
 check("6. affected validation gate identified for every issue", all(r["Affected validation gate"].strip() for r in issue_rows))
 
-# 7. every owner-decision field literally PENDING
-check("7. every Owner decision field literally PENDING", all(r["Owner decision"] == "PENDING" for r in issue_rows))
-check("7b. every Owner decision date field literally PENDING", all(r["Owner decision date"] == "PENDING" for r in issue_rows))
-check("7c. every Owner evidence field literally PENDING", all(r["Owner evidence"] == "PENDING" for r in issue_rows))
+# 7/7b/7c/7d and D1-D3, D6-D12: state-aware owner-decision checks (KBDL-011-SMR1-BH-R1).
+# Delegated to decision_state.py so the same logic can be exercised, unchanged,
+# against temporary mutated copies by negative_fixtures.py. This REPLACES the
+# original "all fields literally PENDING" / "no checkbox selected anywhere"
+# checks with a stronger, state-aware equivalent: every field/checkbox must be
+# either PENDING/unselected, or an exact match for a durable owner-decision
+# record -- it is never sufficient for a field merely to differ from PENDING.
+ds_checks, ds_stats = decision_state.compute(PKT)
+for name, ok, detail in ds_checks:
+    check(name, ok, detail)
 
-# 8. no checkbox/option preselected -- project-owner-review.md must not contain a selected [x]
 por_path = f"{PKT}/project-owner-review.md"
 por_text = open(por_path, encoding="utf-8").read() if os.path.exists(por_path) else ""
-check("8. no checkbox preselected in project-owner-review.md", "[x]" not in por_text.lower() and "- [X]" not in por_text)
 
 # 9. every current-authority proposal says current and non-retroactive
 current_authority_mentions = [r for r in issue_rows if "CONFIRM CURRENT" in r["Recommended resolution approach"]]
