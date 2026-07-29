@@ -149,13 +149,88 @@ Authority-cycle status after BH-AGC1: removed (0 directional authority
 edges between KBDL-MOT-007 and KBDL-MOT-008; historical R16 evidence of
 the original cycle preserved unchanged).
 
+## KBDL-011-SMR1-BH-AGC1-VF1 validator-reproducibility correction
+
+`KBDL-011-SMR1-BH-AGC1-VF1` is a validator-tooling-only correction. It
+does not reopen, reinterpret, or change the BH-AGC1 authority-graph
+correction itself: `KBDL-MOT-007` and `KBDL-MOT-008` remain independently
+authorized by `KBDL-DEC-014`, decision packet item 2; their relationship
+remains related-requirement only, in both directions; the three Batch H
+decisions and the other 418 PENDING SMR1 issues are unchanged; no VAL
+status, lifecycle, provenance, or implementation-authorization status
+changed.
+
+A clean, post-publication run of `scripts/validate_packet.py` against
+commit `0fadb9713299fb861830e419e06da8d82175ea1a` (parent
+`46104c57f86a924b197f6ed380a5b1127eddbf7d`) reproducibly exited 1 with
+69/70 checks passing, failing only
+`AG.narrow_authorized_diff.csv_row_count_unchanged` (`added=0
+removed=0`). Root cause: the three `AG.narrow_authorized_diff.*` checks
+compared the working tree against symbolic `HEAD` (`git diff -U0 HEAD
+-- <file>`), which was meaningful only pre-commit; once the AGC1
+correction was committed and the tree became clean, that diff is empty
+against the new HEAD, so the row-count check failed on `added=0
+removed=0`, and the other two "only touches MOT-007/008" checks passed
+*vacuously* on the same empty diff (an empty diff trivially contains no
+disallowed content). The BH-AGC1 commit's own reported "70/70" claim
+was therefore not reproducible from a clean post-publication checkout,
+even though the underlying source-model correction was, and remains,
+sound.
+
+VF1 corrects this by adding `scripts/agc1_narrow_diff.py`, which
+evaluates all three checks against the fixed, immutable historical
+commit range `46104c57f86a924b197f6ed380a5b1127eddbf7d
+..0fadb9713299fb861830e419e06da8d82175ea1a` — never symbolic `HEAD`,
+`HEAD^`, the working tree, or the index — so the same correct result is
+produced regardless of how many later commits (including this VF1
+commit) exist on top. Every check fails closed: an unresolvable base or
+target commit, a target whose direct parent is not the expected base, a
+failed `git diff` invocation, or an empty diff, all FAIL; none can pass
+vacuously. `scripts/validate_packet.py` now delegates its three
+`AG.narrow_authorized_diff.*` checks to this module. A new regression
+suite, `scripts/agc1_narrow_diff_fixtures.py`, exercises the mechanism
+against ten required scenarios (valid change, empty diff, uncommitted-
+only change, one-row-only change, unrelated-row change, added row,
+deleted row, unrelated README change, wrong-parent commit, missing
+commit) plus the mandatory HEAD-independence case (the historical range
+still passes after HEAD advances to a later child commit) — entirely
+inside temporary, disposable Git repositories it creates and destroys
+itself, never touching the real repository.
+
+This correction is additive evidence: it does not amend or rewrite the
+`0fadb97` commit or its message, and does not retroactively claim
+post-publication 70/70 evidence existed at BH-AGC1 commit time. The
+original BH-AGC1 correction remains applied and its substance is
+unaffected; VF1 only supersedes the non-reproducible validator claim.
+Planning-agent validation of KBDL-011-SMR1-BH-AGC1 remains required;
+KBDL-011 remains incomplete; the other 418 SMR1 issues remain PENDING;
+no implementation action is authorized by this correction.
+
+Changed files (validator-tooling and additive evidence only):
+`scripts/validate_packet.py` (delegates the three narrow-diff checks to
+the new module), `scripts/agc1_narrow_diff.py` (new), `scripts/
+agc1_narrow_diff_fixtures.py` (new), `authority-graph-agc1-vf1-
+validation-transcript.txt` (new), this report, `evidence-manifest.md`,
+`source-model-resolution-packet.md`, `evidence-inventory.csv`, and
+`checksums.sha256`. `docs/kbdl/motion/README.md`,
+`docs/kbdl/traceability-metadata.csv`, `docs/kbdl/motion/
+timing-easing.md`, `docs/kbdl/validation.md`,
+`docs/kbdl/decision-register.md`, and `docs/kbdl/traceability-matrix.md`
+remain byte-identical to `0fadb97`.
+
 ## Recommended next action
 
-Planning-agent validation of KBDL-011-SMR1-BH-AGC1. This is the only
-recommended next action; beginning another SMR1 batch, restoring any
-VAL status, implementation work, or any readiness/completion approval
-is explicitly out of scope for this prompt.
+Planning-agent validation of KBDL-011-SMR1-BH-AGC1 (as corrected and
+made reproducible by VF1). This is the only recommended next action;
+beginning another SMR1 batch, restoring any VAL status, implementation
+work, or any readiness/completion approval is explicitly out of scope
+for this prompt.
 
 ## Rollback
 
-`git revert <KBDL-011-SMR1-BH-AGC1-commit-sha>`.
+`git revert <KBDL-011-SMR1-BH-AGC1-commit-sha>` (0fadb9713299fb861830e419e06da8d82175ea1a).
+
+`git revert <KBDL-011-SMR1-BH-AGC1-VF1-commit-sha>` reverts only the
+validator/additive-evidence correction (restoring the pre-VF1 validator
+design and evidence text) without reverting the BH-AGC1 authority
+correction itself.

@@ -1,0 +1,320 @@
+KBDL-011-SMR1-BH-AGC1-VF1 — Narrow Authorized-Diff Validator
+Reproducibility Correction — Validation Transcript
+==========================================================================
+
+Scope: validator-tooling correction only. Does not reopen, reinterpret,
+or change the KBDL-011-SMR1-BH-AGC1 authority-graph correction applied
+in commit 0fadb9713299fb861830e419e06da8d82175ea1a. Does not resolve
+any other SMR1 issue, restore any VAL status, authorize implementation,
+or approve readiness/conformance/completion.
+
+--------------------------------------------------------------------------
+1. Preconditions (baseline)
+--------------------------------------------------------------------------
+
+$ git fetch origin
+(no new remote commits)
+
+$ git remote -v
+origin  https://github.com/kbmanilla06/kbdl.git (fetch)
+origin  https://github.com/kbmanilla06/kbdl.git (push)
+
+$ git branch --show-current
+main
+
+$ git status --short
+(clean before editing)
+
+$ git rev-parse HEAD
+0fadb9713299fb861830e419e06da8d82175ea1a
+
+$ git rev-parse origin/main
+0fadb9713299fb861830e419e06da8d82175ea1a
+
+$ git ls-remote origin refs/heads/main
+0fadb9713299fb861830e419e06da8d82175ea1a        refs/heads/main
+
+$ git log --oneline --decorate -10
+0fadb97 (HEAD -> main, origin/main, origin/HEAD) docs(kbdl): apply Batch H authority-graph correction for KBDL-MOT-007/008
+46104c5 docs(kbdl): reconcile Batch H packet state and validation evidence
+ea86add docs(kbdl): record and validate SMR1 Batch H owner decisions
+662ee28 docs(kbdl): prepare non-normative R16 source-model resolution packet (KBDL-011-SMR1)
+c592127 Preserve blocked source-independent R16 audit
+873577a docs(kbdl): close R15 semantic validator gaps
+49ee9f8 docs(kbdl): make R14 validators source sound
+eed4cfe docs(kbdl): complete R13 field source audit
+0bc8423 docs(kbdl): correct R12 semantic evidence audit
+e8e1be0 docs(kbdl): complete R11 semantic validation
+
+$ git show --no-patch --format=fuller 0fadb9713299fb861830e419e06da8d82175ea1a
+commit 0fadb9713299fb861830e419e06da8d82175ea1a
+Author:     Khristopher Ben Manilla <kbmanilla06@gmail.com>
+AuthorDate: Wed Jul 29 14:10:52 2026 +0800
+Commit:     Khristopher Ben Manilla <kbmanilla06@gmail.com>
+CommitDate: Wed Jul 29 14:10:52 2026 +0800
+
+    docs(kbdl): apply Batch H authority-graph correction for KBDL-MOT-007/008
+    [... full message as recorded in the commit itself ...]
+
+$ git rev-parse 0fadb9713299fb861830e419e06da8d82175ea1a^
+46104c57f86a924b197f6ed380a5b1127eddbf7d
+
+$ git diff --name-status 46104c57f86a924b197f6ed380a5b1127eddbf7d 0fadb9713299fb861830e419e06da8d82175ea1a
+A       docs/kbdl/evidence/kbdl-011-source-model-resolution/authority-graph-agc1-validation-transcript.txt
+M       docs/kbdl/evidence/kbdl-011-source-model-resolution/checksums.sha256
+M       docs/kbdl/evidence/kbdl-011-source-model-resolution/evidence-inventory.csv
+M       docs/kbdl/evidence/kbdl-011-source-model-resolution/evidence-manifest.md
+M       docs/kbdl/evidence/kbdl-011-source-model-resolution/implementation-report.md
+A       docs/kbdl/evidence/kbdl-011-source-model-resolution/scripts/authority_graph.py
+A       docs/kbdl/evidence/kbdl-011-source-model-resolution/scripts/authority_graph_fixtures.py
+M       docs/kbdl/evidence/kbdl-011-source-model-resolution/scripts/validate_packet.py
+M       docs/kbdl/evidence/kbdl-011-source-model-resolution/source-model-resolution-packet.md
+M       docs/kbdl/motion/README.md
+M       docs/kbdl/traceability-metadata.csv
+
+11 files changed -- matches the expected AGC1 file set exactly.
+
+$ git diff --check
+(no output; exit 0)
+
+Baseline confirmed: local HEAD, origin/main, and live remote
+refs/heads/main all equal 0fadb9713299fb861830e419e06da8d82175ea1a
+(direct parent 46104c57f86a924b197f6ed380a5b1127eddbf7d). Working tree
+clean. No newer unreviewed commit, no divergence, no collaborator work
+present.
+
+--------------------------------------------------------------------------
+2. Defect reproduction (pre-fix, clean tree, before any edit)
+--------------------------------------------------------------------------
+
+$ python3 scripts/validate_packet.py
+[... 68 other PASS lines omitted for brevity; full output preserved in
+the implementation session log ...]
+[PASS] AG.narrow_authorized_diff.readme_only_mot007_008
+[PASS] AG.narrow_authorized_diff.csv_only_mot007_008
+[FAIL] AG.narrow_authorized_diff.csv_row_count_unchanged -- expected exactly 2 changed rows (MOT-007, MOT-008); added=0 removed=0
+[PASS] 23. push-safety check deferred to commit/push shell sequence (fast-forward only)
+[PASS] 24. local HEAD SHA captured for post-push comparison
+======================================================================
+69/70 checks passed
+Exit code: 1
+
+Confirmed: sole failure is AG.narrow_authorized_diff.csv_row_count_unchanged,
+added=0 removed=0. The other two AG.narrow_authorized_diff.* checks
+(readme_only_mot007_008, csv_only_mot007_008) PASS, but only vacuously:
+both compared `git diff -U0 HEAD -- <file>` against a clean tree, which
+is an empty diff -- an empty diff trivially satisfies "no *other*
+KBDL-MOT-### line is touched" without proving anything about the actual,
+historical, committed AGC1 change.
+
+$ python3 scripts/negative_fixtures.py
+... All 8 fixtures correctly rejected: True
+Exit code: 0
+
+$ python3 scripts/authority_graph_fixtures.py
+... All 8 AGC1 fixtures correctly rejected: True
+Exit code: 0
+
+--------------------------------------------------------------------------
+3. Root cause
+--------------------------------------------------------------------------
+
+scripts/validate_packet.py (pre-fix) computed the three
+AG.narrow_authorized_diff.* checks from:
+
+    subprocess.run(["git", "-C", REPO, "diff", "-U0", "HEAD", "--", <file>])
+
+This is a working-tree-vs-symbolic-HEAD comparison. It was correct only
+in the pre-commit state, when the working tree held the uncommitted
+AGC1 correction against the *old* HEAD (46104c5). Once the correction
+was committed (0fadb97) and the working tree became clean, `git diff
+HEAD` is compared against the *new* HEAD -- which now already contains
+the correction -- so the diff is empty:
+
+  - AG.narrow_authorized_diff.csv_row_count_unchanged requires added==
+    removed==2; an empty diff gives added=0 removed=0, so this FAILS.
+  - AG.narrow_authorized_diff.readme_only_mot007_008 and
+    .csv_only_mot007_008 both assert "no *other* KBDL-MOT-### line
+    appears in the added/removed lines"; an empty list of added/removed
+    lines trivially satisfies "contains no disallowed line," so both
+    PASS -- but vacuously, since they are not actually inspecting the
+    historical AGC1 diff at all once the tree is clean.
+
+The validator therefore never inspected the actual, immutable AGC1
+correction commit after publication; it inspected only whatever (if
+anything) differed between the working tree and whatever ref HEAD
+happened to point at, which drifts with every future commit.
+
+--------------------------------------------------------------------------
+4. Files inspected
+--------------------------------------------------------------------------
+
+scripts/validate_packet.py, scripts/authority_graph.py,
+scripts/authority_graph_fixtures.py, scripts/negative_fixtures.py,
+authority-graph-agc1-validation-transcript.txt, implementation-report.md,
+source-model-resolution-packet.md, evidence-manifest.md,
+evidence-inventory.csv, checksums.sha256, commit 0fadb97 (full message
+and diff), commit 46104c5 (as parent reference).
+
+--------------------------------------------------------------------------
+5. Validator implementation change
+--------------------------------------------------------------------------
+
+Added scripts/agc1_narrow_diff.py, which:
+
+  - Defines AGC1_BASE_SHA = "46104c57f86a924b197f6ed380a5b1127eddbf7d"
+    and AGC1_TARGET_SHA = "0fadb9713299fb861830e419e06da8d82175ea1a" as
+    explicit immutable commit-identity constants (never symbolic HEAD).
+  - commit_exists(repo, sha): `git cat-file -e <sha>^{commit}` --
+    fails closed if either commit is unresolvable.
+  - verify_ancestry(repo, base, target): `git rev-parse <target>^` must
+    equal exactly `base` -- fails closed on any other parent (not "some
+    ancestor," the exact direct parent).
+  - diff_added_removed(repo, base, target, path): `git diff -U0 --no-color
+    <base> <target> -- <path>` using an explicit subprocess argument
+    array (never shell interpolation); returns None on any nonzero git
+    exit, which callers treat as a hard FAIL.
+  - check_narrow_authorized_diff(...): orchestrates the above and
+    returns the three checks, each requiring a *nonempty* diff in
+    addition to the "no other MOT requirement touched" / "exactly 2
+    rows changed" conditions, so an empty or unresolved range cannot
+    pass any of them.
+
+scripts/validate_packet.py now imports agc1_narrow_diff and replaces
+its three inline `git diff -U0 HEAD -- <file>` blocks with a single call
+to `agc1_narrow_diff.check_narrow_authorized_diff(REPO)`, which resolves
+to the immutable range by default.
+
+Added scripts/agc1_narrow_diff_fixtures.py: a regression suite that
+builds disposable temporary Git repositories (via `git init` in
+`tempfile.mkdtemp()`), commits synthetic base/target states, and asserts
+expected/actual pass-or-reject outcomes for:
+
+  1. a valid two-row AGC1-style committed change (expect: all PASS)
+  2. an empty base-to-target diff, via an --allow-empty commit (expect: REJECT)
+  3. a working-tree-only uncommitted change, target_sha == base_sha (expect: REJECT)
+  4. a change to only one target CSV row (expect: REJECT)
+  5. a change to an unrelated CSV requirement row (expect: REJECT)
+  6a. an added CSV requirement row (expect: REJECT)
+  6b. a deleted CSV requirement row (expect: REJECT)
+  7. an unrelated MOT README change (expect: REJECT)
+  8. a target commit with the wrong parent, via an orphan-branch decoy (expect: REJECT)
+  9a/9b. a missing base or target commit, via a fabricated SHA (expect: REJECT)
+  10. (mandatory) the valid historical range still passes after HEAD
+      advances to a later child commit, proving HEAD-independence
+      (expect: PASS both before and after HEAD advances, with HEAD != target)
+
+All cases run against temporary repositories only; the script hashes
+real-repository files before and after and asserts they are unchanged.
+
+--------------------------------------------------------------------------
+6. Fixture results (temporary, disposable Git repositories only)
+--------------------------------------------------------------------------
+
+$ python3 scripts/agc1_narrow_diff_fixtures.py
+[PASS] 1. valid 2-row committed change passes clean post-commit
+[PASS] 2. empty base..target diff rejected
+[PASS] 3. working-tree-only uncommitted change rejected (target==base)
+[PASS] 4. only-one-CSV-row change rejected
+[PASS] 5. unrelated CSV requirement row change rejected
+[PASS] 6a. added CSV requirement row rejected
+[PASS] 6b. deleted CSV requirement row rejected
+[PASS] 7. unrelated MOT README change rejected
+[PASS] 8. wrong-parent target commit rejected
+[PASS] 9a. missing base commit rejected
+[PASS] 9b. missing target commit rejected
+[PASS] 10. historical range still passes after HEAD advances past target (HEAD-independence)
+======================================================================
+Temporary fixture repositories cleaned up: True
+Real repository files unchanged after all fixtures: True
+All 12 narrow-diff fixtures produced the expected pass/rejection: True
+Exit code: 0
+
+--------------------------------------------------------------------------
+7. Post-fix validation (pre-commit, clean of the VF1 change itself
+   pending, checksums not yet regenerated)
+--------------------------------------------------------------------------
+
+$ python3 scripts/validate_packet.py
+[... AG.* and AG.narrow_authorized_diff.* checks now all PASS ...]
+[PASS] AG.narrow_authorized_diff.commits_resolvable
+[PASS] AG.narrow_authorized_diff.parent_matches_base
+[PASS] AG.narrow_authorized_diff.readme_only_mot007_008
+[PASS] AG.narrow_authorized_diff.csv_only_mot007_008
+[PASS] AG.narrow_authorized_diff.csv_row_count_unchanged
+[FAIL] 21. checksums verify against on-disk files -- MISMATCH:.../scripts/validate_packet.py
+71/72 checks passed
+Exit code: 1
+
+The sole remaining failure at this point is check 21 (checksums), which
+is expected and mechanical: validate_packet.py's content changed, so
+its checksum in checksums.sha256 is now stale, pending regeneration in
+step 8 below. No other check regressed. All prior AG.*, D1-D12, PS1-PS5,
+and checks 1-24 (excluding 21, temporarily) remain PASS.
+
+--------------------------------------------------------------------------
+8. Checksum/evidence-inventory regeneration and full clean pre-commit run
+--------------------------------------------------------------------------
+
+checksums.sha256 and evidence-inventory.csv regenerated for the changed/
+new files only: scripts/validate_packet.py (content changed),
+scripts/agc1_narrow_diff.py (new), scripts/agc1_narrow_diff_fixtures.py
+(new), authority-graph-agc1-vf1-validation-transcript.txt (this file,
+new), implementation-report.md (VF1 section appended), evidence-
+manifest.md (VF1 paragraph appended), source-model-resolution-packet.md
+(VF1 section 9 appended). All other checksum entries unchanged.
+
+$ python3 scripts/validate_packet.py
+[full clean run recorded in the accompanying implementation report /
+final report; expected: 0 failures, exit 0]
+
+$ git status --short
+(clean after `git add` of only the allowed files, prior to commit)
+
+--------------------------------------------------------------------------
+9. Protected and source-model file verification
+--------------------------------------------------------------------------
+
+$ git diff --exit-code 0fadb9713299fb861830e419e06da8d82175ea1a HEAD -- \
+    docs/kbdl/motion/README.md docs/kbdl/traceability-metadata.csv \
+    docs/kbdl/motion/timing-easing.md docs/kbdl/validation.md \
+    docs/kbdl/decision-register.md docs/kbdl/traceability-matrix.md
+(no output; exit 0 -- all six files byte-identical to 0fadb97)
+
+Batch H owner-decision record (batch-h-owner-decision-record.md) and all
+R16 historical evidence under docs/kbdl/evidence/kbdl-011-r16/ confirmed
+unchanged (not in the VF1 changed-file set; see git diff --name-status
+below).
+
+--------------------------------------------------------------------------
+10. Batch H / pending-issue state verification
+--------------------------------------------------------------------------
+
+Exactly 3 Batch H decisions durably recorded (SMR1-MOTEDGE-0001,
+SMR1-MOTEDGE-0002, SMR1-MOTCYCLE-0001). Exactly 418 other issues remain
+PENDING. issue-register.csv unchanged (421 total rows). No VAL status,
+lifecycle, provenance, candidate, implementation-conformance, or
+completion status changed.
+
+--------------------------------------------------------------------------
+11. Commit
+--------------------------------------------------------------------------
+
+One new child commit created on top of 0fadb9713299fb861830e419e06da8d82175ea1a
+(not amending it). See the accompanying final report for the exact
+commit SHA, `git diff --name-status` allowlist confirmation, and push
+output.
+
+--------------------------------------------------------------------------
+12. Rollback
+--------------------------------------------------------------------------
+
+git revert <KBDL-011-SMR1-BH-AGC1-VF1-commit-sha>
+
+Reverting restores the pre-VF1 validator design (the three inline
+working-tree/HEAD-based AG.narrow_authorized_diff.* checks) and removes
+this transcript, scripts/agc1_narrow_diff.py, and
+scripts/agc1_narrow_diff_fixtures.py, restoring prior
+checksums/evidence-inventory -- without touching commit 0fadb97 or any
+earlier history, and without affecting the applied Batch H authority
+correction itself.

@@ -24,6 +24,7 @@ R16 = f"{REPO}/docs/kbdl/evidence/kbdl-011-r16/artifacts"
 sys.path.insert(0, os.path.join(PKT, "scripts"))
 import decision_state
 import authority_graph
+import agc1_narrow_diff
 
 checks = []
 def check(name, cond, detail=""):
@@ -270,28 +271,15 @@ check("AG.csv.MOT-008.validation_classification_not_applicable", csv_state["KBDL
 # must not touch normative requirement text for any requirement other
 # than the MOT-007/MOT-008 authority-graph fields, and must not add or
 # remove any requirement row.
-readme_diff = subprocess.run(["git", "-C", REPO, "diff", "-U0", "HEAD", "--", "docs/kbdl/motion/README.md"],
-                              capture_output=True, text=True).stdout
-readme_added = [l[1:] for l in readme_diff.splitlines() if l.startswith("+") and not l.startswith("+++")]
-readme_removed = [l[1:] for l in readme_diff.splitlines() if l.startswith("-") and not l.startswith("---")]
-other_mot_touched = any(
-    re.search(r"KBDL-MOT-(?!007|008)\d+", l) for l in readme_added + readme_removed
-)
-check("AG.narrow_authorized_diff.readme_only_mot007_008", not other_mot_touched,
-      "docs/kbdl/motion/README.md diff must only touch KBDL-MOT-007/KBDL-MOT-008 content")
-
-csv_diff = subprocess.run(["git", "-C", REPO, "diff", "-U0", "HEAD", "--", "docs/kbdl/traceability-metadata.csv"],
-                           capture_output=True, text=True).stdout
-csv_added = [l[1:] for l in csv_diff.splitlines() if l.startswith("+") and not l.startswith("+++")]
-csv_removed = [l[1:] for l in csv_diff.splitlines() if l.startswith("-") and not l.startswith("---")]
-csv_other_mot_touched = any(
-    re.search(r"KBDL-MOT-(?!007|008)\d+", l) for l in csv_added + csv_removed
-)
-check("AG.narrow_authorized_diff.csv_only_mot007_008", not csv_other_mot_touched,
-      "docs/kbdl/traceability-metadata.csv diff must only touch KBDL-MOT-007/KBDL-MOT-008 rows")
-check("AG.narrow_authorized_diff.csv_row_count_unchanged",
-      len(csv_added) == len(csv_removed) == 2,
-      f"expected exactly 2 changed rows (MOT-007, MOT-008); added={len(csv_added)} removed={len(csv_removed)}")
+#
+# KBDL-011-SMR1-BH-AGC1-VF1: this MUST inspect the immutable, already
+# published AGC1 correction commit range (agc1_narrow_diff.AGC1_BASE_SHA
+# .. agc1_narrow_diff.AGC1_TARGET_SHA), never the working tree or
+# symbolic HEAD/HEAD^ -- see agc1_narrow_diff.py for the full rationale
+# and the fail-closed behavior (missing commit, wrong parent, failed
+# git invocation, or empty diff all FAIL; none can pass vacuously).
+for name, ok, detail in agc1_narrow_diff.check_narrow_authorized_diff(REPO):
+    check(name, ok, detail)
 
 # 23. push safety handled by caller (fast-forward check) -- placeholder true, actual check done in shell during commit/push
 check("23. push-safety check deferred to commit/push shell sequence (fast-forward only)", True)

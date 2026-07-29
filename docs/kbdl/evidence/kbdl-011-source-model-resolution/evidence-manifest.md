@@ -101,3 +101,30 @@ specifically authorized files without weakening protection of
 before/after authority-graph text, the positive and negative validation
 output, the protected-file/scope audit, and the decision-register
 determination (no new entry created; `KBDL-DEC-014` unchanged).
+
+`KBDL-011-SMR1-BH-AGC1-VF1` is a validator-tooling-only correction found
+necessary by a clean post-publication evidence run: the three
+`AG.narrow_authorized_diff.*` checks compared the working tree against
+symbolic `HEAD`, which is empty once the AGC1 correction is committed
+and the tree is clean — the row-count check then failed on `added=0
+removed=0`, and the other two checks passed vacuously on that same
+empty diff. `scripts/agc1_narrow_diff.py` replaces that design: it
+evaluates all three checks against the fixed, immutable historical
+range `46104c57f86a924b197f6ed380a5b1127eddbf7d
+..0fadb9713299fb861830e419e06da8d82175ea1a`, never symbolic `HEAD`, and
+fails closed on a missing commit, a wrong-parent target, a failed `git`
+invocation, or an empty diff — none of these can pass vacuously.
+`scripts/agc1_narrow_diff_fixtures.py` proves this against ten required
+scenarios plus the mandatory HEAD-independence case (the historical
+range still passes after HEAD advances past the target commit),
+entirely inside temporary, disposable Git repositories, never touching
+the real repository. `authority-graph-agc1-vf1-validation-
+transcript.txt` durably captures the pre-fix 69/70 run, the root-cause
+analysis, the fixture results, and the post-fix clean pre-commit/
+post-commit/post-push validation runs. This correction is additive: the
+`0fadb97` commit and message are unchanged; the BH-AGC1 authority
+correction's substance is unaffected; only the previously
+non-reproducible "70/70" validator claim is superseded. The three Batch
+H decisions and the other 418 PENDING SMR1 issues are unchanged; no VAL
+status, lifecycle, provenance, or implementation-authorization status
+changed; no implementation action is authorized.

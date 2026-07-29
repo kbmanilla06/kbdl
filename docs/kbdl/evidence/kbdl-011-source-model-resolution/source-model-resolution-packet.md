@@ -203,6 +203,38 @@ Four distinct facts must not be conflated:
 implement fail-closed regression checks and negative fixtures for this
 correction (see `scripts/validate_packet.py`'s `AG.*` checks).
 
+## 9. Validator-reproducibility correction (added by KBDL-011-SMR1-BH-AGC1-VF1)
+
+This is a validator-tooling-only correction. It does not change fact 2
+above (the applied Batch H correction), does not reopen fact 1
+(historical cycle detection), does not resolve fact 3 (planning-agent
+validation is still pending), and does not change fact 4 (KBDL-011
+remains open, the other 418 issues remain PENDING).
+
+A clean post-publication run of `scripts/validate_packet.py` against
+the published Batch H correction commit (`0fadb9713299fb861830e419e06da8d82175ea1a`,
+parent `46104c57f86a924b197f6ed380a5b1127eddbf7d`) reproducibly exited 1
+at 69/70: the three `AG.narrow_authorized_diff.*` checks compared the
+working tree against symbolic `HEAD`, which is empty once that commit
+is published and the tree is clean, so the row-count check failed
+(`added=0 removed=0`) and the other two checks passed only vacuously on
+that same empty diff. `scripts/agc1_narrow_diff.py` replaces this
+design: all three checks now evaluate the fixed, immutable range
+`46104c57f86a924b197f6ed380a5b1127eddbf7d
+..0fadb9713299fb861830e419e06da8d82175ea1a` directly, independent of
+current `HEAD`, and fail closed (never vacuously pass) on a missing
+commit, a wrong-parent target, a failed `git` invocation, or an empty
+diff. `scripts/agc1_narrow_diff_fixtures.py` proves this in ten
+required scenarios plus the mandatory HEAD-independence case, entirely
+in temporary, disposable Git repositories.
+
+The originally reported "70/70" claim for the Batch H correction commit
+was therefore not reproducible from a clean post-publication checkout;
+this correction supersedes that specific validator claim without
+amending or rewriting the original commit, and without implying the
+underlying source-model correction was ever unsound. Planning-agent
+validation of KBDL-011-SMR1-BH-AGC1 remains required.
+
 ## 8. Progression gate
 
 This packet completes only KBDL-011-SMR1. The recommended next action is
