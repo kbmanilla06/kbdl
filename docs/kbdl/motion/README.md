@@ -399,9 +399,11 @@ requirement does not make its implementation behavior `Verified` — see
   decorative motion to complete.
   - Lifecycle status: Approved (per
     [KBDL-DEC-014](../decision-register.md#kbdl-dec-014--kbdl-005-motion-decisions-approved),
-    decision packet item 2, together with `KBDL-MOT-008`, as one timing
-    system). Provenance: User-provided. Validation status: Not verified.
+    decision packet item 2). Provenance: User-provided. Validation status: Not verified.
   - Related principle: `KBDL-PRN-002`.
+  - Related requirement: `KBDL-MOT-008` — related requirement only (shares
+    decision packet item 2, the same timing system); not authority for,
+    and not derived from, this requirement.
   - Applicable profiles: Showcase, Precision, Flow.
   - Specification location: [timing-easing.md §1](timing-easing.md#1-timing-architecture).
   - Related future modules: Components.
@@ -415,11 +417,13 @@ requirement does not make its implementation behavior `Verified` — see
   approved via [§10](#10-motion-decision-packet).
   - Lifecycle status: Approved (per
     [KBDL-DEC-014](../decision-register.md#kbdl-dec-014--kbdl-005-motion-decisions-approved),
-    decision packet item 2, together with `KBDL-MOT-007`, as one timing
-    system). Provenance: User-provided. Validation
+    decision packet item 2). Provenance: User-provided. Validation
     status: Not applicable (a numerical recommendation, not yet a
     testable implementation claim).
   - Related principle: `KBDL-PRN-002`.
+  - Related requirement: `KBDL-MOT-007` — related requirement only (shares
+    decision packet item 2, the same timing system); not authority for,
+    and not derived from, this requirement.
   - Applicable profiles: Showcase, Precision, Flow.
   - Specification location: [timing-easing.md §2](timing-easing.md#2-duration-recommendations).
   - Related future modules: Components.

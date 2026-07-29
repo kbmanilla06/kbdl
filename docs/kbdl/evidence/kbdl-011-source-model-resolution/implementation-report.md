@@ -106,13 +106,56 @@ implementation action; the exact three Batch H decisions and the other
 Stale packet-state statements after BH-R2: 0. Review-summary mismatches
 after BH-R2: 0.
 
+## KBDL-011-SMR1-BH-AGC1 authority-graph correction
+
+`KBDL-011-SMR1-BH-AGC1` applies (not reopens or reinterprets) the three
+already-durably-recorded Batch H decisions to the current authoritative
+source model. It: (1) corrects `docs/kbdl/motion/README.md`'s and
+`docs/kbdl/traceability-metadata.csv`'s Lifecycle-status/Authority text
+for `KBDL-MOT-007` and `KBDL-MOT-008` so each independently cites
+`KBDL-DEC-014`, decision packet item 2 — removing the
+"together with `KBDL-MOT-00{7,8}`, as one timing system" clause that
+R16 flagged as a circular authority edge; (2) adds an explicit
+"Related requirement" bullet/note in both places, in both directions,
+stating the relationship is related-requirement only and explicitly
+disclaiming authority semantics; (3) adds
+`scripts/authority_graph.py` (parses the current authority graph and
+checks independent authority, related-requirement-only classification,
+absence of the two-node cycle, and stability of lifecycle/provenance/
+validation-status fields) and `scripts/authority_graph_fixtures.py` (8
+deterministic negative fixtures covering both edges, both directions,
+authority removal, misclassification, validation-status drift, and the
+Batch H recorded/pending count, all in-memory/temp-copy only); (4) adds
+12 new `AG.*` checks plus 3 `AG.narrow_authorized_diff.*` scope checks
+to `scripts/validate_packet.py`, and narrows check 12's protected-file
+list and check 22's allowlist to recognize these two specifically
+authorized files without weakening protection of the other four
+(`validation.md`, `decision-register.md`, `traceability-matrix.md`,
+`motion/timing-easing.md`), all of which remain byte-identical; (5)
+adds a §8 to `source-model-resolution-packet.md` distinguishing
+historical cycle detection, the applied correction, pending
+planning-agent validation, and remaining unresolved KBDL-011 work; (6)
+adds `authority-graph-agc1-validation-transcript.txt`; and (7)
+regenerates `checksums.sha256`/`evidence-inventory.csv`. No new
+decision-register entry was created (see the transcript's
+decision-register determination) — `KBDL-DEC-014`'s scope and meaning
+are unchanged. The exact three Batch H decisions, the 418 other PENDING
+issues, all four fully-protected files, requirement lifecycle/
+provenance/validation-status, and every unrelated MOT requirement are
+unchanged. No VAL status, candidate status, implementation conformance,
+or completion status changed; no implementation action is authorized.
+
+Authority-cycle status after BH-AGC1: removed (0 directional authority
+edges between KBDL-MOT-007 and KBDL-MOT-008; historical R16 evidence of
+the original cycle preserved unchanged).
+
 ## Recommended next action
 
-Planning-agent validation of BH-R2. This is the only recommended next
-action; beginning source-model implementation (the MOT-007/MOT-008
-authority-graph correction), VAL-004 execution, or any readiness/
-completion approval is explicitly out of scope for this prompt.
+Planning-agent validation of KBDL-011-SMR1-BH-AGC1. This is the only
+recommended next action; beginning another SMR1 batch, restoring any
+VAL status, implementation work, or any readiness/completion approval
+is explicitly out of scope for this prompt.
 
 ## Rollback
 
-`git revert <KBDL-011-SMR1-commit-sha>`.
+`git revert <KBDL-011-SMR1-BH-AGC1-commit-sha>`.

@@ -1,0 +1,228 @@
+KBDL-011-SMR1-BH-AGC1 — Authority-Graph Correction Validation Transcript
+==========================================================================
+
+Scope: applies the three durably recorded Batch H owner decisions
+(SMR1-MOTEDGE-0001, SMR1-MOTEDGE-0002, SMR1-MOTCYCLE-0001; see
+batch-h-owner-decision-record.md) to the current authoritative source
+model for KBDL-MOT-007 and KBDL-MOT-008. Does not resolve any other
+SMR1 issue, restore any VAL status, authorize implementation, or
+approve readiness/conformance/completion.
+
+--------------------------------------------------------------------------
+1. Preconditions (baseline)
+--------------------------------------------------------------------------
+
+$ git fetch origin
+(no new remote commits)
+
+$ git remote -v
+origin  https://github.com/kbmanilla06/kbdl.git (fetch)
+origin  https://github.com/kbmanilla06/kbdl.git (push)
+
+$ git branch --show-current
+main
+
+$ git status --short
+(clean before editing)
+
+$ git rev-parse HEAD
+46104c57f86a924b197f6ed380a5b1127eddbf7d
+
+$ git rev-parse origin/main
+46104c57f86a924b197f6ed380a5b1127eddbf7d
+
+$ git ls-remote origin refs/heads/main
+46104c57f86a924b197f6ed380a5b1127eddbf7d        refs/heads/main
+
+$ git log --oneline --decorate -10
+46104c5 (HEAD -> main, origin/main, origin/HEAD) docs(kbdl): reconcile Batch H packet state and validation evidence
+ea86add docs(kbdl): record and validate SMR1 Batch H owner decisions
+662ee28 docs(kbdl): prepare non-normative R16 source-model resolution packet (KBDL-011-SMR1)
+c592127 Preserve blocked source-independent R16 audit
+873577a docs(kbdl): close R15 semantic validator gaps
+49ee9f8 docs(kbdl): make R14 validators source sound
+eed4cfe docs(kbdl): complete R13 field source audit
+0bc8423 docs(kbdl): correct R12 semantic evidence audit
+e8e1be0 docs(kbdl): complete R11 semantic validation
+f6bd0e1 docs(kbdl): record current authority confirmations
+
+Baseline confirmed: local HEAD, origin/main, and live remote refs/heads/main
+all equal 46104c57f86a924b197f6ed380a5b1127eddbf7d (parent ea86add). No
+divergence, no collaborator commits. Existing validate_packet.py: 42/42
+before editing. Existing negative_fixtures.py: 8/8 before editing.
+
+--------------------------------------------------------------------------
+2. Authority graph before correction (exact text, motion/README.md)
+--------------------------------------------------------------------------
+
+KBDL-MOT-007 Lifecycle status:
+  "Approved (per KBDL-DEC-014, decision packet item 2, together with
+  KBDL-MOT-008, as one timing system). Provenance: User-provided.
+  Validation status: Not verified."
+
+KBDL-MOT-008 Lifecycle status:
+  "Approved (per KBDL-DEC-014, decision packet item 2, together with
+  KBDL-MOT-007, as one timing system). Provenance: User-provided.
+  Validation status: Not applicable (a numerical recommendation, not
+  yet a testable implementation claim)."
+
+traceability-metadata.csv Authority column (both rows): identical text
+to the above Lifecycle-status clause.
+
+This is the exact circular authority text recorded in
+docs/kbdl/evidence/kbdl-011-r16/artifacts/authority-cycle-audit.csv
+(historical R16 evidence, unchanged by this correction).
+
+--------------------------------------------------------------------------
+3. Authority graph after correction
+--------------------------------------------------------------------------
+
+KBDL-MOT-007 Lifecycle status:
+  "Approved (per KBDL-DEC-014, decision packet item 2). Provenance:
+  User-provided. Validation status: Not verified."
+  + new bullet: "Related requirement: KBDL-MOT-008 — related
+  requirement only (shares decision packet item 2, the same timing
+  system); not authority for, and not derived from, this requirement."
+
+KBDL-MOT-008 Lifecycle status:
+  "Approved (per KBDL-DEC-014, decision packet item 2). Provenance:
+  User-provided. Validation status: Not applicable (a numerical
+  recommendation, not yet a testable implementation claim)."
+  + new bullet: "Related requirement: KBDL-MOT-007 — related
+  requirement only (shares decision packet item 2, the same timing
+  system); not authority for, and not derived from, this requirement."
+
+traceability-metadata.csv: Authority column for both rows changed to
+"Approved (per KBDL-DEC-014, decision packet item 2)"; Notes or
+exclusions column for both rows gained an appended "Related requirement:
+..." sentence identical in substance to the README bullet above.
+
+Result: KBDL-MOT-007 and KBDL-MOT-008 each independently cite
+KBDL-DEC-014 item 2 as authority. Their mutual relationship is
+RELATED REQUIREMENT only, in both directions. No directional authority
+edge exists between them; the two-node authority cycle is removed.
+
+Unchanged: normative requirement text (both requirements' primary
+sentence, byte-identical), lifecycle (Approved, both), provenance
+(User-provided, both), validation status (Not verified / Not
+applicable, unchanged), KBDL-DEC-014's scope and meaning (unchanged;
+no new decision-register entry created — see §7 below), and every
+other requirement's traceability row.
+
+--------------------------------------------------------------------------
+4. Positive validator output (python3 scripts/validate_packet.py)
+--------------------------------------------------------------------------
+
+Exit code: 1 immediately after edits, before checksum regeneration —
+sole failure: "21. checksums verify against on-disk files" (stale
+checksums.sha256, expected until step 6 regenerates it).
+
+All other checks, including 12 new AG.* authority-graph checks and 3
+AG.narrow_authorized_diff.* scope checks, passed:
+  69/70 checks passed (before checksum regeneration)
+
+After checksum regeneration (§6): full pass expected — see final run
+appended at the end of this transcript (§9).
+
+--------------------------------------------------------------------------
+5. Negative fixture output
+--------------------------------------------------------------------------
+
+$ python3 scripts/negative_fixtures.py
+(all 8 prior BH-R1/BH-R2 fixtures, unaffected by this correction)
+Real repository files unchanged after all fixtures: True
+All 8 fixtures correctly rejected: True
+exit code: 0
+
+$ python3 scripts/authority_graph_fixtures.py
+[REJECTED (as expected)] fixture=reintroduce_007_to_008_edge
+[REJECTED (as expected)] fixture=reintroduce_008_to_007_edge
+[REJECTED (as expected)] fixture=reintroduce_both_edges
+[REJECTED (as expected)] fixture=remove_authority_mot007
+[REJECTED (as expected)] fixture=remove_authority_mot008
+[REJECTED (as expected)] fixture=misclassify_supporting_authority
+[REJECTED (as expected)] fixture=change_validation_status
+[REJECTED (as expected)] fixture=change_pending_state
+Real repository files unchanged after all fixtures: True
+All 8 AGC1 fixtures correctly rejected: True
+exit code: 0
+
+(One authoring gap was found and fixed during development: the initial
+authority_graph.check_authority_graph() did not itself assert
+validation-status stability, so the "change_validation_status" fixture
+was initially UNEXPECTEDLY ACCEPTED. This was a check gap, not an
+intentional weakening — closed by adding explicit validation-status
+assertions to check_authority_graph(), then re-verified.)
+
+--------------------------------------------------------------------------
+6. Protected-file and scope audit
+--------------------------------------------------------------------------
+
+$ git diff --name-only HEAD -- docs/kbdl/validation.md docs/kbdl/decision-register.md docs/kbdl/traceability-matrix.md docs/kbdl/motion/timing-easing.md
+(empty — none of these four fully-protected files changed)
+
+$ git diff --name-status ea86add..HEAD (equivalent, pre-commit: git diff --name-status HEAD)
+M  docs/kbdl/motion/README.md
+M  docs/kbdl/traceability-metadata.csv
+A  docs/kbdl/evidence/kbdl-011-source-model-resolution/scripts/authority_graph.py
+A  docs/kbdl/evidence/kbdl-011-source-model-resolution/scripts/authority_graph_fixtures.py
+A  docs/kbdl/evidence/kbdl-011-source-model-resolution/authority-graph-agc1-validation-transcript.txt
+M  docs/kbdl/evidence/kbdl-011-source-model-resolution/scripts/validate_packet.py
+M  docs/kbdl/evidence/kbdl-011-source-model-resolution/source-model-resolution-packet.md
+M  docs/kbdl/evidence/kbdl-011-source-model-resolution/implementation-report.md
+M  docs/kbdl/evidence/kbdl-011-source-model-resolution/evidence-manifest.md
+M  docs/kbdl/evidence/kbdl-011-source-model-resolution/evidence-inventory.csv
+M  docs/kbdl/evidence/kbdl-011-source-model-resolution/checksums.sha256
+
+Diff scope check (AG.narrow_authorized_diff.*): both authorized
+non-packet files' diffs touch only KBDL-MOT-007/KBDL-MOT-008 content;
+traceability-metadata.csv diff touches exactly 2 rows (added=2,
+removed=2). PASS.
+
+Line-ending audit: docs/kbdl/motion/README.md remains 100% LF (no
+conversion); docs/kbdl/traceability-metadata.csv remains 100% LF, all
+318 data rows retain 21 columns (verified with csv.reader row-width
+check both before and after edit). One authoring mistake was caught
+and corrected during development: an initial csv.writer-based edit of
+traceability-metadata.csv converted the entire file from LF to CRLF
+(a whole-file line-ending regression); this was reverted with `git
+checkout --` and redone as two precise Edit-tool text replacements
+touching only the two target rows, confirmed LF-only afterward.
+
+--------------------------------------------------------------------------
+7. Decision-register determination
+--------------------------------------------------------------------------
+
+No new decision-register entry was created. KBDL-DEC-014 already
+constitutes sufficient, previously-approved substantive authority for
+both KBDL-MOT-007 and KBDL-MOT-008 (decision packet item 2), and the
+Batch H owner-decision record (KBDL-SMR1-BH-OWNER-DECISION-2026-07-29)
+already durably evidences the current project-owner's selection to rely
+on that authority independently for each requirement, rather than on
+each other. Creating an additional decision-register row would
+fabricate a redundant, unauthorized "new" decision where none is
+required; the repository's convention (see decision-register.md's
+existing entries) is to record substantive project-owner decisions, not
+administrative applications of an already-recorded one. KBDL-DEC-014's
+own scope, meaning, and approval date are unchanged.
+
+--------------------------------------------------------------------------
+8. Rollback
+--------------------------------------------------------------------------
+
+git revert <this-commit-sha>
+
+Reverting restores the pre-correction authority text in both
+docs/kbdl/motion/README.md and docs/kbdl/traceability-metadata.csv,
+removes the two new scripts and this transcript, and restores prior
+checksums/evidence-inventory — without touching commit 46104c5 or any
+earlier history.
+
+--------------------------------------------------------------------------
+9. Final validation run (after checksum/evidence regeneration, pre-commit)
+--------------------------------------------------------------------------
+
+See the commit's precommit diff review (git diff --cached) and the
+final `python3 scripts/validate_packet.py` run captured in the
+implementation report / final report accompanying this commit for the
+post-regeneration exit code and check count.

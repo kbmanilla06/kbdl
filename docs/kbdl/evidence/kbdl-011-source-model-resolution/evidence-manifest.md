@@ -75,3 +75,29 @@ byte-unchanged after every fixture run. `batch-h-r2-validation-
 transcript.txt` durably captures the BH-R2 command/output evidence
 (positive validator run, all 8 negative fixtures, protected-field audit,
 checksum verification, commit, and push).
+
+`KBDL-011-SMR1-BH-AGC1` applies the three recorded Batch H decisions to
+the current authoritative source model in `docs/kbdl/motion/README.md`
+and `docs/kbdl/traceability-metadata.csv`: `KBDL-MOT-007` and
+`KBDL-MOT-008` now each independently cite `KBDL-DEC-014`, decision
+packet item 2, as authority, and their relationship is represented only
+as related-requirement, in both directions — removing the two-node
+authority edge R16 originally detected (that historical finding remains
+unchanged in `docs/kbdl/evidence/kbdl-011-r16/`). `scripts/
+authority_graph.py` parses this current state and asserts independent
+authority, related-requirement-only classification, cycle absence, and
+lifecycle/provenance/validation-status stability;
+`scripts/authority_graph_fixtures.py` proves 8 deterministic negative
+fixtures (both edges, both directions, authority removal ×2,
+misclassification, validation-status drift, and the recorded/pending
+count) fail as expected, on in-memory or temp-copy state only.
+`scripts/validate_packet.py` gained 12 `AG.*` checks plus 3
+`AG.narrow_authorized_diff.*` scope checks, and its protected-file
+check (12) and unrelated-change check (22) now recognize these two
+specifically authorized files without weakening protection of
+`validation.md`, `decision-register.md`, `traceability-matrix.md`, or
+`motion/timing-easing.md`, all of which remain byte-identical.
+`authority-graph-agc1-validation-transcript.txt` durably captures the
+before/after authority-graph text, the positive and negative validation
+output, the protected-file/scope audit, and the decision-register
+determination (no new entry created; `KBDL-DEC-014` unchanged).

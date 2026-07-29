@@ -168,6 +168,41 @@ No state above is, or implies, implementation readiness, VAL-status
 restoration, candidate readiness, implementation conformance, or project
 completion.
 
+## 8. Batch H authority-graph correction (added by KBDL-011-SMR1-BH-AGC1)
+
+Four distinct facts must not be conflated:
+
+1. **Historical cycle detection.** R16 originally detected a two-node
+   authority cycle `KBDL-MOT-007 → KBDL-MOT-008 → KBDL-MOT-007` (see
+   `docs/kbdl/evidence/kbdl-011-r16/artifacts/authority-cycle-audit.csv`).
+   That historical finding is preserved unchanged and is not rewritten
+   to pretend the defect was never found.
+2. **Applied Batch H correction.** As of this commit, the current
+   authoritative source model (`docs/kbdl/motion/README.md` and
+   `docs/kbdl/traceability-metadata.csv`) has been corrected so that
+   `KBDL-MOT-007` and `KBDL-MOT-008` each independently cite
+   `KBDL-DEC-014`, decision packet item 2, as authority, and their
+   mutual relationship is represented only as `RELATED REQUIREMENT` in
+   both directions. Neither directional authority edge exists any
+   longer; there is no live two-node authority cycle. This applies the
+   three Batch H decisions already durably recorded in
+   `batch-h-owner-decision-record.md` — it does not reopen, reinterpret,
+   or broaden them, and it fabricates no new project-owner decision
+   (`KBDL-DEC-014` itself is unchanged in scope and meaning).
+3. **Pending planning-agent validation.** The correction above has not
+   yet been validated by a planning agent. Until that validation
+   occurs, the corrected graph is applied-but-unvalidated current state,
+   not a confirmed final state.
+4. **Remaining unresolved KBDL-011 work.** Applying this one correction
+   does not resolve any of the other 418 SMR1 issues, does not restore
+   any `VAL-###` status, does not change candidate/implementation-
+   conformance/completion status, and does not authorize source-model
+   implementation. KBDL-011 remains open.
+
+`scripts/authority_graph.py` and `scripts/authority_graph_fixtures.py`
+implement fail-closed regression checks and negative fixtures for this
+correction (see `scripts/validate_packet.py`'s `AG.*` checks).
+
 ## 8. Progression gate
 
 This packet completes only KBDL-011-SMR1. The recommended next action is

@@ -23,6 +23,7 @@ R16 = f"{REPO}/docs/kbdl/evidence/kbdl-011-r16/artifacts"
 
 sys.path.insert(0, os.path.join(PKT, "scripts"))
 import decision_state
+import authority_graph
 
 checks = []
 def check(name, cond, detail=""):
@@ -112,13 +113,16 @@ mot_edge = [r for r in issue_rows if r["Category"] == "MOT authority edge"]
 mot_cycle = [r for r in issue_rows if r["Category"] == "MOT authority cycle"]
 check("11. MOT cycle has exactly 2 edge records and 1 cycle record", len(mot_edge) == 2 and len(mot_cycle) == 1)
 
-# 12. no protected field changed -- git diff against HEAD for tracked protected files must be empty
+# 12. no protected field changed -- git diff against HEAD for tracked protected files must be empty.
+# As of KBDL-011-SMR1-BH-AGC1, docs/kbdl/motion/README.md and
+# docs/kbdl/traceability-metadata.csv are narrowly and explicitly
+# authorized to change (only the MOT-007/MOT-008 authority-graph
+# correction); they are validated separately below (AG.* checks and
+# AG.narrow_authorized_diff), not by this blanket check.
 protected_paths = [
     "docs/kbdl/validation.md",
     "docs/kbdl/decision-register.md",
     "docs/kbdl/traceability-matrix.md",
-    "docs/kbdl/traceability-metadata.csv",
-    "docs/kbdl/motion/README.md",
     "docs/kbdl/motion/timing-easing.md",
 ]
 diff_out = subprocess.run(["git", "-C", REPO, "diff", "--name-only", "HEAD"], capture_output=True, text=True).stdout.strip().splitlines()
@@ -227,10 +231,67 @@ else:
     checksum_detail = "checksums.sha256 not found"
 check("21. checksums verify against on-disk files", checksum_ok, checksum_detail)
 
-# 22. final tree clean (only new packet dir added) -- checked by caller via git status after add; here check no unrelated modifications
+# 22. final tree clean (only new packet dir added, plus AGC1-authorized
+# normative authority-graph files) -- checked by caller via git status
+# after add; here check no *unexpected* modifications
+AGC1_AUTHORIZED_NON_PACKET_FILES = {
+    "docs/kbdl/motion/README.md",
+    "docs/kbdl/traceability-metadata.csv",
+}
 status_out = subprocess.run(["git", "-C", REPO, "status", "--porcelain"], capture_output=True, text=True).stdout
-non_packet_changes = [l for l in status_out.splitlines() if "kbdl-011-source-model-resolution" not in l]
-check("22. no unrelated working-tree changes outside the new packet directory", len(non_packet_changes) == 0, f"{non_packet_changes[:10]}")
+non_packet_changes = []
+for l in status_out.splitlines():
+    if "kbdl-011-source-model-resolution" in l:
+        continue
+    path = l[3:].strip()
+    if path in AGC1_AUTHORIZED_NON_PACKET_FILES:
+        continue
+    non_packet_changes.append(l)
+check("22. no unrelated working-tree changes outside the new packet directory or AGC1-authorized files", len(non_packet_changes) == 0, f"{non_packet_changes[:10]}")
+
+# 25-36. AGC1 authority-graph checks
+readme_text = open(f"{REPO}/docs/kbdl/motion/README.md", encoding="utf-8").read()
+csv_state = authority_graph.parse_traceability_csv_state(f"{REPO}/docs/kbdl/traceability-metadata.csv")
+readme_state = authority_graph.parse_readme_state(readme_text)
+ag_results = authority_graph.check_authority_graph(readme_state, csv_state)
+for name, ok, detail in ag_results:
+    check(name, ok, detail)
+check("AG.no_two_node_cycle", not authority_graph.cycle_exists(readme_state))
+check("AG.MOT-007.lifecycle_approved", readme_state["KBDL-MOT-007"]["lifecycle"] == "Approved")
+check("AG.MOT-008.lifecycle_approved", readme_state["KBDL-MOT-008"]["lifecycle"] == "Approved")
+check("AG.MOT-007.validation_status_not_verified", readme_state["KBDL-MOT-007"]["validation_status"].strip() == "Not verified")
+check("AG.MOT-008.validation_status_not_applicable", readme_state["KBDL-MOT-008"]["validation_status"].strip().startswith("Not applicable"))
+check("AG.csv.MOT-007.lifecycle_approved", csv_state["KBDL-MOT-007"]["lifecycle_status"] == "Approved")
+check("AG.csv.MOT-008.lifecycle_approved", csv_state["KBDL-MOT-008"]["lifecycle_status"] == "Approved")
+check("AG.csv.MOT-007.validation_classification_not_verified", csv_state["KBDL-MOT-007"]["validation_classification"] == "Not verified")
+check("AG.csv.MOT-008.validation_classification_not_applicable", csv_state["KBDL-MOT-008"]["validation_classification"] == "Not applicable")
+
+# AG.narrow_authorized_diff -- the diff to the two AGC1-authorized files
+# must not touch normative requirement text for any requirement other
+# than the MOT-007/MOT-008 authority-graph fields, and must not add or
+# remove any requirement row.
+readme_diff = subprocess.run(["git", "-C", REPO, "diff", "-U0", "HEAD", "--", "docs/kbdl/motion/README.md"],
+                              capture_output=True, text=True).stdout
+readme_added = [l[1:] for l in readme_diff.splitlines() if l.startswith("+") and not l.startswith("+++")]
+readme_removed = [l[1:] for l in readme_diff.splitlines() if l.startswith("-") and not l.startswith("---")]
+other_mot_touched = any(
+    re.search(r"KBDL-MOT-(?!007|008)\d+", l) for l in readme_added + readme_removed
+)
+check("AG.narrow_authorized_diff.readme_only_mot007_008", not other_mot_touched,
+      "docs/kbdl/motion/README.md diff must only touch KBDL-MOT-007/KBDL-MOT-008 content")
+
+csv_diff = subprocess.run(["git", "-C", REPO, "diff", "-U0", "HEAD", "--", "docs/kbdl/traceability-metadata.csv"],
+                           capture_output=True, text=True).stdout
+csv_added = [l[1:] for l in csv_diff.splitlines() if l.startswith("+") and not l.startswith("+++")]
+csv_removed = [l[1:] for l in csv_diff.splitlines() if l.startswith("-") and not l.startswith("---")]
+csv_other_mot_touched = any(
+    re.search(r"KBDL-MOT-(?!007|008)\d+", l) for l in csv_added + csv_removed
+)
+check("AG.narrow_authorized_diff.csv_only_mot007_008", not csv_other_mot_touched,
+      "docs/kbdl/traceability-metadata.csv diff must only touch KBDL-MOT-007/KBDL-MOT-008 rows")
+check("AG.narrow_authorized_diff.csv_row_count_unchanged",
+      len(csv_added) == len(csv_removed) == 2,
+      f"expected exactly 2 changed rows (MOT-007, MOT-008); added={len(csv_added)} removed={len(csv_removed)}")
 
 # 23. push safety handled by caller (fast-forward check) -- placeholder true, actual check done in shell during commit/push
 check("23. push-safety check deferred to commit/push shell sequence (fast-forward only)", True)
