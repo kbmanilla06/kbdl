@@ -1,0 +1,27 @@
+KBDL-011-SMR1 initial repository state
+
+git fetch origin: exit 0, no new commits.
+git remote -v: origin https://github.com/kbmanilla06/kbdl.git (fetch/push)
+git branch --show-current: main
+git status --short: empty (clean) prior to this packet's files being added.
+git rev-parse HEAD: c592127e7f44acd23894b7c63cb813750618605d
+git rev-parse origin/main: c592127e7f44acd23894b7c63cb813750618605d
+git ls-remote origin refs/heads/main: c592127e7f44acd23894b7c63cb813750618605d refs/heads/main
+All three SHAs match. No conflict.
+
+Latest 25 commits inspected (git log --oneline --decorate -25): most recent
+is c592127 "Preserve blocked source-independent R16 audit" (HEAD -> main,
+origin/main, origin/HEAD); prior commits show the continuous
+KBDL-009 through KBDL-011-R16 chain; no later source-model decision,
+remediation, or collaborator commit exists on top of c592127.
+
+Preconditions independently reconfirmed for KBDL-011-SMR1 (in addition to
+the orchestrator's prior confirmation): no source-model remediation has
+begun (no `kbdl-011-source-model-resolution` or equivalent evidence
+directory existed before this packet); no owner resolution has already
+been recorded (docs/kbdl/evidence/kbdl-011-r16/artifacts/owner-decisions-required.md
+lists only unresolved review inventory, no recorded decision).
+
+Uncommitted work classification at the start of this prompt: none. The
+only filesystem change introduced by this prompt is the new, additive
+directory docs/kbdl/evidence/kbdl-011-source-model-resolution/.

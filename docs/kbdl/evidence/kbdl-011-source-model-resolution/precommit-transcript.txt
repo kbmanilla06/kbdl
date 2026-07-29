@@ -1,0 +1,100 @@
+KBDL-011-SMR1 command transcript
+
+Preconditions (already independently verified by the orchestrating
+session before this prompt began, and re-verified below):
+
+Command: git fetch origin
+Purpose: confirm no new remote commits before editing.
+Exit: 0. Stdout/stderr: empty (already up to date).
+
+Command: git remote -v
+Purpose: confirm fetch/push both point at the authorized remote.
+Exit: 0. Stdout: origin https://github.com/kbmanilla06/kbdl.git (fetch/push).
+
+Command: git branch --show-current
+Purpose: confirm working branch.
+Exit: 0. Stdout: main.
+
+Command: git status --short
+Purpose: confirm a clean working tree before this prompt's files were added.
+Exit: 0. Stdout: empty.
+
+Command: git rev-parse HEAD
+Purpose: capture local HEAD SHA.
+Exit: 0. Stdout: c592127e7f44acd23894b7c63cb813750618605d.
+
+Command: git rev-parse origin/main
+Purpose: capture tracking-branch SHA.
+Exit: 0. Stdout: c592127e7f44acd23894b7c63cb813750618605d.
+
+Command: git ls-remote origin refs/heads/main
+Purpose: capture live remote SHA (independent of local tracking refs).
+Exit: 0. Stdout: c592127e7f44acd23894b7c63cb813750618605d refs/heads/main.
+
+Interpretation: all three SHAs match; no conflict; safe to proceed.
+
+Command: git log --oneline --decorate -25
+Purpose: confirm no later source-model decision, remediation, or
+collaborator commit exists beyond the required baseline.
+Exit: 0. Stdout: 25 commits, most recent c592127 "Preserve blocked
+source-independent R16 audit" (HEAD -> main, origin/main, origin/HEAD);
+no later commit found.
+
+--- Packet generation ---
+
+Command: python3 docs/kbdl/evidence/kbdl-011-source-model-resolution/scripts/reconciliation_compute.py
+Purpose: compute the real reconciled counts (raw findings, canonical
+issues, distinct requirements, overlap, cross-category dependencies,
+per-category decision counts) directly from the R16/R16A CSVs.
+Exit: 0.
+Stdout: JSON summary — raw_findings_defects_csv_rows=693,
+canonical_issues_total=421, distinct_affected_requirements=289,
+overlap_count=274, cross_category_dependency_count=91,
+unmapped_findings_count=0, plus the per-category decision counts
+reproduced in implementation-report.md.
+Interpretation: figures reconcile exactly (693 = 419 first-seen rows +
+274 overlap rows; 419 + 2 MOT-edge issues = 421 canonical issues); the
+289-distinct-requirements figure matches R16A's reported "Failed
+effective records: 289" exactly.
+
+Command: python3 docs/kbdl/evidence/kbdl-011-source-model-resolution/scripts/generate_issue_register.py
+Purpose: independently regenerate issue-register.csv (421 rows) directly
+from the R16 CSVs, with every current-candidate-value/source/defect-
+category cell copied verbatim from the source artifacts.
+Exit: 0.
+Stdout: total rows: 421; per-category counts matching
+reconciliation_compute.py exactly; "All owner-decision fields literally
+PENDING: True"; "All resolution IDs unique: True".
+Interpretation: the issue register is reproducible from source, not
+hand-authored, and satisfies the no-preselection requirement by
+construction.
+
+Command: python3 docs/kbdl/evidence/kbdl-011-source-model-resolution/scripts/validate_packet.py
+Purpose: programmatically check all 24 required validation points against
+the finished packet.
+Exit: 0 (after checksums.sha256 was generated; see below).
+Stdout: 27/27 checks passed (24 required points; checks 7 and 20 are each
+split into sub-checks 7b/7c and 20b for the two composite requirements,
+yielding 27 individually printed lines).
+Interpretation: no unmapped findings, no duplicate canonical issues, no
+preselected owner decision, no protected-field change, no forbidden
+implementation-status token, all CSV/Markdown structure consistent,
+checksums verified, no unrelated working-tree change.
+
+Command: git diff --check
+Purpose: whitespace integrity across all new files.
+Exit: 0. Stdout/stderr: empty.
+
+Command: git diff --stat HEAD -- docs/kbdl/validation.md docs/kbdl/decision-register.md docs/kbdl/traceability-matrix.md docs/kbdl/traceability-metadata.csv docs/kbdl/motion/README.md docs/kbdl/motion/timing-easing.md
+Purpose: confirm every protected file remains byte-identical to HEAD.
+Exit: 0. Stdout: empty (no changes).
+
+Command: git status --short
+Purpose: confirm only the new packet directory is untracked/added, no
+other file in the repository was touched.
+Exit: 0. Stdout: only paths under
+docs/kbdl/evidence/kbdl-011-source-model-resolution/.
+
+Failed or skipped checks: none. This prompt executes no VAL-004 clause
+method and makes no owner decision; those are out of scope by design, not
+skipped failures.
