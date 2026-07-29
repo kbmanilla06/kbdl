@@ -21,8 +21,10 @@ MOT edge decisions: 2
 MOT cycle decisions: 1
 
 Preselected owner decisions: 0
+Total durably recorded owner decisions: 4
 Durably recorded owner decisions (Batch H, KBDL-011-SMR1-BH-R1): 3
-Other owner decisions remaining PENDING: 418
+Durably recorded owner decisions (Batch A, KBDL-011-SMR1-BA-OD1-DR1): 1
+Other owner decisions remaining PENDING: 417
 Protected-field changes: 0
 VAL-status changes: 0
 Accepted limitations: 0
@@ -66,7 +68,11 @@ As of KBDL-011-SMR1-BH-R1, exactly 3 of the 421 canonical issues (Batch
 H: `SMR1-MOTEDGE-0001`, `SMR1-MOTEDGE-0002`, `SMR1-MOTCYCLE-0001`) carry a
 durably recorded owner decision — see
 `batch-h-owner-decision-record.md` — and their corresponding checkboxes
-in `project-owner-review.md` are selected to match. The other 418 rows
+in `project-owner-review.md` are selected to match. As of
+KBDL-011-SMR1-BA-OD1-DR1, one more canonical issue (`SMR1-VC-0001`,
+Batch A) carries a durably recorded owner decision — see
+`batch-a-smr1-vc-0001-owner-decision-record.md` — and its checkbox in
+`project-owner-review.md` is selected to match. The other 417 rows
 still hold the literal string `PENDING` in every Owner decision / Owner
 decision date / Owner evidence cell, and no other checkbox in
 `project-owner-review.md` is selected. `scripts/decision_state.py`
@@ -218,13 +224,65 @@ timing-easing.md`, `docs/kbdl/validation.md`,
 `docs/kbdl/decision-register.md`, and `docs/kbdl/traceability-matrix.md`
 remain byte-identical to `0fadb97`.
 
+## KBDL-011-SMR1-BA-OD1-DR1 Batch A / SMR1-VC-0001 decision recording
+
+`KBDL-011-SMR1-BA-OD1-DR1` durably records exactly one new project-owner
+decision — `SMR1-VC-0001` (`KBDL-A11Y-001` validation classification) =
+SET TO NOT VERIFIED, decided 2026-07-29, Asia/Manila — using the same
+generic durable-record architecture already established by
+`scripts/decision_state.py` for Batch H; no parallel Batch-A-specific
+engine was built. It: (1) adds
+`batch-a-smr1-vc-0001-owner-decision-record.md`, durable current-owner
+evidence for this one decision (record
+`KBDL-SMR1-BA-VC-0001-OWNER-DECISION-2026-07-29`); (2) updates only the
+Owner decision / Owner decision date / Owner evidence / Resolution
+status cells of `issue-register.csv`'s `SMR1-VC-0001` row to match,
+leaving every other cell of that row, `SMR1-KL-0001`, and all other 417
+issue rows unchanged; (3) adds a dedicated issue-level review block for
+`SMR1-VC-0001` in `project-owner-review.md`'s Batch A section, selecting
+exactly SET TO NOT VERIFIED, leaving the other 58 Batch A issues
+unselected; (4) corrects `source-model-resolution-packet.md`'s and
+`project-owner-review.md`'s current-state prose and sign-off summary to
+state four total durably recorded decisions (3 Batch H + 1 Batch A) and
+417 pending issues; (5) generalizes
+`source-model-resolution-ledger.csv`'s durable-decision metric from a
+Batch-H-only label to a total metric plus explicit per-batch rows
+(`Total durably recorded owner decisions: 4`; `Batch H recorded
+decisions: 3`; `Batch A recorded decisions: 1`), preserving the
+historical fact that Batch H recorded exactly three; (6) extends
+`scripts/decision_state.py` with a generic per-batch/per-record-file
+breakdown check (D13) and a Batch H historical-count invariant (D14),
+without rewriting the existing generic D1-D3/D6-D12/PS1-PS5 checks; (7)
+extends `scripts/negative_fixtures.py` with 12 new fixtures (20 total)
+covering an unbacked SMR1-VC-0001 change, a recorded-but-still-pending
+row, a choice mismatch, a date mismatch, a wrong evidence reference, a
+review-form mismatch, multiple review-form selections, an unauthorized
+second Batch A issue, a duplicate durable record, an
+implementation-authorizing record, stale packet prose, and stale
+ledger counts — all on temporary copies only; and (8) adds
+`batch-a-od1-dr1-validation-transcript.txt` and regenerates
+`evidence-manifest.md`, `evidence-inventory.csv`, and
+`checksums.sha256`.
+
+This step does not apply the SET TO NOT VERIFIED classification to
+effective normative or traceability metadata (`docs/kbdl/accessibility.md`
+and `docs/kbdl/traceability-metadata.csv` remain byte-identical), does
+not change lifecycle or provenance, does not resolve `SMR1-KL-0001`,
+does not restore `VAL-003` or `VAL-006`, does not authorize
+implementation, does not begin KBDL-011-SMR2, and does not approve or
+record any other Batch A issue. Planning-agent validation of
+KBDL-011-SMR1-BA-OD1-DR1 remains required.
+
+Decision counts after BA-OD1-DR1: 4 durably recorded (3 Batch H, 1 Batch
+A); 417 pending.
+
 ## Recommended next action
 
-Planning-agent validation of KBDL-011-SMR1-BH-AGC1 (as corrected and
-made reproducible by VF1). This is the only recommended next action;
-beginning another SMR1 batch, restoring any VAL status, implementation
-work, or any readiness/completion approval is explicitly out of scope
-for this prompt.
+Planning-agent validation of KBDL-011-SMR1-BA-OD1-DR1 (the Batch A /
+SMR1-VC-0001 owner-decision recording). This is the only recommended
+next action; beginning KBDL-011-SMR2, another SMR1 batch, restoring any
+VAL status, implementation work, or any readiness/completion approval
+is explicitly out of scope for this prompt.
 
 ## Rollback
 
@@ -234,3 +292,8 @@ for this prompt.
 validator/additive-evidence correction (restoring the pre-VF1 validator
 design and evidence text) without reverting the BH-AGC1 authority
 correction itself.
+
+`git revert <KBDL-011-SMR1-BA-OD1-DR1-commit-sha>` reverts only the
+Batch A / SMR1-VC-0001 owner-decision-recording and validator/evidence
+changes (restoring `SMR1-VC-0001` to PENDING and the ledger/decision-state
+checks to their pre-DR1 form) without affecting AGC1 or VF1.

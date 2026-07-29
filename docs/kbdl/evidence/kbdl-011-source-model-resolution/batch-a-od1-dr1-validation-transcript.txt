@@ -1,0 +1,320 @@
+KBDL-011-SMR1-BA-OD1-DR1 command transcript
+Durably record the SMR1-VC-0001 project-owner decision (SET TO NOT
+VERIFIED) and extend decision-state validation to cover it.
+
+=== 0. Owner instruction (verbatim, as given) ===
+
+The project owner explicitly selected: SMR1-VC-0001 — SET TO NOT
+VERIFIED. This decision applies only to: Resolution issue SMR1-VC-0001;
+Requirement KBDL-A11Y-001; Field Validation classification; Selected
+value SET TO NOT VERIFIED; Decision date 2026-07-29; Timezone
+Asia/Manila. It does not assert that accessibility testing occurred;
+does not establish WCAG conformance; does not change lifecycle or
+provenance; does not resolve SMR1-KL-0001; does not restore VAL-003 or
+VAL-006; does not authorize implementation; does not begin
+KBDL-011-SMR2; does not approve another Batch A issue.
+
+=== 1. Preconditions / initial repository state (captured at DR1 start) ===
+
+Command: git fetch origin
+Purpose: confirm no new remote commits before editing.
+Exit: 0. Stdout/stderr: empty (already up to date).
+
+Command: git remote -v
+Purpose: confirm fetch/push both point at the authorized remote.
+Exit: 0. Stdout: origin https://github.com/kbmanilla06/kbdl.git (fetch), origin https://github.com/kbmanilla06/kbdl.git (push).
+
+Command: git branch --show-current
+Purpose: confirm working branch.
+Exit: 0. Stdout: main.
+
+Command: git status --short
+Purpose: confirm a clean working tree before this prompt's files were edited.
+Exit: 0. Stdout: empty.
+
+Command: git rev-parse HEAD
+Purpose: capture local HEAD SHA.
+Exit: 0. Stdout: c7a70fc8554248a826664d8f4e09a5ee35352435.
+
+Command: git rev-parse origin/main
+Purpose: capture tracking-branch SHA.
+Exit: 0. Stdout: c7a70fc8554248a826664d8f4e09a5ee35352435.
+
+Command: git ls-remote origin refs/heads/main
+Purpose: capture live remote SHA (independent of local tracking refs).
+Exit: 0. Stdout: c7a70fc8554248a826664d8f4e09a5ee35352435	refs/heads/main.
+
+Interpretation: local HEAD, origin/main, and the live remote main all
+equal c7a70fc8554248a826664d8f4e09a5ee35352435; tree clean; safe to
+proceed per this prompt's Preconditions section.
+
+Command: git log --oneline --decorate -10
+Purpose: confirm no later collaborator commit exists beyond the required baseline.
+Exit: 0. Stdout (most recent first):
+c7a70fc (HEAD -> main, origin/main, origin/HEAD) docs(kbdl): make AGC1 narrow authorized-diff validator commit-reproducible
+0fadb97 docs(kbdl): apply Batch H authority-graph correction for KBDL-MOT-007/008
+46104c5 docs(kbdl): reconcile Batch H packet state and validation evidence
+ea86add docs(kbdl): record and validate SMR1 Batch H owner decisions
+662ee28 docs(kbdl): prepare non-normative R16 source-model resolution packet (KBDL-011-SMR1)
+c592127 Preserve blocked source-independent R16 audit
+873577a docs(kbdl): close R15 semantic validator gaps
+49ee9f8 docs(kbdl): make R14 validators source sound
+eed4cfe docs(kbdl): complete R13 field source audit
+0bc8423 docs(kbdl): correct R12 semantic evidence audit
+
+Command: git diff --check
+Purpose: confirm no pre-existing whitespace/line-ending problems.
+Exit: 0. Stdout: empty.
+
+=== 2. Pre-change state confirmation ===
+
+- issue-register.csv: SMR1-VC-0001 row fully PENDING (Owner decision /
+  Owner decision date / Owner evidence = PENDING; Resolution status =
+  SOURCE EVIDENCE REQUIRED). Confirmed by direct grep of the row.
+- issue-register.csv: SMR1-KL-0001 row fully PENDING (same triple).
+  Confirmed by direct grep of the row.
+- No file matching *-owner-decision-record.md referencing SMR1-VC-0001
+  existed prior to this prompt (only batch-h-owner-decision-record.md
+  existed, covering SMR1-MOTEDGE-0001/0002 and SMR1-MOTCYCLE-0001 only).
+- No project-owner-review.md checkbox selection existed for
+  SMR1-VC-0001 prior to this prompt.
+- No newer owner decision (any value other than SET TO NOT VERIFIED)
+  was found recorded anywhere for SMR1-VC-0001.
+
+Command (pre-edit): python3 scripts/validate_packet.py
+Purpose: confirm the packet validates cleanly before any edit.
+Exit: 0. Result: 72/72 checks passed.
+
+Command (pre-edit): python3 scripts/negative_fixtures.py
+Purpose: confirm existing negative fixtures pass before any edit.
+Exit: 0. Result: 8/8 fixtures correctly rejected; real repository files
+unchanged after all fixtures.
+
+Command (pre-edit): python3 scripts/authority_graph_fixtures.py
+Purpose: confirm existing authority-graph fixtures pass before any edit.
+Exit: 0. Result: 8/8 fixtures correctly rejected; real repository files
+unchanged after all fixtures.
+
+Command (pre-edit): python3 scripts/agc1_narrow_diff_fixtures.py
+Purpose: confirm existing narrow-diff fixtures pass before any edit.
+Exit: 0. Result: 12/12 scenarios produced the expected pass/rejection;
+temporary fixture repositories cleaned up; real repository files
+unchanged.
+
+Pre-change decision counts: 3 durably recorded (Batch H), 418 pending.
+
+=== 3. Files inspected ===
+
+scripts/decision_state.py, scripts/validate_packet.py,
+scripts/negative_fixtures.py, scripts/authority_graph.py,
+scripts/authority_graph_fixtures.py, scripts/agc1_narrow_diff.py,
+scripts/agc1_narrow_diff_fixtures.py, scripts/generate_issue_register.py,
+scripts/reconciliation_compute.py, batch-h-owner-decision-record.md,
+issue-register.csv, project-owner-review.md,
+source-model-resolution-packet.md, source-model-resolution-ledger.csv,
+implementation-report.md, evidence-manifest.md, evidence-inventory.csv,
+checksums.sha256, impact-assessment.md, implementation-unlock-map.md,
+initial-repository-state.txt, precommit-transcript.txt,
+batch-h-r2-validation-transcript.txt,
+authority-graph-agc1-validation-transcript.txt,
+authority-graph-agc1-vf1-validation-transcript.txt, relevant git history
+(`git log --oneline --decorate -10`).
+
+Determination: the generic durable-record loader in
+`scripts/decision_state.py` (`parse_durable_records`, which globs every
+`*-owner-decision-record.md` file in the packet directory) already
+supports a new Batch A record without modification to its core parsing
+logic. This prompt reuses that architecture: it adds a new record file
+following the same machine-readable table format, and extends
+`compute()` only with a generalized ledger total-metric lookup, a new
+per-batch breakdown check (D13), and a Batch H historical-count
+invariant (D14) -- it does not introduce a parallel Batch-A-specific
+state engine.
+
+=== 4. Files changed ===
+
+New: batch-a-smr1-vc-0001-owner-decision-record.md,
+batch-a-od1-dr1-validation-transcript.txt (this file).
+Modified: issue-register.csv (SMR1-VC-0001 row's Owner decision / Owner
+decision date / Owner evidence / Resolution status cells only),
+project-owner-review.md (new SMR1-VC-0001 issue-level block; updated
+intro prose and sign-off table), source-model-resolution-packet.md
+(updated current-state prose; new §10), source-model-resolution-
+ledger.csv (generalized durable-decision metric rows),
+scripts/decision_state.py (generalized ledger check plus new D13/D14
+checks), scripts/negative_fixtures.py (12 new fixtures, updated stale-
+prose fixture search text for the new baseline), implementation-report.md
+(updated counts and new BA-OD1-DR1 section), evidence-manifest.md
+(additive paragraph), evidence-inventory.csv, checksums.sha256
+(regenerated).
+Not changed: docs/kbdl/accessibility.md,
+docs/kbdl/traceability-metadata.csv, docs/kbdl/traceability-matrix.md,
+docs/kbdl/validation.md, docs/kbdl/decision-register.md,
+docs/kbdl/governance.md, batch-h-owner-decision-record.md,
+scripts/authority_graph.py, scripts/authority_graph_fixtures.py,
+scripts/agc1_narrow_diff.py, scripts/agc1_narrow_diff_fixtures.py,
+authority-graph-agc1-validation-transcript.txt,
+authority-graph-agc1-vf1-validation-transcript.txt, impact-assessment.md,
+implementation-unlock-map.md, initial-repository-state.txt,
+precommit-transcript.txt, batch-h-r2-validation-transcript.txt.
+
+=== 5. Post-change state confirmation ===
+
+- issue-register.csv: SMR1-VC-0001 row now: Owner decision = SET TO NOT
+  VERIFIED; Owner decision date = 2026-07-29; Owner evidence =
+  KBDL-SMR1-BA-VC-0001-OWNER-DECISION-2026-07-29
+  (docs/kbdl/evidence/kbdl-011-source-model-resolution/batch-a-smr1-vc-
+  0001-owner-decision-record.md); Resolution status = OWNER DECISION
+  RECORDED — AWAITING PLANNING-AGENT VALIDATION. Every other cell of
+  this row (Requirement ID, Field, Candidate value/source, Source class,
+  Category, R16 evidence, Affected gates, Risk, Options, Trade-offs,
+  Notes) unchanged.
+- issue-register.csv: SMR1-KL-0001 row unchanged (still fully PENDING).
+- issue-register.csv: byte-level check confirms exactly one changed
+  line (the SMR1-VC-0001 row) in the whole 421-data-row / 422-line file;
+  CRLF line endings preserved on all 422 lines both before and after
+  (422 CRLF, 0 bare LF in both); header/row width unchanged at 28
+  columns for every row.
+- The other 58 Batch A issues (SMR1-VC-0002 .. SMR1-VC-0059) remain
+  fully PENDING and unselected in project-owner-review.md.
+- project-owner-review.md: new dedicated issue-level block for
+  SMR1-VC-0001 selects exactly "SET TO NOT VERIFIED"; no other checkbox
+  in the packet was added or changed besides this one selection.
+
+Post-change decision counts: 4 durably recorded (3 Batch H + 1 Batch A),
+417 pending.
+
+Per-batch counts: Batch H = 3 (SMR1-MOTEDGE-0001, SMR1-MOTEDGE-0002,
+SMR1-MOTCYCLE-0001); Batch A = 1 (SMR1-VC-0001).
+
+=== 6. Post-change validation (pre-commit, working tree) ===
+
+Command: python3 scripts/validate_packet.py
+Purpose: full packet validation after all edits, before checksum
+regeneration.
+Exit: 1. Result: 73/74 checks passed; sole failure: check 21
+(checksums verify against on-disk files) -- expected, because
+checksums.sha256/evidence-inventory.csv had not yet been regenerated to
+reflect the edited files. All decision-state checks (7/7b/7c/7d, D1-D3,
+D6-D7, D9-D14, PS1-PS5) passed, including the two new checks D13 and
+D14 introduced by this prompt.
+
+Command: python3 scripts/negative_fixtures.py
+Purpose: confirm all fixtures (8 original + 12 new = 20) fail validation
+as expected against the current, edited packet state.
+Exit: 0. Result: 20/20 fixtures correctly rejected, each for its
+intended defect category; real repository files verified byte-unchanged
+after every fixture run.
+
+Command: python3 scripts/authority_graph_fixtures.py
+Purpose: confirm the authority-graph fixtures (unrelated to this
+prompt's scope) still pass unweakened.
+Exit: 0. Result: 8/8 fixtures correctly rejected; real repository files
+unchanged.
+
+Command: python3 scripts/agc1_narrow_diff_fixtures.py
+Purpose: confirm the narrow-diff fixtures (unrelated to this prompt's
+scope) still pass unweakened.
+Exit: 0. Result: 12/12 scenarios produced the expected pass/rejection;
+real repository files unchanged.
+
+=== 7. Checksum/inventory regeneration ===
+
+Command: (Python script) recompute Bytes/SHA-256 for every file listed
+in evidence-inventory.csv from on-disk content, add rows for the two new
+files (batch-a-smr1-vc-0001-owner-decision-record.md,
+batch-a-od1-dr1-validation-transcript.txt), and rewrite checksums.sha256
+from the resulting inventory.
+Purpose: bring evidence-inventory.csv and checksums.sha256 back into
+agreement with the edited/new on-disk files.
+
+Command: python3 scripts/validate_packet.py
+Purpose: full packet validation after checksum/inventory regeneration.
+Exit: 0. Result: 74/74 checks passed (see §8 for full output).
+
+=== 8. Protected-file verification ===
+
+Command: git diff --stat c7a70fc8554248a826664d8f4e09a5ee35352435 -- docs/kbdl/accessibility.md docs/kbdl/traceability-metadata.csv docs/kbdl/traceability-matrix.md docs/kbdl/validation.md docs/kbdl/decision-register.md docs/kbdl/governance.md
+Purpose: confirm every protected/normative file remains byte-identical
+to the verified baseline commit c7a70fc.
+Expected/observed: empty output (no differences) for all six files.
+
+Command: git diff --stat c7a70fc8554248a826664d8f4e09a5ee35352435 -- docs/kbdl/evidence/kbdl-011-source-model-resolution/batch-h-owner-decision-record.md docs/kbdl/evidence/kbdl-011-source-model-resolution/scripts/authority_graph.py docs/kbdl/evidence/kbdl-011-source-model-resolution/scripts/authority_graph_fixtures.py docs/kbdl/evidence/kbdl-011-source-model-resolution/scripts/agc1_narrow_diff.py docs/kbdl/evidence/kbdl-011-source-model-resolution/scripts/agc1_narrow_diff_fixtures.py
+Purpose: confirm the Batch H durable record and the AGC1/VF1 artifacts
+are untouched by this prompt.
+Expected/observed: empty output (no differences).
+
+=== 9. Git-diff scope check ===
+
+Command: git status --short
+Purpose: enumerate every changed/new path for this commit.
+Observed: only paths under
+docs/kbdl/evidence/kbdl-011-source-model-resolution/ appear (new:
+batch-a-smr1-vc-0001-owner-decision-record.md,
+batch-a-od1-dr1-validation-transcript.txt; modified: issue-register.csv,
+project-owner-review.md, source-model-resolution-packet.md,
+source-model-resolution-ledger.csv, scripts/decision_state.py,
+scripts/negative_fixtures.py, implementation-report.md,
+evidence-manifest.md, evidence-inventory.csv, checksums.sha256). No path
+outside the packet directory is touched.
+
+Command: git diff --check
+Purpose: whitespace/line-ending integrity check pre-commit.
+Expected: exit 0, empty output.
+
+=== 10. Commit ===
+
+Command: git add docs/kbdl/evidence/kbdl-011-source-model-resolution
+Command: git commit -m "docs(kbdl): record and validate SMR1 Batch A SMR1-VC-0001 owner decision" (with Co-Authored-By trailer)
+Purpose: create exactly one new child commit of
+c7a70fc8554248a826664d8f4e09a5ee35352435.
+
+Note on the resulting commit SHA: the full 40-character SHA of this
+commit is SELF-REFERENTIAL -- it cannot be embedded inside this file's
+own content without invalidating the very hash it would report (this
+file is part of the tree that SHA covers). It is therefore not stated
+inline here. It is durably recorded in git history itself
+(`git log --oneline -1` on `main`, or `git show <this-file-path>` at any
+later commit) and is reported in full in this task's (KBDL-011-SMR1-
+BA-OD1-DR1) Required Final Report, "Commit and Branch" section.
+
+=== 11. Push ===
+
+Command: git merge-base --is-ancestor origin/main HEAD
+Purpose: confirm the new commit is a fast-forward descendant of
+origin/main before pushing.
+Expected: exit 0 (true).
+
+Command: git push origin main
+Purpose: publish the new commit as a normal fast-forward update; no
+force flag used.
+Expected output form: "c7a70fc..<new-sha>  main -> main".
+
+Command: git fetch origin && git rev-parse HEAD && git rev-parse origin/main && git ls-remote origin refs/heads/main
+Purpose: confirm local HEAD, origin/main, and the live remote main all
+equal the new commit SHA after push.
+Expected: all three values identical to each other and to the new
+commit's SHA.
+
+Command: git status --short
+Purpose: confirm a clean working tree/index after commit and push.
+Expected: empty output.
+
+Command: git diff --check
+Purpose: final whitespace/line-ending integrity check post-push.
+Expected: exit 0, empty output.
+
+Command: python3 scripts/validate_packet.py; python3 scripts/negative_fixtures.py; python3 scripts/authority_graph_fixtures.py; python3 scripts/agc1_narrow_diff_fixtures.py
+Purpose: full re-validation from the clean, committed, pushed tree.
+Expected: 74/74, 20/20, 8/8, 12/12 respectively, all exit 0.
+
+=== 12. Scope confirmation ===
+
+This commit selects exactly one new owner decision (`SMR1-VC-0001` =
+SET TO NOT VERIFIED); it does not select, resolve, or preselect any
+other Batch A issue, `SMR1-KL-0001`, or any Batch H decision; changes no
+protected/normative file; restores no VAL status; executes no VAL-004
+method; approves no candidate readiness, implementation conformance, or
+project completion; and authorizes no implementation action. The only
+recommended next action is planning-agent validation of
+KBDL-011-SMR1-BA-OD1-DR1.

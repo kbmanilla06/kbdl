@@ -128,3 +128,36 @@ non-reproducible "70/70" validator claim is superseded. The three Batch
 H decisions and the other 418 PENDING SMR1 issues are unchanged; no VAL
 status, lifecycle, provenance, or implementation-authorization status
 changed; no implementation action is authorized.
+
+`KBDL-011-SMR1-BA-OD1-DR1` durably records exactly one Batch A decision
+— `SMR1-VC-0001` (`KBDL-A11Y-001` validation classification) = SET TO
+NOT VERIFIED — reusing the same generic durable-record architecture
+`decision_state.py` already used for Batch H; no parallel
+Batch-A-specific engine was introduced. `batch-a-smr1-vc-0001-owner-
+decision-record.md` is the durable current-owner evidence for this
+decision (record `KBDL-SMR1-BA-VC-0001-OWNER-DECISION-2026-07-29`);
+`issue-register.csv`'s `SMR1-VC-0001` row and `project-owner-review.md`'s
+new dedicated issue-level block for `SMR1-VC-0001` are updated to match
+it exactly, while `SMR1-KL-0001` and every other Batch A issue and other
+417 canonical issues remain literally `PENDING`.
+`source-model-resolution-ledger.csv`'s durable-decision metric is
+generalized from a Batch-H-only label to a total metric (`Total durably
+recorded owner decisions: 4`) plus explicit per-batch rows (`Batch H
+recorded decisions: 3`; `Batch A recorded decisions: 1`), and
+`scripts/decision_state.py` gains a generic per-batch/per-record-file
+breakdown check (D13) plus a Batch H historical-count invariant (D14).
+`scripts/negative_fixtures.py` now proves 20/20 deterministic negative
+fixtures fail validation as expected — the original 8 (BH-R1/BH-R2) plus
+12 new Batch A fixtures covering an unbacked change, a
+recorded-but-pending row, a choice mismatch, a date mismatch, a wrong
+evidence reference, a review-form mismatch, multiple selections, an
+unauthorized second Batch A issue, a duplicate durable record, an
+implementation-authorizing record, stale packet prose, and stale ledger
+counts — all operating on temporary copies only, with the real packet
+files verified byte-unchanged after every fixture run.
+`batch-a-od1-dr1-validation-transcript.txt` durably captures the
+BA-OD1-DR1 command/output evidence. This step does not apply the SET TO
+NOT VERIFIED classification to effective normative or traceability
+metadata, does not change lifecycle or provenance, does not resolve
+`SMR1-KL-0001`, does not restore `VAL-003` or `VAL-006`, and does not
+authorize implementation.

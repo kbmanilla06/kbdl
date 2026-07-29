@@ -5,13 +5,18 @@ decision and every decision cell below was unselected. As of
 KBDL-011-SMR1-BH-R1, three checkboxes are selected — Batch H:
 `SMR1-MOTEDGE-0001`, `SMR1-MOTEDGE-0002`, `SMR1-MOTCYCLE-0001` — each
 backed by an exactly matching durable owner-decision record
-(`batch-h-owner-decision-record.md`); every other decision cell, across
-all other batches, remains unselected. Blanket or bulk approval across
-any category is unsafe and is not supported by this form's structure —
-each row must be reviewed and decided individually, because categories
-overlap (see `source-model-resolution-ledger.csv`) and a single
-requirement may depend on more than one category's outcome (91
-requirements do; see `impact-assessment.md`).
+(`batch-h-owner-decision-record.md`). As of KBDL-011-SMR1-BA-OD1-DR1, a
+fourth checkbox is selected — Batch A: `SMR1-VC-0001` only — backed by
+an exactly matching durable owner-decision record
+(`batch-a-smr1-vc-0001-owner-decision-record.md`). Four decisions are
+now durably recorded in total (three Batch H, one Batch A); every other
+decision cell, across all other batches and the other 58 Batch A
+issues, remains unselected — 417 issues remain PENDING. Blanket or bulk
+approval across any category is unsafe and is not supported by this
+form's structure — each row must be reviewed and decided individually,
+because categories overlap (see `source-model-resolution-ledger.csv`)
+and a single requirement may depend on more than one category's outcome
+(91 requirements do; see `impact-assessment.md`).
 
 Each decision the owner accepts here still requires a **separate, later
 recording and validation prompt** before it has any normative effect.
@@ -55,6 +60,37 @@ validation prompt.
 Risk: reviewing this batch in bulk could legitimize an unsupported
 classification for a requirement that, individually, should instead be
 set to Not verified.
+
+### Issue-level decision — SMR1-VC-0001 (KBDL-A11Y-001)
+
+This is the one issue-level decision recorded within Batch A this
+review cycle. It applies only to this issue and to no other Batch A
+issue; the shared option list above is a menu of per-issue
+possibilities, not a group selection. The other 58 Batch A issues
+remain unselected and PENDING.
+
+**Issue-level selection — `SMR1-VC-0001`:**
+- [ ] PROVIDE ORIGINAL OR APPROVED SOURCE
+- [ ] CONFIRM CURRENT CLASSIFICATION AS NEW CURRENT AUTHORITY
+- [ ] REVISE CLASSIFICATION
+- [x] SET TO NOT VERIFIED
+- [ ] DEFER DECISION
+
+**Owner decision recorded (2026-07-29):** SMR1-VC-0001 = SET TO NOT
+VERIFIED. The durable evidence of this selection is
+`docs/kbdl/evidence/kbdl-011-source-model-resolution/batch-a-smr1-vc-0001-owner-decision-record.md`
+(record `KBDL-SMR1-BA-VC-0001-OWNER-DECISION-2026-07-29`) — not this
+form alone. Mirrored in `issue-register.csv` (Owner decision / Owner
+decision date / Owner evidence / Resolution status columns for this
+row, status `OWNER DECISION RECORDED — AWAITING PLANNING-AGENT
+VALIDATION`). This selection is current and non-retroactive; does not
+prove accessibility testing occurred; does not establish WCAG
+conformance; does not change lifecycle or provenance; does not resolve
+`SMR1-KL-0001`; does not restore `VAL-003` or `VAL-006`; does not
+authorize implementation; does not begin KBDL-011-SMR2; does not
+approve any other Batch A issue. No other Batch A issue is affected or
+preselected by this entry; the other 58 Batch A issues and all other
+417 issues in the packet remain literally `PENDING`.
 
 ## Batch B — Authority-field sources (21 issues)
 
@@ -245,21 +281,21 @@ remain literally `PENDING`.
 
 ---
 
-## Sign-off (recorded for Batch H only; all other batches remain open)
+## Sign-off (cumulative across all review cycles to date: Batch H and Batch A/SMR1-VC-0001)
 
 | Field | Value |
 | --- | --- |
-| Decisions recorded in this review cycle | 3 |
+| Decisions recorded in this review cycle | 4 |
 | Reviewer | Project owner |
 | Review date | 2026-07-29 |
-| Batch with decisions recorded | Batch H |
+| Batch with decisions recorded | Batch H (3, prior cycle); Batch A (1: SMR1-VC-0001, this cycle) |
 | Implementation authorization | NOT AUTHORIZED |
-| Planning-agent validation | PENDING for BH-R2 until this prompt passes |
-| Other batches this cycle | None recorded — all other 418 issues remain `PENDING` |
-| Follow-on recording prompt(s) requested | Not yet requested (a separate authority-graph correction prompt for KBDL-MOT-007/MOT-008 would be required before the Batch H cycle-level choice takes effect) |
+| Planning-agent validation | PENDING for KBDL-011-SMR1-BA-OD1-DR1 until this prompt passes |
+| Other batches this cycle | None newly recorded this cycle beyond SMR1-VC-0001 — all other 417 issues remain `PENDING` |
+| Follow-on recording prompt(s) requested | Not yet requested (a separate metadata-recording prompt for KBDL-A11Y-001's validation classification field would be required before the Batch A / SMR1-VC-0001 choice takes effect; a separate authority-graph correction prompt for KBDL-MOT-007/MOT-008 would be required before the Batch H cycle-level choice takes effect) |
 
-Recording 3 decisions in this review cycle is not, and does not imply,
-implementation approval: it is a durably recorded review-cycle choice
-only. This form's completion does not itself change any protected field,
-VAL status, candidate status, implementation conformance, or completion
-status.
+Recording 4 decisions in total (3 Batch H, 1 Batch A) is not, and does
+not imply, implementation approval: it is a durably recorded
+review-cycle choice only. This form's completion does not itself change
+any protected field, VAL status, candidate status, implementation
+conformance, or completion status.

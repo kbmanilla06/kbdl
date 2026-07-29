@@ -10,12 +10,16 @@ and every `project-owner-review.md` checkbox was unselected — **PREPARED
 — NO OWNER DECISIONS RECORDED**.
 
 As of KBDL-011-SMR1-BH-R1 (durably recorded 2026-07-29, corrected and
-republished as KBDL-011-SMR1-BH-R2), the project owner has reviewed and
+republished as KBDL-011-SMR1-BH-R2), the project owner reviewed and
 recorded exactly three of those 421 decisions (Batch H:
-`SMR1-MOTEDGE-0001`, `SMR1-MOTEDGE-0002`, `SMR1-MOTCYCLE-0001`); the other
-418 remain literally `PENDING`. The packet's current state is **OWNER
-REVIEW IN PROGRESS — 3 DURABLY RECORDED BATCH H DECISIONS; 418 OTHER
-ISSUES PENDING** (see §7 for the full state model). This is a
+`SMR1-MOTEDGE-0001`, `SMR1-MOTEDGE-0002`, `SMR1-MOTCYCLE-0001`). As of
+KBDL-011-SMR1-BA-OD1-DR1 (durably recorded 2026-07-29), the project
+owner additionally recorded one Batch A decision (`SMR1-VC-0001` =
+SET TO NOT VERIFIED). Four of the 421 decisions are now durably
+recorded in total (3 Batch H + 1 Batch A); the other 417 remain
+literally `PENDING`. The packet's current state is **OWNER REVIEW IN
+PROGRESS — 4 DURABLY RECORDED DECISIONS (3 BATCH H, 1 BATCH A); 417
+OTHER ISSUES PENDING** (see §7 for the full state model). This is a
 packet-review state only. Neither the original prepared state nor the
 current owner-review state makes, implements, or self-executes any
 decision; neither changes any protected project field; and the project
@@ -50,9 +54,9 @@ implementation authorization.
 
 | File | Purpose |
 | --- | --- |
-| `issue-register.csv` | One canonical row per distinct unresolved decision (421 rows). At commit `662ee28`, every owner-decision field was literally `PENDING`. As of KBDL-011-SMR1-BH-R1, 3 rows (Batch H) carry a durably recorded Owner decision / Owner decision date / Owner evidence, each backed by `batch-h-owner-decision-record.md`; the other 418 rows remain literally `PENDING`. |
+| `issue-register.csv` | One canonical row per distinct unresolved decision (421 rows). At commit `662ee28`, every owner-decision field was literally `PENDING`. As of KBDL-011-SMR1-BH-R1, 3 rows (Batch H) carry a durably recorded Owner decision / Owner decision date / Owner evidence, each backed by `batch-h-owner-decision-record.md`. As of KBDL-011-SMR1-BA-OD1-DR1, one more row (`SMR1-VC-0001`, Batch A) carries a durably recorded Owner decision / Owner decision date / Owner evidence, backed by `batch-a-smr1-vc-0001-owner-decision-record.md`; the other 417 rows remain literally `PENDING`. |
 | `source-model-resolution-ledger.csv` | The reconciliation arithmetic: raw findings, canonical issues, overlaps, cross-category dependencies, all computed from the R16 artifacts, not invented. |
-| `project-owner-review.md` | The reviewable decision form, grouped by category. At commit `662ee28`, every checkbox/decision cell was unselected. As of KBDL-011-SMR1-BH-R1, the three Batch H checkboxes are selected to exactly match the durable record; every other checkbox, across all other batches, remains unselected. |
+| `project-owner-review.md` | The reviewable decision form, grouped by category. At commit `662ee28`, every checkbox/decision cell was unselected. As of KBDL-011-SMR1-BH-R1, the three Batch H checkboxes are selected to exactly match the durable record. As of KBDL-011-SMR1-BA-OD1-DR1, one Batch A checkbox (`SMR1-VC-0001` only) is selected to exactly match its durable record; every other checkbox, across all other batches and the other 58 Batch A issues, remains unselected. |
 | `impact-assessment.md` | Change-impact analysis per decision group (requirements, modules, validation, traceability, documentation, regression risk, rollback complexity). |
 | `implementation-unlock-map.md` | What each decision could unlock later — never phrased as current authorization. |
 | `evidence-manifest.md`, `evidence-inventory.csv`, `checksums.sha256` | Evidence integrity records for this packet, mirroring the R16A conventions. |
@@ -65,6 +69,8 @@ implementation authorization.
 | `scripts/decision_state.py` | (Added by KBDL-011-SMR1-BH-R1; extended by KBDL-011-SMR1-BH-R2.) Loads durable `*-owner-decision-record.md` files, cross-checks them against `issue-register.csv` and `project-owner-review.md`, and (as of BH-R2) verifies the packet's own state-description prose and review-cycle summary are not stale or contradictory. |
 | `scripts/negative_fixtures.py` | (Added by KBDL-011-SMR1-BH-R1; extended by KBDL-011-SMR1-BH-R2.) Deterministic negative-validation fixtures proving `decision_state.py` fails closed on unbacked/mismatched/duplicate/unknown/implementation-authorizing decisions and stale packet-state prose; operates on temporary copies only. |
 | `batch-h-owner-decision-record.md` | (Added by KBDL-011-SMR1-BH-R1.) Durable current-owner evidence for the three Batch H decisions. |
+| `batch-a-smr1-vc-0001-owner-decision-record.md` | (Added by KBDL-011-SMR1-BA-OD1-DR1.) Durable current-owner evidence for the one Batch A decision (`SMR1-VC-0001` = SET TO NOT VERIFIED). |
+| `batch-a-od1-dr1-validation-transcript.txt` | (Added by KBDL-011-SMR1-BA-OD1-DR1.) Durable command/output transcript for this recording step. |
 
 ## 3. Source-of-truth hierarchy applied
 
@@ -136,8 +142,9 @@ Project completion: PENDING
 consistent by KBDL-011-SMR1-BH-R2)
 
 Stated without contradiction: **at commit `662ee28`: PREPARED — NO OWNER
-DECISIONS RECORDED. At the current commit: OWNER REVIEW IN PROGRESS — 3
-DURABLY RECORDED BATCH H DECISIONS; 418 OTHER ISSUES PENDING.**
+DECISIONS RECORDED. At the current commit: OWNER REVIEW IN PROGRESS — 4
+DURABLY RECORDED DECISIONS (3 BATCH H, 1 BATCH A); 417 OTHER ISSUES
+PENDING.**
 
 This packet's `scripts/validate_packet.py` / `scripts/decision_state.py`
 recognize exactly three packet states:
@@ -152,9 +159,10 @@ recognize exactly three packet states:
   `*-owner-decision-record.md` file); every other issue remains
   `PENDING`; every selected review-form checkbox exactly matches its
   durable record. This is a packet-review state only, **not** an
-  implementation-readiness state. This is the current state, after
-  KBDL-011-SMR1-BH-R1, for Batch H's three issues (418 issues remain
-  `PENDING`).
+  implementation-readiness state. This is the current state: 3 issues
+  from KBDL-011-SMR1-BH-R1 (Batch H) plus 1 issue from
+  KBDL-011-SMR1-BA-OD1-DR1 (Batch A, `SMR1-VC-0001`) — 4 issues total
+  (417 issues remain `PENDING`).
 - **INVALID — SELECTED DECISIONS LACK DURABLE OR CONSISTENT OWNER
   EVIDENCE.** Validation fails when: a selected issue has no durable
   owner-decision record; a durable record references an unknown issue;
@@ -234,6 +242,59 @@ this correction supersedes that specific validator claim without
 amending or rewriting the original commit, and without implying the
 underlying source-model correction was ever unsound. Planning-agent
 validation of KBDL-011-SMR1-BH-AGC1 remains required.
+
+## 10. Batch A / SMR1-VC-0001 decision recording (added by KBDL-011-SMR1-BA-OD1-DR1)
+
+`KBDL-011-SMR1-BA-OD1-DR1` durably records exactly one Batch A decision
+— `SMR1-VC-0001` (`KBDL-A11Y-001` validation classification) = SET TO
+NOT VERIFIED — using the same generic durable-record architecture
+`decision_state.py` already used for the three Batch H decisions; no
+parallel Batch-A-specific engine was introduced. It: (1) adds
+`batch-a-smr1-vc-0001-owner-decision-record.md`, a durable owner-decision
+record for `SMR1-VC-0001` alone (record
+`KBDL-SMR1-BA-VC-0001-OWNER-DECISION-2026-07-29`); (2) updates
+`issue-register.csv`'s `SMR1-VC-0001` row's Owner decision / Owner
+decision date / Owner evidence / Resolution status cells to exactly
+match that record, leaving every other cell of that row, and every other
+issue row (including `SMR1-KL-0001`), unchanged; (3) adds a dedicated
+issue-level review block for `SMR1-VC-0001` in
+`project-owner-review.md`'s Batch A section, selecting exactly SET TO
+NOT VERIFIED, leaving the other 58 Batch A issues unselected; (4) updates
+this packet's and `project-owner-review.md`'s current-state prose and
+sign-off summary to state four total durably recorded decisions (3 Batch
+H + 1 Batch A) and 417 pending issues; (5) generalizes
+`source-model-resolution-ledger.csv`'s durable-decision metric from a
+Batch-H-only label to a total metric (`Total durably recorded owner
+decisions: 4`) plus explicit per-batch rows (`Batch H recorded
+decisions: 3`; `Batch A recorded decisions: 1`; preserving the historical
+fact that Batch H recorded exactly three), and extends
+`scripts/decision_state.py` with a generic per-batch/per-record-file
+breakdown check (D13) plus an explicit Batch H historical-count
+invariant (D14), without rewriting the existing generic counting logic
+(D6/D7 and the total durable-record count remain exactly as before,
+now simply summing to 4 instead of 3); (6) extends
+`scripts/negative_fixtures.py` with twelve new fixtures covering an
+unbacked `SMR1-VC-0001` change, a recorded-but-still-pending row, a
+choice mismatch, a date mismatch, a wrong evidence reference, a
+review-form mismatch, multiple review-form selections, an unauthorized
+second Batch A issue, a duplicate durable record, an
+implementation-authorizing record, stale packet prose still claiming
+three recorded/418 pending, and a stale ledger total/per-batch count —
+all rejected for the intended reason, on temporary copies only; and (7)
+adds `batch-a-od1-dr1-validation-transcript.txt` and regenerates
+`evidence-manifest.md`, `evidence-inventory.csv`, and
+`checksums.sha256`.
+
+This step does not apply the SET TO NOT VERIFIED classification to any
+effective normative or traceability metadata (`docs/kbdl/accessibility.md`
+and `docs/kbdl/traceability-metadata.csv` remain byte-identical), does
+not change lifecycle or provenance, does not resolve `SMR1-KL-0001`,
+does not restore `VAL-003` or `VAL-006`, does not authorize
+implementation, does not begin KBDL-011-SMR2, and does not approve or
+record any other Batch A issue. A later, separate metadata-recording
+prompt and planning-agent validation are required before this decision
+has any normative effect. Planning-agent validation of
+KBDL-011-SMR1-BA-OD1-DR1 remains required.
 
 ## 8. Progression gate
 

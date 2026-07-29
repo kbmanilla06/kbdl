@@ -335,25 +335,86 @@ def compute(pkt):
                     f"missing={missing_form_selection}"))
 
     # Ledger cross-check (only if the ledger carries an owner-decision count row).
+    #
+    # As of KBDL-011-SMR1-BA-OD1-DR1, the ledger's durable-decision metric is
+    # generalized from a Batch-H-only label ("Durably recorded owner decisions
+    # (Batch H / KBDL-011-SMR1-BH-R1)") to a generic total metric ("Total
+    # durably recorded owner decisions") plus a per-batch breakdown, so the
+    # total is no longer represented only by a misleading Batch-H-specific
+    # label. This does not rewrite the underlying generic counting logic
+    # (`approved`/`recorded_count`/`pending_count` above are unchanged and
+    # already generic across every *-owner-decision-record.md file found by
+    # `parse_durable_records`); it only adds a total-metric lookup plus a new
+    # per-batch breakdown check (D13) and a Batch H historical-count
+    # invariant (D14).
     ledger_path = os.path.join(pkt, "source-model-resolution-ledger.csv")
     ledger_ok = True
     ledger_detail = ""
+    LEGACY_BH_ONLY_METRIC = "Durably recorded owner decisions (Batch H / KBDL-011-SMR1-BH-R1)"
+    TOTAL_METRIC = "Total durably recorded owner decisions"
+    lrows = []
     if os.path.exists(ledger_path):
         with open(ledger_path, newline="", encoding="utf-8") as f:
             lrows = list(csv.DictReader(f))
-        durable_rows = [r for r in lrows
-                         if r["Metric"].strip() == "Durably recorded owner decisions (Batch H / KBDL-011-SMR1-BH-R1)"]
-        if durable_rows:
-            if durable_rows[0]["Value"].strip() != str(len(approved)):
+        total_rows = [r for r in lrows if r["Metric"].strip() == TOTAL_METRIC]
+        legacy_rows = [r for r in lrows if r["Metric"].strip() == LEGACY_BH_ONLY_METRIC]
+        if total_rows:
+            if total_rows[0]["Value"].strip() != str(len(approved)):
                 ledger_ok = False
-                ledger_detail = (f"ledger durable-count={durable_rows[0]['Value']} "
+                ledger_detail = (f"ledger total durable-count={total_rows[0]['Value']} "
                                  f"expected={len(approved)}")
-        # else: no such row present is only a problem once decisions exist.
+        elif legacy_rows:
+            # Legacy Batch-H-only label still present -- only valid while it
+            # is also the true total (i.e. no non-Batch-H decisions exist).
+            if legacy_rows[0]["Value"].strip() != str(len(approved)):
+                ledger_ok = False
+                ledger_detail = (f"ledger legacy Batch-H-only count={legacy_rows[0]['Value']} "
+                                 f"expected total={len(approved)}")
         elif len(approved) > 0:
             ledger_ok = False
-            ledger_detail = "no 'Durably recorded owner decisions' row present in ledger"
+            ledger_detail = f"no '{TOTAL_METRIC}' row present in ledger"
     checks.append(("D12. source-model-resolution-ledger.csv durable owner-decision count matches "
                     "the actual durable-record count", ledger_ok, ledger_detail))
+
+    # D13: per-batch/per-record-file breakdown. Batch label is derived
+    # generically from each durable-record file's basename convention
+    # ("batch-<x>-...owner-decision-record.md" -> "Batch <X>"), not
+    # hardcoded per-issue, so this works for any future batch file without
+    # further changes to this module.
+    def _batch_label(fp):
+        base = os.path.basename(fp)
+        m = re.match(r"batch-([a-z0-9]+)-", base)
+        return "Batch " + m.group(1).upper() if m else f"Batch UNKNOWN({base})"
+
+    batch_counts = {}
+    for rec in approved.values():
+        label = _batch_label(rec["file"])
+        batch_counts[label] = batch_counts.get(label, 0) + 1
+
+    per_batch_mismatches = []
+    per_batch_missing = []
+    if lrows:
+        ledger_metric_values = {r["Metric"].strip(): r["Value"].strip() for r in lrows}
+        for label, count in sorted(batch_counts.items()):
+            metric_name = f"{label} recorded decisions"
+            if metric_name not in ledger_metric_values:
+                per_batch_missing.append(metric_name)
+                continue
+            if ledger_metric_values[metric_name] != str(count):
+                per_batch_mismatches.append((metric_name, ledger_metric_values[metric_name], count))
+    sum_ok = sum(batch_counts.values()) == len(approved)
+    checks.append(("D13. source-model-resolution-ledger.csv per-batch durable-decision counts "
+                    "match actual per-batch counts and sum to the total",
+                    len(per_batch_mismatches) == 0 and len(per_batch_missing) == 0 and sum_ok,
+                    f"mismatches={per_batch_mismatches} missing={per_batch_missing} "
+                    f"batch_counts={batch_counts} sum_ok={sum_ok} total={len(approved)}"))
+
+    # D14: Batch H's historically recorded decision count must remain
+    # exactly three -- a fixed historical invariant (KBDL-011-SMR1-BH-R1),
+    # independent of what any ledger row claims.
+    batch_h_count = batch_counts.get("Batch H", 0)
+    checks.append(("D14. Batch H's historically recorded owner-decision count remains exactly three",
+                    batch_h_count == 3, f"batch_h_count={batch_h_count}"))
 
     # BH-R2: packet-state prose consistency checks.
     checks.extend(check_state_prose(pkt, recorded_count, pending_count, approved))

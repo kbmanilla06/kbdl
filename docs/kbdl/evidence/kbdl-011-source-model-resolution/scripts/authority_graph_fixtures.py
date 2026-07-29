@@ -131,8 +131,18 @@ def fixture_change_validation_status():
 def fixture_change_pending_state():
     """Reuses decision_state on a temporary copy of the packet dir with
     an extra issue flipped away from PENDING without a durable record --
-    proves the 3-recorded/418-pending invariant still fails closed after
-    the AGC1 correction. Uses a temp copy; never touches the real repo."""
+    proves the 4-recorded/417-pending invariant still fails closed after
+    the AGC1 correction. Uses a temp copy; never touches the real repo.
+
+    KBDL-011-SMR1-BA-OD1-DR1 note: this fixture originally targeted
+    SMR1-VC-0001 as its "unrelated, still-PENDING" test subject. As of
+    BA-OD1-DR1, SMR1-VC-0001 is itself durably recorded (SET TO NOT
+    VERIFIED), so it is no longer unrelated or PENDING, and the mutation
+    below would become a no-op against a now-legitimately-recorded row.
+    The fixture is retargeted to SMR1-VC-0002 -- still fully PENDING and
+    unrelated to this prompt -- to keep testing the same regression
+    (an issue flipped away from PENDING with no backing durable record)
+    rather than silently becoming vacuous."""
     tmp = tempfile.mkdtemp(prefix="agc1_fixture_")
     try:
         shutil.copytree(PKT, os.path.join(tmp, "pkt"))
@@ -143,13 +153,13 @@ def fixture_change_pending_state():
         header = rows[0]
         idx = header.index("Owner decision")
         for row in rows[1:]:
-            if row[0] == "SMR1-VC-0001":
+            if row[0] == "SMR1-VC-0002":
                 row[idx] = "SET TO NOT VERIFIED"
                 break
         with open(issue_path, "w", newline="", encoding="utf-8") as f:
             csv.writer(f).writerows(rows)
         checks, stats = decision_state.compute(tmp_pkt)
-        return (checks, stats), "flipped an unrelated issue (SMR1-VC-0001) away from PENDING without a durable record"
+        return (checks, stats), "flipped an unrelated issue (SMR1-VC-0002) away from PENDING without a durable record"
     finally:
         shutil.rmtree(tmp, ignore_errors=True)
 
@@ -180,7 +190,7 @@ def run():
 
     # 8th fixture: pending-state change (temp-copy decision_state check)
     (ds_checks, ds_stats), mutation_desc = fixture_change_pending_state()
-    ds_ok = (ds_stats["pending_count"] == 418 and all(ok for _, ok, _ in ds_checks))
+    ds_ok = (ds_stats["pending_count"] == 417 and all(ok for _, ok, _ in ds_checks))
     rejected = not ds_ok
     results.append(("change_pending_state", mutation_desc, rejected))
     if not rejected:

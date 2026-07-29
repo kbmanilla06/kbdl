@@ -1,14 +1,16 @@
 #!/usr/bin/env python3
-"""KBDL-011-SMR1-BH-R1/BH-R2 negative validation fixtures.
+"""KBDL-011-SMR1-BH-R1/BH-R2/BA-OD1-DR1 negative validation fixtures.
 
 Deterministically proves that decision_state.compute() fails closed for
-eight categories of defect (six from BH-R1, plus two BH-R2 stale-prose
-regression fixtures). Every fixture operates on a temporary copy of the
-packet directory (made with shutil.copytree into a tempfile.mkdtemp()
-directory) and mutates only that copy -- the real repository is never
-written to. After every fixture, this script re-reads the real packet
-files' mtimes/hashes to confirm they are unchanged, and deletes the
-temporary directory.
+twenty categories of defect (six from BH-R1, two BH-R2 stale-prose
+regression fixtures, plus twelve BA-OD1-DR1 fixtures covering the Batch
+A / SMR1-VC-0001 durable-record recording and the generalized
+total/per-batch ledger metric). Every fixture operates on a temporary
+copy of the packet directory (made with shutil.copytree into a
+tempfile.mkdtemp() directory) and mutates only that copy -- the real
+repository is never written to. After every fixture, this script
+re-reads the real packet files' mtimes/hashes to confirm they are
+unchanged, and deletes the temporary directory.
 
 Exit code: 0 if every fixture fails validation as expected (i.e. this
 script's own "did validation correctly reject this?" meta-check passes
@@ -147,15 +149,22 @@ def fixture_implementation_authorizing_record(tmp_pkt):
 def fixture_stale_packet_overview(tmp_pkt):
     # Mutation 7 (BH-R2): reintroduce the stale, pre-BH-R2 claim that the
     # packet's issue-register.csv has every owner-decision field PENDING,
-    # even though durable Batch H decisions exist in this copy.
+    # even though durable Batch H (and, as of BA-OD1-DR1, Batch A)
+    # decisions exist in this copy.
     path = os.path.join(tmp_pkt, "source-model-resolution-packet.md")
     text = open(path, encoding="utf-8").read()
     text = text.replace(
-        "At commit `662ee28`, every owner-decision field was literally "
-        "`PENDING`. As of KBDL-011-SMR1-BH-R1, 3 rows (Batch H) carry a "
-        "durably recorded Owner decision / Owner decision date / Owner "
-        "evidence, each backed by `batch-h-owner-decision-record.md`; the "
-        "other 418 rows remain literally `PENDING`.",
+        "As of KBDL-011-SMR1-BH-R1 (durably recorded 2026-07-29, corrected and\n"
+        "republished as KBDL-011-SMR1-BH-R2), the project owner reviewed and\n"
+        "recorded exactly three of those 421 decisions (Batch H:\n"
+        "`SMR1-MOTEDGE-0001`, `SMR1-MOTEDGE-0002`, `SMR1-MOTCYCLE-0001`). As of\n"
+        "KBDL-011-SMR1-BA-OD1-DR1 (durably recorded 2026-07-29), the project\n"
+        "owner additionally recorded one Batch A decision (`SMR1-VC-0001` =\n"
+        "SET TO NOT VERIFIED). Four of the 421 decisions are now durably\n"
+        "recorded in total (3 Batch H + 1 Batch A); the other 417 remain\n"
+        "literally `PENDING`. The packet's current state is **OWNER REVIEW IN\n"
+        "PROGRESS — 4 DURABLY RECORDED DECISIONS (3 BATCH H, 1 BATCH A); 417\n"
+        "OTHER ISSUES PENDING** (see §7 for the full state model).",
         "Every owner-decision field is literally `PENDING`.",
         1,
     )
@@ -164,16 +173,146 @@ def fixture_stale_packet_overview(tmp_pkt):
 
 def fixture_stale_review_summary(tmp_pkt):
     # Mutation 8 (BH-R2): revert the review-cycle sign-off summary to
-    # PENDING even though the review form's Batch H checkboxes remain
-    # selected in this copy -- proves the summary/selection contradiction
-    # is caught.
+    # PENDING even though the review form's Batch H and Batch A checkboxes
+    # remain selected in this copy -- proves the summary/selection
+    # contradiction is caught.
     path = os.path.join(tmp_pkt, "project-owner-review.md")
     text = open(path, encoding="utf-8").read()
     text = text.replace(
-        "| Decisions recorded in this review cycle | 3 |",
+        "| Decisions recorded in this review cycle | 4 |",
         "| Decisions recorded in this review cycle | PENDING |",
         1,
     )
+    open(path, "w", encoding="utf-8").write(text)
+
+
+# --- KBDL-011-SMR1-BA-OD1-DR1 fixtures (Batch A / SMR1-VC-0001) ---
+
+def fixture_ba_unbacked_change(tmp_pkt):
+    # (1) SMR1-VC-0001's durable record is removed while its issue-register
+    # row remains recorded -- must be rejected as unbacked.
+    rec = os.path.join(tmp_pkt, "batch-a-smr1-vc-0001-owner-decision-record.md")
+    os.remove(rec)
+
+
+def fixture_ba_recorded_but_pending_row(tmp_pkt):
+    # (2) Durable record exists but the issue-register row is reverted to
+    # the PENDING triple -- must be rejected as incomplete recording (D6).
+    path = os.path.join(tmp_pkt, "issue-register.csv")
+    def mutate(row, idx):
+        if row[idx["Resolution issue ID"]] == "SMR1-VC-0001":
+            row[idx["Owner decision"]] = "PENDING"
+            row[idx["Owner decision date"]] = "PENDING"
+            row[idx["Owner evidence"]] = "PENDING"
+    _rewrite_csv(path, mutate)
+
+
+def fixture_ba_choice_mismatch(tmp_pkt):
+    # (3) issue-register choice differs from the durable record's choice.
+    path = os.path.join(tmp_pkt, "issue-register.csv")
+    def mutate(row, idx):
+        if row[idx["Resolution issue ID"]] == "SMR1-VC-0001":
+            row[idx["Owner decision"]] = "REVISE CLASSIFICATION"
+    _rewrite_csv(path, mutate)
+
+
+def fixture_ba_date_mismatch(tmp_pkt):
+    # (4) issue-register decision date differs from the durable record's date.
+    path = os.path.join(tmp_pkt, "issue-register.csv")
+    def mutate(row, idx):
+        if row[idx["Resolution issue ID"]] == "SMR1-VC-0001":
+            row[idx["Owner decision date"]] = "2026-07-30"
+    _rewrite_csv(path, mutate)
+
+
+def fixture_ba_wrong_evidence_reference(tmp_pkt):
+    # (5) issue-register Owner evidence references the wrong record identifier.
+    path = os.path.join(tmp_pkt, "issue-register.csv")
+    def mutate(row, idx):
+        if row[idx["Resolution issue ID"]] == "SMR1-VC-0001":
+            row[idx["Owner evidence"]] = "KBDL-SMR1-BH-OWNER-DECISION-2026-07-29"
+    _rewrite_csv(path, mutate)
+
+
+def fixture_ba_review_form_mismatch(tmp_pkt):
+    # (6) review-form selection differs from the durable record's choice.
+    path = os.path.join(tmp_pkt, "project-owner-review.md")
+    text = open(path, encoding="utf-8").read()
+    text = text.replace(
+        "- [ ] REVISE CLASSIFICATION\n- [x] SET TO NOT VERIFIED\n- [ ] DEFER DECISION\n\n"
+        "**Owner decision recorded (2026-07-29):** SMR1-VC-0001 = SET TO NOT",
+        "- [x] REVISE CLASSIFICATION\n- [ ] SET TO NOT VERIFIED\n- [ ] DEFER DECISION\n\n"
+        "**Owner decision recorded (2026-07-29):** SMR1-VC-0001 = SET TO NOT",
+        1,
+    )
+    open(path, "w", encoding="utf-8").write(text)
+
+
+def fixture_ba_multiple_selections(tmp_pkt):
+    # (7) more than one option is selected for SMR1-VC-0001's issue-level block.
+    path = os.path.join(tmp_pkt, "project-owner-review.md")
+    text = open(path, encoding="utf-8").read()
+    text = text.replace(
+        "- [ ] REVISE CLASSIFICATION\n- [x] SET TO NOT VERIFIED\n- [ ] DEFER DECISION",
+        "- [x] REVISE CLASSIFICATION\n- [x] SET TO NOT VERIFIED\n- [ ] DEFER DECISION",
+        1,
+    )
+    open(path, "w", encoding="utf-8").write(text)
+
+
+def fixture_ba_second_issue_unauthorized(tmp_pkt):
+    # (8) a second Batch A issue (SMR1-VC-0002) becomes non-pending without
+    # any durable authority -- must be rejected as unbacked, and D7 (only
+    # durably-recorded issues are non-PENDING) must also fail.
+    path = os.path.join(tmp_pkt, "issue-register.csv")
+    def mutate(row, idx):
+        if row[idx["Resolution issue ID"]] == "SMR1-VC-0002":
+            row[idx["Owner decision"]] = "SET TO NOT VERIFIED"
+            row[idx["Owner decision date"]] = "2026-07-29"
+            row[idx["Owner evidence"]] = "KBDL-SMR1-BA-VC-0001-OWNER-DECISION-2026-07-29"
+            row[idx["Resolution status"]] = "OWNER DECISION RECORDED — AWAITING PLANNING-AGENT VALIDATION"
+    _rewrite_csv(path, mutate)
+
+
+def fixture_ba_duplicate_durable_record(tmp_pkt):
+    # (9) a second durable record claims SMR1-VC-0001 with a conflicting choice.
+    src = os.path.join(tmp_pkt, "batch-a-smr1-vc-0001-owner-decision-record.md")
+    dup = os.path.join(tmp_pkt, "batch-a-smr1-vc-0001-duplicate-owner-decision-record.md")
+    text = open(src, encoding="utf-8").read()
+    text = text.replace("SMR1-VC-0001 | SET TO NOT VERIFIED",
+                         "SMR1-VC-0001 | REVISE CLASSIFICATION")
+    open(dup, "w", encoding="utf-8").write(text)
+
+
+def fixture_ba_implementation_authorizing_record(tmp_pkt):
+    # (10) the Batch A durable record claims implementation is authorized.
+    path = os.path.join(tmp_pkt, "batch-a-smr1-vc-0001-owner-decision-record.md")
+    text = open(path, encoding="utf-8").read()
+    text = text.replace(
+        "Implementation authorization status: NOT AUTHORIZED",
+        "Implementation authorization status: AUTHORIZED",
+    )
+    open(path, "w", encoding="utf-8").write(text)
+
+
+def fixture_ba_stale_packet_prose(tmp_pkt):
+    # (11) packet prose still claims three recorded / 418 pending even
+    # though four decisions (3 Batch H + 1 Batch A) are durably recorded
+    # in this copy.
+    path = os.path.join(tmp_pkt, "source-model-resolution-packet.md")
+    text = open(path, encoding="utf-8").read()
+    text = text.replace("417", "418")
+    open(path, "w", encoding="utf-8").write(text)
+
+
+def fixture_ba_stale_ledger_counts(tmp_pkt):
+    # (12) ledger total/per-batch durable-decision counts are stale.
+    path = os.path.join(tmp_pkt, "source-model-resolution-ledger.csv")
+    text = open(path, encoding="utf-8").read()
+    text = text.replace("Total durably recorded owner decisions,4,",
+                         "Total durably recorded owner decisions,3,")
+    text = text.replace("Batch A recorded decisions,1,",
+                         "Batch A recorded decisions,0,")
     open(path, "w", encoding="utf-8").write(text)
 
 
@@ -198,6 +337,36 @@ FIXTURES = [
      {"PS1. when durable decisions exist, the packet introduction/contents-table does not claim zero decisions are recorded"}),
     ("stale_review_summary", fixture_stale_review_summary,
      {"PS4. review-cycle sign-off summary matches the durable record"}),
+    ("ba_unbacked_change", fixture_ba_unbacked_change,
+     {"7. every Owner decision field is literally PENDING or exactly matches its durable owner-decision record's selected choice",
+      "7b. every Owner decision date field is literally PENDING or exactly matches its durable owner-decision record's decision date",
+      "7c. every Owner evidence field is literally PENDING or references its durable owner-decision record (never KBDL-DEC-014 alone)",
+      "D10. no project-owner-review.md checkbox selection lacks a matching durable owner-decision record"}),
+    ("ba_recorded_but_pending_row", fixture_ba_recorded_but_pending_row,
+     {"D6. no durable record exists for an issue-register row left at the PENDING triple (recording completeness)",
+      "7. every Owner decision field is literally PENDING or exactly matches its durable owner-decision record's selected choice"}),
+    ("ba_choice_mismatch", fixture_ba_choice_mismatch,
+     {"7. every Owner decision field is literally PENDING or exactly matches its durable owner-decision record's selected choice"}),
+    ("ba_date_mismatch", fixture_ba_date_mismatch,
+     {"7b. every Owner decision date field is literally PENDING or exactly matches its durable owner-decision record's decision date"}),
+    ("ba_wrong_evidence_reference", fixture_ba_wrong_evidence_reference,
+     {"7c. every Owner evidence field is literally PENDING or references its durable owner-decision record (never KBDL-DEC-014 alone)"}),
+    ("ba_review_form_mismatch", fixture_ba_review_form_mismatch,
+     {"D9. every selected project-owner-review.md checkbox exactly matches its durable owner-decision record"}),
+    ("ba_multiple_selections", fixture_ba_multiple_selections,
+     {"D9. every selected project-owner-review.md checkbox exactly matches its durable owner-decision record"}),
+    ("ba_second_issue_unauthorized", fixture_ba_second_issue_unauthorized,
+     {"7. every Owner decision field is literally PENDING or exactly matches its durable owner-decision record's selected choice",
+      "D7. exactly the durably-recorded issues are non-PENDING; every other issue remains PENDING"}),
+    ("ba_duplicate_durable_record", fixture_ba_duplicate_durable_record,
+     {"D1. no duplicate durable owner-decision records for the same issue ID"}),
+    ("ba_implementation_authorizing_record", fixture_ba_implementation_authorizing_record,
+     {"D2. every durable owner-decision record states 'Implementation authorization status: NOT AUTHORIZED'"}),
+    ("ba_stale_packet_prose", fixture_ba_stale_packet_prose,
+     {"PS2. packet-state prose recorded/pending counts match the computed decision-state counts"}),
+    ("ba_stale_ledger_counts", fixture_ba_stale_ledger_counts,
+     {"D12. source-model-resolution-ledger.csv durable owner-decision count matches the actual durable-record count",
+      "D13. source-model-resolution-ledger.csv per-batch durable-decision counts match actual per-batch counts and sum to the total"}),
 ]
 
 
@@ -206,6 +375,7 @@ def main():
         os.path.join(PKT, "issue-register.csv"),
         os.path.join(PKT, "project-owner-review.md"),
         os.path.join(PKT, "batch-h-owner-decision-record.md"),
+        os.path.join(PKT, "batch-a-smr1-vc-0001-owner-decision-record.md"),
         os.path.join(PKT, "source-model-resolution-ledger.csv"),
         os.path.join(PKT, "source-model-resolution-packet.md"),
     ]
