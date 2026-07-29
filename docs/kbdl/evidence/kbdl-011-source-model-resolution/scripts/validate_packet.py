@@ -25,6 +25,7 @@ sys.path.insert(0, os.path.join(PKT, "scripts"))
 import decision_state
 import authority_graph
 import agc1_narrow_diff
+import fsrg1_roadmap
 
 checks = []
 def check(name, cond, detail=""):
@@ -279,6 +280,13 @@ check("AG.csv.MOT-008.validation_classification_not_applicable", csv_state["KBDL
 # and the fail-closed behavior (missing commit, wrong parent, failed
 # git invocation, or empty diff all FAIL; none can pass vacuously).
 for name, ok, detail in agc1_narrow_diff.check_narrow_authorized_diff(REPO):
+    check(name, ok, detail)
+
+# FR1-FR6. KBDL-011-SMR2-FSRG1 roadmap-entry consistency (added by the
+# 2026-07-29 APPROVE WITH CHANGES disposition). These validate the
+# roadmap record only -- the FSRG1 generator, live registry, and schema
+# do not exist yet and are not authorized by this packet.
+for name, ok, detail in fsrg1_roadmap.compute(PKT, REPO):
     check(name, ok, detail)
 
 # 23. push safety handled by caller (fast-forward check) -- placeholder true, actual check done in shell during commit/push

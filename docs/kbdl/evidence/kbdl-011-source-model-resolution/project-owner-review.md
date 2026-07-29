@@ -293,9 +293,9 @@ canonical issues remain literally `PENDING`.
 | Review date | 2026-07-29 |
 | Batch with decisions recorded | Batch H (3, prior cycle); Batch A (1: SMR1-VC-0001, this cycle) |
 | Implementation authorization | NOT AUTHORIZED |
-| Planning-agent validation | KBDL-011-SMR1-BH-AGC1 and KBDL-011-SMR1-BH-AGC1-VF1: PASSED. KBDL-011-SMR1-BA-OD1-DR1: superseded by KBDL-011-SMR1-BA-OD1-DR1-R1 (this remediation), which is the current open gate — PENDING until this remediation prompt passes planning-agent validation |
+| Planning-agent validation | KBDL-011-SMR1-BH-AGC1 and KBDL-011-SMR1-BH-AGC1-VF1: PASSED. KBDL-011-SMR1-BA-OD1-DR1: superseded by KBDL-011-SMR1-BA-OD1-DR1-R1, which is itself PASSED — PLANNING-AGENT VALIDATED and is not an open gate. KBDL-011-SMR1-RM1 (the KBDL-011-SMR2-FSRG1 roadmap addition) is the current open gate — PENDING until it passes planning-agent validation |
 | Other batches this cycle | None newly recorded this cycle beyond SMR1-VC-0001 — all other 417 issues remain `PENDING` |
-| Follow-on recording prompt(s) requested | Not yet requested (a separate metadata-recording prompt for KBDL-A11Y-001's validation classification field would be required before the Batch A / SMR1-VC-0001 choice takes effect; a separate authority-graph correction prompt for KBDL-MOT-007/MOT-008 would be required before the Batch H cycle-level choice takes effect) |
+| Follow-on recording prompt(s) requested | The metadata-recording prompt for KBDL-A11Y-001's validation-classification field was proposed as KBDL-011-SMR2-VC-0001 and returned APPROVE WITH CHANGES on 2026-07-29: a prerequisite roadmap prompt, KBDL-011-SMR2-FSRG1 (live field-source-registry artifact and deterministic generator), is added first (see `smr2-fsrg1-prompt.md`), and KBDL-011-SMR2-VC-0001 stays `LOCKED — PLANNING-AGENT VALIDATION REQUIRED`, to be **reissued, not resumed**, only after FSRG1 passes planning-agent validation. Neither prompt is issued or authorized. A separate authority-graph correction prompt for KBDL-MOT-007/MOT-008 would still be required before the Batch H cycle-level choice takes effect |
 
 Recording 4 decisions in total (3 Batch H, 1 Batch A) is not, and does
 not imply, implementation approval: it is a durably recorded

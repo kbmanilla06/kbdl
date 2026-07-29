@@ -187,8 +187,9 @@ issue ID, requirement ID, decision date, timezone, evidence identifier,
 or Implementation authorization status; (b) adds explicit historical
 markers to every preserved historical 418/three-recorded mention and
 corrects every current-state mention to 417/four-recorded, and to state
-that AGC1/VF1 have passed planning-agent validation while DR1-R1 itself
-is the current open gate; (c) extends `scripts/decision_state.py` with
+that AGC1/VF1 have passed planning-agent validation while DR1-R1 was, at
+that point, the then-current open gate (DR1-R1 has since itself passed —
+see the RM1 paragraph below); (c) extends `scripts/decision_state.py` with
 new fail-closed checks (`AR1`, `AR2`, `SP1`–`SP4`) covering the authority
 contradiction, the evidence-conflation risk, stale current-state 418/
 three-recorded prose lacking a historical marker, stale "AGC1/VF1
@@ -203,3 +204,56 @@ reinterpret, or change the `SMR1-VC-0001` = SET TO NOT VERIFIED decision
 itself, does not change any protected file, does not resolve
 `SMR1-KL-0001`, does not restore `VAL-003`/`VAL-006`, and does not
 authorize implementation.
+
+`KBDL-011-SMR1-RM1` records the project owner's 2026-07-29 **APPROVE
+WITH CHANGES** disposition on the proposed `KBDL-011-SMR2-VC-0001`
+metadata-recording prompt, which directed that a prerequisite roadmap
+prompt be added first. `smr2-fsrg1-prompt.md` specifies that prerequisite,
+`KBDL-011-SMR2-FSRG1`: a live, current-state field-source-registry
+artifact and a deterministic generator, with a declared schema, a
+validator, fixtures, and a transcript. It exists because
+`implementation-unlock-map.md`'s Batch A entry requires
+`field-source-registry.csv` to be *regenerated, not hand-edited*, while
+the repository's only four registries — under `kbdl-011-r13`,
+`kbdl-011-r14`, `kbdl-011-r15`, and `kbdl-011-r16` — are point-in-time
+round audit artifacts emitted by those rounds' own validators, leaving no
+live registry and no standalone generator for a recording prompt to
+invoke. All four are preserved as immutable historical evidence: RM1
+leaves them byte-identical, never regenerates or relocates them, and
+never adopts one as a generator output path. `implementation-unlock-map.md`
+gains a prerequisite `KBDL-011-SMR2-FSRG1` entry and a downstream
+`KBDL-011-SMR2-VC-0001` entry, both at
+`LOCKED — PLANNING-AGENT VALIDATION REQUIRED`; the downstream prompt is
+released only after FSRG1 passes planning-agent validation, and is then
+reissued against the approved generator rather than resumed.
+`scripts/fsrg1_roadmap.py` adds six fail-closed checks (FR1–FR6) over
+that roadmap record — specification present and disclaiming
+authorization, all six mandatory gates stated (schema, determinism,
+drift, path-safety, fixture-isolation, clean post-publication), all four
+historical registries named and declared immutable, those registries
+verified against the SHA-256 digests recorded in their own round evidence
+inventories, both roadmap entries LOCKED with the gate and reissue
+requirement stated, and no language promoting either prompt out of that
+state. `scripts/fsrg1_roadmap_fixtures.py` proves 12/12 deterministic
+fixtures behave as specified (ten rejection, two positive-control), on
+temporary copies and a synthetic temporary repository root only, with
+every real repository file verified byte-unchanged after the run.
+
+RM1 also records, on the same 2026-07-29 owner disposition, that
+`KBDL-011-SMR1-BA-OD1-DR1-R1` is **PASSED — PLANNING-AGENT VALIDATED**
+and is not an open gate; planning-agent validation of `KBDL-011-SMR1-RM1`
+itself is now the only open gate. And RM1's regeneration of
+`evidence-inventory.csv` and `checksums.sha256` closes a pre-existing
+omission: `batch-a-od1-dr1-validation-transcript.txt`, the durable
+transcript added by `KBDL-011-SMR1-BA-OD1-DR1`, existed in the packet but
+was never listed in `evidence-inventory.csv`. **Only the inventory record
+is corrected — the transcript file itself is byte-identical to the copy
+published by `KBDL-011-SMR1-BA-OD1-DR1` and is neither rewritten,
+re-run, re-dated, nor otherwise touched by RM1.** The inventory now
+covers every packet file except `evidence-inventory.csv` and
+`checksums.sha256` themselves, which by the packet's existing convention
+are not listed inside themselves. RM1
+prepares, authorizes, and runs no generator; creates no live registry;
+issues no prompt; changes no normative content, no effective metadata,
+and no protected file; restores no VAL status; and records, reopens, or
+preselects no owner decision.

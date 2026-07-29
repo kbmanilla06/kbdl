@@ -18,9 +18,14 @@ Status vocabulary:
   SET NOT VERIFIED / DEFER, per requirement (59 total).
 - Later remediation prompt that could be prepared: "KBDL-011-SMR2:
   Validation-classification recording," scoped to only the requirements
-  with a recorded, non-deferred decision.
+  with a recorded, non-deferred decision. Its first issue-scoped
+  instance, `KBDL-011-SMR2-VC-0001` (`SMR1-VC-0001` /
+  `KBDL-A11Y-001`), is gated behind the prerequisite prompt
+  `KBDL-011-SMR2-FSRG1` — see "Prerequisite prompt" below.
 - Preconditions: owner decision recorded per requirement; no bulk
-  decision accepted.
+  decision accepted; for any prompt that regenerates
+  `field-source-registry.csv`, `KBDL-011-SMR2-FSRG1` prepared **and**
+  passed planning-agent validation first.
 - Files/metadata potentially affected: `traceability-metadata.csv`,
   the requirement's own module file, `field-source-registry.csv`
   (regenerated, not hand-edited).
@@ -34,6 +39,66 @@ Status vocabulary:
 - Could affect candidate readiness: **Yes, indirectly** — VAL-003/VAL-006
   are two of the four Not-verified gates blocking candidate readiness.
 - Status: `LOCKED — OWNER DECISION REQUIRED`.
+
+## Prerequisite prompt — KBDL-011-SMR2-FSRG1 (field-source registry generator)
+
+Added 2026-07-29 by project-owner review disposition **APPROVE WITH
+CHANGES** on the proposed `KBDL-011-SMR2-VC-0001` metadata-recording
+prompt. Full specification: `smr2-fsrg1-prompt.md`. This entry records a
+prerequisite prompt, not an implementation authorization.
+
+- Why it exists: Batch A above requires `field-source-registry.csv` to be
+  *regenerated, not hand-edited*, but no live, current-state registry and
+  no standalone generator exist. The only four registries in the
+  repository (`kbdl-011-r13`/`r14`/`r15`/`r16` `artifacts/`) are
+  point-in-time round audit artifacts emitted by those rounds' own
+  validators. Without this prerequisite, a recording prompt could only
+  hand-edit a registry or mutate historical round evidence.
+- Prompt that could be prepared: "KBDL-011-SMR2-FSRG1: live field-source
+  registry artifact and deterministic generator," producing a standalone
+  generator, a live registry artifact for the current repository state, a
+  declared registry schema, a validator, deterministic fixtures, and a
+  durable validation transcript, in a new FSRG1 evidence package.
+- Preconditions: the four R13–R16 registries preserved byte-identical as
+  immutable historical evidence (never regenerated, relocated, or used as
+  the generator's output path); no normative content and no effective
+  metadata changed; the live registry treated as a derived,
+  non-authoritative description, never as authority, source, or
+  validation evidence.
+- Required validation gates (all six mandatory, all fail-closed): schema;
+  determinism; drift (including SHA-256 verification of the four
+  historical registries); path-safety; fixture-isolation; and clean
+  post-publication validation with no vacuous pass. See
+  `smr2-fsrg1-prompt.md` §4 for each gate's precise obligation.
+- Files/metadata potentially affected: only new files inside the FSRG1
+  evidence package, plus this map and the SMR1 packet's own evidence
+  records. No module file, no `traceability-metadata.csv`, no protected
+  file, no R13–R16 artifact.
+- Validation gates affected: none. FSRG1 changes no VAL status.
+- Required regression tests: full SMR1 packet validator re-run with no
+  check weakened or removed, plus the six FSRG1 gates.
+- Owner approval alone sufficient: **No.**
+- Planning-agent validation also required: **Yes.**
+- Blocked by VAL-004's locked scope: No.
+- Could affect candidate readiness: **No, not directly** — it unblocks a
+  later recording prompt that could, but FSRG1 itself moves no gate.
+- Downstream gating: `KBDL-011-SMR2-VC-0001` stays locked until FSRG1
+  passes planning-agent validation, and is then **reissued** (not
+  resumed) so that it regenerates the registry through the approved
+  generator rather than by hand.
+- Status: `LOCKED — PLANNING-AGENT VALIDATION REQUIRED`.
+
+## Downstream prompt — KBDL-011-SMR2-VC-0001 (validation-classification recording)
+
+- Scope if issued: give the recorded `SMR1-VC-0001` = SET TO NOT VERIFIED
+  decision effect in `KBDL-A11Y-001`'s validation-classification field,
+  and regenerate `field-source-registry.csv` accordingly. Scoped to that
+  one issue; `SMR1-KL-0001` and the other Batch A issues are untouched.
+- Preconditions: `KBDL-011-SMR2-FSRG1` prepared **and** passed
+  planning-agent validation; the reissued prompt invokes the
+  FSRG1-approved generator and performs no hand-edit of any registry.
+- Status: `LOCKED — PLANNING-AGENT VALIDATION REQUIRED` (of
+  `KBDL-011-SMR2-FSRG1`).
 
 ## Batch B — Authority-field sources
 
@@ -216,3 +281,11 @@ never reaches that status; a batch moves to
 records a non-deferred decision for every issue in that batch (done for
 Batch H; not yet done for A–G) and (b) a planning agent validates that
 recording (not yet done for any batch, including Batch H).
+
+The two prompt entries added on 2026-07-29 — the prerequisite
+`KBDL-011-SMR2-FSRG1` and the downstream `KBDL-011-SMR2-VC-0001` — are
+also `LOCKED`, at `LOCKED — PLANNING-AGENT VALIDATION REQUIRED`. They do
+not change any batch's status, do not resolve any canonical issue, and do
+not alter the recorded/pending decision counts. `KBDL-011-SMR2-VC-0001`
+must not be issued until `KBDL-011-SMR2-FSRG1` has passed planning-agent
+validation, and must then be reissued against the approved generator.

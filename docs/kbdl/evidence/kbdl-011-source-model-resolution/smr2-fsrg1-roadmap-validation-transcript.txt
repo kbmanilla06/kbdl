@@ -1,0 +1,415 @@
+KBDL-011-SMR1-RM1 — validation transcript
+Step: add prerequisite roadmap prompt KBDL-011-SMR2-FSRG1
+Disposition recorded: project owner, 2026-07-29 (Asia/Manila), APPROVE WITH CHANGES
+Parent commit: 733c28e92672a4191b94045c800734c595bb014d
+Baseline packet validator (before this step): 80/80 checks passed
+
+Gate status recorded by this step:
+  KBDL-011-SMR1-BH-R1 / BH-R2                  PASSED — PLANNING-AGENT VALIDATED
+  KBDL-011-SMR1-BH-AGC1 / BH-AGC1-VF1          PASSED — PLANNING-AGENT VALIDATED
+  KBDL-011-SMR1-BA-OD1-DR1-R1                  PASSED — PLANNING-AGENT VALIDATED (not an open gate)
+  KBDL-011-SMR1-RM1 (this step)                current open gate
+  KBDL-011-SMR2-FSRG1                          LOCKED — PLANNING-AGENT VALIDATION REQUIRED
+  KBDL-011-SMR2-VC-0001                        LOCKED — PLANNING-AGENT VALIDATION REQUIRED (reissued, not resumed)
+
+======================================================================
+$ python3 docs/kbdl/evidence/kbdl-011-source-model-resolution/scripts/validate_packet.py
+======================================================================
+======================================================================
+[PASS] 1. every R16 defect row maps to a canonical issue or documented shared issue
+[PASS] 2. every canonical issue has a unique stable ID
+[PASS] 3. category identified for every issue
+[PASS] 4. affected requirement IDs identified for every issue
+[PASS] 5. R16 evidence reference identified for every issue
+[PASS] 6. affected validation gate identified for every issue
+[PASS] D1. no duplicate durable owner-decision records for the same issue ID
+[PASS] D2. every durable owner-decision record states 'Implementation authorization status: NOT AUTHORIZED'
+[PASS] D3. every durable-record issue ID exists in issue-register.csv (no unknown issue ID)
+[PASS] 7. every Owner decision field is literally PENDING or exactly matches its durable owner-decision record's selected choice
+[PASS] 7b. every Owner decision date field is literally PENDING or exactly matches its durable owner-decision record's decision date
+[PASS] 7c. every Owner evidence field is literally PENDING or references its durable owner-decision record (never KBDL-DEC-014 alone)
+[PASS] 7d. every Resolution status field is PENDING-consistent or exactly 'OWNER DECISION RECORDED — AWAITING PLANNING-AGENT VALIDATION' for durably recorded rows
+[PASS] D6. no durable record exists for an issue-register row left at the PENDING triple (recording completeness)
+[PASS] D7. exactly the durably-recorded issues are non-PENDING; every other issue remains PENDING
+[PASS] 8. no project-owner-review.md checkbox is selected outside a recognized issue-ID review block
+[PASS] D9. every selected project-owner-review.md checkbox exactly matches its durable owner-decision record
+[PASS] D10. no project-owner-review.md checkbox selection lacks a matching durable owner-decision record
+[PASS] D11. every durably-recorded issue has a matching project-owner-review.md checkbox selection
+[PASS] D12. source-model-resolution-ledger.csv durable owner-decision count matches the actual durable-record count
+[PASS] D13. source-model-resolution-ledger.csv per-batch durable-decision counts match actual per-batch counts and sum to the total
+[PASS] D14. Batch H's historically recorded owner-decision count remains exactly three
+[PASS] PS1. when durable decisions exist, the packet introduction/contents-table does not claim zero decisions are recorded
+[PASS] PS2. packet-state prose recorded/pending counts match the computed decision-state counts
+[PASS] PS3. historical zero-decision state (commit 662ee28) remains distinguished from the current state
+[PASS] PS4. review-cycle sign-off summary matches the durable record
+[PASS] PS5. no implementation authorization is introduced by the review-cycle summary
+[PASS] AR1. no durable 'SET TO NOT VERIFIED' owner-decision record states or implies it creates no current authority
+[PASS] AR2. no durable owner-decision record conflates decision authority with validation/conformance evidence
+[PASS] SP1. no current-state section reports 418 pending without an explicit historical marker once four decisions are durably recorded
+[PASS] SP2. no current-state section reports a total durably-recorded-decision count other than the computed total
+[PASS] SP3. no current-state summary states that AGC1/VF1 planning-agent validation remains pending
+[PASS] SP4. total recorded count, per-batch recorded counts, and pending count are mutually consistent
+[PASS] 9. every current-authority proposal states current/non-retroactive boundary
+[PASS] 10. authoritative-source-found column populated for every issue
+[PASS] 11. MOT cycle has exactly 2 edge records and 1 cycle record
+[PASS] 12. no protected file changed (git diff --name-only HEAD)
+[PASS] 13. docs/kbdl/validation.md byte-identical to HEAD
+[PASS] 14. candidate status remains NOT READY in validation.md
+[PASS] 15. implementation conformance remains NOT VERIFIED in validation.md
+[PASS] 16. project completion remains PENDING in validation.md
+[PASS] 17. every implementation-unlock-map.md Status: assignment uses only the four permitted values
+[PASS] 18. internal markdown links resolve to existing files
+[PASS] 19. CSV headers/row widths consistent across all packet CSVs
+[PASS] 20. canonical issue count (421) = 418 field/location/standard + 2 edge + 1 cycle
+[PASS] 20b. distinct affected requirements = 289 (matches R16 Failed effective records)
+[FAIL] 21. checksums verify against on-disk files -- MISMATCH:docs/kbdl/evidence/kbdl-011-source-model-resolution/evidence-manifest.md MISMATCH:docs/kbdl/evidence/kbdl-011-source-model-resolution/implementation-report.md MISMATCH:docs/kbdl/evidence/kbdl-011-source-model-resolution/project-owner-review.md MISMATCH:docs/kbdl/evidence/kbdl-011-source-model-resolution/smr2-fsrg1-roadmap-validation-transcript.txt MISMATCH:docs/kbdl/evidence/kbdl-011-source-model-resolution/source-model-resolution-packet.md 
+[PASS] 22. no unrelated working-tree changes outside the new packet directory or AGC1-authorized files
+[PASS] AG.KBDL-MOT-007.readme_independent_authority
+[PASS] AG.KBDL-MOT-007.csv_independent_authority
+[PASS] AG.KBDL-MOT-007.related_requirement_present
+[PASS] AG.KBDL-MOT-007.related_requirement_not_authority
+[PASS] AG.KBDL-MOT-007.no_authority_edge_to_KBDL-MOT-008
+[PASS] AG.KBDL-MOT-008.readme_independent_authority
+[PASS] AG.KBDL-MOT-008.csv_independent_authority
+[PASS] AG.KBDL-MOT-008.related_requirement_present
+[PASS] AG.KBDL-MOT-008.related_requirement_not_authority
+[PASS] AG.KBDL-MOT-008.no_authority_edge_to_KBDL-MOT-007
+[PASS] AG.KBDL-MOT-007.readme_csv_agree
+[PASS] AG.KBDL-MOT-008.readme_csv_agree
+[PASS] AG.KBDL-MOT-007.validation_status_unchanged
+[PASS] AG.KBDL-MOT-008.validation_status_unchanged
+[PASS] AG.csv.KBDL-MOT-007.validation_classification_unchanged
+[PASS] AG.csv.KBDL-MOT-008.validation_classification_unchanged
+[PASS] AG.no_two_node_cycle
+[PASS] AG.MOT-007.lifecycle_approved
+[PASS] AG.MOT-008.lifecycle_approved
+[PASS] AG.MOT-007.validation_status_not_verified
+[PASS] AG.MOT-008.validation_status_not_applicable
+[PASS] AG.csv.MOT-007.lifecycle_approved
+[PASS] AG.csv.MOT-008.lifecycle_approved
+[PASS] AG.csv.MOT-007.validation_classification_not_verified
+[PASS] AG.csv.MOT-008.validation_classification_not_applicable
+[PASS] AG.narrow_authorized_diff.commits_resolvable
+[PASS] AG.narrow_authorized_diff.parent_matches_base
+[PASS] AG.narrow_authorized_diff.readme_only_mot007_008
+[PASS] AG.narrow_authorized_diff.csv_only_mot007_008
+[PASS] AG.narrow_authorized_diff.csv_row_count_unchanged
+[PASS] FR1. smr2-fsrg1-prompt.md exists, identifies KBDL-011-SMR2-FSRG1, and states 'Implementation authorization status: NOT AUTHORIZED'
+[PASS] FR2. the FSRG1 specification states all six mandatory validation gates (schema, determinism, drift, path-safety, fixture-isolation, clean post-publication)
+[PASS] FR3. the FSRG1 specification names all four R13-R16 registries and declares them immutable historical evidence, with the normative/effective-metadata non-change constraints stated
+[PASS] FR4. all four R13-R16 field-source registries verify byte-for-byte against the SHA-256 digests recorded in their round evidence inventories
+[PASS] FR5. implementation-unlock-map.md carries LOCKED KBDL-011-SMR2-FSRG1 and KBDL-011-SMR2-VC-0001 entries, with the planning-agent gate and the reissue requirement stated
+[PASS] FR6. neither smr2-fsrg1-prompt.md nor implementation-unlock-map.md claims KBDL-011-SMR2-FSRG1 or KBDL-011-SMR2-VC-0001 is authorized, unlocked, ready, or approved for issue
+[PASS] 23. push-safety check deferred to commit/push shell sequence (fast-forward only)
+[PASS] 24. local HEAD SHA captured for post-push comparison
+======================================================================
+85/86 checks passed
+
+======================================================================
+$ python3 docs/kbdl/evidence/kbdl-011-source-model-resolution/scripts/fsrg1_roadmap_fixtures.py
+======================================================================
+======================================================================
+{
+  "actual_failing_checks": [
+    "FR1",
+    "FR2",
+    "FR3"
+  ],
+  "actual_result": "REJECTED (as expected)",
+  "detail": {
+    "FR1": "problems=['smr2-fsrg1-prompt.md missing']"
+  },
+  "expected_defect_categories": [
+    "FR1"
+  ],
+  "fixture": "1_prompt_specification_missing",
+  "meta_ok": true,
+  "mode": "rejection",
+  "triggered_as_expected": [
+    "FR1"
+  ]
+}
+{
+  "actual_failing_checks": [
+    "FR1"
+  ],
+  "actual_result": "REJECTED (as expected)",
+  "detail": {
+    "FR1": "problems=[\"impl status='AUTHORIZED'\"]"
+  },
+  "expected_defect_categories": [
+    "FR1"
+  ],
+  "fixture": "2_prompt_claims_implementation_authorization",
+  "meta_ok": true,
+  "mode": "rejection",
+  "triggered_as_expected": [
+    "FR1"
+  ]
+}
+{
+  "actual_failing_checks": [
+    "FR2"
+  ],
+  "actual_result": "REJECTED (as expected)",
+  "detail": {
+    "FR2": "missing=['determinism']"
+  },
+  "expected_defect_categories": [
+    "FR2"
+  ],
+  "fixture": "3_determinism_gate_dropped",
+  "meta_ok": true,
+  "mode": "rejection",
+  "triggered_as_expected": [
+    "FR2"
+  ]
+}
+{
+  "actual_failing_checks": [
+    "FR3"
+  ],
+  "actual_result": "REJECTED (as expected)",
+  "detail": {
+    "FR3": "problems=['r15 registry path not named']"
+  },
+  "expected_defect_categories": [
+    "FR3"
+  ],
+  "fixture": "4_historical_registry_path_dropped",
+  "meta_ok": true,
+  "mode": "rejection",
+  "triggered_as_expected": [
+    "FR3"
+  ]
+}
+{
+  "actual_failing_checks": [
+    "FR3"
+  ],
+  "actual_result": "REJECTED (as expected)",
+  "detail": {
+    "FR3": "problems=['no immutable/byte-identical preservation statement']"
+  },
+  "expected_defect_categories": [
+    "FR3"
+  ],
+  "fixture": "5_immutability_statement_removed",
+  "meta_ok": true,
+  "mode": "rejection",
+  "triggered_as_expected": [
+    "FR3"
+  ]
+}
+{
+  "actual_failing_checks": [
+    "FR4"
+  ],
+  "actual_result": "REJECTED (as expected)",
+  "detail": {
+    "FR4": "problems=[('r13', 'recorded=db75e41d3a79 actual=7bb23350d83d')]"
+  },
+  "expected_defect_categories": [
+    "FR4"
+  ],
+  "fixture": "6_historical_registry_bytes_mutated",
+  "meta_ok": true,
+  "mode": "rejection",
+  "triggered_as_expected": [
+    "FR4"
+  ]
+}
+{
+  "actual_failing_checks": [
+    "FR4"
+  ],
+  "actual_result": "REJECTED (as expected)",
+  "detail": {
+    "FR4": "problems=[('r14', 'recorded=000000000000 actual=2233d5c924d6')]"
+  },
+  "expected_defect_categories": [
+    "FR4"
+  ],
+  "fixture": "7_forged_inventory_digest",
+  "meta_ok": true,
+  "mode": "rejection",
+  "triggered_as_expected": [
+    "FR4"
+  ]
+}
+{
+  "actual_failing_checks": [
+    "FR5"
+  ],
+  "actual_result": "REJECTED (as expected)",
+  "detail": {
+    "FR5": "problems=[('FSRG1', 'not LOCKED', 'ELIGIBLE FOR FUTURE PROMPT AFTER APPROVAL')]"
+  },
+  "expected_defect_categories": [
+    "FR5"
+  ],
+  "fixture": "8_fsrg1_promoted_out_of_locked",
+  "meta_ok": true,
+  "mode": "rejection",
+  "triggered_as_expected": [
+    "FR5"
+  ]
+}
+{
+  "actual_failing_checks": [
+    "FR5"
+  ],
+  "actual_result": "REJECTED (as expected)",
+  "detail": {
+    "FR5": "problems=['SMR2-VC-0001 section missing from implementation-unlock-map.md']"
+  },
+  "expected_defect_categories": [
+    "FR5"
+  ],
+  "fixture": "9_downstream_gated_entry_removed",
+  "meta_ok": true,
+  "mode": "rejection",
+  "triggered_as_expected": [
+    "FR5"
+  ]
+}
+{
+  "actual_failing_checks": [
+    "FR6"
+  ],
+  "actual_result": "REJECTED (as expected)",
+  "detail": {
+    "FR6": "hits=[('smr2-fsrg1-prompt.md', 'KBDL-011-SMR2-VC-0001 is now approved for issue')]"
+  },
+  "expected_defect_categories": [
+    "FR6"
+  ],
+  "fixture": "10_prompt_declares_downstream_approved",
+  "meta_ok": true,
+  "mode": "rejection",
+  "triggered_as_expected": [
+    "FR6"
+  ]
+}
+{
+  "actual_failing_checks": [],
+  "actual_result": "PASSED (as expected)",
+  "detail": {},
+  "expected_defect_categories": [
+    "FR1",
+    "FR2",
+    "FR3",
+    "FR4",
+    "FR5",
+    "FR6"
+  ],
+  "fixture": "11_real_roadmap_state",
+  "meta_ok": true,
+  "mode": "positive",
+  "triggered_as_expected": [
+    "FR1",
+    "FR2",
+    "FR3",
+    "FR4",
+    "FR5",
+    "FR6"
+  ]
+}
+{
+  "actual_failing_checks": [],
+  "actual_result": "PASSED (as expected)",
+  "detail": {},
+  "expected_defect_categories": [
+    "FR1",
+    "FR2",
+    "FR3",
+    "FR4",
+    "FR5",
+    "FR6"
+  ],
+  "fixture": "12_benign_historical_note",
+  "meta_ok": true,
+  "mode": "positive",
+  "triggered_as_expected": [
+    "FR1",
+    "FR2",
+    "FR3",
+    "FR4",
+    "FR5",
+    "FR6"
+  ]
+}
+======================================================================
+fixture isolation: real repository files byte-unchanged = True
+12/12 fixtures produced their expected result
+
+======================================================================
+Pre-existing fixture suites (no check weakened or removed)
+======================================================================
+$ python3 docs/kbdl/evidence/kbdl-011-source-model-resolution/scripts/negative_fixtures.py
+Real repository files unchanged after all fixtures: True
+All 20 fixtures correctly rejected: True
+======================================================================
+
+$ python3 docs/kbdl/evidence/kbdl-011-source-model-resolution/scripts/dr1_r1_fixtures.py
+Real repository files unchanged after all fixtures: True
+All 10 DR1-R1 fixtures produced the expected result: True
+======================================================================
+
+$ python3 docs/kbdl/evidence/kbdl-011-source-model-resolution/scripts/authority_graph_fixtures.py
+Real repository files unchanged after all fixtures: True
+All 8 AGC1 fixtures correctly rejected: True
+======================================================================
+
+$ python3 docs/kbdl/evidence/kbdl-011-source-model-resolution/scripts/agc1_narrow_diff_fixtures.py
+Real repository files unchanged after all fixtures: True
+All 12 narrow-diff fixtures produced the expected pass/rejection: True
+======================================================================
+
+======================================================================
+Immutable historical evidence — R13-R16 field-source registries
+======================================================================
+73c029b88c2da4c8399dc3df7b8df537c2e51cc8425d181be94953c1ffbabf52  docs/kbdl/evidence/kbdl-011-r13/artifacts/field-source-registry.csv
+6f818c0b4a9d00e46c4c9a63425eb35eef4aa916dfeb0c5da2bea9c9bde15eed  docs/kbdl/evidence/kbdl-011-r14/artifacts/field-source-registry.csv
+2125692e5932f37a46eb52d2e162bb6f47e0540a1c4b9d0f71e5e0f84247ac9e  docs/kbdl/evidence/kbdl-011-r15/artifacts/field-source-registry.csv
+789c559f7fe342cec9d28af3ed0c95d9c86edb7513871d8bf2686afcacdee104  docs/kbdl/evidence/kbdl-011-r16/artifacts/field-source-registry.csv
+
+$ git status --porcelain -- docs/kbdl/evidence/kbdl-011-r13 docs/kbdl/evidence/kbdl-011-r14 docs/kbdl/evidence/kbdl-011-r15 docs/kbdl/evidence/kbdl-011-r16
+(empty output above = all four rounds byte-unchanged)
+
+======================================================================
+Pre-existing transcript corrected in the inventory only
+======================================================================
+$ git diff HEAD --stat -- docs/kbdl/evidence/kbdl-011-source-model-resolution/batch-a-od1-dr1-validation-transcript.txt
+(empty output above = the transcript file itself is byte-identical to HEAD;
+ KBDL-011-SMR1-RM1 corrects only its omission from evidence-inventory.csv)
+f4926794d454260510799a952b9bbd8a9212a012e6c64017e39453ccf01e3359  docs/kbdl/evidence/kbdl-011-source-model-resolution/batch-a-od1-dr1-validation-transcript.txt
+
+======================================================================
+Protected files and normative/effective metadata unchanged
+======================================================================
+(empty output above = all byte-unchanged)
+
+======================================================================
+Working-tree scope
+$ git status --porcelain
+======================================================================
+ M docs/kbdl/evidence/kbdl-011-source-model-resolution/checksums.sha256
+ M docs/kbdl/evidence/kbdl-011-source-model-resolution/evidence-inventory.csv
+ M docs/kbdl/evidence/kbdl-011-source-model-resolution/evidence-manifest.md
+ M docs/kbdl/evidence/kbdl-011-source-model-resolution/implementation-report.md
+ M docs/kbdl/evidence/kbdl-011-source-model-resolution/implementation-unlock-map.md
+ M docs/kbdl/evidence/kbdl-011-source-model-resolution/project-owner-review.md
+ M docs/kbdl/evidence/kbdl-011-source-model-resolution/scripts/validate_packet.py
+ M docs/kbdl/evidence/kbdl-011-source-model-resolution/source-model-resolution-packet.md
+?? docs/kbdl/evidence/kbdl-011-source-model-resolution/scripts/fsrg1_roadmap.py
+?? docs/kbdl/evidence/kbdl-011-source-model-resolution/scripts/fsrg1_roadmap_fixtures.py
+?? docs/kbdl/evidence/kbdl-011-source-model-resolution/smr2-fsrg1-prompt.md
+?? docs/kbdl/evidence/kbdl-011-source-model-resolution/smr2-fsrg1-roadmap-validation-transcript.txt
+
+Interpretation: every changed or added path is inside the SMR1 packet
+directory. No R13-R16 artifact, no module file, no traceability
+metadata, and no protected file is touched. Decision-state counts are
+unchanged: 4 durably recorded (3 Batch H, 1 Batch A); 417 PENDING.
+This step is a roadmap and tooling record only. No implementation is
+authorized and FSRG1 implementation has not begun.

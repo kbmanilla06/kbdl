@@ -71,6 +71,10 @@ implementation authorization.
 | `batch-h-owner-decision-record.md` | (Added by KBDL-011-SMR1-BH-R1.) Durable current-owner evidence for the three Batch H decisions. |
 | `batch-a-smr1-vc-0001-owner-decision-record.md` | (Added by KBDL-011-SMR1-BA-OD1-DR1.) Durable current-owner evidence for the one Batch A decision (`SMR1-VC-0001` = SET TO NOT VERIFIED). |
 | `batch-a-od1-dr1-validation-transcript.txt` | (Added by KBDL-011-SMR1-BA-OD1-DR1.) Durable command/output transcript for this recording step. |
+| `smr2-fsrg1-prompt.md` | (Added by KBDL-011-SMR1-RM1.) Specification of the prerequisite roadmap prompt `KBDL-011-SMR2-FSRG1` (live field-source registry artifact and deterministic generator), including its preservation constraints and six mandatory validation gates. A roadmap record only — it authorizes nothing. |
+| `scripts/fsrg1_roadmap.py` | (Added by KBDL-011-SMR1-RM1.) Fail-closed checks (FR1–FR6) that the FSRG1 roadmap record stays intact: the specification exists and disclaims authorization, states all six gates, names and protects the four R13–R16 registries (verified against their recorded SHA-256 digests), and keeps both `KBDL-011-SMR2-FSRG1` and `KBDL-011-SMR2-VC-0001` at a LOCKED status with the planning-agent gate stated. |
+| `smr2-fsrg1-roadmap-validation-transcript.txt` | (Added by KBDL-011-SMR1-RM1.) Durable command/output transcript for the roadmap addition: positive validator run, FR1–FR6 fixtures, the pre-existing fixture suites, R13–R16 registry immutability verification, and the protected-file/working-tree scope audit. |
+| `scripts/fsrg1_roadmap_fixtures.py` | (Added by KBDL-011-SMR1-RM1.) Twelve deterministic fixtures (ten rejection, two positive-control) proving FR1–FR6 fail closed; operates on temporary copies and a synthetic temporary repository root only. |
 
 ## 3. Source-of-truth hierarchy applied
 
@@ -201,9 +205,10 @@ Four distinct facts must not be conflated:
    point, this correction had not yet been validated by a planning agent
    and was applied-but-unvalidated current state. As of the current
    KBDL-011-SMR1-BA-OD1-DR1-R1 point, **KBDL-011-SMR1-BH-AGC1 has passed
-   planning-agent validation**; that specific gate is closed. The
-   current open planning-agent-validation gate is
-   KBDL-011-SMR1-BA-OD1-DR1-R1 itself (this remediation), not AGC1.
+   planning-agent validation**; that specific gate is closed. As of
+   KBDL-011-SMR1-RM1, `KBDL-011-SMR1-BA-OD1-DR1-R1` has also passed
+   planning-agent validation, so it is no longer an open gate either;
+   the current open gate is KBDL-011-SMR1-RM1 itself. See §11.
 4. **Remaining unresolved KBDL-011 work.** At the historical
    KBDL-011-SMR1-BH-AGC1 point (3 durably recorded, 418 other SMR1
    issues pending), applying this one correction did not resolve any of
@@ -313,7 +318,7 @@ in the durable record and stale current-state prose (see §11);
 reopening or reinterpreting the underlying `SET TO NOT VERIFIED`
 decision itself.
 
-## 11. Current planning-agent validation status (as of KBDL-011-SMR1-BA-OD1-DR1-R1)
+## 11. Current planning-agent validation status (as of KBDL-011-SMR1-RM1)
 
 This section states the current planning-agent-validation gate status
 without rewriting any prior commit or historical transcript:
@@ -328,14 +333,83 @@ without rewriting any prior commit or historical transcript:
   pending / AGC1 pending) survived in several sections. DR1's decision
   recording itself (`SMR1-VC-0001` = SET TO NOT VERIFIED, 2026-07-29)
   is not reopened, reinterpreted, or changed by this correction.
-- `KBDL-011-SMR1-BA-OD1-DR1-R1` (this remediation): **planning-agent
-  validation of this remediation is the current open gate.** Until it
-  passes, `KBDL-011-SMR1-BA-OD1-DR1`'s validation claims remain
-  superseded by this section, and `KBDL-011` remains incomplete.
+- `KBDL-011-SMR1-BA-OD1-DR1-R1`: **PASSED — PLANNING-AGENT VALIDATED**
+  (recorded by KBDL-011-SMR1-RM1, on the project owner's 2026-07-29
+  disposition). It is **not** an open gate. Its authority-wording and
+  stale-prose corrections, and the `AR1`/`AR2`/`SP1`–`SP4` checks it
+  added, stand as validated; `KBDL-011-SMR1-BA-OD1-DR1`'s superseded
+  validation claims remain superseded.
+- `KBDL-011-SMR1-RM1` (the `KBDL-011-SMR2-FSRG1` roadmap addition, §12):
+  **planning-agent validation of this step is the current open gate.**
 
-Current decision-state counts (unchanged by this remediation): 4
-decisions durably recorded in total (3 Batch H, 1 Batch A); 417 issues
-remain PENDING.
+`KBDL-011` remains incomplete. Closing these gates does not approve
+candidate readiness, implementation conformance, or project completion,
+and does not unlock `KBDL-011-SMR2-FSRG1` or `KBDL-011-SMR2-VC-0001`,
+both of which remain `LOCKED — PLANNING-AGENT VALIDATION REQUIRED`.
+
+Current decision-state counts (unchanged by this step): 4 decisions
+durably recorded in total (3 Batch H, 1 Batch A); 417 issues remain
+PENDING.
+
+## 12. Prerequisite roadmap prompt KBDL-011-SMR2-FSRG1 (added by KBDL-011-SMR1-RM1)
+
+On 2026-07-29 the project owner returned the disposition **APPROVE WITH
+CHANGES** on the proposed `KBDL-011-SMR2-VC-0001` metadata-recording
+prompt: a prerequisite roadmap prompt, `KBDL-011-SMR2-FSRG1`, is to be
+added first, establishing a live, current-state field-source-registry
+artifact and a deterministic generator; and `KBDL-011-SMR2-VC-0001` is to
+stay locked until `KBDL-011-SMR2-FSRG1` passes planning-agent validation,
+after which the metadata-recording prompt is reissued against the
+approved generator.
+
+`KBDL-011-SMR1-RM1` records that disposition in the roadmap. It: (1) adds
+`smr2-fsrg1-prompt.md`, the FSRG1 prompt specification — its rationale,
+scope, preservation constraints, the six mandatory validation gates
+(schema, determinism, drift, path-safety, fixture-isolation, and clean
+post-publication validation), its acceptance criteria, and its gating
+relationship to `KBDL-011-SMR2-VC-0001`; (2) adds two entries to
+`implementation-unlock-map.md` — the prerequisite `KBDL-011-SMR2-FSRG1`
+and the downstream `KBDL-011-SMR2-VC-0001` — both at
+`LOCKED — PLANNING-AGENT VALIDATION REQUIRED`, and updates Batch A's
+later-prompt and precondition lines to name the gate; (3) adds
+`scripts/fsrg1_roadmap.py`, six fail-closed checks (FR1–FR6) that the
+roadmap record cannot silently weaken; (4) adds
+`scripts/fsrg1_roadmap_fixtures.py`, twelve deterministic fixtures (ten
+rejection, two positive-control) proving those checks fail closed, run
+against temporary copies and a synthetic temporary repository root only,
+with the real repository verified byte-unchanged afterward; (5) adds
+`smr2-fsrg1-roadmap-validation-transcript.txt`; (6) records
+`KBDL-011-SMR1-BA-OD1-DR1-R1` as PASSED — PLANNING-AGENT VALIDATED (§11),
+closing that gate; and (7) regenerates `evidence-inventory.csv` and
+`checksums.sha256`, which also closes a pre-existing omission:
+`batch-a-od1-dr1-validation-transcript.txt` is a pre-existing durable
+transcript, published by `KBDL-011-SMR1-BA-OD1-DR1`, that was never
+listed in `evidence-inventory.csv`. **Only the inventory record is
+corrected; the transcript file itself remains byte-identical** to the
+published copy and is not rewritten, re-run, or re-dated here.
+
+The rationale the disposition responds to is that Batch A requires
+`field-source-registry.csv` to be *regenerated, not hand-edited*, while
+the only four registries in the repository —
+`kbdl-011-r13`/`r14`/`r15`/`r16` `artifacts/field-source-registry.csv` —
+are point-in-time round audit artifacts emitted by those rounds' own
+validators. There is no live registry and no standalone generator, so a
+recording prompt issued today could only hand-edit a registry or mutate
+historical round evidence. All four remain **immutable historical
+evidence**: `KBDL-011-SMR1-RM1` leaves them byte-identical, and FR4
+verifies them against the SHA-256 digests recorded in their own round
+evidence inventories on every validator run.
+
+This step is a roadmap and tooling record only. It does not prepare,
+authorize, run, or approve the FSRG1 generator; does not create a live
+registry; does not issue `KBDL-011-SMR2-VC-0001`; does not begin
+KBDL-011-SMR2 or any other roadmap item; changes no normative content, no
+effective metadata, and no protected file; restores no VAL status; and
+records, reopens, or preselects no owner decision. The decision-state
+counts are unchanged: 4 durably recorded (3 Batch H, 1 Batch A); 417
+PENDING. `KBDL-011-SMR1-BA-OD1-DR1-R1` has passed planning-agent
+validation and is not an open gate (§11); planning-agent validation of
+`KBDL-011-SMR1-RM1` itself is now the open gate.
 
 ## 8. Progression gate
 
