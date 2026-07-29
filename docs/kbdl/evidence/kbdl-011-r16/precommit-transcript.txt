@@ -1,0 +1,23 @@
+KBDL-011-R16A command transcript
+
+Preconditions: git fetch, remote, branch, status, local/tracking/live SHA, and 25-commit inspection completed with exit 0. All three SHAs were 873577a536e74c906cc14321423057b255216a99.
+
+Command: python3 docs/kbdl/evidence/kbdl-011-r16/scripts/production_validator.py
+Purpose: reproduce the complete source-independent failed audit and generate evidence.
+Exit: 1 (expected BLOCKED audit conclusion; no script crash)
+Stdout: complete computed summary in artifacts/production-summary.txt.
+Stderr: complete per-defect data in artifacts/defects.csv and category lines emitted by the process.
+Interpretation: audit execution completed; audit result BLOCKED; evidence generation PASS.
+
+Command: python3 docs/kbdl/evidence/kbdl-011-r16/scripts/documentation_validator.py
+Purpose: complete VAL-007 documentation-integrity method.
+Exit: 0
+Stdout: Markdown files 79; all documentation defect categories 0; Documentation defects 0.
+Stderr: empty.
+Interpretation: PASS; VAL-007 remains Verified only for this method.
+
+Command: git diff --check
+Purpose: whitespace integrity.
+Expected interpretation: exit 0 with empty output.
+
+Failed or skipped semantic checks: the eleven VAL-004 clause methods were intentionally not executed. Mutation controls are retained but do not convert the blocked baseline into a semantic PASS.

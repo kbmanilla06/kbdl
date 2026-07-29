@@ -6,7 +6,7 @@ KBDL-011 remains in remediation and has not passed planning-agent validation.
 All eleven current, non-retroactive prompt-authority confirmations were supplied
 on 2026-07-28 (Asia/Manila) under [KBDL-DEC-016](decision-register.md#kbdl-dec-016--current-non-retroactive-prompt-authority-confirmations)
 and passed AR2 planning-agent validation. Historical approval commands remain
-unrecovered. R15 is the current semantic-validator remediation pending planning-agent
+unrecovered. R16 is preserved as a blocked source-independent audit pending planning-agent
 validation.
 Implementation conformance remains `Not verified`; project completion remains
 pending explicit project-owner approval.
@@ -1126,7 +1126,7 @@ records and has its own specification location and evidence boundary.
 - **Specification location (per-ID):** `001` → [§4](validation.md#4-evidence-classification); `002` → [§8](validation.md#8-requirement-inventory); `003` → [§9](validation.md#9-lifecycle-status-audit) and [§12](validation.md#12-approved-authority-audit); `004` → [§11](validation.md#11-validation-status-audit).
 - **Lifecycle status:** All Approved.
 - **Provenance:** All Confirmed.
-- **Validation status (per-ID):** `001`, `002`, `003`: Verified; `004`: Not verified because the eleven R12 clause-evidence findings remain out of scope.
+- **Validation status (per-ID):** `001`, `002`: Verified; `003`, `004`: Not verified during R16 source-independence remediation; the eleven R12 clause-evidence findings remain out of scope.
 - **Authority:** Explicit mandatory KBDL-011 prompt clauses approved by the project owner.
 - **Validation class (per-ID):** `001`: A; `002`: A; `003`: B; `004`: B.
 - **Validation method / evidence (per-ID):** `001`: class-assignment audit; `002`: repository inventory parser; `003`: lifecycle/authority comparison; `004`: validation-label/evidence comparison. Executed results are recorded in [§4](validation.md#4-evidence-classification), [§8](validation.md#8-requirement-inventory), [§9](validation.md#9-lifecycle-status-audit), and [§11](validation.md#11-validation-status-audit).
@@ -1147,7 +1147,7 @@ records and has its own specification location and evidence boundary.
 - **Specification location (per-ID):** `005` → [§13](validation.md#13-decision-register-audit) and [§14](validation.md#14-pending-and-deferred-inventory); `006` → [§15](validation.md#15-traceability-audit); `007` → [§16](validation.md#16-cross-reference-and-documentation-integrity-audit); `008` → [§17](validation.md#17-governance-and-conventions-audit) through [§28](validation.md#28-security-privacy-correctness-and-data-integrity-audit).
 - **Lifecycle status:** All Approved.
 - **Provenance:** All Confirmed.
-- **Validation status (per-ID):** `005`, `006`, `007`: Verified; `008`: Not verified.
+- **Validation status (per-ID):** `007`: Verified; `005`, `006`, `008`: Not verified during R16 source-independence remediation.
 - **Authority:** Explicit mandatory KBDL-011 prompt clauses approved by the project owner.
 - **Validation class (per-ID):** `005`: B; `006`: A; `007`: A; `008`: C.
 - **Validation method / evidence (per-ID):** `005`: decision/pending ledger audit; `006`: per-ID traceability audit; `007`: link, anchor, heading, table, ID, roadmap, and claim checks; `008`: static invariant comparison. Executed evidence is recorded in the linked sections.
@@ -1412,13 +1412,13 @@ remain Recommended, its format/tooling item remains Deferred, and no
 implementation-level customization behavior is verified. KBDL-010 passed
 planning-agent review and KBDL-011 is present with twelve Approved validation-
 methodology requirements. AR2 established current, non-retroactive authority
-without reconstructing historical prompt approvals. R15 soundly resolves
-all Approved authority graphs and field-specific effective-record sources, restoring
-`VAL-003` and `VAL-006`; `VAL-004` remains Not verified because its eleven
+without reconstructing historical prompt approvals. R16 preserves unresolved
+Approved-authority and field-specific source defects without correction, so
+`VAL-003`, `VAL-005`, and `VAL-006` remain Not verified; `VAL-004` remains Not verified because its eleven
 clause-evidence methods were not executed. `VAL-007` remains Verified for its
 complete documentation method. `VAL-008`, `010`, and
 `011` remain Not verified. The documentation-only candidate recommendation is
-`NOT READY — SEMANTIC VALIDATOR AND CLAUSE-EVIDENCE REMEDIATION REQUIRED`, pending planning-agent validation and without readiness or
+`NOT READY — SOURCE-INDEPENDENCE AND CLAUSE-EVIDENCE REMEDIATION REQUIRED`, pending planning-agent validation and without readiness or
 completion approval.
 Implementation conformance is
 `NOT VERIFIED`, and completion awaits independent review and explicit

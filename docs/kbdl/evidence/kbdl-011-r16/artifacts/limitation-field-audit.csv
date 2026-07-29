@@ -1,0 +1,318 @@
+Requirement ID,Derived Not-verified/excluded scope,Known limitation,Exact normalized scope overlap,Result
+KBDL-A11Y-001,not verified not verified,"This document does not claim full WCAG conformance, screen-reader compatibility, or real-device support — those require an implementation and recorded test evidence",None,FAIL
+KBDL-A11Y-002,not verified not verified,"This document does not claim full WCAG conformance, screen-reader compatibility, or real-device support — those require an implementation and recorded test evidence",None,FAIL
+KBDL-A11Y-003,not verified not verified,"This document does not claim full WCAG conformance, screen-reader compatibility, or real-device support — those require an implementation and recorded test evidence",None,FAIL
+KBDL-A11Y-004,not verified not verified,"This document does not claim full WCAG conformance, screen-reader compatibility, or real-device support — those require an implementation and recorded test evidence",None,FAIL
+KBDL-A11Y-005,not verified not verified,"This document does not claim full WCAG conformance, screen-reader compatibility, or real-device support — those require an implementation and recorded test evidence",None,FAIL
+KBDL-A11Y-006,not verified not verified,"This document does not claim full WCAG conformance, screen-reader compatibility, or real-device support — those require an implementation and recorded test evidence",None,FAIL
+KBDL-A11Y-007,none verified,"This document does not claim full WCAG conformance, screen-reader compatibility, or real-device support — those require an implementation and recorded test evidence",None,PASS
+KBDL-A11Y-008,none verified,"This document does not claim full WCAG conformance, screen-reader compatibility, or real-device support — those require an implementation and recorded test evidence",None,PASS
+KBDL-A11Y-009,none verified,"This document does not claim full WCAG conformance, screen-reader compatibility, or real-device support — those require an implementation and recorded test evidence",None,PASS
+KBDL-A11Y-010,not verified not verified,"This document does not claim full WCAG conformance, screen-reader compatibility, or real-device support — those require an implementation and recorded test evidence",None,FAIL
+KBDL-A11Y-011,not verified not verified,Forced-colors/high-contrast mode is currently unaddressed elsewhere in the specification and was explicitly excluded from the KBDL-004 theme approval (KBDL-DEC-013); these three requirements must not be treated as Approved until reviewed,None,FAIL
+KBDL-A11Y-012,not verified not verified,"This document does not claim full WCAG conformance, screen-reader compatibility, or real-device support — those require an implementation and recorded test evidence",None,FAIL
+KBDL-A11Y-013,not verified not verified,"This document does not claim full WCAG conformance, screen-reader compatibility, or real-device support — those require an implementation and recorded test evidence",None,FAIL
+KBDL-A11Y-014,not verified not verified,"This document does not claim full WCAG conformance, screen-reader compatibility, or real-device support — those require an implementation and recorded test evidence",None,FAIL
+KBDL-A11Y-015,not verified not verified,"This document does not claim full WCAG conformance, screen-reader compatibility, or real-device support — those require an implementation and recorded test evidence",None,FAIL
+KBDL-A11Y-016,not verified not verified,"This document does not claim full WCAG conformance, screen-reader compatibility, or real-device support — those require an implementation and recorded test evidence",None,FAIL
+KBDL-A11Y-017,not verified not verified,"This document does not claim full WCAG conformance, screen-reader compatibility, or real-device support — those require an implementation and recorded test evidence",None,FAIL
+KBDL-A11Y-018,not verified not verified,"This document does not claim full WCAG conformance, screen-reader compatibility, or real-device support — those require an implementation and recorded test evidence",None,FAIL
+KBDL-A11Y-019,none not applicable,"This document does not claim full WCAG conformance, screen-reader compatibility, or real-device support — those require an implementation and recorded test evidence",None,PASS
+KBDL-A11Y-020,not verified not verified,"This document does not claim full WCAG conformance, screen-reader compatibility, or real-device support — those require an implementation and recorded test evidence",None,FAIL
+KBDL-A11Y-021,none not applicable,Forced-colors/high-contrast mode is currently unaddressed elsewhere in the specification and was explicitly excluded from the KBDL-004 theme approval (KBDL-DEC-013); these three requirements must not be treated as Approved until reviewed,None,PASS
+KBDL-A11Y-022,not verified not verified,"This document does not claim full WCAG conformance, screen-reader compatibility, or real-device support — those require an implementation and recorded test evidence",None,FAIL
+KBDL-A11Y-023,not verified not verified,"This document does not claim full WCAG conformance, screen-reader compatibility, or real-device support — those require an implementation and recorded test evidence",None,FAIL
+KBDL-A11Y-024,not verified not verified,"This document does not claim full WCAG conformance, screen-reader compatibility, or real-device support — those require an implementation and recorded test evidence",None,FAIL
+KBDL-A11Y-025,not verified not verified,"This document does not claim full WCAG conformance, screen-reader compatibility, or real-device support — those require an implementation and recorded test evidence",None,FAIL
+KBDL-A11Y-026,not verified not verified,"This document does not claim full WCAG conformance, screen-reader compatibility, or real-device support — those require an implementation and recorded test evidence",None,FAIL
+KBDL-A11Y-027,not verified not verified,"This document does not claim full WCAG conformance, screen-reader compatibility, or real-device support — those require an implementation and recorded test evidence",None,FAIL
+KBDL-A11Y-028,not verified not verified,"This document does not claim full WCAG conformance, screen-reader compatibility, or real-device support — those require an implementation and recorded test evidence",None,FAIL
+KBDL-A11Y-029,not verified not verified,"This document does not claim full WCAG conformance, screen-reader compatibility, or real-device support — those require an implementation and recorded test evidence",None,FAIL
+KBDL-A11Y-030,not verified not verified,"This document does not claim full WCAG conformance, screen-reader compatibility, or real-device support — those require an implementation and recorded test evidence",None,FAIL
+KBDL-A11Y-031,not verified not verified,"This document does not claim full WCAG conformance, screen-reader compatibility, or real-device support — those require an implementation and recorded test evidence",None,FAIL
+KBDL-A11Y-032,not verified not verified,"This document does not claim full WCAG conformance, screen-reader compatibility, or real-device support — those require an implementation and recorded test evidence",None,FAIL
+KBDL-A11Y-033,not verified not verified,"This document does not claim full WCAG conformance, screen-reader compatibility, or real-device support — those require an implementation and recorded test evidence",None,FAIL
+KBDL-A11Y-034,not verified not verified,"This document does not claim full WCAG conformance, screen-reader compatibility, or real-device support — those require an implementation and recorded test evidence",None,FAIL
+KBDL-A11Y-035,none not applicable,Forced-colors/high-contrast mode is currently unaddressed elsewhere in the specification and was explicitly excluded from the KBDL-004 theme approval (KBDL-DEC-013); these three requirements must not be treated as Approved until reviewed,None,PASS
+KBDL-A11Y-036,none not applicable,"This document does not claim full WCAG conformance, screen-reader compatibility, or real-device support — those require an implementation and recorded test evidence",None,PASS
+KBDL-A11Y-037,not verified not verified,"This document does not claim full WCAG conformance, screen-reader compatibility, or real-device support — those require an implementation and recorded test evidence",None,FAIL
+KBDL-A11Y-038,none not applicable,"This document does not claim full WCAG conformance, screen-reader compatibility, or real-device support — those require an implementation and recorded test evidence",None,PASS
+KBDL-A11Y-039,none not applicable,"This document does not claim full WCAG conformance, screen-reader compatibility, or real-device support — those require an implementation and recorded test evidence",None,PASS
+KBDL-A11Y-040,not verified not verified,"This document does not claim full WCAG conformance, screen-reader compatibility, or real-device support — those require an implementation and recorded test evidence",None,FAIL
+KBDL-CMP-001,not verified not verified,Implementation-dependent; cannot be tested until real components exist,None,FAIL
+KBDL-CMP-002,not verified not verified,Implementation-dependent; cannot be tested until real components exist,None,FAIL
+KBDL-CMP-003,not verified not verified,Implementation-dependent; cannot be tested until real components exist,None,FAIL
+KBDL-CMP-004,not verified not verified,Implementation-dependent; cannot be tested until real components exist,None,FAIL
+KBDL-CMP-005,none not applicable,Implementation-dependent; cannot be tested until real components exist,None,PASS
+KBDL-CMP-006,not verified not verified,Implementation-dependent; cannot be tested until real components exist,None,FAIL
+KBDL-CMP-007,not verified not verified,Implementation-dependent; cannot be tested until real components exist,None,FAIL
+KBDL-CMP-008,not verified not verified,Implementation-dependent; cannot be tested until real components exist,None,FAIL
+KBDL-CMP-009,not verified not verified,Implementation-dependent; cannot be tested until real components exist,None,FAIL
+KBDL-CMP-010,not verified not verified,Implementation-dependent; cannot be tested until real components exist,None,FAIL
+KBDL-CMP-011,not verified not verified,Implementation-dependent; cannot be tested until real components exist,None,FAIL
+KBDL-CMP-012,not verified not verified,Implementation-dependent; cannot be tested until real components exist,None,FAIL
+KBDL-CMP-013,not verified not verified,Implementation-dependent; cannot be tested until real components exist,None,FAIL
+KBDL-CMP-014,not verified not verified,Implementation-dependent,None,FAIL
+KBDL-CMP-015,none not applicable,Implementation-dependent,None,PASS
+KBDL-CMP-016,not verified not verified,Implementation-dependent,None,FAIL
+KBDL-CMP-017,none not applicable,Implementation-dependent,None,PASS
+KBDL-CMP-018,not verified not verified,Implementation-dependent,None,FAIL
+KBDL-CMP-019,not verified not verified,Implementation-dependent,None,FAIL
+KBDL-CMP-020,none not applicable,Implementation-dependent,None,PASS
+KBDL-CMP-021,not verified not verified,Implementation-dependent,None,FAIL
+KBDL-CMP-022,not verified not verified,Implementation-dependent,None,FAIL
+KBDL-CMP-023,not verified not verified,Implementation-dependent,None,FAIL
+KBDL-CMP-024,not verified not verified,Implementation-dependent,None,FAIL
+KBDL-CMP-025,none not applicable,Implementation-dependent,None,PASS
+KBDL-CMP-026,not verified not verified,Implementation-dependent,None,FAIL
+KBDL-CMP-027,not verified not verified,Implementation-dependent,None,FAIL
+KBDL-CMP-028,not verified not verified,Implementation-dependent,None,FAIL
+KBDL-CMP-029,none not applicable,Implementation-dependent,None,PASS
+KBDL-CMP-030,not verified not verified,Implementation-dependent,None,FAIL
+KBDL-CMP-031,not verified not verified,Implementation-dependent,None,FAIL
+KBDL-CMP-032,not verified not verified,Implementation-dependent,None,FAIL
+KBDL-CMP-033,not verified not verified,Implementation-dependent,None,FAIL
+KBDL-CMP-034,not verified not verified,Implementation-dependent,None,FAIL
+KBDL-CMP-035,not verified not verified,Implementation-dependent,None,FAIL
+KBDL-CMP-036,none not applicable,Implementation-dependent,None,PASS
+KBDL-CMP-037,not verified not verified,Implementation-dependent,None,FAIL
+KBDL-CMP-038,not verified not verified,KBDL-CMP-041 additionally depends on the unapproved KBDL-RSP-002/008 and cannot be approved independently of them,None,FAIL
+KBDL-CMP-039,not verified not verified,KBDL-CMP-041 additionally depends on the unapproved KBDL-RSP-002/008 and cannot be approved independently of them,None,FAIL
+KBDL-CMP-040,not verified not verified,KBDL-CMP-041 additionally depends on the unapproved KBDL-RSP-002/008 and cannot be approved independently of them,None,FAIL
+KBDL-CMP-041,none not applicable,KBDL-CMP-041 additionally depends on the unapproved KBDL-RSP-002/008 and cannot be approved independently of them,None,PASS
+KBDL-CMP-042,not verified not verified,KBDL-CMP-041 additionally depends on the unapproved KBDL-RSP-002/008 and cannot be approved independently of them,None,FAIL
+KBDL-CMP-043,not verified not verified,KBDL-CMP-041 additionally depends on the unapproved KBDL-RSP-002/008 and cannot be approved independently of them,None,FAIL
+KBDL-CMP-044,none not applicable,KBDL-CMP-041 additionally depends on the unapproved KBDL-RSP-002/008 and cannot be approved independently of them,None,PASS
+KBDL-CMP-045,not verified not verified,KBDL-CMP-041 additionally depends on the unapproved KBDL-RSP-002/008 and cannot be approved independently of them,None,FAIL
+KBDL-CMP-046,none not applicable,KBDL-CMP-041 additionally depends on the unapproved KBDL-RSP-002/008 and cannot be approved independently of them,None,PASS
+KBDL-CMP-047,not verified not verified,KBDL-CMP-041 additionally depends on the unapproved KBDL-RSP-002/008 and cannot be approved independently of them,None,FAIL
+KBDL-CMP-048,none not applicable,KBDL-CMP-041 additionally depends on the unapproved KBDL-RSP-002/008 and cannot be approved independently of them,None,PASS
+KBDL-CMP-049,not verified not verified,KBDL-CMP-041 additionally depends on the unapproved KBDL-RSP-002/008 and cannot be approved independently of them,None,FAIL
+KBDL-CMP-050,none not applicable,Implementation-dependent; cannot be tested until real components exist,None,PASS
+KBDL-CMP-051,not verified not verified,Implementation-dependent; cannot be tested until real components exist,None,FAIL
+KBDL-CMP-052,none not applicable,Implementation-dependent,None,PASS
+KBDL-CMP-053,not verified not verified,Implementation-dependent,None,FAIL
+KBDL-CMP-054,not verified not verified,Implementation-dependent,None,FAIL
+KBDL-CMP-055,not verified not verified,Implementation-dependent,None,FAIL
+KBDL-CMP-056,none not applicable,KBDL-CMP-083 additionally notes that navigation-drawer use remains bound by the unapproved KBDL-CMP-041 (KBDL-007) regardless of this item's own approval,None,PASS
+KBDL-CMP-057,not verified not verified,KBDL-CMP-083 additionally notes that navigation-drawer use remains bound by the unapproved KBDL-CMP-041 (KBDL-007) regardless of this item's own approval,None,FAIL
+KBDL-CMP-058,not verified not verified,KBDL-CMP-083 additionally notes that navigation-drawer use remains bound by the unapproved KBDL-CMP-041 (KBDL-007) regardless of this item's own approval,None,FAIL
+KBDL-CMP-059,not verified not verified,KBDL-CMP-083 additionally notes that navigation-drawer use remains bound by the unapproved KBDL-CMP-041 (KBDL-007) regardless of this item's own approval,None,FAIL
+KBDL-CMP-060,not verified not verified,KBDL-CMP-083 additionally notes that navigation-drawer use remains bound by the unapproved KBDL-CMP-041 (KBDL-007) regardless of this item's own approval,None,FAIL
+KBDL-CMP-061,not verified not verified,Implementation-dependent,None,FAIL
+KBDL-CMP-062,not verified not verified,Implementation-dependent,None,FAIL
+KBDL-CMP-063,not verified not verified,KBDL-CMP-105 additionally cites the unapproved KBDL-RSP-011 as related context; KBDL-CMP-111 additionally depends on the eventual KBDL-RSP-002 value for its exact trigger point,None,FAIL
+KBDL-CMP-064,not verified not verified,KBDL-CMP-105 additionally cites the unapproved KBDL-RSP-011 as related context; KBDL-CMP-111 additionally depends on the eventual KBDL-RSP-002 value for its exact trigger point,None,FAIL
+KBDL-CMP-065,not verified not verified,Implementation-dependent,None,FAIL
+KBDL-CMP-066,not verified not verified,KBDL-CMP-105 additionally cites the unapproved KBDL-RSP-011 as related context; KBDL-CMP-111 additionally depends on the eventual KBDL-RSP-002 value for its exact trigger point,None,FAIL
+KBDL-CMP-067,none not applicable,Implementation-dependent,None,PASS
+KBDL-CMP-068,not verified not verified,Implementation-dependent,None,FAIL
+KBDL-CMP-069,none not applicable,Implementation-dependent,None,PASS
+KBDL-CMP-070,not verified not verified,Implementation-dependent,None,FAIL
+KBDL-CMP-071,not verified not verified,KBDL-CMP-083 additionally notes that navigation-drawer use remains bound by the unapproved KBDL-CMP-041 (KBDL-007) regardless of this item's own approval,None,FAIL
+KBDL-CMP-072,not verified not verified,KBDL-CMP-083 additionally notes that navigation-drawer use remains bound by the unapproved KBDL-CMP-041 (KBDL-007) regardless of this item's own approval,None,FAIL
+KBDL-CMP-073,none not applicable,KBDL-CMP-083 additionally notes that navigation-drawer use remains bound by the unapproved KBDL-CMP-041 (KBDL-007) regardless of this item's own approval,None,PASS
+KBDL-CMP-074,none not applicable,KBDL-CMP-083 additionally notes that navigation-drawer use remains bound by the unapproved KBDL-CMP-041 (KBDL-007) regardless of this item's own approval,None,PASS
+KBDL-CMP-075,not verified not verified,KBDL-CMP-083 additionally notes that navigation-drawer use remains bound by the unapproved KBDL-CMP-041 (KBDL-007) regardless of this item's own approval,None,FAIL
+KBDL-CMP-076,none not applicable,KBDL-CMP-083 additionally notes that navigation-drawer use remains bound by the unapproved KBDL-CMP-041 (KBDL-007) regardless of this item's own approval,None,PASS
+KBDL-CMP-077,not verified not verified,KBDL-CMP-083 additionally notes that navigation-drawer use remains bound by the unapproved KBDL-CMP-041 (KBDL-007) regardless of this item's own approval,None,FAIL
+KBDL-CMP-078,not verified not verified,KBDL-CMP-083 additionally notes that navigation-drawer use remains bound by the unapproved KBDL-CMP-041 (KBDL-007) regardless of this item's own approval,None,FAIL
+KBDL-CMP-079,not verified not verified,KBDL-CMP-083 additionally notes that navigation-drawer use remains bound by the unapproved KBDL-CMP-041 (KBDL-007) regardless of this item's own approval,None,FAIL
+KBDL-CMP-080,none not applicable,KBDL-CMP-083 additionally notes that navigation-drawer use remains bound by the unapproved KBDL-CMP-041 (KBDL-007) regardless of this item's own approval,None,PASS
+KBDL-CMP-081,not verified not verified,KBDL-CMP-083 additionally notes that navigation-drawer use remains bound by the unapproved KBDL-CMP-041 (KBDL-007) regardless of this item's own approval,None,FAIL
+KBDL-CMP-082,none not applicable,KBDL-CMP-083 additionally notes that navigation-drawer use remains bound by the unapproved KBDL-CMP-041 (KBDL-007) regardless of this item's own approval,None,PASS
+KBDL-CMP-083,none not applicable,KBDL-CMP-083 additionally notes that navigation-drawer use remains bound by the unapproved KBDL-CMP-041 (KBDL-007) regardless of this item's own approval,None,PASS
+KBDL-CMP-084,not verified not verified,KBDL-CMP-083 additionally notes that navigation-drawer use remains bound by the unapproved KBDL-CMP-041 (KBDL-007) regardless of this item's own approval,None,FAIL
+KBDL-CMP-085,none not applicable,KBDL-CMP-083 additionally notes that navigation-drawer use remains bound by the unapproved KBDL-CMP-041 (KBDL-007) regardless of this item's own approval,None,PASS
+KBDL-CMP-086,not verified not verified,Implementation-dependent,None,FAIL
+KBDL-CMP-087,not verified not verified,Implementation-dependent,None,FAIL
+KBDL-CMP-088,not verified not verified,Implementation-dependent,None,FAIL
+KBDL-CMP-089,none not applicable,Implementation-dependent,None,PASS
+KBDL-CMP-090,not verified not verified,Implementation-dependent,None,FAIL
+KBDL-CMP-091,none not applicable,Implementation-dependent,None,PASS
+KBDL-CMP-092,not verified not verified,Implementation-dependent,None,FAIL
+KBDL-CMP-093,not verified not verified,Implementation-dependent,None,FAIL
+KBDL-CMP-094,not verified not verified,Implementation-dependent,None,FAIL
+KBDL-CMP-095,not verified not verified,Implementation-dependent,None,FAIL
+KBDL-CMP-096,not verified not verified,Implementation-dependent,None,FAIL
+KBDL-CMP-097,not verified not verified,KBDL-CMP-105 additionally cites the unapproved KBDL-RSP-011 as related context; KBDL-CMP-111 additionally depends on the eventual KBDL-RSP-002 value for its exact trigger point,None,FAIL
+KBDL-CMP-098,not verified not verified,Implementation-dependent,None,FAIL
+KBDL-CMP-099,none not applicable,KBDL-CMP-105 additionally cites the unapproved KBDL-RSP-011 as related context; KBDL-CMP-111 additionally depends on the eventual KBDL-RSP-002 value for its exact trigger point,None,PASS
+KBDL-CMP-100,not verified not verified,KBDL-CMP-105 additionally cites the unapproved KBDL-RSP-011 as related context; KBDL-CMP-111 additionally depends on the eventual KBDL-RSP-002 value for its exact trigger point,None,FAIL
+KBDL-CMP-101,not verified not verified,KBDL-CMP-105 additionally cites the unapproved KBDL-RSP-011 as related context; KBDL-CMP-111 additionally depends on the eventual KBDL-RSP-002 value for its exact trigger point,None,FAIL
+KBDL-CMP-102,none not applicable,KBDL-CMP-105 additionally cites the unapproved KBDL-RSP-011 as related context; KBDL-CMP-111 additionally depends on the eventual KBDL-RSP-002 value for its exact trigger point,None,PASS
+KBDL-CMP-103,not verified not verified,KBDL-CMP-105 additionally cites the unapproved KBDL-RSP-011 as related context; KBDL-CMP-111 additionally depends on the eventual KBDL-RSP-002 value for its exact trigger point,None,FAIL
+KBDL-CMP-104,not verified not verified,KBDL-CMP-105 additionally cites the unapproved KBDL-RSP-011 as related context; KBDL-CMP-111 additionally depends on the eventual KBDL-RSP-002 value for its exact trigger point,None,FAIL
+KBDL-CMP-105,none not applicable,KBDL-CMP-105 additionally cites the unapproved KBDL-RSP-011 as related context; KBDL-CMP-111 additionally depends on the eventual KBDL-RSP-002 value for its exact trigger point,None,PASS
+KBDL-CMP-106,none not applicable,KBDL-CMP-105 additionally cites the unapproved KBDL-RSP-011 as related context; KBDL-CMP-111 additionally depends on the eventual KBDL-RSP-002 value for its exact trigger point,None,PASS
+KBDL-CMP-107,not verified not verified,KBDL-CMP-105 additionally cites the unapproved KBDL-RSP-011 as related context; KBDL-CMP-111 additionally depends on the eventual KBDL-RSP-002 value for its exact trigger point,None,FAIL
+KBDL-CMP-108,none not applicable,KBDL-CMP-105 additionally cites the unapproved KBDL-RSP-011 as related context; KBDL-CMP-111 additionally depends on the eventual KBDL-RSP-002 value for its exact trigger point,None,PASS
+KBDL-CMP-109,not verified not verified,KBDL-CMP-105 additionally cites the unapproved KBDL-RSP-011 as related context; KBDL-CMP-111 additionally depends on the eventual KBDL-RSP-002 value for its exact trigger point,None,FAIL
+KBDL-CMP-110,none not applicable,KBDL-CMP-105 additionally cites the unapproved KBDL-RSP-011 as related context; KBDL-CMP-111 additionally depends on the eventual KBDL-RSP-002 value for its exact trigger point,None,PASS
+KBDL-CMP-111,none not applicable,KBDL-CMP-105 additionally cites the unapproved KBDL-RSP-011 as related context; KBDL-CMP-111 additionally depends on the eventual KBDL-RSP-002 value for its exact trigger point,None,PASS
+KBDL-CUS-001,not verified not verified,No project customization exists to test,None,FAIL
+KBDL-CUS-002,not verified not verified,Project records are not available,None,FAIL
+KBDL-CUS-003,not verified not verified,Classification has not been applied to a real request,None,FAIL
+KBDL-CUS-004,not verified not verified,Implementation choices are project-specific,None,FAIL
+KBDL-CUS-005,not verified not verified,Actual assets require project review,None,FAIL
+KBDL-CUS-006,not verified not verified,Exact reuse threshold is Recommended,None,FAIL
+KBDL-CUS-007,not verified not verified,No exception is created here,None,FAIL
+KBDL-CUS-008,not verified not verified,No real workflow history exists,None,FAIL
+KBDL-CUS-009,not verified not verified,Inapplicable fields require project rationale,None,FAIL
+KBDL-CUS-010,not verified not verified,No machine-readable format is mandated,None,FAIL
+KBDL-CUS-011,not verified not verified,Final KBDL validation remains later scope,None,FAIL
+KBDL-CUS-012,not verified not verified,Exact cadence/expiry are Recommended,None,FAIL
+KBDL-CUS-013,not verified not verified,Project implementation absent,None,FAIL
+KBDL-CUS-014,not verified not verified,Pending theme items remain excluded,None,FAIL
+KBDL-CUS-015,not verified not verified,Exact component values and technology remain excluded,None,FAIL
+KBDL-CUS-016,not verified not verified,Pending exact values remain excluded,None,FAIL
+KBDL-CUS-017,not verified not verified,Implementation testing is absent,None,FAIL
+KBDL-CUS-018,not verified not verified,Pending KBDL-007 items remain excluded,None,FAIL
+KBDL-CUS-019,not verified not verified,Pending KBDL-008 items remain excluded,None,FAIL
+KBDL-CUS-020,not verified not verified,Pending KBDL-009 policies remain excluded,None,FAIL
+KBDL-CUS-021,not verified not verified,Backend architecture is out of scope,None,FAIL
+KBDL-CUS-022,not verified not verified,No implementation handoff exists,None,FAIL
+KBDL-CUS-023,none not applicable,Records use a visible placeholder meanwhile,None,PASS
+KBDL-CUS-024,none not applicable,Current governance does not define exact local roles,None,PASS
+KBDL-CUS-025,none not applicable,KBDL-011 does not approve this discretionary policy,None,PASS
+KBDL-CUS-026,none not applicable,No default time period is authorized,None,PASS
+KBDL-CUS-027,none not applicable,Conflicts stop under current rules,None,PASS
+KBDL-CUS-028,none not applicable,Reuse always triggers review until a threshold is approved,None,PASS
+KBDL-CUS-029,none not applicable,Exact retention and evidence rules are not authorized,None,PASS
+KBDL-CUS-030,none not applicable,"No JSON, YAML, schema, API, plugin, or automation is authorized",None,PASS
+KBDL-FND-001,not verified not verified,Cannot be fully validated until THM and CMP requirements exist,None,FAIL
+KBDL-FND-002,not verified not verified,Cannot be fully validated until THM and CMP requirements exist,None,FAIL
+KBDL-FND-003,not verified not verified,Cannot be fully validated until RSP requirements exist,None,FAIL
+KBDL-FND-004,not verified not verified,Cannot be fully validated until RSP requirements exist,None,FAIL
+KBDL-FND-005,not verified not verified,No implementation exists to execute the stated typography validation method.,None,FAIL
+KBDL-FND-006,not verified not verified,No implementation exists to execute the stated iconography validation method.,None,FAIL
+KBDL-FND-007,not verified not verified,No implementation exists to execute the stated spacing validation method.,None,FAIL
+KBDL-FND-008,not verified not verified,Cannot be fully validated until PRO requirements exist,None,FAIL
+KBDL-FND-009,verified for the contrast calculations only (see color.md §4); not verified for suitability as a final brand palette mixed — verified / not verified,"Approval authorizes these defaults for implementation; it does not itself constitute rendering, brand-suitability, or licensing validation — those remain Not verified as noted above",brand; suitability,PASS
+KBDL-FND-010,not verified not verified,"Approval authorizes these defaults for implementation; it does not itself constitute rendering, brand-suitability, or licensing validation — those remain Not verified as noted above",None,FAIL
+KBDL-FND-011,not verified not verified,"Approval authorizes these defaults for implementation; it does not itself constitute rendering, brand-suitability, or licensing validation — those remain Not verified as noted above",None,FAIL
+KBDL-FND-012,not verified not verified,"Approval authorizes these defaults for implementation; it does not itself constitute rendering, brand-suitability, or licensing validation — those remain Not verified as noted above",None,FAIL
+KBDL-GOV-001,none verified,"No automated Markdown linter or link checker was available in this environment; verification is manual, not tool-based",None,PASS
+KBDL-GOV-002,not verified not verified,"Cannot be validated against a real accessibility requirement, since none exist yet",None,FAIL
+KBDL-GOV-003,none verified,None identified,None,PASS
+KBDL-MOT-001,not verified not verified,"Per-component purpose assignment depends on the Components module (CMP), not yet reached",None,FAIL
+KBDL-MOT-002,not verified not verified,"Per-component purpose assignment depends on the Components module (CMP), not yet reached",None,FAIL
+KBDL-MOT-003,not verified not verified,"Per-component purpose assignment depends on the Components module (CMP), not yet reached",None,FAIL
+KBDL-MOT-004,not verified not verified,"Exceptional-level (Level 4) usage requires project-owner review each time; not yet exercised, since no implementation exists",None,FAIL
+KBDL-MOT-005,not verified not verified,"Exceptional-level (Level 4) usage requires project-owner review each time; not yet exercised, since no implementation exists",None,FAIL
+KBDL-MOT-006,not verified not verified,"Exceptional-level (Level 4) usage requires project-owner review each time; not yet exercised, since no implementation exists",None,FAIL
+KBDL-MOT-007,not verified not verified,"Approval is a lifecycle decision, not implementation validation; these values must not be treated as Verified until an implementation exists and is measured",None,FAIL
+KBDL-MOT-008,none not applicable,"Approval is a lifecycle decision, not implementation validation; these values must not be treated as Verified until an implementation exists and is measured",None,PASS
+KBDL-MOT-009,none not applicable,"Approval is a lifecycle decision, not implementation validation; these values must not be treated as Verified until an implementation exists and is measured",None,PASS
+KBDL-MOT-010,not verified not verified,Exact pixel/percentage movement and scale values are deferred to the Components module,None,FAIL
+KBDL-MOT-011,not verified not verified,Exact pixel/percentage movement and scale values are deferred to the Components module,None,FAIL
+KBDL-MOT-012,not verified not verified,Exact pixel/percentage movement and scale values are deferred to the Components module,None,FAIL
+KBDL-MOT-013,not verified not verified,Exact repetition limits (attention motion) and scroll thresholds remain qualitative pending implementation-level review,None,FAIL
+KBDL-MOT-014,not verified not verified,Exact repetition limits (attention motion) and scroll thresholds remain qualitative pending implementation-level review,None,FAIL
+KBDL-MOT-015,not verified not verified,Exact repetition limits (attention motion) and scroll thresholds remain qualitative pending implementation-level review,None,FAIL
+KBDL-MOT-016,not verified not verified,Exact repetition limits (attention motion) and scroll thresholds remain qualitative pending implementation-level review,None,FAIL
+KBDL-MOT-017,not verified not verified,Exact repetition limits (attention motion) and scroll thresholds remain qualitative pending implementation-level review,None,FAIL
+KBDL-MOT-018,not verified not verified,Exact repetition limits (attention motion) and scroll thresholds remain qualitative pending implementation-level review,None,FAIL
+KBDL-MOT-019,not verified not verified,Exact repetition limits (attention motion) and scroll thresholds remain qualitative pending implementation-level review,None,FAIL
+KBDL-MOT-020,not verified not verified,No intermediate-frame contrast measurement has actually been performed against a live implementation,None,FAIL
+KBDL-MOT-021,not verified not verified,"No implementation exists to measure actual frame rate, input latency, or cross-input-method behavior",None,FAIL
+KBDL-MOT-022,not verified not verified,"No implementation exists to measure actual frame rate, input latency, or cross-input-method behavior",None,FAIL
+KBDL-MOT-023,not verified not verified,"No implementation exists to measure actual frame rate, input latency, or cross-input-method behavior",None,FAIL
+KBDL-MOT-024,not verified not verified,"No implementation exists to measure actual frame rate, input latency, or cross-input-method behavior",None,FAIL
+KBDL-MOT-025,not verified not verified,"No implementation exists to measure actual frame rate, input latency, or cross-input-method behavior",None,FAIL
+KBDL-MOT-026,not verified not verified,"No implementation exists to measure actual frame rate, input latency, or cross-input-method behavior",None,FAIL
+KBDL-MOT-027,none not applicable,"No implementation exists to measure actual frame rate, input latency, or cross-input-method behavior",None,PASS
+KBDL-MOT-028,none not applicable,"Approval is a lifecycle decision, not implementation validation; these values must not be treated as Verified until an implementation exists and is measured",None,PASS
+KBDL-MOT-029,none not applicable,"Approval is a lifecycle decision, not implementation validation; these values must not be treated as Verified until an implementation exists and is measured",None,PASS
+KBDL-MOT-030,not verified not verified,"Approval is a lifecycle decision, not implementation validation; these values must not be treated as Verified until an implementation exists and is measured",None,FAIL
+KBDL-MOT-031,not verified not verified,"Approval is a lifecycle decision, not implementation validation; these values must not be treated as Verified until an implementation exists and is measured",None,FAIL
+KBDL-MOT-032,none not applicable,"Approval is a lifecycle decision, not implementation validation; these values must not be treated as Verified until an implementation exists and is measured",None,PASS
+KBDL-MOT-033,none not applicable,"Approval is a lifecycle decision, not implementation validation; these values must not be treated as Verified until an implementation exists and is measured",None,PASS
+KBDL-MOT-034,not verified not verified,"Approval is a lifecycle decision, not implementation validation; these values must not be treated as Verified until an implementation exists and is measured",None,FAIL
+KBDL-PRN-001,not verified not verified,"Cannot be checked against real foundation, theme, or component content until those modules exist",None,FAIL
+KBDL-PRN-002,not verified not verified,No real design decisions exist yet to test the priority order against,None,FAIL
+KBDL-PRN-003,not verified not verified,Complete evidence across every later module is unavailable,None,FAIL
+KBDL-PRN-004,not verified not verified,"Cannot be fully validated until FND, THM, and RSP requirements exist",None,FAIL
+KBDL-PRN-005,not verified not verified,Controlled-variable ranges are intentionally undefined pending later modules,None,FAIL
+KBDL-PRN-006,not verified not verified,Later-module conflict-resolution behavior has not been executed.,None,FAIL
+KBDL-PRN-007,not verified not verified,Cannot be fully validated until PRO requirements exist,None,FAIL
+KBDL-PRN-008,not verified not verified,Examples are conceptual; no mockups or token values exist to check them against yet,None,FAIL
+KBDL-PRO-001,not verified not verified,Implementation-level profile behavior is not verified; no coded project profile exists yet to test against,None,FAIL
+KBDL-PRO-002,not verified not verified,Implementation-level profile behavior is not verified; no coded project profile exists yet to test against,None,FAIL
+KBDL-PRO-003,not verified not verified,Implementation-level profile behavior is not verified; no coded project profile exists yet to test against,None,FAIL
+KBDL-PRO-004,not verified not verified,Implementation-level profile behavior is not verified; no coded project profile exists yet to test against,None,FAIL
+KBDL-PRO-005,not verified not verified,"Not applicable — restates an existing scope/governance rule, not independently testable against an implementation",None,FAIL
+KBDL-PRO-006,none not applicable,"Not applicable — scope-control requirement, not independently testable against an implementation",applicable,PASS
+KBDL-PRO-007,none not applicable,No project profile declaration exists yet to review against this requirement's field list,None,PASS
+KBDL-PRO-008,none not applicable,"No project profile declaration exists yet to review against this requirement. Whether a project must select exactly one primary profile, may select a secondary profile, or may use a hybrid model is new governance policy:",None,PASS
+KBDL-PRO-009,none not applicable,Recommended — grants no implementation authority pending project-owner review; see the decision packet,None,PASS
+KBDL-PRO-010,not verified not verified,Implementation-level profile behavior is not verified; no coded project profile exists yet to test against. ### 10.2 Component Interpretation,None,FAIL
+KBDL-PRO-011,not verified not verified,Implementation-level profile behavior is not verified; no coded project profile exists yet to test against. ### 11.2 Component Interpretation,None,FAIL
+KBDL-PRO-012,not verified not verified,Implementation-level profile behavior is not verified; no coded project profile exists yet to test against. ### 12.2 Component Interpretation,None,FAIL
+KBDL-PRO-013,not verified not verified,Implementation-level profile behavior is not verified; no coded project profile exists yet to test against. Any exact Showcase card-variant or composition default remains new policy:,None,FAIL
+KBDL-PRO-014,not verified not verified,Implementation-level profile behavior is not verified; no coded project profile exists yet to test against. Any exact Precision density or component-variant default remains new policy:,None,FAIL
+KBDL-PRO-015,not verified not verified,Implementation-level profile behavior is not verified; no coded project profile exists yet to test against. Any exact Flow action-hierarchy or workflow-component default remains new policy:,None,FAIL
+KBDL-PRO-016,none not applicable,Contingent on the unapproved KBDL-008 KBDL-CMP-067; cannot be approved independently through the KBDL-009 packet until KBDL-CMP-067 is approved or replaced,None,PASS
+KBDL-PRO-017,none not applicable,Recommended — grants no implementation authority pending project-owner review; see the decision packet,None,PASS
+KBDL-PRO-018,none not applicable,Contingent on the unapproved KBDL-007 KBDL-CMP-015/036; cannot be approved independently through the KBDL-009 packet until those are approved or replaced,None,PASS
+KBDL-PRO-019,not verified not verified,Implementation-level profile behavior is not verified; no coded project profile exists yet to test against,None,FAIL
+KBDL-PRO-020,not verified not verified,Implementation-level profile behavior is not verified; no coded project profile exists yet to test against,None,FAIL
+KBDL-PRO-021,not verified not verified,Implementation-level profile behavior is not verified; no coded project profile exists yet to test against,None,FAIL
+KBDL-PRO-022,not verified not verified,Implementation-level profile behavior is not verified; no coded project profile exists yet to test against,None,FAIL
+KBDL-PRO-023,not verified not verified,Implementation-level profile behavior is not verified; no coded project profile exists yet to test against,None,FAIL
+KBDL-PRO-024,not verified not verified,Implementation-level profile behavior is not verified; no coded project profile exists yet to test against,None,FAIL
+KBDL-PRO-025,none not applicable,"Not applicable — scope-control requirement, not independently testable against an implementation",applicable,PASS
+KBDL-PRO-026,none not applicable,"No project profile adoption record exists yet to review against this requirement's field list. Whether a profile may change after adoption, whether a project may have multiple profile scopes, and how migration is governed are new decisions:",None,PASS
+KBDL-PRO-027,none not applicable,Recommended — grants no implementation authority pending project-owner review; see the decision packet,None,PASS
+KBDL-PRO-028,none not applicable,Recommended — grants no implementation authority pending project-owner review; see the decision packet,None,PASS
+KBDL-PRO-029,none not applicable,Recommended — grants no implementation authority pending project-owner review; see the decision packet. Manual customization of a project's KBDL implementation is governed by [customization.md](customization.md); this profile document does not itself authorize a project customization,None,PASS
+KBDL-RSP-001,not verified not verified,Implementation-dependent; cannot be tested until a real layout exists,None,FAIL
+KBDL-RSP-002,none not applicable,These are recommendations awaiting project-owner approval; must not be treated as Approved or implemented until that approval is recorded,None,PASS
+KBDL-RSP-003,none not applicable,These are recommendations awaiting project-owner approval; must not be treated as Approved or implemented until that approval is recorded,None,PASS
+KBDL-RSP-004,none not applicable,These are recommendations awaiting project-owner approval; must not be treated as Approved or implemented until that approval is recorded,None,PASS
+KBDL-RSP-005,none not applicable,These are recommendations awaiting project-owner approval; must not be treated as Approved or implemented until that approval is recorded,None,PASS
+KBDL-RSP-006,not verified not verified,Implementation-dependent; cannot be tested until a real layout exists,None,FAIL
+KBDL-RSP-007,not verified not verified,Implementation-dependent; cannot be tested until a real layout exists,None,FAIL
+KBDL-RSP-008,not verified not verified,Exact collapse thresholds and per-project column-priority rules remain qualitative pending implementation-level review,None,FAIL
+KBDL-RSP-009,not verified not verified,Exact collapse thresholds and per-project column-priority rules remain qualitative pending implementation-level review,None,FAIL
+KBDL-RSP-010,not verified not verified,Exact collapse thresholds and per-project column-priority rules remain qualitative pending implementation-level review,None,FAIL
+KBDL-RSP-011,not verified not verified,Exact collapse thresholds and per-project column-priority rules remain qualitative pending implementation-level review,None,FAIL
+KBDL-RSP-012,not verified not verified,Exact collapse thresholds and per-project column-priority rules remain qualitative pending implementation-level review,None,FAIL
+KBDL-RSP-013,not verified not verified,Implementation- and device-dependent,None,FAIL
+KBDL-RSP-014,not verified not verified,Implementation- and device-dependent,None,FAIL
+KBDL-RSP-015,not verified not verified,Implementation-dependent; cannot be tested until a real layout exists,None,FAIL
+KBDL-RSP-016,not verified not verified,Implementation-dependent; cannot be tested until a real layout exists,None,FAIL
+KBDL-RSP-017,not verified not verified,Implementation- and device-dependent,None,FAIL
+KBDL-RSP-018,not verified not verified,Implementation- and device-dependent,None,FAIL
+KBDL-RSP-019,not verified not verified,Implementation- and device-dependent,None,FAIL
+KBDL-RSP-020,not verified not verified,Implementation-dependent; cannot be tested until a real layout exists,None,FAIL
+KBDL-RSP-021,not verified not verified,Performance claims cannot be Verified without a real implementation to measure,None,FAIL
+KBDL-RSP-022,not verified not verified,Performance claims cannot be Verified without a real implementation to measure,None,FAIL
+KBDL-THM-001,not verified not verified,Cannot be fully validated until component modules (CMP) exist,None,FAIL
+KBDL-THM-002,none verified,None identified,None,PASS
+KBDL-THM-003,not verified not verified,Cannot be validated until an implementation exists,None,FAIL
+KBDL-THM-004,not verified — approval authorizes this baseline; it does not itself constitute implementation validation not verified,Cannot be validated until an implementation exists,implementation,PASS
+KBDL-THM-005,not verified not verified,Cannot be fully validated until PRO requirements exist,None,FAIL
+KBDL-THM-006,not verified not verified,Cannot be fully validated until PRO requirements exist,None,FAIL
+KBDL-THM-007,verified for the opaque contrast pairs listed in light-theme.md and validation.md; not verified for the excluded opacity values or for suitability beyond the tested pairs mixed — verified / not verified,"Approval covers the opaque mappings only; opacity values must not be treated as Approved or implemented until a future decision addresses them. The dark theme was independently designed, not inverted from light — see dark-theme.md § Design Strategy for the neutral-60/neutral-50 asymmetry this produced. Translucent opacity values remain entirely out of scope for this row",light; opacity; opaque; theme; values,PASS
+KBDL-THM-008,verified for the opaque contrast pairs listed in dark-theme.md and validation.md; not verified for the excluded opacity values or for suitability beyond the tested pairs mixed — verified / not verified,"Approval covers the opaque mappings only; opacity values must not be treated as Approved or implemented until a future decision addresses them. The dark theme was independently designed, not inverted from light — see dark-theme.md § Design Strategy for the neutral-60/neutral-50 asymmetry this produced. Translucent opacity values remain entirely out of scope for this row",opacity; opaque; theme; values,PASS
+KBDL-THM-009,verified for the contrast pairs listed (see validation.md); not verified for suitability beyond the tested pairs mixed — verified / not verified,"New dark-mode status hues (#7CC4FF, #6FD19A, #E0A840, #FF8A80) were introduced here since the light-mode-only values from KBDL-003 fail contrast against a dark canvas; these dark hues, along with the light-mode Informational value revised to #164499 under KBDL-004-R1, are now Approved as part of the theme layer under KBDL-004-A1 (its correct role assignment — #164499 for Text/Icon/Border/Strong-surface, neutral-10 for On-strong-surface content — was clarified under KBDL-004-R2). Any translucent caption-band variant remains outside this row's approved scope",contrast,PASS
+KBDL-THM-010,verified for the opaque caption-band pair and both gradient endpoints (see validation.md); not verified for any translucent variant mixed — verified / not verified,"New dark-mode status hues (#7CC4FF, #6FD19A, #E0A840, #FF8A80) were introduced here since the light-mode-only values from KBDL-003 fail contrast against a dark canvas; these dark hues, along with the light-mode Informational value revised to #164499 under KBDL-004-R1, are now Approved as part of the theme layer under KBDL-004-A1 (its correct role assignment — #164499 for Text/Icon/Border/Strong-surface, neutral-10 for On-strong-surface content — was clarified under KBDL-004-R2). Any translucent caption-band variant remains outside this row's approved scope",caption; translucent; variant,PASS
+KBDL-THM-011,none not applicable,"New dark-mode status hues (#7CC4FF, #6FD19A, #E0A840, #FF8A80) were introduced here since the light-mode-only values from KBDL-003 fail contrast against a dark canvas; these dark hues, along with the light-mode Informational value revised to #164499 under KBDL-004-R1, are now Approved as part of the theme layer under KBDL-004-A1 (its correct role assignment — #164499 for Text/Icon/Border/Strong-surface, neutral-10 for On-strong-surface content — was clarified under KBDL-004-R2). Any translucent caption-band variant remains outside this row's approved scope",None,PASS
+KBDL-THM-012,not verified not verified,"Exact timing/easing depends entirely on KBDL-005, which is eligible for its own future prompt and has not been started by this approval",None,FAIL
+KBDL-THM-012a,not verified not verified,"Exact timing/easing depends entirely on KBDL-005, which is eligible for its own future prompt and has not been started by this approval",None,FAIL
+KBDL-THM-013,not verified not verified,Cannot be validated until an implementation exists,None,FAIL
+KBDL-THM-014,not verified not verified,Cannot be validated until a project theme exists,None,FAIL
+KBDL-THM-015,not verified not verified,Cannot be validated until an implementation exists,None,FAIL
+KBDL-VAL-001,none verified,Runtime claims remain Class E,None,PASS
+KBDL-VAL-002,none verified,None,None,PASS
+KBDL-VAL-003,none not verified,Historical approval commands remain unrecovered,None,FAIL
+KBDL-VAL-004,complete r12 gate remains not verified not verified,No unsupported clause is retained as Verified; the aggregate gate remains Not verified,remains,PASS
+KBDL-VAL-005,none not verified,Pending choices remain unavailable for implementation,None,FAIL
+KBDL-VAL-006,none not verified,Implementation remains unverified,None,FAIL
+KBDL-VAL-007,none within the stated repository method verified,No external-site availability or runtime claim,None,PASS
+KBDL-VAL-008,not verified not verified,static and runtime architecture require further evidence,None,FAIL
+KBDL-VAL-009,none verified,Translucency/media remain unverified,None,PASS
+KBDL-VAL-010,not verified not verified,listed behavior and ledger completeness remain Not verified,None,FAIL
+KBDL-VAL-011,not verified not verified,No adopting project,None,FAIL
+KBDL-VAL-012,none verified,Candidate status is not approval,None,PASS

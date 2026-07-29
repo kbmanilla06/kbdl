@@ -1,0 +1,4 @@
+Requirement ID,Field name,Historical source,Resolution,Historical-format exception
+KBDL-GOV-001,Lifecycle status,governance.md document status plus approved KBDL-001 prompt,Approved,Per-record lifecycle field absent from original GOV format
+KBDL-GOV-002,Lifecycle status,governance.md document status plus approved KBDL-001 prompt,Approved,Per-record lifecycle field absent from original GOV format
+KBDL-GOV-003,Lifecycle status,governance.md document status plus approved KBDL-001 prompt,Approved,Per-record lifecycle field absent from original GOV format

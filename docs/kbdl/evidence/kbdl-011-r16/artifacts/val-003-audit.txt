@@ -1,0 +1,2 @@
+Approved=266 prompt=131 other=135 defects=41
+VAL-003 result: Not verified

@@ -1,0 +1,6 @@
+Path,Classification,Disposition
+docs/kbdl/README.md,Honest status correction,Commit
+docs/kbdl/validation.md,Honest status correction,Commit
+docs/kbdl/traceability-matrix.md,Honest status correction,Commit
+docs/kbdl/traceability-metadata.csv,Honest validation-classification correction,Commit
+docs/kbdl/evidence/kbdl-011-r16/,R16 validator and audit evidence,Commit

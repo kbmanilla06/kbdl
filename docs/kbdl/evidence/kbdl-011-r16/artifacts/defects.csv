@@ -1,0 +1,694 @@
+Defect ID,Requirement ID,Category,Details
+MISSING_STANDARD_BASIS:KBDL-A11Y-008,KBDL-A11Y-008,MISSING_STANDARD_BASIS,generic standard reference lacks an exact governing clause
+MISSING_STANDARD_BASIS:KBDL-A11Y-010,KBDL-A11Y-010,MISSING_STANDARD_BASIS,generic standard reference lacks an exact governing clause
+MISSING_STANDARD_BASIS:KBDL-A11Y-013,KBDL-A11Y-013,MISSING_STANDARD_BASIS,generic standard reference lacks an exact governing clause
+MISSING_STANDARD_BASIS:KBDL-A11Y-014,KBDL-A11Y-014,MISSING_STANDARD_BASIS,generic standard reference lacks an exact governing clause
+MISSING_STANDARD_BASIS:KBDL-CMP-018,KBDL-CMP-018,MISSING_STANDARD_BASIS,generic standard reference lacks an exact governing clause
+MISSING_STANDARD_BASIS:KBDL-CMP-021,KBDL-CMP-021,MISSING_STANDARD_BASIS,generic standard reference lacks an exact governing clause
+MISSING_STANDARD_BASIS:KBDL-CMP-028,KBDL-CMP-028,MISSING_STANDARD_BASIS,generic standard reference lacks an exact governing clause
+MISSING_STANDARD_BASIS:KBDL-CMP-032,KBDL-CMP-032,MISSING_STANDARD_BASIS,generic standard reference lacks an exact governing clause
+MISSING_STANDARD_BASIS:KBDL-CMP-045,KBDL-CMP-045,MISSING_STANDARD_BASIS,generic standard reference lacks an exact governing clause
+MISSING_STANDARD_BASIS:KBDL-CMP-054,KBDL-CMP-054,MISSING_STANDARD_BASIS,generic standard reference lacks an exact governing clause
+MISSING_STANDARD_BASIS:KBDL-CMP-056,KBDL-CMP-056,MISSING_STANDARD_BASIS,generic standard reference lacks an exact governing clause
+MISSING_STANDARD_BASIS:KBDL-CMP-068,KBDL-CMP-068,MISSING_STANDARD_BASIS,generic standard reference lacks an exact governing clause
+MISSING_STANDARD_BASIS:KBDL-CMP-075,KBDL-CMP-075,MISSING_STANDARD_BASIS,generic standard reference lacks an exact governing clause
+MISSING_STANDARD_BASIS:KBDL-CMP-077,KBDL-CMP-077,MISSING_STANDARD_BASIS,generic standard reference lacks an exact governing clause
+MISSING_STANDARD_BASIS:KBDL-CMP-081,KBDL-CMP-081,MISSING_STANDARD_BASIS,generic standard reference lacks an exact governing clause
+MISSING_STANDARD_BASIS:KBDL-CMP-094,KBDL-CMP-094,MISSING_STANDARD_BASIS,generic standard reference lacks an exact governing clause
+MISSING_STANDARD_BASIS:KBDL-CMP-095,KBDL-CMP-095,MISSING_STANDARD_BASIS,generic standard reference lacks an exact governing clause
+MISSING_STANDARD_BASIS:KBDL-RSP-006,KBDL-RSP-006,MISSING_STANDARD_BASIS,generic standard reference lacks an exact governing clause
+MISSING_STANDARD_BASIS:KBDL-RSP-013,KBDL-RSP-013,MISSING_STANDARD_BASIS,generic standard reference lacks an exact governing clause
+MISSING_STANDARD_BASIS:KBDL-RSP-019,KBDL-RSP-019,MISSING_STANDARD_BASIS,generic standard reference lacks an exact governing clause
+STANDARD_CLAUSE_MISMATCH:KBDL-A11Y-008,KBDL-A11Y-008,STANDARD_CLAUSE_MISMATCH,generic standard keyword without exact governing clause
+STANDARD_CLAUSE_MISMATCH:KBDL-A11Y-010,KBDL-A11Y-010,STANDARD_CLAUSE_MISMATCH,generic standard keyword without exact governing clause
+STANDARD_CLAUSE_MISMATCH:KBDL-A11Y-013,KBDL-A11Y-013,STANDARD_CLAUSE_MISMATCH,generic standard keyword without exact governing clause
+STANDARD_CLAUSE_MISMATCH:KBDL-A11Y-014,KBDL-A11Y-014,STANDARD_CLAUSE_MISMATCH,generic standard keyword without exact governing clause
+STANDARD_CLAUSE_MISMATCH:KBDL-CMP-018,KBDL-CMP-018,STANDARD_CLAUSE_MISMATCH,generic standard keyword without exact governing clause
+STANDARD_CLAUSE_MISMATCH:KBDL-CMP-021,KBDL-CMP-021,STANDARD_CLAUSE_MISMATCH,generic standard keyword without exact governing clause
+STANDARD_CLAUSE_MISMATCH:KBDL-CMP-028,KBDL-CMP-028,STANDARD_CLAUSE_MISMATCH,generic standard keyword without exact governing clause
+STANDARD_CLAUSE_MISMATCH:KBDL-CMP-032,KBDL-CMP-032,STANDARD_CLAUSE_MISMATCH,generic standard keyword without exact governing clause
+STANDARD_CLAUSE_MISMATCH:KBDL-CMP-045,KBDL-CMP-045,STANDARD_CLAUSE_MISMATCH,generic standard keyword without exact governing clause
+STANDARD_CLAUSE_MISMATCH:KBDL-CMP-054,KBDL-CMP-054,STANDARD_CLAUSE_MISMATCH,generic standard keyword without exact governing clause
+STANDARD_CLAUSE_MISMATCH:KBDL-CMP-056,KBDL-CMP-056,STANDARD_CLAUSE_MISMATCH,generic standard keyword without exact governing clause
+STANDARD_CLAUSE_MISMATCH:KBDL-CMP-068,KBDL-CMP-068,STANDARD_CLAUSE_MISMATCH,generic standard keyword without exact governing clause
+STANDARD_CLAUSE_MISMATCH:KBDL-CMP-075,KBDL-CMP-075,STANDARD_CLAUSE_MISMATCH,generic standard keyword without exact governing clause
+STANDARD_CLAUSE_MISMATCH:KBDL-CMP-077,KBDL-CMP-077,STANDARD_CLAUSE_MISMATCH,generic standard keyword without exact governing clause
+STANDARD_CLAUSE_MISMATCH:KBDL-CMP-081,KBDL-CMP-081,STANDARD_CLAUSE_MISMATCH,generic standard keyword without exact governing clause
+STANDARD_CLAUSE_MISMATCH:KBDL-CMP-094,KBDL-CMP-094,STANDARD_CLAUSE_MISMATCH,generic standard keyword without exact governing clause
+STANDARD_CLAUSE_MISMATCH:KBDL-CMP-095,KBDL-CMP-095,STANDARD_CLAUSE_MISMATCH,generic standard keyword without exact governing clause
+STANDARD_CLAUSE_MISMATCH:KBDL-RSP-006,KBDL-RSP-006,STANDARD_CLAUSE_MISMATCH,generic standard keyword without exact governing clause
+STANDARD_CLAUSE_MISMATCH:KBDL-RSP-013,KBDL-RSP-013,STANDARD_CLAUSE_MISMATCH,generic standard keyword without exact governing clause
+STANDARD_CLAUSE_MISMATCH:KBDL-RSP-019,KBDL-RSP-019,STANDARD_CLAUSE_MISMATCH,generic standard keyword without exact governing clause
+CIRCULAR_AUTHORITY:KBDL-MOT-007,KBDL-MOT-007,CIRCULAR_AUTHORITY,KBDL-MOT-007 -> KBDL-MOT-008 -> KBDL-MOT-007
+LIMITATION_MISMATCH:KBDL-A11Y-001,KBDL-A11Y-001,LIMITATION_MISMATCH,"This document does not claim full WCAG conformance, screen-reader compatibility, or real-device support — those require an implementation and recorded test evidence"
+LIMITATION_MISMATCH:KBDL-A11Y-002,KBDL-A11Y-002,LIMITATION_MISMATCH,"This document does not claim full WCAG conformance, screen-reader compatibility, or real-device support — those require an implementation and recorded test evidence"
+LIMITATION_MISMATCH:KBDL-A11Y-003,KBDL-A11Y-003,LIMITATION_MISMATCH,"This document does not claim full WCAG conformance, screen-reader compatibility, or real-device support — those require an implementation and recorded test evidence"
+LIMITATION_MISMATCH:KBDL-A11Y-004,KBDL-A11Y-004,LIMITATION_MISMATCH,"This document does not claim full WCAG conformance, screen-reader compatibility, or real-device support — those require an implementation and recorded test evidence"
+LIMITATION_MISMATCH:KBDL-A11Y-005,KBDL-A11Y-005,LIMITATION_MISMATCH,"This document does not claim full WCAG conformance, screen-reader compatibility, or real-device support — those require an implementation and recorded test evidence"
+LIMITATION_MISMATCH:KBDL-A11Y-006,KBDL-A11Y-006,LIMITATION_MISMATCH,"This document does not claim full WCAG conformance, screen-reader compatibility, or real-device support — those require an implementation and recorded test evidence"
+LIMITATION_MISMATCH:KBDL-A11Y-010,KBDL-A11Y-010,LIMITATION_MISMATCH,"This document does not claim full WCAG conformance, screen-reader compatibility, or real-device support — those require an implementation and recorded test evidence"
+LIMITATION_MISMATCH:KBDL-A11Y-011,KBDL-A11Y-011,LIMITATION_MISMATCH,Forced-colors/high-contrast mode is currently unaddressed elsewhere in the specification and was explicitly excluded from the KBDL-004 theme approval (KBDL-DEC-013); these three requirements must not be treated as Approved until reviewed
+LIMITATION_MISMATCH:KBDL-A11Y-012,KBDL-A11Y-012,LIMITATION_MISMATCH,"This document does not claim full WCAG conformance, screen-reader compatibility, or real-device support — those require an implementation and recorded test evidence"
+LIMITATION_MISMATCH:KBDL-A11Y-013,KBDL-A11Y-013,LIMITATION_MISMATCH,"This document does not claim full WCAG conformance, screen-reader compatibility, or real-device support — those require an implementation and recorded test evidence"
+LIMITATION_MISMATCH:KBDL-A11Y-014,KBDL-A11Y-014,LIMITATION_MISMATCH,"This document does not claim full WCAG conformance, screen-reader compatibility, or real-device support — those require an implementation and recorded test evidence"
+LIMITATION_MISMATCH:KBDL-A11Y-015,KBDL-A11Y-015,LIMITATION_MISMATCH,"This document does not claim full WCAG conformance, screen-reader compatibility, or real-device support — those require an implementation and recorded test evidence"
+LIMITATION_MISMATCH:KBDL-A11Y-016,KBDL-A11Y-016,LIMITATION_MISMATCH,"This document does not claim full WCAG conformance, screen-reader compatibility, or real-device support — those require an implementation and recorded test evidence"
+LIMITATION_MISMATCH:KBDL-A11Y-017,KBDL-A11Y-017,LIMITATION_MISMATCH,"This document does not claim full WCAG conformance, screen-reader compatibility, or real-device support — those require an implementation and recorded test evidence"
+LIMITATION_MISMATCH:KBDL-A11Y-018,KBDL-A11Y-018,LIMITATION_MISMATCH,"This document does not claim full WCAG conformance, screen-reader compatibility, or real-device support — those require an implementation and recorded test evidence"
+LIMITATION_MISMATCH:KBDL-A11Y-020,KBDL-A11Y-020,LIMITATION_MISMATCH,"This document does not claim full WCAG conformance, screen-reader compatibility, or real-device support — those require an implementation and recorded test evidence"
+LIMITATION_MISMATCH:KBDL-A11Y-022,KBDL-A11Y-022,LIMITATION_MISMATCH,"This document does not claim full WCAG conformance, screen-reader compatibility, or real-device support — those require an implementation and recorded test evidence"
+LIMITATION_MISMATCH:KBDL-A11Y-023,KBDL-A11Y-023,LIMITATION_MISMATCH,"This document does not claim full WCAG conformance, screen-reader compatibility, or real-device support — those require an implementation and recorded test evidence"
+LIMITATION_MISMATCH:KBDL-A11Y-024,KBDL-A11Y-024,LIMITATION_MISMATCH,"This document does not claim full WCAG conformance, screen-reader compatibility, or real-device support — those require an implementation and recorded test evidence"
+LIMITATION_MISMATCH:KBDL-A11Y-025,KBDL-A11Y-025,LIMITATION_MISMATCH,"This document does not claim full WCAG conformance, screen-reader compatibility, or real-device support — those require an implementation and recorded test evidence"
+LIMITATION_MISMATCH:KBDL-A11Y-026,KBDL-A11Y-026,LIMITATION_MISMATCH,"This document does not claim full WCAG conformance, screen-reader compatibility, or real-device support — those require an implementation and recorded test evidence"
+LIMITATION_MISMATCH:KBDL-A11Y-027,KBDL-A11Y-027,LIMITATION_MISMATCH,"This document does not claim full WCAG conformance, screen-reader compatibility, or real-device support — those require an implementation and recorded test evidence"
+LIMITATION_MISMATCH:KBDL-A11Y-028,KBDL-A11Y-028,LIMITATION_MISMATCH,"This document does not claim full WCAG conformance, screen-reader compatibility, or real-device support — those require an implementation and recorded test evidence"
+LIMITATION_MISMATCH:KBDL-A11Y-029,KBDL-A11Y-029,LIMITATION_MISMATCH,"This document does not claim full WCAG conformance, screen-reader compatibility, or real-device support — those require an implementation and recorded test evidence"
+LIMITATION_MISMATCH:KBDL-A11Y-030,KBDL-A11Y-030,LIMITATION_MISMATCH,"This document does not claim full WCAG conformance, screen-reader compatibility, or real-device support — those require an implementation and recorded test evidence"
+LIMITATION_MISMATCH:KBDL-A11Y-031,KBDL-A11Y-031,LIMITATION_MISMATCH,"This document does not claim full WCAG conformance, screen-reader compatibility, or real-device support — those require an implementation and recorded test evidence"
+LIMITATION_MISMATCH:KBDL-A11Y-032,KBDL-A11Y-032,LIMITATION_MISMATCH,"This document does not claim full WCAG conformance, screen-reader compatibility, or real-device support — those require an implementation and recorded test evidence"
+LIMITATION_MISMATCH:KBDL-A11Y-033,KBDL-A11Y-033,LIMITATION_MISMATCH,"This document does not claim full WCAG conformance, screen-reader compatibility, or real-device support — those require an implementation and recorded test evidence"
+LIMITATION_MISMATCH:KBDL-A11Y-034,KBDL-A11Y-034,LIMITATION_MISMATCH,"This document does not claim full WCAG conformance, screen-reader compatibility, or real-device support — those require an implementation and recorded test evidence"
+LIMITATION_MISMATCH:KBDL-A11Y-037,KBDL-A11Y-037,LIMITATION_MISMATCH,"This document does not claim full WCAG conformance, screen-reader compatibility, or real-device support — those require an implementation and recorded test evidence"
+LIMITATION_MISMATCH:KBDL-A11Y-040,KBDL-A11Y-040,LIMITATION_MISMATCH,"This document does not claim full WCAG conformance, screen-reader compatibility, or real-device support — those require an implementation and recorded test evidence"
+LIMITATION_MISMATCH:KBDL-CMP-001,KBDL-CMP-001,LIMITATION_MISMATCH,Implementation-dependent; cannot be tested until real components exist
+LIMITATION_MISMATCH:KBDL-CMP-002,KBDL-CMP-002,LIMITATION_MISMATCH,Implementation-dependent; cannot be tested until real components exist
+LIMITATION_MISMATCH:KBDL-CMP-003,KBDL-CMP-003,LIMITATION_MISMATCH,Implementation-dependent; cannot be tested until real components exist
+LIMITATION_MISMATCH:KBDL-CMP-004,KBDL-CMP-004,LIMITATION_MISMATCH,Implementation-dependent; cannot be tested until real components exist
+LIMITATION_MISMATCH:KBDL-CMP-006,KBDL-CMP-006,LIMITATION_MISMATCH,Implementation-dependent; cannot be tested until real components exist
+LIMITATION_MISMATCH:KBDL-CMP-007,KBDL-CMP-007,LIMITATION_MISMATCH,Implementation-dependent; cannot be tested until real components exist
+LIMITATION_MISMATCH:KBDL-CMP-008,KBDL-CMP-008,LIMITATION_MISMATCH,Implementation-dependent; cannot be tested until real components exist
+LIMITATION_MISMATCH:KBDL-CMP-009,KBDL-CMP-009,LIMITATION_MISMATCH,Implementation-dependent; cannot be tested until real components exist
+LIMITATION_MISMATCH:KBDL-CMP-010,KBDL-CMP-010,LIMITATION_MISMATCH,Implementation-dependent; cannot be tested until real components exist
+LIMITATION_MISMATCH:KBDL-CMP-011,KBDL-CMP-011,LIMITATION_MISMATCH,Implementation-dependent; cannot be tested until real components exist
+LIMITATION_MISMATCH:KBDL-CMP-012,KBDL-CMP-012,LIMITATION_MISMATCH,Implementation-dependent; cannot be tested until real components exist
+LIMITATION_MISMATCH:KBDL-CMP-013,KBDL-CMP-013,LIMITATION_MISMATCH,Implementation-dependent; cannot be tested until real components exist
+LIMITATION_MISMATCH:KBDL-CMP-014,KBDL-CMP-014,LIMITATION_MISMATCH,Implementation-dependent
+LIMITATION_MISMATCH:KBDL-CMP-016,KBDL-CMP-016,LIMITATION_MISMATCH,Implementation-dependent
+LIMITATION_MISMATCH:KBDL-CMP-018,KBDL-CMP-018,LIMITATION_MISMATCH,Implementation-dependent
+LIMITATION_MISMATCH:KBDL-CMP-019,KBDL-CMP-019,LIMITATION_MISMATCH,Implementation-dependent
+LIMITATION_MISMATCH:KBDL-CMP-021,KBDL-CMP-021,LIMITATION_MISMATCH,Implementation-dependent
+LIMITATION_MISMATCH:KBDL-CMP-022,KBDL-CMP-022,LIMITATION_MISMATCH,Implementation-dependent
+LIMITATION_MISMATCH:KBDL-CMP-023,KBDL-CMP-023,LIMITATION_MISMATCH,Implementation-dependent
+LIMITATION_MISMATCH:KBDL-CMP-024,KBDL-CMP-024,LIMITATION_MISMATCH,Implementation-dependent
+LIMITATION_MISMATCH:KBDL-CMP-026,KBDL-CMP-026,LIMITATION_MISMATCH,Implementation-dependent
+LIMITATION_MISMATCH:KBDL-CMP-027,KBDL-CMP-027,LIMITATION_MISMATCH,Implementation-dependent
+LIMITATION_MISMATCH:KBDL-CMP-028,KBDL-CMP-028,LIMITATION_MISMATCH,Implementation-dependent
+LIMITATION_MISMATCH:KBDL-CMP-030,KBDL-CMP-030,LIMITATION_MISMATCH,Implementation-dependent
+LIMITATION_MISMATCH:KBDL-CMP-031,KBDL-CMP-031,LIMITATION_MISMATCH,Implementation-dependent
+LIMITATION_MISMATCH:KBDL-CMP-032,KBDL-CMP-032,LIMITATION_MISMATCH,Implementation-dependent
+LIMITATION_MISMATCH:KBDL-CMP-033,KBDL-CMP-033,LIMITATION_MISMATCH,Implementation-dependent
+LIMITATION_MISMATCH:KBDL-CMP-034,KBDL-CMP-034,LIMITATION_MISMATCH,Implementation-dependent
+LIMITATION_MISMATCH:KBDL-CMP-035,KBDL-CMP-035,LIMITATION_MISMATCH,Implementation-dependent
+LIMITATION_MISMATCH:KBDL-CMP-037,KBDL-CMP-037,LIMITATION_MISMATCH,Implementation-dependent
+LIMITATION_MISMATCH:KBDL-CMP-038,KBDL-CMP-038,LIMITATION_MISMATCH,KBDL-CMP-041 additionally depends on the unapproved KBDL-RSP-002/008 and cannot be approved independently of them
+LIMITATION_MISMATCH:KBDL-CMP-039,KBDL-CMP-039,LIMITATION_MISMATCH,KBDL-CMP-041 additionally depends on the unapproved KBDL-RSP-002/008 and cannot be approved independently of them
+LIMITATION_MISMATCH:KBDL-CMP-040,KBDL-CMP-040,LIMITATION_MISMATCH,KBDL-CMP-041 additionally depends on the unapproved KBDL-RSP-002/008 and cannot be approved independently of them
+LIMITATION_MISMATCH:KBDL-CMP-042,KBDL-CMP-042,LIMITATION_MISMATCH,KBDL-CMP-041 additionally depends on the unapproved KBDL-RSP-002/008 and cannot be approved independently of them
+LIMITATION_MISMATCH:KBDL-CMP-043,KBDL-CMP-043,LIMITATION_MISMATCH,KBDL-CMP-041 additionally depends on the unapproved KBDL-RSP-002/008 and cannot be approved independently of them
+LIMITATION_MISMATCH:KBDL-CMP-045,KBDL-CMP-045,LIMITATION_MISMATCH,KBDL-CMP-041 additionally depends on the unapproved KBDL-RSP-002/008 and cannot be approved independently of them
+LIMITATION_MISMATCH:KBDL-CMP-047,KBDL-CMP-047,LIMITATION_MISMATCH,KBDL-CMP-041 additionally depends on the unapproved KBDL-RSP-002/008 and cannot be approved independently of them
+LIMITATION_MISMATCH:KBDL-CMP-049,KBDL-CMP-049,LIMITATION_MISMATCH,KBDL-CMP-041 additionally depends on the unapproved KBDL-RSP-002/008 and cannot be approved independently of them
+LIMITATION_MISMATCH:KBDL-CMP-051,KBDL-CMP-051,LIMITATION_MISMATCH,Implementation-dependent; cannot be tested until real components exist
+LIMITATION_MISMATCH:KBDL-CMP-053,KBDL-CMP-053,LIMITATION_MISMATCH,Implementation-dependent
+LIMITATION_MISMATCH:KBDL-CMP-054,KBDL-CMP-054,LIMITATION_MISMATCH,Implementation-dependent
+LIMITATION_MISMATCH:KBDL-CMP-055,KBDL-CMP-055,LIMITATION_MISMATCH,Implementation-dependent
+LIMITATION_MISMATCH:KBDL-CMP-057,KBDL-CMP-057,LIMITATION_MISMATCH,KBDL-CMP-083 additionally notes that navigation-drawer use remains bound by the unapproved KBDL-CMP-041 (KBDL-007) regardless of this item's own approval
+LIMITATION_MISMATCH:KBDL-CMP-058,KBDL-CMP-058,LIMITATION_MISMATCH,KBDL-CMP-083 additionally notes that navigation-drawer use remains bound by the unapproved KBDL-CMP-041 (KBDL-007) regardless of this item's own approval
+LIMITATION_MISMATCH:KBDL-CMP-059,KBDL-CMP-059,LIMITATION_MISMATCH,KBDL-CMP-083 additionally notes that navigation-drawer use remains bound by the unapproved KBDL-CMP-041 (KBDL-007) regardless of this item's own approval
+LIMITATION_MISMATCH:KBDL-CMP-060,KBDL-CMP-060,LIMITATION_MISMATCH,KBDL-CMP-083 additionally notes that navigation-drawer use remains bound by the unapproved KBDL-CMP-041 (KBDL-007) regardless of this item's own approval
+LIMITATION_MISMATCH:KBDL-CMP-061,KBDL-CMP-061,LIMITATION_MISMATCH,Implementation-dependent
+LIMITATION_MISMATCH:KBDL-CMP-062,KBDL-CMP-062,LIMITATION_MISMATCH,Implementation-dependent
+LIMITATION_MISMATCH:KBDL-CMP-063,KBDL-CMP-063,LIMITATION_MISMATCH,KBDL-CMP-105 additionally cites the unapproved KBDL-RSP-011 as related context; KBDL-CMP-111 additionally depends on the eventual KBDL-RSP-002 value for its exact trigger point
+LIMITATION_MISMATCH:KBDL-CMP-064,KBDL-CMP-064,LIMITATION_MISMATCH,KBDL-CMP-105 additionally cites the unapproved KBDL-RSP-011 as related context; KBDL-CMP-111 additionally depends on the eventual KBDL-RSP-002 value for its exact trigger point
+LIMITATION_MISMATCH:KBDL-CMP-065,KBDL-CMP-065,LIMITATION_MISMATCH,Implementation-dependent
+LIMITATION_MISMATCH:KBDL-CMP-066,KBDL-CMP-066,LIMITATION_MISMATCH,KBDL-CMP-105 additionally cites the unapproved KBDL-RSP-011 as related context; KBDL-CMP-111 additionally depends on the eventual KBDL-RSP-002 value for its exact trigger point
+LIMITATION_MISMATCH:KBDL-CMP-068,KBDL-CMP-068,LIMITATION_MISMATCH,Implementation-dependent
+LIMITATION_MISMATCH:KBDL-CMP-070,KBDL-CMP-070,LIMITATION_MISMATCH,Implementation-dependent
+LIMITATION_MISMATCH:KBDL-CMP-071,KBDL-CMP-071,LIMITATION_MISMATCH,KBDL-CMP-083 additionally notes that navigation-drawer use remains bound by the unapproved KBDL-CMP-041 (KBDL-007) regardless of this item's own approval
+LIMITATION_MISMATCH:KBDL-CMP-072,KBDL-CMP-072,LIMITATION_MISMATCH,KBDL-CMP-083 additionally notes that navigation-drawer use remains bound by the unapproved KBDL-CMP-041 (KBDL-007) regardless of this item's own approval
+LIMITATION_MISMATCH:KBDL-CMP-075,KBDL-CMP-075,LIMITATION_MISMATCH,KBDL-CMP-083 additionally notes that navigation-drawer use remains bound by the unapproved KBDL-CMP-041 (KBDL-007) regardless of this item's own approval
+LIMITATION_MISMATCH:KBDL-CMP-077,KBDL-CMP-077,LIMITATION_MISMATCH,KBDL-CMP-083 additionally notes that navigation-drawer use remains bound by the unapproved KBDL-CMP-041 (KBDL-007) regardless of this item's own approval
+LIMITATION_MISMATCH:KBDL-CMP-078,KBDL-CMP-078,LIMITATION_MISMATCH,KBDL-CMP-083 additionally notes that navigation-drawer use remains bound by the unapproved KBDL-CMP-041 (KBDL-007) regardless of this item's own approval
+LIMITATION_MISMATCH:KBDL-CMP-079,KBDL-CMP-079,LIMITATION_MISMATCH,KBDL-CMP-083 additionally notes that navigation-drawer use remains bound by the unapproved KBDL-CMP-041 (KBDL-007) regardless of this item's own approval
+LIMITATION_MISMATCH:KBDL-CMP-081,KBDL-CMP-081,LIMITATION_MISMATCH,KBDL-CMP-083 additionally notes that navigation-drawer use remains bound by the unapproved KBDL-CMP-041 (KBDL-007) regardless of this item's own approval
+LIMITATION_MISMATCH:KBDL-CMP-084,KBDL-CMP-084,LIMITATION_MISMATCH,KBDL-CMP-083 additionally notes that navigation-drawer use remains bound by the unapproved KBDL-CMP-041 (KBDL-007) regardless of this item's own approval
+LIMITATION_MISMATCH:KBDL-CMP-086,KBDL-CMP-086,LIMITATION_MISMATCH,Implementation-dependent
+LIMITATION_MISMATCH:KBDL-CMP-087,KBDL-CMP-087,LIMITATION_MISMATCH,Implementation-dependent
+LIMITATION_MISMATCH:KBDL-CMP-088,KBDL-CMP-088,LIMITATION_MISMATCH,Implementation-dependent
+LIMITATION_MISMATCH:KBDL-CMP-090,KBDL-CMP-090,LIMITATION_MISMATCH,Implementation-dependent
+LIMITATION_MISMATCH:KBDL-CMP-092,KBDL-CMP-092,LIMITATION_MISMATCH,Implementation-dependent
+LIMITATION_MISMATCH:KBDL-CMP-093,KBDL-CMP-093,LIMITATION_MISMATCH,Implementation-dependent
+LIMITATION_MISMATCH:KBDL-CMP-094,KBDL-CMP-094,LIMITATION_MISMATCH,Implementation-dependent
+LIMITATION_MISMATCH:KBDL-CMP-095,KBDL-CMP-095,LIMITATION_MISMATCH,Implementation-dependent
+LIMITATION_MISMATCH:KBDL-CMP-096,KBDL-CMP-096,LIMITATION_MISMATCH,Implementation-dependent
+LIMITATION_MISMATCH:KBDL-CMP-097,KBDL-CMP-097,LIMITATION_MISMATCH,KBDL-CMP-105 additionally cites the unapproved KBDL-RSP-011 as related context; KBDL-CMP-111 additionally depends on the eventual KBDL-RSP-002 value for its exact trigger point
+LIMITATION_MISMATCH:KBDL-CMP-098,KBDL-CMP-098,LIMITATION_MISMATCH,Implementation-dependent
+LIMITATION_MISMATCH:KBDL-CMP-100,KBDL-CMP-100,LIMITATION_MISMATCH,KBDL-CMP-105 additionally cites the unapproved KBDL-RSP-011 as related context; KBDL-CMP-111 additionally depends on the eventual KBDL-RSP-002 value for its exact trigger point
+LIMITATION_MISMATCH:KBDL-CMP-101,KBDL-CMP-101,LIMITATION_MISMATCH,KBDL-CMP-105 additionally cites the unapproved KBDL-RSP-011 as related context; KBDL-CMP-111 additionally depends on the eventual KBDL-RSP-002 value for its exact trigger point
+LIMITATION_MISMATCH:KBDL-CMP-103,KBDL-CMP-103,LIMITATION_MISMATCH,KBDL-CMP-105 additionally cites the unapproved KBDL-RSP-011 as related context; KBDL-CMP-111 additionally depends on the eventual KBDL-RSP-002 value for its exact trigger point
+LIMITATION_MISMATCH:KBDL-CMP-104,KBDL-CMP-104,LIMITATION_MISMATCH,KBDL-CMP-105 additionally cites the unapproved KBDL-RSP-011 as related context; KBDL-CMP-111 additionally depends on the eventual KBDL-RSP-002 value for its exact trigger point
+LIMITATION_MISMATCH:KBDL-CMP-107,KBDL-CMP-107,LIMITATION_MISMATCH,KBDL-CMP-105 additionally cites the unapproved KBDL-RSP-011 as related context; KBDL-CMP-111 additionally depends on the eventual KBDL-RSP-002 value for its exact trigger point
+LIMITATION_MISMATCH:KBDL-CMP-109,KBDL-CMP-109,LIMITATION_MISMATCH,KBDL-CMP-105 additionally cites the unapproved KBDL-RSP-011 as related context; KBDL-CMP-111 additionally depends on the eventual KBDL-RSP-002 value for its exact trigger point
+LIMITATION_MISMATCH:KBDL-CUS-001,KBDL-CUS-001,LIMITATION_MISMATCH,No project customization exists to test
+LIMITATION_MISMATCH:KBDL-CUS-002,KBDL-CUS-002,LIMITATION_MISMATCH,Project records are not available
+LIMITATION_MISMATCH:KBDL-CUS-003,KBDL-CUS-003,LIMITATION_MISMATCH,Classification has not been applied to a real request
+LIMITATION_MISMATCH:KBDL-CUS-004,KBDL-CUS-004,LIMITATION_MISMATCH,Implementation choices are project-specific
+LIMITATION_MISMATCH:KBDL-CUS-005,KBDL-CUS-005,LIMITATION_MISMATCH,Actual assets require project review
+LIMITATION_MISMATCH:KBDL-CUS-006,KBDL-CUS-006,LIMITATION_MISMATCH,Exact reuse threshold is Recommended
+LIMITATION_MISMATCH:KBDL-CUS-007,KBDL-CUS-007,LIMITATION_MISMATCH,No exception is created here
+LIMITATION_MISMATCH:KBDL-CUS-008,KBDL-CUS-008,LIMITATION_MISMATCH,No real workflow history exists
+LIMITATION_MISMATCH:KBDL-CUS-009,KBDL-CUS-009,LIMITATION_MISMATCH,Inapplicable fields require project rationale
+LIMITATION_MISMATCH:KBDL-CUS-010,KBDL-CUS-010,LIMITATION_MISMATCH,No machine-readable format is mandated
+LIMITATION_MISMATCH:KBDL-CUS-011,KBDL-CUS-011,LIMITATION_MISMATCH,Final KBDL validation remains later scope
+LIMITATION_MISMATCH:KBDL-CUS-012,KBDL-CUS-012,LIMITATION_MISMATCH,Exact cadence/expiry are Recommended
+LIMITATION_MISMATCH:KBDL-CUS-013,KBDL-CUS-013,LIMITATION_MISMATCH,Project implementation absent
+LIMITATION_MISMATCH:KBDL-CUS-014,KBDL-CUS-014,LIMITATION_MISMATCH,Pending theme items remain excluded
+LIMITATION_MISMATCH:KBDL-CUS-015,KBDL-CUS-015,LIMITATION_MISMATCH,Exact component values and technology remain excluded
+LIMITATION_MISMATCH:KBDL-CUS-016,KBDL-CUS-016,LIMITATION_MISMATCH,Pending exact values remain excluded
+LIMITATION_MISMATCH:KBDL-CUS-017,KBDL-CUS-017,LIMITATION_MISMATCH,Implementation testing is absent
+LIMITATION_MISMATCH:KBDL-CUS-018,KBDL-CUS-018,LIMITATION_MISMATCH,Pending KBDL-007 items remain excluded
+LIMITATION_MISMATCH:KBDL-CUS-019,KBDL-CUS-019,LIMITATION_MISMATCH,Pending KBDL-008 items remain excluded
+LIMITATION_MISMATCH:KBDL-CUS-020,KBDL-CUS-020,LIMITATION_MISMATCH,Pending KBDL-009 policies remain excluded
+LIMITATION_MISMATCH:KBDL-CUS-021,KBDL-CUS-021,LIMITATION_MISMATCH,Backend architecture is out of scope
+LIMITATION_MISMATCH:KBDL-CUS-022,KBDL-CUS-022,LIMITATION_MISMATCH,No implementation handoff exists
+LIMITATION_MISMATCH:KBDL-FND-001,KBDL-FND-001,LIMITATION_MISMATCH,Cannot be fully validated until THM and CMP requirements exist
+LIMITATION_MISMATCH:KBDL-FND-002,KBDL-FND-002,LIMITATION_MISMATCH,Cannot be fully validated until THM and CMP requirements exist
+LIMITATION_MISMATCH:KBDL-FND-003,KBDL-FND-003,LIMITATION_MISMATCH,Cannot be fully validated until RSP requirements exist
+LIMITATION_MISMATCH:KBDL-FND-004,KBDL-FND-004,LIMITATION_MISMATCH,Cannot be fully validated until RSP requirements exist
+LIMITATION_MISMATCH:KBDL-FND-005,KBDL-FND-005,LIMITATION_MISMATCH,No implementation exists to execute the stated typography validation method.
+LIMITATION_MISMATCH:KBDL-FND-006,KBDL-FND-006,LIMITATION_MISMATCH,No implementation exists to execute the stated iconography validation method.
+LIMITATION_MISMATCH:KBDL-FND-007,KBDL-FND-007,LIMITATION_MISMATCH,No implementation exists to execute the stated spacing validation method.
+LIMITATION_MISMATCH:KBDL-FND-008,KBDL-FND-008,LIMITATION_MISMATCH,Cannot be fully validated until PRO requirements exist
+LIMITATION_MISMATCH:KBDL-FND-010,KBDL-FND-010,LIMITATION_MISMATCH,"Approval authorizes these defaults for implementation; it does not itself constitute rendering, brand-suitability, or licensing validation — those remain Not verified as noted above"
+LIMITATION_MISMATCH:KBDL-FND-011,KBDL-FND-011,LIMITATION_MISMATCH,"Approval authorizes these defaults for implementation; it does not itself constitute rendering, brand-suitability, or licensing validation — those remain Not verified as noted above"
+LIMITATION_MISMATCH:KBDL-FND-012,KBDL-FND-012,LIMITATION_MISMATCH,"Approval authorizes these defaults for implementation; it does not itself constitute rendering, brand-suitability, or licensing validation — those remain Not verified as noted above"
+LIMITATION_MISMATCH:KBDL-GOV-002,KBDL-GOV-002,LIMITATION_MISMATCH,"Cannot be validated against a real accessibility requirement, since none exist yet"
+LIMITATION_MISMATCH:KBDL-MOT-001,KBDL-MOT-001,LIMITATION_MISMATCH,"Per-component purpose assignment depends on the Components module (CMP), not yet reached"
+LIMITATION_MISMATCH:KBDL-MOT-002,KBDL-MOT-002,LIMITATION_MISMATCH,"Per-component purpose assignment depends on the Components module (CMP), not yet reached"
+LIMITATION_MISMATCH:KBDL-MOT-003,KBDL-MOT-003,LIMITATION_MISMATCH,"Per-component purpose assignment depends on the Components module (CMP), not yet reached"
+LIMITATION_MISMATCH:KBDL-MOT-004,KBDL-MOT-004,LIMITATION_MISMATCH,"Exceptional-level (Level 4) usage requires project-owner review each time; not yet exercised, since no implementation exists"
+LIMITATION_MISMATCH:KBDL-MOT-005,KBDL-MOT-005,LIMITATION_MISMATCH,"Exceptional-level (Level 4) usage requires project-owner review each time; not yet exercised, since no implementation exists"
+LIMITATION_MISMATCH:KBDL-MOT-006,KBDL-MOT-006,LIMITATION_MISMATCH,"Exceptional-level (Level 4) usage requires project-owner review each time; not yet exercised, since no implementation exists"
+LIMITATION_MISMATCH:KBDL-MOT-007,KBDL-MOT-007,LIMITATION_MISMATCH,"Approval is a lifecycle decision, not implementation validation; these values must not be treated as Verified until an implementation exists and is measured"
+LIMITATION_MISMATCH:KBDL-MOT-010,KBDL-MOT-010,LIMITATION_MISMATCH,Exact pixel/percentage movement and scale values are deferred to the Components module
+LIMITATION_MISMATCH:KBDL-MOT-011,KBDL-MOT-011,LIMITATION_MISMATCH,Exact pixel/percentage movement and scale values are deferred to the Components module
+LIMITATION_MISMATCH:KBDL-MOT-012,KBDL-MOT-012,LIMITATION_MISMATCH,Exact pixel/percentage movement and scale values are deferred to the Components module
+LIMITATION_MISMATCH:KBDL-MOT-013,KBDL-MOT-013,LIMITATION_MISMATCH,Exact repetition limits (attention motion) and scroll thresholds remain qualitative pending implementation-level review
+LIMITATION_MISMATCH:KBDL-MOT-014,KBDL-MOT-014,LIMITATION_MISMATCH,Exact repetition limits (attention motion) and scroll thresholds remain qualitative pending implementation-level review
+LIMITATION_MISMATCH:KBDL-MOT-015,KBDL-MOT-015,LIMITATION_MISMATCH,Exact repetition limits (attention motion) and scroll thresholds remain qualitative pending implementation-level review
+LIMITATION_MISMATCH:KBDL-MOT-016,KBDL-MOT-016,LIMITATION_MISMATCH,Exact repetition limits (attention motion) and scroll thresholds remain qualitative pending implementation-level review
+LIMITATION_MISMATCH:KBDL-MOT-017,KBDL-MOT-017,LIMITATION_MISMATCH,Exact repetition limits (attention motion) and scroll thresholds remain qualitative pending implementation-level review
+LIMITATION_MISMATCH:KBDL-MOT-018,KBDL-MOT-018,LIMITATION_MISMATCH,Exact repetition limits (attention motion) and scroll thresholds remain qualitative pending implementation-level review
+LIMITATION_MISMATCH:KBDL-MOT-019,KBDL-MOT-019,LIMITATION_MISMATCH,Exact repetition limits (attention motion) and scroll thresholds remain qualitative pending implementation-level review
+LIMITATION_MISMATCH:KBDL-MOT-020,KBDL-MOT-020,LIMITATION_MISMATCH,No intermediate-frame contrast measurement has actually been performed against a live implementation
+LIMITATION_MISMATCH:KBDL-MOT-021,KBDL-MOT-021,LIMITATION_MISMATCH,"No implementation exists to measure actual frame rate, input latency, or cross-input-method behavior"
+LIMITATION_MISMATCH:KBDL-MOT-022,KBDL-MOT-022,LIMITATION_MISMATCH,"No implementation exists to measure actual frame rate, input latency, or cross-input-method behavior"
+LIMITATION_MISMATCH:KBDL-MOT-023,KBDL-MOT-023,LIMITATION_MISMATCH,"No implementation exists to measure actual frame rate, input latency, or cross-input-method behavior"
+LIMITATION_MISMATCH:KBDL-MOT-024,KBDL-MOT-024,LIMITATION_MISMATCH,"No implementation exists to measure actual frame rate, input latency, or cross-input-method behavior"
+LIMITATION_MISMATCH:KBDL-MOT-025,KBDL-MOT-025,LIMITATION_MISMATCH,"No implementation exists to measure actual frame rate, input latency, or cross-input-method behavior"
+LIMITATION_MISMATCH:KBDL-MOT-026,KBDL-MOT-026,LIMITATION_MISMATCH,"No implementation exists to measure actual frame rate, input latency, or cross-input-method behavior"
+LIMITATION_MISMATCH:KBDL-MOT-030,KBDL-MOT-030,LIMITATION_MISMATCH,"Approval is a lifecycle decision, not implementation validation; these values must not be treated as Verified until an implementation exists and is measured"
+LIMITATION_MISMATCH:KBDL-MOT-031,KBDL-MOT-031,LIMITATION_MISMATCH,"Approval is a lifecycle decision, not implementation validation; these values must not be treated as Verified until an implementation exists and is measured"
+LIMITATION_MISMATCH:KBDL-MOT-034,KBDL-MOT-034,LIMITATION_MISMATCH,"Approval is a lifecycle decision, not implementation validation; these values must not be treated as Verified until an implementation exists and is measured"
+LIMITATION_MISMATCH:KBDL-PRN-001,KBDL-PRN-001,LIMITATION_MISMATCH,"Cannot be checked against real foundation, theme, or component content until those modules exist"
+LIMITATION_MISMATCH:KBDL-PRN-002,KBDL-PRN-002,LIMITATION_MISMATCH,No real design decisions exist yet to test the priority order against
+LIMITATION_MISMATCH:KBDL-PRN-003,KBDL-PRN-003,LIMITATION_MISMATCH,Complete evidence across every later module is unavailable
+LIMITATION_MISMATCH:KBDL-PRN-004,KBDL-PRN-004,LIMITATION_MISMATCH,"Cannot be fully validated until FND, THM, and RSP requirements exist"
+LIMITATION_MISMATCH:KBDL-PRN-005,KBDL-PRN-005,LIMITATION_MISMATCH,Controlled-variable ranges are intentionally undefined pending later modules
+LIMITATION_MISMATCH:KBDL-PRN-006,KBDL-PRN-006,LIMITATION_MISMATCH,Later-module conflict-resolution behavior has not been executed.
+LIMITATION_MISMATCH:KBDL-PRN-007,KBDL-PRN-007,LIMITATION_MISMATCH,Cannot be fully validated until PRO requirements exist
+LIMITATION_MISMATCH:KBDL-PRN-008,KBDL-PRN-008,LIMITATION_MISMATCH,Examples are conceptual; no mockups or token values exist to check them against yet
+LIMITATION_MISMATCH:KBDL-PRO-001,KBDL-PRO-001,LIMITATION_MISMATCH,Implementation-level profile behavior is not verified; no coded project profile exists yet to test against
+LIMITATION_MISMATCH:KBDL-PRO-002,KBDL-PRO-002,LIMITATION_MISMATCH,Implementation-level profile behavior is not verified; no coded project profile exists yet to test against
+LIMITATION_MISMATCH:KBDL-PRO-003,KBDL-PRO-003,LIMITATION_MISMATCH,Implementation-level profile behavior is not verified; no coded project profile exists yet to test against
+LIMITATION_MISMATCH:KBDL-PRO-004,KBDL-PRO-004,LIMITATION_MISMATCH,Implementation-level profile behavior is not verified; no coded project profile exists yet to test against
+LIMITATION_MISMATCH:KBDL-PRO-005,KBDL-PRO-005,LIMITATION_MISMATCH,"Not applicable — restates an existing scope/governance rule, not independently testable against an implementation"
+LIMITATION_MISMATCH:KBDL-PRO-010,KBDL-PRO-010,LIMITATION_MISMATCH,Implementation-level profile behavior is not verified; no coded project profile exists yet to test against. ### 10.2 Component Interpretation
+LIMITATION_MISMATCH:KBDL-PRO-011,KBDL-PRO-011,LIMITATION_MISMATCH,Implementation-level profile behavior is not verified; no coded project profile exists yet to test against. ### 11.2 Component Interpretation
+LIMITATION_MISMATCH:KBDL-PRO-012,KBDL-PRO-012,LIMITATION_MISMATCH,Implementation-level profile behavior is not verified; no coded project profile exists yet to test against. ### 12.2 Component Interpretation
+LIMITATION_MISMATCH:KBDL-PRO-013,KBDL-PRO-013,LIMITATION_MISMATCH,Implementation-level profile behavior is not verified; no coded project profile exists yet to test against. Any exact Showcase card-variant or composition default remains new policy:
+LIMITATION_MISMATCH:KBDL-PRO-014,KBDL-PRO-014,LIMITATION_MISMATCH,Implementation-level profile behavior is not verified; no coded project profile exists yet to test against. Any exact Precision density or component-variant default remains new policy:
+LIMITATION_MISMATCH:KBDL-PRO-015,KBDL-PRO-015,LIMITATION_MISMATCH,Implementation-level profile behavior is not verified; no coded project profile exists yet to test against. Any exact Flow action-hierarchy or workflow-component default remains new policy:
+LIMITATION_MISMATCH:KBDL-PRO-019,KBDL-PRO-019,LIMITATION_MISMATCH,Implementation-level profile behavior is not verified; no coded project profile exists yet to test against
+LIMITATION_MISMATCH:KBDL-PRO-020,KBDL-PRO-020,LIMITATION_MISMATCH,Implementation-level profile behavior is not verified; no coded project profile exists yet to test against
+LIMITATION_MISMATCH:KBDL-PRO-021,KBDL-PRO-021,LIMITATION_MISMATCH,Implementation-level profile behavior is not verified; no coded project profile exists yet to test against
+LIMITATION_MISMATCH:KBDL-PRO-022,KBDL-PRO-022,LIMITATION_MISMATCH,Implementation-level profile behavior is not verified; no coded project profile exists yet to test against
+LIMITATION_MISMATCH:KBDL-PRO-023,KBDL-PRO-023,LIMITATION_MISMATCH,Implementation-level profile behavior is not verified; no coded project profile exists yet to test against
+LIMITATION_MISMATCH:KBDL-PRO-024,KBDL-PRO-024,LIMITATION_MISMATCH,Implementation-level profile behavior is not verified; no coded project profile exists yet to test against
+LIMITATION_MISMATCH:KBDL-RSP-001,KBDL-RSP-001,LIMITATION_MISMATCH,Implementation-dependent; cannot be tested until a real layout exists
+LIMITATION_MISMATCH:KBDL-RSP-006,KBDL-RSP-006,LIMITATION_MISMATCH,Implementation-dependent; cannot be tested until a real layout exists
+LIMITATION_MISMATCH:KBDL-RSP-007,KBDL-RSP-007,LIMITATION_MISMATCH,Implementation-dependent; cannot be tested until a real layout exists
+LIMITATION_MISMATCH:KBDL-RSP-008,KBDL-RSP-008,LIMITATION_MISMATCH,Exact collapse thresholds and per-project column-priority rules remain qualitative pending implementation-level review
+LIMITATION_MISMATCH:KBDL-RSP-009,KBDL-RSP-009,LIMITATION_MISMATCH,Exact collapse thresholds and per-project column-priority rules remain qualitative pending implementation-level review
+LIMITATION_MISMATCH:KBDL-RSP-010,KBDL-RSP-010,LIMITATION_MISMATCH,Exact collapse thresholds and per-project column-priority rules remain qualitative pending implementation-level review
+LIMITATION_MISMATCH:KBDL-RSP-011,KBDL-RSP-011,LIMITATION_MISMATCH,Exact collapse thresholds and per-project column-priority rules remain qualitative pending implementation-level review
+LIMITATION_MISMATCH:KBDL-RSP-012,KBDL-RSP-012,LIMITATION_MISMATCH,Exact collapse thresholds and per-project column-priority rules remain qualitative pending implementation-level review
+LIMITATION_MISMATCH:KBDL-RSP-013,KBDL-RSP-013,LIMITATION_MISMATCH,Implementation- and device-dependent
+LIMITATION_MISMATCH:KBDL-RSP-014,KBDL-RSP-014,LIMITATION_MISMATCH,Implementation- and device-dependent
+LIMITATION_MISMATCH:KBDL-RSP-015,KBDL-RSP-015,LIMITATION_MISMATCH,Implementation-dependent; cannot be tested until a real layout exists
+LIMITATION_MISMATCH:KBDL-RSP-016,KBDL-RSP-016,LIMITATION_MISMATCH,Implementation-dependent; cannot be tested until a real layout exists
+LIMITATION_MISMATCH:KBDL-RSP-017,KBDL-RSP-017,LIMITATION_MISMATCH,Implementation- and device-dependent
+LIMITATION_MISMATCH:KBDL-RSP-018,KBDL-RSP-018,LIMITATION_MISMATCH,Implementation- and device-dependent
+LIMITATION_MISMATCH:KBDL-RSP-019,KBDL-RSP-019,LIMITATION_MISMATCH,Implementation- and device-dependent
+LIMITATION_MISMATCH:KBDL-RSP-020,KBDL-RSP-020,LIMITATION_MISMATCH,Implementation-dependent; cannot be tested until a real layout exists
+LIMITATION_MISMATCH:KBDL-RSP-021,KBDL-RSP-021,LIMITATION_MISMATCH,Performance claims cannot be Verified without a real implementation to measure
+LIMITATION_MISMATCH:KBDL-RSP-022,KBDL-RSP-022,LIMITATION_MISMATCH,Performance claims cannot be Verified without a real implementation to measure
+LIMITATION_MISMATCH:KBDL-THM-001,KBDL-THM-001,LIMITATION_MISMATCH,Cannot be fully validated until component modules (CMP) exist
+LIMITATION_MISMATCH:KBDL-THM-003,KBDL-THM-003,LIMITATION_MISMATCH,Cannot be validated until an implementation exists
+LIMITATION_MISMATCH:KBDL-THM-005,KBDL-THM-005,LIMITATION_MISMATCH,Cannot be fully validated until PRO requirements exist
+LIMITATION_MISMATCH:KBDL-THM-006,KBDL-THM-006,LIMITATION_MISMATCH,Cannot be fully validated until PRO requirements exist
+LIMITATION_MISMATCH:KBDL-THM-012,KBDL-THM-012,LIMITATION_MISMATCH,"Exact timing/easing depends entirely on KBDL-005, which is eligible for its own future prompt and has not been started by this approval"
+LIMITATION_MISMATCH:KBDL-THM-012a,KBDL-THM-012a,LIMITATION_MISMATCH,"Exact timing/easing depends entirely on KBDL-005, which is eligible for its own future prompt and has not been started by this approval"
+LIMITATION_MISMATCH:KBDL-THM-013,KBDL-THM-013,LIMITATION_MISMATCH,Cannot be validated until an implementation exists
+LIMITATION_MISMATCH:KBDL-THM-014,KBDL-THM-014,LIMITATION_MISMATCH,Cannot be validated until a project theme exists
+LIMITATION_MISMATCH:KBDL-THM-015,KBDL-THM-015,LIMITATION_MISMATCH,Cannot be validated until an implementation exists
+LIMITATION_MISMATCH:KBDL-VAL-003,KBDL-VAL-003,LIMITATION_MISMATCH,Historical approval commands remain unrecovered
+LIMITATION_MISMATCH:KBDL-VAL-005,KBDL-VAL-005,LIMITATION_MISMATCH,Pending choices remain unavailable for implementation
+LIMITATION_MISMATCH:KBDL-VAL-006,KBDL-VAL-006,LIMITATION_MISMATCH,Implementation remains unverified
+LIMITATION_MISMATCH:KBDL-VAL-008,KBDL-VAL-008,LIMITATION_MISMATCH,static and runtime architecture require further evidence
+LIMITATION_MISMATCH:KBDL-VAL-010,KBDL-VAL-010,LIMITATION_MISMATCH,listed behavior and ledger completeness remain Not verified
+LIMITATION_MISMATCH:KBDL-VAL-011,KBDL-VAL-011,LIMITATION_MISMATCH,No adopting project
+UNRESOLVED_FIELD_SOURCE:KBDL-A11Y-001:Validation classification,KBDL-A11Y-001:Validation classification,UNRESOLVED_FIELD_SOURCE,Normative record
+UNRESOLVED_FIELD_SOURCE:KBDL-A11Y-001:Known limitation,KBDL-A11Y-001:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-A11Y-002:Known limitation,KBDL-A11Y-002:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-A11Y-003:Known limitation,KBDL-A11Y-003:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-A11Y-004:Validation classification,KBDL-A11Y-004:Validation classification,UNRESOLVED_FIELD_SOURCE,Normative record
+UNRESOLVED_FIELD_SOURCE:KBDL-A11Y-004:Known limitation,KBDL-A11Y-004:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-A11Y-005:Known limitation,KBDL-A11Y-005:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-A11Y-006:Known limitation,KBDL-A11Y-006:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-A11Y-007:Validation evidence,KBDL-A11Y-007:Validation evidence,UNRESOLVED_FIELD_SOURCE,Resolved evidence/classification relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-A11Y-008:Authority,KBDL-A11Y-008:Authority,UNRESOLVED_FIELD_SOURCE,Authority graph
+UNRESOLVED_FIELD_SOURCE:KBDL-A11Y-008:Validation evidence,KBDL-A11Y-008:Validation evidence,UNRESOLVED_FIELD_SOURCE,Resolved evidence/classification relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-A11Y-009:Validation evidence,KBDL-A11Y-009:Validation evidence,UNRESOLVED_FIELD_SOURCE,Resolved evidence/classification relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-A11Y-010:Authority,KBDL-A11Y-010:Authority,UNRESOLVED_FIELD_SOURCE,Authority graph
+UNRESOLVED_FIELD_SOURCE:KBDL-A11Y-010:Known limitation,KBDL-A11Y-010:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-A11Y-011:Known limitation,KBDL-A11Y-011:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-A11Y-012:Known limitation,KBDL-A11Y-012:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-A11Y-013:Authority,KBDL-A11Y-013:Authority,UNRESOLVED_FIELD_SOURCE,Authority graph
+UNRESOLVED_FIELD_SOURCE:KBDL-A11Y-013:Known limitation,KBDL-A11Y-013:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-A11Y-014:Authority,KBDL-A11Y-014:Authority,UNRESOLVED_FIELD_SOURCE,Authority graph
+UNRESOLVED_FIELD_SOURCE:KBDL-A11Y-014:Known limitation,KBDL-A11Y-014:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-A11Y-015:Known limitation,KBDL-A11Y-015:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-A11Y-016:Validation classification,KBDL-A11Y-016:Validation classification,UNRESOLVED_FIELD_SOURCE,Normative record
+UNRESOLVED_FIELD_SOURCE:KBDL-A11Y-016:Known limitation,KBDL-A11Y-016:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-A11Y-017:Known limitation,KBDL-A11Y-017:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-A11Y-018:Known limitation,KBDL-A11Y-018:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-A11Y-019:Validation classification,KBDL-A11Y-019:Validation classification,UNRESOLVED_FIELD_SOURCE,Normative record
+UNRESOLVED_FIELD_SOURCE:KBDL-A11Y-020:Known limitation,KBDL-A11Y-020:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-A11Y-022:Known limitation,KBDL-A11Y-022:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-A11Y-023:Validation classification,KBDL-A11Y-023:Validation classification,UNRESOLVED_FIELD_SOURCE,Normative record
+UNRESOLVED_FIELD_SOURCE:KBDL-A11Y-023:Known limitation,KBDL-A11Y-023:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-A11Y-024:Known limitation,KBDL-A11Y-024:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-A11Y-025:Known limitation,KBDL-A11Y-025:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-A11Y-026:Known limitation,KBDL-A11Y-026:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-A11Y-027:Known limitation,KBDL-A11Y-027:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-A11Y-028:Known limitation,KBDL-A11Y-028:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-A11Y-029:Validation classification,KBDL-A11Y-029:Validation classification,UNRESOLVED_FIELD_SOURCE,Normative record
+UNRESOLVED_FIELD_SOURCE:KBDL-A11Y-029:Known limitation,KBDL-A11Y-029:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-A11Y-030:Known limitation,KBDL-A11Y-030:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-A11Y-031:Known limitation,KBDL-A11Y-031:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-A11Y-032:Known limitation,KBDL-A11Y-032:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-A11Y-033:Known limitation,KBDL-A11Y-033:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-A11Y-034:Validation classification,KBDL-A11Y-034:Validation classification,UNRESOLVED_FIELD_SOURCE,Normative record
+UNRESOLVED_FIELD_SOURCE:KBDL-A11Y-034:Known limitation,KBDL-A11Y-034:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-A11Y-037:Known limitation,KBDL-A11Y-037:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-A11Y-040:Known limitation,KBDL-A11Y-040:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-001:Known limitation,KBDL-CMP-001:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-002:Known limitation,KBDL-CMP-002:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-003:Known limitation,KBDL-CMP-003:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-004:Validation classification,KBDL-CMP-004:Validation classification,UNRESOLVED_FIELD_SOURCE,Normative record
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-004:Known limitation,KBDL-CMP-004:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-006:Known limitation,KBDL-CMP-006:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-007:Known limitation,KBDL-CMP-007:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-008:Known limitation,KBDL-CMP-008:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-009:Known limitation,KBDL-CMP-009:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-010:Known limitation,KBDL-CMP-010:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-011:Known limitation,KBDL-CMP-011:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-012:Known limitation,KBDL-CMP-012:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-013:Known limitation,KBDL-CMP-013:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-014:Known limitation,KBDL-CMP-014:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-016:Known limitation,KBDL-CMP-016:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-018:Authority,KBDL-CMP-018:Authority,UNRESOLVED_FIELD_SOURCE,Authority graph
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-018:Known limitation,KBDL-CMP-018:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-019:Known limitation,KBDL-CMP-019:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-021:Authority,KBDL-CMP-021:Authority,UNRESOLVED_FIELD_SOURCE,Authority graph
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-021:Known limitation,KBDL-CMP-021:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-022:Known limitation,KBDL-CMP-022:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-023:Validation classification,KBDL-CMP-023:Validation classification,UNRESOLVED_FIELD_SOURCE,Normative record
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-023:Known limitation,KBDL-CMP-023:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-024:Known limitation,KBDL-CMP-024:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-026:Validation classification,KBDL-CMP-026:Validation classification,UNRESOLVED_FIELD_SOURCE,Normative record
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-026:Known limitation,KBDL-CMP-026:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-027:Known limitation,KBDL-CMP-027:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-028:Authority,KBDL-CMP-028:Authority,UNRESOLVED_FIELD_SOURCE,Authority graph
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-028:Known limitation,KBDL-CMP-028:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-030:Validation classification,KBDL-CMP-030:Validation classification,UNRESOLVED_FIELD_SOURCE,Normative record
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-030:Known limitation,KBDL-CMP-030:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-031:Validation classification,KBDL-CMP-031:Validation classification,UNRESOLVED_FIELD_SOURCE,Normative record
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-031:Known limitation,KBDL-CMP-031:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-032:Authority,KBDL-CMP-032:Authority,UNRESOLVED_FIELD_SOURCE,Authority graph
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-032:Known limitation,KBDL-CMP-032:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-033:Validation classification,KBDL-CMP-033:Validation classification,UNRESOLVED_FIELD_SOURCE,Normative record
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-033:Known limitation,KBDL-CMP-033:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-034:Validation classification,KBDL-CMP-034:Validation classification,UNRESOLVED_FIELD_SOURCE,Normative record
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-034:Known limitation,KBDL-CMP-034:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-035:Known limitation,KBDL-CMP-035:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-037:Known limitation,KBDL-CMP-037:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-038:Known limitation,KBDL-CMP-038:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-039:Validation classification,KBDL-CMP-039:Validation classification,UNRESOLVED_FIELD_SOURCE,Normative record
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-039:Known limitation,KBDL-CMP-039:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-040:Validation classification,KBDL-CMP-040:Validation classification,UNRESOLVED_FIELD_SOURCE,Normative record
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-040:Known limitation,KBDL-CMP-040:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-042:Validation classification,KBDL-CMP-042:Validation classification,UNRESOLVED_FIELD_SOURCE,Normative record
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-042:Known limitation,KBDL-CMP-042:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-043:Validation classification,KBDL-CMP-043:Validation classification,UNRESOLVED_FIELD_SOURCE,Normative record
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-043:Known limitation,KBDL-CMP-043:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-044:Validation classification,KBDL-CMP-044:Validation classification,UNRESOLVED_FIELD_SOURCE,Normative record
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-045:Authority,KBDL-CMP-045:Authority,UNRESOLVED_FIELD_SOURCE,Authority graph
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-045:Known limitation,KBDL-CMP-045:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-047:Validation classification,KBDL-CMP-047:Validation classification,UNRESOLVED_FIELD_SOURCE,Normative record
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-047:Known limitation,KBDL-CMP-047:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-048:Validation classification,KBDL-CMP-048:Validation classification,UNRESOLVED_FIELD_SOURCE,Normative record
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-049:Validation classification,KBDL-CMP-049:Validation classification,UNRESOLVED_FIELD_SOURCE,Normative record
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-049:Known limitation,KBDL-CMP-049:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-051:Known limitation,KBDL-CMP-051:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-053:Known limitation,KBDL-CMP-053:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-054:Authority,KBDL-CMP-054:Authority,UNRESOLVED_FIELD_SOURCE,Authority graph
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-054:Known limitation,KBDL-CMP-054:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-055:Known limitation,KBDL-CMP-055:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-056:Authority,KBDL-CMP-056:Authority,UNRESOLVED_FIELD_SOURCE,Authority graph
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-057:Known limitation,KBDL-CMP-057:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-058:Known limitation,KBDL-CMP-058:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-059:Known limitation,KBDL-CMP-059:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-060:Known limitation,KBDL-CMP-060:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-061:Known limitation,KBDL-CMP-061:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-062:Validation classification,KBDL-CMP-062:Validation classification,UNRESOLVED_FIELD_SOURCE,Normative record
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-062:Known limitation,KBDL-CMP-062:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-063:Known limitation,KBDL-CMP-063:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-064:Known limitation,KBDL-CMP-064:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-065:Known limitation,KBDL-CMP-065:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-066:Known limitation,KBDL-CMP-066:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-068:Validation classification,KBDL-CMP-068:Validation classification,UNRESOLVED_FIELD_SOURCE,Normative record
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-068:Authority,KBDL-CMP-068:Authority,UNRESOLVED_FIELD_SOURCE,Authority graph
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-068:Known limitation,KBDL-CMP-068:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-070:Known limitation,KBDL-CMP-070:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-071:Known limitation,KBDL-CMP-071:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-072:Known limitation,KBDL-CMP-072:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-075:Authority,KBDL-CMP-075:Authority,UNRESOLVED_FIELD_SOURCE,Authority graph
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-075:Known limitation,KBDL-CMP-075:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-077:Authority,KBDL-CMP-077:Authority,UNRESOLVED_FIELD_SOURCE,Authority graph
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-077:Known limitation,KBDL-CMP-077:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-078:Known limitation,KBDL-CMP-078:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-079:Known limitation,KBDL-CMP-079:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-081:Validation classification,KBDL-CMP-081:Validation classification,UNRESOLVED_FIELD_SOURCE,Normative record
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-081:Authority,KBDL-CMP-081:Authority,UNRESOLVED_FIELD_SOURCE,Authority graph
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-081:Known limitation,KBDL-CMP-081:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-082:Validation classification,KBDL-CMP-082:Validation classification,UNRESOLVED_FIELD_SOURCE,Normative record
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-084:Known limitation,KBDL-CMP-084:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-086:Known limitation,KBDL-CMP-086:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-087:Known limitation,KBDL-CMP-087:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-088:Known limitation,KBDL-CMP-088:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-090:Validation classification,KBDL-CMP-090:Validation classification,UNRESOLVED_FIELD_SOURCE,Normative record
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-090:Known limitation,KBDL-CMP-090:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-092:Known limitation,KBDL-CMP-092:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-093:Known limitation,KBDL-CMP-093:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-094:Authority,KBDL-CMP-094:Authority,UNRESOLVED_FIELD_SOURCE,Authority graph
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-094:Known limitation,KBDL-CMP-094:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-095:Authority,KBDL-CMP-095:Authority,UNRESOLVED_FIELD_SOURCE,Authority graph
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-095:Known limitation,KBDL-CMP-095:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-096:Known limitation,KBDL-CMP-096:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-097:Known limitation,KBDL-CMP-097:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-098:Known limitation,KBDL-CMP-098:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-100:Known limitation,KBDL-CMP-100:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-101:Known limitation,KBDL-CMP-101:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-103:Known limitation,KBDL-CMP-103:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-104:Known limitation,KBDL-CMP-104:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-107:Known limitation,KBDL-CMP-107:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-109:Known limitation,KBDL-CMP-109:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CMP-111:Validation classification,KBDL-CMP-111:Validation classification,UNRESOLVED_FIELD_SOURCE,Normative record
+UNRESOLVED_FIELD_SOURCE:KBDL-CUS-001:Known limitation,KBDL-CUS-001:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CUS-002:Known limitation,KBDL-CUS-002:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CUS-003:Known limitation,KBDL-CUS-003:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CUS-004:Known limitation,KBDL-CUS-004:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CUS-005:Known limitation,KBDL-CUS-005:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CUS-006:Known limitation,KBDL-CUS-006:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CUS-007:Known limitation,KBDL-CUS-007:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CUS-008:Known limitation,KBDL-CUS-008:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CUS-009:Known limitation,KBDL-CUS-009:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CUS-010:Known limitation,KBDL-CUS-010:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CUS-011:Known limitation,KBDL-CUS-011:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CUS-012:Known limitation,KBDL-CUS-012:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CUS-013:Known limitation,KBDL-CUS-013:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CUS-014:Known limitation,KBDL-CUS-014:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CUS-015:Known limitation,KBDL-CUS-015:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CUS-016:Known limitation,KBDL-CUS-016:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CUS-017:Known limitation,KBDL-CUS-017:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CUS-018:Known limitation,KBDL-CUS-018:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CUS-019:Known limitation,KBDL-CUS-019:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CUS-020:Known limitation,KBDL-CUS-020:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CUS-021:Known limitation,KBDL-CUS-021:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-CUS-022:Known limitation,KBDL-CUS-022:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-FND-001:Known limitation,KBDL-FND-001:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-FND-002:Known limitation,KBDL-FND-002:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-FND-003:Known limitation,KBDL-FND-003:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-FND-004:Known limitation,KBDL-FND-004:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-FND-005:Known limitation,KBDL-FND-005:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-FND-006:Known limitation,KBDL-FND-006:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-FND-007:Known limitation,KBDL-FND-007:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-FND-008:Known limitation,KBDL-FND-008:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-FND-009:Validation evidence,KBDL-FND-009:Validation evidence,UNRESOLVED_FIELD_SOURCE,Resolved evidence/classification relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-FND-010:Known limitation,KBDL-FND-010:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-FND-011:Known limitation,KBDL-FND-011:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-FND-012:Known limitation,KBDL-FND-012:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-GOV-001:Validation classification,KBDL-GOV-001:Validation classification,UNRESOLVED_FIELD_SOURCE,Normative record
+UNRESOLVED_FIELD_SOURCE:KBDL-GOV-002:Validation classification,KBDL-GOV-002:Validation classification,UNRESOLVED_FIELD_SOURCE,Normative record
+UNRESOLVED_FIELD_SOURCE:KBDL-GOV-002:Known limitation,KBDL-GOV-002:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-GOV-003:Validation classification,KBDL-GOV-003:Validation classification,UNRESOLVED_FIELD_SOURCE,Normative record
+UNRESOLVED_FIELD_SOURCE:KBDL-MOT-001:Known limitation,KBDL-MOT-001:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-MOT-002:Validation classification,KBDL-MOT-002:Validation classification,UNRESOLVED_FIELD_SOURCE,Normative record
+UNRESOLVED_FIELD_SOURCE:KBDL-MOT-002:Known limitation,KBDL-MOT-002:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-MOT-003:Known limitation,KBDL-MOT-003:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-MOT-004:Known limitation,KBDL-MOT-004:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-MOT-005:Known limitation,KBDL-MOT-005:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-MOT-006:Validation classification,KBDL-MOT-006:Validation classification,UNRESOLVED_FIELD_SOURCE,Normative record
+UNRESOLVED_FIELD_SOURCE:KBDL-MOT-006:Known limitation,KBDL-MOT-006:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-MOT-007:Authority,KBDL-MOT-007:Authority,UNRESOLVED_FIELD_SOURCE,Authority graph
+UNRESOLVED_FIELD_SOURCE:KBDL-MOT-007:Known limitation,KBDL-MOT-007:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-MOT-008:Validation classification,KBDL-MOT-008:Validation classification,UNRESOLVED_FIELD_SOURCE,Normative record
+UNRESOLVED_FIELD_SOURCE:KBDL-MOT-009:Validation classification,KBDL-MOT-009:Validation classification,UNRESOLVED_FIELD_SOURCE,Normative record
+UNRESOLVED_FIELD_SOURCE:KBDL-MOT-010:Known limitation,KBDL-MOT-010:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-MOT-011:Validation classification,KBDL-MOT-011:Validation classification,UNRESOLVED_FIELD_SOURCE,Normative record
+UNRESOLVED_FIELD_SOURCE:KBDL-MOT-011:Known limitation,KBDL-MOT-011:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-MOT-012:Known limitation,KBDL-MOT-012:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-MOT-013:Validation classification,KBDL-MOT-013:Validation classification,UNRESOLVED_FIELD_SOURCE,Normative record
+UNRESOLVED_FIELD_SOURCE:KBDL-MOT-013:Known limitation,KBDL-MOT-013:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-MOT-014:Known limitation,KBDL-MOT-014:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-MOT-015:Known limitation,KBDL-MOT-015:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-MOT-016:Known limitation,KBDL-MOT-016:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-MOT-017:Known limitation,KBDL-MOT-017:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-MOT-018:Known limitation,KBDL-MOT-018:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-MOT-019:Validation classification,KBDL-MOT-019:Validation classification,UNRESOLVED_FIELD_SOURCE,Normative record
+UNRESOLVED_FIELD_SOURCE:KBDL-MOT-019:Known limitation,KBDL-MOT-019:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-MOT-020:Known limitation,KBDL-MOT-020:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-MOT-021:Validation classification,KBDL-MOT-021:Validation classification,UNRESOLVED_FIELD_SOURCE,Normative record
+UNRESOLVED_FIELD_SOURCE:KBDL-MOT-021:Known limitation,KBDL-MOT-021:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-MOT-022:Known limitation,KBDL-MOT-022:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-MOT-023:Known limitation,KBDL-MOT-023:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-MOT-024:Validation classification,KBDL-MOT-024:Validation classification,UNRESOLVED_FIELD_SOURCE,Normative record
+UNRESOLVED_FIELD_SOURCE:KBDL-MOT-024:Known limitation,KBDL-MOT-024:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-MOT-025:Known limitation,KBDL-MOT-025:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-MOT-026:Known limitation,KBDL-MOT-026:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-MOT-028:Validation classification,KBDL-MOT-028:Validation classification,UNRESOLVED_FIELD_SOURCE,Normative record
+UNRESOLVED_FIELD_SOURCE:KBDL-MOT-029:Validation classification,KBDL-MOT-029:Validation classification,UNRESOLVED_FIELD_SOURCE,Normative record
+UNRESOLVED_FIELD_SOURCE:KBDL-MOT-030:Validation classification,KBDL-MOT-030:Validation classification,UNRESOLVED_FIELD_SOURCE,Normative record
+UNRESOLVED_FIELD_SOURCE:KBDL-MOT-030:Known limitation,KBDL-MOT-030:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-MOT-031:Validation classification,KBDL-MOT-031:Validation classification,UNRESOLVED_FIELD_SOURCE,Normative record
+UNRESOLVED_FIELD_SOURCE:KBDL-MOT-031:Known limitation,KBDL-MOT-031:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-MOT-032:Validation classification,KBDL-MOT-032:Validation classification,UNRESOLVED_FIELD_SOURCE,Normative record
+UNRESOLVED_FIELD_SOURCE:KBDL-MOT-033:Validation classification,KBDL-MOT-033:Validation classification,UNRESOLVED_FIELD_SOURCE,Normative record
+UNRESOLVED_FIELD_SOURCE:KBDL-MOT-034:Validation classification,KBDL-MOT-034:Validation classification,UNRESOLVED_FIELD_SOURCE,Normative record
+UNRESOLVED_FIELD_SOURCE:KBDL-MOT-034:Known limitation,KBDL-MOT-034:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-PRN-001:Known limitation,KBDL-PRN-001:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-PRN-002:Validation classification,KBDL-PRN-002:Validation classification,UNRESOLVED_FIELD_SOURCE,Normative record
+UNRESOLVED_FIELD_SOURCE:KBDL-PRN-002:Known limitation,KBDL-PRN-002:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-PRN-003:Validation classification,KBDL-PRN-003:Validation classification,UNRESOLVED_FIELD_SOURCE,Normative record
+UNRESOLVED_FIELD_SOURCE:KBDL-PRN-003:Known limitation,KBDL-PRN-003:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-PRN-004:Validation classification,KBDL-PRN-004:Validation classification,UNRESOLVED_FIELD_SOURCE,Normative record
+UNRESOLVED_FIELD_SOURCE:KBDL-PRN-004:Known limitation,KBDL-PRN-004:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-PRN-005:Validation classification,KBDL-PRN-005:Validation classification,UNRESOLVED_FIELD_SOURCE,Normative record
+UNRESOLVED_FIELD_SOURCE:KBDL-PRN-005:Known limitation,KBDL-PRN-005:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-PRN-006:Validation classification,KBDL-PRN-006:Validation classification,UNRESOLVED_FIELD_SOURCE,Normative record
+UNRESOLVED_FIELD_SOURCE:KBDL-PRN-006:Known limitation,KBDL-PRN-006:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-PRN-007:Validation classification,KBDL-PRN-007:Validation classification,UNRESOLVED_FIELD_SOURCE,Normative record
+UNRESOLVED_FIELD_SOURCE:KBDL-PRN-007:Known limitation,KBDL-PRN-007:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-PRN-008:Validation classification,KBDL-PRN-008:Validation classification,UNRESOLVED_FIELD_SOURCE,Normative record
+UNRESOLVED_FIELD_SOURCE:KBDL-PRN-008:Known limitation,KBDL-PRN-008:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-PRO-001:Known limitation,KBDL-PRO-001:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-PRO-002:Known limitation,KBDL-PRO-002:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-PRO-003:Known limitation,KBDL-PRO-003:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-PRO-004:Known limitation,KBDL-PRO-004:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-PRO-005:Known limitation,KBDL-PRO-005:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-PRO-010:Known limitation,KBDL-PRO-010:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-PRO-011:Known limitation,KBDL-PRO-011:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-PRO-012:Known limitation,KBDL-PRO-012:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-PRO-013:Known limitation,KBDL-PRO-013:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-PRO-014:Known limitation,KBDL-PRO-014:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-PRO-015:Known limitation,KBDL-PRO-015:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-PRO-019:Known limitation,KBDL-PRO-019:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-PRO-020:Known limitation,KBDL-PRO-020:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-PRO-021:Known limitation,KBDL-PRO-021:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-PRO-022:Known limitation,KBDL-PRO-022:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-PRO-023:Known limitation,KBDL-PRO-023:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-PRO-024:Known limitation,KBDL-PRO-024:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-RSP-001:Known limitation,KBDL-RSP-001:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-RSP-002:Validation classification,KBDL-RSP-002:Validation classification,UNRESOLVED_FIELD_SOURCE,Normative record
+UNRESOLVED_FIELD_SOURCE:KBDL-RSP-003:Validation classification,KBDL-RSP-003:Validation classification,UNRESOLVED_FIELD_SOURCE,Normative record
+UNRESOLVED_FIELD_SOURCE:KBDL-RSP-004:Validation classification,KBDL-RSP-004:Validation classification,UNRESOLVED_FIELD_SOURCE,Normative record
+UNRESOLVED_FIELD_SOURCE:KBDL-RSP-005:Validation classification,KBDL-RSP-005:Validation classification,UNRESOLVED_FIELD_SOURCE,Normative record
+UNRESOLVED_FIELD_SOURCE:KBDL-RSP-006:Authority,KBDL-RSP-006:Authority,UNRESOLVED_FIELD_SOURCE,Authority graph
+UNRESOLVED_FIELD_SOURCE:KBDL-RSP-006:Known limitation,KBDL-RSP-006:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-RSP-007:Known limitation,KBDL-RSP-007:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-RSP-008:Known limitation,KBDL-RSP-008:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-RSP-009:Known limitation,KBDL-RSP-009:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-RSP-010:Known limitation,KBDL-RSP-010:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-RSP-011:Known limitation,KBDL-RSP-011:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-RSP-012:Known limitation,KBDL-RSP-012:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-RSP-013:Authority,KBDL-RSP-013:Authority,UNRESOLVED_FIELD_SOURCE,Authority graph
+UNRESOLVED_FIELD_SOURCE:KBDL-RSP-013:Known limitation,KBDL-RSP-013:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-RSP-014:Validation classification,KBDL-RSP-014:Validation classification,UNRESOLVED_FIELD_SOURCE,Normative record
+UNRESOLVED_FIELD_SOURCE:KBDL-RSP-014:Known limitation,KBDL-RSP-014:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-RSP-015:Known limitation,KBDL-RSP-015:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-RSP-016:Known limitation,KBDL-RSP-016:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-RSP-017:Known limitation,KBDL-RSP-017:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-RSP-018:Known limitation,KBDL-RSP-018:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-RSP-019:Authority,KBDL-RSP-019:Authority,UNRESOLVED_FIELD_SOURCE,Authority graph
+UNRESOLVED_FIELD_SOURCE:KBDL-RSP-019:Known limitation,KBDL-RSP-019:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-RSP-020:Known limitation,KBDL-RSP-020:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-RSP-021:Known limitation,KBDL-RSP-021:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-RSP-022:Known limitation,KBDL-RSP-022:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-THM-001:Known limitation,KBDL-THM-001:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-THM-002:Validation evidence,KBDL-THM-002:Validation evidence,UNRESOLVED_FIELD_SOURCE,Resolved evidence/classification relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-THM-003:Known limitation,KBDL-THM-003:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-THM-005:Known limitation,KBDL-THM-005:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-THM-006:Known limitation,KBDL-THM-006:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-THM-007:Validation evidence,KBDL-THM-007:Validation evidence,UNRESOLVED_FIELD_SOURCE,Resolved evidence/classification relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-THM-008:Validation evidence,KBDL-THM-008:Validation evidence,UNRESOLVED_FIELD_SOURCE,Resolved evidence/classification relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-THM-012:Known limitation,KBDL-THM-012:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-THM-012a:Known limitation,KBDL-THM-012a:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-THM-013:Known limitation,KBDL-THM-013:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-THM-014:Known limitation,KBDL-THM-014:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-THM-015:Known limitation,KBDL-THM-015:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-VAL-001:Validation method,KBDL-VAL-001:Validation method,UNRESOLVED_FIELD_SOURCE,UNRESOLVED
+UNRESOLVED_FIELD_SOURCE:KBDL-VAL-001:Validation evidence,KBDL-VAL-001:Validation evidence,UNRESOLVED_FIELD_SOURCE,Resolved evidence/classification relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-VAL-002:Validation method,KBDL-VAL-002:Validation method,UNRESOLVED_FIELD_SOURCE,UNRESOLVED
+UNRESOLVED_FIELD_SOURCE:KBDL-VAL-002:Validation evidence,KBDL-VAL-002:Validation evidence,UNRESOLVED_FIELD_SOURCE,Resolved evidence/classification relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-VAL-003:Validation method,KBDL-VAL-003:Validation method,UNRESOLVED_FIELD_SOURCE,UNRESOLVED
+UNRESOLVED_FIELD_SOURCE:KBDL-VAL-003:Validation evidence,KBDL-VAL-003:Validation evidence,UNRESOLVED_FIELD_SOURCE,Resolved evidence/classification relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-VAL-003:Known limitation,KBDL-VAL-003:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-VAL-004:Validation method,KBDL-VAL-004:Validation method,UNRESOLVED_FIELD_SOURCE,UNRESOLVED
+UNRESOLVED_FIELD_SOURCE:KBDL-VAL-005:Validation method,KBDL-VAL-005:Validation method,UNRESOLVED_FIELD_SOURCE,UNRESOLVED
+UNRESOLVED_FIELD_SOURCE:KBDL-VAL-005:Validation evidence,KBDL-VAL-005:Validation evidence,UNRESOLVED_FIELD_SOURCE,Resolved evidence/classification relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-VAL-005:Known limitation,KBDL-VAL-005:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-VAL-006:Validation method,KBDL-VAL-006:Validation method,UNRESOLVED_FIELD_SOURCE,UNRESOLVED
+UNRESOLVED_FIELD_SOURCE:KBDL-VAL-006:Validation evidence,KBDL-VAL-006:Validation evidence,UNRESOLVED_FIELD_SOURCE,Resolved evidence/classification relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-VAL-006:Known limitation,KBDL-VAL-006:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-VAL-007:Validation method,KBDL-VAL-007:Validation method,UNRESOLVED_FIELD_SOURCE,UNRESOLVED
+UNRESOLVED_FIELD_SOURCE:KBDL-VAL-008:Validation method,KBDL-VAL-008:Validation method,UNRESOLVED_FIELD_SOURCE,UNRESOLVED
+UNRESOLVED_FIELD_SOURCE:KBDL-VAL-008:Known limitation,KBDL-VAL-008:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-VAL-009:Validation method,KBDL-VAL-009:Validation method,UNRESOLVED_FIELD_SOURCE,UNRESOLVED
+UNRESOLVED_FIELD_SOURCE:KBDL-VAL-009:Validation evidence,KBDL-VAL-009:Validation evidence,UNRESOLVED_FIELD_SOURCE,Resolved evidence/classification relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-VAL-010:Validation method,KBDL-VAL-010:Validation method,UNRESOLVED_FIELD_SOURCE,UNRESOLVED
+UNRESOLVED_FIELD_SOURCE:KBDL-VAL-010:Known limitation,KBDL-VAL-010:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-VAL-011:Validation method,KBDL-VAL-011:Validation method,UNRESOLVED_FIELD_SOURCE,UNRESOLVED
+UNRESOLVED_FIELD_SOURCE:KBDL-VAL-011:Known limitation,KBDL-VAL-011:Known limitation,UNRESOLVED_FIELD_SOURCE,Not-verified/excluded scope relationship
+UNRESOLVED_FIELD_SOURCE:KBDL-VAL-012:Validation method,KBDL-VAL-012:Validation method,UNRESOLVED_FIELD_SOURCE,UNRESOLVED
+UNRESOLVED_FIELD_SOURCE:KBDL-VAL-012:Validation evidence,KBDL-VAL-012:Validation evidence,UNRESOLVED_FIELD_SOURCE,Resolved evidence/classification relationship
+LOCATION_MISMATCH:KBDL-A11Y-005,KBDL-A11Y-005,LOCATION_MISMATCH,derived accessibility.md#10-reading-and-focus-order; ledger accessibility.md#10-reading-and-focus-order; responsive.md#12-source-order-and-reading-order
+LOCATION_MISMATCH:KBDL-A11Y-010,KBDL-A11Y-010,LOCATION_MISMATCH,derived accessibility.md#15-focus-not-obscured; ledger accessibility.md#15-focus-not-obscured; responsive.md#18-sticky-and-fixed-regions
+LOCATION_MISMATCH:KBDL-A11Y-015,KBDL-A11Y-015,LOCATION_MISMATCH,derived accessibility.md#20-orientation; ledger accessibility.md#20-orientation; responsive.md#20-orientation-changes
+LOCATION_MISMATCH:KBDL-A11Y-021,KBDL-A11Y-021,LOCATION_MISMATCH,derived accessibility.md#25-target-sizing-and-spacing; ledger accessibility.md#25-target-sizing-and-spacing; accessibility.md#49-accessibility-decision-packet
+LOCATION_MISMATCH:KBDL-A11Y-035,KBDL-A11Y-035,LOCATION_MISMATCH,derived accessibility.md#39-screen-reader-behavior; ledger accessibility.md#39-screen-reader-behavior; accessibility.md#49-accessibility-decision-packet
+LOCATION_MISMATCH:KBDL-CMP-001,KBDL-CMP-001,LOCATION_MISMATCH,derived components-core.md#6-shared-component-contract; ledger components-core.md#6-shared-component-contract; components-core.md#7-component-anatomy-model
+LOCATION_MISMATCH:KBDL-CMP-004,KBDL-CMP-004,LOCATION_MISMATCH,derived components-core.md#8-component-state-model; ledger components-core.md#8-component-state-model; components-core.md#9-interaction-state-priority
+LOCATION_MISMATCH:KBDL-CMP-015,KBDL-CMP-015,LOCATION_MISMATCH,derived components-core.md#201-button; ledger components-core.md#201-button; components-core.md#35-kbdl-007-decision-packet
+LOCATION_MISMATCH:KBDL-CMP-020,KBDL-CMP-020,LOCATION_MISMATCH,derived components-core.md#205-button-group; ledger components-core.md#205-button-group; components-core.md#35-kbdl-007-decision-packet
+LOCATION_MISMATCH:KBDL-CMP-054,KBDL-CMP-054,LOCATION_MISMATCH,derived components-system.md#91-container-surface; ledger components-system.md#91-container-surface; components-system.md#92-panel
+LOCATION_MISMATCH:KBDL-CMP-057,KBDL-CMP-057,LOCATION_MISMATCH,derived components-system.md#10-overlay-architecture; ledger components-system.md#10-overlay-architecture; components-system.md#112-popover-or-non-modal-dialog
+LOCATION_MISMATCH:KBDL-CMP-058,KBDL-CMP-058,LOCATION_MISMATCH,derived components-system.md#10-overlay-architecture; ledger components-system.md#10-overlay-architecture; components-system.md#20-focus-and-modality
+LOCATION_MISMATCH:KBDL-CMP-059,KBDL-CMP-059,LOCATION_MISMATCH,derived components-system.md#10-overlay-architecture; ledger components-system.md#10-overlay-architecture; components-system.md#21-dismissal-and-persistence
+LOCATION_MISMATCH:KBDL-CMP-060,KBDL-CMP-060,LOCATION_MISMATCH,derived components-system.md#10-overlay-architecture; ledger components-system.md#10-overlay-architecture; components-system.md#31-theme-and-motion-validation-matrix
+LOCATION_MISMATCH:KBDL-CMP-061,KBDL-CMP-061,LOCATION_MISMATCH,derived components-system.md#13-feedback-architecture; ledger components-system.md#13-feedback-architecture; components-system.md#15-system-state-architecture
+LOCATION_MISMATCH:KBDL-CMP-062,KBDL-CMP-062,LOCATION_MISMATCH,derived components-system.md#8-surface-architecture; ledger components-system.md#8-surface-architecture; components-system.md#17-complex-presentation-architecture
+LOCATION_MISMATCH:KBDL-CMP-067,KBDL-CMP-067,LOCATION_MISMATCH,derived components-system.md#93-card; ledger components-system.md#93-card; components-system.md#33-kbdl-008-decision-packet
+LOCATION_MISMATCH:KBDL-CMP-069,KBDL-CMP-069,LOCATION_MISMATCH,derived components-system.md#94-accordion-surface; ledger components-system.md#94-accordion-surface; components-system.md#33-kbdl-008-decision-packet
+LOCATION_MISMATCH:KBDL-CMP-070,KBDL-CMP-070,LOCATION_MISMATCH,derived components-system.md#95-static-data-table; ledger components-system.md#95-static-data-table; components-system.md#181-interactive-grid
+LOCATION_MISMATCH:KBDL-CMP-071,KBDL-CMP-071,LOCATION_MISMATCH,derived components-system.md#10-overlay-architecture; ledger components-system.md#10-overlay-architecture; components-system.md#115-dialog; components-system.md#116-modal-dialog
+LOCATION_MISMATCH:KBDL-CMP-073,KBDL-CMP-073,LOCATION_MISMATCH,derived components-system.md#111-tooltip; ledger components-system.md#111-tooltip; components-system.md#33-kbdl-008-decision-packet
+LOCATION_MISMATCH:KBDL-CMP-074,KBDL-CMP-074,LOCATION_MISMATCH,derived components-system.md#112-popover-or-non-modal-dialog; ledger components-system.md#112-popover-or-non-modal-dialog; components-system.md#33-kbdl-008-decision-packet
+LOCATION_MISMATCH:KBDL-CMP-076,KBDL-CMP-076,LOCATION_MISMATCH,derived components-system.md#113-menu-surface; ledger components-system.md#113-menu-surface; components-system.md#33-kbdl-008-decision-packet
+LOCATION_MISMATCH:KBDL-CMP-080,KBDL-CMP-080,LOCATION_MISMATCH,derived components-system.md#116-modal-dialog; ledger components-system.md#116-modal-dialog; components-system.md#33-kbdl-008-decision-packet
+LOCATION_MISMATCH:KBDL-CMP-083,KBDL-CMP-083,LOCATION_MISMATCH,derived components-system.md#118-drawer-and-sheet; ledger components-system.md#118-drawer-and-sheet; components-system.md#33-kbdl-008-decision-packet
+LOCATION_MISMATCH:KBDL-CMP-085,KBDL-CMP-085,LOCATION_MISMATCH,derived components-system.md#12-overlay-layering-and-nesting; ledger components-system.md#12-overlay-layering-and-nesting; components-system.md#33-kbdl-008-decision-packet
+LOCATION_MISMATCH:KBDL-CMP-089,KBDL-CMP-089,LOCATION_MISMATCH,derived components-system.md#143-banner; ledger components-system.md#143-banner; components-system.md#33-kbdl-008-decision-packet
+LOCATION_MISMATCH:KBDL-CMP-091,KBDL-CMP-091,LOCATION_MISMATCH,derived components-system.md#144-toast-or-snackbar; ledger components-system.md#144-toast-or-snackbar; components-system.md#33-kbdl-008-decision-packet
+LOCATION_MISMATCH:KBDL-CMP-099,KBDL-CMP-099,LOCATION_MISMATCH,derived components-system.md#162-empty-state; ledger components-system.md#162-empty-state; components-system.md#33-kbdl-008-decision-packet
+LOCATION_MISMATCH:KBDL-CMP-102,KBDL-CMP-102,LOCATION_MISMATCH,derived components-system.md#164-error-state; ledger components-system.md#164-error-state; components-system.md#168-maintenance-unavailable-and-degraded-state; components-system.md#33-kbdl-008-decision-packet
+LOCATION_MISMATCH:KBDL-CMP-105,KBDL-CMP-105,LOCATION_MISMATCH,derived components-system.md#181-interactive-grid; ledger components-system.md#181-interactive-grid; components-system.md#33-kbdl-008-decision-packet
+LOCATION_MISMATCH:KBDL-CMP-106,KBDL-CMP-106,LOCATION_MISMATCH,derived components-system.md#182-tree-and-treegrid; ledger components-system.md#182-tree-and-treegrid; components-system.md#33-kbdl-008-decision-packet
+LOCATION_MISMATCH:KBDL-CMP-108,KBDL-CMP-108,LOCATION_MISMATCH,derived components-system.md#183-carousel; ledger components-system.md#183-carousel; components-system.md#33-kbdl-008-decision-packet
+LOCATION_MISMATCH:KBDL-CMP-110,KBDL-CMP-110,LOCATION_MISMATCH,derived components-system.md#184-data-visualization; ledger components-system.md#184-data-visualization; components-system.md#33-kbdl-008-decision-packet
+LOCATION_MISMATCH:KBDL-CMP-111,KBDL-CMP-111,LOCATION_MISMATCH,derived components-system.md#19-responsive-transformation-policy; ledger components-system.md#19-responsive-transformation-policy; components-system.md#33-kbdl-008-decision-packet
+LOCATION_MISMATCH:KBDL-CUS-011,KBDL-CUS-011,LOCATION_MISMATCH,derived customization.md#10-impact-assessment; ledger customization.md#10-impact-assessment; customization.md#14-validation-and-evidence-planning
+LOCATION_MISMATCH:KBDL-CUS-029,KBDL-CUS-029,LOCATION_MISMATCH,derived customization.md#15-review-expiry-change-and-rollback; ledger customization.md#15-review-expiry-change-and-rollback; customization.md#24-content-and-open-brand-expression
+LOCATION_MISMATCH:KBDL-FND-002,KBDL-FND-002,LOCATION_MISMATCH,derived foundations/color.md#24-status-roles; ledger foundations/color.md#24-status-roles; foundations/iconography-media.md#11-required-principles-approved
+LOCATION_MISMATCH:KBDL-GOV-001,KBDL-GOV-001,LOCATION_MISMATCH,derived governance.md#kbdl-governance-and-change-control; ledger governance.md#kbdl-gov-001--specification-architecture-is-established
+LOCATION_MISMATCH:KBDL-GOV-002,KBDL-GOV-002,LOCATION_MISMATCH,derived governance.md#kbdl-gov-001--specification-architecture-is-established; ledger governance.md#kbdl-gov-002--accessibility-requirements-are-protected
+LOCATION_MISMATCH:KBDL-GOV-003,KBDL-GOV-003,LOCATION_MISMATCH,derived governance.md#kbdl-gov-002--accessibility-requirements-are-protected; ledger governance.md#kbdl-gov-003--documentation-governance-process
+LOCATION_MISMATCH:KBDL-PRN-001,KBDL-PRN-001,LOCATION_MISMATCH,derived principles.md#12-normative-requirements; ledger principles.md#1-identity-statement
+LOCATION_MISMATCH:KBDL-PRN-002,KBDL-PRN-002,LOCATION_MISMATCH,derived principles.md#12-normative-requirements; ledger principles.md#4-relationship-between-luxury-and-utility
+LOCATION_MISMATCH:KBDL-PRN-003,KBDL-PRN-003,LOCATION_MISMATCH,derived principles.md#12-normative-requirements; ledger principles.md#6-core-principles
+LOCATION_MISMATCH:KBDL-PRN-004,KBDL-PRN-004,LOCATION_MISMATCH,derived principles.md#12-normative-requirements; ledger principles.md#7-visual-consistency
+LOCATION_MISMATCH:KBDL-PRN-005,KBDL-PRN-005,LOCATION_MISMATCH,derived principles.md#12-normative-requirements; ledger principles.md#5-stable-and-variable-identity-elements
+LOCATION_MISMATCH:KBDL-PRN-006,KBDL-PRN-006,LOCATION_MISMATCH,derived principles.md#12-normative-requirements; ledger principles.md#8-design-decision-hierarchy
+LOCATION_MISMATCH:KBDL-PRN-007,KBDL-PRN-007,LOCATION_MISMATCH,derived principles.md#12-normative-requirements; ledger principles.md#9-profile-level-interpretation
+LOCATION_MISMATCH:KBDL-PRN-008,KBDL-PRN-008,LOCATION_MISMATCH,derived principles.md#12-normative-requirements; ledger principles.md#10-conforming-design-directions; principles.md#11-non-conforming-design-directions
+LOCATION_MISMATCH:KBDL-PRO-001,KBDL-PRO-001,LOCATION_MISMATCH,derived profiles.md#5-profile-architecture; ledger profiles.md#5-profile-architecture; profiles.md#9-cross-profile-invariants
+LOCATION_MISMATCH:KBDL-PRO-006,KBDL-PRO-006,LOCATION_MISMATCH,derived profiles.md#7-locked-controlled-and-open-profile-decisions; ledger profiles.md#7-locked-controlled-and-open-profile-decisions; profiles.md#35-kbdl-006-approval-boundary-audit; profiles.md#37-kbdl-008-approval-boundary-audit
+LOCATION_MISMATCH:KBDL-PRO-009,KBDL-PRO-009,LOCATION_MISMATCH,derived profiles.md#8-profile-selection-and-declaration; ledger profiles.md#8-profile-selection-and-declaration; profiles.md#33-kbdl-009-decision-packet
+LOCATION_MISMATCH:KBDL-PRO-016,KBDL-PRO-016,LOCATION_MISMATCH,derived profiles.md#102-component-interpretation; ledger profiles.md#102-component-interpretation; profiles.md#34-approval-ready-versus-contingent-decisions
+LOCATION_MISMATCH:KBDL-PRO-017,KBDL-PRO-017,LOCATION_MISMATCH,derived profiles.md#112-component-interpretation; ledger profiles.md#112-component-interpretation; profiles.md#33-kbdl-009-decision-packet
+LOCATION_MISMATCH:KBDL-PRO-018,KBDL-PRO-018,LOCATION_MISMATCH,derived profiles.md#122-component-interpretation; ledger profiles.md#122-component-interpretation; profiles.md#34-approval-ready-versus-contingent-decisions
+LOCATION_MISMATCH:KBDL-PRO-027,KBDL-PRO-027,LOCATION_MISMATCH,derived profiles.md#25-profile-adoption-and-change-management; ledger profiles.md#25-profile-adoption-and-change-management; profiles.md#33-kbdl-009-decision-packet
+LOCATION_MISMATCH:KBDL-PRO-028,KBDL-PRO-028,LOCATION_MISMATCH,derived profiles.md#8-profile-selection-and-declaration; ledger profiles.md#8-profile-selection-and-declaration; profiles.md#33-kbdl-009-decision-packet
+LOCATION_MISMATCH:KBDL-PRO-029,KBDL-PRO-029,LOCATION_MISMATCH,derived profiles.md#25-profile-adoption-and-change-management; ledger profiles.md#25-profile-adoption-and-change-management; profiles.md#33-kbdl-009-decision-packet
+LOCATION_MISMATCH:KBDL-THM-007,KBDL-THM-007,LOCATION_MISMATCH,derived themes/light-theme.md; ledger themes/light-theme.md#1-canvas-and-surfaces
+LOCATION_MISMATCH:KBDL-THM-008,KBDL-THM-008,LOCATION_MISMATCH,derived themes/dark-theme.md; ledger themes/dark-theme.md#1-elevation-strategy
+LOCATION_MISMATCH:KBDL-VAL-003,KBDL-VAL-003,LOCATION_MISMATCH,derived validation.md#9-lifecycle-status-audit; ledger validation.md#9-lifecycle-status-audit; validation.md#12-approved-authority-audit
+LOCATION_MISMATCH:KBDL-VAL-005,KBDL-VAL-005,LOCATION_MISMATCH,derived validation.md#13-decision-register-audit; ledger validation.md#13-decision-register-audit; validation.md#14-pending-and-deferred-inventory
+LOCATION_MISMATCH:KBDL-VAL-008,KBDL-VAL-008,LOCATION_MISMATCH,derived validation.md#17-governance-and-conventions-audit; ledger validation.md#17-governance-and-conventions-audit; validation.md#28-security-privacy-correctness-and-data-integrity-audit
+EVIDENCE_SCOPE_RELATIONSHIP:KBDL-A11Y-007,KBDL-A11Y-007,EVIDENCE_SCOPE_RELATIONSHIP,resolved artifact does not name requirement or shared validation scope
+EVIDENCE_SCOPE_RELATIONSHIP:KBDL-A11Y-008,KBDL-A11Y-008,EVIDENCE_SCOPE_RELATIONSHIP,resolved artifact does not name requirement or shared validation scope
+EVIDENCE_SCOPE_RELATIONSHIP:KBDL-A11Y-009,KBDL-A11Y-009,EVIDENCE_SCOPE_RELATIONSHIP,resolved artifact does not name requirement or shared validation scope
+EVIDENCE_SCOPE_RELATIONSHIP:KBDL-FND-009,KBDL-FND-009,EVIDENCE_SCOPE_RELATIONSHIP,resolved artifact does not name requirement or shared validation scope
+EVIDENCE_SCOPE_RELATIONSHIP:KBDL-THM-002,KBDL-THM-002,EVIDENCE_SCOPE_RELATIONSHIP,resolved artifact does not name requirement or shared validation scope
+EVIDENCE_SCOPE_RELATIONSHIP:KBDL-THM-007,KBDL-THM-007,EVIDENCE_SCOPE_RELATIONSHIP,resolved artifact does not name requirement or shared validation scope
+EVIDENCE_SCOPE_RELATIONSHIP:KBDL-THM-008,KBDL-THM-008,EVIDENCE_SCOPE_RELATIONSHIP,resolved artifact does not name requirement or shared validation scope
+EVIDENCE_SCOPE_RELATIONSHIP:KBDL-VAL-001,KBDL-VAL-001,EVIDENCE_SCOPE_RELATIONSHIP,resolved artifact does not name requirement or shared validation scope
+EVIDENCE_SCOPE_RELATIONSHIP:KBDL-VAL-002,KBDL-VAL-002,EVIDENCE_SCOPE_RELATIONSHIP,resolved artifact does not name requirement or shared validation scope
+EVIDENCE_SCOPE_RELATIONSHIP:KBDL-VAL-009,KBDL-VAL-009,EVIDENCE_SCOPE_RELATIONSHIP,resolved artifact does not name requirement or shared validation scope
+EVIDENCE_SCOPE_RELATIONSHIP:KBDL-VAL-012,KBDL-VAL-012,EVIDENCE_SCOPE_RELATIONSHIP,resolved artifact does not name requirement or shared validation scope
+EVIDENCE_MISMATCH:KBDL-A11Y-007,KBDL-A11Y-007,EVIDENCE_MISMATCH,themes/validation.md §3 for the three Verified rows; not verified for the rest
+EVIDENCE_MISMATCH:KBDL-A11Y-008,KBDL-A11Y-008,EVIDENCE_MISMATCH,themes/validation.md §3 for the three Verified rows; not verified for the rest
+EVIDENCE_MISMATCH:KBDL-A11Y-009,KBDL-A11Y-009,EVIDENCE_MISMATCH,themes/validation.md §3 for the three Verified rows; not verified for the rest
+EVIDENCE_MISMATCH:KBDL-FND-009,KBDL-FND-009,EVIDENCE_MISMATCH,"Contrast-ratio table in foundations/color.md §4, computed via a local dependency-free script (see the KBDL-003 validation evidence for the script and full output). Updated under KBDL-003-R1: neutral-50 (3.25:1) was found to fail the 4.5:1 normal-text threshold and is now restricted to large-text/non-text-UI/decorative use only; a new neutral-60 (5.59:1) was added and verified as the safe value for normal-sized secondary/tertiary text"
+EVIDENCE_MISMATCH:KBDL-THM-002,KBDL-THM-002,EVIDENCE_MISMATCH,"Parity matrix in themes/semantic-roles.md § Parity Matrix — 72 unique roles, 72 light mappings, 72 dark mappings, 1 role-level alias (corrected under KBDL-004-R3, previously miscounted as 2), 0 unresolved; recorded in the KBDL-004-R3 commit. The KBDL-004-R1 re-run found and fixed a real table-formatting defect (an inserted paragraph had broken the Status Families table in light-theme.md §5, orphaning its ""Neutral status"" row)"
+EVIDENCE_MISMATCH:KBDL-THM-007,KBDL-THM-007,EVIDENCE_MISMATCH,"themes/validation.md §3 — 52 pairs tested, all opaque, all passing their applicable threshold except 4 explicitly decorative-exempt borders/gridlines. The two Informational failures identified in the original KBDL-004 report (3.78:1, 4.21:1) are resolved by a revised hue (#164499) for the Text/Icon/Border/Strong-surface roles, with neutral-10 correctly retained for On-strong-surface content (role assignment corrected under KBDL-004-R2) — see adaptation.md §5.2. The Media caption row was corrected under KBDL-004-R2 to describe a fully opaque neutral-100 band (17.17:1 is directly correct for this pair, not inherited or assumed)"
+EVIDENCE_MISMATCH:KBDL-THM-008,KBDL-THM-008,EVIDENCE_MISMATCH,"themes/validation.md §3 — 52 pairs tested, all opaque, all passing their applicable threshold except 4 explicitly decorative-exempt borders/gridlines. The two Informational failures identified in the original KBDL-004 report (3.78:1, 4.21:1) are resolved by a revised hue (#164499) for the Text/Icon/Border/Strong-surface roles, with neutral-10 correctly retained for On-strong-surface content (role assignment corrected under KBDL-004-R2) — see adaptation.md §5.2. The Media caption row was corrected under KBDL-004-R2 to describe a fully opaque neutral-100 band (17.17:1 is directly correct for this pair, not inherited or assumed)"
+EVIDENCE_MISMATCH:KBDL-VAL-001,KBDL-VAL-001,EVIDENCE_MISMATCH,Executed evidence — docs/kbdl/evidence/kbdl-011-r8/artifacts/validation-output.txt; stated repository method PASS.
+EVIDENCE_MISMATCH:KBDL-VAL-002,KBDL-VAL-002,EVIDENCE_MISMATCH,Executed evidence — docs/kbdl/evidence/kbdl-011-r8/artifacts/validation-output.txt; stated repository method PASS.
+EVIDENCE_MISMATCH:KBDL-VAL-003,KBDL-VAL-003,EVIDENCE_MISMATCH,Executed evidence — docs/kbdl/evidence/kbdl-011-r15/artifacts/val-003-audit.txt; 26-mutation suite PASS.
+EVIDENCE_MISMATCH:KBDL-VAL-005,KBDL-VAL-005,EVIDENCE_MISMATCH,Executed evidence — docs/kbdl/evidence/kbdl-011-r8/artifacts/validation-output.txt; stated repository method PASS.
+EVIDENCE_MISMATCH:KBDL-VAL-006,KBDL-VAL-006,EVIDENCE_MISMATCH,Executed evidence — docs/kbdl/evidence/kbdl-011-r15/artifacts/val-006-audit.txt; 26-mutation suite PASS.
+EVIDENCE_MISMATCH:KBDL-VAL-009,KBDL-VAL-009,EVIDENCE_MISMATCH,Executed evidence — docs/kbdl/evidence/kbdl-011-r8/artifacts/validation-output.txt; stated repository method PASS.
+EVIDENCE_MISMATCH:KBDL-VAL-012,KBDL-VAL-012,EVIDENCE_MISMATCH,Executed evidence — docs/kbdl/evidence/kbdl-011-r8/artifacts/validation-output.txt; stated repository method PASS.

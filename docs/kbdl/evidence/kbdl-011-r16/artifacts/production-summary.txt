@@ -1,0 +1,52 @@
+Requirements audited: 317
+Effective records: 317
+Field-source rows: 5389
+Readable groups parsed: 60
+Status buckets resolved: 75
+Unresolved field sources: 335
+Source-precedence conflicts: 0
+Explicit group/ledger conflicts: 0
+Unresolved group mappings: 0
+Exact-location mismatches: 63
+Valid-topical-wrong-anchor defects: 63
+Packet-source mismatches: 0
+Packet-item mismatches: 0
+Dependency-target mismatches: 0
+Dependency-class mismatches: 0
+Evidence-reference mismatches: 0
+Evidence-scope mapping defects: 11
+Limitation-scope mismatches: 229
+Approved requirements audited: 266
+Standard-clause mismatches: 20
+Missing authority targets: 0
+Non-Approved authority targets: 0
+Unclassified authority references: 0
+Self-authority claims: 0
+Circular authority chains: 1
+Counters using unexecuted self-audits: 0
+Real mutations executed: 0
+Mutations detected by production validator: 0
+Unexpected mutation passes: 0
+Wrong-category detections: 0
+Fixtures remaining: 0
+Counters lacking exact provenance: 0
+Failed effective records: 289
+Known-limitation source defects: 229
+Validation-classification source defects: 59
+Authority-source defects: 21
+Validation-evidence source defects: 14
+Validation-method source defects: 12
+
+VAL-003 result: Not verified
+VAL-004 result: Not verified
+VAL-005 result: Not verified
+VAL-006 result: Not verified
+VAL-007 result: Verified
+Candidate status: NOT READY
+R16 audit conclusion: BLOCKED
+
+Accepted limitations: 0
+Readiness approvals: 0
+Completion approvals: 0
+Implementation conformance: NOT VERIFIED
+Project completion: PENDING

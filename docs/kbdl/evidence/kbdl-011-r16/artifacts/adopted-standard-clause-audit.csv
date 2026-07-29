@@ -1,0 +1,91 @@
+Requirement ID,Candidate standard citations,Normative governing citations,Direct or supporting,Result
+KBDL-A11Y-001,SC 1.1.1; SC 1.4.5,SC 1.1.1; SC 1.4.5,Direct authority,PASS
+KBDL-A11Y-002,SC 1.2.x,SC 1.2.x,Direct authority,PASS
+KBDL-A11Y-003,SC 1.3.1; SC 4.1.2,SC 1.3.1; SC 4.1.2,Direct authority,PASS
+KBDL-A11Y-004,SC 2.4.2; SC 2.4.6,SC 2.4.2; SC 2.4.6,Direct authority,PASS
+KBDL-A11Y-005,SC 1.3.2; SC 2.4.3,SC 1.3.2; SC 2.4.3,Direct authority,PASS
+KBDL-A11Y-006,SC 1.4.1,SC 1.4.1,Direct authority,PASS
+KBDL-A11Y-007,SC 1.4.3,SC 1.4.3,Direct authority,PASS
+KBDL-A11Y-008,GENERIC ONLY,NONE,Direct authority,FAIL
+KBDL-A11Y-009,SC 2.4.7,SC 2.4.7,Direct authority,PASS
+KBDL-A11Y-010,GENERIC ONLY,NONE,Direct authority,FAIL
+KBDL-A11Y-012,SC 1.4.4,SC 1.4.4,Direct authority,PASS
+KBDL-A11Y-013,GENERIC ONLY,NONE,Direct authority,FAIL
+KBDL-A11Y-014,GENERIC ONLY,NONE,Direct authority,FAIL
+KBDL-A11Y-015,SC 1.3.4,SC 1.3.4,Direct authority,PASS
+KBDL-A11Y-016,SC 2.1.1; SC 2.1.4; SC 3.2.1,"SC
+    2.1.4; SC 2.1.1; SC 3.2.1",Direct authority,PASS
+KBDL-A11Y-017,SC 2.1.2,SC 2.1.2,Direct authority,PASS
+KBDL-A11Y-018,SC 2.4.1,SC 2.4.1,Direct authority,PASS
+KBDL-A11Y-020,SC 2.5.8,SC 2.5.8,Direct authority,PASS
+KBDL-A11Y-022,SC 2.5.2,SC 2.5.2,Direct authority,PASS
+KBDL-A11Y-023,SC 2.5.1; SC 2.5.7,SC 2.5.1; SC 2.5.7,Direct authority,PASS
+KBDL-A11Y-024,SC 2.5.4,SC 2.5.4,Direct authority,PASS
+KBDL-A11Y-026,SC 2.3.1,SC 2.3.1,Supporting/mixed,PASS
+KBDL-A11Y-027,SC 2.2.1; SC 2.2.2,SC 2.2.1; SC 2.2.2,Direct authority,PASS
+KBDL-A11Y-028,SC 1.3.5; SC 2.5.3; SC 3.2.2; SC 3.3.2; SC 3.3.7,"SC
+    2.5.3; SC 1.3.5; SC 3.2.2; SC 3.3.2; SC 3.3.7",Direct authority,PASS
+KBDL-A11Y-029,SC 3.3.1; SC 3.3.3,SC 3.3.1; SC 3.3.3,Direct authority,PASS
+KBDL-A11Y-030,SC 3.3.4,SC 3.3.4,Direct authority,PASS
+KBDL-A11Y-031,SC 4.1.3,SC 4.1.3,Direct authority,PASS
+KBDL-A11Y-032,SC 3.3.8,SC 3.3.8,Direct authority,PASS
+KBDL-A11Y-033,SC 3.1.1,SC 3.1.1,Supporting/mixed,PASS
+KBDL-A11Y-034,SC 2.4.4; SC 3.2.6,SC 2.4.4; SC 3.2.6,Direct authority,PASS
+KBDL-CMP-002,SC 4.1.2,SC 4.1.2,Direct authority,PASS
+KBDL-CMP-003,SC 2.5.3; SC 4.1.2,SC 2.5.3; SC 4.1.2,Direct authority,PASS
+KBDL-CMP-006,SC 2.4.7,SC 2.4.7,Direct authority,PASS
+KBDL-CMP-007,SC 2.1.1; SC 2.1.2,SC 2.1.1; SC 2.1.2,Direct authority,PASS
+KBDL-CMP-008,SC 2.5.2; SC 2.5.8,SC 2.5.2; SC 2.5.8,Direct authority,PASS
+KBDL-CMP-016,SC 4.1.2,SC 4.1.2,Direct authority,PASS
+KBDL-CMP-018,GENERIC ONLY,NONE,Direct authority,FAIL
+KBDL-CMP-019,SC 2.4.4,SC 2.4.4,Direct authority,PASS
+KBDL-CMP-021,GENERIC ONLY,NONE,Direct authority,FAIL
+KBDL-CMP-022,SC 1.3.5; SC 3.3.2; SC 3.3.7,"SC
+    1.3.5; SC 3.3.2; SC 3.3.7",Direct authority,PASS
+KBDL-CMP-024,SC 3.3.8,SC 3.3.8,Direct authority,PASS
+KBDL-CMP-028,GENERIC ONLY,NONE,Direct authority,FAIL
+KBDL-CMP-032,GENERIC ONLY,NONE,Direct authority,FAIL
+KBDL-CMP-037,SC 3.3.1; SC 3.3.3; SC 3.3.4; SC 3.3.7; SC 4.1.3,"SC
+    3.3.3; SC 3.3.1; SC 3.3.4; SC 3.3.7; SC 4.1.3",Direct authority,PASS
+KBDL-CMP-038,SC 2.4.1,SC 2.4.1,Direct authority,PASS
+KBDL-CMP-045,GENERIC ONLY,NONE,Direct authority,FAIL
+KBDL-CMP-053,GENERIC ONLY,NONE,Supporting/mixed,PASS
+KBDL-CMP-054,GENERIC ONLY,NONE,Direct authority,FAIL
+KBDL-CMP-056,GENERIC ONLY,NONE,Direct authority,FAIL
+KBDL-CMP-057,SC 2.1.1; SC 2.1.2,SC 2.1.1; SC 2.1.2,Supporting/mixed,PASS
+KBDL-CMP-058,SC 2.4.3,SC 2.4.3,Direct authority,PASS
+KBDL-CMP-059,SC 2.2.1,SC 2.2.1,Supporting/mixed,PASS
+KBDL-CMP-068,GENERIC ONLY,NONE,Direct authority,FAIL
+KBDL-CMP-070,SC 1.3.1,SC 1.3.1,Supporting/mixed,PASS
+KBDL-CMP-071,SC 2.4.3; aria-modal,SC 2.4.3; aria-modal,Supporting/mixed,PASS
+KBDL-CMP-072,SC 4.1.2,SC 4.1.2,Supporting/mixed,PASS
+KBDL-CMP-075,GENERIC ONLY,NONE,Direct authority,FAIL
+KBDL-CMP-077,GENERIC ONLY,NONE,Direct authority,FAIL
+KBDL-CMP-078,SC 2.1.1; SC 4.1.2,SC 2.1.1; SC 4.1.2,Direct authority,PASS
+KBDL-CMP-079,SC 2.1.2,SC 2.1.2,Supporting/mixed,PASS
+KBDL-CMP-081,GENERIC ONLY,NONE,Direct authority,FAIL
+KBDL-CMP-084,SC 2.1.2; SC 2.4.3,SC 2.1.2; SC 2.4.3,Direct authority,PASS
+KBDL-CMP-086,GENERIC ONLY,NONE,Supporting/mixed,PASS
+KBDL-CMP-087,SC 1.4.1,SC 1.4.1; aria-describedby,Supporting/mixed,PASS
+KBDL-CMP-088,GENERIC ONLY,NONE,Supporting/mixed,PASS
+KBDL-CMP-090,SC 2.2.1,SC 2.2.1,Supporting/mixed,PASS
+KBDL-CMP-092,aria-atomic; aria-live,aria-atomic; aria-live,Supporting/mixed,PASS
+KBDL-CMP-093,SC 1.1.1; SC 4.1.2,SC 1.1.1; SC 4.1.2,Direct authority,PASS
+KBDL-CMP-094,GENERIC ONLY,NONE,Direct authority,FAIL
+KBDL-CMP-095,GENERIC ONLY,NONE,Direct authority,FAIL
+KBDL-CMP-096,aria-hidden,aria-hidden,Supporting/mixed,PASS
+KBDL-CMP-100,SC 3.3.7,SC 3.3.7,Supporting/mixed,PASS
+KBDL-CMP-101,SC 3.3.1,SC 3.3.1,Supporting/mixed,PASS
+KBDL-CMP-107,SC 2.2.2,SC 2.2.2,Direct authority,PASS
+KBDL-CMP-109,SC 1.3.1; SC 1.4.1; SC 2.1.1,"SC
+    2.1.1; SC 1.3.1; SC 1.4.1",Direct authority,PASS
+KBDL-MOT-019,GENERIC ONLY,NONE,Supporting/mixed,PASS
+KBDL-PRO-014,GENERIC ONLY,NONE,Supporting/mixed,PASS
+KBDL-RSP-006,GENERIC ONLY,NONE,Direct authority,FAIL
+KBDL-RSP-007,SC 1.3.2; SC 2.4.3,SC 1.3.2; SC 2.4.3,Direct authority,PASS
+KBDL-RSP-013,GENERIC ONLY,NONE,Direct authority,FAIL
+KBDL-RSP-015,SC 1.3.4,SC 1.3.4,Direct authority,PASS
+KBDL-RSP-016,SC 1.4.4,SC 1.4.4,Direct authority,PASS
+KBDL-RSP-018,SC 2.5.1; SC 2.5.2,SC 2.5.1; SC 2.5.2,Direct authority,PASS
+KBDL-RSP-019,GENERIC ONLY,NONE,Direct authority,FAIL
+KBDL-RSP-020,SC 2.4.3,SC 2.4.3,Direct authority,PASS
