@@ -194,6 +194,65 @@ moved. No R13–R16 artifact, `traceability-matrix.md`, `validation.md`,
 `decision-register.md`, owner-decision record, or `project-owner-review.md`
 changed. No dependency was added. No implementation is authorized.
 
+## Validation remediation (post-review)
+
+The orchestrator returned **REMEDIATION REQUIRED**, approving the two-file
+validator scope expansion as **Required** within an exact boundary, and naming
+five remaining items. All five are addressed:
+
+**1. Unlock-map contradiction removed.** The FSRG1 entry asserted both that
+planning-agent validation had *passed* and that it *had not occurred*, with a
+`Status:` line still reading `LOCKED — PLANNING-AGENT VALIDATION REQUIRED`. The
+stale clause is now an explicitly marked historical note, and the status
+advances to the sanctioned value `ELIGIBLE FOR FUTURE PROMPT AFTER APPROVAL` —
+no fifth vocabulary value was introduced — accompanied by prose stating exactly
+what it does not unlock: Batch A stays `LOCKED — OWNER DECISION REQUIRED`, the
+other 58 issues stay undecided, `KBDL-011-SMR2-VC-0001` stays `LOCKED` pending
+validation of its own recording, no VAL status moved, and no implementation is
+authorized.
+
+**2. Fail-closed validation for that exact contradiction.** `fsrg1_roadmap.py`
+gains:
+
+* **FR7** — no roadmap entry may claim planning-agent validation passed *and*
+  state that the same validation has not occurred / remains pending. A
+  historical marker in the same bullet rescues a preserved account of a past
+  state; an unmarked current-state claim fails.
+* **FR8** — a validated entry must not still demand planning-agent validation,
+  and the downstream entry must remain `LOCKED`.
+* **FR5**, tightened: the downstream entry must be `LOCKED` always; FSRG1 may
+  leave `LOCKED` only while a passed-validation claim is recorded.
+
+Four new fixtures cover the contradiction in both phrasings, the stale
+`Status:` line, and an unlocked downstream entry; a third positive control
+proves a historically marked past state is still accepted. Fixture 8's premise
+had inverted — it asserted FSRG1 must always be `LOCKED`, which stopped being
+true once FSRG1 was genuinely validated — so it now tests the meaningful
+invariant: unlocked *without* a validation claim must fail. Suite: 17/17.
+
+**3. Exit codes captured verbatim.** Transcript section 15 records the command
+and `[exit=0]` for all seven fixture suites: `negative_fixtures`,
+`dr1_r1_fixtures`, `authority_graph_fixtures`, `agc1_narrow_diff_fixtures`,
+`fsrg1_roadmap_fixtures`, `fsrg1_fixtures`, and `smr2_vc_0001_fixtures` — with
+zero nonzero exits anywhere in the section.
+
+**4. Ref equality reconfirmed** from the final remediation commit; see the
+Publication table below.
+
+**5. Preservation during remediation.** `git diff --exit-code` against
+`4aba456` returns 0 for `accessibility.md`, `traceability-metadata.csv`,
+`issue-register.csv`, the live registry, the FSRG1 generator and schema, all
+four R13–R16 packages, `traceability-matrix.md`, `validation.md`,
+`decision-register.md`, both owner-decision records, and
+`project-owner-review.md`. The remediation touched none of them.
+
+Scope: the remediation changed `implementation-unlock-map.md` (already
+allowed), `fsrg1_roadmap.py`, and `fsrg1_roadmap_fixtures.py`, plus evidence
+records. The two roadmap files are declared in the validator as
+`REMEDIATION_AUTHORIZED`, deliberately kept **separate** from
+`DECLARED_SCOPE_DEVIATIONS` so the retroactively approved FSRG1 baseline
+expansion cannot silently grow; check 31 enforces that separation.
+
 ## Status
 
 Metadata is recorded. **Planning-agent validation of this recording is

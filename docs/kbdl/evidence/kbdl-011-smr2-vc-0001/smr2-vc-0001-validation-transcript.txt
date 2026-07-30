@@ -1049,3 +1049,1344 @@ Any reader verifying this package should run, from a clean checkout:
   python3 docs/kbdl/evidence/kbdl-011-source-model-resolution/scripts/validate_packet.py
 
 All four must exit 0. If they do not, this recording is not validated.
+
+======================================================================
+15. KBDL-011-SMR2-VC-0001 VALIDATION REMEDIATION
+======================================================================
+Orchestrator verdict on the prior state: REMEDIATION REQUIRED.
+Two-file validator scope expansion: APPROVED (classification: Required),
+bounded to baseline 718b0431 and exactly three authorized recording paths.
+
+Defect remediated: implementation-unlock-map.md asserted BOTH that
+KBDL-011-SMR2-FSRG1 'has passed planning-agent validation' AND that
+'planning-agent validation of KBDL-011-SMR2-FSRG1 has not occurred',
+with a Status line still reading LOCKED - PLANNING-AGENT VALIDATION
+REQUIRED. No check could see the contradiction.
+
+Corrections:
+  * the stale 'has not occurred' clause is replaced by an explicitly
+    marked historical note; the entry now records the validated state.
+  * Status advances to the sanctioned vocabulary value
+    'ELIGIBLE FOR FUTURE PROMPT AFTER APPROVAL' (no fifth value added),
+    with prose stating exactly what it does NOT unlock.
+  * fsrg1_roadmap.py gains FR7 (no entry may claim validation passed and
+    also that it has not occurred) and FR8 (a validated entry must not
+    still demand validation; the downstream entry must stay LOCKED).
+  * FR5 now requires LOCKED for the downstream entry always, and for
+    FSRG1 only while no passed-validation claim is recorded.
+  * four new fixtures (11-14) plus a third positive control (17).
+
+--------- EXIT CODES: EVERY FIXTURE SUITE, CAPTURED VERBATIM ---------
+$ python3 docs/kbdl/evidence/kbdl-011-source-model-resolution/scripts/negative_fixtures.py
+======================================================================
+[REJECTED (as expected)] fixture=unbacked_unrelated_decision
+    expected_defect_categories: ["7. every Owner decision field is literally PENDING or exactly matches its durable owner-decision record's selected choice", "7b. every Owner decision date field is literally PENDING or exactly matches its durable owner-decision record's decision date", '7c. every Owner evidence field is literally PENDING or references its durable owner-decision record (never KBDL-DEC-014 alone)']
+    triggered_as_expected:      ["7. every Owner decision field is literally PENDING or exactly matches its durable owner-decision record's selected choice", "7b. every Owner decision date field is literally PENDING or exactly matches its durable owner-decision record's decision date", '7c. every Owner evidence field is literally PENDING or references its durable owner-decision record (never KBDL-DEC-014 alone)']
+[REJECTED (as expected)] fixture=choice_mismatch
+    expected_defect_categories: ["7. every Owner decision field is literally PENDING or exactly matches its durable owner-decision record's selected choice", 'D9. every selected project-owner-review.md checkbox exactly matches its durable owner-decision record']
+    triggered_as_expected:      ["7. every Owner decision field is literally PENDING or exactly matches its durable owner-decision record's selected choice"]
+[REJECTED (as expected)] fixture=review_form_mismatch
+    expected_defect_categories: ['D11. every durably-recorded issue has a matching project-owner-review.md checkbox selection', 'D9. every selected project-owner-review.md checkbox exactly matches its durable owner-decision record']
+    triggered_as_expected:      ['D9. every selected project-owner-review.md checkbox exactly matches its durable owner-decision record']
+[REJECTED (as expected)] fixture=duplicate_durable_decision
+    expected_defect_categories: ['D1. no duplicate durable owner-decision records for the same issue ID']
+    triggered_as_expected:      ['D1. no duplicate durable owner-decision records for the same issue ID']
+[REJECTED (as expected)] fixture=unknown_issue_id
+    expected_defect_categories: ['D3. every durable-record issue ID exists in issue-register.csv (no unknown issue ID)']
+    triggered_as_expected:      ['D3. every durable-record issue ID exists in issue-register.csv (no unknown issue ID)']
+[REJECTED (as expected)] fixture=implementation_authorizing_record
+    expected_defect_categories: ["D2. every durable owner-decision record states 'Implementation authorization status: NOT AUTHORIZED'"]
+    triggered_as_expected:      ["D2. every durable owner-decision record states 'Implementation authorization status: NOT AUTHORIZED'"]
+[REJECTED (as expected)] fixture=stale_packet_overview
+    expected_defect_categories: ['PS1. when durable decisions exist, the packet introduction/contents-table does not claim zero decisions are recorded']
+    triggered_as_expected:      ['PS1. when durable decisions exist, the packet introduction/contents-table does not claim zero decisions are recorded']
+[REJECTED (as expected)] fixture=stale_review_summary
+    expected_defect_categories: ['PS4. review-cycle sign-off summary matches the durable record']
+    triggered_as_expected:      ['PS4. review-cycle sign-off summary matches the durable record']
+[REJECTED (as expected)] fixture=ba_unbacked_change
+    expected_defect_categories: ["7. every Owner decision field is literally PENDING or exactly matches its durable owner-decision record's selected choice", "7b. every Owner decision date field is literally PENDING or exactly matches its durable owner-decision record's decision date", '7c. every Owner evidence field is literally PENDING or references its durable owner-decision record (never KBDL-DEC-014 alone)', 'D10. no project-owner-review.md checkbox selection lacks a matching durable owner-decision record']
+    triggered_as_expected:      ["7. every Owner decision field is literally PENDING or exactly matches its durable owner-decision record's selected choice", "7b. every Owner decision date field is literally PENDING or exactly matches its durable owner-decision record's decision date", '7c. every Owner evidence field is literally PENDING or references its durable owner-decision record (never KBDL-DEC-014 alone)', 'D10. no project-owner-review.md checkbox selection lacks a matching durable owner-decision record']
+[REJECTED (as expected)] fixture=ba_recorded_but_pending_row
+    expected_defect_categories: ["7. every Owner decision field is literally PENDING or exactly matches its durable owner-decision record's selected choice", 'D6. no durable record exists for an issue-register row left at the PENDING triple (recording completeness)']
+    triggered_as_expected:      ["7. every Owner decision field is literally PENDING or exactly matches its durable owner-decision record's selected choice", 'D6. no durable record exists for an issue-register row left at the PENDING triple (recording completeness)']
+[REJECTED (as expected)] fixture=ba_choice_mismatch
+    expected_defect_categories: ["7. every Owner decision field is literally PENDING or exactly matches its durable owner-decision record's selected choice"]
+    triggered_as_expected:      ["7. every Owner decision field is literally PENDING or exactly matches its durable owner-decision record's selected choice"]
+[REJECTED (as expected)] fixture=ba_date_mismatch
+    expected_defect_categories: ["7b. every Owner decision date field is literally PENDING or exactly matches its durable owner-decision record's decision date"]
+    triggered_as_expected:      ["7b. every Owner decision date field is literally PENDING or exactly matches its durable owner-decision record's decision date"]
+[REJECTED (as expected)] fixture=ba_wrong_evidence_reference
+    expected_defect_categories: ['7c. every Owner evidence field is literally PENDING or references its durable owner-decision record (never KBDL-DEC-014 alone)']
+    triggered_as_expected:      ['7c. every Owner evidence field is literally PENDING or references its durable owner-decision record (never KBDL-DEC-014 alone)']
+[REJECTED (as expected)] fixture=ba_review_form_mismatch
+    expected_defect_categories: ['D9. every selected project-owner-review.md checkbox exactly matches its durable owner-decision record']
+    triggered_as_expected:      ['D9. every selected project-owner-review.md checkbox exactly matches its durable owner-decision record']
+[REJECTED (as expected)] fixture=ba_multiple_selections
+    expected_defect_categories: ['D9. every selected project-owner-review.md checkbox exactly matches its durable owner-decision record']
+    triggered_as_expected:      ['D9. every selected project-owner-review.md checkbox exactly matches its durable owner-decision record']
+[REJECTED (as expected)] fixture=ba_second_issue_unauthorized
+    expected_defect_categories: ["7. every Owner decision field is literally PENDING or exactly matches its durable owner-decision record's selected choice", 'D7. exactly the durably-recorded issues are non-PENDING; every other issue remains PENDING']
+    triggered_as_expected:      ["7. every Owner decision field is literally PENDING or exactly matches its durable owner-decision record's selected choice", 'D7. exactly the durably-recorded issues are non-PENDING; every other issue remains PENDING']
+[REJECTED (as expected)] fixture=ba_duplicate_durable_record
+    expected_defect_categories: ['D1. no duplicate durable owner-decision records for the same issue ID']
+    triggered_as_expected:      ['D1. no duplicate durable owner-decision records for the same issue ID']
+[REJECTED (as expected)] fixture=ba_implementation_authorizing_record
+    expected_defect_categories: ["D2. every durable owner-decision record states 'Implementation authorization status: NOT AUTHORIZED'"]
+    triggered_as_expected:      ["D2. every durable owner-decision record states 'Implementation authorization status: NOT AUTHORIZED'"]
+[REJECTED (as expected)] fixture=ba_stale_packet_prose
+    expected_defect_categories: ['PS2. packet-state prose recorded/pending counts match the computed decision-state counts']
+    triggered_as_expected:      ['PS2. packet-state prose recorded/pending counts match the computed decision-state counts']
+[REJECTED (as expected)] fixture=ba_stale_ledger_counts
+    expected_defect_categories: ['D12. source-model-resolution-ledger.csv durable owner-decision count matches the actual durable-record count', 'D13. source-model-resolution-ledger.csv per-batch durable-decision counts match actual per-batch counts and sum to the total']
+    triggered_as_expected:      ['D12. source-model-resolution-ledger.csv durable owner-decision count matches the actual durable-record count', 'D13. source-model-resolution-ledger.csv per-batch durable-decision counts match actual per-batch counts and sum to the total']
+======================================================================
+Real repository files unchanged after all fixtures: True
+All 20 fixtures correctly rejected: True
+======================================================================
+[exit=0]
+
+$ python3 docs/kbdl/evidence/kbdl-011-source-model-resolution/scripts/dr1_r1_fixtures.py
+======================================================================
+[REJECTED (as expected)] fixture=authority_no_new (rejection)
+    expected_categories: ["AR1. no durable 'SET TO NOT VERIFIED' owner-decision record states or implies it creates no current authority"]
+    triggered_as_expected: ["AR1. no durable 'SET TO NOT VERIFIED' owner-decision record states or implies it creates no current authority"]
+[REJECTED (as expected)] fixture=evidence_conflation (rejection)
+    expected_categories: ['AR2. no durable owner-decision record conflates decision authority with validation/conformance evidence']
+    triggered_as_expected: ['AR2. no durable owner-decision record conflates decision authority with validation/conformance evidence']
+[REJECTED (as expected)] fixture=packet_batchh_418 (rejection)
+    expected_categories: ['SP1. no current-state section reports 418 pending without an explicit historical marker once four decisions are durably recorded']
+    triggered_as_expected: ['SP1. no current-state section reports 418 pending without an explicit historical marker once four decisions are durably recorded']
+[REJECTED (as expected)] fixture=packet_vf1_418 (rejection)
+    expected_categories: ['SP1. no current-state section reports 418 pending without an explicit historical marker once four decisions are durably recorded']
+    triggered_as_expected: ['SP1. no current-state section reports 418 pending without an explicit historical marker once four decisions are durably recorded']
+[REJECTED (as expected)] fixture=review_batchh_418 (rejection)
+    expected_categories: ['SP1. no current-state section reports 418 pending without an explicit historical marker once four decisions are durably recorded']
+    triggered_as_expected: ['SP1. no current-state section reports 418 pending without an explicit historical marker once four decisions are durably recorded']
+[REJECTED (as expected)] fixture=three_total (rejection)
+    expected_categories: ['SP2. no current-state section reports a total durably-recorded-decision count other than the computed total']
+    triggered_as_expected: ['SP2. no current-state section reports a total durably-recorded-decision count other than the computed total']
+[REJECTED (as expected)] fixture=agc1_pending (rejection)
+    expected_categories: ['SP3. no current-state summary states that AGC1/VF1 planning-agent validation remains pending']
+    triggered_as_expected: ['SP3. no current-state summary states that AGC1/VF1 planning-agent validation remains pending']
+[REJECTED (as expected)] fixture=418_missing_marker (rejection)
+    expected_categories: ['SP1. no current-state section reports 418 pending without an explicit historical marker once four decisions are durably recorded']
+    triggered_as_expected: ['SP1. no current-state section reports 418 pending without an explicit historical marker once four decisions are durably recorded']
+[PASSED (as expected)] fixture=historical_418_preserved (positive)
+    expected_categories: ['SP1. no current-state section reports 418 pending without an explicit historical marker once four decisions are durably recorded']
+    triggered_as_expected: ['SP1. no current-state section reports 418 pending without an explicit historical marker once four decisions are durably recorded']
+[PASSED (as expected)] fixture=current_state_passes (positive)
+    expected_categories: ["AR1. no durable 'SET TO NOT VERIFIED' owner-decision record states or implies it creates no current authority", 'AR2. no durable owner-decision record conflates decision authority with validation/conformance evidence', "D14. Batch H's historically recorded owner-decision count remains exactly three", 'D7. exactly the durably-recorded issues are non-PENDING; every other issue remains PENDING', 'SP1. no current-state section reports 418 pending without an explicit historical marker once four decisions are durably recorded', 'SP2. no current-state section reports a total durably-recorded-decision count other than the computed total', 'SP3. no current-state summary states that AGC1/VF1 planning-agent validation remains pending', 'SP4. total recorded count, per-batch recorded counts, and pending count are mutually consistent']
+    triggered_as_expected: ["AR1. no durable 'SET TO NOT VERIFIED' owner-decision record states or implies it creates no current authority", 'AR2. no durable owner-decision record conflates decision authority with validation/conformance evidence', "D14. Batch H's historically recorded owner-decision count remains exactly three", 'D7. exactly the durably-recorded issues are non-PENDING; every other issue remains PENDING', 'SP1. no current-state section reports 418 pending without an explicit historical marker once four decisions are durably recorded', 'SP2. no current-state section reports a total durably-recorded-decision count other than the computed total', 'SP3. no current-state summary states that AGC1/VF1 planning-agent validation remains pending', 'SP4. total recorded count, per-batch recorded counts, and pending count are mutually consistent']
+======================================================================
+Real repository files unchanged after all fixtures: True
+All 10 DR1-R1 fixtures produced the expected result: True
+======================================================================
+[exit=0]
+
+$ python3 docs/kbdl/evidence/kbdl-011-source-model-resolution/scripts/authority_graph_fixtures.py
+======================================================================
+[REJECTED (as expected)] fixture=reintroduce_007_to_008_edge
+    mutation: reintroduced MOT-007 -> MOT-008 authority edge
+[REJECTED (as expected)] fixture=reintroduce_008_to_007_edge
+    mutation: reintroduced MOT-008 -> MOT-007 authority edge
+[REJECTED (as expected)] fixture=reintroduce_both_edges
+    mutation: reintroduced both authority edges (full cycle)
+[REJECTED (as expected)] fixture=remove_authority_mot007
+    mutation: removed KBDL-DEC-014 item 2 from MOT-007 authority
+[REJECTED (as expected)] fixture=remove_authority_mot008
+    mutation: removed KBDL-DEC-014 item 2 from MOT-008 authority
+[REJECTED (as expected)] fixture=misclassify_supporting_authority
+    mutation: misclassified MOT-007's related requirement as supporting authority
+[REJECTED (as expected)] fixture=change_validation_status
+    mutation: changed KBDL-MOT-007 validation status from Not verified to Verified
+[REJECTED (as expected)] fixture=change_pending_state
+    mutation: flipped an unrelated issue (SMR1-VC-0002) away from PENDING without a durable record
+======================================================================
+Real repository files unchanged after all fixtures: True
+All 8 AGC1 fixtures correctly rejected: True
+======================================================================
+[exit=0]
+
+$ python3 docs/kbdl/evidence/kbdl-011-source-model-resolution/scripts/agc1_narrow_diff_fixtures.py
+======================================================================
+[PASS] 1. valid 2-row committed change passes clean post-commit
+    expected: PASS(all)
+    actual:   PASS(all)
+[PASS] 2. empty base..target diff rejected
+    expected: REJECT(at least one FAIL)
+    actual:   REJECT(at least one FAIL)
+    detail:   AG.narrow_authorized_diff.readme_only_mot007_008=FAIL(nonempty_diff=False other_mot_requirement_touched=False (range 085c94c2320c55f9e1727103e5c976f20f6f6644..44eb3ae569202b25028c08f32d8fb58ceb915420)); AG.narrow_authorized_diff.csv_only_mot007_008=FAIL(nonempty_diff=False other_mot_requirement_touched=False (range 085c94c2320c55f9e1727103e5c976f20f6f6644..44eb3ae569202b25028c08f32d8fb58ceb915420)); AG.narrow_authorized_diff.csv_row_count_unchanged=FAIL(expected exactly 2 changed rows (MOT-007, MOT-008); added=0 removed=0 (range 085c94c2320c55f9e1727103e5c976f20f6f6644..44eb3ae569202b25028c08f32d8fb58ceb915420))
+[PASS] 3. working-tree-only uncommitted change rejected (target==base)
+    expected: REJECT(at least one FAIL)
+    actual:   REJECT(at least one FAIL)
+    detail:   AG.narrow_authorized_diff.parent_matches_base=FAIL(could not resolve 085c94c2320c55f9e1727103e5c976f20f6f6644^: fatal: ambiguous argument '085c94c2320c55f9e1727103e5c976f20f6f6644^': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'); AG.narrow_authorized_diff.readme_only_mot007_008=FAIL(fail closed: could not resolve 085c94c2320c55f9e1727103e5c976f20f6f6644^: fatal: ambiguous argument '085c94c2320c55f9e1727103e5c976f20f6f6644^': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'); AG.narrow_authorized_diff.csv_only_mot007_008=FAIL(fail closed: could not resolve 085c94c2320c55f9e1727103e5c976f20f6f6644^: fatal: ambiguous argument '085c94c2320c55f9e1727103e5c976f20f6f6644^': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'); AG.narrow_authorized_diff.csv_row_count_unchanged=FAIL(fail closed: could not resolve 085c94c2320c55f9e1727103e5c976f20f6f6644^: fatal: ambiguous argument '085c94c2320c55f9e1727103e5c976f20f6f6644^': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]')
+[PASS] 4. only-one-CSV-row change rejected
+    expected: REJECT(at least one FAIL)
+    actual:   REJECT(at least one FAIL)
+    detail:   AG.narrow_authorized_diff.csv_row_count_unchanged=FAIL(expected exactly 2 changed rows (MOT-007, MOT-008); added=1 removed=1 (range 085c94c2320c55f9e1727103e5c976f20f6f6644..e1716dbd87cfbaf6d688de2b128c5ba496440536))
+[PASS] 5. unrelated CSV requirement row change rejected
+    expected: REJECT(at least one FAIL)
+    actual:   REJECT(at least one FAIL)
+    detail:   AG.narrow_authorized_diff.csv_only_mot007_008=FAIL(nonempty_diff=True other_mot_requirement_touched=True (range 085c94c2320c55f9e1727103e5c976f20f6f6644..7b3275692dc6aad4bb671e6b258371af60d4abac)); AG.narrow_authorized_diff.csv_row_count_unchanged=FAIL(expected exactly 2 changed rows (MOT-007, MOT-008); added=1 removed=1 (range 085c94c2320c55f9e1727103e5c976f20f6f6644..7b3275692dc6aad4bb671e6b258371af60d4abac))
+[PASS] 6a. added CSV requirement row rejected
+    expected: REJECT(at least one FAIL)
+    actual:   REJECT(at least one FAIL)
+    detail:   AG.narrow_authorized_diff.csv_only_mot007_008=FAIL(nonempty_diff=True other_mot_requirement_touched=True (range 36be790724f19bbda41d4413cc98f1d5c2cfc3e9..278bc61dde3671dd7014f9fa47ae75feaa1646f5)); AG.narrow_authorized_diff.csv_row_count_unchanged=FAIL(expected exactly 2 changed rows (MOT-007, MOT-008); added=3 removed=2 (range 36be790724f19bbda41d4413cc98f1d5c2cfc3e9..278bc61dde3671dd7014f9fa47ae75feaa1646f5))
+[PASS] 6b. deleted CSV requirement row rejected
+    expected: REJECT(at least one FAIL)
+    actual:   REJECT(at least one FAIL)
+    detail:   AG.narrow_authorized_diff.csv_only_mot007_008=FAIL(nonempty_diff=True other_mot_requirement_touched=True (range 36be790724f19bbda41d4413cc98f1d5c2cfc3e9..63c314bd0cd0b368af9dcbae9ecfff84d61cddc9)); AG.narrow_authorized_diff.csv_row_count_unchanged=FAIL(expected exactly 2 changed rows (MOT-007, MOT-008); added=1 removed=3 (range 36be790724f19bbda41d4413cc98f1d5c2cfc3e9..63c314bd0cd0b368af9dcbae9ecfff84d61cddc9))
+[PASS] 7. unrelated MOT README change rejected
+    expected: REJECT(at least one FAIL)
+    actual:   REJECT(at least one FAIL)
+    detail:   AG.narrow_authorized_diff.readme_only_mot007_008=FAIL(nonempty_diff=True other_mot_requirement_touched=True (range 36be790724f19bbda41d4413cc98f1d5c2cfc3e9..7aefebe876bff20dfe8640538f0b0c1b063041ab))
+[PASS] 8. wrong-parent target commit rejected
+    expected: REJECT(at least one FAIL)
+    actual:   REJECT(at least one FAIL)
+    detail:   AG.narrow_authorized_diff.parent_matches_base=FAIL(expected direct parent 36be790724f19bbda41d4413cc98f1d5c2cfc3e9, found 089278a8ebe15bac13a5d85a485072f903b7ab8b); AG.narrow_authorized_diff.readme_only_mot007_008=FAIL(fail closed: expected direct parent 36be790724f19bbda41d4413cc98f1d5c2cfc3e9, found 089278a8ebe15bac13a5d85a485072f903b7ab8b); AG.narrow_authorized_diff.csv_only_mot007_008=FAIL(fail closed: expected direct parent 36be790724f19bbda41d4413cc98f1d5c2cfc3e9, found 089278a8ebe15bac13a5d85a485072f903b7ab8b); AG.narrow_authorized_diff.csv_row_count_unchanged=FAIL(fail closed: expected direct parent 36be790724f19bbda41d4413cc98f1d5c2cfc3e9, found 089278a8ebe15bac13a5d85a485072f903b7ab8b)
+[PASS] 9a. missing base commit rejected
+    expected: REJECT(at least one FAIL)
+    actual:   REJECT(at least one FAIL)
+    detail:   AG.narrow_authorized_diff.commits_resolvable=FAIL(base(deadbeefdeadbeefdeadbeefdeadbeefdeadbeef)_exists=False target(4294d43d378a8b07fc598ec2d835d67e2a3bbb99)_exists=True); AG.narrow_authorized_diff.parent_matches_base=FAIL(cannot inspect AGC1 range: base and/or target commit unavailable); AG.narrow_authorized_diff.readme_only_mot007_008=FAIL(cannot inspect AGC1 range: base and/or target commit unavailable); AG.narrow_authorized_diff.csv_only_mot007_008=FAIL(cannot inspect AGC1 range: base and/or target commit unavailable); AG.narrow_authorized_diff.csv_row_count_unchanged=FAIL(cannot inspect AGC1 range: base and/or target commit unavailable)
+[PASS] 9b. missing target commit rejected
+    expected: REJECT(at least one FAIL)
+    actual:   REJECT(at least one FAIL)
+    detail:   AG.narrow_authorized_diff.commits_resolvable=FAIL(base(36be790724f19bbda41d4413cc98f1d5c2cfc3e9)_exists=True target(deadbeefdeadbeefdeadbeefdeadbeefdeadbeef)_exists=False); AG.narrow_authorized_diff.parent_matches_base=FAIL(cannot inspect AGC1 range: base and/or target commit unavailable); AG.narrow_authorized_diff.readme_only_mot007_008=FAIL(cannot inspect AGC1 range: base and/or target commit unavailable); AG.narrow_authorized_diff.csv_only_mot007_008=FAIL(cannot inspect AGC1 range: base and/or target commit unavailable); AG.narrow_authorized_diff.csv_row_count_unchanged=FAIL(cannot inspect AGC1 range: base and/or target commit unavailable)
+[PASS] 10. historical range still passes after HEAD advances past target (HEAD-independence)
+    expected: PASS(all) both before and after HEAD advances, with HEAD != target
+    actual:   before_advance_pass=True after_advance_pass=True head_moved=True
+    detail:   base=03e20d751c2393bd21a00b1484176eeaded45b27 target=e067a591c26934ce8d75769231c9f71576ad624d head_after_advance=0224340a92663bb1f5d30444dd549e90796bd68f
+======================================================================
+Temporary fixture repositories cleaned up: True
+Real repository files unchanged after all fixtures: True
+All 12 narrow-diff fixtures produced the expected pass/rejection: True
+======================================================================
+[exit=0]
+
+$ python3 docs/kbdl/evidence/kbdl-011-source-model-resolution/scripts/fsrg1_roadmap_fixtures.py
+======================================================================
+{
+  "actual_failing_checks": [
+    "FR1",
+    "FR2",
+    "FR3"
+  ],
+  "actual_result": "REJECTED (as expected)",
+  "detail": {
+    "FR1": "problems=['smr2-fsrg1-prompt.md missing']"
+  },
+  "expected_defect_categories": [
+    "FR1"
+  ],
+  "fixture": "1_prompt_specification_missing",
+  "meta_ok": true,
+  "mode": "rejection",
+  "triggered_as_expected": [
+    "FR1"
+  ]
+}
+{
+  "actual_failing_checks": [
+    "FR1"
+  ],
+  "actual_result": "REJECTED (as expected)",
+  "detail": {
+    "FR1": "problems=[\"impl status='AUTHORIZED'\"]"
+  },
+  "expected_defect_categories": [
+    "FR1"
+  ],
+  "fixture": "2_prompt_claims_implementation_authorization",
+  "meta_ok": true,
+  "mode": "rejection",
+  "triggered_as_expected": [
+    "FR1"
+  ]
+}
+{
+  "actual_failing_checks": [
+    "FR2"
+  ],
+  "actual_result": "REJECTED (as expected)",
+  "detail": {
+    "FR2": "missing=['determinism']"
+  },
+  "expected_defect_categories": [
+    "FR2"
+  ],
+  "fixture": "3_determinism_gate_dropped",
+  "meta_ok": true,
+  "mode": "rejection",
+  "triggered_as_expected": [
+    "FR2"
+  ]
+}
+{
+  "actual_failing_checks": [
+    "FR3"
+  ],
+  "actual_result": "REJECTED (as expected)",
+  "detail": {
+    "FR3": "problems=['r15 registry path not named']"
+  },
+  "expected_defect_categories": [
+    "FR3"
+  ],
+  "fixture": "4_historical_registry_path_dropped",
+  "meta_ok": true,
+  "mode": "rejection",
+  "triggered_as_expected": [
+    "FR3"
+  ]
+}
+{
+  "actual_failing_checks": [
+    "FR3"
+  ],
+  "actual_result": "REJECTED (as expected)",
+  "detail": {
+    "FR3": "problems=['no immutable/byte-identical preservation statement']"
+  },
+  "expected_defect_categories": [
+    "FR3"
+  ],
+  "fixture": "5_immutability_statement_removed",
+  "meta_ok": true,
+  "mode": "rejection",
+  "triggered_as_expected": [
+    "FR3"
+  ]
+}
+{
+  "actual_failing_checks": [
+    "FR4"
+  ],
+  "actual_result": "REJECTED (as expected)",
+  "detail": {
+    "FR4": "problems=[('r13', 'recorded=db75e41d3a79 actual=7bb23350d83d')]"
+  },
+  "expected_defect_categories": [
+    "FR4"
+  ],
+  "fixture": "6_historical_registry_bytes_mutated",
+  "meta_ok": true,
+  "mode": "rejection",
+  "triggered_as_expected": [
+    "FR4"
+  ]
+}
+{
+  "actual_failing_checks": [
+    "FR4"
+  ],
+  "actual_result": "REJECTED (as expected)",
+  "detail": {
+    "FR4": "problems=[('r14', 'recorded=000000000000 actual=2233d5c924d6')]"
+  },
+  "expected_defect_categories": [
+    "FR4"
+  ],
+  "fixture": "7_forged_inventory_digest",
+  "meta_ok": true,
+  "mode": "rejection",
+  "triggered_as_expected": [
+    "FR4"
+  ]
+}
+{
+  "actual_failing_checks": [
+    "FR5"
+  ],
+  "actual_result": "REJECTED (as expected)",
+  "detail": {
+    "FR5": "problems=[('FSRG1', 'not LOCKED', 'ELIGIBLE FOR FUTURE PROMPT AFTER APPROVAL')]"
+  },
+  "expected_defect_categories": [
+    "FR5"
+  ],
+  "fixture": "8_fsrg1_unlocked_without_validation_claim",
+  "meta_ok": true,
+  "mode": "rejection",
+  "triggered_as_expected": [
+    "FR5"
+  ]
+}
+{
+  "actual_failing_checks": [
+    "FR5"
+  ],
+  "actual_result": "REJECTED (as expected)",
+  "detail": {
+    "FR5": "problems=['SMR2-VC-0001 section missing from implementation-unlock-map.md']"
+  },
+  "expected_defect_categories": [
+    "FR5"
+  ],
+  "fixture": "9_downstream_gated_entry_removed",
+  "meta_ok": true,
+  "mode": "rejection",
+  "triggered_as_expected": [
+    "FR5"
+  ]
+}
+{
+  "actual_failing_checks": [
+    "FR6"
+  ],
+  "actual_result": "REJECTED (as expected)",
+  "detail": {
+    "FR6": "hits=[('smr2-fsrg1-prompt.md', 'KBDL-011-SMR2-VC-0001 is now approved for issue')]"
+  },
+  "expected_defect_categories": [
+    "FR6"
+  ],
+  "fixture": "10_prompt_declares_downstream_approved",
+  "meta_ok": true,
+  "mode": "rejection",
+  "triggered_as_expected": [
+    "FR6"
+  ]
+}
+{
+  "actual_failing_checks": [
+    "FR7"
+  ],
+  "actual_result": "REJECTED (as expected)",
+  "detail": {
+    "FR7": "contradictions=[('FSRG1', '- This entry stays `LOCKED` because planning-agent validation of `KBDL-011-SMR2-FSRG1` has not occurred.')]"
+  },
+  "expected_defect_categories": [
+    "FR7"
+  ],
+  "fixture": "11_validation_contradiction_has_not_occurred",
+  "meta_ok": true,
+  "mode": "rejection",
+  "triggered_as_expected": [
+    "FR7"
+  ]
+}
+{
+  "actual_failing_checks": [
+    "FR7"
+  ],
+  "actual_result": "REJECTED (as expected)",
+  "detail": {
+    "FR7": "contradictions=[('FSRG1', '- Planning-agent validation of `KBDL-011-SMR2-FSRG1` remains pending.')]"
+  },
+  "expected_defect_categories": [
+    "FR7"
+  ],
+  "fixture": "12_validation_contradiction_remains_pending",
+  "meta_ok": true,
+  "mode": "rejection",
+  "triggered_as_expected": [
+    "FR7"
+  ]
+}
+{
+  "actual_failing_checks": [
+    "FR8"
+  ],
+  "actual_result": "REJECTED (as expected)",
+  "detail": {
+    "FR8": "conflicts=[('FSRG1', 'LOCKED \u2014 PLANNING-AGENT VALIDATION REQUIRED')]"
+  },
+  "expected_defect_categories": [
+    "FR8"
+  ],
+  "fixture": "13_validated_entry_still_demands_validation",
+  "meta_ok": true,
+  "mode": "rejection",
+  "triggered_as_expected": [
+    "FR8"
+  ]
+}
+{
+  "actual_failing_checks": [
+    "FR5",
+    "FR8"
+  ],
+  "actual_result": "REJECTED (as expected)",
+  "detail": {
+    "FR5": "problems=[('SMR2-VC-0001', 'not LOCKED', 'ELIGIBLE FOR FUTURE PROMPT AFTER APPROVAL')]",
+    "FR8": "conflicts=[('SMR2-VC-0001', 'ELIGIBLE FOR FUTURE PROMPT AFTER APPROVAL')]"
+  },
+  "expected_defect_categories": [
+    "FR5",
+    "FR8"
+  ],
+  "fixture": "14_downstream_entry_unlocked",
+  "meta_ok": true,
+  "mode": "rejection",
+  "triggered_as_expected": [
+    "FR5",
+    "FR8"
+  ]
+}
+{
+  "actual_failing_checks": [],
+  "actual_result": "PASSED (as expected)",
+  "detail": {},
+  "expected_defect_categories": [
+    "FR1",
+    "FR2",
+    "FR3",
+    "FR4",
+    "FR5",
+    "FR6",
+    "FR7",
+    "FR8"
+  ],
+  "fixture": "15_real_roadmap_state",
+  "meta_ok": true,
+  "mode": "positive",
+  "triggered_as_expected": [
+    "FR1",
+    "FR2",
+    "FR3",
+    "FR4",
+    "FR5",
+    "FR6",
+    "FR7",
+    "FR8"
+  ]
+}
+{
+  "actual_failing_checks": [],
+  "actual_result": "PASSED (as expected)",
+  "detail": {},
+  "expected_defect_categories": [
+    "FR1",
+    "FR2",
+    "FR3",
+    "FR4",
+    "FR5",
+    "FR6",
+    "FR7",
+    "FR8"
+  ],
+  "fixture": "16_benign_historical_note",
+  "meta_ok": true,
+  "mode": "positive",
+  "triggered_as_expected": [
+    "FR1",
+    "FR2",
+    "FR3",
+    "FR4",
+    "FR5",
+    "FR6",
+    "FR7",
+    "FR8"
+  ]
+}
+{
+  "actual_failing_checks": [],
+  "actual_result": "PASSED (as expected)",
+  "detail": {},
+  "expected_defect_categories": [
+    "FR7",
+    "FR8"
+  ],
+  "fixture": "17_historically_marked_past_state",
+  "meta_ok": true,
+  "mode": "positive",
+  "triggered_as_expected": [
+    "FR7",
+    "FR8"
+  ]
+}
+======================================================================
+fixture isolation: real repository files byte-unchanged = True
+17/17 fixtures produced their expected result
+[exit=0]
+
+$ python3 docs/kbdl/evidence/kbdl-011-smr2-fsrg1/scripts/fsrg1_fixtures.py --repo-root .
+======================================================================
+{
+  "actual_result": "REJECTED (as expected)",
+  "expected_result": "rejection",
+  "fixture": "01_missing_schema_column",
+  "meta_ok": true,
+  "mode": "negative",
+  "mutation": "drop the Ledger value column",
+  "real_repository_preserved": true,
+  "triggered_checks": [
+    "SCHEMA.header_exact"
+  ]
+}
+{
+  "actual_result": "REJECTED (as expected)",
+  "expected_result": "rejection",
+  "fixture": "02_extra_schema_column",
+  "meta_ok": true,
+  "mode": "negative",
+  "mutation": "append an undeclared column",
+  "real_repository_preserved": true,
+  "triggered_checks": [
+    "SCHEMA.header_exact"
+  ]
+}
+{
+  "actual_result": "REJECTED (as expected)",
+  "expected_result": "rejection",
+  "fixture": "03_reordered_columns",
+  "meta_ok": true,
+  "mode": "negative",
+  "mutation": "swap two declared columns",
+  "real_repository_preserved": true,
+  "triggered_checks": [
+    "SCHEMA.header_exact"
+  ]
+}
+{
+  "actual_result": "REJECTED (as expected)",
+  "expected_result": "rejection",
+  "fixture": "04_inconsistent_row_width",
+  "meta_ok": true,
+  "mode": "negative",
+  "mutation": "truncate one row",
+  "real_repository_preserved": true,
+  "triggered_checks": [
+    "SCHEMA.row_widths_uniform"
+  ]
+}
+{
+  "actual_result": "REJECTED (as expected)",
+  "expected_result": "rejection",
+  "fixture": "05_invalid_domain_value",
+  "meta_ok": true,
+  "mode": "negative",
+  "mutation": "set an out-of-domain Ownership class",
+  "real_repository_preserved": true,
+  "triggered_checks": [
+    "SCHEMA.controlled_domains",
+    "SCHEMA.ownership_class_matches_field"
+  ]
+}
+{
+  "actual_result": "REJECTED (as expected)",
+  "expected_result": "rejection",
+  "fixture": "06_duplicate_row_key",
+  "meta_ok": true,
+  "mode": "negative",
+  "mutation": "duplicate a (Requirement ID, Field name) row",
+  "real_repository_preserved": true,
+  "triggered_checks": [
+    "SCHEMA.row_key_unique"
+  ]
+}
+{
+  "actual_result": "REJECTED (as expected)",
+  "expected_result": "rejection",
+  "fixture": "07_missing_required_requirement",
+  "meta_ok": true,
+  "mode": "negative",
+  "mutation": "delete every row of one requirement",
+  "real_repository_preserved": true,
+  "triggered_checks": [
+    "COVER.every_current_requirement_present"
+  ]
+}
+{
+  "actual_result": "REJECTED (as expected)",
+  "expected_result": "rejection",
+  "fixture": "08_missing_required_field_row",
+  "meta_ok": true,
+  "mode": "negative",
+  "mutation": "delete one required field row",
+  "real_repository_preserved": true,
+  "triggered_checks": [
+    "COVER.every_required_field_per_requirement",
+    "COVER.row_count_is_requirements_times_fields"
+  ]
+}
+{
+  "actual_result": "REJECTED (as expected)",
+  "expected_result": "rejection",
+  "fixture": "09_nondeterministic_row_order",
+  "meta_ok": true,
+  "mode": "negative",
+  "mutation": "generator shuffles rows randomly",
+  "real_repository_preserved": true,
+  "triggered_checks": [
+    "DETERM.byte_identical"
+  ]
+}
+{
+  "actual_result": "REJECTED (as expected)",
+  "expected_result": "rejection",
+  "fixture": "10_environment_dependent_output",
+  "meta_ok": true,
+  "mode": "negative",
+  "mutation": "generator injects a wall-clock value",
+  "real_repository_preserved": true,
+  "triggered_checks": [
+    "DETERM.byte_identical"
+  ]
+}
+{
+  "actual_result": "REJECTED (as expected)",
+  "expected_result": "rejection",
+  "fixture": "11_hand_edited_live_registry",
+  "meta_ok": true,
+  "mode": "negative",
+  "mutation": "hand-edit one committed cell",
+  "real_repository_preserved": true,
+  "triggered_checks": [
+    "DRIFT.committed_matches_regeneration",
+    "DRIFT.independent_regeneration_matches"
+  ]
+}
+{
+  "actual_result": "REJECTED (as expected)",
+  "expected_result": "rejection",
+  "fixture": "12_mutated_r13_registry",
+  "meta_ok": true,
+  "mode": "negative",
+  "mutation": "append a row to the R13 registry",
+  "real_repository_preserved": true,
+  "triggered_checks": [
+    "HIST.r13.byte_identical"
+  ]
+}
+{
+  "actual_result": "REJECTED (as expected)",
+  "expected_result": "rejection",
+  "fixture": "13_mutated_r14_registry",
+  "meta_ok": true,
+  "mode": "negative",
+  "mutation": "append a row to the R14 registry",
+  "real_repository_preserved": true,
+  "triggered_checks": [
+    "HIST.r14.byte_identical"
+  ]
+}
+{
+  "actual_result": "REJECTED (as expected)",
+  "expected_result": "rejection",
+  "fixture": "14_mutated_r15_registry",
+  "meta_ok": true,
+  "mode": "negative",
+  "mutation": "append a row to the R15 registry",
+  "real_repository_preserved": true,
+  "triggered_checks": [
+    "HIST.r15.byte_identical"
+  ]
+}
+{
+  "actual_result": "REJECTED (as expected)",
+  "expected_result": "rejection",
+  "fixture": "15_mutated_r16_registry",
+  "meta_ok": true,
+  "mode": "negative",
+  "mutation": "append a row to the R16 registry",
+  "real_repository_preserved": true,
+  "triggered_checks": [
+    "HIST.r16.byte_identical"
+  ]
+}
+{
+  "actual_result": "REJECTED (as expected)",
+  "expected_result": "rejection",
+  "fixture": "16_absolute_output_path",
+  "meta_ok": true,
+  "mode": "negative",
+  "mutation": "declare an absolute output path",
+  "real_repository_preserved": true,
+  "triggered_checks": [
+    "PATH.rejected"
+  ]
+}
+{
+  "actual_result": "REJECTED (as expected)",
+  "expected_result": "rejection",
+  "fixture": "17_dotdot_traversal",
+  "meta_ok": true,
+  "mode": "negative",
+  "mutation": "declare a '..' traversal output path",
+  "real_repository_preserved": true,
+  "triggered_checks": [
+    "PATH.rejected"
+  ]
+}
+{
+  "actual_result": "REJECTED (as expected)",
+  "expected_result": "rejection",
+  "fixture": "18_symlink_escape",
+  "meta_ok": true,
+  "mode": "negative",
+  "mutation": "point the artifact at a symlink outside the package",
+  "real_repository_preserved": true,
+  "triggered_checks": [
+    "PATH.rejected"
+  ]
+}
+{
+  "actual_result": "REJECTED (as expected)",
+  "expected_result": "rejection",
+  "fixture": "19_historical_artifact_output_target",
+  "meta_ok": true,
+  "mode": "negative",
+  "mutation": "aim output at the R16 registry",
+  "real_repository_preserved": true,
+  "triggered_checks": [
+    "PATH.rejected"
+  ]
+}
+{
+  "actual_result": "REJECTED (as expected)",
+  "expected_result": "rejection",
+  "fixture": "20_protected_file_output_target",
+  "meta_ok": true,
+  "mode": "negative",
+  "mutation": "aim output at traceability-metadata.csv",
+  "real_repository_preserved": true,
+  "triggered_checks": [
+    "PATH.rejected"
+  ]
+}
+{
+  "actual_result": "REJECTED (as expected)",
+  "expected_result": "rejection",
+  "fixture": "21_fixture_mutation_of_real_repository",
+  "meta_ok": true,
+  "mode": "negative",
+  "mutation": "mutate a stand-in tree and require detection",
+  "real_repository_preserved": true,
+  "triggered_checks": [
+    "ISO.detector"
+  ]
+}
+{
+  "actual_result": "REJECTED (as expected)",
+  "expected_result": "rejection",
+  "fixture": "22_empty_generated_output",
+  "meta_ok": true,
+  "mode": "negative",
+  "mutation": "generator produces zero rows",
+  "real_repository_preserved": true,
+  "triggered_checks": [
+    "GEN.empty_rejected"
+  ]
+}
+{
+  "actual_result": "REJECTED (as expected)",
+  "expected_result": "rejection",
+  "fixture": "23_generator_source_failure",
+  "meta_ok": true,
+  "mode": "negative",
+  "mutation": "remove a required source file",
+  "real_repository_preserved": true,
+  "triggered_checks": [
+    "GEN.fails_closed"
+  ]
+}
+{
+  "actual_result": "REJECTED (as expected)",
+  "expected_result": "rejection",
+  "fixture": "24_drift_pass_without_generation",
+  "meta_ok": true,
+  "mode": "negative",
+  "mutation": "remove the generator and re-run the drift gate",
+  "real_repository_preserved": true,
+  "triggered_checks": [
+    "DRIFT.check_mode_executed",
+    "DRIFT.committed_matches_regeneration"
+  ]
+}
+{
+  "actual_result": "PASSED (as expected)",
+  "expected_result": "pass",
+  "fixture": "P1_valid_schema",
+  "meta_ok": true,
+  "mode": "positive-control",
+  "mutation": "unmutated committed registry",
+  "real_repository_preserved": true,
+  "triggered_checks": []
+}
+{
+  "actual_result": "PASSED (as expected)",
+  "expected_result": "pass",
+  "fixture": "P2_two_deterministic_runs",
+  "meta_ok": true,
+  "mode": "positive-control",
+  "mutation": "two runs, two CWDs, two processes",
+  "real_repository_preserved": true,
+  "triggered_checks": []
+}
+{
+  "actual_result": "PASSED (as expected)",
+  "expected_result": "pass",
+  "fixture": "P3_clean_live_regeneration",
+  "meta_ok": true,
+  "mode": "positive-control",
+  "mutation": "committed artifact reproduces exactly",
+  "real_repository_preserved": true,
+  "triggered_checks": []
+}
+{
+  "actual_result": "PASSED (as expected)",
+  "expected_result": "pass",
+  "fixture": "P4_historical_hashes_match",
+  "meta_ok": true,
+  "mode": "positive-control",
+  "mutation": "all four R13-R16 digests verify",
+  "real_repository_preserved": true,
+  "triggered_checks": []
+}
+{
+  "actual_result": "PASSED (as expected)",
+  "expected_result": "pass",
+  "fixture": "P5_safe_declared_output",
+  "meta_ok": true,
+  "mode": "positive-control",
+  "mutation": "declared path resolves inside the package",
+  "real_repository_preserved": true,
+  "triggered_checks": []
+}
+{
+  "actual_result": "PASSED (as expected)",
+  "expected_result": "pass",
+  "fixture": "P6_fixture_cleanup",
+  "meta_ok": true,
+  "mode": "positive-control",
+  "mutation": "temporary tree removal succeeds",
+  "real_repository_preserved": true,
+  "triggered_checks": []
+}
+{
+  "actual_result": "PASSED (as expected)",
+  "expected_result": "pass",
+  "fixture": "P7_decision_state_unchanged",
+  "meta_ok": true,
+  "mode": "positive-control",
+  "mutation": "4 recorded / 417 pending",
+  "real_repository_preserved": true,
+  "triggered_checks": []
+}
+{
+  "actual_result": "PASSED (as expected)",
+  "expected_result": "pass",
+  "fixture": "P8_val_readiness_unchanged",
+  "meta_ok": true,
+  "mode": "positive-control",
+  "mutation": "VAL/readiness/conformance/completion unchanged",
+  "real_repository_preserved": true,
+  "triggered_checks": []
+}
+======================================================================
+negative fixtures rejected as expected: 24/24
+positive controls passed as expected:   8/8
+real repository files byte-unchanged:   True
+git status --short unchanged:           True
+temporary fixture tree removed:         True
+32/32 fixtures produced their expected result
+[exit=0]
+
+$ python3 docs/kbdl/evidence/kbdl-011-smr2-vc-0001/scripts/smr2_vc_0001_fixtures.py --repo-root .
+======================================================================
+{
+  "actual_result": "REJECTED (as expected)",
+  "expected_result": "rejection",
+  "fixture": "01_status_changed_to_verified",
+  "meta_ok": true,
+  "mode": "negative",
+  "mutation": "normative status -> Verified",
+  "real_repository_preserved": true,
+  "triggered_checks": [
+    "09",
+    "20"
+  ]
+}
+{
+  "actual_result": "REJECTED (as expected)",
+  "expected_result": "rejection",
+  "fixture": "02_status_changed_to_not_applicable",
+  "meta_ok": true,
+  "mode": "negative",
+  "mutation": "normative status -> Not applicable",
+  "real_repository_preserved": true,
+  "triggered_checks": [
+    "09",
+    "20"
+  ]
+}
+{
+  "actual_result": "REJECTED (as expected)",
+  "expected_result": "rejection",
+  "fixture": "03_status_label_unparsable",
+  "meta_ok": true,
+  "mode": "negative",
+  "mutation": "re-wrap the label across lines",
+  "real_repository_preserved": true,
+  "triggered_checks": [
+    "09",
+    "20"
+  ]
+}
+{
+  "actual_result": "REJECTED (as expected)",
+  "expected_result": "rejection",
+  "fixture": "04_authority_reference_omitted",
+  "meta_ok": true,
+  "mode": "negative",
+  "mutation": "delete the authority bullet",
+  "real_repository_preserved": true,
+  "triggered_checks": [
+    "10",
+    "11",
+    "12"
+  ]
+}
+{
+  "actual_result": "REJECTED (as expected)",
+  "expected_result": "rejection",
+  "fixture": "05_wrong_owner_record_id",
+  "meta_ok": true,
+  "mode": "negative",
+  "mutation": "cite a different record ID",
+  "real_repository_preserved": true,
+  "triggered_checks": [
+    "10"
+  ]
+}
+{
+  "actual_result": "REJECTED (as expected)",
+  "expected_result": "rejection",
+  "fixture": "06_authority_represented_as_evidence",
+  "meta_ok": true,
+  "mode": "negative",
+  "mutation": "call the decision validation evidence",
+  "real_repository_preserved": true,
+  "triggered_checks": [
+    "12"
+  ]
+}
+{
+  "actual_result": "REJECTED (as expected)",
+  "expected_result": "rejection",
+  "fixture": "07_lifecycle_changed",
+  "meta_ok": true,
+  "mode": "negative",
+  "mutation": "lifecycle -> Deferred",
+  "real_repository_preserved": true,
+  "triggered_checks": [
+    "07"
+  ]
+}
+{
+  "actual_result": "REJECTED (as expected)",
+  "expected_result": "rejection",
+  "fixture": "08_provenance_changed",
+  "meta_ok": true,
+  "mode": "negative",
+  "mutation": "provenance -> Assumed",
+  "real_repository_preserved": true,
+  "triggered_checks": [
+    "08"
+  ]
+}
+{
+  "actual_result": "REJECTED (as expected)",
+  "expected_result": "rejection",
+  "fixture": "09_validation_method_changed",
+  "meta_ok": true,
+  "mode": "negative",
+  "mutation": "drop 'Manual +' from the method",
+  "real_repository_preserved": true,
+  "triggered_checks": [
+    "13"
+  ]
+}
+{
+  "actual_result": "REJECTED (as expected)",
+  "expected_result": "rejection",
+  "fixture": "10_evidence_claims_execution",
+  "meta_ok": true,
+  "mode": "negative",
+  "mutation": "ledger evidence claims a PASS",
+  "real_repository_preserved": true,
+  "triggered_checks": [
+    "16"
+  ]
+}
+{
+  "actual_result": "REJECTED (as expected)",
+  "expected_result": "rejection",
+  "fixture": "11_known_limitation_changed",
+  "meta_ok": true,
+  "mode": "negative",
+  "mutation": "limitation -> claims conformance",
+  "real_repository_preserved": true,
+  "triggered_checks": [
+    "17"
+  ]
+}
+{
+  "actual_result": "REJECTED (as expected)",
+  "expected_result": "rejection",
+  "fixture": "12_kl_0001_marked_resolved",
+  "meta_ok": true,
+  "mode": "negative",
+  "mutation": "SMR1-KL-0001 given a decision",
+  "real_repository_preserved": true,
+  "triggered_checks": [
+    "18",
+    "24"
+  ]
+}
+{
+  "actual_result": "REJECTED (as expected)",
+  "expected_result": "rejection",
+  "fixture": "13_other_batch_a_issue_changed",
+  "meta_ok": true,
+  "mode": "negative",
+  "mutation": "SMR1-VC-0002 given a decision",
+  "real_repository_preserved": true,
+  "triggered_checks": [
+    "19",
+    "24"
+  ]
+}
+{
+  "actual_result": "REJECTED (as expected)",
+  "expected_result": "rejection",
+  "fixture": "14_other_traceability_row_changed",
+  "meta_ok": true,
+  "mode": "negative",
+  "mutation": "KBDL-A11Y-002 classification -> Verified",
+  "real_repository_preserved": true,
+  "triggered_checks": [
+    "21"
+  ]
+}
+{
+  "actual_result": "REJECTED (as expected)",
+  "expected_result": "rejection",
+  "fixture": "15_registry_hand_edited",
+  "meta_ok": true,
+  "mode": "negative",
+  "mutation": "hand-edit the live registry",
+  "real_repository_preserved": true,
+  "triggered_checks": [
+    "DRIFT"
+  ]
+}
+{
+  "actual_result": "REJECTED (as expected)",
+  "expected_result": "rejection",
+  "fixture": "16_target_row_left_unresolved",
+  "meta_ok": true,
+  "mode": "negative",
+  "mutation": "remove the normative status field",
+  "real_repository_preserved": true,
+  "triggered_checks": [
+    "09",
+    "20"
+  ]
+}
+{
+  "actual_result": "REJECTED (as expected)",
+  "expected_result": "rejection",
+  "fixture": "17_ledger_used_as_authority",
+  "meta_ok": true,
+  "mode": "negative",
+  "mutation": "primary basis -> ledger candidate",
+  "real_repository_preserved": true,
+  "triggered_checks": [
+    "20"
+  ]
+}
+{
+  "actual_result": "REJECTED (as expected)",
+  "expected_result": "rejection",
+  "fixture": "18_other_registry_row_result_changed",
+  "meta_ok": true,
+  "mode": "negative",
+  "mutation": "force another row to PASS",
+  "real_repository_preserved": true,
+  "triggered_checks": [
+    "21"
+  ]
+}
+{
+  "actual_result": "REJECTED (as expected)",
+  "expected_result": "rejection",
+  "fixture": "19_registry_row_count_changed",
+  "meta_ok": true,
+  "mode": "negative",
+  "mutation": "truncate one registry row",
+  "real_repository_preserved": true,
+  "triggered_checks": [
+    "22"
+  ]
+}
+{
+  "actual_result": "REJECTED (as expected)",
+  "expected_result": "rejection",
+  "fixture": "20_issue_marked_finally_resolved",
+  "meta_ok": true,
+  "mode": "negative",
+  "mutation": "issue status -> RESOLVED",
+  "real_repository_preserved": true,
+  "triggered_checks": [
+    "23",
+    "24"
+  ]
+}
+{
+  "actual_result": "REJECTED (as expected)",
+  "expected_result": "rejection",
+  "fixture": "21_val_003_restored",
+  "meta_ok": true,
+  "mode": "negative",
+  "mutation": "validation.md promotes VAL-003",
+  "real_repository_preserved": true,
+  "triggered_checks": [
+    "25"
+  ]
+}
+{
+  "actual_result": "REJECTED (as expected)",
+  "expected_result": "rejection",
+  "fixture": "22_val_006_restored",
+  "meta_ok": true,
+  "mode": "negative",
+  "mutation": "validation.md promotes VAL-006",
+  "real_repository_preserved": true,
+  "triggered_checks": [
+    "25"
+  ]
+}
+{
+  "actual_result": "REJECTED (as expected)",
+  "expected_result": "rejection",
+  "fixture": "23_batch_a_globally_unlocked",
+  "meta_ok": true,
+  "mode": "negative",
+  "mutation": "Batch A -> ELIGIBLE FOR FUTURE PROMPT",
+  "real_repository_preserved": true,
+  "triggered_checks": [
+    "batch_a_still_locked"
+  ]
+}
+{
+  "actual_result": "REJECTED (as expected)",
+  "expected_result": "rejection",
+  "fixture": "24_implementation_authorization_introduced",
+  "meta_ok": true,
+  "mode": "negative",
+  "mutation": "README claims authorization",
+  "real_repository_preserved": true,
+  "triggered_checks": [
+    "29"
+  ]
+}
+{
+  "actual_result": "PASSED (as expected)",
+  "expected_result": "pass",
+  "fixture": "P1_valid_metadata_recording",
+  "meta_ok": true,
+  "mode": "positive-control",
+  "mutation": "unmutated repository",
+  "real_repository_preserved": true,
+  "triggered_checks": []
+}
+{
+  "actual_result": "PASSED (as expected)",
+  "expected_result": "pass",
+  "fixture": "P2_deterministic_regeneration",
+  "meta_ok": true,
+  "mode": "positive-control",
+  "mutation": "generator --check reproduces the artifact",
+  "real_repository_preserved": true,
+  "triggered_checks": []
+}
+{
+  "actual_result": "PASSED (as expected)",
+  "expected_result": "pass",
+  "fixture": "P3_exact_one_row_transition",
+  "meta_ok": true,
+  "mode": "positive-control",
+  "mutation": "only the target row changed result",
+  "real_repository_preserved": true,
+  "triggered_checks": []
+}
+{
+  "actual_result": "PASSED (as expected)",
+  "expected_result": "pass",
+  "fixture": "P4_known_limitation_preserved",
+  "meta_ok": true,
+  "mode": "positive-control",
+  "mutation": "limitation and SMR1-KL-0001 untouched",
+  "real_repository_preserved": true,
+  "triggered_checks": []
+}
+{
+  "actual_result": "PASSED (as expected)",
+  "expected_result": "pass",
+  "fixture": "P5_decision_state_preserved",
+  "meta_ok": true,
+  "mode": "positive-control",
+  "mutation": "4 recorded / 417 pending",
+  "real_repository_preserved": true,
+  "triggered_checks": []
+}
+{
+  "actual_result": "PASSED (as expected)",
+  "expected_result": "pass",
+  "fixture": "P6_fixture_isolation",
+  "meta_ok": true,
+  "mode": "positive-control",
+  "mutation": "sandbox writes are removable",
+  "real_repository_preserved": true,
+  "triggered_checks": []
+}
+======================================================================
+negative fixtures rejected as expected: 24/24
+positive controls passed as expected:   6/6
+real repository files byte-unchanged:   True
+git status --short unchanged:           True
+temporary fixture tree removed:         True
+30/30 fixtures produced their expected result
+[exit=0]
+
+-------------------- VALIDATORS AFTER REMEDIATION -------------------
+$ python3 docs/kbdl/evidence/kbdl-011-source-model-resolution/scripts/validate_packet.py
+(eval):12: no such file or directory: python3 docs/kbdl/evidence/kbdl-011-source-model-resolution/scripts/validate_packet.py
+[exit=]
+
+$ python3 docs/kbdl/evidence/kbdl-011-smr2-fsrg1/scripts/validate_fsrg1.py --repo-root .
+(eval):12: no such file or directory: python3 docs/kbdl/evidence/kbdl-011-smr2-fsrg1/scripts/validate_fsrg1.py --repo-root .
+[exit=]
+
+$ python3 docs/kbdl/evidence/kbdl-011-smr2-vc-0001/scripts/validate_smr2_vc_0001.py --repo-root .
+(eval):12: no such file or directory: python3 docs/kbdl/evidence/kbdl-011-smr2-vc-0001/scripts/validate_smr2_vc_0001.py --repo-root .
+[exit=]
+
+$ python3 docs/kbdl/evidence/kbdl-011-smr2-fsrg1/scripts/field_source_registry.py --repo-root . --check
+(eval):12: no such file or directory: python3 docs/kbdl/evidence/kbdl-011-smr2-fsrg1/scripts/field_source_registry.py --repo-root . --check
+[exit=]
+
+------------- PRESERVATION DURING REMEDIATION (vs 4aba456) ----------
+$ git diff --exit-code --name-only 4aba456 -- <metadata, registry, decisions, VAL>
+[exit=0 — 0 means every one byte-identical; the remediation touched none of them]
+
+$ git status --porcelain
+ M docs/kbdl/evidence/kbdl-011-smr2-vc-0001/checksums.sha256
+ M docs/kbdl/evidence/kbdl-011-smr2-vc-0001/evidence-inventory.csv
+ M docs/kbdl/evidence/kbdl-011-smr2-vc-0001/scripts/validate_smr2_vc_0001.py
+ M docs/kbdl/evidence/kbdl-011-smr2-vc-0001/smr2-vc-0001-validation-transcript.txt
+ M docs/kbdl/evidence/kbdl-011-source-model-resolution/checksums.sha256
+ M docs/kbdl/evidence/kbdl-011-source-model-resolution/evidence-inventory.csv
+ M docs/kbdl/evidence/kbdl-011-source-model-resolution/implementation-unlock-map.md
+ M docs/kbdl/evidence/kbdl-011-source-model-resolution/scripts/fsrg1_roadmap.py
+ M docs/kbdl/evidence/kbdl-011-source-model-resolution/scripts/fsrg1_roadmap_fixtures.py

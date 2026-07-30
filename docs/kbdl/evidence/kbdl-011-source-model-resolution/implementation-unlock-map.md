@@ -96,17 +96,27 @@ prerequisite prompt, not an implementation authorization.
   `KBDL-011-SMR2-FSRG1` has passed planning-agent validation. That is
   what released the downstream prompt for reissue; it does not unlock
   Batch A, and it authorizes no implementation.
-- **Implementation state (as of KBDL-011-SMR2-FSRG1):** the package
-  `docs/kbdl/evidence/kbdl-011-smr2-fsrg1/` has been implemented — the
+- **Implementation state:** the package
+  `docs/kbdl/evidence/kbdl-011-smr2-fsrg1/` is implemented — the
   deterministic generator, the live registry artifact, the declared
   schema (version 1), the validator, 24 negative and 8 positive-control
   fixtures, and the durable transcript all exist, and all six required
-  gates pass. **Implementation is not validation:** this batch entry
-  stays `LOCKED` because planning-agent validation of
-  `KBDL-011-SMR2-FSRG1` has not occurred. The four R13–R16 registries
-  remain byte-identical; no normative content, effective metadata,
-  protected file, VAL status, or owner decision changed.
-- Status: `LOCKED — PLANNING-AGENT VALIDATION REQUIRED`.
+  gates pass. The four R13–R16 registries remain byte-identical; no
+  normative content, effective metadata, protected file, VAL status, or
+  owner decision changed. (Historical note: at the
+  `KBDL-011-SMR2-FSRG1` implementation point this entry read
+  `LOCKED — PLANNING-AGENT VALIDATION REQUIRED`, because implementation
+  is not validation and that validation had not yet occurred. It has
+  since occurred — see the planning-agent bullet above — which is why
+  this entry no longer reads `LOCKED`.)
+- **What this status does not mean.** FSRG1's own work is complete and
+  validated; nothing further is unlocked by it. Batch A remains
+  `LOCKED — OWNER DECISION REQUIRED`, its other 58
+  validation-classification issues remain undecided, the downstream
+  `KBDL-011-SMR2-VC-0001` remains `LOCKED` pending planning-agent
+  validation of its own recording, no VAL status moved, and no
+  implementation is authorized.
+- Status: `ELIGIBLE FOR FUTURE PROMPT AFTER APPROVAL`.
 
 ## Downstream prompt — KBDL-011-SMR2-VC-0001 (validation-classification recording)
 

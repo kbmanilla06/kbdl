@@ -8,7 +8,7 @@ ede29b6f586a67fff1c07bedd76581a0e0b433576f3e99221fa76fb09f7cd267  docs/kbdl/evid
 2c1df051279f2233bd8d804d8e6d31d3ff2b42350996f8485ac44ed5331eb246  docs/kbdl/evidence/kbdl-011-source-model-resolution/evidence-manifest.md
 a056dc64f3b57e71fea3b5e36bfa5089b4114d9710169edd1096961fc9f0bd82  docs/kbdl/evidence/kbdl-011-source-model-resolution/impact-assessment.md
 8998bf844e00caafe1d5015268128799bb7cf7da7c8d2e831349243d5c186f12  docs/kbdl/evidence/kbdl-011-source-model-resolution/implementation-report.md
-811fb74d698c56731d343b230c5acbd2cb4a6ad303bbf36867ea32fbc7c088b5  docs/kbdl/evidence/kbdl-011-source-model-resolution/implementation-unlock-map.md
+44937a7486fa86b5a04948c3606a12cbded27480488fa78e6153a4c167ed252e  docs/kbdl/evidence/kbdl-011-source-model-resolution/implementation-unlock-map.md
 80ea7414e674c22cff4e0b3ef4c0e2796c072afea8fc70ec85e1c350c93449c0  docs/kbdl/evidence/kbdl-011-source-model-resolution/initial-repository-state.txt
 cea5a73476bc6c4dcc083ca17e2cfe2406568ffdc8bdd7038658e4a0a8caf321  docs/kbdl/evidence/kbdl-011-source-model-resolution/issue-register.csv
 04c845eb18048f2afa6fe60d071d69463a8f33d316aa49f25876777d9351808e  docs/kbdl/evidence/kbdl-011-source-model-resolution/precommit-transcript.txt
@@ -20,8 +20,8 @@ faec5d2b827c4eff33102a01a297a8fae12ff6f89425e6708b938b67c0f62b51  docs/kbdl/evid
 e9d72d3498c76bcb32f4bc44a9b092697d997b7d1cb31e0033066f251c70608b  docs/kbdl/evidence/kbdl-011-source-model-resolution/scripts/decision_state.py
 d2c8c4e69b52d61b2ddb1fef7c76f69564d6c145c251c7bedbf990b9d9cecbb0  docs/kbdl/evidence/kbdl-011-source-model-resolution/scripts/dr1_r1_fixtures.py
 e0693b5f4a78808e4d59d0835650add86cdacf33bb0dbb766926595fcf282cfb  docs/kbdl/evidence/kbdl-011-source-model-resolution/scripts/fsrg1_integration.py
-aac281da4ea1203a0f773d72d3b982f27866a90829ca3e38936e99fdf2fd2462  docs/kbdl/evidence/kbdl-011-source-model-resolution/scripts/fsrg1_roadmap.py
-19686d64afffce1ca11af99175d9296e596784d644efe26f5dd0de77d5723a0b  docs/kbdl/evidence/kbdl-011-source-model-resolution/scripts/fsrg1_roadmap_fixtures.py
+3f39b6dfa526a8d2dd452a6893724b14666fde84626c07ec2b8b5c3cc0b5bf13  docs/kbdl/evidence/kbdl-011-source-model-resolution/scripts/fsrg1_roadmap.py
+2eaa449cc875f920e7307c929b846bccfa1fc74a16b1127a406dacb6df16015a  docs/kbdl/evidence/kbdl-011-source-model-resolution/scripts/fsrg1_roadmap_fixtures.py
 59d9056c3d5813b8913f1ef6b812dced00979e35ea4ed2b49ee5b064ca9bd96e  docs/kbdl/evidence/kbdl-011-source-model-resolution/scripts/generate_issue_register.py
 cb8d4479ba88924ce9db310694f414cb676c67ad5c40ec177782eae37fbd0a5a  docs/kbdl/evidence/kbdl-011-source-model-resolution/scripts/negative_fixtures.py
 a92f2a4bdecc636f4954197466c37f6a1c0386bb5045a719bb8bd8b28b400096  docs/kbdl/evidence/kbdl-011-source-model-resolution/scripts/reconciliation_compute.py

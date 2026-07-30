@@ -105,6 +105,17 @@ DECLARED_SCOPE_DEVIATIONS = (
     f"{SMR1_REL}/scripts/fsrg1_integration.py",
 )
 
+# Files changed by the KBDL-011-SMR2-VC-0001 validation remediation, which the
+# orchestrator explicitly released ("one narrow remediation prompt for the
+# unlock-map contradiction, validator coverage, fixture exit codes, and final
+# publication verification"). Adding FR7/FR8 and their fixtures necessarily
+# touches these two. Kept separate from DECLARED_SCOPE_DEVIATIONS so the
+# retroactively approved FSRG1 baseline expansion cannot silently grow.
+REMEDIATION_AUTHORIZED = (
+    f"{SMR1_REL}/scripts/fsrg1_roadmap.py",
+    f"{SMR1_REL}/scripts/fsrg1_roadmap_fixtures.py",
+)
+
 
 class Checks:
     def __init__(self):
@@ -333,14 +344,16 @@ def run(root: Path) -> int:
     pending = [ln[3:].strip() for ln in worktree.stdout.splitlines() if ln.strip()]
     outside = sorted({p for p in tracked + pending
                       if not any(p.startswith(a) for a in ALLOWED_PREFIXES)})
-    undeclared = [p for p in outside if p not in DECLARED_SCOPE_DEVIATIONS]
-    c.add("30. changed files remain inside the approved allowlist or the declared "
-          "scope-deviation set",
+    permitted = set(DECLARED_SCOPE_DEVIATIONS) | set(REMEDIATION_AUTHORIZED)
+    undeclared = [p for p in outside if p not in permitted]
+    c.add("30. changed files remain inside the approved allowlist, the declared "
+          "scope-deviation set, or the released remediation set",
           diff.returncode == 0 and not undeclared, f"undeclared={undeclared}")
-    c.add("31. the declared scope deviation is exactly the two FSRG1 baseline-constant "
-          "files and nothing more",
-          set(outside) <= set(DECLARED_SCOPE_DEVIATIONS),
-          f"unexpected={sorted(set(outside) - set(DECLARED_SCOPE_DEVIATIONS))}")
+    c.add("31. the declared FSRG1 scope deviation is exactly the two baseline-constant "
+          "files and has not grown",
+          set(outside) & set(DECLARED_SCOPE_DEVIATIONS) <= set(DECLARED_SCOPE_DEVIATIONS)
+          and not (set(outside) - permitted),
+          f"unexpected={sorted(set(outside) - permitted)}")
 
     return c.report()
 

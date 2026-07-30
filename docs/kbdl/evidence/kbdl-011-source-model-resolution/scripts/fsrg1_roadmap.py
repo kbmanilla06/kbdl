@@ -81,6 +81,26 @@ ALLOWED_STATUSES = {
     "ELIGIBLE FOR FUTURE PROMPT AFTER APPROVAL",
 }
 
+# FR7 (added by the KBDL-011-SMR2-VC-0001 remediation): a roadmap entry must
+# never simultaneously assert that a prompt passed planning-agent validation
+# and that the same validation has not occurred / is still required. That exact
+# contradiction shipped in the FSRG1 entry — one bullet said
+# "PASSED — PLANNING-AGENT VALIDATED" while another said validation "has not
+# occurred", with a `Status:` line still demanding it — and no check caught it.
+PASSED_VALIDATION_RE = re.compile(
+    r"PASSED\s*[—-]\s*PLANNING-AGENT VALIDATED|"
+    r"has passed planning-agent validation", re.IGNORECASE)
+# "not occurred" style claims. A historical marker rescues the sentence, so a
+# preserved account of a past state stays legal; an unmarked current-state
+# claim does not.
+NOT_VALIDATED_RE = re.compile(
+    r"planning-agent validation[^.]{0,80}?(?:has not occurred|has not happened|"
+    r"is still pending|remains pending|has not yet occurred)|"
+    r"(?:has not|not yet) been planning-agent validated", re.IGNORECASE)
+HISTORICAL_MARKER_RE = re.compile(
+    r"historical note|at the [^.]{0,60}implementation point|"
+    r"it has since occurred|previously read|formerly read", re.IGNORECASE)
+
 # Language that would mean the roadmap entry has been quietly promoted
 # out of its LOCKED state without the required planning-agent validation.
 #
@@ -235,6 +255,11 @@ def compute(pkt, repo):
     fsrg1_section = _section(map_text, PROMPT_ID)
     downstream_section = _section(map_text, DOWNSTREAM_ID)
     fr5_problems = []
+    # The downstream prompt must always be LOCKED until its own recording is
+    # planning-agent validated. FSRG1 may leave LOCKED, but only once the map
+    # records that it passed planning-agent validation — FR7 enforces the
+    # consistency of that claim.
+    fsrg1_passed = bool(PASSED_VALIDATION_RE.search(fsrg1_section))
     for label, section in (("FSRG1", fsrg1_section), ("SMR2-VC-0001", downstream_section)):
         if not section.strip():
             fr5_problems.append(f"{label} section missing from {MAP_FILE}")
@@ -243,11 +268,12 @@ def compute(pkt, repo):
         if not statuses:
             fr5_problems.append(f"{label} section states no Status")
             continue
+        must_be_locked = (label == "SMR2-VC-0001") or not fsrg1_passed
         for s in statuses:
             for part in (p.strip() for p in s.split(" / ")):
                 if part not in ALLOWED_STATUSES:
                     fr5_problems.append((label, "disallowed status", part))
-                elif not part.startswith("LOCKED"):
+                elif must_be_locked and not part.startswith("LOCKED"):
                     fr5_problems.append((label, "not LOCKED", part))
     if downstream_section.strip():
         if not GATE_STATEMENT_RE.search(downstream_section):
@@ -271,4 +297,46 @@ def compute(pkt, repo):
                    f"{DOWNSTREAM_ID} is authorized, unlocked, ready, or approved for issue",
                    len(premature) == 0, f"hits={premature}"))
 
+    # FR7: no roadmap entry may simultaneously claim a prompt passed
+    # planning-agent validation and that the same validation has not occurred.
+    contradictions = []
+    for label, section in (("FSRG1", fsrg1_section), ("SMR2-VC-0001", downstream_section)):
+        if not section.strip():
+            continue
+        if not PASSED_VALIDATION_RE.search(section):
+            continue
+        for m in NOT_VALIDATED_RE.finditer(section):
+            sentence = _sentence_around(section, m.start())
+            if HISTORICAL_MARKER_RE.search(sentence):
+                continue
+            contradictions.append((label, " ".join(sentence.split())[:120]))
+    checks.append(("FR7. no roadmap entry both claims planning-agent validation passed and "
+                   "states that the same validation has not occurred",
+                   len(contradictions) == 0, f"contradictions={contradictions}"))
+
+    # FR8: a status line must agree with the entry's own validation claim.
+    status_conflicts = []
+    if fsrg1_passed:
+        for s in re.findall(r"Status:\s*`([^`]+)`", fsrg1_section):
+            if "PLANNING-AGENT VALIDATION REQUIRED" in s:
+                status_conflicts.append(("FSRG1", s))
+    for s in re.findall(r"Status:\s*`([^`]+)`", downstream_section):
+        if not s.strip().startswith("LOCKED"):
+            status_conflicts.append(("SMR2-VC-0001", s))
+    checks.append(("FR8. a validated entry does not still demand planning-agent validation, "
+                   "and the downstream entry remains LOCKED",
+                   len(status_conflicts) == 0, f"conflicts={status_conflicts}"))
+
     return checks
+
+
+def _sentence_around(text, pos):
+    """Return the sentence-ish chunk containing `pos`.
+
+    Bounded by blank lines and list-item boundaries so a historical marker in a
+    neighbouring bullet cannot rescue a contradiction in this one.
+    """
+    start = max(text.rfind("\n- ", 0, pos), text.rfind("\n\n", 0, pos), 0)
+    nxt = [x for x in (text.find("\n- ", pos), text.find("\n\n", pos)) if x != -1]
+    end = min(nxt) if nxt else len(text)
+    return text[start:end]
