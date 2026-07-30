@@ -557,9 +557,10 @@ Other KBDL-A11Y-* normative blocks unchanged:
   changed lines in accessibility.md: 8 (6 = the 3 replaced metadata lines)
 
 ============ 11. NOTE ON PKG SELF-REFERENCE IN SECTION 7 ============
-Section 7's validator runs may report PKG.checksums_verify /
-PKG.inventory_digests_match / VC1.package_checksums_verify naming this
-transcript file, and nothing else. That is a self-reference artifact: the
+Sections 7 and 13's validator runs report exactly one failing check each --
+VC1.package_checksums_verify (and, where the FSRG1 validator is involved,
+PKG.checksums_verify / PKG.inventory_digests_match) -- naming this transcript
+file, and nothing else. That is a self-reference artifact: the
 validators hashed this transcript while the command whose output it contains
 was still writing it. A transcript cannot verify its own final bytes.
 
@@ -586,3 +587,465 @@ Implementation authorization status: NOT AUTHORIZED
 
 Planning-agent validation of this recording is REQUIRED. Nothing here unlocks
 another issue, another prompt, or any implementation.
+
+=========== 13. COMMIT A AND STAGE 3-4 POST-PUSH RESULTS ===========
+$ git show --no-patch --format=fuller af6a60a0737745ec4e2d975e58a058c619e861cb
+commit af6a60a0737745ec4e2d975e58a058c619e861cb
+Author:     Khristopher Ben Manilla <kbmanilla06@gmail.com>
+AuthorDate: Thu Jul 30 10:06:43 2026 +0800
+Commit:     Khristopher Ben Manilla <kbmanilla06@gmail.com>
+CommitDate: Thu Jul 30 10:06:43 2026 +0800
+
+    docs(kbdl): record SMR1-VC-0001 validation classification into effective metadata (KBDL-011-SMR2-VC-0001)
+    
+    Reissued after KBDL-011-SMR2-FSRG1 passed planning-agent validation. The
+    earlier blocked KBDL-011-SMR2-VC-0001 is superseded and was not resumed.
+    
+    Scope: one issue (SMR1-VC-0001), one requirement (KBDL-A11Y-001), one
+    field (Validation classification). The value is UNCHANGED: Not verified.
+    
+    Root cause: the value was already Not verified in the ledger and the
+    readable traceability group, but its normative label was split across a
+    line wrap ("Validation\n    status:"), so no independent parse found the
+    normative field. The live registry therefore reported Normative value
+    ABSENT / expected UNRESOLVED / result FAIL. Neither the ledger nor the
+    readable group may prove an A-Normative-owned field.
+    
+    docs/kbdl/accessibility.md: the KBDL-A11Y-001 administrative metadata
+    lines now carry a contiguous "Validation status: Not verified." field and
+    a separate "Validation-classification authority record" bullet citing
+    KBDL-SMR1-BA-VC-0001-OWNER-DECISION-2026-07-29 as current and
+    non-retroactive project-owner decision authority -- decision authority
+    only, not validation evidence. The requirement sentence is byte-identical;
+    lifecycle, provenance, related requirement, profiles, specification
+    location, and validation method are unchanged. The edit is line-count
+    neutral so no packet-destination line reference shifts.
+    
+    docs/kbdl/traceability-metadata.csv: one row, one field -- the same
+    authority reference appended to Notes or exclusions, never to Validation
+    evidence. No column added or reordered; 21 columns preserved.
+    
+    issue-register.csv: SMR1-VC-0001 only -- Authoritative source found now
+    names the durable record; Resolution status advances to METADATA RECORDED
+    - AWAITING PLANNING-AGENT VALIDATION. Not resolved, closed, or verified.
+    Exactly one physical line changed, CRLF preserved.
+    
+    Live registry regenerated through the approved FSRG1 generator, never
+    hand-edited; --check reproduces it byte-for-byte. Exactly two rows
+    changed; exactly one row moved FAIL -> PASS; counts hold at 5389 rows /
+    317 requirements / 17 fields / 0 duplicates (PASS 5055 -> 5056,
+    FAIL 334 -> 333).
+    
+    Validation: decision_state.py admits the new status only when MD1-MD8 all
+    hold, plus new check 7e rejecting any final-resolution claim; new
+    validate_smr2_vc_0001.py (31 fail-closed checks) and
+    smr2_vc_0001_fixtures.py (24 negative, 6 positive controls); nine
+    read-only VC1.* packet checks via smr2_vc_0001_integration.py. No
+    existing check weakened (validate_packet.py 116 -> 117).
+    
+    Project-wide R16 regression into a temporary directory: total defect rows
+    693 -> 690, UNRESOLVED_FIELD_SOURCE 335 -> 333; KBDL-A11Y-001 /
+    Validation classification no longer unresolved. All remaining VAL-003 and
+    VAL-006 defects are pre-existing and out of scope; both gates remain Not
+    verified.
+    
+    Unchanged: SMR1-KL-0001 (PENDING), the other 58 Batch A issues (PENDING),
+    Batch A itself (LOCKED), decision counts (4 recorded / 417 pending),
+    R13-R16 registries, traceability-matrix.md, validation.md,
+    decision-register.md, owner-decision records, project-owner-review.md,
+    candidate readiness, conformance, and completion.
+    
+    Scope deviation reported: validate_fsrg1.py and fsrg1_integration.py hold
+    FSRG1's protected-baseline constants, which enumerate exactly the files
+    this prompt authorizes changing and pin them to the superseded baseline
+    dc16473a. Advancing that baseline and declaring an explicit
+    AUTHORIZED_RECORDING_PATHS exemption was unavoidable; no gate is weakened
+    and a new check fails if anything outside the declared set changes.
+    
+    Implementation is not validation: planning-agent validation of this
+    recording is required. No implementation is authorized.
+    
+    Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
+[exit=0]
+
+$ git show --stat --format= af6a60a
+ docs/kbdl/accessibility.md                         |   6 +-
+ .../artifacts/field-source-registry.csv            |   4 +-
+ .../evidence/kbdl-011-smr2-fsrg1/checksums.sha256  |   4 +-
+ .../kbdl-011-smr2-fsrg1/evidence-inventory.csv     |   4 +-
+ .../kbdl-011-smr2-fsrg1/scripts/validate_fsrg1.py  |  37 +-
+ docs/kbdl/evidence/kbdl-011-smr2-vc-0001/README.md |  91 ++++
+ .../kbdl-011-smr2-vc-0001/checksums.sha256         |   6 +
+ .../kbdl-011-smr2-vc-0001/evidence-inventory.csv   |   7 +
+ .../kbdl-011-smr2-vc-0001/evidence-manifest.md     |  87 +++
+ .../kbdl-011-smr2-vc-0001/implementation-report.md | 201 +++++++
+ .../scripts/smr2_vc_0001_fixtures.py               | 518 ++++++++++++++++++
+ .../scripts/validate_smr2_vc_0001.py               | 356 +++++++++++++
+ .../smr2-vc-0001-validation-transcript.txt         | 588 +++++++++++++++++++++
+ .../checksums.sha256                               |  17 +-
+ .../evidence-inventory.csv                         |  17 +-
+ .../evidence-manifest.md                           |  23 +
+ .../implementation-report.md                       |  34 ++
+ .../implementation-unlock-map.md                   |  38 +-
+ .../issue-register.csv                             |   2 +-
+ .../scripts/decision_state.py                      | 163 +++++-
+ .../scripts/fsrg1_integration.py                   |  20 +-
+ .../scripts/smr2_vc_0001_integration.py            | 182 +++++++
+ .../scripts/validate_packet.py                     |  19 +-
+ .../source-model-resolution-packet.md              |  40 ++
+ docs/kbdl/traceability-metadata.csv                |   2 +-
+ 25 files changed, 2423 insertions(+), 43 deletions(-)
+
+----- clean tree, post-push validation of Commit A -----
+$ git status --short
+ M docs/kbdl/evidence/kbdl-011-smr2-vc-0001/smr2-vc-0001-validation-transcript.txt
+[exit=0]
+
+(empty above = clean)
+$ git rev-parse HEAD
+af6a60a0737745ec4e2d975e58a058c619e861cb
+[exit=0]
+
+$ git rev-parse origin/main
+af6a60a0737745ec4e2d975e58a058c619e861cb
+[exit=0]
+
+$ git ls-remote origin refs/heads/main
+af6a60a0737745ec4e2d975e58a058c619e861cb	refs/heads/main
+[exit=0]
+
+$ python3 docs/kbdl/evidence/kbdl-011-source-model-resolution/scripts/validate_packet.py
+======================================================================
+[PASS] 1. every R16 defect row maps to a canonical issue or documented shared issue
+[PASS] 2. every canonical issue has a unique stable ID
+[PASS] 3. category identified for every issue
+[PASS] 4. affected requirement IDs identified for every issue
+[PASS] 5. R16 evidence reference identified for every issue
+[PASS] 6. affected validation gate identified for every issue
+[PASS] D1. no duplicate durable owner-decision records for the same issue ID
+[PASS] D2. every durable owner-decision record states 'Implementation authorization status: NOT AUTHORIZED'
+[PASS] D3. every durable-record issue ID exists in issue-register.csv (no unknown issue ID)
+[PASS] 7. every Owner decision field is literally PENDING or exactly matches its durable owner-decision record's selected choice
+[PASS] 7b. every Owner decision date field is literally PENDING or exactly matches its durable owner-decision record's decision date
+[PASS] 7c. every Owner evidence field is literally PENDING or references its durable owner-decision record (never KBDL-DEC-014 alone)
+[PASS] 7d. every Resolution status field is PENDING-consistent or exactly 'OWNER DECISION RECORDED — AWAITING PLANNING-AGENT VALIDATION' / 'METADATA RECORDED — AWAITING PLANNING-AGENT VALIDATION' for durably recorded rows
+[PASS] 7e. no durably recorded issue claims a final resolved/closed/validated status
+[PASS] D6. no durable record exists for an issue-register row left at the PENDING triple (recording completeness)
+[PASS] D7. exactly the durably-recorded issues are non-PENDING; every other issue remains PENDING
+[PASS] 8. no project-owner-review.md checkbox is selected outside a recognized issue-ID review block
+[PASS] D9. every selected project-owner-review.md checkbox exactly matches its durable owner-decision record
+[PASS] D10. no project-owner-review.md checkbox selection lacks a matching durable owner-decision record
+[PASS] D11. every durably-recorded issue has a matching project-owner-review.md checkbox selection
+[PASS] D12. source-model-resolution-ledger.csv durable owner-decision count matches the actual durable-record count
+[PASS] D13. source-model-resolution-ledger.csv per-batch durable-decision counts match actual per-batch counts and sum to the total
+[PASS] D14. Batch H's historically recorded owner-decision count remains exactly three
+[PASS] PS1. when durable decisions exist, the packet introduction/contents-table does not claim zero decisions are recorded
+[PASS] PS2. packet-state prose recorded/pending counts match the computed decision-state counts
+[PASS] PS3. historical zero-decision state (commit 662ee28) remains distinguished from the current state
+[PASS] PS4. review-cycle sign-off summary matches the durable record
+[PASS] PS5. no implementation authorization is introduced by the review-cycle summary
+[PASS] AR1. no durable 'SET TO NOT VERIFIED' owner-decision record states or implies it creates no current authority
+[PASS] AR2. no durable owner-decision record conflates decision authority with validation/conformance evidence
+[PASS] SP1. no current-state section reports 418 pending without an explicit historical marker once four decisions are durably recorded
+[PASS] SP2. no current-state section reports a total durably-recorded-decision count other than the computed total
+[PASS] SP3. no current-state summary states that AGC1/VF1 planning-agent validation remains pending
+[PASS] SP4. total recorded count, per-batch recorded counts, and pending count are mutually consistent
+[PASS] MD1. only the authorized issue carries the metadata-recorded status
+[PASS] MD2. metadata-recorded issue has a matching non-deferred durable record
+[PASS] MD3. normative module carries the approved value as a parseable field
+[PASS] MD4. normative module cites the exact durable authority record
+[PASS] MD5. normative authority language is current, non-retroactive, and not represented as validation evidence
+[PASS] MD6. structured traceability row carries the same value and the authority reference
+[PASS] MD7. live field-source registry row resolves to the approved value and passes
+[PASS] MD8. metadata-recorded issue is not marked finally resolved
+[PASS] 9. every current-authority proposal states current/non-retroactive boundary
+[PASS] 10. authoritative-source-found column populated for every issue
+[PASS] 11. MOT cycle has exactly 2 edge records and 1 cycle record
+[PASS] 12. no protected file changed (git diff --name-only HEAD)
+[PASS] 13. docs/kbdl/validation.md byte-identical to HEAD
+[PASS] 14. candidate status remains NOT READY in validation.md
+[PASS] 15. implementation conformance remains NOT VERIFIED in validation.md
+[PASS] 16. project completion remains PENDING in validation.md
+[PASS] 17. every implementation-unlock-map.md Status: assignment uses only the four permitted values
+[PASS] 18. internal markdown links resolve to existing files
+[PASS] 19. CSV headers/row widths consistent across all packet CSVs
+[PASS] 20. canonical issue count (421) = 418 field/location/standard + 2 edge + 1 cycle
+[PASS] 20b. distinct affected requirements = 289 (matches R16 Failed effective records)
+[PASS] 21. checksums verify against on-disk files
+[PASS] 22. no unrelated working-tree changes outside the new packet directory or AGC1-authorized files
+[PASS] AG.KBDL-MOT-007.readme_independent_authority
+[PASS] AG.KBDL-MOT-007.csv_independent_authority
+[PASS] AG.KBDL-MOT-007.related_requirement_present
+[PASS] AG.KBDL-MOT-007.related_requirement_not_authority
+[PASS] AG.KBDL-MOT-007.no_authority_edge_to_KBDL-MOT-008
+[PASS] AG.KBDL-MOT-008.readme_independent_authority
+[PASS] AG.KBDL-MOT-008.csv_independent_authority
+[PASS] AG.KBDL-MOT-008.related_requirement_present
+[PASS] AG.KBDL-MOT-008.related_requirement_not_authority
+[PASS] AG.KBDL-MOT-008.no_authority_edge_to_KBDL-MOT-007
+[PASS] AG.KBDL-MOT-007.readme_csv_agree
+[PASS] AG.KBDL-MOT-008.readme_csv_agree
+[PASS] AG.KBDL-MOT-007.validation_status_unchanged
+[PASS] AG.KBDL-MOT-008.validation_status_unchanged
+[PASS] AG.csv.KBDL-MOT-007.validation_classification_unchanged
+[PASS] AG.csv.KBDL-MOT-008.validation_classification_unchanged
+[PASS] AG.no_two_node_cycle
+[PASS] AG.MOT-007.lifecycle_approved
+[PASS] AG.MOT-008.lifecycle_approved
+[PASS] AG.MOT-007.validation_status_not_verified
+[PASS] AG.MOT-008.validation_status_not_applicable
+[PASS] AG.csv.MOT-007.lifecycle_approved
+[PASS] AG.csv.MOT-008.lifecycle_approved
+[PASS] AG.csv.MOT-007.validation_classification_not_verified
+[PASS] AG.csv.MOT-008.validation_classification_not_applicable
+[PASS] AG.narrow_authorized_diff.commits_resolvable
+[PASS] AG.narrow_authorized_diff.parent_matches_base
+[PASS] AG.narrow_authorized_diff.readme_only_mot007_008
+[PASS] AG.narrow_authorized_diff.csv_only_mot007_008
+[PASS] AG.narrow_authorized_diff.csv_row_count_unchanged
+[PASS] FR1. smr2-fsrg1-prompt.md exists, identifies KBDL-011-SMR2-FSRG1, and states 'Implementation authorization status: NOT AUTHORIZED'
+[PASS] FR2. the FSRG1 specification states all six mandatory validation gates (schema, determinism, drift, path-safety, fixture-isolation, clean post-publication)
+[PASS] FR3. the FSRG1 specification names all four R13-R16 registries and declares them immutable historical evidence, with the normative/effective-metadata non-change constraints stated
+[PASS] FR4. all four R13-R16 field-source registries verify byte-for-byte against the SHA-256 digests recorded in their round evidence inventories
+[PASS] FR5. implementation-unlock-map.md carries LOCKED KBDL-011-SMR2-FSRG1 and KBDL-011-SMR2-VC-0001 entries, with the planning-agent gate and the reissue requirement stated
+[PASS] FR6. neither smr2-fsrg1-prompt.md nor implementation-unlock-map.md claims KBDL-011-SMR2-FSRG1 or KBDL-011-SMR2-VC-0001 is authorized, unlocked, ready, or approved for issue
+[PASS] FSRG1.package_present — FSRG1 package and required files exist
+[PASS] FSRG1.schema_present — declared registry schema document exists
+[PASS] FSRG1.generator_present — standalone deterministic generator exists
+[PASS] FSRG1.artifact_present — live field-source registry artifact exists and is non-empty
+[PASS] FSRG1.validator_passes — validate_fsrg1.py exits 0 with no failed gate
+[PASS] FSRG1.package_checksums_verify — FSRG1 checksums verify on disk
+[PASS] FSRG1.historical_registries_unchanged — R13-R16 match their own round digests
+[PASS] FSRG1.effective_metadata_unchanged — protected/normative files match the baseline except paths a later authorized recording prompt may change
+[PASS] FSRG1.historical_packages_unchanged — no R13-R16 evidence file changed
+[PASS] FSRG1.decision_counts_unchanged — 4 durably recorded / 417 pending
+[PASS] FSRG1.smr2_vc_0001_locked — the downstream prompt remains LOCKED and reissue-only
+[PASS] FSRG1.no_val_or_readiness_movement — VAL/readiness/conformance/completion intact
+[PASS] VC1.package_present — SMR2-VC-0001 package and required files exist
+[PASS] VC1.validator_passes — validate_smr2_vc_0001.py exits 0 with no failed check
+[FAIL] VC1.package_checksums_verify — SMR2-VC-0001 checksums verify on disk -- ['MISMATCH:docs/kbdl/evidence/kbdl-011-smr2-vc-0001/smr2-vc-0001-validation-transcript.txt']
+[PASS] VC1.issue_status_metadata_recorded — SMR1-VC-0001 is metadata-recorded and awaiting planning-agent validation
+[PASS] VC1.issue_not_finally_resolved — no resolved/closed/verified/validated claim
+[PASS] VC1.classification_unchanged — KBDL-A11Y-001 remains Not verified
+[PASS] VC1.kl_0001_still_pending — SMR1-KL-0001 remains PENDING
+[PASS] VC1.other_batch_a_pending — the other 58 validation-classification issues remain PENDING
+[PASS] VC1.batch_a_still_locked — Batch A as a whole remains LOCKED
+[PASS] VC1.decision_counts_unchanged — 4 durably recorded / 417 pending
+[PASS] 23. push-safety check deferred to commit/push shell sequence (fast-forward only)
+[PASS] 24. local HEAD SHA captured for post-push comparison
+======================================================================
+116/117 checks passed
+[exit=1]
+
+$ python3 docs/kbdl/evidence/kbdl-011-smr2-fsrg1/scripts/validate_fsrg1.py --repo-root .
+======================================================================
+[PASS] SCHEMA.artifact_exists
+[PASS] SCHEMA.encoding_utf8
+[PASS] SCHEMA.no_bom
+[PASS] SCHEMA.line_endings_lf
+[PASS] SCHEMA.final_newline
+[PASS] SCHEMA.nonempty
+[PASS] SCHEMA.parses
+[PASS] SCHEMA.header_exact
+[PASS] SCHEMA.row_widths_uniform
+[PASS] SCHEMA.row_key_unique
+[PASS] SCHEMA.field_name_domain
+[PASS] SCHEMA.ownership_class_matches_field
+[PASS] SCHEMA.derivation_rule_matches_field
+[PASS] SCHEMA.controlled_domains
+[PASS] SCHEMA.deterministic_sort_order
+[PASS] SCHEMA.effective_equals_expected
+[PASS] SCHEMA.precedence_matches_conflict
+[PASS] SCHEMA.validation_result_policy
+[PASS] SCHEMA.no_absolute_paths
+[PASS] SCHEMA.no_environment_values
+[PASS] COVER.every_current_requirement_present
+[PASS] COVER.no_unknown_requirement
+[PASS] COVER.every_required_field_per_requirement
+[PASS] COVER.row_count_is_requirements_times_fields
+[PASS] DETERM.generator_runs
+[PASS] DETERM.byte_identical
+[PASS] DETERM.sha256_identical
+[PASS] DETERM.nonempty_output
+[PASS] DETERM.header_identical
+[PASS] DETERM.row_count_identical
+[PASS] DETERM.final_newline_identical
+[PASS] DETERM.line_endings_lf_only
+[PASS] PATH.declared_target_resolves_inside_package
+[PASS] PATH.symlinked_output_refused
+[PASS] PATH.symlink_escape_left_target_untouched
+[PASS] PATH.missing_package_refused
+[PASS] PATH.generator_succeeds_in_sandbox
+[PASS] PATH.single_declared_write_target
+[PASS] PATH.check_mode_is_read_only
+[PASS] PATH.historical_artifacts_never_written
+[PASS] DRIFT.check_mode_executed
+[PASS] DRIFT.committed_matches_regeneration
+[PASS] DRIFT.independent_regeneration
+[PASS] DRIFT.independent_regeneration_matches
+[PASS] HIST.r13.recorded_digest_present
+[PASS] HIST.r13.registry_present
+[PASS] HIST.r13.byte_identical
+[PASS] HIST.r14.recorded_digest_present
+[PASS] HIST.r14.registry_present
+[PASS] HIST.r14.byte_identical
+[PASS] HIST.r15.recorded_digest_present
+[PASS] HIST.r15.registry_present
+[PASS] HIST.r15.byte_identical
+[PASS] HIST.r16.recorded_digest_present
+[PASS] HIST.r16.registry_present
+[PASS] HIST.r16.byte_identical
+[PASS] ISO.fixture_suite_present
+[PASS] ISO.fixture_suite_passes
+[PASS] ISO.real_repository_byte_unchanged
+[PASS] ISO.no_unexpected_worktree_changes
+[PASS] LABEL.readme_present
+[PASS] LABEL.non_authoritative_sentence_present
+[PASS] LABEL.schema_states_non_authoritative
+[PASS] LABEL.no_authority_or_evidence_claim
+[PASS] PROT.baseline_diff_available
+[PASS] PROT.protected_files_unchanged_vs_baseline
+[PASS] PROT.authorized_recording_changes_declared
+[PASS] PROT.historical_packages_unchanged_vs_baseline
+[PASS] DECISION.state_module_available
+[PASS] DECISION.state_computed
+[PASS] DECISION.recorded_count_unchanged
+[PASS] DECISION.pending_count_unchanged
+[PASS] DECISION.no_unknown_or_duplicate_records
+[PASS] STATE.validation_md_present
+[PASS] STATE.candidate_not_ready
+[PASS] STATE.conformance_not_verified
+[PASS] STATE.completion_pending
+[PASS] STATE.val_003_006_not_verified
+[PASS] STATE.val_007_documentation_only
+[PASS] STATE.smr2_vc_0001_still_locked
+[PASS] STATE.smr2_vc_0001_reissue_required
+[PASS] PKG.required_files_present
+[PASS] PKG.checksums_verify
+[PASS] PKG.inventory_complete
+[PASS] PKG.inventory_digests_match
+======================================================================
+85/85 FSRG1 checks passed
+[exit=0]
+
+$ python3 docs/kbdl/evidence/kbdl-011-smr2-vc-0001/scripts/validate_smr2_vc_0001.py --repo-root .
+======================================================================
+[PASS] 01. durable owner-decision record exists with the exact record ID
+[PASS] 02. durable record selects exactly SET TO NOT VERIFIED
+[PASS] 03. durable record decision date is 2026-07-29
+[PASS] 04. durable record timezone is Asia/Manila
+[PASS] 05. durable record implementation authorization remains NOT AUTHORIZED
+[PASS] 06. KBDL-A11Y-001 normative requirement sentence is byte-identical
+[PASS] 07. lifecycle remains Approved
+[PASS] 08. provenance remains Confirmed
+[PASS] 09. validation status is explicitly parseable as Not verified
+[PASS] 10. authority record ID appears in the requirement block
+[PASS] 11. authority language is current and non-retroactive
+[PASS] 12. authority language states it is not validation evidence
+[PASS] 13. validation method is unchanged in the normative block
+[PASS] 14. structured traceability classification remains Not verified
+[PASS] 15. structured traceability references the durable record in Notes or exclusions
+[PASS] 16. validation evidence does not claim execution and does not carry the owner decision
+[PASS] 17. known limitation is unchanged
+[PASS] 18. SMR1-KL-0001 remains pending
+[PASS] 19. the other Batch A validation-classification issues remain pending
+[PASS] 20. target live-registry row resolves to Not verified and passes
+[PASS] 21. no other registry row changes validation result
+[PASS] 22. registry row/requirement/field/duplicate counts are unchanged
+[PASS] 23. issue-register status is metadata-recorded and awaiting planning-agent validation
+[PASS] 24. decision state remains 4 recorded / 417 pending with no failing decision-state check
+[PASS] 25. VAL-003 and VAL-006 are not restored
+[PASS] 26. candidate readiness is unchanged
+[PASS] 27. implementation conformance is unchanged
+[PASS] 28. project completion status is unchanged
+[PASS] 29. no implementation authorization is introduced
+[PASS] 30. changed files remain inside the approved allowlist or the declared scope-deviation set
+[PASS] 31. the declared scope deviation is exactly the two FSRG1 baseline-constant files and nothing more
+======================================================================
+31/31 SMR2-VC-0001 checks passed
+[exit=0]
+
+$ python3 docs/kbdl/evidence/kbdl-011-smr2-vc-0001/scripts/smr2_vc_0001_fixtures.py --repo-root .
+======================================================================
+negative fixtures rejected as expected: 24/24
+positive controls passed as expected:   6/6
+real repository files byte-unchanged:   True
+git status --short unchanged:           True
+temporary fixture tree removed:         True
+30/30 fixtures produced their expected result
+[exit=]
+
+$ python3 docs/kbdl/evidence/kbdl-011-smr2-fsrg1/scripts/fsrg1_fixtures.py --repo-root .
+======================================================================
+negative fixtures rejected as expected: 24/24
+positive controls passed as expected:   8/8
+real repository files byte-unchanged:   True
+git status --short unchanged:           True
+temporary fixture tree removed:         True
+32/32 fixtures produced their expected result
+[exit=]
+
+----- pre-existing SMR1 fixture suites -----
+$ python3 docs/kbdl/evidence/kbdl-011-source-model-resolution/scripts/negative_fixtures.py
+Real repository files unchanged after all fixtures: True
+All 20 fixtures correctly rejected: True
+======================================================================
+[exit=]
+
+$ python3 docs/kbdl/evidence/kbdl-011-source-model-resolution/scripts/dr1_r1_fixtures.py
+Real repository files unchanged after all fixtures: True
+All 10 DR1-R1 fixtures produced the expected result: True
+======================================================================
+[exit=]
+
+$ python3 docs/kbdl/evidence/kbdl-011-source-model-resolution/scripts/authority_graph_fixtures.py
+Real repository files unchanged after all fixtures: True
+All 8 AGC1 fixtures correctly rejected: True
+======================================================================
+[exit=]
+
+$ python3 docs/kbdl/evidence/kbdl-011-source-model-resolution/scripts/agc1_narrow_diff_fixtures.py
+Real repository files unchanged after all fixtures: True
+All 12 narrow-diff fixtures produced the expected pass/rejection: True
+======================================================================
+[exit=]
+
+$ python3 docs/kbdl/evidence/kbdl-011-source-model-resolution/scripts/fsrg1_roadmap_fixtures.py
+======================================================================
+fixture isolation: real repository files byte-unchanged = True
+12/12 fixtures produced their expected result
+[exit=]
+
+----- generator --check at Commit A -----
+$ python3 docs/kbdl/evidence/kbdl-011-smr2-fsrg1/scripts/field_source_registry.py --repo-root . --check
+OK: docs/kbdl/evidence/kbdl-011-smr2-fsrg1/artifacts/field-source-registry.csv matches regeneration (1917842 bytes)
+[exit=0]
+
+----- preservation audit at Commit A (vs 718b0431) -----
+$ git diff --exit-code --name-only 718b0431 HEAD -- <normative, protected, R13-R16, owner records>
+[exit=0 — 0 means all byte-identical]
+
+----- decision and gate state at Commit A -----
+recorded 4 | pending 417 | unknown [] | duplicates [] | failing checks []
+SMR1-KL-0001: PENDING / PENDING
+other Batch A VC issues: 58 | non-PENDING: []
+PRESENT  Specification release candidate recommendation: NOT READY
+PRESENT  Implementation conformance status: NOT VERIFIED
+PRESENT  Project completion status: PENDING
+PRESENT  `KBDL-VAL-003`, `KBDL-VAL-004`, `KBDL-VAL-005`, and `KBDL-VAL-006` are `Not verified`
+
+======== 14. AUTHORITATIVE CLEAN RUNS ARE POST-COMMIT-B ==============
+This transcript is finalized here. The package inventory and checksums are
+regenerated against these final bytes by the evidence-closure commit
+(Commit B), after which the complete suite is re-run against the clean,
+published tree -- where the self-reference described in section 11 cannot
+occur. Those raw results are recorded in the final implementation report.
+
+Any reader verifying this package should run, from a clean checkout:
+
+  python3 docs/kbdl/evidence/kbdl-011-smr2-vc-0001/scripts/validate_smr2_vc_0001.py --repo-root .
+  python3 docs/kbdl/evidence/kbdl-011-smr2-vc-0001/scripts/smr2_vc_0001_fixtures.py --repo-root .
+  python3 docs/kbdl/evidence/kbdl-011-smr2-fsrg1/scripts/validate_fsrg1.py --repo-root .
+  python3 docs/kbdl/evidence/kbdl-011-source-model-resolution/scripts/validate_packet.py
+
+All four must exit 0. If they do not, this recording is not validated.
