@@ -750,11 +750,15 @@ def fx_packet_and_review_disagree_on_gate(sb):
 
 
 def pc_marked_historical_locked_state(sb):
-    """A locked state with a STATEMENT-LOCAL historical marker is legal."""
+    """A locked state with a STATEMENT-LOCAL historical marker is legal.
+
+    As of PA1-R3, R3C additionally requires the same statement to record its
+    supersession, so the marker alone is no longer sufficient."""
     sb.sub(PACKET_REL, "## 8. Progression gate",
            "(Historical note: at that implementation point "
            "`KBDL-011-SMR2-FSRG1` remained `LOCKED — PLANNING-AGENT VALIDATION "
-           "REQUIRED`.)\n\n## 8. Progression gate")
+           "REQUIRED` — it has since passed that validation and is no longer "
+           "locked.)\n\n## 8. Progression gate")
     return _gate_failing(sb), set()
 
 
@@ -786,6 +790,126 @@ POSITIVE += [
      pc_marked_historical_locked_state),
     ("P11_current_state_consistent", "unmutated current state is consistent",
      pc_current_state_consistent),
+]
+
+
+# ---------------------------------------------------------------------------
+# PA1-R3 wrap-proof and section-aware fixtures (R3A-R3D)
+# ---------------------------------------------------------------------------
+
+FSRG1_SECTION_ANCHOR = "## KBDL-011-SMR2-FSRG1 implementation"
+
+
+def _inject_report(sb, text):
+    """Insert a statement into the completed FSRG1 implementation section."""
+    sb.sub(REPORT_REL, "## KBDL-011-SMR2-VC-0001 (reissued) metadata recording",
+           text + "\n\n## KBDL-011-SMR2-VC-0001 (reissued) metadata recording")
+
+
+def fx_wrapped_validation_required(sb):
+    """The exact defect that shipped: VALIDATION / REQUIRED split by a newline."""
+    _inject_report(sb, "`KBDL-011-SMR2-FSRG1` remains `LOCKED — PLANNING-AGENT VALIDATION\n"
+                       "REQUIRED`.")
+    return _gate_failing(sb), {"R3A"}
+
+
+def fx_every_word_wrapped(sb):
+    _inject_report(sb, "`KBDL-011-SMR2-FSRG1` remains `LOCKED —\nPLANNING-AGENT\n"
+                       "VALIDATION\nREQUIRED`.")
+    return _gate_failing(sb), {"R3A"}
+
+
+def fx_backticked_multiline(sb):
+    _inject_report(sb, "`KBDL-011-SMR2-FSRG1` is `LOCKED — PLANNING-AGENT\n"
+                       "  VALIDATION REQUIRED`.")
+    return _gate_failing(sb), {"R3A"}
+
+
+def fx_emphasized_multiline(sb):
+    _inject_report(sb, "**KBDL-011-SMR2-FSRG1** stays **LOCKED — PLANNING-AGENT\n"
+                       "VALIDATION REQUIRED**.")
+    return _gate_failing(sb), {"R3A"}
+
+
+def fx_recording_validation_remains_required(sb):
+    """Inside the completed VC-0001 section, phrased without the status name."""
+    sb.sub(REPORT_REL, "## Recommended next action",
+           "Planning-agent validation of this recording remains required for "
+           "`KBDL-011-SMR2-VC-0001`.\n\n## Recommended next action")
+    return _gate_failing(sb), {"R3A"}
+
+
+def fx_section_context_only(sb):
+    """Lock language whose prompt context comes only from the section heading."""
+    sb.sub(PACKET_REL,
+           "## 13. KBDL-011-SMR2-FSRG1 implementation (live field-source registry and generator)",
+           "## 13. KBDL-011-SMR2-FSRG1 implementation (live field-source registry and generator)\n\n"
+           "This prompt remains locked pending planning-agent validation.")
+    return _gate_failing(sb), {"R3B"}
+
+
+def fx_marker_in_neighbouring_sentence(sb):
+    """A marker in the previous sentence must not rescue the next one."""
+    _inject_report(sb, "Historical note: earlier rounds differed. "
+                       "`KBDL-011-SMR2-FSRG1` remains `LOCKED — PLANNING-AGENT VALIDATION\n"
+                       "REQUIRED`.")
+    return _gate_failing(sb), {"R3A"}
+
+
+def fx_historical_without_supersession(sb):
+    """A local historical marker but no statement of current supersession."""
+    _inject_report(sb, "Historical note: at the `KBDL-011-SMR2-FSRG1` implementation point "
+                       "FSRG1 remained locked pending planning-agent validation.")
+    return _gate_failing(sb), {"R3C"}
+
+
+def pc_historical_fsrg1_lock_accepted(sb):
+    """Statement-local marker plus supersession is legal."""
+    _inject_report(sb, "Historical note: at the `KBDL-011-SMR2-FSRG1` implementation point "
+                       "FSRG1 remained locked pending planning-agent validation; it has "
+                       "since passed that validation and is no longer locked.")
+    return _gate_failing(sb), set()
+
+
+def pc_historical_vc0001_awaiting_accepted(sb):
+    _inject_report(sb, "Historical note: at the metadata-recording point "
+                       "`KBDL-011-SMR2-VC-0001` was awaiting planning-agent validation; "
+                       "that validation has since been recorded as PASSED.")
+    return _gate_failing(sb), set()
+
+
+def pc_wrap_variants_all_detected(sb):
+    """The normalizer must flatten every wrapping form (R3D)."""
+    return _gate_failing(sb) & {"R3D"}, set()
+
+
+NEGATIVE += [
+    ("46_wrapped_validation_required", "VALIDATION / REQUIRED split by a newline",
+     fx_wrapped_validation_required),
+    ("47_every_word_wrapped", "each word of the locked status on its own line",
+     fx_every_word_wrapped),
+    ("48_backticked_multiline_lock", "backticked multiline locked status",
+     fx_backticked_multiline),
+    ("49_emphasized_multiline_lock", "emphasised multiline locked status",
+     fx_emphasized_multiline),
+    ("50_recording_validation_remains_required",
+     "'validation of this recording remains required'",
+     fx_recording_validation_remains_required),
+    ("51_section_context_only_lock", "lock language, prompt context from the heading",
+     fx_section_context_only),
+    ("52_marker_in_neighbouring_sentence", "marker in the previous sentence",
+     fx_marker_in_neighbouring_sentence),
+    ("53_historical_without_supersession", "historical marker, no supersession",
+     fx_historical_without_supersession),
+]
+
+POSITIVE += [
+    ("P12_historical_fsrg1_lock_accepted", "local marker + supersession is legal",
+     pc_historical_fsrg1_lock_accepted),
+    ("P13_historical_vc0001_awaiting_accepted", "local marker + recorded PASS is legal",
+     pc_historical_vc0001_awaiting_accepted),
+    ("P14_wrap_variants_all_detected", "normalizer flattens every wrapping form",
+     pc_wrap_variants_all_detected),
 ]
 
 

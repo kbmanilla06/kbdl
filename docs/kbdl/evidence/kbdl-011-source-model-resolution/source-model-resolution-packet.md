@@ -468,9 +468,9 @@ it never regenerates the registry.
 **Implementation is not validation.** (Historical note: at the
 `KBDL-011-SMR2-FSRG1` implementation point this section read that FSRG1 was
 awaiting planning-agent validation and that `KBDL-011-SMR2-VC-0001` had not been
-begun, resumed, or reissued. Both have since occurred: FSRG1 passed
-planning-agent validation, the downstream prompt was reissued rather than
-resumed, and it has since passed its own planning-agent validation — see §11 for
+begun, resumed, or reissued — FSRG1 has since passed that validation, the
+downstream prompt was reissued rather than resumed, and it has since passed its
+own planning-agent validation, so neither is locked or awaited now; see §11 for
 the current gate status.) This step changed no
 normative content, no effective metadata, and no protected file; gave
 `SMR1-VC-0001` no effect in effective metadata; restored no VAL status; and
@@ -501,8 +501,11 @@ through the approved FSRG1 generator**, never hand-edited: exactly two rows
 changed, exactly one row moved `FAIL` → `PASS`, and row/requirement/field/
 duplicate counts are unchanged at 5,389 / 317 / 17 / 0.
 
-`SMR1-VC-0001` now reads `METADATA RECORDED — AWAITING PLANNING-AGENT
-VALIDATION`. It is **not** resolved, closed, verified, or validated.
+Historical note: at the metadata-recording point `SMR1-VC-0001` read
+`METADATA RECORDED — AWAITING PLANNING-AGENT VALIDATION`; that validation has
+since been recorded as PASSED and the row now reads
+`METADATA RECORDED — PLANNING-AGENT VALIDATED`. Under either status it is
+**not** resolved, closed, verified, or validated.
 `scripts/decision_state.py` admits that status only when MD1-MD8 all hold, and
 new check `7e` rejects any final-resolution claim; `scripts/validate_packet.py`
 gains nine read-only `VC1.*` checks via `scripts/smr2_vc_0001_integration.py`.

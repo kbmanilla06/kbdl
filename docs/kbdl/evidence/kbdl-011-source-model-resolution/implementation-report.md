@@ -434,9 +434,10 @@ The four R13–R16 registries remain byte-identical immutable historical
 evidence. No normative content, effective metadata, or protected file
 changed; no VAL status was restored; no owner decision moved. Decision
 counts after FSRG1 (unchanged): 4 durably recorded (3 Batch H, 1 Batch
-A); 417 pending. **Implementation is not validation** —
-`KBDL-011-SMR2-FSRG1` remains `LOCKED — PLANNING-AGENT VALIDATION
-REQUIRED`.
+A); 417 pending. **Implementation is not validation** — Historical note: at the
+`KBDL-011-SMR2-FSRG1` implementation point, implementation alone was not
+validation and FSRG1 remained locked pending planning-agent validation; FSRG1
+has since passed that validation and is no longer locked or awaiting it.
 
 ## KBDL-011-SMR2-VC-0001 (reissued) metadata recording
 

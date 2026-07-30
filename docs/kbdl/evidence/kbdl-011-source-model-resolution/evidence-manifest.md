@@ -295,14 +295,16 @@ traceability row carries the same reference in `Notes or exclusions`, never in
 `Validation evidence`. The live registry was regenerated through the approved
 FSRG1 generator and never hand-edited: exactly two rows changed, exactly one
 moved `FAIL` → `PASS`, and counts hold at 5,389 rows / 317 requirements / 17
-fields / 0 duplicates. `scripts/decision_state.py` admits the new
-`METADATA RECORDED — AWAITING PLANNING-AGENT VALIDATION` status only when
+fields / 0 duplicates. `scripts/decision_state.py` admits the then-new status name
+`METADATA RECORDED — AWAITING PLANNING-AGENT VALIDATION` (the recording's
+state at that historical point; since superseded by
+`METADATA RECORDED — PLANNING-AGENT VALIDATED`) only when
 MD1-MD8 all hold, and new check `7e` rejects any final-resolution claim;
 `scripts/smr2_vc_0001_integration.py` adds nine read-only `VC1.*` checks. No
 lifecycle, provenance, method, evidence, or limitation changed; `SMR1-KL-0001`
 and the other 58 Batch A issues remain PENDING; VAL-003/VAL-006, readiness,
 conformance, and completion are unmoved; decision counts remain 4 recorded /
-417 pending. Planning-agent validation of this recording remains required.
+417 pending. Historical note: at the metadata-recording point, planning-agent validation of this recording was still required; it has since been recorded as PASSED on 2026-07-30 and is no longer awaited.
 
 `KBDL-011-SMR2-VC-0001-PA1` records the planning-agent `PASS` for the reissued
 `KBDL-011-SMR2-VC-0001` in the durable record
@@ -399,3 +401,41 @@ adjacent-bullet marker laundering, a map/report disagreement, a packet/review
 gate disagreement, and a positive control proving a statement-local historical
 marker remains legal. The suite's `__main__` guard is verified to sit after
 every fixture registration.
+
+`KBDL-011-SMR2-VC-0001-PA1-R3` closes a matching gap rather than a wording gap.
+One contradiction survived R2B/R2C because Markdown had wrapped the status
+across a line break between its last two words, and those checks matched raw
+text expecting an ordinary space. The statement is now an explicit
+statement-local historical note recording that FSRG1 was locked at its
+implementation point and has since passed that validation; the same treatment is
+applied to the remaining chronological passages that described the recording's
+former awaiting state.
+
+`scripts/pa1_signoff_and_crlf_checks.py` gains `normalize_for_status()` and
+`R3A`–`R3D`. Normalization runs before any status match: Markdown emphasis and
+code delimiters are dropped, every Unicode and ASCII whitespace run — including
+non-breaking and thin spaces — collapses to one ordinary space so wrapped lines
+rejoin, dash variants unify, and the result is lowercased. The untouched
+original statement is retained for evidence output, and the historical-marker
+test runs against the same normalized statement, so a marker cannot be separated
+from its claim by reflowing.
+
+`R3A` rejects any current statement binding a completed prompt to its own
+planning-agent-validation lock, in any wrapping. `R3B` is section-aware: a
+statement inside a section whose heading names a completed prompt is judged in
+that context, so lock language need not repeat the prompt ID to be caught.
+`R3C` requires every retained historical lock statement to record its
+supersession in the same statement. `R3D` is a self-test proving the normalizer
+defeats each wrapping form that shipped or could ship.
+
+Batch A's `LOCKED — OWNER DECISION REQUIRED` is explicitly excluded from these
+patterns — it is a different, correct lock — as is narrative that records a past
+disposition, a map entry being added, or a validator describing what it rejects.
+
+`scripts/smr2_vc_0001_pa1_fixtures.py` grows to 53 negative fixtures and 14
+positive controls (67 total). The new ones cover the exact shipped wrapping, one
+word per line, backticked and emphasised multiline forms, "validation of this
+recording remains required", lock language whose prompt context comes only from
+the section heading, a marker in a neighbouring sentence, and a historical marker
+without supersession; the positive controls confirm that a statement-local
+marker plus supersession is accepted for both prompts.

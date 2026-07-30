@@ -289,6 +289,7 @@ def compute(root):
     checks.extend(check_review_form_scope(root))
     checks.extend(check_crlf_integrity(root))
     checks.extend(check_gate_contradictions(root))
+    checks.extend(check_wrapped_and_section_gates(root))
     return checks
 
 
@@ -432,6 +433,175 @@ def check_gate_contradictions(root):
     checks.append((f"R2E. the current open gate is named as {CURRENT_GATE_PROMPT} and "
                    "nothing else", ok,
                    f"named={ {k: sorted(v) for k, v in gate_named.items()} }"))
+    return checks
+
+
+
+
+# ---------------------------------------------------------------------------
+# KBDL-011-SMR2-VC-0001-PA1-R3: wrap-proof and section-aware gate checks
+# ---------------------------------------------------------------------------
+#
+# R2B/R2C matched raw statement text, so Markdown line wrapping defeated them:
+#
+#     `KBDL-011-SMR2-FSRG1` remains `LOCKED — PLANNING-AGENT VALIDATION
+#     REQUIRED`.
+#
+# shipped undetected, because LOCKED_PENDING_RE expects an ordinary space
+# between VALIDATION and REQUIRED. R3A-R3D normalize first, and add section
+# context so a completed-prompt section cannot carry active lock language even
+# when the prompt ID is only in the heading.
+
+# Characters Markdown uses for emphasis/code that must not break status
+# matching. Stripped only for matching; the original statement is kept for
+# evidence output.
+MARKUP_CHARS = "`*_~"
+# All Unicode whitespace, including NBSP and the narrow/thin spaces that can
+# appear around em dashes.
+WS_RUN_RE = re.compile(r"[\s  -​  　]+")
+DASH_RE = re.compile(r"[‐-―−]")
+
+
+def normalize_for_status(text):
+    """Collapse whitespace, unwrap Markdown lines, drop markup, unify dashes.
+
+    Returns a single-line lowercase string safe to match status phrases
+    against. Matching is case-insensitive by construction; the caller keeps the
+    untouched original for reporting.
+    """
+    stripped = "".join(ch for ch in text if ch not in MARKUP_CHARS)
+    unified = DASH_RE.sub("-", stripped)
+    return WS_RUN_RE.sub(" ", unified).strip().lower()
+
+
+# Status phrases, expressed against normalized text. Deliberately targeted at
+# the defect class that actually shipped: a present-tense assertion binding a
+# completed prompt to its OWN planning-agent-validation lock. Batch A's
+# "LOCKED - OWNER DECISION REQUIRED" is a different, correct lock and is
+# excluded by OWNER_DECISION_LOCK_RE below.
+# Past-tense forms are included deliberately: a retained historical lock
+# statement is legal, but R3C then requires it to state its supersession.
+_LOCK_VERB = r"(?:remains?|remained|stays?|stayed|is|are|was|were)"
+NORM_LOCKED_RE = re.compile(
+    rf"{_LOCK_VERB}\s+(?:`?locked)\s*-\s*planning-agent validation required|"
+    rf"{_LOCK_VERB}\s+locked[^.]{{0,40}}?"
+    r"(?:pending|until|awaiting)[^.]{0,40}?planning-agent validation|"
+    rf"{_LOCK_VERB}\s+awaiting (?:its own )?planning-agent validation|"
+    r"planning-agent validation of this recording (?:remains|is still|is)\s+required",
+    re.IGNORECASE)
+
+# Batch A and other owner-decision locks are correct and must never be flagged.
+OWNER_DECISION_LOCK_RE = re.compile(r"locked\s*-\s*owner decision required", re.IGNORECASE)
+
+# Narrative that records a past arrangement rather than asserting current
+# state: a dated disposition, a description of a map entry being added, or a
+# validator describing what it rejects. These are history or documentation,
+# not claims about the present.
+NARRATIVE_CONTEXT_RE = re.compile(
+    r"on 20\d\d-\d\d-\d\d|returned (?:the )?(?:disposition|approve with changes)|"
+    r"direct(?:ing|ed) that|entr(?:y|ies)\b|gains a |it: \(1\)|downstream gating|"
+    r"reject(?:s|ed)? any|unmarked current-state claim|were added|was added",
+    re.IGNORECASE)
+NORM_HISTORICAL_RE = re.compile(
+    r"historical note|at the [^.]{0,60}point|previously read|formerly read|"
+    r"then-current|then-new|has since|since been|no longer|superseded|was reissued",
+    re.IGNORECASE)
+NORM_SUPERSESSION_RE = re.compile(
+    r"ha(?:s|ve) since (?:passed|occurred|been)|since been recorded|is no longer|"
+    r"since superseded|no longer locked|no longer awaited|now reads|"
+    r"passed (?:that |its own )?planning-agent validation|recorded as passed",
+    re.IGNORECASE)
+
+COMPLETED_SECTION_RE = re.compile(
+    r"KBDL-011-SMR2-FSRG1|KBDL-011-SMR2-VC-0001", re.IGNORECASE)
+
+
+def _sections_with_headings(text):
+    """Yield (heading, body) for every '## '/'### ' section, heading included."""
+    parts = re.split(r"\n(?=#{2,3} )", text)
+    for part in parts:
+        heading = part.split("\n", 1)[0]
+        yield heading, part
+
+
+def check_wrapped_and_section_gates(root):
+    """R3A-R3D."""
+    checks = []
+    texts = {rel: (_read(root, rel) or "") for rel in CURRENT_STATE_FILES}
+
+    # R3A: normalized statement-level lock detection, wrap-proof.
+    hits = []
+    for rel, text in texts.items():
+        for unit in _statements(text):
+            norm = normalize_for_status(unit)
+            if not NORM_LOCKED_RE.search(norm):
+                continue
+            if not COMPLETED_SECTION_RE.search(norm):
+                continue
+            if (OWNER_DECISION_LOCK_RE.search(norm)
+                    or NORM_HISTORICAL_RE.search(norm)
+                    or NARRATIVE_CONTEXT_RE.search(norm)):
+                continue
+            hits.append((rel, " ".join(unit.split())[:110]))
+    checks.append(("R3A. no current statement locks or awaits validation for a completed "
+                   "prompt, in any whitespace or Markdown wrapping",
+                   not hits, f"hits={hits[:3]}"))
+
+    # R3B: section-aware -- the heading supplies the prompt context, so a body
+    # statement need not name the prompt itself.
+    section_hits = []
+    for rel, text in texts.items():
+        for heading, body in _sections_with_headings(text):
+            if not COMPLETED_SECTION_RE.search(normalize_for_status(heading)):
+                continue
+            for unit in _statements(body):
+                if unit.strip() == heading.strip():
+                    continue
+                norm = normalize_for_status(unit)
+                if not NORM_LOCKED_RE.search(norm):
+                    continue
+                if (OWNER_DECISION_LOCK_RE.search(norm)
+                        or NORM_HISTORICAL_RE.search(norm)
+                        or NARRATIVE_CONTEXT_RE.search(norm)):
+                    continue
+                section_hits.append((rel, heading.strip()[:50],
+                                     " ".join(unit.split())[:90]))
+    checks.append(("R3B. no completed-prompt section carries unmarked active lock or "
+                   "validation-required language",
+                   not section_hits, f"hits={section_hits[:3]}"))
+
+    # R3C: a retained historical lock statement must also state supersession.
+    incomplete = []
+    for rel, text in texts.items():
+        for unit in _statements(text):
+            norm = normalize_for_status(unit)
+            if not NORM_LOCKED_RE.search(norm):
+                continue
+            if not COMPLETED_SECTION_RE.search(norm):
+                continue
+            if OWNER_DECISION_LOCK_RE.search(norm) or NARRATIVE_CONTEXT_RE.search(norm):
+                continue
+            if not NORM_HISTORICAL_RE.search(norm):
+                continue
+            if not NORM_SUPERSESSION_RE.search(norm):
+                incomplete.append((rel, " ".join(unit.split())[:110]))
+    checks.append(("R3C. every retained historical lock statement also states its current "
+                   "supersession", not incomplete, f"incomplete={incomplete[:3]}"))
+
+    # R3D: the normalizer actually defeats the wrappings that shipped.
+    flat = "`KBDL-011-SMR2-FSRG1` remains `LOCKED — PLANNING-AGENT VALIDATION REQUIRED`."
+    variants = [
+        flat,
+        "`KBDL-011-SMR2-FSRG1` remains `LOCKED — PLANNING-AGENT VALIDATION\nREQUIRED`.",
+        "`KBDL-011-SMR2-FSRG1` remains `LOCKED — PLANNING-AGENT VALIDATION\n  REQUIRED`.",
+        "KBDL-011-SMR2-FSRG1 remains **LOCKED —\nPLANNING-AGENT\nVALIDATION REQUIRED**.",
+        "KBDL-011-SMR2-FSRG1 remains LOCKED —  PLANNING-AGENT VALIDATION\nREQUIRED.",
+    ]
+    missed = [v for v in variants
+              if not NORM_LOCKED_RE.search(normalize_for_status(v))]
+    checks.append(("R3D. the status normalizer detects the locked phrase across line "
+                   "wrapping, repeated whitespace, backticks, emphasis, and dash variants",
+                   not missed, f"missed={[m[:60] for m in missed]}"))
     return checks
 
 
