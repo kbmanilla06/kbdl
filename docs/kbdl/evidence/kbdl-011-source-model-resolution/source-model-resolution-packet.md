@@ -209,8 +209,10 @@ Four distinct facts must not be conflated:
    KBDL-011-SMR1-BA-OD1-DR1-R1 point, **KBDL-011-SMR1-BH-AGC1 has passed
    planning-agent validation**; that specific gate is closed. As of
    KBDL-011-SMR1-RM1, `KBDL-011-SMR1-BA-OD1-DR1-R1` has also passed
-   planning-agent validation, so it is no longer an open gate either;
-   the current open gate is KBDL-011-SMR1-RM1 itself. See §11.
+   planning-agent validation, so it is no longer an open gate either.
+   KBDL-011-SMR1-RM1 is likewise not an open gate: the prompts it staged
+   have since been implemented and validated. See §11 for the current
+   gate status.
 4. **Remaining unresolved KBDL-011 work.** At the historical
    KBDL-011-SMR1-BH-AGC1 point (3 durably recorded, 418 other SMR1
    issues pending), applying this one correction did not resolve any of
@@ -342,7 +344,14 @@ without rewriting any prior commit or historical transcript:
   added, stand as validated; `KBDL-011-SMR1-BA-OD1-DR1`'s superseded
   validation claims remain superseded.
 - `KBDL-011-SMR1-RM1` (the `KBDL-011-SMR2-FSRG1` roadmap addition, §12):
-  **planning-agent validation of this step is the current open gate.**
+  not an open gate. The prompts it staged — `KBDL-011-SMR2-FSRG1` and the
+  reissued `KBDL-011-SMR2-VC-0001` — have both since been implemented and
+  have passed planning-agent validation.
+- `KBDL-011-SMR2-FSRG1`: **PASSED — PLANNING-AGENT VALIDATED.**
+- `KBDL-011-SMR2-VC-0001` (reissued): **PASSED — PLANNING-AGENT VALIDATED**
+  on 2026-07-30.
+- `KBDL-011-SMR2-VC-0001-PA1` and this sign-off remediation:
+  **planning-agent validation of these steps is the current open gate.**
 
 `KBDL-011` remains incomplete. Closing these gates does not approve
 candidate readiness, implementation conformance, or project completion,
@@ -411,7 +420,8 @@ records, reopens, or preselects no owner decision. The decision-state
 counts are unchanged: 4 durably recorded (3 Batch H, 1 Batch A); 417
 PENDING. `KBDL-011-SMR1-BA-OD1-DR1-R1` has passed planning-agent
 validation and is not an open gate (§11); planning-agent validation of
-`KBDL-011-SMR1-RM1` itself is now the open gate.
+`KBDL-011-SMR1-RM1` is not an open gate; the current open gate is
+planning-agent validation of `KBDL-011-SMR2-VC-0001-PA1`.
 
 ## 13. KBDL-011-SMR2-FSRG1 implementation (live field-source registry and generator)
 

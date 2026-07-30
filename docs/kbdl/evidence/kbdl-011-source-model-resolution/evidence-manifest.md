@@ -259,8 +259,11 @@ removing no existing check. Implementation is not validation:
 
 RM1 also records, on the same 2026-07-29 owner disposition, that
 `KBDL-011-SMR1-BA-OD1-DR1-R1` is **PASSED — PLANNING-AGENT VALIDATED**
-and is not an open gate; planning-agent validation of `KBDL-011-SMR1-RM1`
-itself is now the only open gate. And RM1's regeneration of
+and is not an open gate. `KBDL-011-SMR1-RM1` is likewise not an open gate:
+`KBDL-011-SMR2-FSRG1` and the reissued `KBDL-011-SMR2-VC-0001` have both
+since been implemented and have passed planning-agent validation. The
+current open gate is planning-agent validation of
+`KBDL-011-SMR2-VC-0001-PA1` and this sign-off remediation. And RM1's regeneration of
 `evidence-inventory.csv` and `checksums.sha256` closes a pre-existing
 omission: `batch-a-od1-dr1-validation-transcript.txt`, the durable
 transcript added by `KBDL-011-SMR1-BA-OD1-DR1`, existed in the packet but
@@ -317,3 +320,43 @@ current target, its untouched pending state, and the absence of any eligibility
 claim. Classification, effective metadata, the live registry, VAL states,
 readiness, conformance, completion, and the decision counts (4 recorded / 417
 pending) are all unchanged.
+
+The PA1 sign-off remediation corrects three stale current-state statements in
+`project-owner-review.md`'s sign-off — `KBDL-011-SMR1-RM1` described as the
+current open gate, `KBDL-011-SMR2-FSRG1` described as not yet validated, and the
+reissued `KBDL-011-SMR2-VC-0001` described as `LOCKED` and not issued — and the
+same stale open-gate claim wherever it appeared as current state in
+`source-model-resolution-packet.md`, `implementation-report.md`, and this
+manifest. Preserved history is untouched: statements carrying an explicit
+historical marker remain, and the corrected passages say plainly that the
+prompts RM1 staged have since been implemented and validated.
+
+`scripts/pa1_signoff_and_crlf_checks.py` makes those exact statements
+fail-closed. `GATE1`–`GATE3` reject any unmarked current-state claim that RM1 is
+an open gate, that FSRG1 awaits validation, or that the reissued
+`KBDL-011-SMR2-VC-0001` is locked, awaiting, or unissued; a historical marker in
+the same paragraph rescues genuine history. `GATE4` requires the sign-off to
+positively name the current open gate rather than merely omit the stale one.
+
+`POR1`–`POR5` bound `project-owner-review.md` to its authorized change paths:
+the four historical selections are exactly preserved, the single
+`SMR1-VC-0002` block exists once and is entirely unselected, no checkbox is
+added or removed in a selected state, and — proven structurally rather than by
+pattern matching — stripping the three authorized regions (the sign-off
+section, the `SMR1-VC-0002` block, and the `SMR1-VC-0001` status-mirror
+sentence) leaves the file byte-identical to the PA1 baseline.
+
+`CRLF1`–`CRLF6` replace `git diff --check` for `issue-register.csv`. That file
+is CRLF throughout, and `git diff --check` counts the CR of every changed line
+as trailing whitespace, exiting 2 unconditionally — it cannot gate this file.
+The replacement preserves the CRLF convention while still rejecting what the
+git check exists to catch: bare LF or stray CR, a space or tab before a line
+ending, malformed or non-uniform CSV rows, a changed canonical row count, any
+tab character, and any changed row other than the authorized `SMR1-VC-0001`.
+`CRLF6` compares the baseline against the working tree, so uncommitted damage
+is caught as well as committed damage.
+
+`scripts/smr2_vc_0001_pa1_fixtures.py` grows to 37 negative fixtures and 9
+positive controls (46 total), covering each stale statement, each review-form
+scope violation, and each CRLF failure mode, all on a temporary copy with the
+real repository verified byte-unchanged.

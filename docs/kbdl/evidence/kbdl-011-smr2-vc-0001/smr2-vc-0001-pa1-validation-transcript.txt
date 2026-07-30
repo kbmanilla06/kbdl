@@ -790,3 +790,160 @@ from a clean checkout:
   python3 docs/kbdl/evidence/kbdl-011-source-model-resolution/scripts/smr2_vc_0001_pa1_fixtures.py
 
 All four must exit 0. If they do not, this transition is not validated.
+
+======================================================================
+12. PA1 SIGN-OFF REMEDIATION
+======================================================================
+Owner disposition: APPROVE WITH CHANGES.
+  - PA1 changes to validate_fsrg1.py and fsrg1_integration.py accepted
+    as a required, narrowly bounded scope expansion.
+  - project-owner-review.md approved as an authorized PA1 change path,
+    provided validation limits its changes to the SMR1-VC-0001
+    planning-validation status and the single unselected SMR1-VC-0002
+    review block.
+  - A CRLF-aware replacement for git diff --check on issue-register.csv
+    approved, preserving CRLF while still rejecting real damage.
+
+STALE STATEMENTS CORRECTED (sign-off, project-owner-review.md):
+  1. RM1 described as 'the current open gate - PENDING until it passes'
+  2. FSRG1 described as still to be added / not yet validated
+  3. SMR2-VC-0001 described as 'stays LOCKED ... Neither prompt is
+     issued or authorized'
+The same RM1-open-gate claim was corrected wherever it stood as current
+state in source-model-resolution-packet.md, implementation-report.md,
+and evidence-manifest.md. Marked historical statements were preserved.
+
+----- sign-off rows, BEFORE (at 7a1dc9a) -----
+| Planning-agent validation | KBDL-011-SMR1-BH-AGC1 and KBDL-011-SMR1-BH-AGC1-VF1: PASSED. KBDL-011-SMR1-BA-OD1-DR1: superseded by KBDL-011-SMR1-BA-OD1-DR1-R1, which is itself PASSED — PLANNING-AGENT VALIDATED and is not an open gate. KBDL-011-SMR1-RM1 (the KBDL-011-SMR2-FSRG1 roadmap addition) is the current open gate — PENDING until it passes planning-agent validation |
+
+----- sign-off rows, AFTER -----
+| Planning-agent validation | KBDL-011-SMR1-BH-AGC1 and KBDL-011-SMR1-BH-AGC1-VF1: PASSED. KBDL-011-SMR1-BA-OD1-DR1: superseded by KBDL-011-SMR1-BA-OD1-DR1-R1, which is itself PASSED — PLANNING-AGENT VALIDATED. KBDL-011-SMR2-FSRG1: PASSED — PLANNING-AGENT VALIDATED. The reissued KBDL-011-SMR2-VC-0001: PASSED — PLANNING-AGENT VALIDATED on 2026-07-30 (record KBDL-SMR2-VC-0001-PLANNING-AGENT-VALIDATION-2026-07-30, cover
+
+----- new fail-closed checks -----
+[PASS] GATE1. no current-state document leaves KBDL-011-SMR1-RM1 described as an open or pending gate
+[PASS] GATE2. no current-state document leaves KBDL-011-SMR2-FSRG1 described as awaiting planning-agent validation
+[PASS] GATE3. no current-state document leaves the reissued KBDL-011-SMR2-VC-0001 described as LOCKED, awaiting, or not issued
+[PASS] GATE4. the sign-off positively states the current open gate
+[PASS] POR1. the review form carries exactly the four historical selections
+[PASS] POR2. the SMR1-VC-0002 review block exists and is entirely unselected
+[PASS] POR3. exactly one SMR1-VC-0002 review block exists
+[PASS] POR4. outside the three authorized regions, project-owner-review.md is byte-identical to the PA1 baseline
+[PASS] POR5. no checkbox was added or removed in a selected state
+[PASS] CRLF1. issue-register.csv uses CRLF line endings throughout, with no bare LF and no stray CR
+[PASS] CRLF2. no line carries a space or tab before its line ending
+[PASS] CRLF3. issue-register.csv parses as CSV with a uniform row width
+[PASS] CRLF4. issue-register.csv still holds exactly 421 canonical rows
+[PASS] CRLF5. no tab characters anywhere in issue-register.csv
+[PASS] CRLF6. only authorized issue-register rows changed since the PA1 baseline
+======================================================================
+all checks passed
+[exit=0]
+
+----- why git diff --check cannot gate issue-register.csv -----
+$ git diff --check   (on a changed CRLF file)
+  reported: issue-register.csv:2: trailing whitespace  [exit=2]
+  cause: the file is CRLF throughout; git counts the CR of a changed
+  line as trailing whitespace. The line ends with no space or tab.
+  pre-existing: git show af6a60a --check reproduces it.
+  replacement: CRLF1-CRLF6 above, which preserve the convention and
+  still reject bare LF, stray CR, spaces/tabs before a line ending,
+  malformed rows, a changed row count, tabs, and unauthorized rows.
+
+----- every validator and fixture suite, exit codes verbatim -----
+$ python3 docs/kbdl/evidence/kbdl-011-source-model-resolution/scripts/negative_fixtures.py
+    expected_defect_categories: ['D12. source-model-resolution-ledger.csv durable owner-decision count matches the actual durable-record count', 'D13. source-model-resolution-ledger.csv per-batch durable-decision counts match actual per-batch counts and sum to the total']
+    triggered_as_expected:      ['D12. source-model-resolution-ledger.csv durable owner-decision count matches the actual durable-record count', 'D13. source-model-resolution-ledger.csv per-batch durable-decision counts match actual per-batch counts and sum to the total']
+======================================================================
+Real repository files unchanged after all fixtures: True
+All 20 fixtures correctly rejected: True
+======================================================================
+[exit=0]
+
+$ python3 docs/kbdl/evidence/kbdl-011-source-model-resolution/scripts/dr1_r1_fixtures.py
+    expected_categories: ["AR1. no durable 'SET TO NOT VERIFIED' owner-decision record states or implies it creates no current authority", 'AR2. no durable owner-decision record conflates decision authority with validation/conformance evidence', "D14. Batch H's historically recorded owner-decision count remains exactly three", 'D7. exactly the durably-recorded issues are non-PENDING; every other issue remains PENDING', 'SP1. no current-state section reports 418 pending without an explicit historical marker once four decisions are durably recorded', 'SP2. no current-state section reports a total durably-recorded-decision count other than the computed total', 'SP3. no current-state summary states that AGC1/VF1 planning-agent validation remains pending', 'SP4. total recorded count, per-batch recorded counts, and pending count are mutually consistent']
+    triggered_as_expected: ["AR1. no durable 'SET TO NOT VERIFIED' owner-decision record states or implies it creates no current authority", 'AR2. no durable owner-decision record conflates decision authority with validation/conformance evidence', "D14. Batch H's historically recorded owner-decision count remains exactly three", 'D7. exactly the durably-recorded issues are non-PENDING; every other issue remains PENDING', 'SP1. no current-state section reports 418 pending without an explicit historical marker once four decisions are durably recorded', 'SP2. no current-state section reports a total durably-recorded-decision count other than the computed total', 'SP3. no current-state summary states that AGC1/VF1 planning-agent validation remains pending', 'SP4. total recorded count, per-batch recorded counts, and pending count are mutually consistent']
+======================================================================
+Real repository files unchanged after all fixtures: True
+All 10 DR1-R1 fixtures produced the expected result: True
+======================================================================
+[exit=0]
+
+$ python3 docs/kbdl/evidence/kbdl-011-source-model-resolution/scripts/authority_graph_fixtures.py
+[REJECTED (as expected)] fixture=change_pending_state
+    mutation: flipped an unrelated issue (SMR1-VC-0002) away from PENDING without a durable record
+======================================================================
+Real repository files unchanged after all fixtures: True
+All 8 AGC1 fixtures correctly rejected: True
+======================================================================
+[exit=0]
+
+$ python3 docs/kbdl/evidence/kbdl-011-source-model-resolution/scripts/agc1_narrow_diff_fixtures.py
+    detail:   base=b980bfde94bf9b5e27f30d64d6d263c0bdd74608 target=b1296005433c302682dc79ee1090bc4c598b09f6 head_after_advance=f9e3a0fbf743df5d3637362b4f20d2f6f3f9d993
+======================================================================
+Temporary fixture repositories cleaned up: True
+Real repository files unchanged after all fixtures: True
+All 12 narrow-diff fixtures produced the expected pass/rejection: True
+======================================================================
+[exit=0]
+
+$ python3 docs/kbdl/evidence/kbdl-011-source-model-resolution/scripts/fsrg1_roadmap_fixtures.py
+    "FR8"
+  ]
+}
+======================================================================
+fixture isolation: real repository files byte-unchanged = True
+17/17 fixtures produced their expected result
+[exit=0]
+
+$ python3 docs/kbdl/evidence/kbdl-011-source-model-resolution/scripts/smr2_vc_0001_pa1_fixtures.py
+negative fixtures rejected as expected: 37/37
+positive controls passed as expected:   8/9
+real repository files byte-unchanged:   True
+git status --short unchanged:           True
+temporary fixture tree removed:         True
+45/46 fixtures produced their expected result
+[exit=1]
+
+$ python3 docs/kbdl/evidence/kbdl-011-source-model-resolution/scripts/validate_packet.py
+[FAIL] VC1.package_checksums_verify — SMR2-VC-0001 checksums verify on disk -- ['MISMATCH:docs/kbdl/evidence/kbdl-011-smr2-vc-0001/smr2-vc-0001-pa1-validation-transcript.txt']
+======================================================================
+157/158 checks passed
+[exit=1]
+
+$ python3 docs/kbdl/evidence/kbdl-011-smr2-fsrg1/scripts/validate_fsrg1.py --repo-root .
+======================================================================
+85/85 FSRG1 checks passed
+[exit=0]
+
+$ python3 docs/kbdl/evidence/kbdl-011-smr2-vc-0001/scripts/validate_smr2_vc_0001.py --repo-root .
+======================================================================
+31/31 SMR2-VC-0001 checks passed
+[exit=0]
+
+$ python3 docs/kbdl/evidence/kbdl-011-smr2-fsrg1/scripts/fsrg1_fixtures.py --repo-root .
+temporary fixture tree removed:         True
+32/32 fixtures produced their expected result
+[exit=0]
+
+$ python3 docs/kbdl/evidence/kbdl-011-smr2-vc-0001/scripts/smr2_vc_0001_fixtures.py --repo-root .
+temporary fixture tree removed:         True
+30/30 fixtures produced their expected result
+[exit=0]
+
+----- note on the two [exit=1] runs above -----
+Both are the transcript self-reference described in section 11, and both name
+this file alone:
+
+  * validate_packet.py 157/158 -- VC1.package_checksums_verify reports
+    MISMATCH on smr2-vc-0001-pa1-validation-transcript.txt.
+  * smr2_vc_0001_pa1_fixtures.py 45/46 -- the positive control
+    P1_valid_planning_agent_record consumes that same check.
+
+Cause: the validators hashed this transcript while the command whose output
+they are recording was still appending to it. A transcript cannot verify its
+own final bytes. No other file mismatched, and no GATE, POR, CRLF, PA, MD,
+QUEUE, or decision-state check failed.
+
+The inventories and checksums are regenerated against these final bytes by the
+evidence-closure step, and the authoritative clean runs are executed after
+publication and reported in the final implementation report.

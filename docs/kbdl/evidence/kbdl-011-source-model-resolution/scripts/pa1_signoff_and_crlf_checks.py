@@ -1,0 +1,301 @@
+#!/usr/bin/env python3
+"""KBDL-011-SMR2-VC-0001-PA1 sign-off, review-scope, and CRLF checks.
+
+Added by the approved PA1 sign-off remediation. Three concerns, all
+fail-closed, all read-only:
+
+  GATE1-GATE4  no current-state document may still describe
+               KBDL-011-SMR1-RM1, KBDL-011-SMR2-FSRG1, or the reissued
+               KBDL-011-SMR2-VC-0001 as an open/pending gate, as LOCKED, or
+               as not-yet-issued. A statement carrying an explicit historical
+               marker in the same paragraph is preserved history and passes;
+               an unmarked current-state claim fails.
+
+  POR1-POR5    project-owner-review.md is an authorized PA1 change path, but
+               only for (a) the SMR1-VC-0001 planning-validation status
+               mirror, (b) the single unselected SMR1-VC-0002 review block,
+               and (c) the sign-off current-state rows this remediation
+               corrects. No checkbox may change state, and no other
+               issue-level block may gain a selection.
+
+  CRLF1-CRLF6  a CRLF-aware replacement for `git diff --check` on
+               issue-register.csv. `git diff --check` counts the CR of that
+               file's CRLF line terminators as trailing whitespace and exits
+               2 on any changed line, which makes it useless as a gate there.
+               These checks preserve the CRLF convention while still
+               rejecting real whitespace damage: spaces or tabs before the
+               line ending, mixed or bare-LF line endings, malformed rows,
+               a changed row count, and any changed row other than the
+               authorized ones.
+
+Nothing here writes to the repository.
+"""
+import csv
+import io
+import os
+import re
+import subprocess
+import sys
+
+SMR1_REL = "docs/kbdl/evidence/kbdl-011-source-model-resolution"
+VC1_REL = "docs/kbdl/evidence/kbdl-011-smr2-vc-0001"
+ISSUES_REL = f"{SMR1_REL}/issue-register.csv"
+REVIEW_REL = f"{SMR1_REL}/project-owner-review.md"
+
+# Baseline for scope comparisons: the last commit before the PA1 transition.
+PA1_BASELINE = "448e39b22f4dc69210ca795c365bbdf1a3904f20"
+
+CURRENT_STATE_FILES = (
+    REVIEW_REL,
+    f"{SMR1_REL}/source-model-resolution-packet.md",
+    f"{SMR1_REL}/implementation-report.md",
+    f"{SMR1_REL}/evidence-manifest.md",
+    f"{SMR1_REL}/implementation-unlock-map.md",
+)
+
+# An explicit historical marker anywhere in the same paragraph rescues a
+# statement about a past state. Unmarked claims are read as current.
+HISTORICAL_MARKER_RE = re.compile(
+    r"historical note|historical|previously|formerly|at the [^.]{0,60}point|"
+    r"has since|since been|superseded|then-current|no longer|was reissued|"
+    r"prior cycle|not an open gate", re.IGNORECASE)
+
+STALE_GATE_PATTERNS = {
+    "GATE1": (
+        "KBDL-011-SMR1-RM1 described as an open or pending gate",
+        re.compile(r"KBDL-011-SMR1-RM1[^.\n]{0,120}?"
+                   r"(?:is (?:now )?(?:the )?(?:current |only )?open gate|"
+                   r"is the current open gate|remains (?:an )?open|"
+                   r"PENDING until it passes)", re.IGNORECASE)),
+    "GATE2": (
+        "KBDL-011-SMR2-FSRG1 described as awaiting planning-agent validation",
+        re.compile(r"KBDL-011-SMR2-FSRG1[^.\n]{0,120}?"
+                   r"(?:planning-agent validation (?:is|remains) (?:still )?(?:pending|required)|"
+                   r"awaiting planning-agent validation|is (?:an )?open gate)",
+                   re.IGNORECASE)),
+    "GATE3": (
+        "the reissued KBDL-011-SMR2-VC-0001 described as LOCKED, awaiting, or not issued",
+        re.compile(r"KBDL-011-SMR2-VC-0001[^.\n]{0,140}?"
+                   r"(?:stays `?LOCKED|remains `?LOCKED|is `?LOCKED|"
+                   r"awaiting planning-agent validation|"
+                   r"Neither prompt is\s+issued or authorized)", re.IGNORECASE)),
+}
+
+# The sign-off must positively state the current gate, not merely omit the
+# stale one.
+SIGNOFF_CURRENT_GATE_RE = re.compile(
+    r"current open gate is planning-agent validation of\s+KBDL-011-SMR2-VC-0001-PA1",
+    re.IGNORECASE)
+
+# project-owner-review.md scope.
+VC2_BLOCK_MARKER = "### Next issue-level review — SMR1-VC-0002"
+EXPECTED_SELECTED = [
+    "SET TO NOT VERIFIED",
+    "RELATED REQUIREMENT",
+    "RELATED REQUIREMENT",
+    "Replace both edges with shared independent authority",
+]
+# The three regions PA1 and this remediation are authorized to touch in
+# project-owner-review.md. Scope is proven structurally: strip these regions
+# from both the baseline and the current file and the remainder must be
+# byte-identical. That is stronger than a line pattern allowlist, which can
+# accidentally admit an unrelated edit that happens to look ordinary.
+STATUS_MIRROR_RE = re.compile(
+    r"row[;,][^.]*?(?:METADATA RECORDED|OWNER DECISION RECORDED)[^.]*?\.",
+    re.DOTALL)
+
+
+def _strip_authorized_regions(text):
+    """Remove the sign-off section, the SMR1-VC-0002 block, and the
+    SMR1-VC-0001 status-mirror sentence. What remains must never change."""
+    t = text.split("## Sign-off", 1)[0]
+    if VC2_BLOCK_MARKER in t:
+        t = t.split(VC2_BLOCK_MARKER, 1)[0]
+    return STATUS_MIRROR_RE.sub("<STATUS-MIRROR>", t)
+
+
+def _read(root, rel):
+    p = os.path.join(root, rel)
+    if not os.path.isfile(p):
+        return None
+    with open(p, encoding="utf-8") as f:
+        return f.read()
+
+
+def _git(root, *args):
+    return subprocess.run(["git", "-C", root, *args], capture_output=True, text=True)
+
+
+def _paragraph_around(text, pos):
+    start = text.rfind("\n\n", 0, pos)
+    start = 0 if start == -1 else start
+    end = text.find("\n\n", pos)
+    return text[start:end if end != -1 else len(text)]
+
+
+def check_stale_gate_statements(root):
+    """GATE1-GATE4."""
+    checks = []
+    for key, (label, pattern) in STALE_GATE_PATTERNS.items():
+        hits = []
+        for rel in CURRENT_STATE_FILES:
+            text = _read(root, rel)
+            if not text:
+                continue
+            for m in pattern.finditer(text):
+                para = _paragraph_around(text, m.start())
+                if HISTORICAL_MARKER_RE.search(para):
+                    continue
+                hits.append((rel, " ".join(m.group(0).split())[:110]))
+        checks.append((f"{key}. no current-state document leaves {label}",
+                       not hits, f"hits={hits[:3]}"))
+
+    review = _read(root, REVIEW_REL) or ""
+    signoff = review.split("## Sign-off", 1)[1] if "## Sign-off" in review else ""
+    checks.append(("GATE4. the sign-off positively states the current open gate",
+                   bool(SIGNOFF_CURRENT_GATE_RE.search(signoff)),
+                   "sign-off does not name the current open gate"))
+    return checks
+
+
+def check_review_form_scope(root):
+    """POR1-POR5: project-owner-review.md changed only where authorized."""
+    checks = []
+    review = _read(root, REVIEW_REL) or ""
+
+    selected = re.findall(r"(?m)^- \[[xX]\] (.+)$", review)
+    checks.append(("POR1. the review form carries exactly the four historical selections",
+                   selected == EXPECTED_SELECTED, f"selected={selected}"))
+
+    block = ""
+    if VC2_BLOCK_MARKER in review:
+        block = re.split(r"\n## |\n### ", review.split(VC2_BLOCK_MARKER, 1)[1])[0]
+    n_selected = len(re.findall(r"(?m)^- \[[xX]\]", block))
+    n_unselected = len(re.findall(r"(?m)^- \[ \]", block))
+    checks.append(("POR2. the SMR1-VC-0002 review block exists and is entirely unselected",
+                   bool(block.strip()) and n_selected == 0 and n_unselected == 5,
+                   f"selected={n_selected} unselected={n_unselected}"))
+
+    checks.append(("POR3. exactly one SMR1-VC-0002 review block exists",
+                   review.count(VC2_BLOCK_MARKER) == 1,
+                   f"count={review.count(VC2_BLOCK_MARKER)}"))
+
+    base = _git(root, "show", f"{PA1_BASELINE}:{REVIEW_REL}")
+    if base.returncode != 0:
+        checks.append(("POR4. outside the three authorized regions, project-owner-review.md "
+                       "is byte-identical to the PA1 baseline", False,
+                       base.stderr.strip()[:200]))
+    else:
+        base_rest = _strip_authorized_regions(base.stdout)
+        cur_rest = _strip_authorized_regions(review)
+        same = base_rest == cur_rest
+        detail = ""
+        if not same:
+            import difflib
+            d = [x for x in difflib.unified_diff(base_rest.splitlines(),
+                                                 cur_rest.splitlines(), lineterm="", n=0)
+                 if x.startswith(("+", "-")) and not x.startswith(("+++", "---"))]
+            detail = f"unauthorized changes={d[:4]}"
+        checks.append(("POR4. outside the three authorized regions, project-owner-review.md "
+                       "is byte-identical to the PA1 baseline", same, detail))
+
+    diff = _git(root, "diff", "--unified=0", PA1_BASELINE, "HEAD", "--", REVIEW_REL)
+    # POR5: no checkbox line was added or removed in a selected state.
+    changed_selected = []
+    for line in diff.stdout.splitlines():
+        if line.startswith(("+", "-")) and re.match(r"^[+-]- \[[xX]\]", line):
+            changed_selected.append(line[:80])
+    checks.append(("POR5. no checkbox was added or removed in a selected state",
+                   not changed_selected, f"changed={changed_selected[:3]}"))
+    return checks
+
+
+def check_crlf_integrity(root):
+    """CRLF1-CRLF6: the CRLF-aware replacement for `git diff --check`."""
+    checks = []
+    path = os.path.join(root, ISSUES_REL)
+    if not os.path.isfile(path):
+        for k in ("CRLF1", "CRLF2", "CRLF3", "CRLF4", "CRLF5", "CRLF6"):
+            checks.append((f"{k}. issue-register.csv present", False, "file missing"))
+        return checks
+    raw = open(path, "rb").read()
+
+    crlf = raw.count(b"\r\n")
+    bare_lf = raw.count(b"\n") - crlf
+    stray_cr = raw.count(b"\r") - crlf
+    checks.append(("CRLF1. issue-register.csv uses CRLF line endings throughout, with no "
+                   "bare LF and no stray CR",
+                   crlf > 0 and bare_lf == 0 and stray_cr == 0,
+                   f"crlf={crlf} bare_lf={bare_lf} stray_cr={stray_cr}"))
+
+    # CRLF2: real trailing whitespace -- a space or tab immediately before the
+    # CR. This is what `git diff --check` is actually for; the CR itself is the
+    # file's convention and is not an error.
+    bad_ws = [i for i, ln in enumerate(raw.split(b"\r\n"), 1)
+              if ln.endswith(b" ") or ln.endswith(b"\t")]
+    checks.append(("CRLF2. no line carries a space or tab before its line ending",
+                   not bad_ws, f"lines={bad_ws[:5]}"))
+
+    text = raw.decode("utf-8")
+    try:
+        rows = list(csv.reader(io.StringIO(text)))
+        parse_error = ""
+    except csv.Error as exc:
+        rows, parse_error = [], str(exc)
+    checks.append(("CRLF3. issue-register.csv parses as CSV with a uniform row width",
+                   bool(rows) and not parse_error
+                   and len({len(r) for r in rows if r}) == 1,
+                   f"error={parse_error!r} widths={sorted({len(r) for r in rows if r})}"))
+
+    data_rows = [r for r in rows[1:] if r]
+    checks.append(("CRLF4. issue-register.csv still holds exactly 421 canonical rows",
+                   len(data_rows) == 421, f"rows={len(data_rows)}"))
+
+    # CRLF5: no tab anywhere, and no double space before a delimiter -- the
+    # remaining whitespace damage `git diff --check` would have caught.
+    checks.append(("CRLF5. no tab characters anywhere in issue-register.csv",
+                   b"\t" not in raw, "tab character present"))
+
+    # CRLF6: only the authorized rows changed since the PA1 baseline.
+    # Deliberately compares the baseline against the WORKING TREE (no explicit
+    # HEAD), so uncommitted damage is caught too. On a clean published tree the
+    # two forms are identical.
+    diff = _git(root, "diff", "--unified=0", PA1_BASELINE, "--", ISSUES_REL)
+    if diff.returncode != 0:
+        checks.append(("CRLF6. only authorized issue-register rows changed since the PA1 "
+                       "baseline", False, diff.stderr.strip()[:200]))
+    else:
+        changed_ids = set()
+        for line in diff.stdout.splitlines():
+            if line.startswith(("+++", "---", "@@", "diff ", "index ")):
+                continue
+            if line.startswith(("+", "-")):
+                m = re.match(r"^[+-]([A-Z0-9-]+),", line)
+                if m:
+                    changed_ids.add(m.group(1))
+                elif line[1:].strip():
+                    changed_ids.add("<non-row line>")
+        checks.append(("CRLF6. only authorized issue-register rows changed since the PA1 "
+                       "baseline", changed_ids <= {"SMR1-VC-0001"},
+                       f"changed={sorted(changed_ids)}"))
+    return checks
+
+
+def compute(root):
+    """Return every check in validate_packet's (name, ok, detail) shape."""
+    checks = []
+    checks.extend(check_stale_gate_statements(root))
+    checks.extend(check_review_form_scope(root))
+    checks.extend(check_crlf_integrity(root))
+    return checks
+
+
+if __name__ == "__main__":
+    repo = sys.argv[1] if len(sys.argv) > 1 else "."
+    failed = 0
+    for name, ok, detail in compute(os.path.abspath(repo)):
+        print(f"[{'PASS' if ok else 'FAIL'}] {name}" + (f" -- {detail}" if detail and not ok else ""))
+        failed += 0 if ok else 1
+    print("=" * 70)
+    print(f"{'all checks passed' if not failed else str(failed) + ' check(s) failed'}")
+    sys.exit(1 if failed else 0)

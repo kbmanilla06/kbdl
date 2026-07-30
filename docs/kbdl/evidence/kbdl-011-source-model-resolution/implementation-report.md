@@ -497,7 +497,10 @@ VAL-006 `Not verified`; readiness, conformance, and completion; decision counts
 Planning-agent validation of `KBDL-011-SMR2-FSRG1`.
 `KBDL-011-SMR1-BA-OD1-DR1-R1` has passed and is closed, as are
 `KBDL-011-SMR1-BH-R1`/`BH-R2`/`BH-AGC1`/`BH-AGC1-VF1`;
-`KBDL-011-SMR1-RM1` and `KBDL-011-SMR2-FSRG1` are the open gates.
+`KBDL-011-SMR1-RM1` and `KBDL-011-SMR2-FSRG1` are not open gates; both,
+and the reissued `KBDL-011-SMR2-VC-0001`, have passed planning-agent
+validation. The current open gate is `KBDL-011-SMR2-VC-0001-PA1` and this
+sign-off remediation.
 
 Issuing `KBDL-011-SMR2-VC-0001`, beginning KBDL-011-SMR2 or another SMR1
 batch, restoring any VAL status, further implementation work, and any

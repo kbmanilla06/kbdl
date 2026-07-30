@@ -519,5 +519,157 @@ def main(argv=None) -> int:
     return 0 if ok else 1
 
 
+
+
+# ---------------------------------------------------------------------------
+# PA1 sign-off remediation fixtures (GATE / POR / CRLF)
+# ---------------------------------------------------------------------------
+
+REVIEW_ABS = REVIEW_REL
+PACKET_REL = f"{SMR1_REL}/source-model-resolution-packet.md"
+
+
+def _gate_failing(sb):
+    """Run the sign-off/CRLF module against the sandbox; return failing prefixes."""
+    scripts = str(sb.path / SMR1_REL / "scripts")
+    sys.path.insert(0, scripts)
+    try:
+        import pa1_signoff_and_crlf_checks as mod
+        importlib.reload(mod)
+        return {n.split(".")[0] for n, ok, _ in mod.compute(str(sb.path)) if not ok}
+    except Exception as exc:  # fail closed
+        return {f"ERROR:{type(exc).__name__}"}
+    finally:
+        if scripts in sys.path:
+            sys.path.remove(scripts)
+
+
+def fx_stale_rm1_open_gate(sb):
+    """The exact stale statement this remediation removed."""
+    sb.sub(PACKET_REL, "## 8. Progression gate",
+           "KBDL-011-SMR1-RM1 is the current open gate.\n\n## 8. Progression gate")
+    return _gate_failing(sb), {"GATE1"}
+
+
+def fx_stale_fsrg1_pending(sb):
+    sb.sub(PACKET_REL, "## 8. Progression gate",
+           "KBDL-011-SMR2-FSRG1 planning-agent validation remains pending.\n\n"
+           "## 8. Progression gate")
+    return _gate_failing(sb), {"GATE2"}
+
+
+def fx_stale_vc0001_locked(sb):
+    sb.sub(PACKET_REL, "## 8. Progression gate",
+           "KBDL-011-SMR2-VC-0001 stays `LOCKED — PLANNING-AGENT VALIDATION REQUIRED`.\n\n"
+           "## 8. Progression gate")
+    return _gate_failing(sb), {"GATE3"}
+
+
+def fx_signoff_drops_current_gate(sb):
+    sb.sub(REVIEW_ABS,
+           "The current open gate is planning-agent validation of "
+           "KBDL-011-SMR2-VC-0001-PA1 and this sign-off remediation",
+           "Gate status not stated")
+    return _gate_failing(sb), {"GATE4"}
+
+
+def fx_review_form_extra_selection(sb):
+    """Any additional selected checkbox anywhere in the review form."""
+    t = sb.read(REVIEW_ABS)
+    head, sep, tail = t.partition("## Batch C — Validation-evidence mappings")
+    tail = tail.replace("- [ ] DEFER DECISION", "- [x] DEFER DECISION", 1)
+    sb.write(REVIEW_ABS, head + sep + tail)
+    return _gate_failing(sb), {"POR1"}
+
+
+def fx_review_form_unauthorized_edit(sb):
+    """An edit outside the three authorized regions."""
+    sb.sub(REVIEW_ABS, "## Batch B — Authority-field sources (21 issues)",
+           "## Batch B — Authority-field sources (21 issues) [edited]")
+    return _gate_failing(sb), {"POR4"}
+
+
+def fx_review_form_second_vc2_block(sb):
+    sb.sub(REVIEW_ABS, "### Next issue-level review — SMR1-VC-0002",
+           "### Next issue-level review — SMR1-VC-0002 (duplicate)\n\n"
+           "### Next issue-level review — SMR1-VC-0002", 1)
+    return _gate_failing(sb), {"POR3"}
+
+
+def fx_crlf_converted_to_lf(sb):
+    """Normalizing the CRLF convention must be rejected."""
+    sb.mark(ISSUES_REL)
+    p = sb.path / ISSUES_REL
+    p.write_bytes(p.read_bytes().replace(b"\r\n", b"\n"))
+    return _gate_failing(sb), {"CRLF1"}
+
+
+def fx_real_trailing_whitespace(sb):
+    """A genuine space before the line ending -- what git diff --check is for."""
+    sb.mark(ISSUES_REL)
+    p = sb.path / ISSUES_REL
+    lines = p.read_bytes().split(b"\r\n")
+    lines[1] = lines[1] + b" "
+    p.write_bytes(b"\r\n".join(lines))
+    return _gate_failing(sb), {"CRLF2"}
+
+
+def fx_tab_injected(sb):
+    sb.mark(ISSUES_REL)
+    p = sb.path / ISSUES_REL
+    lines = p.read_bytes().split(b"\r\n")
+    lines[1] = lines[1].replace(b",Validation classification,", b",\tValidation classification,", 1)
+    p.write_bytes(b"\r\n".join(lines))
+    return _gate_failing(sb), {"CRLF5"}
+
+
+def fx_row_dropped(sb):
+    sb.mark(ISSUES_REL)
+    p = sb.path / ISSUES_REL
+    lines = p.read_bytes().split(b"\r\n")
+    del lines[5]
+    p.write_bytes(b"\r\n".join(lines))
+    return _gate_failing(sb), {"CRLF4"}
+
+
+def fx_unauthorized_issue_row_changed(sb):
+    sb.edit_issue_cell("SMR1-VC-0005", "Notes", "touched")
+    return _gate_failing(sb), {"CRLF6"}
+
+
+def pc_signoff_and_crlf_clean(sb):
+    return _gate_failing(sb), set()
+
+
+NEGATIVE += [
+    ("26_stale_rm1_open_gate", "packet reasserts RM1 as the open gate",
+     fx_stale_rm1_open_gate),
+    ("27_stale_fsrg1_validation_pending", "packet reasserts FSRG1 validation pending",
+     fx_stale_fsrg1_pending),
+    ("28_stale_vc0001_locked", "packet reasserts SMR2-VC-0001 as LOCKED",
+     fx_stale_vc0001_locked),
+    ("29_signoff_drops_current_gate", "sign-off stops naming the current gate",
+     fx_signoff_drops_current_gate),
+    ("30_review_form_extra_selection", "an extra checkbox is selected",
+     fx_review_form_extra_selection),
+    ("31_review_form_unauthorized_edit", "an edit outside the authorized regions",
+     fx_review_form_unauthorized_edit),
+    ("32_review_form_second_vc2_block", "a duplicate SMR1-VC-0002 block",
+     fx_review_form_second_vc2_block),
+    ("33_crlf_normalized_to_lf", "issue-register converted to LF", fx_crlf_converted_to_lf),
+    ("34_real_trailing_whitespace", "a space before a line ending",
+     fx_real_trailing_whitespace),
+    ("35_tab_injected", "a tab injected into a row", fx_tab_injected),
+    ("36_issue_row_dropped", "a canonical row deleted", fx_row_dropped),
+    ("37_unauthorized_issue_row_changed", "an unrelated issue row edited",
+     fx_unauthorized_issue_row_changed),
+]
+
+POSITIVE += [
+    ("P9_signoff_and_crlf_clean", "sign-off, review scope, and CRLF all clean",
+     pc_signoff_and_crlf_clean),
+]
+
+
 if __name__ == "__main__":
     sys.exit(main())

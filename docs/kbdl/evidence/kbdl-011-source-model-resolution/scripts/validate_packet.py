@@ -322,6 +322,15 @@ import smr2_vc_0001_integration
 for name, ok, detail in smr2_vc_0001_integration.compute(REPO):
     check(name, ok, detail)
 
+# GATE/POR/CRLF. KBDL-011-SMR2-VC-0001-PA1 sign-off remediation: stale
+# current-gate statements, project-owner-review.md change scope, and the
+# CRLF-aware replacement for `git diff --check` on issue-register.csv
+# (see pa1_signoff_and_crlf_checks.py for why that git check cannot gate a
+# CRLF file). Read-only.
+import pa1_signoff_and_crlf_checks
+for name, ok, detail in pa1_signoff_and_crlf_checks.compute(REPO):
+    check(name, ok, detail)
+
 # 23. push safety handled by caller (fast-forward check) -- placeholder true, actual check done in shell during commit/push
 check("23. push-safety check deferred to commit/push shell sequence (fast-forward only)", True)
 

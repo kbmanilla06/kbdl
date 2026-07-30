@@ -124,6 +124,10 @@ DECLARED_SCOPE_DEVIATIONS = (
 REMEDIATION_AUTHORIZED = (
     f"{SMR1_REL}/scripts/fsrg1_roadmap.py",
     f"{SMR1_REL}/scripts/fsrg1_roadmap_fixtures.py",
+    # Released by the PA1 sign-off remediation, which approved a CRLF-aware
+    # replacement for `git diff --check` on issue-register.csv plus fail-closed
+    # validation of the stale RM1/FSRG1/SMR2-VC-0001 sign-off statements.
+    f"{SMR1_REL}/scripts/pa1_signoff_and_crlf_checks.py",
 )
 
 
