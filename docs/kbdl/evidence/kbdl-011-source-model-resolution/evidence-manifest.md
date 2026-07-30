@@ -364,11 +364,14 @@ scope violation, and each CRLF failure mode, all on a temporary copy with the
 real repository verified byte-unchanged.
 
 `KBDL-011-SMR2-VC-0001-PA1-R2` removes the gate contradictions the first PA1
-remediation left behind. `source-model-resolution-packet.md` §11 had listed
-`KBDL-011-SMR2-FSRG1` and the reissued `KBDL-011-SMR2-VC-0001` as passed and
-then closed with both "remain `LOCKED — PLANNING-AGENT VALIDATION REQUIRED`";
-`implementation-report.md` had recommended planning-agent validation of FSRG1
-while also stating FSRG1 had passed. Both are corrected: the completed prompts
+remediation left behind. Two current-state documents each asserted a completed
+prompt's validation and its continued lock at the same time: the packet's §11
+closing paragraph and the implementation report's recommended-next-action
+section, the latter also still recommending a validation that had already
+happened. (The defect text itself is not reproduced here; reproducing it would
+be indistinguishable, to a text-matching check, from committing it again. The
+exact before/after strings are in the PA1-R2 implementation report.) Both are
+corrected: the completed prompts
 are stated as validated and not locked, the packet's §13 and this manifest's
 FSRG1-era sentences are marked as the historical statements they are, and the
 current open gate is named as `KBDL-011-SMR2-VC-0001-PA1-R2` in every
