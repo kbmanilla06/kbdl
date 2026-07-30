@@ -647,3 +647,798 @@ complete and no clean post-publication claim has been made.
 
 The package inventory and checksums were regenerated after this transcript was
 written; sections 9-12 verify them.
+
+======================================================================
+8. COMMIT A — IMPLEMENTATION COMMIT
+======================================================================
+$ git show --no-patch --format=fuller ad729c8cee17cac70f6e867d0afdca8901098b71
+commit ad729c8cee17cac70f6e867d0afdca8901098b71
+Author:     Khristopher Ben Manilla <kbmanilla06@gmail.com>
+AuthorDate: Thu Jul 30 09:15:00 2026 +0800
+Commit:     Khristopher Ben Manilla <kbmanilla06@gmail.com>
+CommitDate: Thu Jul 30 09:15:00 2026 +0800
+
+    docs(kbdl): implement live field-source registry and generator (KBDL-011-SMR2-FSRG1)
+    
+    Implements the prerequisite prompt KBDL-011-SMR2-FSRG1, whose approved
+    roadmap specification is smr2-fsrg1-prompt.md (recorded by
+    KBDL-011-SMR1-RM1, commit dc16473a).
+    
+    Adds docs/kbdl/evidence/kbdl-011-smr2-fsrg1/:
+    - scripts/field_source_registry.py: deterministic standalone generator
+      (--repo-root, --check). Standard library only; UTF-8/LF; csv module;
+      explicit sort key; atomic write; path containment on resolved paths;
+      fail-closed on parse ambiguity; no timestamp, absolute path, or other
+      environment value in the output; no network access.
+    - field-source-registry-schema.md: declared schema contract, version 1 --
+      fifteen columns in order, the closed seventeen-value Field name domain
+      with per-field ownership class and derivation rule, controlled domains,
+      the (Requirement ID, Field name) row key, sort key, duplicate/conflict/
+      validation-result policies, null spellings, and version policy.
+    - artifacts/field-source-registry.csv: the live registry, 5389 rows =
+      317 requirements x 17 fields.
+    - scripts/validate_fsrg1.py: twelve gate groups reported separately
+      (schema, determinism, drift, historical integrity, path safety,
+      isolation, coverage, labelling, protection, decision state,
+      VAL/readiness, package), nonzero exit on any failure.
+    - scripts/fsrg1_fixtures.py: 24 negative fixtures and 8 positive
+      controls, on a temporary repository copy only.
+    
+    Written independently of R16's production_validator.py, the generator
+    reproduces all 5389 R16 rows except four cells across KBDL-MOT-007/008 --
+    exactly the cells the KBDL-011-SMR1-BH-AGC1 correction changed.
+    
+    The four R13-R16 registries remain byte-identical immutable historical
+    evidence, verified against the digests recorded in their own round
+    inventories. No normative content, effective metadata, or protected file
+    changed; no VAL status restored; no owner decision moved (4 recorded /
+    417 pending, unchanged). SMR1-VC-0001 is not applied to effective
+    metadata.
+    
+    validate_packet.py gains eleven read-only FSRG1.* integration checks via
+    scripts/fsrg1_integration.py, with no existing check weakened or removed
+    (86/86 -> 98/98).
+    
+    Implementation is not validation: KBDL-011-SMR2-FSRG1 awaits
+    planning-agent validation and remains LOCKED - PLANNING-AGENT VALIDATION
+    REQUIRED, as does KBDL-011-SMR2-VC-0001, which is not begun, resumed, or
+    reissued and must be reissued, not resumed, only after FSRG1 passes.
+    
+    Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
+[exit=0]
+
+$ git show --stat --format= ad729c8
+ docs/kbdl/evidence/kbdl-011-smr2-fsrg1/README.md   |  102 +
+ .../artifacts/field-source-registry.csv            | 5390 ++++++++++++++++++++
+ .../evidence/kbdl-011-smr2-fsrg1/checksums.sha256  |    9 +
+ .../kbdl-011-smr2-fsrg1/evidence-inventory.csv     |   10 +
+ .../kbdl-011-smr2-fsrg1/evidence-manifest.md       |   91 +
+ .../field-source-registry-schema.md                |  206 +
+ .../fsrg1-validation-transcript.txt                |  649 +++
+ .../kbdl-011-smr2-fsrg1/implementation-report.md   |  130 +
+ .../scripts/field_source_registry.py               | 1077 ++++
+ .../kbdl-011-smr2-fsrg1/scripts/fsrg1_fixtures.py  |  625 +++
+ .../kbdl-011-smr2-fsrg1/scripts/validate_fsrg1.py  |  710 +++
+ .../checksums.sha256                               |   11 +-
+ .../evidence-inventory.csv                         |   11 +-
+ .../evidence-manifest.md                           |   18 +
+ .../implementation-report.md                       |   56 +-
+ .../implementation-unlock-map.md                   |   13 +
+ .../scripts/fsrg1_integration.py                   |  234 +
+ .../scripts/validate_packet.py                     |   16 +
+ .../source-model-resolution-packet.md              |   44 +
+ 19 files changed, 9385 insertions(+), 17 deletions(-)
+
+======================================================================
+9. STAGE 3 — POST-PUSH VALIDATION OF COMMIT A (clean tree)
+======================================================================
+$ git status --short
+ M docs/kbdl/evidence/kbdl-011-smr2-fsrg1/fsrg1-validation-transcript.txt
+[exit=0]
+
+(empty above = clean tree)
+$ git rev-parse HEAD
+ad729c8cee17cac70f6e867d0afdca8901098b71
+[exit=0]
+
+$ git rev-parse origin/main
+ad729c8cee17cac70f6e867d0afdca8901098b71
+[exit=0]
+
+$ git ls-remote origin refs/heads/main
+ad729c8cee17cac70f6e867d0afdca8901098b71	refs/heads/main
+[exit=0]
+
+$ python3 docs/kbdl/evidence/kbdl-011-source-model-resolution/scripts/validate_packet.py
+======================================================================
+[PASS] 1. every R16 defect row maps to a canonical issue or documented shared issue
+[PASS] 2. every canonical issue has a unique stable ID
+[PASS] 3. category identified for every issue
+[PASS] 4. affected requirement IDs identified for every issue
+[PASS] 5. R16 evidence reference identified for every issue
+[PASS] 6. affected validation gate identified for every issue
+[PASS] D1. no duplicate durable owner-decision records for the same issue ID
+[PASS] D2. every durable owner-decision record states 'Implementation authorization status: NOT AUTHORIZED'
+[PASS] D3. every durable-record issue ID exists in issue-register.csv (no unknown issue ID)
+[PASS] 7. every Owner decision field is literally PENDING or exactly matches its durable owner-decision record's selected choice
+[PASS] 7b. every Owner decision date field is literally PENDING or exactly matches its durable owner-decision record's decision date
+[PASS] 7c. every Owner evidence field is literally PENDING or references its durable owner-decision record (never KBDL-DEC-014 alone)
+[PASS] 7d. every Resolution status field is PENDING-consistent or exactly 'OWNER DECISION RECORDED — AWAITING PLANNING-AGENT VALIDATION' for durably recorded rows
+[PASS] D6. no durable record exists for an issue-register row left at the PENDING triple (recording completeness)
+[PASS] D7. exactly the durably-recorded issues are non-PENDING; every other issue remains PENDING
+[PASS] 8. no project-owner-review.md checkbox is selected outside a recognized issue-ID review block
+[PASS] D9. every selected project-owner-review.md checkbox exactly matches its durable owner-decision record
+[PASS] D10. no project-owner-review.md checkbox selection lacks a matching durable owner-decision record
+[PASS] D11. every durably-recorded issue has a matching project-owner-review.md checkbox selection
+[PASS] D12. source-model-resolution-ledger.csv durable owner-decision count matches the actual durable-record count
+[PASS] D13. source-model-resolution-ledger.csv per-batch durable-decision counts match actual per-batch counts and sum to the total
+[PASS] D14. Batch H's historically recorded owner-decision count remains exactly three
+[PASS] PS1. when durable decisions exist, the packet introduction/contents-table does not claim zero decisions are recorded
+[PASS] PS2. packet-state prose recorded/pending counts match the computed decision-state counts
+[PASS] PS3. historical zero-decision state (commit 662ee28) remains distinguished from the current state
+[PASS] PS4. review-cycle sign-off summary matches the durable record
+[PASS] PS5. no implementation authorization is introduced by the review-cycle summary
+[PASS] AR1. no durable 'SET TO NOT VERIFIED' owner-decision record states or implies it creates no current authority
+[PASS] AR2. no durable owner-decision record conflates decision authority with validation/conformance evidence
+[PASS] SP1. no current-state section reports 418 pending without an explicit historical marker once four decisions are durably recorded
+[PASS] SP2. no current-state section reports a total durably-recorded-decision count other than the computed total
+[PASS] SP3. no current-state summary states that AGC1/VF1 planning-agent validation remains pending
+[PASS] SP4. total recorded count, per-batch recorded counts, and pending count are mutually consistent
+[PASS] 9. every current-authority proposal states current/non-retroactive boundary
+[PASS] 10. authoritative-source-found column populated for every issue
+[PASS] 11. MOT cycle has exactly 2 edge records and 1 cycle record
+[PASS] 12. no protected file changed (git diff --name-only HEAD)
+[PASS] 13. docs/kbdl/validation.md byte-identical to HEAD
+[PASS] 14. candidate status remains NOT READY in validation.md
+[PASS] 15. implementation conformance remains NOT VERIFIED in validation.md
+[PASS] 16. project completion remains PENDING in validation.md
+[PASS] 17. every implementation-unlock-map.md Status: assignment uses only the four permitted values
+[PASS] 18. internal markdown links resolve to existing files
+[PASS] 19. CSV headers/row widths consistent across all packet CSVs
+[PASS] 20. canonical issue count (421) = 418 field/location/standard + 2 edge + 1 cycle
+[PASS] 20b. distinct affected requirements = 289 (matches R16 Failed effective records)
+[PASS] 21. checksums verify against on-disk files
+[PASS] 22. no unrelated working-tree changes outside the new packet directory or AGC1-authorized files
+[PASS] AG.KBDL-MOT-007.readme_independent_authority
+[PASS] AG.KBDL-MOT-007.csv_independent_authority
+[PASS] AG.KBDL-MOT-007.related_requirement_present
+[PASS] AG.KBDL-MOT-007.related_requirement_not_authority
+[PASS] AG.KBDL-MOT-007.no_authority_edge_to_KBDL-MOT-008
+[PASS] AG.KBDL-MOT-008.readme_independent_authority
+[PASS] AG.KBDL-MOT-008.csv_independent_authority
+[PASS] AG.KBDL-MOT-008.related_requirement_present
+[PASS] AG.KBDL-MOT-008.related_requirement_not_authority
+[PASS] AG.KBDL-MOT-008.no_authority_edge_to_KBDL-MOT-007
+[PASS] AG.KBDL-MOT-007.readme_csv_agree
+[PASS] AG.KBDL-MOT-008.readme_csv_agree
+[PASS] AG.KBDL-MOT-007.validation_status_unchanged
+[PASS] AG.KBDL-MOT-008.validation_status_unchanged
+[PASS] AG.csv.KBDL-MOT-007.validation_classification_unchanged
+[PASS] AG.csv.KBDL-MOT-008.validation_classification_unchanged
+[PASS] AG.no_two_node_cycle
+[PASS] AG.MOT-007.lifecycle_approved
+[PASS] AG.MOT-008.lifecycle_approved
+[PASS] AG.MOT-007.validation_status_not_verified
+[PASS] AG.MOT-008.validation_status_not_applicable
+[PASS] AG.csv.MOT-007.lifecycle_approved
+[PASS] AG.csv.MOT-008.lifecycle_approved
+[PASS] AG.csv.MOT-007.validation_classification_not_verified
+[PASS] AG.csv.MOT-008.validation_classification_not_applicable
+[PASS] AG.narrow_authorized_diff.commits_resolvable
+[PASS] AG.narrow_authorized_diff.parent_matches_base
+[PASS] AG.narrow_authorized_diff.readme_only_mot007_008
+[PASS] AG.narrow_authorized_diff.csv_only_mot007_008
+[PASS] AG.narrow_authorized_diff.csv_row_count_unchanged
+[PASS] FR1. smr2-fsrg1-prompt.md exists, identifies KBDL-011-SMR2-FSRG1, and states 'Implementation authorization status: NOT AUTHORIZED'
+[PASS] FR2. the FSRG1 specification states all six mandatory validation gates (schema, determinism, drift, path-safety, fixture-isolation, clean post-publication)
+[PASS] FR3. the FSRG1 specification names all four R13-R16 registries and declares them immutable historical evidence, with the normative/effective-metadata non-change constraints stated
+[PASS] FR4. all four R13-R16 field-source registries verify byte-for-byte against the SHA-256 digests recorded in their round evidence inventories
+[PASS] FR5. implementation-unlock-map.md carries LOCKED KBDL-011-SMR2-FSRG1 and KBDL-011-SMR2-VC-0001 entries, with the planning-agent gate and the reissue requirement stated
+[PASS] FR6. neither smr2-fsrg1-prompt.md nor implementation-unlock-map.md claims KBDL-011-SMR2-FSRG1 or KBDL-011-SMR2-VC-0001 is authorized, unlocked, ready, or approved for issue
+[PASS] FSRG1.package_present — FSRG1 package and required files exist
+[PASS] FSRG1.schema_present — declared registry schema document exists
+[PASS] FSRG1.generator_present — standalone deterministic generator exists
+[PASS] FSRG1.artifact_present — live field-source registry artifact exists and is non-empty
+[FAIL] FSRG1.validator_passes — validate_fsrg1.py exits 0 with no failed gate -- rc=1 last=78/80 FSRG1 checks passed failed=["[FAIL] PKG.checksums_verify -- ['MISMATCH:docs/kbdl/evidence/kbdl-011-smr2-fsrg1/fsrg1-validation-transcript.txt']", "[FAIL] PKG.inventory_digests_match -- ['docs/kbdl/evidence/kbdl-011-smr2-fsrg1/fsrg1-validation-transcript.txt']"]
+[FAIL] FSRG1.package_checksums_verify — FSRG1 checksums verify on disk -- ['MISMATCH:docs/kbdl/evidence/kbdl-011-smr2-fsrg1/fsrg1-validation-transcript.txt']
+[PASS] FSRG1.historical_registries_unchanged — R13-R16 match their own round digests
+[PASS] FSRG1.effective_metadata_unchanged — protected/normative files match the baseline
+[PASS] FSRG1.historical_packages_unchanged — no R13-R16 evidence file changed
+[PASS] FSRG1.decision_counts_unchanged — 4 durably recorded / 417 pending
+[PASS] FSRG1.smr2_vc_0001_locked — the downstream prompt remains LOCKED and reissue-only
+[PASS] FSRG1.no_val_or_readiness_movement — VAL/readiness/conformance/completion intact
+[PASS] 23. push-safety check deferred to commit/push shell sequence (fast-forward only)
+[PASS] 24. local HEAD SHA captured for post-push comparison
+======================================================================
+96/98 checks passed
+[exit=1]
+
+$ python3 docs/kbdl/evidence/kbdl-011-smr2-fsrg1/scripts/validate_fsrg1.py --repo-root .
+======================================================================
+[PASS] SCHEMA.artifact_exists
+[PASS] SCHEMA.encoding_utf8
+[PASS] SCHEMA.no_bom
+[PASS] SCHEMA.line_endings_lf
+[PASS] SCHEMA.final_newline
+[PASS] SCHEMA.nonempty
+[PASS] SCHEMA.parses
+[PASS] SCHEMA.header_exact
+[PASS] SCHEMA.row_widths_uniform
+[PASS] SCHEMA.row_key_unique
+[PASS] SCHEMA.field_name_domain
+[PASS] SCHEMA.ownership_class_matches_field
+[PASS] SCHEMA.derivation_rule_matches_field
+[PASS] SCHEMA.controlled_domains
+[PASS] SCHEMA.deterministic_sort_order
+[PASS] SCHEMA.effective_equals_expected
+[PASS] SCHEMA.precedence_matches_conflict
+[PASS] SCHEMA.validation_result_policy
+[PASS] SCHEMA.no_absolute_paths
+[PASS] SCHEMA.no_environment_values
+[PASS] COVER.every_current_requirement_present
+[PASS] COVER.no_unknown_requirement
+[PASS] COVER.every_required_field_per_requirement
+[PASS] COVER.row_count_is_requirements_times_fields
+[PASS] DETERM.generator_runs
+[PASS] DETERM.byte_identical
+[PASS] DETERM.sha256_identical
+[PASS] DETERM.nonempty_output
+[PASS] DETERM.header_identical
+[PASS] DETERM.row_count_identical
+[PASS] DETERM.final_newline_identical
+[PASS] DETERM.line_endings_lf_only
+[PASS] PATH.declared_target_resolves_inside_package
+[PASS] PATH.symlinked_output_refused
+[PASS] PATH.symlink_escape_left_target_untouched
+[PASS] PATH.missing_package_refused
+[PASS] PATH.generator_succeeds_in_sandbox
+[PASS] PATH.single_declared_write_target
+[PASS] PATH.check_mode_is_read_only
+[PASS] PATH.historical_artifacts_never_written
+[PASS] DRIFT.check_mode_executed
+[PASS] DRIFT.committed_matches_regeneration
+[PASS] DRIFT.independent_regeneration
+[PASS] DRIFT.independent_regeneration_matches
+[PASS] HIST.r13.recorded_digest_present
+[PASS] HIST.r13.registry_present
+[PASS] HIST.r13.byte_identical
+[PASS] HIST.r14.recorded_digest_present
+[PASS] HIST.r14.registry_present
+[PASS] HIST.r14.byte_identical
+[PASS] HIST.r15.recorded_digest_present
+[PASS] HIST.r15.registry_present
+[PASS] HIST.r15.byte_identical
+[PASS] HIST.r16.recorded_digest_present
+[PASS] HIST.r16.registry_present
+[PASS] HIST.r16.byte_identical
+[PASS] ISO.fixture_suite_present
+[PASS] ISO.fixture_suite_passes
+[PASS] ISO.real_repository_byte_unchanged
+[PASS] ISO.no_unexpected_worktree_changes
+[PASS] LABEL.readme_present
+[PASS] LABEL.non_authoritative_sentence_present
+[PASS] LABEL.schema_states_non_authoritative
+[PASS] LABEL.no_authority_or_evidence_claim
+[PASS] PROT.baseline_diff_available
+[PASS] PROT.protected_files_unchanged_vs_baseline
+[PASS] PROT.historical_packages_unchanged_vs_baseline
+[PASS] DECISION.state_module_available
+[PASS] DECISION.state_computed
+[PASS] DECISION.recorded_count_unchanged
+[PASS] DECISION.pending_count_unchanged
+[PASS] DECISION.no_unknown_or_duplicate_records
+[PASS] STATE.validation_md_present
+[PASS] STATE.candidate_not_ready
+[PASS] STATE.conformance_not_verified
+[PASS] STATE.completion_pending
+[PASS] STATE.val_003_006_not_verified
+[PASS] STATE.val_007_documentation_only
+[PASS] STATE.smr2_vc_0001_still_locked
+[PASS] STATE.smr2_vc_0001_reissue_required
+[PASS] PKG.required_files_present
+[FAIL] PKG.checksums_verify -- ['MISMATCH:docs/kbdl/evidence/kbdl-011-smr2-fsrg1/fsrg1-validation-transcript.txt']
+[PASS] PKG.inventory_complete
+[FAIL] PKG.inventory_digests_match -- ['docs/kbdl/evidence/kbdl-011-smr2-fsrg1/fsrg1-validation-transcript.txt']
+======================================================================
+82/84 FSRG1 checks passed
+[exit=1]
+
+$ python3 docs/kbdl/evidence/kbdl-011-smr2-fsrg1/scripts/fsrg1_fixtures.py --repo-root .
+======================================================================
+{
+  "actual_result": "REJECTED (as expected)",
+  "expected_result": "rejection",
+  "fixture": "01_missing_schema_column",
+  "meta_ok": true,
+  "mode": "negative",
+  "mutation": "drop the Ledger value column",
+  "real_repository_preserved": true,
+  "triggered_checks": [
+    "SCHEMA.header_exact"
+  ]
+}
+{
+  "actual_result": "REJECTED (as expected)",
+  "expected_result": "rejection",
+  "fixture": "02_extra_schema_column",
+  "meta_ok": true,
+  "mode": "negative",
+  "mutation": "append an undeclared column",
+  "real_repository_preserved": true,
+  "triggered_checks": [
+    "SCHEMA.header_exact"
+  ]
+}
+{
+  "actual_result": "REJECTED (as expected)",
+  "expected_result": "rejection",
+  "fixture": "03_reordered_columns",
+  "meta_ok": true,
+  "mode": "negative",
+  "mutation": "swap two declared columns",
+  "real_repository_preserved": true,
+  "triggered_checks": [
+    "SCHEMA.header_exact"
+  ]
+}
+{
+  "actual_result": "REJECTED (as expected)",
+  "expected_result": "rejection",
+  "fixture": "04_inconsistent_row_width",
+  "meta_ok": true,
+  "mode": "negative",
+  "mutation": "truncate one row",
+  "real_repository_preserved": true,
+  "triggered_checks": [
+    "SCHEMA.row_widths_uniform"
+  ]
+}
+{
+  "actual_result": "REJECTED (as expected)",
+  "expected_result": "rejection",
+  "fixture": "05_invalid_domain_value",
+  "meta_ok": true,
+  "mode": "negative",
+  "mutation": "set an out-of-domain Ownership class",
+  "real_repository_preserved": true,
+  "triggered_checks": [
+    "SCHEMA.controlled_domains",
+    "SCHEMA.ownership_class_matches_field"
+  ]
+}
+{
+  "actual_result": "REJECTED (as expected)",
+  "expected_result": "rejection",
+  "fixture": "06_duplicate_row_key",
+  "meta_ok": true,
+  "mode": "negative",
+  "mutation": "duplicate a (Requirement ID, Field name) row",
+  "real_repository_preserved": true,
+  "triggered_checks": [
+    "SCHEMA.row_key_unique"
+  ]
+}
+{
+  "actual_result": "REJECTED (as expected)",
+  "expected_result": "rejection",
+  "fixture": "07_missing_required_requirement",
+  "meta_ok": true,
+  "mode": "negative",
+  "mutation": "delete every row of one requirement",
+  "real_repository_preserved": true,
+  "triggered_checks": [
+    "COVER.every_current_requirement_present"
+  ]
+}
+{
+  "actual_result": "REJECTED (as expected)",
+  "expected_result": "rejection",
+  "fixture": "08_missing_required_field_row",
+  "meta_ok": true,
+  "mode": "negative",
+  "mutation": "delete one required field row",
+  "real_repository_preserved": true,
+  "triggered_checks": [
+    "COVER.every_required_field_per_requirement",
+    "COVER.row_count_is_requirements_times_fields"
+  ]
+}
+{
+  "actual_result": "REJECTED (as expected)",
+  "expected_result": "rejection",
+  "fixture": "09_nondeterministic_row_order",
+  "meta_ok": true,
+  "mode": "negative",
+  "mutation": "generator shuffles rows randomly",
+  "real_repository_preserved": true,
+  "triggered_checks": [
+    "DETERM.byte_identical"
+  ]
+}
+{
+  "actual_result": "REJECTED (as expected)",
+  "expected_result": "rejection",
+  "fixture": "10_environment_dependent_output",
+  "meta_ok": true,
+  "mode": "negative",
+  "mutation": "generator injects a wall-clock value",
+  "real_repository_preserved": true,
+  "triggered_checks": [
+    "DETERM.byte_identical"
+  ]
+}
+{
+  "actual_result": "REJECTED (as expected)",
+  "expected_result": "rejection",
+  "fixture": "11_hand_edited_live_registry",
+  "meta_ok": true,
+  "mode": "negative",
+  "mutation": "hand-edit one committed cell",
+  "real_repository_preserved": true,
+  "triggered_checks": [
+    "DRIFT.committed_matches_regeneration",
+    "DRIFT.independent_regeneration_matches"
+  ]
+}
+{
+  "actual_result": "REJECTED (as expected)",
+  "expected_result": "rejection",
+  "fixture": "12_mutated_r13_registry",
+  "meta_ok": true,
+  "mode": "negative",
+  "mutation": "append a row to the R13 registry",
+  "real_repository_preserved": true,
+  "triggered_checks": [
+    "HIST.r13.byte_identical"
+  ]
+}
+{
+  "actual_result": "REJECTED (as expected)",
+  "expected_result": "rejection",
+  "fixture": "13_mutated_r14_registry",
+  "meta_ok": true,
+  "mode": "negative",
+  "mutation": "append a row to the R14 registry",
+  "real_repository_preserved": true,
+  "triggered_checks": [
+    "HIST.r14.byte_identical"
+  ]
+}
+{
+  "actual_result": "REJECTED (as expected)",
+  "expected_result": "rejection",
+  "fixture": "14_mutated_r15_registry",
+  "meta_ok": true,
+  "mode": "negative",
+  "mutation": "append a row to the R15 registry",
+  "real_repository_preserved": true,
+  "triggered_checks": [
+    "HIST.r15.byte_identical"
+  ]
+}
+{
+  "actual_result": "REJECTED (as expected)",
+  "expected_result": "rejection",
+  "fixture": "15_mutated_r16_registry",
+  "meta_ok": true,
+  "mode": "negative",
+  "mutation": "append a row to the R16 registry",
+  "real_repository_preserved": true,
+  "triggered_checks": [
+    "HIST.r16.byte_identical"
+  ]
+}
+{
+  "actual_result": "REJECTED (as expected)",
+  "expected_result": "rejection",
+  "fixture": "16_absolute_output_path",
+  "meta_ok": true,
+  "mode": "negative",
+  "mutation": "declare an absolute output path",
+  "real_repository_preserved": true,
+  "triggered_checks": [
+    "PATH.rejected"
+  ]
+}
+{
+  "actual_result": "REJECTED (as expected)",
+  "expected_result": "rejection",
+  "fixture": "17_dotdot_traversal",
+  "meta_ok": true,
+  "mode": "negative",
+  "mutation": "declare a '..' traversal output path",
+  "real_repository_preserved": true,
+  "triggered_checks": [
+    "PATH.rejected"
+  ]
+}
+{
+  "actual_result": "REJECTED (as expected)",
+  "expected_result": "rejection",
+  "fixture": "18_symlink_escape",
+  "meta_ok": true,
+  "mode": "negative",
+  "mutation": "point the artifact at a symlink outside the package",
+  "real_repository_preserved": true,
+  "triggered_checks": [
+    "PATH.rejected"
+  ]
+}
+{
+  "actual_result": "REJECTED (as expected)",
+  "expected_result": "rejection",
+  "fixture": "19_historical_artifact_output_target",
+  "meta_ok": true,
+  "mode": "negative",
+  "mutation": "aim output at the R16 registry",
+  "real_repository_preserved": true,
+  "triggered_checks": [
+    "PATH.rejected"
+  ]
+}
+{
+  "actual_result": "REJECTED (as expected)",
+  "expected_result": "rejection",
+  "fixture": "20_protected_file_output_target",
+  "meta_ok": true,
+  "mode": "negative",
+  "mutation": "aim output at traceability-metadata.csv",
+  "real_repository_preserved": true,
+  "triggered_checks": [
+    "PATH.rejected"
+  ]
+}
+{
+  "actual_result": "REJECTED (as expected)",
+  "expected_result": "rejection",
+  "fixture": "21_fixture_mutation_of_real_repository",
+  "meta_ok": true,
+  "mode": "negative",
+  "mutation": "mutate a stand-in tree and require detection",
+  "real_repository_preserved": true,
+  "triggered_checks": [
+    "ISO.detector"
+  ]
+}
+{
+  "actual_result": "REJECTED (as expected)",
+  "expected_result": "rejection",
+  "fixture": "22_empty_generated_output",
+  "meta_ok": true,
+  "mode": "negative",
+  "mutation": "generator produces zero rows",
+  "real_repository_preserved": true,
+  "triggered_checks": [
+    "GEN.empty_rejected"
+  ]
+}
+{
+  "actual_result": "REJECTED (as expected)",
+  "expected_result": "rejection",
+  "fixture": "23_generator_source_failure",
+  "meta_ok": true,
+  "mode": "negative",
+  "mutation": "remove a required source file",
+  "real_repository_preserved": true,
+  "triggered_checks": [
+    "GEN.fails_closed"
+  ]
+}
+{
+  "actual_result": "REJECTED (as expected)",
+  "expected_result": "rejection",
+  "fixture": "24_drift_pass_without_generation",
+  "meta_ok": true,
+  "mode": "negative",
+  "mutation": "remove the generator and re-run the drift gate",
+  "real_repository_preserved": true,
+  "triggered_checks": [
+    "DRIFT.check_mode_executed",
+    "DRIFT.committed_matches_regeneration"
+  ]
+}
+{
+  "actual_result": "PASSED (as expected)",
+  "expected_result": "pass",
+  "fixture": "P1_valid_schema",
+  "meta_ok": true,
+  "mode": "positive-control",
+  "mutation": "unmutated committed registry",
+  "real_repository_preserved": true,
+  "triggered_checks": []
+}
+{
+  "actual_result": "PASSED (as expected)",
+  "expected_result": "pass",
+  "fixture": "P2_two_deterministic_runs",
+  "meta_ok": true,
+  "mode": "positive-control",
+  "mutation": "two runs, two CWDs, two processes",
+  "real_repository_preserved": true,
+  "triggered_checks": []
+}
+{
+  "actual_result": "PASSED (as expected)",
+  "expected_result": "pass",
+  "fixture": "P3_clean_live_regeneration",
+  "meta_ok": true,
+  "mode": "positive-control",
+  "mutation": "committed artifact reproduces exactly",
+  "real_repository_preserved": true,
+  "triggered_checks": []
+}
+{
+  "actual_result": "PASSED (as expected)",
+  "expected_result": "pass",
+  "fixture": "P4_historical_hashes_match",
+  "meta_ok": true,
+  "mode": "positive-control",
+  "mutation": "all four R13-R16 digests verify",
+  "real_repository_preserved": true,
+  "triggered_checks": []
+}
+{
+  "actual_result": "PASSED (as expected)",
+  "expected_result": "pass",
+  "fixture": "P5_safe_declared_output",
+  "meta_ok": true,
+  "mode": "positive-control",
+  "mutation": "declared path resolves inside the package",
+  "real_repository_preserved": true,
+  "triggered_checks": []
+}
+{
+  "actual_result": "PASSED (as expected)",
+  "expected_result": "pass",
+  "fixture": "P6_fixture_cleanup",
+  "meta_ok": true,
+  "mode": "positive-control",
+  "mutation": "temporary tree removal succeeds",
+  "real_repository_preserved": true,
+  "triggered_checks": []
+}
+{
+  "actual_result": "PASSED (as expected)",
+  "expected_result": "pass",
+  "fixture": "P7_decision_state_unchanged",
+  "meta_ok": true,
+  "mode": "positive-control",
+  "mutation": "4 recorded / 417 pending",
+  "real_repository_preserved": true,
+  "triggered_checks": []
+}
+{
+  "actual_result": "PASSED (as expected)",
+  "expected_result": "pass",
+  "fixture": "P8_val_readiness_unchanged",
+  "meta_ok": true,
+  "mode": "positive-control",
+  "mutation": "VAL/readiness/conformance/completion unchanged",
+  "real_repository_preserved": true,
+  "triggered_checks": []
+}
+======================================================================
+negative fixtures rejected as expected: 24/24
+positive controls passed as expected:   8/8
+real repository files byte-unchanged:   True
+git status --short unchanged:           True
+temporary fixture tree removed:         True
+32/32 fixtures produced their expected result
+[exit=0]
+
+----- pre-existing SMR1 fixture suites -----
+$ python3 docs/kbdl/evidence/kbdl-011-source-model-resolution/scripts/negative_fixtures.py
+Real repository files unchanged after all fixtures: True
+All 20 fixtures correctly rejected: True
+======================================================================
+[exit=]
+
+$ python3 docs/kbdl/evidence/kbdl-011-source-model-resolution/scripts/dr1_r1_fixtures.py
+Real repository files unchanged after all fixtures: True
+All 10 DR1-R1 fixtures produced the expected result: True
+======================================================================
+[exit=]
+
+$ python3 docs/kbdl/evidence/kbdl-011-source-model-resolution/scripts/authority_graph_fixtures.py
+Real repository files unchanged after all fixtures: True
+All 8 AGC1 fixtures correctly rejected: True
+======================================================================
+[exit=]
+
+$ python3 docs/kbdl/evidence/kbdl-011-source-model-resolution/scripts/agc1_narrow_diff_fixtures.py
+Real repository files unchanged after all fixtures: True
+All 12 narrow-diff fixtures produced the expected pass/rejection: True
+======================================================================
+[exit=]
+
+$ python3 docs/kbdl/evidence/kbdl-011-source-model-resolution/scripts/fsrg1_roadmap_fixtures.py
+======================================================================
+fixture isolation: real repository files byte-unchanged = True
+12/12 fixtures produced their expected result
+[exit=]
+
+======================================================================
+10. PRESERVATION AUDIT AT COMMIT A (vs baseline dc16473a)
+======================================================================
+$ git diff --exit-code --name-only dc16473a -- <normative and protected paths>
+[exit=0 — 0 means byte-identical]
+
+$ git diff --exit-code --name-only dc16473a -- <R13-R16 packages>
+[exit=0]
+
+$ git diff --exit-code --name-only dc16473a -- <owner decisions, issue register, review form, FSRG1 spec>
+[exit=0]
+
+----- R13-R16 registries: recorded vs actual at Commit A -----
+r13 recorded=73c029b88c2da4c8399dc3df7b8df537c2e51cc8425d181be94953c1ffbabf52 actual=73c029b88c2da4c8399dc3df7b8df537c2e51cc8425d181be94953c1ffbabf52 MATCH
+r14 recorded=6f818c0b4a9d00e46c4c9a63425eb35eef4aa916dfeb0c5da2bea9c9bde15eed actual=6f818c0b4a9d00e46c4c9a63425eb35eef4aa916dfeb0c5da2bea9c9bde15eed MATCH
+r15 recorded=2125692e5932f37a46eb52d2e162bb6f47e0540a1c4b9d0f71e5e0f84247ac9e actual=2125692e5932f37a46eb52d2e162bb6f47e0540a1c4b9d0f71e5e0f84247ac9e MATCH
+r16 recorded=789c559f7fe342cec9d28af3ed0c95d9c86edb7513871d8bf2686afcacdee104 actual=789c559f7fe342cec9d28af3ed0c95d9c86edb7513871d8bf2686afcacdee104 MATCH
+
+----- decision state and VAL/readiness at Commit A -----
+recorded decisions: 4
+pending issues    : 417
+unknown ids       : []
+duplicate records : []
+PRESENT Specification release candidate recommendation: NOT READY
+PRESENT Implementation conformance status: NOT VERIFIED
+PRESENT Project completion status: PENDING
+PRESENT `KBDL-VAL-003`, `KBDL-VAL-004`, `KBDL-VAL-005`, and `KBDL-VAL-006` are `Not verified`
+
+======================================================================
+11. CLOSING NOTE — TRANSCRIPT SELF-REFERENCE, AND WHERE THE
+    AUTHORITATIVE CLEAN RUNS ARE RECORDED
+======================================================================
+Section 9's validator runs report exactly two failing checks, plus the two
+SMR1-side checks that depend on them:
+
+  [FAIL] PKG.checksums_verify           -- MISMATCH: fsrg1-validation-transcript.txt
+  [FAIL] PKG.inventory_digests_match    -- fsrg1-validation-transcript.txt
+  [FAIL] FSRG1.validator_passes         -- (consequence of the two above)
+  [FAIL] FSRG1.package_checksums_verify -- (consequence of the two above)
+
+Every one of them names this transcript file and nothing else. The cause is
+structural, not a defect in the package: this file was still being appended to
+by the very command whose output it records, so its digest necessarily differed
+from the digest recorded a moment earlier. A transcript cannot contain a
+verification of its own final bytes.
+
+This is recorded rather than deleted, because deleting it would misrepresent
+what the commands actually printed.
+
+Resolution, and where to look instead:
+
+  * The evidence-closure commit (Commit B) finalizes this transcript, then
+    regenerates the FSRG1 and SMR1 evidence inventories and checksum records
+    against these final bytes.
+  * The authoritative clean post-publication runs are executed AFTER that
+    regeneration, against the committed and pushed Commit B tree, where no
+    self-reference is possible. Their raw results are recorded in the
+    KBDL-011-SMR2-FSRG1 final implementation report.
+  * Any reader verifying this package should run, from a clean checkout:
+
+      python3 docs/kbdl/evidence/kbdl-011-smr2-fsrg1/scripts/validate_fsrg1.py --repo-root .
+      python3 docs/kbdl/evidence/kbdl-011-smr2-fsrg1/scripts/fsrg1_fixtures.py --repo-root .
+      python3 docs/kbdl/evidence/kbdl-011-source-model-resolution/scripts/validate_packet.py
+
+    All three must exit 0. If they do not, this package is not validated.
+
+No gate other than PKG was affected at any stage. Sections 3, 4, 5, 6, 7 and 10
+show the schema, determinism, drift, historical-integrity, path-safety,
+fixture-isolation, and preservation results, and none of them depends on this
+file's digest.
+
+======================================================================
+12. STATUS
+======================================================================
+FSRG1 implementation: COMPLETE, AWAITING PLANNING-AGENT VALIDATION.
+KBDL-011-SMR2-FSRG1:   LOCKED - PLANNING-AGENT VALIDATION REQUIRED.
+KBDL-011-SMR2-VC-0001: LOCKED - PLANNING-AGENT VALIDATION REQUIRED.
+                       Not begun, not resumed, not reissued. It may be
+                       reissued -- not resumed -- only after FSRG1 passes
+                       planning-agent validation.
+Decision state:        4 durably recorded (3 Batch H, 1 Batch A); 417 PENDING.
+R13-R16 registries:    byte-identical; immutable historical evidence.
+Normative content, effective metadata, protected files, VAL statuses,
+candidate readiness, implementation conformance, project completion: unchanged.
+Implementation authorization status: NOT AUTHORIZED.

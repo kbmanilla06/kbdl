@@ -124,7 +124,43 @@ deployment configuration exists in this package.
 `LOCKED — PLANNING-AGENT VALIDATION REQUIRED`, and must be **reissued, not
 resumed**, only after `KBDL-011-SMR2-FSRG1` passes planning-agent validation.
 
+## Publication
+
+Two linear commits, both fast-forward pushes, neither amended:
+
+| Commit | SHA | Contents |
+| --- | --- | --- |
+| A — implementation | `ad729c8cee17cac70f6e867d0afdca8901098b71` (parent `dc16473a`) | Generator, live registry, schema, validator, fixtures, package documentation, stage-1 transcript, SMR1 packet integration, evidence records. |
+| B — evidence closure | this commit (parent `ad729c8c`) | Actual post-publication Commit A outputs appended to the transcript, the finalized transcript, regenerated FSRG1 and SMR1 inventories and checksums, and this status text. |
+
+Commit B changes no generator behavior, no registry content, no schema, no
+fixture, no normative content, no effective metadata, and no historical
+evidence.
+
+The transcript records a self-reference limitation honestly: a transcript
+cannot verify its own final bytes, so the `PKG.checksums_verify` and
+`PKG.inventory_digests_match` checks fail *inside* the transcript, naming the
+transcript file and nothing else. The evidence records are regenerated against
+the transcript's final bytes in Commit B, and the authoritative clean runs are
+executed afterwards against the published tree.
+
+## Rollback
+
+Reverse order, no reset/amend/rebase/squash/force-push:
+
+```bash
+git revert <Commit-B-SHA>
+git revert ad729c8cee17cac70f6e867d0afdca8901098b71
+```
+
+That removes this package, its SMR1 packet integration, and its administrative
+evidence records. It does not alter the historical registries, any recorded
+owner decision, AGC1, VF1, DR1, DR1-R1, or RM1.
+
 ## Status
 
 FSRG1 implementation is complete and **awaiting planning-agent validation**.
 It is not validated, not approved, and authorizes nothing.
+`KBDL-011-SMR2-FSRG1` remains `LOCKED — PLANNING-AGENT VALIDATION REQUIRED`, as
+does `KBDL-011-SMR2-VC-0001`, which must be **reissued, not resumed**, and only
+after FSRG1 passes planning-agent validation.
