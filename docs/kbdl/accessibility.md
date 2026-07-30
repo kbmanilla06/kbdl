@@ -1,5 +1,12 @@
 # KBDL Accessibility
 
+> **KBDL Design Language v1 — active guidance.** KBDL provides accessibility design requirements and implementation guidance; conformance must be verified in each product implementation. Per-requirement
+> lifecycle and approval labels below are historical provenance annotations
+> from the retired specification programme; they are not pending decisions and
+> they do not gate v1. Concrete values are consolidated in
+> [tokens](tokens/README.md). Values a project may legitimately vary are
+> labelled *Project-controlled*, not unresolved. See [STATUS](STATUS.md).
+
 Lifecycle status: mixed. `Approved` for the requirements below that
 directly restate an already-`Approved` KBDL principle, foundation/theme/
 motion rule, or WCAG 2.2 Level A/AA success criterion — see

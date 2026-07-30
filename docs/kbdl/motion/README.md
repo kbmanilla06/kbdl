@@ -1,5 +1,12 @@
 # KBDL Motion — Expressive Motion Language
 
+> **KBDL Design Language v1 — active guidance.** Per-requirement
+> lifecycle and approval labels below are historical provenance annotations
+> from the retired specification programme; they are not pending decisions and
+> they do not gate v1. Concrete values are consolidated in
+> [tokens](../tokens/README.md). Values a project may legitimately vary are
+> labelled *Project-controlled*, not unresolved. See [STATUS](../STATUS.md).
+
 **Updated under KBDL-005-A1.** Lifecycle status: mixed. `Approved` for
 the terminology, identity translation, purpose model, and
 category-completeness structure defined below, where each directly

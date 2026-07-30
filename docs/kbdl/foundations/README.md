@@ -1,5 +1,12 @@
 # KBDL Foundations — Index
 
+> **KBDL Design Language v1 — active guidance.** Per-requirement
+> lifecycle and approval labels below are historical provenance annotations
+> from the retired specification programme; they are not pending decisions and
+> they do not gate v1. Concrete values are consolidated in
+> [tokens](../tokens/README.md). Values a project may legitimately vary are
+> labelled *Project-controlled*, not unresolved. See [STATUS](../STATUS.md).
+
 Lifecycle status: `Approved` (this index, the foundation status model, the
 profile-adjustment summary, the conformance rules, and the `KBDL-FND-###`
 requirements below). The specific default values proposed throughout the

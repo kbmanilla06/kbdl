@@ -1,429 +1,177 @@
-# KBDL — Design Language Specification
+# KBDL Design Language
 
-## KBDL Overview
+**Version 1.0** — a framework-independent design language for building
+consistent, accessible, responsive web products.
 
-KBDL is a reusable web design language combining digital luxury, technical
-utility, controlled expressive motion, cross-project visual consistency,
-responsive and mobile-friendly behavior, adaptive light and dark
-presentation, and WCAG 2.2 Level AA accessibility with enhanced
-reduced-motion safeguards. KBDL initially supports three project profiles:
-Showcase (portfolios and creative showcases), Precision (SaaS dashboards),
-and Flow (consumer-facing web applications). See the
-[glossary](glossary.md) for precise definitions of these terms.
+KBDL gives you principles, foundations, tokens, themes, motion and responsive
+guidance, accessibility requirements, component specifications, and patterns.
+It does not ship runtime code, so you can implement it in any stack.
 
-## Specification Status
+See [STATUS](STATUS.md) for scope and version state.
 
-On 2026-07-28 (Asia/Manila), the project owner supplied all eleven current,
-non-retroactive prompt-authority confirmations; see
-[KBDL-DEC-016](decision-register.md#kbdl-dec-016--current-non-retroactive-prompt-authority-confirmations).
-The confirmations passed AR2 planning-agent validation. All eleven historical
-approval commands remain unrecovered. R16 is preserved as a blocked source-independent audit
-pending planning-agent validation; its documentation-only candidate
-recommendation is `NOT READY — SOURCE-INDEPENDENCE AND CLAUSE-EVIDENCE REMEDIATION REQUIRED`, not an approval. Implementation
-conformance remains `NOT VERIFIED`, and project completion remains pending.
+## Goals
 
-The current gated prompt sequence contains eleven steps, KBDL-001 through
-KBDL-011, with KBDL-011 serving as Final Validation and the completion gate.
-Historical references to a ten-step roadmap describe the earlier
-specification-building scope governed by KBDL-DEC-002 (KBDL-001 through
-KBDL-010); they do not describe the current gated sequence. The presence of
-KBDL-011 does not approve candidate readiness, limitations, or project
-completion.
+* **Consistent** — one visual and interaction language across products
+* **Accessible by design** — accessibility is a requirement of the
+  specification, not a later audit
+* **Adaptive** — light and dark, compact to wide, comfortable to dense
+* **Framework-independent** — tokens and specifications, not a component library
+* **Expressive within limits** — three profiles that flex character without
+  fragmenting into separate systems
 
-**KBDL-001: Specification Architecture and Governance Foundation**,
-**KBDL-002: Identity, Principles, and Visual Consistency Rules**,
-**KBDL-003: Core Visual Foundations**,
-**KBDL-004: Adaptive Theme System**,
-**KBDL-005: Expressive Motion Language**,
-**KBDL-006: Responsive Behavior and Accessibility**, and
-**KBDL-007: Core Action, Form, and Navigation Components** deliverables
-are present in the repository as the first seven specification-building
-steps of the current eleven-step gated sequence. Their
-lifecycle status is `Approved` for architecture, rules, and (as of the
-project owner's foundation-defaults approval, see
-[KBDL-DEC-012](decision-register.md#kbdl-dec-012--foundation-decision-packet-approved))
-the KBDL-003 default values (color, typography, spacing, shape, elevation,
-iconography); requirement-level validation statuses are recorded
-independently in the [traceability matrix](traceability-matrix.md) and are
-not all `Verified`. As of the project owner's theme-decisions approval
-(see [KBDL-DEC-013](decision-register.md#kbdl-dec-013--kbdl-004-theme-decisions-approved)),
-the ten items in the KBDL-004 theme decision packet — persistence
-baseline, the opaque light/dark theme mappings, status-family colors,
-the opaque gradient caption-band strategy, the color-value expression
-convention, conceptual transition guidance, theme-selection precedence,
-project-override boundaries, and local contrast contexts — are
-`Approved`. Excluded from this approval and still `Recommended`/`Not
-verified`: Accent-surface, Scrim, and Selection-background opacity;
-translucent variants of the caption band; project-specific media
-composites; account-level theme sync; high-contrast/forced-colors mode;
-data-visualization palettes; and any implementation-layer format (CSS
-custom properties, JSON tokens, component-level theme tokens, framework
-APIs) — see
-[themes/README.md § Theme Decision Packet](themes/README.md#10-theme-decision-packet-approved-under-kbdl-004-a1).
-KBDL-005 established KBDL's motion terminology, identity translation,
-purpose model, and category-completeness structure, `Approved` where
-directly supported by prior approved principles, theme rules, or the
-motion-safety baseline (see [motion/README.md](motion/README.md)). As of
-the project owner's motion-decisions approval (see
-[KBDL-DEC-014](decision-register.md#kbdl-dec-014--kbdl-005-motion-decisions-approved)),
-the fifteen items in the KBDL-005 motion decision packet — the
-five-level motion hierarchy, the timing architecture and duration
-classes/values, easing categories/curves, movement-distance and scale
-ranges, stagger/overlap guidance, the entrance-versus-exit relationship,
-attention-repetition limits, ambient- and scroll-linked-motion
-boundaries, theme-transition duration/easing, the reduced-motion
-substitution matrix, the motion-token naming architecture,
-profile-level intensity adjustments, the multi-factor intensity model,
-and the navigation-motion architecture — are `Approved`. Excluded from
-this approval and still `Recommended`/`Not verified`/`Deferred`: exact
-component-specific movement/scale/stagger values, device-performance
-detection, animation-library/rendering-technology selection, CSS/JSON/
-JavaScript token formats, browser-support policy, exact scroll
-thresholds, and exact quantitative motion-hazard thresholds — see
-[motion/README.md § Motion Decision Packet](motion/README.md#10-motion-decision-packet).
-KBDL-006 established KBDL's responsive-behavior and accessibility
-specification: WCAG 2.2 Level AA is the adopted conformance baseline
-(see [KBDL-DEC-010](decision-register.md#kbdl-dec-010--wcag-22-aa-baseline-with-enhanced-motion-safety)),
-and every `KBDL-RSP-###`/`KBDL-A11Y-###` requirement that directly
-restates an already-approved WCAG 2.2 criterion or prior KBDL rule is
-`Approved` (see [responsive.md](responsive.md) and
-[accessibility.md](accessibility.md)). Genuinely new KBDL-006 defaults —
-exact breakpoint thresholds, grid columns, gutters, container widths, a
-preferred enhanced target size, a forced-colors/high-contrast policy,
-and a preferred accessibility testing matrix — remain `Recommended`,
-pending project-owner approval via the
-[responsive decision packet](responsive.md#35-responsive-decision-packet)
-and the
-[accessibility decision packet](accessibility.md#49-accessibility-decision-packet).
-Validation status remains separate throughout: implementation-dependent
-items (keyboard, screen-reader, zoom, forced-colors, flash, and
-real-device testing) remain `Not verified`, since no implementation
-exists; this module does not claim full WCAG conformance. KBDL-007
-established KBDL's core action, form, and navigation component
-specification: 51 `KBDL-CMP-###` requirements translating approved
-KBDL-002 through KBDL-006 rules, WCAG 2.2, and WAI-ARIA into
-component-level contracts (see [components-core.md](components-core.md)).
-Requirements directly restating an already-approved source are
-`Approved`; genuinely new component-level taxonomies (a button
-hierarchy, a tabs activation model, truncation models for breadcrumbs
-and pagination, and similar) remain `Recommended`, pending project-owner
-approval via the
-[KBDL-007 decision packet](components-core.md#35-kbdl-007-decision-packet).
-None of the nine unapproved KBDL-006 recommendations is treated as
-implementation authority anywhere in KBDL-007. KBDL-007 **passed**
-planning-agent validation, which unlocked KBDL-008. KBDL-008 (Surface,
-Overlay, Feedback, and System-State Components) is now present: 60
-`KBDL-CMP-###` requirements (`KBDL-CMP-052` through `KBDL-CMP-111`)
-translating approved principles, foundations, themes, motion,
-responsive, accessibility, and KBDL-007 component rules into surface-,
-overlay-, feedback-, and system-state-level contracts (see
-[components-system.md](components-system.md)). A requirement is
-`Approved` when authorized by an already-adopted WCAG 2.2 criterion, an
-adopted WAI-ARIA role/state/property definition, a prior approved KBDL
-rule, an explicit mandatory requirement in the project-owner-approved
-KBDL-008 implementation prompt, or a documented combination of these;
-the project owner's approval of that prompt authorizes only its own
-mandatory scope, not the KBDL-008 decision packet. Genuinely new,
-discretionary component-level taxonomies, timing, placement, or policy
-choices not mandated by the approved prompt (a card-variant taxonomy,
-an accordion open model, a tooltip timing policy, and similar) remain
-`Recommended`, pending project-owner approval via the
-[KBDL-008 decision packet](components-system.md#33-kbdl-008-decision-packet).
-None of the nine unapproved KBDL-006 recommendations or the ten
-unapproved KBDL-007 recommendations is treated as implementation
-authority anywhere in KBDL-008; no implementation-level validation
-exists for any KBDL-008 requirement. KBDL-008 **passed** planning-agent
-validation, which unlocked KBDL-009. KBDL-009 (Project Profiles) is now
-present: 29 `KBDL-PRO-###` requirements consolidating the profile-level
-guidance already scattered across KBDL-002 through KBDL-008 into one
-specification for Showcase, Precision, and Flow (see
-[profiles.md](profiles.md)). A requirement is `Approved` when
-authorized by a prior approved KBDL requirement, an explicit mandatory
-requirement in the project-owner-approved KBDL-009 implementation
-prompt, or a documented combination of these; prompt approval
-authorizes only its own mandatory scope, not the KBDL-009 decision
-packet. Genuinely new, discretionary profile-selection, migration, or
-profile-specific-defaults policy not mandated by the approved prompt
-remains `Recommended`, pending project-owner approval via the
-[KBDL-009 decision packet](profiles.md#33-kbdl-009-decision-packet).
-None of the nine unapproved KBDL-006, ten unapproved KBDL-007, or
-seventeen unapproved KBDL-008 recommendations is treated as
-implementation authority anywhere in KBDL-009; no implementation-level
-profile validation exists. KBDL-009 **passed** planning-agent validation,
-which unlocked KBDL-010. KBDL-010 (Manual Customization) is now present:
-30 `KBDL-CUS-###` requirements make project customization manual,
-documented, attributable, reviewable, reversible, and auditable while
-protecting locked rules, shared architecture, and Profile invariants (see
-[customization.md](customization.md)). Its seven new discretionary policy
-items remain `Recommended` and its machine-readable-format item remains
-`Deferred`; no earlier recommendation is promoted and no implementation-
-level customization validation exists. KBDL-010 **passed** planning-agent
-validation, which unlocked KBDL-011. KBDL-011 (Final Validation) is now
-present in [validation.md](validation.md). KBDL-011-R9 failed planning-agent
-review and R10 correctly blocked on missing historical authority evidence. AR1
-and AR2 passed; the project owner's eleven current, non-retroactive
-confirmations are effective under KBDL-DEC-016 while historical approval
-commands remain unrecovered. R16 is a blocked source-independent audit pending
-planning-agent validation. Its documentation-only candidate recommendation is
-`NOT READY — SOURCE-INDEPENDENCE AND CLAUSE-EVIDENCE REMEDIATION REQUIRED`; readiness and completion are not approved. Implementation
-conformance remains
-`NOT VERIFIED`, and planning-agent validation plus explicit project-owner
-completion approval remain pending.
-Progression to later roadmap steps depends on the
-planning agent's validation review, not on this index. KBDL-001
-established the documentation architecture, terminology, requirement
-and status conventions, and governance for the entire KBDL
-specification. KBDL-002 established KBDL's identity statement, Digital
-Luxury and Technical Utility definitions, core principles,
-visual-consistency relationships, the locked/controlled/open identity
-model, and the design-decision hierarchy (see
-[principles.md](principles.md)). KBDL-003 established KBDL's color,
-typography, spacing/layout, shape/depth, and iconography/media
-architecture (see [foundations/README.md](foundations/README.md)). KBDL-004
-established KBDL's adaptive theme architecture, semantic-role inventory,
-recommended light and dark theme mappings, selection precedence,
-persistence guidance, project-controlled adaptation, and local contrast
-contexts (see [themes/README.md](themes/README.md)). KBDL-005
-established KBDL's framework-independent motion language (see
-[motion/README.md](motion/README.md)). KBDL-006 established KBDL's
-responsive-behavior and accessibility specification, mapping WCAG 2.2
-Level AA to KBDL topics and resolving items previously deferred to it
-(see [responsive.md](responsive.md) and
-[accessibility.md](accessibility.md)). KBDL-007 established KBDL's
-core action, form, and navigation component specification, translating
-approved principles, foundations, themes, motion, responsive, and
-accessibility rules into component-level contracts (see
-[components-core.md](components-core.md)). KBDL-008 established KBDL's
-surface, overlay, feedback, and system-state component specification,
-extending the KBDL-007 shared contract without redefining any KBDL-007
-trigger, field, action, or navigation contract (see
-[components-system.md](components-system.md)). KBDL-009 established
-KBDL's Project Profiles specification, consolidating the Showcase,
-Precision, and Flow profile guidance already present across prior
-modules into one shared architecture, without introducing a
-profile-specific semantic, accessibility, foundation, theme, motion, or
-component system (see [profiles.md](profiles.md)). KBDL-010 established
-manual-customization governance without creating a project customization,
-implementation format, exception, or approval shortcut (see
-[customization.md](customization.md)). KBDL-011 performs final documentation
-validation without creating implementation code or production evidence (see
-[validation.md](validation.md)). Completion remains gated by independent review
-and explicit project-owner approval (see [governance.md](governance.md)).
+## Who it is for
 
-## Intended Audience
+Product designers, front-end engineers, and accessibility specialists building
+or maintaining a product that should look and behave like the others in its
+family.
 
-This specification serves anyone who defines, implements, reviews, or governs
-KBDL: design-system architects, engineers implementing KBDL in a project,
-accessibility reviewers, and contributors proposing changes to the
-specification itself.
+## Core principles
 
-## How to Use This Specification
+1. **Clarity before decoration** — if an effect competes with comprehension, it
+   goes.
+2. **Accessibility is structural** — contrast, focus, keyboard operation, and
+   target size are design inputs, not remediation.
+3. **Consistency over novelty** — reuse an existing component before inventing
+   one.
+4. **Motion with purpose** — motion explains change; it never performs.
+5. **Content sets the breakpoints** — layout adapts where content stops working,
+   not at rumoured device widths.
+6. **Honest states** — loading, empty, and error are designed, not afterthoughts.
 
-1. Start with this index to understand the document hierarchy and
-   conventions.
-2. Consult the [glossary](glossary.md) for any unfamiliar term.
-3. When looking for a specific requirement, use its requirement ID (see
-   [Requirement Identification](#requirement-identification)) and check the
-   [traceability matrix](traceability-matrix.md) for its current location and
-   status.
-4. Before implementing anything, confirm its lifecycle status (see
-   [status labels](#status-labels)) is `Approved`. No other label —
-   including `Confirmed`, `User-provided`, or `Verified` — authorizes
-   implementation on its own.
-5. Before proposing a change, read [contributing.md](contributing.md).
-6. Before approving a change, use the [conformance checklist](conformance-checklist.md).
+Full detail: [principles](principles.md).
 
-## Document Hierarchy
+## Documentation map
 
-KBDL-001, KBDL-002, KBDL-003, KBDL-004, KBDL-005, KBDL-006, KBDL-007,
-KBDL-008, KBDL-009, KBDL-010, and KBDL-011 deliver the documents below with real content. Rows still
-marked `Deferred` show the **planned location only** for future
-modules; those files do not exist yet and must not be created until
-their roadmap step is reached.
+| Area | Document |
+| --- | --- |
+| Scope and version | [STATUS](STATUS.md) |
+| Principles | [principles](principles.md) |
+| Foundations | [foundations](foundations/README.md) — [color](foundations/color.md), [typography](foundations/typography.md), [spacing & layout](foundations/spacing-layout.md), [shape & depth](foundations/shape-depth.md), [iconography & media](foundations/iconography-media.md) |
+| Tokens | [tokens](tokens/README.md) · [`kbdl.tokens.json`](tokens/kbdl.tokens.json) |
+| Themes | [themes](themes/README.md) — [light](themes/light-theme.md), [dark](themes/dark-theme.md), [semantic roles](themes/semantic-roles.md), [adaptation](themes/adaptation.md) |
+| Motion | [motion](motion/README.md) — [foundations](motion/foundations.md), [timing & easing](motion/timing-easing.md), [patterns](motion/patterns.md), [accessibility & performance](motion/accessibility-performance.md) |
+| Responsive | [responsive](responsive.md) |
+| Accessibility | [accessibility](accessibility.md) |
+| Components | [components](components/README.md) |
+| Patterns | [patterns](patterns.md) |
+| Profiles | [profiles](profiles.md) |
+| Customization | [customization](customization.md) |
+| Adoption | [adoption](adoption.md) |
+| Governance | [governance](governance.md) |
+| Conventions | [conventions](conventions.md) · [glossary](glossary.md) · [contributing](contributing.md) |
+| Completion checklist | [conformance-checklist](conformance-checklist.md) |
 
-| # | Module | Status | Location |
-| --- | --- | --- | --- |
-| 1 | Introduction | Deferred | `docs/kbdl/introduction.md` (planned) |
-| 2 | Principles | Approved | [principles.md](principles.md) |
-| 3 | Visual foundations | Approved (architecture and default values)* | [foundations/README.md](foundations/README.md) |
-| 4 | Adaptive themes | Approved (architecture and the ten-item theme decision packet)** | [themes/README.md](themes/README.md) |
-| 5 | Motion | Approved (architecture and the fifteen-item motion decision packet)† | [motion/README.md](motion/README.md) |
-| 6 | Responsive behavior | Approved (architecture)‡; Recommended (exact breakpoint/grid/gutter/container values) | [responsive.md](responsive.md) |
-| 7 | Accessibility | Approved (WCAG 2.2 AA mapping)‡; Recommended (KBDL-specific enhancements) | [accessibility.md](accessibility.md) |
-| 8 | Core action, form, and navigation components | Approved (architecture)§; Recommended (component-level taxonomies) | [components-core.md](components-core.md) |
-| 9 | Surface, overlay, feedback, and system-state components | Approved (architecture)¶; Recommended (component-level taxonomies) | [components-system.md](components-system.md) |
-| 10 | Project profiles (Showcase, Precision, Flow) | Approved (architecture)‖; Recommended (discretionary profile-governance policy) | [profiles.md](profiles.md) |
-| 11 | Manual customization | Approved (inherited and prompt-mandated governance); Recommended/Deferred (new policy) — passed planning-agent validation | [customization.md](customization.md) |
-| 12 | Validation | Approved methodology; R16 source-independence remediation in progress; candidate `NOT READY — SOURCE-INDEPENDENCE AND CLAUSE-EVIDENCE REMEDIATION REQUIRED` (not approved) | [validation.md](validation.md) |
-| 13 | Governance | Approved | [governance.md](governance.md) |
-| 14 | Future expansion | Deferred | Location to be determined when needed |
+## Foundations
 
-\* See
-[foundations/README.md § Foundation Status Model](foundations/README.md#3-foundation-status-model)
-for how the module's architecture and default values are distinguished,
-and [KBDL-DEC-012](decision-register.md#kbdl-dec-012--foundation-decision-packet-approved)
-for the project owner's approval of the default values.
+Color, typography, spacing, layout grid, shape, elevation, iconography, and
+imagery. Base unit 4px; body type 16px; named breakpoints `compact`,
+`standard`, `expanded`, `wide`. → [foundations](foundations/README.md)
 
-\*\* See
-[themes/README.md](themes/README.md) for the full theme architecture and
-semantic-role inventory, and
-[KBDL-DEC-013](decision-register.md#kbdl-dec-013--kbdl-004-theme-decisions-approved)
-for the project owner's approval of the ten-item
-[theme decision packet](themes/README.md#10-theme-decision-packet-approved-under-kbdl-004-a1)
-(opaque light/dark mappings, status-family colors, opaque gradient
-caption-band strategy, color-value expression convention, conceptual
-transition guidance, selection precedence, project-override boundaries,
-and local contrast contexts). Opacity values, translucent variants, and
-all implementation-layer formats remain `Recommended`/`Not verified` and
-outside this approval.
+## Tokens
 
-† See [motion/README.md](motion/README.md) for the full motion
-architecture and
-[KBDL-DEC-014](decision-register.md#kbdl-dec-014--kbdl-005-motion-decisions-approved)
-for the project owner's approval of the fifteen-item
-[motion decision packet](motion/README.md#10-motion-decision-packet)
-(the five-level motion hierarchy, timing architecture and duration
-classes/values, easing categories/curves, movement-distance and scale
-ranges, stagger/overlap guidance, the entrance-versus-exit relationship,
-attention-repetition limits, ambient- and scroll-linked-motion
-boundaries, theme-transition duration/easing, the reduced-motion
-substitution matrix, the motion-token naming architecture,
-profile-level intensity adjustments, the multi-factor intensity model,
-and the navigation-motion architecture). Exact component-specific
-values, implementation technology, and all KBDL-006-or-later content
-remain `Recommended`/`Not verified`/`Deferred` and outside this
-approval.
+One framework-independent source of design values, grouped into color,
+typography, space, size, breakpoint, container, radius, border, shadow,
+opacity, motion, layer, and focus. Use semantic tokens in components; reference
+primitives only when defining a new semantic role. → [tokens](tokens/README.md)
 
-‡ See [responsive.md](responsive.md) and [accessibility.md](accessibility.md)
-for the full specifications. Requirements directly restating an
-already-adopted WCAG 2.2 Level A/AA criterion (adopted under
-[KBDL-DEC-010](decision-register.md#kbdl-dec-010--wcag-22-aa-baseline-with-enhanced-motion-safety))
-or a prior approved KBDL rule are `Approved`. Genuinely new KBDL-006
-defaults — exact breakpoint thresholds, grid columns, gutters,
-container widths, a preferred enhanced target size, a forced-colors/
-high-contrast policy, and a preferred accessibility testing matrix —
-remain `Recommended`, pending project-owner approval via the
-[responsive decision packet](responsive.md#35-responsive-decision-packet)
-and the
-[accessibility decision packet](accessibility.md#49-accessibility-decision-packet).
-No implementation-dependent validation (keyboard, screen-reader, zoom,
-forced-colors, flash, or real-device testing) is claimed `Verified` —
-no implementation exists yet.
+## Themes
 
-§ See [components-core.md](components-core.md) for the full
-specification. Requirements directly restating an already-approved
-WCAG 2.2 criterion, WAI-ARIA role/state/property, or prior approved
-KBDL rule are `Approved`. Genuinely new KBDL-007 component-level
-decisions — a button hierarchy taxonomy, a tabs activation model,
-breadcrumb/pagination truncation models, a navigation collapse
-threshold, and similar — remain `Recommended`, pending project-owner
-approval via the
-[KBDL-007 decision packet](components-core.md#35-kbdl-007-decision-packet).
-None of the nine unapproved KBDL-006 recommendations is treated as
-implementation authority anywhere in this module. No implementation-dependent
-validation is claimed `Verified` — no coded component exists yet.
+Light and dark are peers, not a base and a variant. Semantic tokens carry both
+values; theme selection follows system preference by default and persists an
+explicit user choice. Contrast requirements hold in both. →
+[themes](themes/README.md)
 
-¶ See [components-system.md](components-system.md) for the full
-specification. A requirement is `Approved` when authorized by an
-already-adopted WCAG 2.2 criterion, an adopted WAI-ARIA role/state/
-property definition, a prior approved KBDL or KBDL-007 rule, an
-explicit mandatory requirement in the project-owner-approved KBDL-008
-implementation prompt, or a documented combination of these; prompt
-approval authorizes only its own mandatory scope, not the KBDL-008
-decision packet. Genuinely new, discretionary KBDL-008 component-level
-decisions not mandated by the approved prompt — a card-variant
-taxonomy, an accordion open model, a tooltip timing policy, a modal
-sizing/nesting policy, a grid-versus-table threshold, and similar —
-remain `Recommended`, pending project-owner approval via the
-[KBDL-008 decision packet](components-system.md#33-kbdl-008-decision-packet).
-None of the nine unapproved KBDL-006 recommendations or the ten
-unapproved KBDL-007 recommendations is treated as implementation
-authority anywhere in this module. No implementation-dependent
-validation is claimed `Verified` — no coded component exists yet.
+## Motion
 
-‖ See [profiles.md](profiles.md) for the full specification. A
-requirement is `Approved` when authorized by a prior approved KBDL
-requirement, an explicit mandatory requirement in the project-owner-
-approved KBDL-009 implementation prompt, or a documented combination of
-these; prompt approval authorizes only its own mandatory scope, not the
-KBDL-009 decision packet. Genuinely new, discretionary profile-
-governance decisions not mandated by the approved prompt — a primary/
-secondary/hybrid profile policy, exact Precision density defaults,
-profile change/migration governance, a profile-selection rubric, and a
-profile review cadence — remain `Recommended`, pending project-owner
-approval via the
-[KBDL-009 decision packet](profiles.md#33-kbdl-009-decision-packet).
-None of the nine unapproved KBDL-006, ten unapproved KBDL-007, or
-seventeen unapproved KBDL-008 recommendations is treated as
-implementation authority anywhere in this module. No implementation-
-level profile validation exists — no coded project profile exists yet.
+Duration classes from instant to extended, named easings, and defined
+enter/exit relationships. Motion communicates change. Every animation has a
+reduced-motion alternative that preserves the information without the movement.
+→ [motion](motion/README.md)
 
-Supporting documents (not numbered modules, but required by KBDL-001 and
-referenced by KBDL-002 and KBDL-003):
+## Responsive behaviour
 
-- [glossary.md](glossary.md) — terminology
-- [conventions.md](conventions.md) — status labels, requirement IDs, cross-references
-- [governance.md](governance.md) — governance and change control
-- [contributing.md](contributing.md) — contribution and review workflow
-- [decision-register.md](decision-register.md) — approved decisions
-- [traceability-matrix.md](traceability-matrix.md) — requirement traceability
-- [conformance-checklist.md](conformance-checklist.md) — conformance review
+Mobile-first, content-driven breakpoints, fluid containers, adaptive
+navigation, touch-target minimums, and reflow at 320px and 200% zoom without
+loss of content or function. → [responsive](responsive.md)
 
-This hierarchy is designed so each remaining future module (rows 1, 5–12,
-14) can be added as its own file without reorganizing this index or
-renumbering existing requirement IDs, exactly as row 2 (Principles),
-row 3 (Visual foundations), and row 4 (Adaptive themes) were added in
-KBDL-002, KBDL-003, and KBDL-004 without disturbing any other row.
+## Accessibility
 
-## Status Labels
+Contrast, non-color communication, keyboard operation, focus visibility, target
+size, labelling, error identification, motion sensitivity, zoom and reflow, and
+the semantics implementations must expose.
 
-Every requirement, decision, or claim is described along three independent
-dimensions:
+> KBDL provides accessibility design requirements and implementation guidance.
+> Conformance must be verified in each product implementation.
 
-- **Lifecycle / approval status** — `Recommended`, `Unresolved`, `Approved`,
-  `Deferred`, `Blocked`, `Deprecated`, `Superseded`. Only `Approved`
-  authorizes implementation.
-- **Provenance** — `User-provided`, `Confirmed`, `Assumed`. Describes where a
-  statement came from or how much confidence it carries; never by itself an
-  authorization to implement.
-- **Validation status** — `Not verified`, `Verified`. Records whether a
-  defined validation method has actually been run; never by itself an
-  authorization to implement.
+→ [accessibility](accessibility.md)
 
-A requirement carries one label from each dimension at once. Full
-definitions, who may assign each label, and how they change are documented
-in [conventions.md](conventions.md#1-status-labels).
+## Components
 
-## Requirement Identification
+24 core specifications — button, text link, icon button, text input, textarea,
+select, checkbox, radio group, switch, form field, card, badge, alert, toast,
+dialog, tooltip, tabs, primary navigation, breadcrumb, table, pagination,
+loading indicator, skeleton, and empty state — each with purpose, anatomy,
+variants, states, interaction, responsive and keyboard behaviour, accessibility
+requirements, content guidance, and token dependencies. →
+[components](components/README.md)
 
-Requirements use the format `KBDL-<MODULE>-<###>` (for example
-`KBDL-GOV-001`), where `<MODULE>` is a stable three-to-four letter module
-code and `<###>` is a zero-padded sequential number, unique and never reused
-within its module. The full scheme, including module codes and the
-create/retire/supersede lifecycle, is documented in
-[conventions.md](conventions.md#2-requirement-identification).
+## Patterns
 
-## Governance, Glossary, Decisions, Traceability, and Conformance
+Page structure, navigation, forms and validation, loading, empty states,
+confirmation, search and filtering, dense data, theme selection, progressive
+disclosure, and reduced-motion behaviour. → [patterns](patterns.md)
 
-- **Principles:** [principles.md](principles.md) — KBDL identity, Digital
-  Luxury, Technical Utility, core principles, visual consistency, and the
-  design-decision hierarchy.
-- **Visual foundations:** [foundations/README.md](foundations/README.md) —
-  color, typography, spacing/layout, shape/depth, and iconography/media
-  architecture, plus the foundation decision packet approved via
-  [KBDL-DEC-012](decision-register.md#kbdl-dec-012--foundation-decision-packet-approved).
-- **Adaptive themes:** [themes/README.md](themes/README.md) — theme
-  architecture, semantic-role inventory, recommended light/dark theme
-  mappings, selection precedence, persistence, and project-controlled
-  adaptation.
-- **Governance:** [governance.md](governance.md) — ownership, change
-  control, approval, exceptions, and review expectations.
-- **Glossary:** [glossary.md](glossary.md) — definitions for all KBDL terms
-  used across the specification.
-- **Decision register:** [decision-register.md](decision-register.md) — the
-  record of approved KBDL decisions.
-- **Traceability matrix:** [traceability-matrix.md](traceability-matrix.md) —
-  connects blueprint concepts, requirement IDs, specification locations,
-  status, and validation.
-- **Conformance checklist:** [conformance-checklist.md](conformance-checklist.md) —
-  used to review any change before approval.
+## Profiles
+
+| Profile | For | Character |
+| --- | --- | --- |
+| **Showcase** | Portfolios, brand and editorial experiences | Expressive, generous spacing, larger type, richer motion |
+| **Precision** | Dashboards, tools, settings, data-heavy work | Dense, efficient, restrained motion, information-first |
+| **Flow** | Consumer products, guided and transactional tasks | Approachable, comfortable spacing, clear progression |
+
+Profiles adapt density, motion intensity, and surface treatment. They never
+change semantics, keyboard behaviour, or accessibility requirements. →
+[profiles](profiles.md)
+
+## Adopting KBDL
+
+Read the principles → choose a profile → map the tokens → apply foundations →
+build components → apply responsive and accessibility rules → test the real
+implementation → document extensions → contribute back. Includes designer and
+developer checklists. → [adoption](adoption.md)
+
+## Extending KBDL
+
+* Compose existing components before creating new ones.
+* Add semantic tokens; do not edit primitives in place.
+* A new component needs a purpose no existing one serves.
+* Extensions must satisfy the same accessibility requirements.
+* Record every project deviation in one place.
+
+Change process: [governance](governance.md).
+
+## Version status
+
+KBDL Design Language v1.0. Active documentation is the set listed in the map
+above. Changes follow lightweight governance; breaking token changes,
+accessibility regressions, removed component behaviour, and major profile
+changes get stronger review.
+
+## Historical governance archive
+
+KBDL was previously developed as an audit-grade specification programme with
+per-requirement traceability, evidence packages, and a formal owner-decision
+workflow.
+
+> Historical governance and validation artifacts are preserved under
+> `docs/kbdl/evidence/`. They document earlier project decisions but are not
+> active completion gates for KBDL Design Language v1.
+
+The same applies to [validation.md](validation.md),
+[traceability-matrix.md](traceability-matrix.md), `traceability-metadata.csv`,
+and [decision-register.md](decision-register.md): they are retained as
+historical records of how earlier decisions were reached. Where they describe a
+release candidate as not ready, list pending owner decisions, or reference
+source-model resolution, those statements are historical and describe the
+retired programme — they do not gate v1. See [STATUS](STATUS.md) for the scope
+change.

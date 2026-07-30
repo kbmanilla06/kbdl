@@ -1,149 +1,73 @@
-# KBDL Conformance Checklist
+# KBDL Design Language Completion Checklist
 
-Status: `Approved`
+The lean checklist for KBDL Design Language v1. It verifies that the design
+language is documented and internally consistent — not that every historical
+requirement ID has been re-verified, and not that any product built with KBDL
+is conformant.
 
-Return to the [specification index](README.md).
+Run [`scripts/validate_design_language.py`](scripts/validate_design_language.py)
+to check the mechanical items automatically.
 
-## How to Use This Checklist
+## Documentation completeness
 
-Every KBDL change or module is assessed against the items below. Each item is
-marked with exactly one of:
+- [x] **Principles documented** — [principles](principles.md), summarised in the
+      [README](README.md)
+- [x] **Tokens documented** — [tokens](tokens/README.md) with a single active
+      source at [`kbdl.tokens.json`](tokens/kbdl.tokens.json)
+- [x] **Light and dark themes documented** — [themes](themes/README.md),
+      including semantic mappings and selection behaviour
+- [x] **Motion documented** — [motion](motion/README.md): durations, easings,
+      relationships, and reduced-motion substitutions
+- [x] **Responsive behaviour documented** — [responsive](responsive.md):
+      breakpoints, containers, navigation, targets, reflow
+- [x] **Accessibility guidance documented** — [accessibility](accessibility.md)
+- [x] **Core component specifications documented** — 24 components in
+      [components](components/README.md), each with the required sections
+- [x] **Common patterns documented** — [patterns](patterns.md)
+- [x] **Three profiles documented** — Showcase, Precision, and Flow in
+      [profiles](profiles.md)
+- [x] **Adoption guide documented** — [adoption](adoption.md), with designer and
+      developer checklists
 
-- **Passed** — the item was checked and met the requirement, with evidence.
-- **Failed** — the item was checked and did not meet the requirement.
-- **Not verified** — the item has not yet been checked, or evidence is
-  missing. This is the default state; it is never used interchangeably with
-  `Passed`.
-- **Not applicable** — the item does not apply to the change being reviewed,
-  with a stated reason.
+## Mechanical validation
 
-An unfinished requirement must never be marked `Passed`.
+- [x] **Token JSON valid** — parses, no duplicate keys, required groups present
+- [x] **Token names follow the convention** — lowercase, dot-separated,
+      hierarchical
+- [x] **Internal links valid** — every relative Markdown link in the active
+      documentation resolves
+- [x] **Component sections present** — every component has purpose, anatomy,
+      variants, states, interaction, responsive, keyboard, focus, accessibility,
+      content, and token guidance
+- [x] **Disclaimers present** — the accessibility conformance disclaimer and the
+      historical-archive notice
+- [x] **No active legacy gates** — active documentation does not present the
+      retired owner-decision queue, field-source resolution, or the PA1
+      remediation chain as blocking v1
 
-## Checklist Items
+## Preservation
 
-| # | Item | Passed | Failed | Not verified | Not applicable |
-| --- | --- | --- | --- | --- | --- |
-| 1 | Correct KBDL terminology used, consistent with the [glossary](glossary.md) | | | | |
-| 2 | Requirement IDs follow the format in [conventions.md](conventions.md#2-requirement-identification) | | | | |
-| 3 | Status labels used correctly per [conventions.md](conventions.md#1-status-labels) | | | | |
-| 4 | Traceability updated in the [traceability matrix](traceability-matrix.md) | | | | |
-| 5 | Cross-references follow [conventions.md](conventions.md#3-cross-reference-conventions) and resolve correctly | | | | |
-| 6 | Change stays within the approved scope of the active roadmap step | | | | |
-| 7 | Accessibility impact stated (or `Not applicable` with reason) | | | | |
-| 8 | Motion impact stated (or `Not applicable` with reason) | | | | |
-| 9 | Responsive impact stated (or `Not applicable` with reason) | | | | |
-| 10 | Theme impact stated (or `Not applicable` with reason) | | | | |
-| 11 | Project-profile impact stated (or `Not applicable` with reason) | | | | |
-| 12 | Component impact stated (or `Not applicable` with reason) | | | | |
-| 13 | [Decision register](decision-register.md) updated where required | | | | |
-| 14 | Deferred and unresolved items recorded, not dropped | | | | |
-| 15 | Validation evidence recorded and matches what was actually run | | | | |
-| 16 | Unresolved risks documented | | | | |
-| 17 | Reviewer approval recorded | | | | |
+- [x] **Historical evidence preserved** — `docs/kbdl/evidence/**` is unchanged
+      and labelled as historical reference
+- [x] **Historical governance records retained** — `validation.md`,
+      `traceability-matrix.md`, `traceability-metadata.csv`, and
+      `decision-register.md` are unchanged and explicitly classified as
+      historical in [STATUS](STATUS.md)
 
-## KBDL-009 Project Profiles Checklist Items
+## Honest claims
 
-Applies in addition to the generic checklist above whenever a change
-touches [profiles.md](profiles.md) or any `KBDL-PRO-###` requirement.
-Uses the same four-column result convention.
+- [x] **No implementation-level conformance claimed** — KBDL provides
+      accessibility design requirements and implementation guidance;
+      conformance must be verified in each product implementation
+- [x] **No application, framework library, backend, API, or deployment
+      created** — KBDL ships documentation and tokens only
 
-| # | Item | Passed | Failed | Not verified | Not applicable |
-| --- | --- | --- | --- | --- | --- |
-| 18 | Profile declaration is present where applicable ([profiles.md §8](profiles.md#8-profile-selection-and-declaration)) | | | | |
-| 19 | Profile selection rationale is documented, not based on visual preference alone | | | | |
-| 20 | Project Profile is not confused with theme mode, viewport, device, role, persona, or manual customization | | | | |
-| 21 | One shared semantic architecture is preserved across Showcase, Precision, and Flow | | | | |
-| 22 | One shared accessibility architecture is preserved across all profiles | | | | |
-| 23 | Cross-profile invariants ([profiles.md §9](profiles.md#9-cross-profile-invariants)) are preserved | | | | |
-| 24 | Foundation roles and Approved values remain shared, not profile-specific | | | | |
-| 25 | Theme semantic roles and mode behavior remain shared, not profile-specific | | | | |
-| 26 | Motion timing/easing architecture remains shared, not profile-specific | | | | |
-| 27 | Responsive and reflow outcomes remain shared, not profile-specific | | | | |
-| 28 | Component semantics and anatomy (KBDL-007 and KBDL-008) remain unchanged across profiles | | | | |
-| 29 | Security, privacy, correctness, and state-accuracy requirements remain shared across profiles | | | | |
-| 30 | Pending KBDL-006 dependencies are identified and not promoted | | | | |
-| 31 | Pending KBDL-007 dependencies are identified and not promoted | | | | |
-| 32 | Pending KBDL-008 dependencies are identified and not promoted | | | | |
-| 33 | Approval-ready and contingent KBDL-009 decisions are separated correctly ([profiles.md §34](profiles.md#34-approval-ready-versus-contingent-decisions)) | | | | |
-| 34 | Every non-Approved `KBDL-PRO-###` requirement has a packet or tracking destination ([profiles.md §38](profiles.md#38-decision-packet-coverage-audit)) | | | | |
-| 35 | Implementation packages and post-validation work have not begun before completion approval | | | | |
-| 36 | Implementation-level profile conformance is not claimed without recorded evidence | | | | |
+## Not required for v1
 
-No row above is marked `Passed` in this repository; no project-level
-implementation exists to generate evidence against.
-
-## KBDL-010 Manual Customization Checklist Items
-
-Applies in addition to the generic checklist whenever a change touches
-[customization.md](customization.md), a customization record, or any
-`KBDL-CUS-###` requirement. No row is pre-marked.
-
-| # | Item | Passed | Failed | Not verified | Not applicable |
-| --- | --- | --- | --- | --- | --- |
-| 37 | Customization is manual and documented | | | | |
-| 38 | Project and declared Profile are identified | | | | |
-| 39 | Every affected module and requirement is identified | | | | |
-| 40 | Source lifecycle statuses are recorded accurately | | | | |
-| 41 | Request has exactly one correct primary class | | | | |
-| 42 | Locked rules remain unchanged | | | | |
-| 43 | Approved requirements remain unchanged unless an Approved exception exists | | | | |
-| 44 | Controlled options remain inside Approved owning-module bounds | | | | |
-| 45 | Open expression remains subordinate to locked and Approved rules | | | | |
-| 46 | Pending recommendations are not promoted | | | | |
-| 47 | Accessibility impact is reviewed | | | | |
-| 48 | Responsive impact is reviewed | | | | |
-| 49 | Theme and foundation impacts are reviewed | | | | |
-| 50 | Motion impact is reviewed | | | | |
-| 51 | Component semantics and anatomy are preserved | | | | |
-| 52 | Profile invariants are preserved | | | | |
-| 53 | Security, privacy, correctness, and data integrity are preserved | | | | |
-| 54 | Required approval and its exact authority are recorded | | | | |
-| 55 | Decision-register impact is handled correctly | | | | |
-| 56 | Validation method and required evidence are defined | | | | |
-| 57 | Implementation-level validation is not claimed prematurely | | | | |
-| 58 | Rollback is documented | | | | |
-| 59 | Duration and review conditions are documented | | | | |
-| 60 | Reusable customization is escalated appropriately | | | | |
-| 61 | Every non-Approved CUS requirement has one packet or tracking destination | | | | |
-| 62 | Implementation packages and later scope remain unstarted; completion is not declared | | | | |
-
-## KBDL-011 Final Validation Checklist Items
-
-Applies to the final documentation audit and every `KBDL-VAL-###`
-requirement. No row is pre-marked.
-
-| # | Item | Passed | Failed | Not verified | Not applicable |
-| --- | --- | --- | --- | --- | --- |
-| 63 | Requirement inventory is complete and exact | | | | |
-| 64 | Every Approved requirement has valid implementation authority | | | | |
-| 65 | Every requirement is traced exactly once | | | | |
-| 66 | Lifecycle labels agree across authoritative sources | | | | |
-| 67 | `Approved` is used only as the implementation-authority state | | | | |
-| 68 | Every `Verified` claim has executed evidence | | | | |
-| 69 | Untested implementation behavior remains explicitly `Not verified` | | | | |
-| 70 | Every non-Approved requirement has a packet or tracking destination | | | | |
-| 71 | Decision-register entries and approval scopes are exact | | | | |
-| 72 | Internal links and anchors resolve | | | | |
-| 73 | Markdown tables are structurally sound | | | | |
-| 74 | Requirement IDs are unique and well formed | | | | |
-| 75 | One shared semantic and accessibility architecture is preserved | | | | |
-| 76 | WCAG-derived claims remain within their adopted scope | | | | |
-| 77 | Opaque theme contrast calculations are reproducible | | | | |
-| 78 | Motion runtime behavior remains `Not verified` without runtime evidence | | | | |
-| 79 | Responsive and device behavior remains `Not verified` without device evidence | | | | |
-| 80 | Component runtime behavior remains `Not verified` without implementation evidence | | | | |
-| 81 | Project Profile invariants remain shared and unchanged | | | | |
-| 82 | Manual customization remains bounded by Approved authority | | | | |
-| 83 | Security, privacy, correctness, or data-integrity conformance is not claimed without evidence | | | | |
-| 84 | Specification release readiness is reported separately | | | | |
-| 85 | Implementation conformance is reported separately | | | | |
-| 86 | Known limitations and acceptance needs are explicit | | | | |
-| 87 | Deferred and pending work remains visible | | | | |
-| 88 | Candidate readiness is not represented as project completion | | | | |
-
-## Result Summary
-
-State the overall result as `Passed`, `Failed`, `Not verified`, or a mix with
-per-item detail. A change with any `Failed` item is not ready for approval
-until remediated or the failure is explicitly `Deferred` per
-[governance.md](governance.md).
+Explicitly out of scope, by the approved scope change in [STATUS](STATUS.md):
+resolving the remaining historical owner decisions, reducing the historical
+field-source registry to zero failures, continuing the PA1 remediation chain,
+completing every earlier roadmap prompt, generating new evidence packages,
+producing audit-grade checksums for routine documentation work, proving
+implementation-level WCAG conformance without an implementation, or writing
+production component code.

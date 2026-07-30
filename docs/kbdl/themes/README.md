@@ -1,5 +1,12 @@
 # KBDL Themes — Index
 
+> **KBDL Design Language v1 — active guidance.** Per-requirement
+> lifecycle and approval labels below are historical provenance annotations
+> from the retired specification programme; they are not pending decisions and
+> they do not gate v1. Concrete values are consolidated in
+> [tokens](../tokens/README.md). Values a project may legitimately vary are
+> labelled *Project-controlled*, not unresolved. See [STATUS](../STATUS.md).
+
 **Updated under KBDL-004-A1.** The project owner approved all ten items
 in the theme decision packet (§10.2) — see
 [KBDL-DEC-013](../decision-register.md#kbdl-dec-013--kbdl-004-theme-decisions-approved).
