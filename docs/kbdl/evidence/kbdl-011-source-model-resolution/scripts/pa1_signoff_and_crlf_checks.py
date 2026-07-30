@@ -84,7 +84,8 @@ STALE_GATE_PATTERNS = {
 # The sign-off must positively state the current gate, not merely omit the
 # stale one.
 SIGNOFF_CURRENT_GATE_RE = re.compile(
-    r"current open gate is planning-agent validation of\s+KBDL-011-SMR2-VC-0001-PA1",
+    r"current open gate is planning-agent validation of\s+"
+    r"KBDL-011-SMR2-VC-0001-PA1-R2",
     re.IGNORECASE)
 
 # project-owner-review.md scope.
@@ -287,6 +288,150 @@ def compute(root):
     checks.extend(check_stale_gate_statements(root))
     checks.extend(check_review_form_scope(root))
     checks.extend(check_crlf_integrity(root))
+    checks.extend(check_gate_contradictions(root))
+    return checks
+
+
+
+
+# ---------------------------------------------------------------------------
+# KBDL-011-SMR2-VC-0001-PA1-R2: gate-contradiction checks (R2A-R2E)
+# ---------------------------------------------------------------------------
+#
+# PA1's GATE1-GATE4 missed four things, all of which shipped:
+#   * a prompt described as validated AND locked pending that same validation,
+#     in the same section;
+#   * the stale recommendation written with the validation phrase BEFORE the
+#     prompt ID ("Planning-agent validation of KBDL-011-SMR2-FSRG1");
+#   * a contradiction laundered by a broad historical marker sitting elsewhere
+#     in the same paragraph;
+#   * the four current-state documents disagreeing about the current gate.
+#
+# R2A-R2E close those. Historical exemptions here are STATEMENT-local (the
+# sentence or bullet the claim sits in), never paragraph-wide.
+
+COMPLETED_PROMPTS = ("KBDL-011-SMR2-FSRG1", "KBDL-011-SMR2-VC-0001")
+CURRENT_GATE_PROMPT = "KBDL-011-SMR2-VC-0001-PA1-R2"
+
+# Reverse-order stale recommendation: the validation phrase before the ID.
+REVERSE_ORDER_RE = re.compile(
+    r"[Pp]lanning-agent validation of\s+`?(KBDL-011-SMR2-FSRG1|"
+    r"KBDL-011-SMR2-VC-0001)`?(?!-PA1)", re.MULTILINE)
+
+# "locked / awaiting its own validation" claims about a completed prompt.
+LOCKED_PENDING_RE = re.compile(
+    r"(?:stay|stays|remain|remains|is|are)\s+`?LOCKED\s*[—-]\s*PLANNING-AGENT "
+    r"VALIDATION REQUIRED|awaiting (?:its own )?planning-agent validation",
+    re.IGNORECASE)
+PASSED_CLAIM_RE = re.compile(
+    r"PASSED\s*[—-]\s*PLANNING-AGENT VALIDATED|has passed planning-agent validation|"
+    r"have (?:both )?passed planning-agent validation", re.IGNORECASE)
+
+# Statement-local historical markers only. Deliberately narrower than
+# HISTORICAL_MARKER_RE: a marker must sit in the same sentence/bullet as the
+# claim, so a neighbouring "historical note" cannot launder a current claim.
+LOCAL_HISTORICAL_RE = re.compile(
+    r"historical note|at the [^.]{0,60}point|previously read|formerly read|"
+    r"then-current|has since|since been|no longer|superseded|was reissued",
+    re.IGNORECASE)
+
+
+def _statements(text):
+    """Split into bullet-or-sentence sized units for statement-local checks."""
+    units = []
+    for block in re.split(r"\n(?=\s*[-*] )|\n\n", text):
+        for sentence in re.split(r"(?<=[.!?])\s+(?=[A-Z`*(])", block):
+            if sentence.strip():
+                units.append(sentence)
+    return units
+
+
+def check_gate_contradictions(root):
+    """R2A-R2E."""
+    checks = []
+    texts = {rel: (_read(root, rel) or "") for rel in CURRENT_STATE_FILES}
+
+    # R2A: reverse-order stale recommendation.
+    hits = []
+    for rel, text in texts.items():
+        for m in REVERSE_ORDER_RE.finditer(text):
+            unit = next((u for u in _statements(text) if m.group(0) in u), m.group(0))
+            if LOCAL_HISTORICAL_RE.search(unit):
+                continue
+            hits.append((rel, " ".join(unit.split())[:110]))
+    checks.append(("R2A. no current document recommends planning-agent validation of an "
+                   "already-validated prompt (reverse-order phrasing)",
+                   not hits, f"hits={hits[:3]}"))
+
+    # R2B: validated AND locked-pending-that-validation for the same prompt.
+    contradictions = []
+    for rel, text in texts.items():
+        for prompt in COMPLETED_PROMPTS:
+            if not re.search(re.escape(prompt), text):
+                continue
+            for unit in _statements(text):
+                if prompt not in unit:
+                    continue
+                if LOCKED_PENDING_RE.search(unit) and not LOCAL_HISTORICAL_RE.search(unit):
+                    contradictions.append((rel, prompt, " ".join(unit.split())[:110]))
+    checks.append(("R2B. no current document says a planning-agent-validated prompt is "
+                   "locked or awaiting that same validation",
+                   not contradictions, f"contradictions={contradictions[:3]}"))
+
+    # R2C: a section may not hold both a passed claim and an unmarked
+    # locked-pending claim about the same prompt.
+    section_conflicts = []
+    for rel, text in texts.items():
+        for section in re.split(r"\n(?=## )", text):
+            for prompt in COMPLETED_PROMPTS:
+                if prompt not in section:
+                    continue
+                if not PASSED_CLAIM_RE.search(section):
+                    continue
+                for unit in _statements(section):
+                    if (LOCKED_PENDING_RE.search(unit)
+                            and prompt in unit
+                            and not LOCAL_HISTORICAL_RE.search(unit)):
+                        head = section.split("\n", 1)[0][:60]
+                        section_conflicts.append((rel, head, prompt))
+    checks.append(("R2C. no section asserts both that a prompt passed and that it remains "
+                   "locked pending that validation (no paragraph-wide marker laundering)",
+                   not section_conflicts, f"conflicts={section_conflicts[:3]}"))
+
+    # R2D: the four current-state documents agree the completed prompts passed.
+    disagreements = []
+    for rel in (REVIEW_REL, f"{SMR1_REL}/source-model-resolution-packet.md",
+                f"{SMR1_REL}/implementation-report.md",
+                f"{SMR1_REL}/implementation-unlock-map.md"):
+        text = texts.get(rel, "")
+        if not text:
+            disagreements.append((rel, "missing"))
+            continue
+        for prompt in COMPLETED_PROMPTS:
+            if prompt in text and not PASSED_CLAIM_RE.search(text):
+                disagreements.append((rel, prompt, "no passed claim"))
+    checks.append(("R2D. implementation-unlock-map.md, the packet, the implementation "
+                   "report, and the review form agree that both completed prompts passed",
+                   not disagreements, f"disagreements={disagreements[:3]}"))
+
+    # R2E: the current open gate is PA1-R2, and only PA1-R2.
+    gate_named = {}
+    # Only an actual designation counts ("the current open gate IS <id>"),
+    # not prose that merely mentions the phrase while describing a correction
+    # ("... described as the current open gate, KBDL-011-SMR2-FSRG1 described
+    # as not yet validated ...").
+    gate_re = re.compile(r"current open gate is[^.\n]{0,90}?"
+                         r"(KBDL-011-[A-Z0-9-]+)", re.IGNORECASE)
+    for rel, text in texts.items():
+        for m in gate_re.finditer(text):
+            unit = next((u for u in _statements(text) if m.group(0) in u), m.group(0))
+            if LOCAL_HISTORICAL_RE.search(unit):
+                continue
+            gate_named.setdefault(m.group(1), set()).add(rel)
+    ok = set(gate_named) == {CURRENT_GATE_PROMPT}
+    checks.append((f"R2E. the current open gate is named as {CURRENT_GATE_PROMPT} and "
+                   "nothing else", ok,
+                   f"named={ {k: sorted(v) for k, v in gate_named.items()} }"))
     return checks
 
 

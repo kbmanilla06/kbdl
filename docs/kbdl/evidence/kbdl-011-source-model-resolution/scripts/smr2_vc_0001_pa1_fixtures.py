@@ -568,7 +568,7 @@ def fx_stale_vc0001_locked(sb):
 def fx_signoff_drops_current_gate(sb):
     sb.sub(REVIEW_ABS,
            "The current open gate is planning-agent validation of "
-           "KBDL-011-SMR2-VC-0001-PA1 and this sign-off remediation",
+           "KBDL-011-SMR2-VC-0001-PA1-R2",
            "Gate status not stated")
     return _gate_failing(sb), {"GATE4"}
 
@@ -668,6 +668,124 @@ NEGATIVE += [
 POSITIVE += [
     ("P9_signoff_and_crlf_clean", "sign-off, review scope, and CRLF all clean",
      pc_signoff_and_crlf_clean),
+]
+
+
+# ---------------------------------------------------------------------------
+# PA1-R2 gate-contradiction fixtures (R2A-R2E)
+# ---------------------------------------------------------------------------
+
+REPORT_REL = f"{SMR1_REL}/implementation-report.md"
+MANIFEST_REL = f"{SMR1_REL}/evidence-manifest.md"
+
+
+def fx_packet_fsrg1_passed_and_locked(sb):
+    """Packet says FSRG1 passed and also remains locked pending validation."""
+    sb.sub(PACKET_REL, "## 8. Progression gate",
+           "`KBDL-011-SMR2-FSRG1` remains `LOCKED — PLANNING-AGENT VALIDATION "
+           "REQUIRED`.\n\n## 8. Progression gate")
+    return _gate_failing(sb), {"R2B", "R2C"}
+
+
+def fx_packet_vc0001_passed_and_locked(sb):
+    sb.sub(PACKET_REL, "## 8. Progression gate",
+           "`KBDL-011-SMR2-VC-0001` stays `LOCKED — PLANNING-AGENT VALIDATION "
+           "REQUIRED`.\n\n## 8. Progression gate")
+    return _gate_failing(sb), {"R2B", "R2C", "GATE3"}
+
+
+def fx_report_recommends_fsrg1_validation(sb):
+    """The exact stale recommendation this remediation removed."""
+    sb.sub(REPORT_REL, "## Recommended next action",
+           "## Recommended next action\n\nPlanning-agent validation of "
+           "`KBDL-011-SMR2-FSRG1`.\n")
+    return _gate_failing(sb), {"R2A"}
+
+
+def fx_reverse_order_phrase(sb):
+    """Validation phrase before the prompt ID, elsewhere in the packet."""
+    sb.sub(PACKET_REL, "## 8. Progression gate",
+           "Planning-agent validation of KBDL-011-SMR2-VC-0001 is required.\n\n"
+           "## 8. Progression gate")
+    return _gate_failing(sb), {"R2A"}
+
+
+def fx_same_paragraph_marker_laundering(sb):
+    """A broad historical marker in the SAME paragraph must not rescue a
+    contradictory current claim in a different sentence."""
+    sb.sub(PACKET_REL, "## 8. Progression gate",
+           "Historical note: earlier rounds differed. "
+           "`KBDL-011-SMR2-FSRG1` remains `LOCKED — PLANNING-AGENT VALIDATION "
+           "REQUIRED`.\n\n## 8. Progression gate")
+    return _gate_failing(sb), {"R2B", "R2C"}
+
+
+def fx_adjacent_bullet_marker_laundering(sb):
+    """A marker in a neighbouring bullet must not rescue the next bullet."""
+    sb.sub(PACKET_REL, "## 8. Progression gate",
+           "- Historical note: the earlier state was different.\n"
+           "- `KBDL-011-SMR2-FSRG1` remains `LOCKED — PLANNING-AGENT VALIDATION "
+           "REQUIRED`.\n\n## 8. Progression gate")
+    return _gate_failing(sb), {"R2B", "R2C"}
+
+
+def fx_unlock_map_and_report_disagree(sb):
+    """The report drops every passed claim while the map keeps one."""
+    t = sb.read(REPORT_REL)
+    for phrase in ("PASSED — PLANNING-AGENT VALIDATED",
+                   "has passed planning-agent validation",
+                   "have passed planning-agent validation",
+                   "have both passed planning-agent validation"):
+        t = t.replace(phrase, "status not stated")
+    sb.write(REPORT_REL, t)
+    return _gate_failing(sb), {"R2D"}
+
+
+def fx_packet_and_review_disagree_on_gate(sb):
+    """The packet names a different current gate than the review form."""
+    sb.sub(PACKET_REL, "## 8. Progression gate",
+           "The current open gate is KBDL-011-SMR2-FSRG1.\n\n"
+           "## 8. Progression gate")
+    return _gate_failing(sb), {"R2E"}
+
+
+def pc_marked_historical_locked_state(sb):
+    """A locked state with a STATEMENT-LOCAL historical marker is legal."""
+    sb.sub(PACKET_REL, "## 8. Progression gate",
+           "(Historical note: at that implementation point "
+           "`KBDL-011-SMR2-FSRG1` remained `LOCKED — PLANNING-AGENT VALIDATION "
+           "REQUIRED`.)\n\n## 8. Progression gate")
+    return _gate_failing(sb), set()
+
+
+def pc_current_state_consistent(sb):
+    return _gate_failing(sb), set()
+
+
+NEGATIVE += [
+    ("38_packet_fsrg1_passed_and_locked", "packet: FSRG1 passed and locked",
+     fx_packet_fsrg1_passed_and_locked),
+    ("39_packet_vc0001_passed_and_locked", "packet: VC-0001 passed and locked",
+     fx_packet_vc0001_passed_and_locked),
+    ("40_report_recommends_fsrg1_validation", "report recommends validating FSRG1",
+     fx_report_recommends_fsrg1_validation),
+    ("41_reverse_order_stale_phrase", "validation phrase before the prompt ID",
+     fx_reverse_order_phrase),
+    ("42_same_paragraph_marker_laundering", "broad marker, same paragraph",
+     fx_same_paragraph_marker_laundering),
+    ("43_adjacent_bullet_marker_laundering", "marker in a neighbouring bullet",
+     fx_adjacent_bullet_marker_laundering),
+    ("44_unlock_map_and_report_disagree", "report drops every passed claim",
+     fx_unlock_map_and_report_disagree),
+    ("45_packet_and_review_disagree_on_gate", "packet names a different current gate",
+     fx_packet_and_review_disagree_on_gate),
+]
+
+POSITIVE += [
+    ("P10_marked_historical_locked_state", "statement-local historical marker is legal",
+     pc_marked_historical_locked_state),
+    ("P11_current_state_consistent", "unmutated current state is consistent",
+     pc_current_state_consistent),
 ]
 
 

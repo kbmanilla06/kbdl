@@ -322,7 +322,7 @@ in the durable record and stale current-state prose (see §11);
 reopening or reinterpreting the underlying `SET TO NOT VERIFIED`
 decision itself.
 
-## 11. Current planning-agent validation status (as of KBDL-011-SMR1-RM1)
+## 11. Current planning-agent validation status (as of KBDL-011-SMR2-VC-0001-PA1-R2)
 
 This section states the current planning-agent-validation gate status
 without rewriting any prior commit or historical transcript:
@@ -350,13 +350,22 @@ without rewriting any prior commit or historical transcript:
 - `KBDL-011-SMR2-FSRG1`: **PASSED — PLANNING-AGENT VALIDATED.**
 - `KBDL-011-SMR2-VC-0001` (reissued): **PASSED — PLANNING-AGENT VALIDATED**
   on 2026-07-30.
-- `KBDL-011-SMR2-VC-0001-PA1` and this sign-off remediation:
-  **planning-agent validation of these steps is the current open gate.**
+- `KBDL-011-SMR2-VC-0001-PA1`: planning-agent review returned APPROVE WITH
+  CHANGES and required remediation. It has **not** passed on its own; two
+  remediations were applied — the sign-off correction and
+  `KBDL-011-SMR2-VC-0001-PA1-R2`.
+- `KBDL-011-SMR2-VC-0001-PA1-R2` (this remediation): **planning-agent
+  validation of PA1 as remediated by this step is the current open gate.**
 
-`KBDL-011` remains incomplete. Closing these gates does not approve
-candidate readiness, implementation conformance, or project completion,
-and does not unlock `KBDL-011-SMR2-FSRG1` or `KBDL-011-SMR2-VC-0001`,
-both of which remain `LOCKED — PLANNING-AGENT VALIDATION REQUIRED`.
+`KBDL-011` remains incomplete. `KBDL-011-SMR2-FSRG1` and the reissued
+`KBDL-011-SMR2-VC-0001` have both passed planning-agent validation and are
+neither locked nor awaiting it; each carries the sanctioned completed status
+`ELIGIBLE FOR FUTURE PROMPT AFTER APPROVAL` in `implementation-unlock-map.md`.
+Closing these gates approves nothing further: it does not approve candidate
+readiness, implementation conformance, or project completion; it does not
+unlock Batch A, which remains `LOCKED — OWNER DECISION REQUIRED` for its 58
+undecided issues; it makes no metadata-recording prompt eligible, including for
+the review-only target `SMR1-VC-0002`; and it authorizes no implementation.
 
 Current decision-state counts (unchanged by this step): 4 decisions
 durably recorded in total (3 Batch H, 1 Batch A); 417 issues remain
@@ -456,11 +465,13 @@ comparison of every protected and normative file, decision counts, the
 downstream lock, and VAL/readiness preservation. That integration is read-only —
 it never regenerates the registry.
 
-**Implementation is not validation.** `KBDL-011-SMR2-FSRG1` is awaiting
-planning-agent validation and remains
-`LOCKED — PLANNING-AGENT VALIDATION REQUIRED`, as does
-`KBDL-011-SMR2-VC-0001`, which was not begun, resumed, or reissued and must be
-**reissued, not resumed**, only after FSRG1 passes. This step changed no
+**Implementation is not validation.** (Historical note: at the
+`KBDL-011-SMR2-FSRG1` implementation point this section read that FSRG1 was
+awaiting planning-agent validation and that `KBDL-011-SMR2-VC-0001` had not been
+begun, resumed, or reissued. Both have since occurred: FSRG1 passed
+planning-agent validation, the downstream prompt was reissued rather than
+resumed, and it has since passed its own planning-agent validation — see §11 for
+the current gate status.) This step changed no
 normative content, no effective metadata, and no protected file; gave
 `SMR1-VC-0001` no effect in effective metadata; restored no VAL status; and
 moved no owner decision. The decision state is unchanged: 4 durably recorded

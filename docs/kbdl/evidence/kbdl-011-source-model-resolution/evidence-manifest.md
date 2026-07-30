@@ -253,9 +253,11 @@ four R13–R16 registries remain byte-identical immutable historical evidence,
 verified on every run against the digests recorded in their own round
 inventories. Inside this packet, FSRG1 adds `scripts/fsrg1_integration.py` and
 eleven read-only `FSRG1.*` checks to `scripts/validate_packet.py`, weakening or
-removing no existing check. Implementation is not validation:
-`KBDL-011-SMR2-FSRG1` remains `LOCKED — PLANNING-AGENT VALIDATION REQUIRED`, and
-`KBDL-011-SMR2-VC-0001` was not begun, resumed, or reissued.
+removing no existing check. Implementation is not validation. (Historical note: at the
+`KBDL-011-SMR2-FSRG1` implementation point FSRG1 read
+`LOCKED — PLANNING-AGENT VALIDATION REQUIRED` and `KBDL-011-SMR2-VC-0001` had
+not been begun, resumed, or reissued. Both have since occurred and both prompts
+have since passed planning-agent validation.)
 
 RM1 also records, on the same 2026-07-29 owner disposition, that
 `KBDL-011-SMR1-BA-OD1-DR1-R1` is **PASSED — PLANNING-AGENT VALIDATED**
@@ -263,7 +265,7 @@ and is not an open gate. `KBDL-011-SMR1-RM1` is likewise not an open gate:
 `KBDL-011-SMR2-FSRG1` and the reissued `KBDL-011-SMR2-VC-0001` have both
 since been implemented and have passed planning-agent validation. The
 current open gate is planning-agent validation of
-`KBDL-011-SMR2-VC-0001-PA1` and this sign-off remediation. And RM1's regeneration of
+`KBDL-011-SMR2-VC-0001-PA1-R2`. And RM1's regeneration of
 `evidence-inventory.csv` and `checksums.sha256` closes a pre-existing
 omission: `batch-a-od1-dr1-validation-transcript.txt`, the durable
 transcript added by `KBDL-011-SMR1-BA-OD1-DR1`, existed in the packet but
@@ -360,3 +362,37 @@ is caught as well as committed damage.
 positive controls (46 total), covering each stale statement, each review-form
 scope violation, and each CRLF failure mode, all on a temporary copy with the
 real repository verified byte-unchanged.
+
+`KBDL-011-SMR2-VC-0001-PA1-R2` removes the gate contradictions the first PA1
+remediation left behind. `source-model-resolution-packet.md` §11 had listed
+`KBDL-011-SMR2-FSRG1` and the reissued `KBDL-011-SMR2-VC-0001` as passed and
+then closed with both "remain `LOCKED — PLANNING-AGENT VALIDATION REQUIRED`";
+`implementation-report.md` had recommended planning-agent validation of FSRG1
+while also stating FSRG1 had passed. Both are corrected: the completed prompts
+are stated as validated and not locked, the packet's §13 and this manifest's
+FSRG1-era sentences are marked as the historical statements they are, and the
+current open gate is named as `KBDL-011-SMR2-VC-0001-PA1-R2` in every
+current-state document. `KBDL-011-SMR2-VC-0001-PA1` itself is recorded as
+having required remediation rather than as passed.
+
+`scripts/pa1_signoff_and_crlf_checks.py` gains `R2A`–`R2E`, which make those
+exact defects fail closed: `R2A` rejects the reverse-order stale phrasing
+("planning-agent validation of <completed prompt>"), `R2B` rejects any
+statement calling a validated prompt locked or awaiting that same validation,
+`R2C` rejects a section holding both claims, `R2D` requires the unlock map,
+packet, implementation report, and review form to agree that both completed
+prompts passed, and `R2E` requires the current open gate to be named as
+`KBDL-011-SMR2-VC-0001-PA1-R2` and nothing else. Historical exemptions in these
+checks are **statement-local** — the marker must sit in the same sentence or
+bullet as the claim — so a broad marker in a neighbouring sentence or bullet can
+no longer launder a contradictory current statement. `GATE1`–`GATE4`,
+`POR1`–`POR5`, and `CRLF1`–`CRLF6` are unchanged except that `GATE4` now
+requires the PA1-R2 gate name specifically.
+
+`scripts/smr2_vc_0001_pa1_fixtures.py` grows to 45 negative fixtures and 11
+positive controls (56 total), adding both passed-and-locked forms, the stale
+FSRG1 recommendation, the reverse-order phrase, same-paragraph and
+adjacent-bullet marker laundering, a map/report disagreement, a packet/review
+gate disagreement, and a positive control proving a statement-local historical
+marker remains legal. The suite's `__main__` guard is verified to sit after
+every fixture registration.

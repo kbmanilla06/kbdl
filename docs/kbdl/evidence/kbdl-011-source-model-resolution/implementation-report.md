@@ -494,21 +494,28 @@ VAL-006 `Not verified`; readiness, conformance, and completion; decision counts
 
 ## Recommended next action
 
-Planning-agent validation of `KBDL-011-SMR2-FSRG1`.
-`KBDL-011-SMR1-BA-OD1-DR1-R1` has passed and is closed, as are
-`KBDL-011-SMR1-BH-R1`/`BH-R2`/`BH-AGC1`/`BH-AGC1-VF1`;
-`KBDL-011-SMR1-RM1` and `KBDL-011-SMR2-FSRG1` are not open gates; both,
-and the reissued `KBDL-011-SMR2-VC-0001`, have passed planning-agent
-validation. The current open gate is `KBDL-011-SMR2-VC-0001-PA1` and this
-sign-off remediation.
+Request planning-agent validation of `KBDL-011-SMR2-VC-0001-PA1-R2`. That
+is the only current open gate.
 
-Issuing `KBDL-011-SMR2-VC-0001`, beginning KBDL-011-SMR2 or another SMR1
-batch, restoring any VAL status, further implementation work, and any
-readiness/completion approval all remain explicitly out of scope. Both
-`KBDL-011-SMR2-FSRG1` and `KBDL-011-SMR2-VC-0001` stay
-`LOCKED — PLANNING-AGENT VALIDATION REQUIRED`; the downstream prompt is
-**reissued, not resumed**, and only after FSRG1 itself passes
-planning-agent validation.
+Closed gates: `KBDL-011-SMR1-BH-R1`/`BH-R2`/`BH-AGC1`/`BH-AGC1-VF1` and
+`KBDL-011-SMR1-BA-OD1-DR1-R1` have passed; `KBDL-011-SMR1-RM1` is not an
+open gate; **`KBDL-011-SMR2-FSRG1` has passed planning-agent validation**;
+and the **reissued `KBDL-011-SMR2-VC-0001` has passed planning-agent
+validation** on 2026-07-30. Neither completed prompt is locked or awaiting
+its own validation — each carries the sanctioned completed status
+`ELIGIBLE FOR FUTURE PROMPT AFTER APPROVAL` in
+`implementation-unlock-map.md`.
+
+`SMR1-VC-0002` (`KBDL-A11Y-004`) is review-only: named as the sole next
+owner-review target, with every choice unselected, its owner fields
+`PENDING`, and no durable record. Batch A remains
+`LOCKED — OWNER DECISION REQUIRED` for its 58 undecided issues.
+
+Out of scope and not authorized: soliciting or recording the
+`SMR1-VC-0002` owner decision, releasing any metadata-recording prompt,
+beginning another SMR2 or SMR1 item, restoring any VAL status, further
+implementation work, and any readiness, conformance, or completion
+approval.
 
 ## Rollback
 
