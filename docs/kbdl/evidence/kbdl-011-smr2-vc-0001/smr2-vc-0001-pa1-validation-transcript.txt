@@ -567,3 +567,226 @@ Implementation authorization status: NOT AUTHORIZED
 
 Sections 10+ (post-publication) are appended by the evidence-closure
 commit. If absent, publication did not complete.
+
+======= 10. COMMIT A AND POST-PUBLICATION VALIDATION ================
+$ git show --no-patch --format=fuller e89b3ae
+commit e89b3ae5d6f49d2ce8b444af9dd1a272e31e52d7
+Author:     Khristopher Ben Manilla <kbmanilla06@gmail.com>
+AuthorDate: Thu Jul 30 11:35:11 2026 +0800
+Commit:     Khristopher Ben Manilla <kbmanilla06@gmail.com>
+CommitDate: Thu Jul 30 11:35:11 2026 +0800
+
+    docs(kbdl): record SMR2-VC-0001 planning-agent PASS and stage SMR1-VC-0002 (KBDL-011-SMR2-VC-0001-PA1)
+    
+    Administrative transition only. No metadata, registry, decision, or VAL
+    state changes.
+    
+    Records the planning-agent PASS for the reissued KBDL-011-SMR2-VC-0001 in
+    a durable record, KBDL-SMR2-VC-0001-PLANNING-AGENT-VALIDATION-2026-07-30,
+    covering implementation af6a60a, evidence closure 4aba456, and remediation
+    448e39b. SMR1-VC-0001 advances from METADATA RECORDED - AWAITING
+    PLANNING-AGENT VALIDATION to METADATA RECORDED - PLANNING-AGENT VALIDATED:
+    validated, not resolved, closed, verified, or complete. Exactly one cell
+    of that row changed; CRLF preserved.
+    
+    The record is deliberately not an owner-decision record - different
+    filename convention, different parser - so it can never be counted as a
+    fifth decision. decision_state.py gains PA1-PA12, which admit the new
+    status only when a matching record exists with the right verdict, prompt
+    ID, all three commits, date, timezone, issue, and requirement, with no
+    testing / VAL-restoration / conformance / readiness / authorization /
+    completion claim, and with the record never parsed as an owner decision.
+    
+    Unlock map: the KBDL-011-SMR2-VC-0001 entry records PASS, cites the record
+    and all three commits, advances to ELIGIBLE FOR FUTURE PROMPT AFTER
+    APPROVAL, and states explicitly that this makes no repeat prompt eligible,
+    unlocks no part of Batch A, authorizes no other recording, restores no VAL
+    status, and authorizes no implementation. The FSRG1 entry's now-stale
+    "downstream remains LOCKED pending validation" line is corrected, with the
+    former locked state preserved as a marked historical note. FR5/FR8 are
+    generalized from "downstream always LOCKED" to "LOCKED unless that entry
+    records its own passed validation"; fixtures 8 and 14, whose premises had
+    inverted, now test that invariant instead.
+    
+    Next review: SMR1-VC-0002 (KBDL-A11Y-004) is identified as the sole next
+    owner-decision review target - the lowest-numbered still-pending Batch A
+    issue. This is a queue designation, not a decision. Its owner fields
+    remain PENDING, no durable record exists, all five checkboxes in its new
+    project-owner-review.md block are unselected, and no metadata-recording
+    prompt for it is released, approved, ready, or eligible.
+    smr1-vc-0002-owner-decision-brief.md states the confirmed facts, the five
+    options with trade-offs, and an explicitly unapproved recommended starting
+    answer (SET TO NOT VERIFIED), plus the unresolved questions only the owner
+    can answer.
+    
+    smr2_vc_0001_integration.py gains QUEUE1-QUEUE12 (exactly one named
+    current target; it is SMR1-VC-0002; exists, in Batch A, entirely pending;
+    no durable record; every checkbox unselected; no metadata status; no other
+    issue named; no eligibility claim; Batch A locked; brief present and
+    disclaiming). smr2_vc_0001_pa1_fixtures.py adds 25 negative fixtures and
+    8 positive controls, all on a temporary copy, real repository verified
+    byte-unchanged.
+    
+    Ledger gains two administrative metrics (validated recordings: 1; next
+    target: SMR1-VC-0002) without touching the decision arithmetic.
+    
+    Preserved byte-identical vs 448e39b: accessibility.md,
+    traceability-metadata.csv, traceability-matrix.md, validation.md,
+    decision-register.md, the live registry, the FSRG1 generator and schema,
+    all four R13-R16 packages, and both owner-decision records. Decision
+    counts remain 4 recorded / 417 pending. SMR1-KL-0001 and SMR1-KL-0004
+    remain PENDING. Batch A remains LOCKED - OWNER DECISION REQUIRED.
+    VAL-003/VAL-006, readiness, conformance, and completion are unmoved.
+    
+    Scope note: validate_fsrg1.py and fsrg1_integration.py were updated again
+    - their protected-baseline constants pinned to 718b0431 and required the
+    downstream entry to stay LOCKED, both of which this authorized transition
+    necessarily invalidates. Baselines advance to 448e39b, project-owner-review.md
+    joins the enumerated authorized paths, and the lock rule is generalized
+    rather than removed; every other protected path is still compared
+    byte-for-byte.
+    
+    Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
+
+$ git show --stat --format= e89b3ae
+ .../evidence/kbdl-011-smr2-fsrg1/checksums.sha256  |   2 +-
+ .../kbdl-011-smr2-fsrg1/evidence-inventory.csv     |   2 +-
+ .../kbdl-011-smr2-fsrg1/scripts/validate_fsrg1.py  |  17 +-
+ .../kbdl-011-smr2-vc-0001/checksums.sha256         |   4 +-
+ .../kbdl-011-smr2-vc-0001/evidence-inventory.csv   |   4 +-
+ .../scripts/validate_smr2_vc_0001.py               |  16 +-
+ .../smr2-vc-0001-pa1-validation-transcript.txt     | 569 +++++++++++++++++++++
+ ...mr2-vc-0001-planning-agent-validation-record.md |  95 ++++
+ .../checksums.sha256                               |  26 +-
+ .../evidence-inventory.csv                         |  26 +-
+ .../evidence-manifest.md                           |  19 +
+ .../implementation-report.md                       |  20 +
+ .../implementation-unlock-map.md                   |  46 +-
+ .../issue-register.csv                             |   2 +-
+ .../project-owner-review.md                        |  40 +-
+ .../scripts/decision_state.py                      | 200 +++++++-
+ .../scripts/fsrg1_integration.py                   |  15 +-
+ .../scripts/fsrg1_roadmap.py                       |  28 +-
+ .../scripts/fsrg1_roadmap_fixtures.py              |  15 +-
+ .../scripts/smr2_vc_0001_integration.py            | 157 +++++-
+ .../scripts/smr2_vc_0001_pa1_fixtures.py           | 523 +++++++++++++++++++
+ .../smr1-vc-0002-owner-decision-brief.md           | 187 +++++++
+ .../source-model-resolution-ledger.csv             |   2 +
+ .../source-model-resolution-packet.md              |  30 ++
+ 24 files changed, 1967 insertions(+), 78 deletions(-)
+
+$ git status --short
+ M docs/kbdl/evidence/kbdl-011-smr2-vc-0001/smr2-vc-0001-pa1-validation-transcript.txt
+(empty above = clean)
+$ git rev-parse HEAD
+e89b3ae5d6f49d2ce8b444af9dd1a272e31e52d7
+$ git rev-parse origin/main
+e89b3ae5d6f49d2ce8b444af9dd1a272e31e52d7
+$ git ls-remote origin refs/heads/main
+e89b3ae5d6f49d2ce8b444af9dd1a272e31e52d7	refs/heads/main
+
+NOTE: the validator runs below execute while this transcript is being
+written, so any checksum/inventory check that names this transcript file
+is a self-reference artifact (see section 11). Every failing line is
+reproduced in full below rather than summarized away.
+
+$ python3 docs/kbdl/evidence/kbdl-011-source-model-resolution/scripts/validate_packet.py
+[FAIL] VC1.package_checksums_verify — SMR2-VC-0001 checksums verify on disk -- ['MISMATCH:docs/kbdl/evidence/kbdl-011-smr2-vc-0001/smr2-vc-0001-pa1-validation-transcript.txt']
+======================================================================
+142/143 checks passed
+[exit=1]
+
+$ python3 docs/kbdl/evidence/kbdl-011-smr2-fsrg1/scripts/validate_fsrg1.py --repo-root .
+(no [FAIL] lines)
+======================================================================
+85/85 FSRG1 checks passed
+[exit=0]
+
+$ python3 docs/kbdl/evidence/kbdl-011-smr2-vc-0001/scripts/validate_smr2_vc_0001.py --repo-root .
+(no [FAIL] lines)
+======================================================================
+31/31 SMR2-VC-0001 checks passed
+[exit=0]
+
+$ python3 docs/kbdl/evidence/kbdl-011-smr2-fsrg1/scripts/field_source_registry.py --repo-root . --check
+OK: docs/kbdl/evidence/kbdl-011-smr2-fsrg1/artifacts/field-source-registry.csv matches regeneration (1917842 bytes)
+[exit=0]
+
+----- fixture suites, post-push -----
+$ python3 docs/kbdl/evidence/kbdl-011-source-model-resolution/scripts/negative_fixtures.py
+======================================================================
+Real repository files unchanged after all fixtures: True
+All 20 fixtures correctly rejected: True
+======================================================================
+[exit=0]
+
+$ python3 docs/kbdl/evidence/kbdl-011-source-model-resolution/scripts/dr1_r1_fixtures.py
+======================================================================
+Real repository files unchanged after all fixtures: True
+All 10 DR1-R1 fixtures produced the expected result: True
+======================================================================
+[exit=0]
+
+$ python3 docs/kbdl/evidence/kbdl-011-source-model-resolution/scripts/authority_graph_fixtures.py
+======================================================================
+Real repository files unchanged after all fixtures: True
+All 8 AGC1 fixtures correctly rejected: True
+======================================================================
+[exit=0]
+
+$ python3 docs/kbdl/evidence/kbdl-011-source-model-resolution/scripts/agc1_narrow_diff_fixtures.py
+Temporary fixture repositories cleaned up: True
+Real repository files unchanged after all fixtures: True
+All 12 narrow-diff fixtures produced the expected pass/rejection: True
+======================================================================
+[exit=0]
+
+$ python3 docs/kbdl/evidence/kbdl-011-source-model-resolution/scripts/fsrg1_roadmap_fixtures.py
+}
+======================================================================
+fixture isolation: real repository files byte-unchanged = True
+17/17 fixtures produced their expected result
+[exit=0]
+
+$ python3 docs/kbdl/evidence/kbdl-011-source-model-resolution/scripts/smr2_vc_0001_pa1_fixtures.py
+real repository files byte-unchanged:   True
+git status --short unchanged:           True
+temporary fixture tree removed:         True
+32/33 fixtures produced their expected result
+[exit=1]
+
+$ python3 docs/kbdl/evidence/kbdl-011-smr2-fsrg1/scripts/fsrg1_fixtures.py --repo-root .
+real repository files byte-unchanged:   True
+git status --short unchanged:           True
+temporary fixture tree removed:         True
+32/32 fixtures produced their expected result
+[exit=0]
+
+$ python3 docs/kbdl/evidence/kbdl-011-smr2-vc-0001/scripts/smr2_vc_0001_fixtures.py --repo-root .
+real repository files byte-unchanged:   True
+git status --short unchanged:           True
+temporary fixture tree removed:         True
+30/30 fixtures produced their expected result
+[exit=0]
+
+----- preservation at Commit A (vs 448e39b) -----
+[exit=0 — 0 means every one byte-identical]
+
+======= 11. TRANSCRIPT SELF-REFERENCE NOTE ==========================
+Any checksum/inventory check reported failing in section 10 names this
+transcript file and nothing else: the validators hashed it while the
+command whose output it records was still writing it. A transcript
+cannot verify its own final bytes.
+
+The inventories and checksums are regenerated against these final bytes
+by the evidence-closure commit, and the authoritative clean runs are
+executed after that commit is published and reported in the final
+implementation report. Any reader verifying this package should run,
+from a clean checkout:
+
+  python3 docs/kbdl/evidence/kbdl-011-source-model-resolution/scripts/validate_packet.py
+  python3 docs/kbdl/evidence/kbdl-011-smr2-fsrg1/scripts/validate_fsrg1.py --repo-root .
+  python3 docs/kbdl/evidence/kbdl-011-smr2-vc-0001/scripts/validate_smr2_vc_0001.py --repo-root .
+  python3 docs/kbdl/evidence/kbdl-011-source-model-resolution/scripts/smr2_vc_0001_pa1_fixtures.py
+
+All four must exit 0. If they do not, this transition is not validated.
