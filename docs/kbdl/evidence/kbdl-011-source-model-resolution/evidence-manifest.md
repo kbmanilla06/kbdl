@@ -239,6 +239,24 @@ fixtures behave as specified (ten rejection, two positive-control), on
 temporary copies and a synthetic temporary repository root only, with
 every real repository file verified byte-unchanged after the run.
 
+`KBDL-011-SMR2-FSRG1` then implements that prerequisite as the package
+`docs/kbdl/evidence/kbdl-011-smr2-fsrg1/`: a deterministic standalone
+generator, the live current-state field-source registry (5,389 rows =
+317 requirements × 17 fields), a declared schema contract at version 1, the
+FSRG1 validator reporting twelve gate groups, 24 negative and 8
+positive-control fixtures, and a durable transcript. All six required gates —
+schema, determinism, drift, path-safety, fixture-isolation, and clean
+post-publication validation — are implemented fail-closed and pass. The live
+registry is derived and non-authoritative; it is never hand-edited, and the
+generator never reads a field-source registry, including its own output. The
+four R13–R16 registries remain byte-identical immutable historical evidence,
+verified on every run against the digests recorded in their own round
+inventories. Inside this packet, FSRG1 adds `scripts/fsrg1_integration.py` and
+eleven read-only `FSRG1.*` checks to `scripts/validate_packet.py`, weakening or
+removing no existing check. Implementation is not validation:
+`KBDL-011-SMR2-FSRG1` remains `LOCKED — PLANNING-AGENT VALIDATION REQUIRED`, and
+`KBDL-011-SMR2-VC-0001` was not begun, resumed, or reissued.
+
 RM1 also records, on the same 2026-07-29 owner disposition, that
 `KBDL-011-SMR1-BA-OD1-DR1-R1` is **PASSED — PLANNING-AGENT VALIDATED**
 and is not an open gate; planning-agent validation of `KBDL-011-SMR1-RM1`

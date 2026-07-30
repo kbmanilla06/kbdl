@@ -402,16 +402,51 @@ does not issue `KBDL-011-SMR2-VC-0001` or begin KBDL-011-SMR2.
 Decision counts after RM1 (unchanged): 4 durably recorded (3 Batch H, 1
 Batch A); 417 pending.
 
+## KBDL-011-SMR2-FSRG1 implementation
+
+`KBDL-011-SMR2-FSRG1`, the prerequisite roadmap prompt recorded by
+`KBDL-011-SMR1-RM1`, has been implemented as the package
+`docs/kbdl/evidence/kbdl-011-smr2-fsrg1/`. See that package's
+`implementation-report.md` for its full detail; in summary it adds a
+deterministic standalone generator, the live current-state registry
+(5,389 rows = 317 requirements × 17 fields), a declared schema contract
+at version 1, the FSRG1 validator reporting twelve gate groups, 24
+negative and 8 positive-control fixtures, and a durable transcript. All
+six required gates — schema, determinism, drift, path-safety,
+fixture-isolation, and clean post-publication validation — are
+implemented fail-closed and pass.
+
+Independently of R16's `production_validator.py`, the generator
+reproduces all 5,389 rows of the R16 registry except four cells across
+`KBDL-MOT-007`/`KBDL-MOT-008` — exactly the cells the
+`KBDL-011-SMR1-BH-AGC1` correction changed. That cross-implementation
+agreement, with divergence confined to a known current-state change, is
+the package's primary correctness evidence.
+
+Inside this packet, the step adds `scripts/fsrg1_integration.py` and
+eleven read-only `FSRG1.*` checks to `scripts/validate_packet.py`, with
+no existing check weakened or removed, and records the implementation
+state in `implementation-unlock-map.md`,
+`source-model-resolution-packet.md` §13, `evidence-manifest.md`, and
+this report.
+
+The four R13–R16 registries remain byte-identical immutable historical
+evidence. No normative content, effective metadata, or protected file
+changed; no VAL status was restored; no owner decision moved. Decision
+counts after FSRG1 (unchanged): 4 durably recorded (3 Batch H, 1 Batch
+A); 417 pending. **Implementation is not validation** —
+`KBDL-011-SMR2-FSRG1` remains `LOCKED — PLANNING-AGENT VALIDATION
+REQUIRED`.
+
 ## Recommended next action
 
-Planning-agent validation of `KBDL-011-SMR1-RM1` (this roadmap
-addition). It is the only open gate: `KBDL-011-SMR1-BA-OD1-DR1-R1` has
-passed planning-agent validation and is closed, as are
-`KBDL-011-SMR1-BH-R1`/`BH-R2`/`BH-AGC1`/`BH-AGC1-VF1`.
+Planning-agent validation of `KBDL-011-SMR2-FSRG1`.
+`KBDL-011-SMR1-BA-OD1-DR1-R1` has passed and is closed, as are
+`KBDL-011-SMR1-BH-R1`/`BH-R2`/`BH-AGC1`/`BH-AGC1-VF1`;
+`KBDL-011-SMR1-RM1` and `KBDL-011-SMR2-FSRG1` are the open gates.
 
-Beginning `KBDL-011-SMR2-FSRG1` implementation, issuing
-`KBDL-011-SMR2-VC-0001`, beginning KBDL-011-SMR2 or another SMR1 batch,
-restoring any VAL status, implementation work, and any
+Issuing `KBDL-011-SMR2-VC-0001`, beginning KBDL-011-SMR2 or another SMR1
+batch, restoring any VAL status, further implementation work, and any
 readiness/completion approval all remain explicitly out of scope. Both
 `KBDL-011-SMR2-FSRG1` and `KBDL-011-SMR2-VC-0001` stay
 `LOCKED — PLANNING-AGENT VALIDATION REQUIRED`; the downstream prompt is
@@ -431,6 +466,13 @@ correction itself.
 Batch A / SMR1-VC-0001 owner-decision-recording and validator/evidence
 changes (restoring `SMR1-VC-0001` to PENDING and the ledger/decision-state
 checks to their pre-DR1 form) without affecting AGC1 or VF1.
+
+`git revert <KBDL-011-SMR2-FSRG1-commit-B-sha>` then
+`git revert <KBDL-011-SMR2-FSRG1-commit-A-sha>` reverts the FSRG1
+implementation in reverse order — removing the FSRG1 package, its
+packet-validator integration, and its administrative evidence records —
+without altering the historical registries, any recorded owner decision,
+AGC1, VF1, DR1, DR1-R1, or RM1.
 
 `git revert <KBDL-011-SMR1-RM1-commit-sha>` reverts only the
 `KBDL-011-SMR2-FSRG1` roadmap addition (removing the FSRG1 specification,

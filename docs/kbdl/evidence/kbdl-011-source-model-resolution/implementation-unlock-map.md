@@ -86,6 +86,16 @@ prerequisite prompt, not an implementation authorization.
   passes planning-agent validation, and is then **reissued** (not
   resumed) so that it regenerates the registry through the approved
   generator rather than by hand.
+- **Implementation state (as of KBDL-011-SMR2-FSRG1):** the package
+  `docs/kbdl/evidence/kbdl-011-smr2-fsrg1/` has been implemented — the
+  deterministic generator, the live registry artifact, the declared
+  schema (version 1), the validator, 24 negative and 8 positive-control
+  fixtures, and the durable transcript all exist, and all six required
+  gates pass. **Implementation is not validation:** this batch entry
+  stays `LOCKED` because planning-agent validation of
+  `KBDL-011-SMR2-FSRG1` has not occurred. The four R13–R16 registries
+  remain byte-identical; no normative content, effective metadata,
+  protected file, VAL status, or owner decision changed.
 - Status: `LOCKED — PLANNING-AGENT VALIDATION REQUIRED`.
 
 ## Downstream prompt — KBDL-011-SMR2-VC-0001 (validation-classification recording)
@@ -97,6 +107,9 @@ prerequisite prompt, not an implementation authorization.
 - Preconditions: `KBDL-011-SMR2-FSRG1` prepared **and** passed
   planning-agent validation; the reissued prompt invokes the
   FSRG1-approved generator and performs no hand-edit of any registry.
+  As of `KBDL-011-SMR2-FSRG1`, the first precondition's *preparation*
+  half is met and its *validation* half is not, so this entry does not
+  move.
 - Status: `LOCKED — PLANNING-AGENT VALIDATION REQUIRED` (of
   `KBDL-011-SMR2-FSRG1`).
 

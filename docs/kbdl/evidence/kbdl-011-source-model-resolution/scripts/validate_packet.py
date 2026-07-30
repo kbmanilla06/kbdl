@@ -240,10 +240,18 @@ AGC1_AUTHORIZED_NON_PACKET_FILES = {
     "docs/kbdl/motion/README.md",
     "docs/kbdl/traceability-metadata.csv",
 }
+# KBDL-011-SMR2-FSRG1 additionally authorizes its own new evidence package.
+# It is scoped exactly as narrowly as the AGC1 files above: only paths under
+# this one directory are exempt here, and fsrg1_integration.py separately
+# asserts that the package neither changes protected state nor disturbs the
+# historical registries.
+FSRG1_AUTHORIZED_PACKAGE = "docs/kbdl/evidence/kbdl-011-smr2-fsrg1"
 status_out = subprocess.run(["git", "-C", REPO, "status", "--porcelain"], capture_output=True, text=True).stdout
 non_packet_changes = []
 for l in status_out.splitlines():
     if "kbdl-011-source-model-resolution" in l:
+        continue
+    if FSRG1_AUTHORIZED_PACKAGE in l:
         continue
     path = l[3:].strip()
     if path in AGC1_AUTHORIZED_NON_PACKET_FILES:
@@ -287,6 +295,14 @@ for name, ok, detail in agc1_narrow_diff.check_narrow_authorized_diff(REPO):
 # roadmap record only -- the FSRG1 generator, live registry, and schema
 # do not exist yet and are not authorized by this packet.
 for name, ok, detail in fsrg1_roadmap.compute(PKT, REPO):
+    check(name, ok, detail)
+
+# FSRG1.*. KBDL-011-SMR2-FSRG1 package integration. Read-only: this never
+# regenerates the live registry, it only asserts the package exists, validates,
+# and has not disturbed protected state. Delegated to fsrg1_integration.py so
+# the same logic can be exercised against temporary copies.
+import fsrg1_integration
+for name, ok, detail in fsrg1_integration.compute(REPO):
     check(name, ok, detail)
 
 # 23. push safety handled by caller (fast-forward check) -- placeholder true, actual check done in shell during commit/push

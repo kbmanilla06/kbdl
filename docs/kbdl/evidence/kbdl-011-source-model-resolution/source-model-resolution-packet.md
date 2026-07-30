@@ -74,6 +74,7 @@ implementation authorization.
 | `smr2-fsrg1-prompt.md` | (Added by KBDL-011-SMR1-RM1.) Specification of the prerequisite roadmap prompt `KBDL-011-SMR2-FSRG1` (live field-source registry artifact and deterministic generator), including its preservation constraints and six mandatory validation gates. A roadmap record only — it authorizes nothing. |
 | `scripts/fsrg1_roadmap.py` | (Added by KBDL-011-SMR1-RM1.) Fail-closed checks (FR1–FR6) that the FSRG1 roadmap record stays intact: the specification exists and disclaims authorization, states all six gates, names and protects the four R13–R16 registries (verified against their recorded SHA-256 digests), and keeps both `KBDL-011-SMR2-FSRG1` and `KBDL-011-SMR2-VC-0001` at a LOCKED status with the planning-agent gate stated. |
 | `smr2-fsrg1-roadmap-validation-transcript.txt` | (Added by KBDL-011-SMR1-RM1.) Durable command/output transcript for the roadmap addition: positive validator run, FR1–FR6 fixtures, the pre-existing fixture suites, R13–R16 registry immutability verification, and the protected-file/working-tree scope audit. |
+| `scripts/fsrg1_integration.py` | (Added by KBDL-011-SMR2-FSRG1.) Narrow, read-only integration helper asserting from this packet that the FSRG1 package exists, validates, keeps the four R13–R16 registries at their recorded digests, leaves every protected/normative file matching the baseline, holds the decision state at 4 recorded / 417 pending, and keeps `KBDL-011-SMR2-VC-0001` locked and reissue-only. |
 | `scripts/fsrg1_roadmap_fixtures.py` | (Added by KBDL-011-SMR1-RM1.) Twelve deterministic fixtures (ten rejection, two positive-control) proving FR1–FR6 fail closed; operates on temporary copies and a synthetic temporary repository root only. |
 
 ## 3. Source-of-truth hierarchy applied
@@ -410,6 +411,49 @@ counts are unchanged: 4 durably recorded (3 Batch H, 1 Batch A); 417
 PENDING. `KBDL-011-SMR1-BA-OD1-DR1-R1` has passed planning-agent
 validation and is not an open gate (§11); planning-agent validation of
 `KBDL-011-SMR1-RM1` itself is now the open gate.
+
+## 13. KBDL-011-SMR2-FSRG1 implementation (live field-source registry and generator)
+
+`KBDL-011-SMR2-FSRG1` — the prerequisite roadmap prompt recorded in §12 — has
+been **implemented** as the package `docs/kbdl/evidence/kbdl-011-smr2-fsrg1/`.
+It provides the deterministic standalone generator
+(`scripts/field_source_registry.py`), the live current-state registry
+(`artifacts/field-source-registry.csv`; 5,389 rows = 317 requirements × 17
+fields), the declared schema contract (`field-source-registry-schema.md`,
+schema version 1), the FSRG1 validator, 24 negative and 8 positive-control
+fixtures, and a durable validation transcript. All six required gates — schema,
+determinism, drift, path-safety, fixture-isolation, and clean post-publication
+validation — are implemented fail-closed and pass.
+
+The live registry is a **derived, non-authoritative description** of the current
+source model. It is not authority, a normative source, validation evidence, an
+owner-decision record, or implementation authorization, and it does not enter
+the source-of-truth hierarchy in §3. It is never hand-edited, and the generator
+never reads a field-source registry — including its own output.
+
+The four R13–R16 registries remain **immutable historical evidence**:
+byte-identical, never regenerated or relocated, never used as the generator's
+output path, and never read as authoritative input for current values. Both the
+FSRG1 validator and `scripts/fsrg1_integration.py` verify each of them against
+the SHA-256 digest recorded in its own round evidence inventory.
+
+`scripts/validate_packet.py` gains eleven `FSRG1.*` integration checks, added
+through the narrow helper `scripts/fsrg1_integration.py`, without weakening or
+removing any existing check: package presence, schema, generator, artifact,
+validator pass, package checksums, historical-registry integrity, baseline
+comparison of every protected and normative file, decision counts, the
+downstream lock, and VAL/readiness preservation. That integration is read-only —
+it never regenerates the registry.
+
+**Implementation is not validation.** `KBDL-011-SMR2-FSRG1` is awaiting
+planning-agent validation and remains
+`LOCKED — PLANNING-AGENT VALIDATION REQUIRED`, as does
+`KBDL-011-SMR2-VC-0001`, which was not begun, resumed, or reissued and must be
+**reissued, not resumed**, only after FSRG1 passes. This step changed no
+normative content, no effective metadata, and no protected file; gave
+`SMR1-VC-0001` no effect in effective metadata; restored no VAL status; and
+moved no owner decision. The decision state is unchanged: 4 durably recorded
+(3 Batch H, 1 Batch A); 417 PENDING.
 
 ## 8. Progression gate
 

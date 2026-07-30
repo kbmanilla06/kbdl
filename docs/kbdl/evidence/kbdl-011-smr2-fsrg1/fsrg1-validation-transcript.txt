@@ -1,0 +1,649 @@
+======================================================================
+KBDL-011-SMR2-FSRG1 — VALIDATION TRANSCRIPT
+======================================================================
+Prompt: KBDL-011-SMR2-FSRG1 (live field-source registry + deterministic generator)
+Approved roadmap specification: docs/kbdl/evidence/kbdl-011-source-model-resolution/smr2-fsrg1-prompt.md
+Baseline commit: dc16473a63e446bd685640e18d64417d120b702e
+Baseline parent: 733c28e92672a4191b94045c800734c595bb014d
+Implementation authorization status: NOT AUTHORIZED
+Remote: https://github.com/kbmanilla06/kbdl.git (no credentials in URL; none captured)
+
+STAGE 1 — PRE-COMMIT (this section). Stages 2-5 are appended by the
+evidence-closure commit after publication; they are NOT pre-written.
+
+======================================================================
+1. BASELINE REPOSITORY STATE
+======================================================================
+$ git remote -v
+origin	https://github.com/kbmanilla06/kbdl.git (fetch)
+origin	https://github.com/kbmanilla06/kbdl.git (push)
+[exit=0]
+
+$ git branch --show-current
+main
+[exit=0]
+
+$ git rev-parse HEAD
+dc16473a63e446bd685640e18d64417d120b702e
+[exit=0]
+
+$ git rev-parse origin/main
+dc16473a63e446bd685640e18d64417d120b702e
+[exit=0]
+
+$ git ls-remote origin refs/heads/main
+dc16473a63e446bd685640e18d64417d120b702e	refs/heads/main
+[exit=0]
+
+$ git log --oneline --decorate -10
+dc16473 (HEAD -> main, origin/main, origin/HEAD) docs(kbdl): add prerequisite roadmap prompt KBDL-011-SMR2-FSRG1 (KBDL-011-SMR1-RM1)
+733c28e docs(kbdl): reconcile SMR1-VC-0001 authority record and close stale-prose validator gaps (KBDL-011-SMR1-BA-OD1-DR1-R1)
+5d91ca1 docs(kbdl): record and validate SMR1 Batch A SMR1-VC-0001 owner decision
+c7a70fc docs(kbdl): make AGC1 narrow authorized-diff validator commit-reproducible
+0fadb97 docs(kbdl): apply Batch H authority-graph correction for KBDL-MOT-007/008
+46104c5 docs(kbdl): reconcile Batch H packet state and validation evidence
+ea86add docs(kbdl): record and validate SMR1 Batch H owner decisions
+662ee28 docs(kbdl): prepare non-normative R16 source-model resolution packet (KBDL-011-SMR1)
+c592127 Preserve blocked source-independent R16 audit
+873577a docs(kbdl): close R15 semantic validator gaps
+[exit=0]
+
+$ git rev-parse dc16473a63e446bd685640e18d64417d120b702e^
+733c28e92672a4191b94045c800734c595bb014d
+[exit=0]
+
+$ git diff --check
+[exit=0]
+
+Interpretation: baseline HEAD, origin/main, and the live remote were all
+dc16473a with a clean tree and no commit after the baseline.
+
+======================================================================
+2. FILES INSPECTED BEFORE IMPLEMENTATION
+======================================================================
+docs/kbdl/evidence/kbdl-011-source-model-resolution/smr2-fsrg1-prompt.md
+docs/kbdl/evidence/kbdl-011-source-model-resolution/implementation-unlock-map.md
+docs/kbdl/evidence/kbdl-011-source-model-resolution/scripts/validate_packet.py
+docs/kbdl/evidence/kbdl-011-source-model-resolution/scripts/decision_state.py
+docs/kbdl/evidence/kbdl-011-source-model-resolution/scripts/fsrg1_roadmap.py
+docs/kbdl/evidence/kbdl-011-source-model-resolution/evidence-inventory.csv
+docs/kbdl/evidence/kbdl-011-r13/scripts/field_model_audit.py
+docs/kbdl/evidence/kbdl-011-r16/scripts/production_validator.py
+docs/kbdl/evidence/kbdl-011-r16/source-rules.csv
+docs/kbdl/evidence/kbdl-011-r13/artifacts/field-source-registry.csv  (header only)
+docs/kbdl/evidence/kbdl-011-r14/artifacts/field-source-registry.csv  (header only)
+docs/kbdl/evidence/kbdl-011-r15/artifacts/field-source-registry.csv  (header only)
+docs/kbdl/evidence/kbdl-011-r16/artifacts/field-source-registry.csv  (full, for comparison)
+docs/kbdl/evidence/kbdl-011-r13..r16/evidence-inventory.csv
+docs/kbdl/traceability-metadata.csv
+docs/kbdl/traceability-matrix.md
+docs/kbdl/validation.md
+
+======================================================================
+3. HISTORICAL REGISTRIES — RECORDED vs ACTUAL DIGESTS (baseline)
+======================================================================
+r13
+  path     docs/kbdl/evidence/kbdl-011-r13/artifacts/field-source-registry.csv
+  recorded 73c029b88c2da4c8399dc3df7b8df537c2e51cc8425d181be94953c1ffbabf52
+  actual   73c029b88c2da4c8399dc3df7b8df537c2e51cc8425d181be94953c1ffbabf52
+  result   MATCH
+r14
+  path     docs/kbdl/evidence/kbdl-011-r14/artifacts/field-source-registry.csv
+  recorded 6f818c0b4a9d00e46c4c9a63425eb35eef4aa916dfeb0c5da2bea9c9bde15eed
+  actual   6f818c0b4a9d00e46c4c9a63425eb35eef4aa916dfeb0c5da2bea9c9bde15eed
+  result   MATCH
+r15
+  path     docs/kbdl/evidence/kbdl-011-r15/artifacts/field-source-registry.csv
+  recorded 2125692e5932f37a46eb52d2e162bb6f47e0540a1c4b9d0f71e5e0f84247ac9e
+  actual   2125692e5932f37a46eb52d2e162bb6f47e0540a1c4b9d0f71e5e0f84247ac9e
+  result   MATCH
+r16
+  path     docs/kbdl/evidence/kbdl-011-r16/artifacts/field-source-registry.csv
+  recorded 789c559f7fe342cec9d28af3ed0c95d9c86edb7513871d8bf2686afcacdee104
+  actual   789c559f7fe342cec9d28af3ed0c95d9c86edb7513871d8bf2686afcacdee104
+  result   MATCH
+
+======================================================================
+4. GENERATOR — GENERATION AND VERIFICATION
+======================================================================
+$ python3 docs/kbdl/evidence/kbdl-011-smr2-fsrg1/scripts/field_source_registry.py --repo-root .
+OK: wrote docs/kbdl/evidence/kbdl-011-smr2-fsrg1/artifacts/field-source-registry.csv (1917334 bytes)
+[exit=0]
+
+$ python3 docs/kbdl/evidence/kbdl-011-smr2-fsrg1/scripts/field_source_registry.py --repo-root . --check
+OK: docs/kbdl/evidence/kbdl-011-smr2-fsrg1/artifacts/field-source-registry.csv matches regeneration (1917334 bytes)
+[exit=0]
+
+$ shasum -a 256 docs/kbdl/evidence/kbdl-011-smr2-fsrg1/artifacts/field-source-registry.csv
+d94e8c43db6948638de3d61627dac6d42029db9b491834e9fc06cb6335e694d9  docs/kbdl/evidence/kbdl-011-smr2-fsrg1/artifacts/field-source-registry.csv
+
+$ head -1 docs/kbdl/evidence/kbdl-011-smr2-fsrg1/artifacts/field-source-registry.csv
+Requirement ID,Field name,Ownership class,Primary basis,Derivation rule,Authoritative expected value,Normative value,Governance resolution,Ledger value,Readable-group value,Readable-group classification,Effective value,Precedence result,Conflict result,Validation result
+
+bytes           1917334
+data rows       5389
+requirements    317
+field names     17
+duplicate keys  0
+PASS rows       5055
+FAIL rows       334
+CR bytes        0
+final newline   True
+
+======================================================================
+5. CROSS-IMPLEMENTATION COMPARISON AGAINST THE R16 REGISTRY
+======================================================================
+live rows 5389  r16 rows 5389
+keys only in live 0  only in r16 0
+rows differing    4
+  ('KBDL-MOT-007', 'Authority') -> ['Authoritative expected value', 'Governance resolution', 'Ledger value', 'Effective value', 'Validation result']
+  ('KBDL-MOT-007', 'Notes or exclusions') -> ['Authoritative expected value', 'Ledger value', 'Effective value']
+  ('KBDL-MOT-008', 'Authority') -> ['Ledger value']
+  ('KBDL-MOT-008', 'Notes or exclusions') -> ['Authoritative expected value', 'Ledger value', 'Effective value']
+
+Interpretation: the only divergence from the R16 point-in-time artifact is
+confined to KBDL-MOT-007/KBDL-MOT-008, exactly the cells the
+KBDL-011-SMR1-BH-AGC1 authority correction (0fadb97) changed. The R16
+artifact itself is NOT modified by this comparison.
+
+======================================================================
+6. FSRG1 VALIDATOR (all gates)
+======================================================================
+$ python3 docs/kbdl/evidence/kbdl-011-smr2-fsrg1/scripts/validate_fsrg1.py --repo-root .
+======================================================================
+[PASS] SCHEMA.artifact_exists
+[PASS] SCHEMA.encoding_utf8
+[PASS] SCHEMA.no_bom
+[PASS] SCHEMA.line_endings_lf
+[PASS] SCHEMA.final_newline
+[PASS] SCHEMA.nonempty
+[PASS] SCHEMA.parses
+[PASS] SCHEMA.header_exact
+[PASS] SCHEMA.row_widths_uniform
+[PASS] SCHEMA.row_key_unique
+[PASS] SCHEMA.field_name_domain
+[PASS] SCHEMA.ownership_class_matches_field
+[PASS] SCHEMA.derivation_rule_matches_field
+[PASS] SCHEMA.controlled_domains
+[PASS] SCHEMA.deterministic_sort_order
+[PASS] SCHEMA.effective_equals_expected
+[PASS] SCHEMA.precedence_matches_conflict
+[PASS] SCHEMA.validation_result_policy
+[PASS] SCHEMA.no_absolute_paths
+[PASS] SCHEMA.no_environment_values
+[PASS] COVER.every_current_requirement_present
+[PASS] COVER.no_unknown_requirement
+[PASS] COVER.every_required_field_per_requirement
+[PASS] COVER.row_count_is_requirements_times_fields
+[PASS] DETERM.generator_runs
+[PASS] DETERM.byte_identical
+[PASS] DETERM.sha256_identical
+[PASS] DETERM.nonempty_output
+[PASS] DETERM.header_identical
+[PASS] DETERM.row_count_identical
+[PASS] DETERM.final_newline_identical
+[PASS] DETERM.line_endings_lf_only
+[PASS] PATH.declared_target_resolves_inside_package
+[PASS] PATH.symlinked_output_refused
+[PASS] PATH.symlink_escape_left_target_untouched
+[PASS] PATH.missing_package_refused
+[PASS] PATH.generator_succeeds_in_sandbox
+[PASS] PATH.single_declared_write_target
+[PASS] PATH.check_mode_is_read_only
+[PASS] PATH.historical_artifacts_never_written
+[PASS] DRIFT.check_mode_executed
+[PASS] DRIFT.committed_matches_regeneration
+[PASS] DRIFT.independent_regeneration
+[PASS] DRIFT.independent_regeneration_matches
+[PASS] HIST.r13.recorded_digest_present
+[PASS] HIST.r13.registry_present
+[PASS] HIST.r13.byte_identical
+[PASS] HIST.r14.recorded_digest_present
+[PASS] HIST.r14.registry_present
+[PASS] HIST.r14.byte_identical
+[PASS] HIST.r15.recorded_digest_present
+[PASS] HIST.r15.registry_present
+[PASS] HIST.r15.byte_identical
+[PASS] HIST.r16.recorded_digest_present
+[PASS] HIST.r16.registry_present
+[PASS] HIST.r16.byte_identical
+[PASS] ISO.fixture_suite_present
+[PASS] ISO.fixture_suite_passes
+[PASS] ISO.real_repository_byte_unchanged
+[PASS] ISO.no_unexpected_worktree_changes
+[PASS] LABEL.readme_present
+[PASS] LABEL.non_authoritative_sentence_present
+[PASS] LABEL.schema_states_non_authoritative
+[PASS] LABEL.no_authority_or_evidence_claim
+[PASS] PROT.baseline_diff_available
+[PASS] PROT.protected_files_unchanged_vs_baseline
+[PASS] PROT.historical_packages_unchanged_vs_baseline
+[PASS] DECISION.state_module_available
+[PASS] DECISION.state_computed
+[PASS] DECISION.recorded_count_unchanged
+[PASS] DECISION.pending_count_unchanged
+[PASS] DECISION.no_unknown_or_duplicate_records
+[PASS] STATE.validation_md_present
+[PASS] STATE.candidate_not_ready
+[PASS] STATE.conformance_not_verified
+[PASS] STATE.completion_pending
+[PASS] STATE.val_003_006_not_verified
+[PASS] STATE.val_007_documentation_only
+[PASS] STATE.smr2_vc_0001_still_locked
+[PASS] STATE.smr2_vc_0001_reissue_required
+[PASS] PKG.required_files_present
+[FAIL] PKG.checksums_verify -- ['MISMATCH:docs/kbdl/evidence/kbdl-011-smr2-fsrg1/fsrg1-validation-transcript.txt']
+[PASS] PKG.inventory_complete
+[FAIL] PKG.inventory_digests_match -- ['docs/kbdl/evidence/kbdl-011-smr2-fsrg1/fsrg1-validation-transcript.txt']
+======================================================================
+82/84 FSRG1 checks passed
+[exit=1]
+
+======================================================================
+7. FSRG1 FIXTURES (24 negative, 8 positive-control)
+======================================================================
+$ python3 docs/kbdl/evidence/kbdl-011-smr2-fsrg1/scripts/fsrg1_fixtures.py --repo-root .
+======================================================================
+{
+  "actual_result": "REJECTED (as expected)",
+  "expected_result": "rejection",
+  "fixture": "01_missing_schema_column",
+  "meta_ok": true,
+  "mode": "negative",
+  "mutation": "drop the Ledger value column",
+  "real_repository_preserved": true,
+  "triggered_checks": [
+    "SCHEMA.header_exact"
+  ]
+}
+{
+  "actual_result": "REJECTED (as expected)",
+  "expected_result": "rejection",
+  "fixture": "02_extra_schema_column",
+  "meta_ok": true,
+  "mode": "negative",
+  "mutation": "append an undeclared column",
+  "real_repository_preserved": true,
+  "triggered_checks": [
+    "SCHEMA.header_exact"
+  ]
+}
+{
+  "actual_result": "REJECTED (as expected)",
+  "expected_result": "rejection",
+  "fixture": "03_reordered_columns",
+  "meta_ok": true,
+  "mode": "negative",
+  "mutation": "swap two declared columns",
+  "real_repository_preserved": true,
+  "triggered_checks": [
+    "SCHEMA.header_exact"
+  ]
+}
+{
+  "actual_result": "REJECTED (as expected)",
+  "expected_result": "rejection",
+  "fixture": "04_inconsistent_row_width",
+  "meta_ok": true,
+  "mode": "negative",
+  "mutation": "truncate one row",
+  "real_repository_preserved": true,
+  "triggered_checks": [
+    "SCHEMA.row_widths_uniform"
+  ]
+}
+{
+  "actual_result": "REJECTED (as expected)",
+  "expected_result": "rejection",
+  "fixture": "05_invalid_domain_value",
+  "meta_ok": true,
+  "mode": "negative",
+  "mutation": "set an out-of-domain Ownership class",
+  "real_repository_preserved": true,
+  "triggered_checks": [
+    "SCHEMA.controlled_domains",
+    "SCHEMA.ownership_class_matches_field"
+  ]
+}
+{
+  "actual_result": "REJECTED (as expected)",
+  "expected_result": "rejection",
+  "fixture": "06_duplicate_row_key",
+  "meta_ok": true,
+  "mode": "negative",
+  "mutation": "duplicate a (Requirement ID, Field name) row",
+  "real_repository_preserved": true,
+  "triggered_checks": [
+    "SCHEMA.row_key_unique"
+  ]
+}
+{
+  "actual_result": "REJECTED (as expected)",
+  "expected_result": "rejection",
+  "fixture": "07_missing_required_requirement",
+  "meta_ok": true,
+  "mode": "negative",
+  "mutation": "delete every row of one requirement",
+  "real_repository_preserved": true,
+  "triggered_checks": [
+    "COVER.every_current_requirement_present"
+  ]
+}
+{
+  "actual_result": "REJECTED (as expected)",
+  "expected_result": "rejection",
+  "fixture": "08_missing_required_field_row",
+  "meta_ok": true,
+  "mode": "negative",
+  "mutation": "delete one required field row",
+  "real_repository_preserved": true,
+  "triggered_checks": [
+    "COVER.every_required_field_per_requirement",
+    "COVER.row_count_is_requirements_times_fields"
+  ]
+}
+{
+  "actual_result": "REJECTED (as expected)",
+  "expected_result": "rejection",
+  "fixture": "09_nondeterministic_row_order",
+  "meta_ok": true,
+  "mode": "negative",
+  "mutation": "generator shuffles rows randomly",
+  "real_repository_preserved": true,
+  "triggered_checks": [
+    "DETERM.byte_identical"
+  ]
+}
+{
+  "actual_result": "REJECTED (as expected)",
+  "expected_result": "rejection",
+  "fixture": "10_environment_dependent_output",
+  "meta_ok": true,
+  "mode": "negative",
+  "mutation": "generator injects a wall-clock value",
+  "real_repository_preserved": true,
+  "triggered_checks": [
+    "DETERM.byte_identical"
+  ]
+}
+{
+  "actual_result": "REJECTED (as expected)",
+  "expected_result": "rejection",
+  "fixture": "11_hand_edited_live_registry",
+  "meta_ok": true,
+  "mode": "negative",
+  "mutation": "hand-edit one committed cell",
+  "real_repository_preserved": true,
+  "triggered_checks": [
+    "DRIFT.committed_matches_regeneration",
+    "DRIFT.independent_regeneration_matches"
+  ]
+}
+{
+  "actual_result": "REJECTED (as expected)",
+  "expected_result": "rejection",
+  "fixture": "12_mutated_r13_registry",
+  "meta_ok": true,
+  "mode": "negative",
+  "mutation": "append a row to the R13 registry",
+  "real_repository_preserved": true,
+  "triggered_checks": [
+    "HIST.r13.byte_identical"
+  ]
+}
+{
+  "actual_result": "REJECTED (as expected)",
+  "expected_result": "rejection",
+  "fixture": "13_mutated_r14_registry",
+  "meta_ok": true,
+  "mode": "negative",
+  "mutation": "append a row to the R14 registry",
+  "real_repository_preserved": true,
+  "triggered_checks": [
+    "HIST.r14.byte_identical"
+  ]
+}
+{
+  "actual_result": "REJECTED (as expected)",
+  "expected_result": "rejection",
+  "fixture": "14_mutated_r15_registry",
+  "meta_ok": true,
+  "mode": "negative",
+  "mutation": "append a row to the R15 registry",
+  "real_repository_preserved": true,
+  "triggered_checks": [
+    "HIST.r15.byte_identical"
+  ]
+}
+{
+  "actual_result": "REJECTED (as expected)",
+  "expected_result": "rejection",
+  "fixture": "15_mutated_r16_registry",
+  "meta_ok": true,
+  "mode": "negative",
+  "mutation": "append a row to the R16 registry",
+  "real_repository_preserved": true,
+  "triggered_checks": [
+    "HIST.r16.byte_identical"
+  ]
+}
+{
+  "actual_result": "REJECTED (as expected)",
+  "expected_result": "rejection",
+  "fixture": "16_absolute_output_path",
+  "meta_ok": true,
+  "mode": "negative",
+  "mutation": "declare an absolute output path",
+  "real_repository_preserved": true,
+  "triggered_checks": [
+    "PATH.rejected"
+  ]
+}
+{
+  "actual_result": "REJECTED (as expected)",
+  "expected_result": "rejection",
+  "fixture": "17_dotdot_traversal",
+  "meta_ok": true,
+  "mode": "negative",
+  "mutation": "declare a '..' traversal output path",
+  "real_repository_preserved": true,
+  "triggered_checks": [
+    "PATH.rejected"
+  ]
+}
+{
+  "actual_result": "REJECTED (as expected)",
+  "expected_result": "rejection",
+  "fixture": "18_symlink_escape",
+  "meta_ok": true,
+  "mode": "negative",
+  "mutation": "point the artifact at a symlink outside the package",
+  "real_repository_preserved": true,
+  "triggered_checks": [
+    "PATH.rejected"
+  ]
+}
+{
+  "actual_result": "REJECTED (as expected)",
+  "expected_result": "rejection",
+  "fixture": "19_historical_artifact_output_target",
+  "meta_ok": true,
+  "mode": "negative",
+  "mutation": "aim output at the R16 registry",
+  "real_repository_preserved": true,
+  "triggered_checks": [
+    "PATH.rejected"
+  ]
+}
+{
+  "actual_result": "REJECTED (as expected)",
+  "expected_result": "rejection",
+  "fixture": "20_protected_file_output_target",
+  "meta_ok": true,
+  "mode": "negative",
+  "mutation": "aim output at traceability-metadata.csv",
+  "real_repository_preserved": true,
+  "triggered_checks": [
+    "PATH.rejected"
+  ]
+}
+{
+  "actual_result": "REJECTED (as expected)",
+  "expected_result": "rejection",
+  "fixture": "21_fixture_mutation_of_real_repository",
+  "meta_ok": true,
+  "mode": "negative",
+  "mutation": "mutate a stand-in tree and require detection",
+  "real_repository_preserved": true,
+  "triggered_checks": [
+    "ISO.detector"
+  ]
+}
+{
+  "actual_result": "REJECTED (as expected)",
+  "expected_result": "rejection",
+  "fixture": "22_empty_generated_output",
+  "meta_ok": true,
+  "mode": "negative",
+  "mutation": "generator produces zero rows",
+  "real_repository_preserved": true,
+  "triggered_checks": [
+    "GEN.empty_rejected"
+  ]
+}
+{
+  "actual_result": "REJECTED (as expected)",
+  "expected_result": "rejection",
+  "fixture": "23_generator_source_failure",
+  "meta_ok": true,
+  "mode": "negative",
+  "mutation": "remove a required source file",
+  "real_repository_preserved": true,
+  "triggered_checks": [
+    "GEN.fails_closed"
+  ]
+}
+{
+  "actual_result": "REJECTED (as expected)",
+  "expected_result": "rejection",
+  "fixture": "24_drift_pass_without_generation",
+  "meta_ok": true,
+  "mode": "negative",
+  "mutation": "remove the generator and re-run the drift gate",
+  "real_repository_preserved": true,
+  "triggered_checks": [
+    "DRIFT.check_mode_executed",
+    "DRIFT.committed_matches_regeneration"
+  ]
+}
+{
+  "actual_result": "PASSED (as expected)",
+  "expected_result": "pass",
+  "fixture": "P1_valid_schema",
+  "meta_ok": true,
+  "mode": "positive-control",
+  "mutation": "unmutated committed registry",
+  "real_repository_preserved": true,
+  "triggered_checks": []
+}
+{
+  "actual_result": "PASSED (as expected)",
+  "expected_result": "pass",
+  "fixture": "P2_two_deterministic_runs",
+  "meta_ok": true,
+  "mode": "positive-control",
+  "mutation": "two runs, two CWDs, two processes",
+  "real_repository_preserved": true,
+  "triggered_checks": []
+}
+{
+  "actual_result": "PASSED (as expected)",
+  "expected_result": "pass",
+  "fixture": "P3_clean_live_regeneration",
+  "meta_ok": true,
+  "mode": "positive-control",
+  "mutation": "committed artifact reproduces exactly",
+  "real_repository_preserved": true,
+  "triggered_checks": []
+}
+{
+  "actual_result": "PASSED (as expected)",
+  "expected_result": "pass",
+  "fixture": "P4_historical_hashes_match",
+  "meta_ok": true,
+  "mode": "positive-control",
+  "mutation": "all four R13-R16 digests verify",
+  "real_repository_preserved": true,
+  "triggered_checks": []
+}
+{
+  "actual_result": "PASSED (as expected)",
+  "expected_result": "pass",
+  "fixture": "P5_safe_declared_output",
+  "meta_ok": true,
+  "mode": "positive-control",
+  "mutation": "declared path resolves inside the package",
+  "real_repository_preserved": true,
+  "triggered_checks": []
+}
+{
+  "actual_result": "PASSED (as expected)",
+  "expected_result": "pass",
+  "fixture": "P6_fixture_cleanup",
+  "meta_ok": true,
+  "mode": "positive-control",
+  "mutation": "temporary tree removal succeeds",
+  "real_repository_preserved": true,
+  "triggered_checks": []
+}
+{
+  "actual_result": "PASSED (as expected)",
+  "expected_result": "pass",
+  "fixture": "P7_decision_state_unchanged",
+  "meta_ok": true,
+  "mode": "positive-control",
+  "mutation": "4 recorded / 417 pending",
+  "real_repository_preserved": true,
+  "triggered_checks": []
+}
+{
+  "actual_result": "PASSED (as expected)",
+  "expected_result": "pass",
+  "fixture": "P8_val_readiness_unchanged",
+  "meta_ok": true,
+  "mode": "positive-control",
+  "mutation": "VAL/readiness/conformance/completion unchanged",
+  "real_repository_preserved": true,
+  "triggered_checks": []
+}
+======================================================================
+negative fixtures rejected as expected: 24/24
+positive controls passed as expected:   8/8
+real repository files byte-unchanged:   True
+git status --short unchanged:           True
+temporary fixture tree removed:         True
+32/32 fixtures produced their expected result
+[exit=0]
+
+======================================================================
+7a. NOTE ON THE TWO [FAIL] LINES IN SECTION 6
+======================================================================
+Section 6's run reports:
+
+  [FAIL] PKG.checksums_verify      -- MISMATCH: fsrg1-validation-transcript.txt
+  [FAIL] PKG.inventory_digests_match -- fsrg1-validation-transcript.txt
+
+Both concern this transcript file alone, and both are a self-reference
+artifact: the validator hashed the transcript while the transcript was still
+being written by the very command whose output it contains. No other file
+mismatched, and no gate other than PKG was affected.
+
+This is recorded rather than removed. The authoritative results are the clean
+post-publication runs in sections 9-12 below, which execute against a
+committed, fully written tree where this self-reference cannot occur. Those
+sections are appended by the evidence-closure commit (Commit B) and are not
+pre-written here; if they are absent from this file, publication did not
+complete and no clean post-publication claim has been made.
+
+The package inventory and checksums were regenerated after this transcript was
+written; sections 9-12 verify them.
