@@ -274,13 +274,18 @@ def fx_status_still_demands_validation(pkt, repo):
 
 
 def fx_downstream_entry_unlocked(pkt, repo):
-    """The downstream prompt must stay LOCKED regardless of FSRG1's state."""
+    """The downstream prompt out of LOCKED *without* a validation claim.
+
+    Like fixture 8, this premise inverted once the downstream prompt itself
+    passed planning-agent validation (KBDL-011-SMR2-VC-0001-PA1): being
+    unlocked is now legitimate. The invariant that still holds is that leaving
+    LOCKED requires a recorded passed-validation claim."""
     path = os.path.join(pkt, fsrg1_roadmap.MAP_FILE)
     text = open(path, encoding="utf-8").read()
     head, sep, tail = text.partition("## Downstream prompt — KBDL-011-SMR2-VC-0001")
-    tail = tail.replace("- Status: `LOCKED — PLANNING-AGENT VALIDATION REQUIRED` (of the reissued\n"
-                        "  `KBDL-011-SMR2-VC-0001` itself).",
-                        "- Status: `ELIGIBLE FOR FUTURE PROMPT AFTER APPROVAL`.", 1)
+    tail = tail.replace("- **Planning-agent validation: `PASSED — PLANNING-AGENT VALIDATED`.**",
+                        "- Planning-agent validation: not yet recorded.", 1)
+    tail = tail.replace("passed planning-agent validation\n", "not been validated\n")
     open(path, "w", encoding="utf-8").write(head + sep + tail)
 
 
@@ -334,7 +339,7 @@ FIXTURES = [
      fx_validation_contradiction_pending_wording, {"FR7"}),
     ("13_validated_entry_still_demands_validation", "rejection",
      fx_status_still_demands_validation, {"FR8"}),
-    ("14_downstream_entry_unlocked", "rejection",
+    ("14_downstream_unlocked_without_validation_claim", "rejection",
      fx_downstream_entry_unlocked, {"FR5", "FR8"}),
     ("15_real_roadmap_state", "positive", fx_unmutated,
      {"FR1", "FR2", "FR3", "FR4", "FR5", "FR6", "FR7", "FR8"}),

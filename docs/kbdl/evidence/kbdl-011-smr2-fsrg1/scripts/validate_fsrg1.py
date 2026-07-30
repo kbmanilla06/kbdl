@@ -52,7 +52,7 @@ REGISTRY_REL = "docs/kbdl/evidence/kbdl-011-{r}/artifacts/field-source-registry.
 INVENTORY_REL = "docs/kbdl/evidence/kbdl-011-{r}/evidence-inventory.csv"
 SHA256_RE = re.compile(r"^[0-9a-f]{64}$")
 
-BASELINE_COMMIT = "718b0431af9e430a1fe52a88c99b520c1593bfb1"
+BASELINE_COMMIT = "448e39b22f4dc69210ca795c365bbdf1a3904f20"
 
 # Paths a later, separately authorized metadata-recording prompt is permitted to
 # change. Advanced by KBDL-011-SMR2-VC-0001 (reissued), which narrowly
@@ -70,6 +70,11 @@ AUTHORIZED_RECORDING_PATHS = {
     "docs/kbdl/accessibility.md",
     "docs/kbdl/traceability-metadata.csv",
     f"{SMR1_REL}/issue-register.csv",
+    # KBDL-011-SMR2-VC-0001-PA1 additionally authorizes the review form, which
+    # gains the unselected next-review block. Its checkbox state is asserted
+    # field-by-field instead, by smr2_vc_0001_integration.py QUEUE7 and by
+    # decision_state.py's D9-D11 review-form cross-checks.
+    f"{SMR1_REL}/project-owner-review.md",
 }
 
 PROTECTED_RELS = [
@@ -650,9 +655,13 @@ def check_state_preservation(c: Checks, root: Path):
         if "KBDL-011-SMR2-VC-0001" in chunk.split("\n", 1)[0]:
             section = chunk
     statuses = re.findall(r"Status:\s*`([^`]+)`", section)
-    c.add("STATE.smr2_vc_0001_still_locked",
-          bool(statuses) and all(s.startswith("LOCKED") for s in statuses),
-          f"statuses={statuses}")
+    # Generalized by KBDL-011-SMR2-VC-0001-PA1: the downstream entry may leave
+    # LOCKED once, and only once, the map records that it passed planning-agent
+    # validation. An unvalidated entry that is unlocked still fails.
+    validated = bool(re.search(r"PASSED\s*[—-]\s*PLANNING-AGENT VALIDATED", section))
+    c.add("STATE.smr2_vc_0001_locked_unless_validated",
+          bool(statuses) and all(s.startswith("LOCKED") or validated for s in statuses),
+          f"statuses={statuses} validated={validated}")
     c.add("STATE.smr2_vc_0001_reissue_required",
           bool(re.search(r"(?i)reissued", section)),
           "downstream entry no longer states the reissue requirement")

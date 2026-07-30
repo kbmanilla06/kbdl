@@ -495,6 +495,36 @@ counts — 4 durably recorded (3 Batch H, 1 Batch A), 417 PENDING. Metadata
 recording creates no fifth decision, unlocks no later prompt, and authorizes no
 implementation.
 
+## 15. KBDL-011-SMR2-VC-0001 planning-agent PASS and the next review target
+
+The reissued `KBDL-011-SMR2-VC-0001` **passed planning-agent validation** on
+2026-07-30, recorded durably as
+`KBDL-SMR2-VC-0001-PLANNING-AGENT-VALIDATION-2026-07-30`
+(`docs/kbdl/evidence/kbdl-011-smr2-vc-0001/smr2-vc-0001-planning-agent-validation-record.md`),
+covering implementation `af6a60a`, evidence closure `4aba456`, and remediation
+`448e39b`. `SMR1-VC-0001`'s resolution status advances to
+`METADATA RECORDED — PLANNING-AGENT VALIDATED`.
+
+That status means the recording passed validation. It does **not** mean the
+issue is resolved, closed, or verified, and it asserts no testing, conformance,
+readiness, implementation authorization, or project completion.
+`KBDL-A11Y-001`'s classification remains `Not verified`; `SMR1-KL-0001` remains
+`PENDING`; `KBDL-VAL-003` and `KBDL-VAL-006` remain `Not verified`.
+
+The sole next owner-review target is `SMR1-VC-0002` (`KBDL-A11Y-004`,
+Validation classification) — the lowest-numbered still-pending Batch A issue.
+This is a queue designation, not a decision: its Owner decision, Owner decision
+date, and Owner evidence cells remain literally `PENDING`, no durable
+owner-decision record exists for it, every checkbox in its new
+`project-owner-review.md` block is unselected, and no metadata-recording prompt
+for it is released, approved, ready, or eligible.
+`smr1-vc-0002-owner-decision-brief.md` sets out the confirmed facts, the five
+options and their trade-offs, and an explicitly unapproved recommended starting
+answer. Batch A remains `LOCKED — OWNER DECISION REQUIRED` for its 58 undecided
+issues, and the decision counts are unchanged: 4 durably recorded (3 Batch H,
+1 Batch A); 417 PENDING. A planning-agent validation record is not an owner
+decision and creates no fifth decision.
+
 ## 8. Progression gate
 
 This packet completes only KBDL-011-SMR1. The recommended next action is

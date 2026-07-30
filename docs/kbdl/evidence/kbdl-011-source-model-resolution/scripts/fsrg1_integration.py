@@ -37,7 +37,7 @@ VALIDATOR_REL = f"{FSRG1_REL}/scripts/validate_fsrg1.py"
 FIXTURES_REL = f"{FSRG1_REL}/scripts/fsrg1_fixtures.py"
 
 SMR1_REL = "docs/kbdl/evidence/kbdl-011-source-model-resolution"
-BASELINE_COMMIT = "718b0431af9e430a1fe52a88c99b520c1593bfb1"
+BASELINE_COMMIT = "448e39b22f4dc69210ca795c365bbdf1a3904f20"
 
 # Paths a later, separately authorized metadata-recording prompt may change.
 # Advanced by KBDL-011-SMR2-VC-0001 (reissued). Every other protected path is
@@ -47,6 +47,9 @@ AUTHORIZED_RECORDING_PATHS = {
     "docs/kbdl/accessibility.md",
     "docs/kbdl/traceability-metadata.csv",
     f"{SMR1_REL}/issue-register.csv",
+    # KBDL-011-SMR2-VC-0001-PA1: the review form gains the unselected
+    # next-review block; QUEUE7 asserts its checkbox state directly.
+    f"{SMR1_REL}/project-owner-review.md",
 }
 
 HISTORICAL_ROUNDS = ["r13", "r14", "r15", "r16"]
@@ -227,10 +230,14 @@ def compute(repo):
         if "KBDL-011-SMR2-VC-0001" in chunk.split("\n", 1)[0]:
             section = chunk
     statuses = re.findall(r"Status:\s*`([^`]+)`", section)
-    check("FSRG1.smr2_vc_0001_locked — the downstream prompt remains LOCKED and reissue-only",
-          bool(statuses) and all(s.startswith("LOCKED") for s in statuses)
+    # Generalized by KBDL-011-SMR2-VC-0001-PA1: LOCKED unless the map records
+    # that the downstream prompt itself passed planning-agent validation.
+    validated = bool(re.search(r"PASSED\s*[—-]\s*PLANNING-AGENT VALIDATED", section))
+    check("FSRG1.smr2_vc_0001_locked_unless_validated — the downstream prompt remains "
+          "LOCKED and reissue-only until its own validation is recorded",
+          bool(statuses) and all(s.startswith("LOCKED") or validated for s in statuses)
           and bool(re.search(r"(?i)reissued", section)),
-          f"statuses={statuses}")
+          f"statuses={statuses} validated={validated}")
 
     val_path = os.path.join(repo, "docs/kbdl/validation.md")
     flat = " ".join(open(val_path, encoding="utf-8").read().split()) if os.path.isfile(val_path) else ""

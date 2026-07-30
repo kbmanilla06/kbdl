@@ -298,3 +298,22 @@ lifecycle, provenance, method, evidence, or limitation changed; `SMR1-KL-0001`
 and the other 58 Batch A issues remain PENDING; VAL-003/VAL-006, readiness,
 conformance, and completion are unmoved; decision counts remain 4 recorded /
 417 pending. Planning-agent validation of this recording remains required.
+
+`KBDL-011-SMR2-VC-0001-PA1` records the planning-agent `PASS` for the reissued
+`KBDL-011-SMR2-VC-0001` in the durable record
+`KBDL-SMR2-VC-0001-PLANNING-AGENT-VALIDATION-2026-07-30`, covering commits
+`af6a60a`, `4aba456`, and `448e39b`, and advances `SMR1-VC-0001` to
+`METADATA RECORDED — PLANNING-AGENT VALIDATED`. That record is deliberately not
+an owner-decision record — it uses a different filename convention and a
+different parser — so it can never be counted as a fifth decision;
+`scripts/decision_state.py` PA1–PA12 enforce this and every field of the record,
+and PA12 asserts the separation directly. The sole next owner-review target is
+`SMR1-VC-0002` (`KBDL-A11Y-004`), a queue designation only: its owner fields
+remain `PENDING`, no durable record exists, every checkbox in its review block
+is unselected, no metadata-recording prompt for it is eligible, and Batch A
+remains `LOCKED — OWNER DECISION REQUIRED`.
+`scripts/smr2_vc_0001_integration.py` QUEUE1–QUEUE12 enforce exactly one named
+current target, its untouched pending state, and the absence of any eligibility
+claim. Classification, effective metadata, the live registry, VAL states,
+readiness, conformance, completion, and the decision counts (4 recorded / 417
+pending) are all unchanged.

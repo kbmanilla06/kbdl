@@ -255,11 +255,14 @@ def compute(pkt, repo):
     fsrg1_section = _section(map_text, PROMPT_ID)
     downstream_section = _section(map_text, DOWNSTREAM_ID)
     fr5_problems = []
-    # The downstream prompt must always be LOCKED until its own recording is
-    # planning-agent validated. FSRG1 may leave LOCKED, but only once the map
-    # records that it passed planning-agent validation — FR7 enforces the
-    # consistency of that claim.
+    # An entry may leave LOCKED only once the map records that it passed
+    # planning-agent validation — FR7 enforces the consistency of that claim.
+    # Extended by KBDL-011-SMR2-VC-0001-PA1: the downstream entry has now
+    # itself been validated, so the same rule governs it rather than a blanket
+    # "always LOCKED". An unvalidated entry that is unlocked still fails.
     fsrg1_passed = bool(PASSED_VALIDATION_RE.search(fsrg1_section))
+    downstream_passed = bool(PASSED_VALIDATION_RE.search(downstream_section))
+    passed_by_label = {"FSRG1": fsrg1_passed, "SMR2-VC-0001": downstream_passed}
     for label, section in (("FSRG1", fsrg1_section), ("SMR2-VC-0001", downstream_section)):
         if not section.strip():
             fr5_problems.append(f"{label} section missing from {MAP_FILE}")
@@ -268,7 +271,7 @@ def compute(pkt, repo):
         if not statuses:
             fr5_problems.append(f"{label} section states no Status")
             continue
-        must_be_locked = (label == "SMR2-VC-0001") or not fsrg1_passed
+        must_be_locked = not passed_by_label[label]
         for s in statuses:
             for part in (p.strip() for p in s.split(" / ")):
                 if part not in ALLOWED_STATUSES:
@@ -316,15 +319,14 @@ def compute(pkt, repo):
 
     # FR8: a status line must agree with the entry's own validation claim.
     status_conflicts = []
-    if fsrg1_passed:
-        for s in re.findall(r"Status:\s*`([^`]+)`", fsrg1_section):
-            if "PLANNING-AGENT VALIDATION REQUIRED" in s:
-                status_conflicts.append(("FSRG1", s))
-    for s in re.findall(r"Status:\s*`([^`]+)`", downstream_section):
-        if not s.strip().startswith("LOCKED"):
-            status_conflicts.append(("SMR2-VC-0001", s))
+    for label, section in (("FSRG1", fsrg1_section), ("SMR2-VC-0001", downstream_section)):
+        for s in re.findall(r"Status:\s*`([^`]+)`", section):
+            if passed_by_label[label] and "PLANNING-AGENT VALIDATION REQUIRED" in s:
+                status_conflicts.append((label, "validated but still demands validation", s))
+            if not passed_by_label[label] and not s.strip().startswith("LOCKED"):
+                status_conflicts.append((label, "unlocked without a validation claim", s))
     checks.append(("FR8. a validated entry does not still demand planning-agent validation, "
-                   "and the downstream entry remains LOCKED",
+                   "and an unvalidated entry is not unlocked",
                    len(status_conflicts) == 0, f"conflicts={status_conflicts}"))
 
     return checks

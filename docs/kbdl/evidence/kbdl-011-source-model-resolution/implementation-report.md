@@ -472,6 +472,26 @@ authorized recording necessarily requires.
 Decision counts after this recording (unchanged): 4 durably recorded
 (3 Batch H, 1 Batch A); 417 pending.
 
+## KBDL-011-SMR2-VC-0001-PA1 planning-agent PASS and next-review staging
+
+The reissued `KBDL-011-SMR2-VC-0001` passed planning-agent validation on
+2026-07-30 (record `KBDL-SMR2-VC-0001-PLANNING-AGENT-VALIDATION-2026-07-30`,
+covering `af6a60a`, `4aba456`, and `448e39b`). `SMR1-VC-0001` advances to
+`METADATA RECORDED — PLANNING-AGENT VALIDATED` — validated, not resolved.
+`scripts/decision_state.py` admits that status only when PA1–PA12 all hold, and
+`scripts/smr2_vc_0001_integration.py` adds QUEUE1–QUEUE12.
+
+The sole next owner-review target is `SMR1-VC-0002` (`KBDL-A11Y-004`), the
+lowest-numbered still-pending Batch A issue — a queue designation only. Its
+owner fields remain `PENDING`, no durable record exists, every checkbox is
+unselected, and no metadata-recording prompt for it is eligible.
+`smr1-vc-0002-owner-decision-brief.md` is informational.
+
+Unchanged: classification `Not verified`; `SMR1-KL-0001` and `SMR1-KL-0004`
+pending; the other 58 Batch A issues undecided; Batch A `LOCKED`; VAL-003 and
+VAL-006 `Not verified`; readiness, conformance, and completion; decision counts
+4 recorded / 417 pending.
+
 ## Recommended next action
 
 Planning-agent validation of `KBDL-011-SMR2-FSRG1`.

@@ -82,8 +82,8 @@ VERIFIED. The durable evidence of this selection is
 (record `KBDL-SMR1-BA-VC-0001-OWNER-DECISION-2026-07-29`) — not this
 form alone. Mirrored in `issue-register.csv` (Owner decision / Owner
 decision date / Owner evidence / Resolution status columns for this
-row, status `OWNER DECISION RECORDED — AWAITING PLANNING-AGENT
-VALIDATION`). This selection is current and non-retroactive; does not
+row; that status has since advanced to `METADATA RECORDED —
+PLANNING-AGENT VALIDATED`). This selection is current and non-retroactive; does not
 prove accessibility testing occurred; does not establish WCAG
 conformance; does not change lifecycle or provenance; does not resolve
 `SMR1-KL-0001`; does not restore `VAL-003` or `VAL-006`; does not
@@ -283,6 +283,42 @@ point (following the additional Batch A / `SMR1-VC-0001` decision), 417
 canonical issues remain literally `PENDING`.
 
 ---
+
+### Next issue-level review — SMR1-VC-0002 (KBDL-A11Y-004)
+
+**The sole next owner-review target is `SMR1-VC-0002` (`KBDL-A11Y-004`). No
+owner decision has been made.** Every checkbox below is unselected, and that is the current, accurate
+state — not an oversight.
+
+**Issue-level selection — `SMR1-VC-0002`:**
+- [ ] PROVIDE ORIGINAL OR APPROVED SOURCE
+- [ ] CONFIRM CURRENT CLASSIFICATION AS NEW CURRENT AUTHORITY
+- [ ] REVISE CLASSIFICATION
+- [ ] SET TO NOT VERIFIED
+- [ ] DEFER DECISION
+
+State of this issue:
+
+- `SMR1-VC-0002` (`KBDL-A11Y-004`, Validation classification) is the
+  lowest-numbered still-pending Batch A issue. It was selected by that rule
+  alone; the selection is a queue designation, not a decision.
+- Its `issue-register.csv` Owner decision, Owner decision date, and Owner
+  evidence fields all remain literally `PENDING`, and its resolution status
+  remains `SOURCE EVIDENCE REQUIRED`.
+- **No durable owner-decision record exists for it**, and none is created by
+  naming it here.
+- `smr1-vc-0002-owner-decision-brief.md` sets out the confirmed facts, the five
+  options with their trade-offs, and a recommended starting answer. **The brief
+  is informational**; its recommendation is unapproved and unselected.
+- No metadata-recording prompt for this issue is released, approved, ready, or
+  eligible. Batch A remains `LOCKED — OWNER DECISION REQUIRED`.
+- The other 57 pending Batch A validation-classification issues are **not**
+  queued, preselected, or under review. Counting `SMR1-VC-0002` itself, and
+  excluding the already-recorded `SMR1-VC-0001`, Batch A still has 58 issues
+  without an owner decision.
+- `SMR1-KL-0004`, the Known-limitation issue for the same requirement, is a
+  separate issue and remains `PENDING`.
+
 
 ## Sign-off (cumulative across all review cycles to date: Batch H and Batch A/SMR1-VC-0001)
 

@@ -112,10 +112,11 @@ prerequisite prompt, not an implementation authorization.
 - **What this status does not mean.** FSRG1's own work is complete and
   validated; nothing further is unlocked by it. Batch A remains
   `LOCKED — OWNER DECISION REQUIRED`, its other 58
-  validation-classification issues remain undecided, the downstream
-  `KBDL-011-SMR2-VC-0001` remains `LOCKED` pending planning-agent
-  validation of its own recording, no VAL status moved, and no
-  implementation is authorized.
+  validation-classification issues remain undecided, no VAL status moved,
+  and no implementation is authorized. (The downstream
+  `KBDL-011-SMR2-VC-0001` was subsequently reissued, executed, and has
+  since passed planning-agent validation of its own recording — see its
+  entry below. That likewise unlocks nothing further.)
 - Status: `ELIGIBLE FOR FUTURE PROMPT AFTER APPROVAL`.
 
 ## Downstream prompt — KBDL-011-SMR2-VC-0001 (validation-classification recording)
@@ -133,21 +134,38 @@ prerequisite prompt, not an implementation authorization.
   is superseded and was **not resumed**. None of its instructions,
   assumptions, output paths, or registry-handling behavior was carried
   forward.
-- **Implementation state (as of the reissued
-  `KBDL-011-SMR2-VC-0001`):** the metadata recording is implemented —
-  `KBDL-A11Y-001`'s normative record now carries an explicitly parseable
-  `Validation status: Not verified` field plus the durable
+- **Planning-agent validation: `PASSED — PLANNING-AGENT VALIDATED`.**
+  The reissued `KBDL-011-SMR2-VC-0001` passed planning-agent validation
+  on 2026-07-30, recorded durably as
+  `KBDL-SMR2-VC-0001-PLANNING-AGENT-VALIDATION-2026-07-30`
+  (`docs/kbdl/evidence/kbdl-011-smr2-vc-0001/smr2-vc-0001-planning-agent-validation-record.md`).
+  The validation covers three commits: implementation
+  `af6a60a0737745ec4e2d975e58a058c619e861cb`, evidence closure
+  `4aba456deeda8ea01b03eda072cfcdc82fb53ab7`, and remediation
+  `448e39b22f4dc69210ca795c365bbdf1a3904f20`.
+- **Implementation state:** the metadata recording is implemented and
+  validated — `KBDL-A11Y-001`'s normative record carries an explicitly
+  parseable `Validation status: Not verified` field plus the durable
   authority-record citation; the structured traceability row carries the
   same reference; the live registry was regenerated through the approved
   generator and the target row resolves and passes; `SMR1-VC-0001` is
-  marked `METADATA RECORDED — AWAITING PLANNING-AGENT VALIDATION`.
-  **Implementation is not validation:** planning-agent validation of this
-  recording has not occurred, so this entry stays `LOCKED`. The
+  marked `METADATA RECORDED — PLANNING-AGENT VALIDATED`. The
   classification value is unchanged (`Not verified`), `SMR1-KL-0001`
   remains pending, and no VAL status, readiness, conformance, or
-  completion state moved.
-- Status: `LOCKED — PLANNING-AGENT VALIDATION REQUIRED` (of the reissued
-  `KBDL-011-SMR2-VC-0001` itself).
+  completion state moved. (Historical note: at the
+  `KBDL-011-SMR2-VC-0001` implementation and remediation points this
+  entry read `LOCKED — PLANNING-AGENT VALIDATION REQUIRED`, because
+  implementation is not validation and that validation had not yet
+  occurred. It has since occurred — see the planning-agent bullet above.)
+- **What this status does not mean.** It records completion and
+  validation of this one prompt and nothing else. It does **not** make a
+  repeat `KBDL-011-SMR2-VC-0001` prompt eligible; does **not** unlock
+  Batch A, which remains `LOCKED — OWNER DECISION REQUIRED` for its other
+  58 undecided issues; does **not** authorize another metadata recording,
+  including for the next review target `SMR1-VC-0002`; does **not**
+  restore `KBDL-VAL-003` or `KBDL-VAL-006`; and does **not** authorize
+  implementation.
+- Status: `ELIGIBLE FOR FUTURE PROMPT AFTER APPROVAL`.
 
 ## Batch B — Authority-field sources
 

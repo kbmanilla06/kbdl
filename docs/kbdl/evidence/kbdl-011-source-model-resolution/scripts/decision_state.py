@@ -60,7 +60,52 @@ REQUIRED_IMPL_STATUS = "NOT AUTHORIZED"
 # below fail closed unless every piece of the recording is actually present and
 # consistent. A row may never carry this status merely by being edited.
 METADATA_RECORDED_STATUS = "METADATA RECORDED — AWAITING PLANNING-AGENT VALIDATION"
-PERMITTED_RECORDED_STATUSES = (REQUIRED_STATUS, METADATA_RECORDED_STATUS)
+
+# KBDL-011-SMR2-VC-0001-PA1: the third permitted status. A recording reaches it
+# only once a durable planning-agent validation record exists and every field of
+# that record checks out (PA1-PA12 below). It is still NOT a resolved/closed
+# state: the issue stays open, the classification stays Not verified, and no
+# later prompt becomes eligible.
+PLANNING_AGENT_VALIDATED_STATUS = "METADATA RECORDED — PLANNING-AGENT VALIDATED"
+PERMITTED_RECORDED_STATUSES = (REQUIRED_STATUS, METADATA_RECORDED_STATUS,
+                               PLANNING_AGENT_VALIDATED_STATUS)
+
+# --- planning-agent validation record (PA1-PA12) ---
+
+PA_RECORD_GLOB = "*-planning-agent-validation-record.md"
+PA_PROMPT_ID = "KBDL-011-SMR2-VC-0001"
+PA_RECORD_ID = "KBDL-SMR2-VC-0001-PLANNING-AGENT-VALIDATION-2026-07-30"
+PA_VERDICT = "PASS"
+PA_DATE = "2026-07-30"
+PA_TZ = "Asia/Manila"
+PA_IMPL_COMMIT = "af6a60a0737745ec4e2d975e58a058c619e861cb"
+PA_EVIDENCE_COMMIT = "4aba456deeda8ea01b03eda072cfcdc82fb53ab7"
+PA_REMEDIATION_COMMIT = "448e39b22f4dc69210ca795c365bbdf1a3904f20"
+PA_ISSUE_ID = "SMR1-VC-0001"
+PA_REQUIREMENT_ID = "KBDL-A11Y-001"
+PA_PACKAGE_REL = "docs/kbdl/evidence/kbdl-011-smr2-vc-0001"
+
+PA_TABLE_ROW_RE = re.compile(
+    r"^\|\s*(KBDL-011-[A-Z0-9-]+)\s*\|\s*([A-Z]+)\s*\|\s*([\d-]+)\s*\|\s*([\w/]+)\s*\|"
+    r"\s*([0-9a-f]{40})\s*\|\s*([0-9a-f]{40})\s*\|\s*([0-9a-f]{40})\s*\|\s*([\w-]+)\s*\|$")
+
+# Language a planning-agent validation record must never contain.
+PA_OVERREACH_PATTERNS = [
+    (re.compile(r"(?i)\b(?:testing|screen-reader (?:testing|verification)|"
+                r"automated (?:accessibility )?check(?:ing)?|WCAG conformance)\b"
+                r"[^.\n]{0,60}\b(?:was|were|has been|have been)\s+"
+                r"(?:executed|performed|completed|established)"), "claims testing occurred"),
+    (re.compile(r"(?i)\bKBDL-VAL-00[3-6]\b[^.\n]{0,40}\b(?:is|are|now)\s+"
+                r"(?:restored|Verified)\b"), "claims VAL restoration"),
+    (re.compile(r"(?i)implementation (?:is|are) (?:now )?authorized|"
+                r"authorizes implementation"), "claims implementation authorization"),
+    (re.compile(r"(?i)\b(?:candidate|release candidate)\b[^.\n]{0,40}\bREADY\b"
+                r"(?!\s*—)|conformance (?:is|now) verified"), "claims readiness/conformance"),
+    (re.compile(r"(?i)KBDL-011 is complete|project (?:is )?complete\b"),
+     "claims project completion"),
+    (re.compile(r"(?i)\bSMR1-KL-0001\b[^.\n]{0,40}\b(?:is |now )?"
+                r"(?:resolved|accepted|closed)\b"), "claims SMR1-KL-0001 resolved"),
+]
 
 # Statuses that would assert the issue is finished. Never permitted here.
 FINAL_STATUS_RE = re.compile(
@@ -316,6 +361,156 @@ def check_current_state_prose(pkt, recorded_count, pending_count, batch_counts):
                     arithmetic_ok,
                     f"batch_counts={batch_counts} recorded_count={recorded_count} "
                     f"pending_count={pending_count}"))
+
+    return checks
+
+
+def parse_planning_agent_records(repo):
+    """Return [(path, fields_dict)] for every planning-agent validation record.
+
+    Deliberately a different filename convention and a different parser from
+    `parse_durable_records`, so a validation record can never be counted as an
+    owner decision (PA12).
+    """
+    out = []
+    pkg = os.path.join(repo, PA_PACKAGE_REL)
+    for fp in sorted(glob.glob(os.path.join(pkg, PA_RECORD_GLOB))):
+        text = open(fp, encoding="utf-8").read()
+        row = None
+        for line in text.splitlines():
+            m = PA_TABLE_ROW_RE.match(line.strip())
+            if m:
+                row = {
+                    "prompt_id": m.group(1), "verdict": m.group(2), "date": m.group(3),
+                    "tz": m.group(4), "impl": m.group(5), "evidence": m.group(6),
+                    "remediation": m.group(7), "record_id": m.group(8),
+                }
+                break
+        out.append((fp, row, text))
+    return out
+
+
+def check_planning_agent_validation(pkt, rows, approved):
+    """PA1-PA12 (KBDL-011-SMR2-VC-0001-PA1).
+
+    The PLANNING-AGENT VALIDATED status is admitted only when a matching,
+    complete, non-overreaching validation record exists — and only for the one
+    authorized issue. Every check fails closed.
+    """
+    checks = []
+    repo = os.path.abspath(os.path.join(pkt, "..", "..", "..", ".."))
+    records = parse_planning_agent_records(repo)
+
+    validated = [r["Resolution issue ID"] for r in rows
+                 if r["Resolution status"].strip() == PLANNING_AGENT_VALIDATED_STATUS]
+
+    # PA10: at most one issue may carry the validated status, and only the
+    # authorized one.
+    checks.append(("PA10. exactly the authorized issue carries the planning-agent-validated "
+                   "status", validated in ([], [PA_ISSUE_ID]), f"validated={validated}"))
+
+    # A valid record with the issue still "awaiting" is itself a defect: the
+    # transition was left half-applied. Evaluate PA7 whenever a matching record
+    # exists, not only once the status has already advanced.
+    any_matching = [r for _fp, r, _t in records if r and r["prompt_id"] == PA_PROMPT_ID]
+    status_now_early = next((r["Resolution status"].strip() for r in rows
+                             if r["Resolution issue ID"] == PA_ISSUE_ID), "")
+    if not validated and any_matching:
+        checks.append(("PA7. the validated issue no longer reads 'awaiting' once a valid "
+                       "validation record exists",
+                       "AWAITING" not in status_now_early.upper(),
+                       f"status={status_now_early!r} records={len(any_matching)}"))
+
+    if not validated:
+        for n in ("PA1. planning-agent-validated status is backed by a validation record",
+                  "PA2. validation record verdict is PASS",
+                  "PA3. validation record names the correct prompt ID",
+                  "PA4. validation record names all three covered commits exactly",
+                  "PA5. validation record date and timezone are correct",
+                  "PA6. validation record names the correct issue and requirement",
+                  "PA8. the validated issue is not marked finally resolved",
+                  "PA9. validation record claims no testing, VAL restoration, conformance, "
+                  "readiness, implementation authorization, or completion",
+                  "PA11. validation record states 'Implementation authorization status: "
+                  "NOT AUTHORIZED'",
+                  "PA12. no planning-agent validation record is parsed as an owner decision"):
+            checks.append((n + " (status not claimed; trivially satisfied)", True, ""))
+        return checks
+
+    matching = [(fp, row, text) for fp, row, text in records
+                if row and row["prompt_id"] == PA_PROMPT_ID]
+    checks.append(("PA1. planning-agent-validated status is backed by a validation record",
+                   len(matching) == 1,
+                   f"records={len(records)} matching={len(matching)}"))
+    if len(matching) != 1:
+        for n in ("PA2. validation record verdict is PASS",
+                  "PA3. validation record names the correct prompt ID",
+                  "PA4. validation record names all three covered commits exactly",
+                  "PA5. validation record date and timezone are correct",
+                  "PA6. validation record names the correct issue and requirement",
+                  "PA9. validation record claims no testing, VAL restoration, conformance, "
+                  "readiness, implementation authorization, or completion",
+                  "PA11. validation record states 'Implementation authorization status: "
+                  "NOT AUTHORIZED'"):
+            checks.append((n, False, "no single matching validation record"))
+        matching = []
+    else:
+        fp, row, text = matching[0]
+        checks.append(("PA2. validation record verdict is PASS",
+                       row["verdict"] == PA_VERDICT, f"verdict={row['verdict']!r}"))
+        checks.append(("PA3. validation record names the correct prompt ID",
+                       row["prompt_id"] == PA_PROMPT_ID and row["record_id"] == PA_RECORD_ID,
+                       f"prompt={row['prompt_id']!r} record={row['record_id']!r}"))
+        # Every 40-hex token anywhere in the record must be one of the three
+        # covered commits, so corrupting the prose copy of a SHA -- while
+        # leaving the machine-readable row intact -- still fails.
+        expected_commits = {PA_IMPL_COMMIT, PA_EVIDENCE_COMMIT, PA_REMEDIATION_COMMIT}
+        found_commits = set(re.findall(r"\b[0-9a-f]{40}\b", text))
+        commits_ok = (row["impl"] == PA_IMPL_COMMIT
+                      and row["evidence"] == PA_EVIDENCE_COMMIT
+                      and row["remediation"] == PA_REMEDIATION_COMMIT
+                      and found_commits == expected_commits)
+        checks.append(("PA4. validation record names all three covered commits exactly",
+                       commits_ok,
+                       f"impl={row['impl'][:12]} evidence={row['evidence'][:12]} "
+                       f"remediation={row['remediation'][:12]}"))
+        checks.append(("PA5. validation record date and timezone are correct",
+                       row["date"] == PA_DATE and row["tz"] == PA_TZ,
+                       f"date={row['date']!r} tz={row['tz']!r}"))
+        # Capture the declared values and compare them, rather than using a
+        # negative lookahead: an optional-backtick quantifier backtracks to
+        # zero width and makes the lookahead succeed against correct input.
+        decl_issue = re.search(r"Validated issue:\s*`?([A-Za-z0-9-]+)", text)
+        decl_req = re.search(r"Validated requirement:\s*`?([A-Za-z0-9-]+)", text)
+        checks.append(("PA6. validation record names the correct issue and requirement",
+                       bool(decl_issue) and decl_issue.group(1) == PA_ISSUE_ID
+                       and bool(decl_req) and decl_req.group(1) == PA_REQUIREMENT_ID,
+                       f"issue={decl_issue.group(1) if decl_issue else None!r} "
+                       f"requirement={decl_req.group(1) if decl_req else None!r}"))
+        overreach = [why for pat, why in PA_OVERREACH_PATTERNS if pat.search(text)]
+        checks.append(("PA9. validation record claims no testing, VAL restoration, "
+                       "conformance, readiness, implementation authorization, or completion",
+                       not overreach, f"overreach={overreach}"))
+        impl = re.search(r"Implementation authorization status:\s*([^\n]+)", text)
+        checks.append(("PA11. validation record states 'Implementation authorization status: "
+                       "NOT AUTHORIZED'",
+                       bool(impl) and impl.group(1).strip() == REQUIRED_IMPL_STATUS,
+                       f"value={impl.group(1).strip() if impl else None!r}"))
+
+    status_now = next((r["Resolution status"].strip() for r in rows
+                       if r["Resolution issue ID"] == PA_ISSUE_ID), "")
+    checks.append(("PA7. the validated issue no longer reads 'awaiting'",
+                   "AWAITING" not in status_now.upper(), f"status={status_now!r}"))
+    checks.append(("PA8. the validated issue is not marked finally resolved",
+                   not FINAL_STATUS_RE.match(status_now), f"status={status_now!r}"))
+
+    # PA12: the validation record must not be picked up by the owner-decision
+    # parser, and must not have inflated the recorded-decision count.
+    owner_record_paths = {os.path.basename(rec["file"]) for rec in approved.values()}
+    leaked = sorted(os.path.basename(fp) for fp, _row, _t in records
+                    if os.path.basename(fp) in owner_record_paths)
+    checks.append(("PA12. no planning-agent validation record is parsed as an owner decision",
+                   not leaked and len(approved) == 4, f"leaked={leaked} approved={len(approved)}"))
 
     return checks
 
@@ -833,6 +1028,9 @@ def compute(pkt):
 
     # KBDL-011-SMR2-VC-0001 (reissued): metadata-recording completeness.
     checks.extend(check_metadata_recording(pkt, metadata_recorded, approved, rows))
+
+    # KBDL-011-SMR2-VC-0001-PA1: planning-agent validation record integrity.
+    checks.extend(check_planning_agent_validation(pkt, rows, approved))
 
     stats = {
         "recorded_count": recorded_count,

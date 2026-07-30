@@ -46,6 +46,11 @@ RECORD_REL = f"{SMR1_REL}/batch-a-smr1-vc-0001-owner-decision-record.md"
 ISSUES_REL = f"{SMR1_REL}/issue-register.csv"
 
 METADATA_RECORDED = "METADATA RECORDED — AWAITING PLANNING-AGENT VALIDATION"
+# Advanced by KBDL-011-SMR2-VC-0001-PA1 once the recording passed planning-agent
+# validation. Both are legitimate post-recording states; neither is a final
+# resolved/closed/verified state.
+METADATA_VALIDATED = "METADATA RECORDED — PLANNING-AGENT VALIDATED"
+PERMITTED_RECORDED_STATUSES = (METADATA_RECORDED, METADATA_VALIDATED)
 
 REQUIREMENT_SENTENCE = (
     "- **KBDL-A11Y-001** — Non-decorative images/icons **must** have a text\n"
@@ -90,6 +95,11 @@ ALLOWED_PREFIXES = (
     f"{SMR1_REL}/scripts/decision_state.py",
     f"{SMR1_REL}/scripts/validate_packet.py",
     f"{SMR1_REL}/scripts/smr2_vc_0001_integration.py",
+    # Added to the allowed set by KBDL-011-SMR2-VC-0001-PA1, which authorizes
+    # the next-review staging artefacts.
+    f"{SMR1_REL}/project-owner-review.md",
+    f"{SMR1_REL}/smr1-vc-0002-owner-decision-brief.md",
+    f"{SMR1_REL}/scripts/smr2_vc_0001_pa1_fixtures.py",
 )
 
 # Paths outside the reissued prompt's Allowed Files list that this
@@ -298,10 +308,10 @@ def run(root: Path) -> int:
 
     # --- issue state and decision counts (23-24) ---
     target_issue = next((r for r in irows if r["Resolution issue ID"] == ISSUE_ID), None)
-    c.add("23. issue-register status is metadata-recorded and awaiting planning-agent "
-          "validation",
+    c.add("23. issue-register status is a permitted post-recording state (awaiting or "
+          "planning-agent validated) and never a final resolution",
           target_issue is not None
-          and target_issue["Resolution status"].strip() == METADATA_RECORDED
+          and target_issue["Resolution status"].strip() in PERMITTED_RECORDED_STATUSES
           and RECORD_ID in target_issue["Authoritative source found"],
           f"status={target_issue['Resolution status'] if target_issue else None!r}")
     sys.path.insert(0, str(root / SMR1_REL / "scripts"))
