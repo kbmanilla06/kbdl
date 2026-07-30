@@ -275,3 +275,26 @@ prepares, authorizes, and runs no generator; creates no live registry;
 issues no prompt; changes no normative content, no effective metadata,
 and no protected file; restores no VAL status; and records, reopens, or
 preselects no owner decision.
+
+The reissued `KBDL-011-SMR2-VC-0001` records the approved `SMR1-VC-0001`
+decision into effective metadata for one requirement and one field.
+`KBDL-A11Y-001`'s validation classification is **unchanged** (`Not verified`);
+what changed is that its normative record now states the value as an explicitly
+parseable `Validation status:` field and cites
+`KBDL-SMR1-BA-VC-0001-OWNER-DECISION-2026-07-29` as current, non-retroactive
+decision authority — decision authority only, never validation evidence. The
+previous `UNRESOLVED`/`FAIL` state was caused solely by the normative label
+being split across a line wrap, so no independent parse found it; neither the
+ledger nor the readable group may prove a normative-owned field. The structured
+traceability row carries the same reference in `Notes or exclusions`, never in
+`Validation evidence`. The live registry was regenerated through the approved
+FSRG1 generator and never hand-edited: exactly two rows changed, exactly one
+moved `FAIL` → `PASS`, and counts hold at 5,389 rows / 317 requirements / 17
+fields / 0 duplicates. `scripts/decision_state.py` admits the new
+`METADATA RECORDED — AWAITING PLANNING-AGENT VALIDATION` status only when
+MD1-MD8 all hold, and new check `7e` rejects any final-resolution claim;
+`scripts/smr2_vc_0001_integration.py` adds nine read-only `VC1.*` checks. No
+lifecycle, provenance, method, evidence, or limitation changed; `SMR1-KL-0001`
+and the other 58 Batch A issues remain PENDING; VAL-003/VAL-006, readiness,
+conformance, and completion are unmoved; decision counts remain 4 recorded /
+417 pending. Planning-agent validation of this recording remains required.

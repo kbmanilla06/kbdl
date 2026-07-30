@@ -15,7 +15,13 @@ Status vocabulary:
 ## Batch A — Validation-classification authority
 
 - Decision required: one of PROVIDE SOURCE / CONFIRM CURRENT / REVISE /
-  SET NOT VERIFIED / DEFER, per requirement (59 total).
+  SET NOT VERIFIED / DEFER, per requirement (59 total). One
+  (`SMR1-VC-0001`) has a recorded decision that has now also been
+  recorded into effective metadata by the reissued
+  `KBDL-011-SMR2-VC-0001`; the other **58 remain
+  `LOCKED — OWNER DECISION REQUIRED`**, undecided and unrecorded. No
+  bulk recording is authorized, and recording one issue unlocks no
+  other issue and no later prompt.
 - Later remediation prompt that could be prepared: "KBDL-011-SMR2:
   Validation-classification recording," scoped to only the requirements
   with a recorded, non-deferred decision. Its first issue-scoped
@@ -86,6 +92,10 @@ prerequisite prompt, not an implementation authorization.
   passes planning-agent validation, and is then **reissued** (not
   resumed) so that it regenerates the registry through the approved
   generator rather than by hand.
+- **Planning-agent validation: `PASSED — PLANNING-AGENT VALIDATED`.**
+  `KBDL-011-SMR2-FSRG1` has passed planning-agent validation. That is
+  what released the downstream prompt for reissue; it does not unlock
+  Batch A, and it authorizes no implementation.
 - **Implementation state (as of KBDL-011-SMR2-FSRG1):** the package
   `docs/kbdl/evidence/kbdl-011-smr2-fsrg1/` has been implemented — the
   deterministic generator, the live registry artifact, the declared
@@ -107,11 +117,27 @@ prerequisite prompt, not an implementation authorization.
 - Preconditions: `KBDL-011-SMR2-FSRG1` prepared **and** passed
   planning-agent validation; the reissued prompt invokes the
   FSRG1-approved generator and performs no hand-edit of any registry.
-  As of `KBDL-011-SMR2-FSRG1`, the first precondition's *preparation*
-  half is met and its *validation* half is not, so this entry does not
-  move.
-- Status: `LOCKED — PLANNING-AGENT VALIDATION REQUIRED` (of
-  `KBDL-011-SMR2-FSRG1`).
+  Both halves are now met: FSRG1 passed planning-agent validation, and
+  the prompt below was reissued rather than resumed.
+- **Superseded version.** The original, blocked `KBDL-011-SMR2-VC-0001`
+  is superseded and was **not resumed**. None of its instructions,
+  assumptions, output paths, or registry-handling behavior was carried
+  forward.
+- **Implementation state (as of the reissued
+  `KBDL-011-SMR2-VC-0001`):** the metadata recording is implemented —
+  `KBDL-A11Y-001`'s normative record now carries an explicitly parseable
+  `Validation status: Not verified` field plus the durable
+  authority-record citation; the structured traceability row carries the
+  same reference; the live registry was regenerated through the approved
+  generator and the target row resolves and passes; `SMR1-VC-0001` is
+  marked `METADATA RECORDED — AWAITING PLANNING-AGENT VALIDATION`.
+  **Implementation is not validation:** planning-agent validation of this
+  recording has not occurred, so this entry stays `LOCKED`. The
+  classification value is unchanged (`Not verified`), `SMR1-KL-0001`
+  remains pending, and no VAL status, readiness, conformance, or
+  completion state moved.
+- Status: `LOCKED — PLANNING-AGENT VALIDATION REQUIRED` (of the reissued
+  `KBDL-011-SMR2-VC-0001` itself).
 
 ## Batch B — Authority-field sources
 

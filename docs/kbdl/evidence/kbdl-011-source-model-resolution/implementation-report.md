@@ -438,6 +438,40 @@ A); 417 pending. **Implementation is not validation** —
 `KBDL-011-SMR2-FSRG1` remains `LOCKED — PLANNING-AGENT VALIDATION
 REQUIRED`.
 
+## KBDL-011-SMR2-VC-0001 (reissued) metadata recording
+
+`KBDL-011-SMR2-FSRG1` passed planning-agent validation, releasing the
+downstream prompt for reissue; the earlier blocked
+`KBDL-011-SMR2-VC-0001` is superseded and was not resumed.
+
+The reissued prompt records the approved `SMR1-VC-0001` decision into
+effective metadata for `KBDL-A11Y-001`'s validation-classification field
+only. The value is unchanged (`Not verified`); the normative record now
+carries an explicitly parseable `Validation status:` field plus a
+citation of the durable owner record as current, non-retroactive
+decision authority — not validation evidence. Root cause of the previous
+`UNRESOLVED`/`FAIL` state: the normative label was split across a line
+wrap, so no independent parse found it, and neither the ledger nor the
+readable group may prove a normative-owned field.
+
+The live registry was regenerated through the approved FSRG1 generator.
+Exactly two rows changed; exactly one moved `FAIL` → `PASS`; counts hold
+at 5,389 rows / 317 requirements / 17 fields / 0 duplicates. Full
+project-wide R16 regression run into a temporary directory shows
+`UNRESOLVED_FIELD_SOURCE` 335 → 333 and total defect rows 693 → 690,
+with `KBDL-A11Y-001 / Validation classification` no longer unresolved;
+all remaining VAL-003/VAL-006 defects are pre-existing and out of scope,
+and both gates remain `Not verified`.
+
+See `docs/kbdl/evidence/kbdl-011-smr2-vc-0001/` for the issue-specific
+validator (30 fail-closed checks), fixtures (24 negative, 6 positive
+controls), transcript, and full report — including a documented scope
+deviation covering the two FSRG1 baseline-constant updates that an
+authorized recording necessarily requires.
+
+Decision counts after this recording (unchanged): 4 durably recorded
+(3 Batch H, 1 Batch A); 417 pending.
+
 ## Recommended next action
 
 Planning-agent validation of `KBDL-011-SMR2-FSRG1`.

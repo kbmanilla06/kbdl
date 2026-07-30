@@ -246,12 +246,23 @@ AGC1_AUTHORIZED_NON_PACKET_FILES = {
 # asserts that the package neither changes protected state nor disturbs the
 # historical registries.
 FSRG1_AUTHORIZED_PACKAGE = "docs/kbdl/evidence/kbdl-011-smr2-fsrg1"
+# KBDL-011-SMR2-VC-0001 (reissued) authorizes its own evidence package plus the
+# two narrowly scoped source files it records into. Both source files are
+# separately asserted unchanged-except-as-authorized by smr2_vc_0001_integration
+# and by the issue validator's checks 06-17.
+VC1_AUTHORIZED_PACKAGE = "docs/kbdl/evidence/kbdl-011-smr2-vc-0001"
+VC1_AUTHORIZED_SOURCE_FILES = {
+    "docs/kbdl/accessibility.md",
+    "docs/kbdl/traceability-metadata.csv",
+}
 status_out = subprocess.run(["git", "-C", REPO, "status", "--porcelain"], capture_output=True, text=True).stdout
 non_packet_changes = []
 for l in status_out.splitlines():
     if "kbdl-011-source-model-resolution" in l:
         continue
-    if FSRG1_AUTHORIZED_PACKAGE in l:
+    if FSRG1_AUTHORIZED_PACKAGE in l or VC1_AUTHORIZED_PACKAGE in l:
+        continue
+    if l[3:].strip() in VC1_AUTHORIZED_SOURCE_FILES:
         continue
     path = l[3:].strip()
     if path in AGC1_AUTHORIZED_NON_PACKET_FILES:
@@ -303,6 +314,12 @@ for name, ok, detail in fsrg1_roadmap.compute(PKT, REPO):
 # the same logic can be exercised against temporary copies.
 import fsrg1_integration
 for name, ok, detail in fsrg1_integration.compute(REPO):
+    check(name, ok, detail)
+
+# VC1.*. KBDL-011-SMR2-VC-0001 (reissued) metadata-recording integration.
+# Read-only: never regenerates the live registry.
+import smr2_vc_0001_integration
+for name, ok, detail in smr2_vc_0001_integration.compute(REPO):
     check(name, ok, detail)
 
 # 23. push safety handled by caller (fast-forward check) -- placeholder true, actual check done in shell during commit/push

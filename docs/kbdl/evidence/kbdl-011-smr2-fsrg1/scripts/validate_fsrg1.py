@@ -52,7 +52,25 @@ REGISTRY_REL = "docs/kbdl/evidence/kbdl-011-{r}/artifacts/field-source-registry.
 INVENTORY_REL = "docs/kbdl/evidence/kbdl-011-{r}/evidence-inventory.csv"
 SHA256_RE = re.compile(r"^[0-9a-f]{64}$")
 
-BASELINE_COMMIT = "dc16473a63e446bd685640e18d64417d120b702e"
+BASELINE_COMMIT = "718b0431af9e430a1fe52a88c99b520c1593bfb1"
+
+# Paths a later, separately authorized metadata-recording prompt is permitted to
+# change. Advanced by KBDL-011-SMR2-VC-0001 (reissued), which narrowly
+# authorizes recording one approved owner decision into effective metadata.
+#
+# This does NOT weaken the PROT gate: every other protected path below is still
+# compared byte-for-byte against the baseline, and each exempted path is instead
+# validated field-by-field by
+# `docs/kbdl/evidence/kbdl-011-smr2-vc-0001/scripts/validate_smr2_vc_0001.py`
+# (checks 06-17 for the two source files, 21-22 for registry scope, 18-19 for
+# sibling-issue preservation), plus `decision_state.py`'s MD1-MD8. Without this
+# exemption the gate would forbid every future authorized recording, because it
+# hard-codes the commit at which those files last stood unchanged.
+AUTHORIZED_RECORDING_PATHS = {
+    "docs/kbdl/accessibility.md",
+    "docs/kbdl/traceability-metadata.csv",
+    f"{SMR1_REL}/issue-register.csv",
+}
 
 PROTECTED_RELS = [
     "docs/kbdl/traceability-metadata.csv",
@@ -508,8 +526,14 @@ def check_fixture_isolation(c: Checks, root: Path):
         p for p in set(before) & set(after) if before[p] != after[p])
     c.add("ISO.real_repository_byte_unchanged", not changed, f"changed={changed[:5]}")
     status = git(root, "status", "--short")
+    # Worktree paths a separately authorized recording prompt may touch: its own
+    # evidence package plus the enumerated recording paths. Everything else must
+    # still be inside the FSRG1 or SMR1 packages.
+    allowed_worktree = (PACKAGE_REL, SMR1_REL,
+                        "docs/kbdl/evidence/kbdl-011-smr2-vc-0001")
     unexpected = [ln for ln in status.stdout.splitlines()
-                  if PACKAGE_REL not in ln and SMR1_REL not in ln]
+                  if not any(a in ln for a in allowed_worktree)
+                  and ln[3:].strip() not in AUTHORIZED_RECORDING_PATHS]
     c.add("ISO.no_unexpected_worktree_changes", not unexpected, f"{unexpected[:5]}")
 
 
@@ -559,7 +583,14 @@ def check_protected(c: Checks, root: Path):
         return
     c.add("PROT.baseline_diff_available", True)
     changed = [x for x in result.stdout.splitlines() if x.strip()]
-    c.add("PROT.protected_files_unchanged_vs_baseline", not changed, f"changed={changed}")
+    unauthorized = [x for x in changed if x not in AUTHORIZED_RECORDING_PATHS]
+    c.add("PROT.protected_files_unchanged_vs_baseline", not unauthorized,
+          f"changed={unauthorized}")
+    # The exempted paths are still reported, so an authorized change is visible
+    # rather than silent, and is never mistaken for "nothing changed".
+    c.add("PROT.authorized_recording_changes_declared",
+          set(changed) <= AUTHORIZED_RECORDING_PATHS,
+          f"undeclared={sorted(set(changed) - AUTHORIZED_RECORDING_PATHS)}")
     hist = git(root, "diff", "--name-only", BASELINE_COMMIT, "--",
                *[f"docs/kbdl/evidence/kbdl-011-{r}" for r in HISTORICAL_ROUNDS])
     changed_hist = [x for x in hist.stdout.splitlines() if x.strip()]

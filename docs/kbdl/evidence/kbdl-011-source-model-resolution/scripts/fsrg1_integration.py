@@ -37,7 +37,17 @@ VALIDATOR_REL = f"{FSRG1_REL}/scripts/validate_fsrg1.py"
 FIXTURES_REL = f"{FSRG1_REL}/scripts/fsrg1_fixtures.py"
 
 SMR1_REL = "docs/kbdl/evidence/kbdl-011-source-model-resolution"
-BASELINE_COMMIT = "dc16473a63e446bd685640e18d64417d120b702e"
+BASELINE_COMMIT = "718b0431af9e430a1fe52a88c99b520c1593bfb1"
+
+# Paths a later, separately authorized metadata-recording prompt may change.
+# Advanced by KBDL-011-SMR2-VC-0001 (reissued). Every other protected path is
+# still compared byte-for-byte; each exempted path is instead validated
+# field-by-field by validate_smr2_vc_0001.py and decision_state.py's MD1-MD8.
+AUTHORIZED_RECORDING_PATHS = {
+    "docs/kbdl/accessibility.md",
+    "docs/kbdl/traceability-metadata.csv",
+    f"{SMR1_REL}/issue-register.csv",
+}
 
 HISTORICAL_ROUNDS = ["r13", "r14", "r15", "r16"]
 REGISTRY_REL = "docs/kbdl/evidence/kbdl-011-{r}/artifacts/field-source-registry.csv"
@@ -186,9 +196,11 @@ def compute(repo):
 
     diff = _git(repo, "diff", "--name-only", BASELINE_COMMIT, "--", *BASELINE_PROTECTED)
     changed = [x for x in diff.stdout.splitlines() if x.strip()]
-    check("FSRG1.effective_metadata_unchanged — protected/normative files match the baseline",
-          diff.returncode == 0 and not changed,
-          f"rc={diff.returncode} changed={changed}")
+    unauthorized = [x for x in changed if x not in AUTHORIZED_RECORDING_PATHS]
+    check("FSRG1.effective_metadata_unchanged — protected/normative files match the "
+          "baseline except paths a later authorized recording prompt may change",
+          diff.returncode == 0 and not unauthorized,
+          f"rc={diff.returncode} changed={unauthorized}")
 
     hist_diff = _git(repo, "diff", "--name-only", BASELINE_COMMIT, "--",
                      *[f"docs/kbdl/evidence/kbdl-011-{r}" for r in HISTORICAL_ROUNDS])

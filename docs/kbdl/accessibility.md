@@ -678,9 +678,9 @@ repository).
   alternative; decorative images **must** be excluded from AT
   narration; text **must not** be presented as an image except where
   essential.
-  - Lifecycle status: Approved (directly restates WCAG 2.2 SC 1.1.1,
-    Level A, and SC 1.4.5, Level AA). Provenance: Confirmed. Validation
-    status: Not verified.
+  - Lifecycle status: Approved (directly restates WCAG 2.2 SC 1.1.1, Level A, and SC 1.4.5, Level AA). Provenance: Confirmed.
+  - Validation status: Not verified.
+  - Validation-classification authority record: `KBDL-SMR1-BA-VC-0001-OWNER-DECISION-2026-07-29` — current and non-retroactive project-owner decision authority for retaining this classification; decision authority only, not validation evidence.
   - Related requirement: `KBDL-FND-007` (media anticipates accessible-text
     requirements, Approved).
   - Applicable profiles: Showcase, Precision, Flow.

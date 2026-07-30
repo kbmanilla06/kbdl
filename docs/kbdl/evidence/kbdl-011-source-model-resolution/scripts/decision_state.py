@@ -53,6 +53,38 @@ TABLE_ROW_RE = re.compile(r"^\|\s*(SMR1-[A-Z0-9]+-\d+)\s*\|(.*)\|\s*$")
 REQUIRED_STATUS = "OWNER DECISION RECORDED — AWAITING PLANNING-AGENT VALIDATION"
 REQUIRED_IMPL_STATUS = "NOT AUTHORIZED"
 
+# KBDL-011-SMR2-VC-0001 (reissued): once a durably recorded decision has been
+# applied to effective metadata by a metadata-recording prompt, its issue row
+# advances to this second permitted status. It is NOT a resolved/closed state:
+# planning-agent validation of the recording is still required, and MD1-MD8
+# below fail closed unless every piece of the recording is actually present and
+# consistent. A row may never carry this status merely by being edited.
+METADATA_RECORDED_STATUS = "METADATA RECORDED — AWAITING PLANNING-AGENT VALIDATION"
+PERMITTED_RECORDED_STATUSES = (REQUIRED_STATUS, METADATA_RECORDED_STATUS)
+
+# Statuses that would assert the issue is finished. Never permitted here.
+FINAL_STATUS_RE = re.compile(
+    r"^\s*(RESOLVED|CLOSED|COMPLETE|COMPLETED|VERIFIED|VALIDATED|"
+    r"PLANNING-AGENT VALIDATED|APPROVED)\b", re.IGNORECASE)
+
+# The one metadata recording this validator knows how to verify end to end.
+MD_ISSUE_ID = "SMR1-VC-0001"
+MD_REQUIREMENT_ID = "KBDL-A11Y-001"
+MD_FIELD = "Validation classification"
+MD_VALUE = "Not verified"
+MD_RECORD_ID = "KBDL-SMR1-BA-VC-0001-OWNER-DECISION-2026-07-29"
+MD_MODULE_REL = "docs/kbdl/accessibility.md"
+MD_LEDGER_REL = "docs/kbdl/traceability-metadata.csv"
+MD_REGISTRY_REL = ("docs/kbdl/evidence/kbdl-011-smr2-fsrg1/artifacts/"
+                   "field-source-registry.csv")
+# The requirement block starts at its own bullet and ends at the next one.
+MD_BLOCK_RE = re.compile(
+    r"^- \*\*KBDL-A11Y-001\*\*.*?(?=^- \*\*KBDL-A11Y-|\Z)", re.MULTILINE | re.DOTALL)
+MD_STATUS_FIELD_RE = re.compile(r"(?m)^\s*-\s*Validation status:\s*(.+?)\s*$")
+MD_AUTHORITY_CURRENT_RE = re.compile(r"current and non-retroactive", re.IGNORECASE)
+MD_AUTHORITY_NOT_EVIDENCE_RE = re.compile(
+    r"decision authority only[,;]?\s*not validation evidence", re.IGNORECASE)
+
 # --- KBDL-011-SMR1-BA-OD1-DR1-R1: authority-record and current-state-prose checks ---
 
 NUM_WORDS = {
@@ -288,6 +320,121 @@ def check_current_state_prose(pkt, recorded_count, pending_count, batch_counts):
     return checks
 
 
+def check_metadata_recording(pkt, metadata_recorded, approved, rows):
+    """MD1-MD8 (KBDL-011-SMR2-VC-0001, reissued).
+
+    A row may carry METADATA_RECORDED_STATUS only when the recording it claims
+    actually exists, everywhere it must exist, and only for the one issue this
+    prompt authorized. Every check fails closed: a missing file, an unparsable
+    block, or an unexpected extra recorded issue is a failure, never a skip.
+
+    Deliberately NOT weakened for the zero-recording case: when no row claims
+    the status, MD1-MD8 pass trivially and the pre-existing owner-decision
+    checks (7/7b/7c/7d, D1-D14) are untouched.
+    """
+    checks = []
+    repo = os.path.abspath(os.path.join(pkt, "..", "..", "..", ".."))
+
+    # MD1: only the authorized issue may be metadata-recorded.
+    unauthorized = sorted(i for i in metadata_recorded if i != MD_ISSUE_ID)
+    checks.append(("MD1. only the authorized issue carries the metadata-recorded status",
+                   not unauthorized, f"unauthorized={unauthorized}"))
+
+    if MD_ISSUE_ID not in metadata_recorded:
+        for name in ("MD2. metadata-recorded issue has a matching non-deferred durable record",
+                     "MD3. normative module carries the approved value as a parseable field",
+                     "MD4. normative module cites the exact durable authority record",
+                     "MD5. normative authority language is current, non-retroactive, and "
+                     "not represented as validation evidence",
+                     "MD6. structured traceability row carries the same value and the "
+                     "authority reference",
+                     "MD7. live field-source registry row resolves to the approved value "
+                     "and passes",
+                     "MD8. metadata-recorded issue is not marked finally resolved"):
+            checks.append((name + " (not claimed; trivially satisfied)", True, ""))
+        return checks
+
+    # MD2: durable record backing, non-deferred, matching choice.
+    rec = approved.get(MD_ISSUE_ID)
+    md2 = (rec is not None
+           and rec["choice"].strip().upper() == "SET TO NOT VERIFIED"
+           and rec["date"].strip() == "2026-07-29"
+           and rec["record_id"].strip() == MD_RECORD_ID
+           and "DEFER" not in rec["choice"].strip().upper())
+    checks.append(("MD2. metadata-recorded issue has a matching non-deferred durable record",
+                   md2, f"record={rec}"))
+
+    # MD3/MD4/MD5: the normative module.
+    module_path = os.path.join(repo, MD_MODULE_REL)
+    block = ""
+    if os.path.isfile(module_path):
+        text = open(module_path, encoding="utf-8").read()
+        m = MD_BLOCK_RE.search(text)
+        block = m.group(0) if m else ""
+    status_m = MD_STATUS_FIELD_RE.search(block)
+    md3 = bool(status_m) and status_m.group(1).strip().startswith(MD_VALUE)
+    checks.append(("MD3. normative module carries the approved value as a parseable field",
+                   md3, f"parsed={status_m.group(1).strip() if status_m else None!r}"))
+
+    md4 = MD_RECORD_ID in block
+    checks.append(("MD4. normative module cites the exact durable authority record",
+                   md4, f"record_id_present={md4}"))
+
+    md5 = (bool(MD_AUTHORITY_CURRENT_RE.search(block))
+           and bool(MD_AUTHORITY_NOT_EVIDENCE_RE.search(block))
+           # the authority note must not be folded into the status value
+           and (not status_m or MD_RECORD_ID not in status_m.group(1)))
+    checks.append(("MD5. normative authority language is current, non-retroactive, and "
+                   "not represented as validation evidence", md5, ""))
+
+    # MD6: the structured traceability row.
+    ledger_path = os.path.join(repo, MD_LEDGER_REL)
+    ledger_row = None
+    if os.path.isfile(ledger_path):
+        with open(ledger_path, newline="", encoding="utf-8") as f:
+            for r in csv.DictReader(f):
+                if r["Requirement ID"] == MD_REQUIREMENT_ID:
+                    ledger_row = r
+                    break
+    md6 = (ledger_row is not None
+           and ledger_row["Validation classification"].strip() == MD_VALUE
+           and MD_RECORD_ID in ledger_row.get("Notes or exclusions", "")
+           and MD_RECORD_ID not in ledger_row.get("Validation evidence", ""))
+    checks.append(("MD6. structured traceability row carries the same value and the "
+                   "authority reference", md6,
+                   f"classification={ledger_row['Validation classification'] if ledger_row else None!r}"))
+
+    # MD7: the live registry row.
+    registry_path = os.path.join(repo, MD_REGISTRY_REL)
+    reg_row = None
+    if os.path.isfile(registry_path):
+        with open(registry_path, newline="", encoding="utf-8") as f:
+            for r in csv.DictReader(f):
+                if (r["Requirement ID"] == MD_REQUIREMENT_ID
+                        and r["Field name"] == MD_FIELD):
+                    reg_row = r
+                    break
+    md7 = (reg_row is not None
+           and reg_row["Authoritative expected value"] == MD_VALUE
+           and reg_row["Normative value"] == MD_VALUE
+           and reg_row["Effective value"] == MD_VALUE
+           and reg_row["Validation result"] == "PASS"
+           and reg_row["Conflict result"] == "None"
+           and reg_row["Primary basis"] == "Normative record")
+    checks.append(("MD7. live field-source registry row resolves to the approved value "
+                   "and passes", md7,
+                   f"row={ {k: reg_row[k] for k in ('Authoritative expected value','Normative value','Validation result','Primary basis')} if reg_row else None}"))
+
+    # MD8: not finally resolved.
+    status_now = next((r["Resolution status"].strip() for r in rows
+                       if r["Resolution issue ID"] == MD_ISSUE_ID), "")
+    md8 = status_now == METADATA_RECORDED_STATUS and not FINAL_STATUS_RE.match(status_now)
+    checks.append(("MD8. metadata-recorded issue is not marked finally resolved", md8,
+                   f"status={status_now!r}"))
+
+    return checks
+
+
 def parse_durable_records(pkt):
     """Return (records, files, impl_status).
 
@@ -497,6 +644,7 @@ def compute(pkt):
     approved = {iid: lst[0] for iid, lst in records.items() if len(lst) == 1}
 
     choice_mismatches, date_mismatches, evidence_mismatches, status_mismatches = [], [], [], []
+    final_status_claims, metadata_recorded = [], []
     unbacked = []
     missing_recording = []
     pending_count = 0
@@ -520,8 +668,12 @@ def compute(pkt):
                 date_mismatches.append(iid)
             if rec["record_id"].strip() not in oe:
                 evidence_mismatches.append(iid)
-            if rs.strip() != REQUIRED_STATUS:
+            if rs.strip() not in PERMITTED_RECORDED_STATUSES:
                 status_mismatches.append(iid)
+            if FINAL_STATUS_RE.match(rs.strip()):
+                final_status_claims.append(iid)
+            if rs.strip() == METADATA_RECORDED_STATUS:
+                metadata_recorded.append(iid)
         else:
             if is_pending_triple:
                 pending_count += 1
@@ -541,8 +693,12 @@ def compute(pkt):
                     len(evidence_mismatches) == 0 and len(unbacked) == 0 and len(missing_recording) == 0,
                     f"evidence_mismatches={evidence_mismatches} unbacked={unbacked} missing_recording={missing_recording}"))
     checks.append((f"7d. every Resolution status field is PENDING-consistent or exactly "
-                    f"'{REQUIRED_STATUS}' for durably recorded rows",
+                    f"'{REQUIRED_STATUS}' / '{METADATA_RECORDED_STATUS}' for durably "
+                    f"recorded rows",
                     len(status_mismatches) == 0, f"status_mismatches={status_mismatches}"))
+    checks.append(("7e. no durably recorded issue claims a final resolved/closed/validated "
+                    "status", len(final_status_claims) == 0,
+                    f"final_status_claims={final_status_claims}"))
 
     checks.append(("D6. no durable record exists for an issue-register row left at the PENDING triple "
                     "(recording completeness)", len(missing_recording) == 0, f"missing={missing_recording}"))
@@ -674,6 +830,9 @@ def compute(pkt):
     # current-state-prose staleness checks (AR1/AR2/SP1-SP4).
     checks.extend(check_authority_records(pkt))
     checks.extend(check_current_state_prose(pkt, recorded_count, pending_count, batch_counts))
+
+    # KBDL-011-SMR2-VC-0001 (reissued): metadata-recording completeness.
+    checks.extend(check_metadata_recording(pkt, metadata_recorded, approved, rows))
 
     stats = {
         "recorded_count": recorded_count,

@@ -75,6 +75,7 @@ implementation authorization.
 | `scripts/fsrg1_roadmap.py` | (Added by KBDL-011-SMR1-RM1.) Fail-closed checks (FR1–FR6) that the FSRG1 roadmap record stays intact: the specification exists and disclaims authorization, states all six gates, names and protects the four R13–R16 registries (verified against their recorded SHA-256 digests), and keeps both `KBDL-011-SMR2-FSRG1` and `KBDL-011-SMR2-VC-0001` at a LOCKED status with the planning-agent gate stated. |
 | `smr2-fsrg1-roadmap-validation-transcript.txt` | (Added by KBDL-011-SMR1-RM1.) Durable command/output transcript for the roadmap addition: positive validator run, FR1–FR6 fixtures, the pre-existing fixture suites, R13–R16 registry immutability verification, and the protected-file/working-tree scope audit. |
 | `scripts/fsrg1_integration.py` | (Added by KBDL-011-SMR2-FSRG1.) Narrow, read-only integration helper asserting from this packet that the FSRG1 package exists, validates, keeps the four R13–R16 registries at their recorded digests, leaves every protected/normative file matching the baseline, holds the decision state at 4 recorded / 417 pending, and keeps `KBDL-011-SMR2-VC-0001` locked and reissue-only. |
+| `scripts/smr2_vc_0001_integration.py` | (Added by the reissued KBDL-011-SMR2-VC-0001.) Narrow, read-only integration helper asserting from this packet that the SMR2-VC-0001 package exists and validates, that `SMR1-VC-0001` is metadata-recorded and not finally resolved, that `KBDL-A11Y-001` remains `Not verified`, that `SMR1-KL-0001` and the other 58 Batch A issues remain PENDING, and that decision counts hold at 4 recorded / 417 pending. |
 | `scripts/fsrg1_roadmap_fixtures.py` | (Added by KBDL-011-SMR1-RM1.) Twelve deterministic fixtures (ten rejection, two positive-control) proving FR1–FR6 fail closed; operates on temporary copies and a synthetic temporary repository root only. |
 
 ## 3. Source-of-truth hierarchy applied
@@ -454,6 +455,45 @@ normative content, no effective metadata, and no protected file; gave
 `SMR1-VC-0001` no effect in effective metadata; restored no VAL status; and
 moved no owner decision. The decision state is unchanged: 4 durably recorded
 (3 Batch H, 1 Batch A); 417 PENDING.
+
+## 14. KBDL-011-SMR2-VC-0001 (reissued) metadata recording
+
+`KBDL-011-SMR2-FSRG1` has **passed planning-agent validation**, which released
+the downstream prompt for reissue. The reissued `KBDL-011-SMR2-VC-0001`
+supersedes its earlier blocked version, which was not resumed.
+
+That reissued prompt records the approved `SMR1-VC-0001` decision into effective
+metadata, for one requirement and one field only. `KBDL-A11Y-001`'s
+classification value is **unchanged** (`Not verified`); what changed is that the
+normative record now states it as an explicitly parseable `Validation status:`
+field and cites the durable owner record
+`KBDL-SMR1-BA-VC-0001-OWNER-DECISION-2026-07-29` as current, non-retroactive
+decision authority — **decision authority only, never validation evidence**. The
+structured traceability row carries the same reference in `Notes or exclusions`,
+never in `Validation evidence`.
+
+Previously the normative label was split across a line wrap, so no independent
+parse found the field and the live registry reported it `UNRESOLVED` / `FAIL`
+even though the ledger and readable group both showed `Not verified` — neither
+of which may prove a normative-owned field. The live registry was **regenerated
+through the approved FSRG1 generator**, never hand-edited: exactly two rows
+changed, exactly one row moved `FAIL` → `PASS`, and row/requirement/field/
+duplicate counts are unchanged at 5,389 / 317 / 17 / 0.
+
+`SMR1-VC-0001` now reads `METADATA RECORDED — AWAITING PLANNING-AGENT
+VALIDATION`. It is **not** resolved, closed, verified, or validated.
+`scripts/decision_state.py` admits that status only when MD1-MD8 all hold, and
+new check `7e` rejects any final-resolution claim; `scripts/validate_packet.py`
+gains nine read-only `VC1.*` checks via `scripts/smr2_vc_0001_integration.py`.
+
+Unchanged by this step: the requirement sentence, lifecycle, provenance,
+validation method, validation evidence, and known limitation; `SMR1-KL-0001`
+(still `PENDING`); the other 58 Batch A validation-classification issues (still
+`PENDING`); `KBDL-VAL-003` and `KBDL-VAL-006` (still `Not verified`); candidate
+readiness, implementation conformance, and project completion; and the decision
+counts — 4 durably recorded (3 Batch H, 1 Batch A), 417 PENDING. Metadata
+recording creates no fifth decision, unlocks no later prompt, and authorizes no
+implementation.
 
 ## 8. Progression gate
 
